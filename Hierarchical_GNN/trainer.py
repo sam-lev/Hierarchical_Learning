@@ -3,6 +3,8 @@ from ogb.nodeproppred import Evaluator, PygNodePropPredDataset
 
 
 import numpy as np
+import copy
+
 import torch
 import torch_geometric.datasets
 from sklearn.metrics import f1_score
@@ -342,7 +344,7 @@ class trainer(object):
 
         # threshold for class assignment from inferred logit value
         self.inf_threshold = 0.5
-
+        args.inf_threshold = self.inf_threshold
         (
             self.data,
             self.x,
@@ -372,7 +374,7 @@ class trainer(object):
         # or a HeteroData object (functional name: random_link_split).
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
-        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.1, num_test=0.3)
+        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.3, num_test=0.1)
         self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         # pout(("dataset nodes points", self.dataset.node_points))
@@ -448,12 +450,13 @@ class trainer(object):
         results_train = []
         results_test = []
         for epoch in range(self.epochs):
-            train_loss, train_acc = self.train_net(epoch)  # -wz-run
+            train_loss, train_acc, val_loss = self.train_net(epoch)  # -wz-run
             seed = int(seed)
             print(
                 f"Seed: {seed:02d}, "
                 f"Epoch: {epoch:02d}, "
                 f"Loss: {train_loss:.4f}, "
+                f"Val Loss: {val_loss:.4f}, "
                 f"Approx Train Acc: {train_acc:.4f}"
             )
 
@@ -496,8 +499,8 @@ class trainer(object):
     def train_net(self, epoch):
         self.model.train()
         input_dict = self.get_input_dict(epoch)
-        train_loss, train_acc = self.model.train_net(input_dict)
-        return train_loss, train_acc
+        train_loss, train_acc, val_loss = self.model.train_net(input_dict)
+        return train_loss, train_acc, val_loss
 
     def get_input_dict(self, epoch):
         if self.type_model in [
@@ -520,7 +523,7 @@ class trainer(object):
                 "device": self.device,
                 "data": self.data,
                 "train_data":self.train_data,
-                "val_data":self.val_data,
+                "val_data":copy.copy(self.val_data),
                 "dataset": self.dataset,
             }
         elif self.type_model in ["DST-GCN", "_GraphSAINT", "GradientSampling"]:
@@ -574,16 +577,16 @@ class trainer(object):
     @torch.no_grad()
     def test_net(self):
         self.model.eval()
-        train_input_dict = {"data": self.train_data, "y": self.y,
+        train_input_dict = {"data": self.train_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset}
-        test_input_dict = {"data": self.test_data, "y": self.y,
+        test_input_dict = {"data": self.test_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset}
-        all_input_dict = {"data": self.data, "y": self.y,
+        all_input_dict = {"data": self.data, "y": self.y,"loss_op":self.loss_op,
                            "device": self.device, "dataset": self.dataset}
 
         # infer over training set
         pout(("train set"))
-        train_out, dataset, train_labels = self.model.inference(train_input_dict)
+        train_out, loss, train_labels = self.model.inference(train_input_dict)
         # train_out.to("cpu")
 
         edge_index = self.train_data.edge_index
@@ -593,7 +596,7 @@ class trainer(object):
 
         # infer over test set
         pout(("test set"))
-        test_out, dataset, test_labels = self.model.inference(test_input_dict)
+        test_out, loss, test_labels = self.model.inference(test_input_dict)
         # test_out.to("cpu")
         edge_index = self.test_data.edge_index
         # test_labels = self.test_data.y
@@ -602,7 +605,7 @@ class trainer(object):
 
         # infer over entire graph
         pout(("all set"))
-        all_out, dataset, all_labels = self.model.inference(all_input_dict)
+        all_out, loss, all_labels = self.model.inference(all_input_dict)
         # all_out.to("cpu")
         edge_index = self.dataset.data.edge_index
         # all_labels = self.dataset.data.y

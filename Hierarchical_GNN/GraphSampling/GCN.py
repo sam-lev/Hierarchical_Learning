@@ -62,6 +62,7 @@ class GCN(torch.nn.Module):
         heterophily_num_class = 2
         self.cat = 2
 
+        self.inf_threshold = args.inf_threshold
 
         self.weight_decay = 5e-8#args.weight_decay
 
@@ -296,8 +297,21 @@ class GCN(torch.nn.Module):
 
 
             # x = scatter(data.x, data.batch, dim=0, reduce='mean')
-        self.inference(val_input_dict)
-        scheduler.step(total_loss)
+        val_out, val_loss, val_labels = self.inference(val_input_dict)
+        val_labels = val_labels.to(device)
+        val_out = val_out.to(device)
+        threshold_out = torch.zeros_like(val_out)
+        mask = val_out[:] >= self.inf_threshold
+        threshold_out[mask] = 1.0
+        # threshold_out[~mask] = 0.0
+        val_out = threshold_out
+
+        # train_pred = train_out.to("cpu")  # .argmax(dim=-1).to("cpu")
+        # y_true = self.y
+        val_correct = val_out.eq(val_labels)
+        val_acc = val_correct.sum().item() / float(val_labels.size()[0])
+        val_loss = val_acc
+        # scheduler.step(val_loss)
 
         train_size_edges = y.size(0)
 
@@ -311,7 +325,7 @@ class GCN(torch.nn.Module):
         #len(self.train_dataset.data)
         # return total_loss/ self.train_size_edges, total_correct / train_size#total_loss, total_correct / self.train_size[0]  # / len(self.train_loader)
         # return total_loss / float(len(self.train_loader)), total_correct / float(train_size)
-        return total_loss / float(total_batches) , total_correct / float(train_sample_size)
+        return total_loss / float(total_batches) , total_correct / float(train_sample_size), val_loss
 
 
     def aggregate_edge_attr(self, edge_attr, edge_index):
@@ -447,7 +461,7 @@ class GCN(torch.nn.Module):
                 batch_labels = self.edge_labels(labels=batch.y.to(device),#data.y[n_id].to(device),
                                                 edge_index=edge_index, dtype="int")
 
-                total_loss += loss_op()
+                total_loss += loss_op(out, batch_labels.to(device))
                 ground_truths.append(batch_labels[:,1])
 
                 # if isinstance(loss_op, torch.nn.NLLLoss):
@@ -466,4 +480,4 @@ class GCN(torch.nn.Module):
         # pout(("xpred ", x_pred))
         # pout(("edge pred ", pred))
 
-        return pred, dataset, ground_truth#torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
+        return pred, total_loss/len(inference_loader), ground_truth#torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
