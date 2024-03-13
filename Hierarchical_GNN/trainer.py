@@ -338,9 +338,9 @@ class trainer(object):
         # If it is, using BCE and micro-f1 performance metric
         self.multi_label = args.multi_label
         if self.multi_label:
-            self.loss_op = torch.nn.BCEWithLogitsLoss()
+            self.loss_op = torch.nn.BCELoss()#BCEWithLogitsLoss()
         else:
-            self.loss_op = torch.nn.BCEWithLogitsLoss()#torch.nn.NLLLoss() #torch.nn.CrossEntropyLoss()#
+            self.loss_op = torch.nn.BCELoss()#BCEWithLogitsLoss()#torch.nn.NLLLoss() #torch.nn.CrossEntropyLoss()#
 
         # threshold for class assignment from inferred logit value
         self.inf_threshold = 0.5

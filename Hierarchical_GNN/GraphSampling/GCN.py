@@ -62,20 +62,30 @@ class GCN(torch.nn.Module):
         heterophily_num_class = 2
         self.cat = 2
 
-        self.inf_threshold = args.inf_threshold
+        self.c1 = 0
+        self.c2 = 0
 
-        self.weight_decay = 5e-8#args.weight_decay
+        self.inf_threshold = args.inf_threshold
+        self.threshold_pred = False
+
+        self.weight_decay = args.weight_decay
 
         self.edge_emb_mlp = torch.nn.ModuleList()
         self.edge_emb_mlp.append(nn.Linear(self.cat * self.num_feats , self.dim_hidden))
+        # inherent class imbalance / overfitting
+        # self.edge_emb_mlp.append(nn.BatchNorm1d(self.dim_hidden))
         for _ in range(self.num_layers - 2):
             self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
+            # self.edge_emb_mlp.append(nn.BatchNorm1d(self.dim_hidden))
         self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.cat * self.num_feats))
 
         self.edge_pred_mlp = nn.Sequential(
             nn.ReLU(),
             nn.Linear(self.cat * self.num_feats, heterophily_num_class)
         )
+
+        self.batchnorm = nn.BatchNorm1d(self.dim_hidden)
+        self.activation = nn.Sigmoid() #nn.Softmax(dim=1) #nn.Sigmoid()
 
         self.train_dataset = args.dataset
         self.dataset = args.dataset
@@ -113,8 +123,11 @@ class GCN(torch.nn.Module):
 
         self.train_size = train_data.edge_index.size(0)
 
-        x = self.dataset.data.x
-        row, col = self.dataset.data.edge_index
+        x = self.train_dataset.data.x
+
+
+
+        row, col = self.train_dataset.data.edge_index
         # pout(("row col", row, col, "row_shape col_shape", row.shape, col.shape))
         # dim edfe feature shoould be num_edges , 2 * dim_node_features
         # initialize edge embeddings with adjacent node features
@@ -127,12 +140,12 @@ class GCN(torch.nn.Module):
         # self.train_edge_embeddings = nn.Embedding.from_pretrained(self.train_dataset.data.edge_attr,
         #                                                      freeze=False).requires_grad_(True)
         # self.train_edge_embeddings.weight.requires_grad = True
-        self.dataset.data.edge_attr = torch.cat([x[row], x[col]], dim=-1)
+        self.train_dataset.data.edge_attr = torch.cat([x[row], x[col]], dim=-1)
         # create learnable edge embeddings
         # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
-        self.edge_embeddings = nn.Embedding.from_pretrained(self.dataset.data.edge_attr,
+        self.edge_embeddings = nn.Embedding.from_pretrained(self.train_dataset.data.edge_attr,
                                                                   freeze=False).requires_grad_(True)
-        self.edge_embeddings.weight.data.copy_(self.dataset.edge_attr)
+        self.edge_embeddings.weight.data.copy_(self.train_dataset.edge_attr)
         self.edge_embeddings.weight.requires_grad = True
 
 
@@ -164,18 +177,22 @@ class GCN(torch.nn.Module):
         return factor * torch.square(weight).sum()
 
     def forward(self, edge_index):
-
+        # for i, (edge_index, _, size) in enumerate(adjs):
+        #     x_target = x[: size[1]]  # Target nodes are always placed first.
+        #     x = self.convs[i]((x, x_target), edge_index)
         edge_attr = self.edge_embeddings(edge_index)
         for i,embedding_layer in enumerate(self.edge_emb_mlp):
             edge_attr = embedding_layer(edge_attr)
             if i != self.num_layers - 1:
                 edge_attr = F.relu(edge_attr)
+                edge_attr = self.batchnorm(edge_attr)
                 edge_attr = F.dropout(edge_attr, p=self.dropout, training=self.training)
         # data.edge_attr[edge_index] = edge_emb
         edge_logit = self.edge_pred_mlp(edge_attr)
-        # edge_logit = F.log_softmax( edge_logit , dim=-1 )
+        edge_logit = self.activation( edge_logit )
 
         return edge_logit, edge_attr#F.log_softmax( edge_logit , dim=-1 )
+
 
     def train_net(self, input_dict):
 
@@ -198,6 +215,16 @@ class GCN(torch.nn.Module):
 
         all_nodes = self.train_dataset.data.to(device)
 
+        y_full = self.edge_labels(labels=self.train_dataset.data.y.to(device),
+                             edge_index=self.train_dataset.data.edge_index.to(device),
+                                  device=device)
+        hetero_sz = torch.sum(y_full, 0)[0]
+        homoph_sz = torch.sum(y_full, 0)[1]
+        max_class = torch.max(torch.tensor((hetero_sz,
+                                            homoph_sz)))
+        self.c1 = max_class/hetero_sz
+        self.c2 = max_class/homoph_sz
+
         self.train()
         self.training = True
         self.edge_embeddings.weight.requires_grad = True
@@ -205,6 +232,8 @@ class GCN(torch.nn.Module):
 
         first_idx = torch.tensor([0,0]).to(device)
         sanity_check_embedding = self.edge_embeddings.weight.clone()
+
+        sanity = 0
 
         train_sample_size = total_batches = 0
 
@@ -227,7 +256,8 @@ class GCN(torch.nn.Module):
 
             # x = all_nodes.x[n_id].to(device)  # subgraph ref
             # y = labels[n_id].to(device)  # subgraph ref
-            y = self.edge_labels(labels=batch.y.to(device), edge_index=edge_index, device=device)
+            y = self.edge_labels(labels=batch.y.to(device),
+                                 edge_index=edge_index, device=device)
             # y = y[:,1].to(device)
             y = y.to(device)
             # pout(("shape batch", y.shape))
@@ -236,36 +266,56 @@ class GCN(torch.nn.Module):
             # edge_attr = data.edge_attr[e_id]
 
             optimizer.zero_grad()
-
+            # out = self(x[n_id], adjs)
             out, edge_embedding = self(edge_index = e_id)
 
             out = out#[:,1]
 
+            if sanity < 1:
+                pout(("pred out", out))
+                pout(("labels batch", y))
+            sanity += 1
 
+
+
+            if sanity < 1:
+                pout(("pred out", out))
+            sanity += 1
 
 
 
             # update edge attribute with new embedding
-            self.dataset.data.edge_attr[e_id] = edge_embedding
+            # self.dataset.data.edge_attr[e_id] = edge_embedding
 
             if isinstance(loss_op, torch.nn.NLLLoss):
                 pout(("performing softmax"))
                 out = F.log_softmax(out, dim=-1)
 
-            loss = loss_op(out, y)
+            # hetero_sz = torch.sum(y, 0)[0]
+            # homoph_sz = torch.sum(y, 0)[1]
+            # self.c1 = self.c1 + hetero_sz
+            # self.c2 = self.c2 + homoph_sz
+            # max_class = torch.max(torch.tensor((self.c1,
+            #                                     self.c2)))
+            # sum_class_count = torch.sum(torch.tensor((self.c1,self.c2)))
 
-            # # compute l2 loss of weights in mlps used for
-            # # leaarning embeddings and prediction
-            # # Compute l2 loss component
-            # l2_factor = self.weight_decay
-            # l2_loss = 0.0
-            # for parameter in self.edge_emb_mlp.parameters():
-            #     l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-            # for parameter in self.edge_pred_mlp.parameters():
-            #     l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-            #
-            # # add L2 normalization of weights
-            # loss += l2_loss
+            loss = self.c1 * loss_op(out[:,0], y[:,0]) \
+                   + self.c2 * loss_op(out[:,1], y[:,1])
+            # loss = loss_op(out, y)
+            # pout(("c1", self.c1, "c2", self.c2,"sum", sum_class_count,
+            #       "max", max_class, "wc1", max_class/self.c1))
+            # compute l2 loss of weights in mlps used for
+            # leaarning embeddings and prediction
+            # Compute l2 loss component
+            l2_factor = self.weight_decay
+            l2_loss = 0.0
+            for parameter in self.edge_emb_mlp.parameters():
+                l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
+            for parameter in self.edge_pred_mlp.parameters():
+                l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
+
+            # add L2 normalization of weights
+            loss += l2_loss
 
             # back prop
             loss.backward()
@@ -273,11 +323,14 @@ class GCN(torch.nn.Module):
 
             total_loss += float(loss.item())
 
-            threshold_out = torch.zeros_like(out)
-            mask = out[:] >= 0.5
-            threshold_out[mask] = 1.0
-            # threshold_out[~mask] = 0.0
-            out = threshold_out
+            if self.threshold_pred:
+                threshold_out = torch.zeros_like(out)
+                mask = out[:] >= 0.5
+                threshold_out[mask] = 1.0
+                mask = out[:] < 0.5
+                threshold_out[mask] = 0.0
+                # threshold_out[~mask] = 0.0
+                out = threshold_out
 
             if (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
                 total_correct += int(out[:,1].eq(y[:,1]).sum()) #y[:,1]
@@ -357,6 +410,13 @@ class GCN(torch.nn.Module):
         labels = data.y.to(device)
         # all_edge_idx = data.edge_index.to(device)
         labels = self.edge_labels(labels=labels, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
+        pout(("edge labels", labels, "edge labels size", labels.size(0),
+              "shape", labels.shape))
+        pout(("sum of edge labels", torch.sum(labels, 0)))
+        graph_sz = labels.size(0)
+        hetero_sz = torch.sum(labels, 0)[0]
+        homoph_sz  = torch.sum(labels, 0)[1]
+        pout(("heterophily, homophily percents", hetero_sz/graph_sz, " ", homoph_sz/graph_sz ))
         edge_pred = torch.zeros(data.edge_attr.shape[0]).type(torch.FloatTensor)
         # edge_pred = torch.zeros(data.edge_index.shape).type(torch.FloatTensor)
         # edge_pred.to(device)
@@ -449,9 +509,10 @@ class GCN(torch.nn.Module):
                     edge_attr = embedding_layer(edge_attr)
                     if i != self.num_layers - 1:
                         edge_attr = F.relu(edge_attr)
+                        edge_attr = self.batchnorm(edge_attr)
                     # data.edge_attr[edge_index] = edge_emb
                 out = self.edge_pred_mlp(edge_attr)
-                edge_logit = out#[:,1]#[:,1]
+                out = self.activation(out)#[:,1]#[:,1]
 
                 # return just homophily prediction
                 preds.append(out[:,1])
