@@ -1,3 +1,6 @@
 [submodule "torchph"]
 	path = torchph
 	url = https://github.com/c-hofer/torchph.git
+[submodule "graph_filtration_learning"]
+	path = graph_filtration_learning
+	url = https://github.com/c-hofer/graph_filtration_learning.git
