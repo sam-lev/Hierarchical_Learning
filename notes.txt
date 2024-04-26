@@ -1,0 +1,152 @@
+
+To Run
+python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --epochs=50 --dim_hidden=512 --num_layers=4\
+ --batch_size=256 --use_batch_norm=False --SLE_threshold=0.95 --N_exp=1 --dataset=TopologicalPriorsDataset\
+ --homophily=0.9 --multi_label=False  --type_model=GCN_MLPInit
+
+python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --epochs=50 --dim_hidden=512 --num_layers=4\
+ --batch_size=256 --use_batch_norm=False --SLE_threshold=0.95 --N_exp=1 --dataset=MixHopSyntheticDataset\
+ --homophily=0.2 --multi_label=False  --type_model=GCN_MLPInit
+
+notes also in google doc under leventhal.info account
+
+__________  Vertex Filter Function _________
+
+from paper: learning vertex filter Gin -> latent node representation --> MLP maping [0,1] 
+    ---> sigmoid activation
+    
+  can use edge classifier itself or edge classifier -> degreeOnlyFiltration (from Hofer) and filter by
+  degree to homophilous nodes. 
+
+implement 'node homophious degree adjancency matrix'
+
+return connections oonly between nodes above homophily threshold query then 
+  > get edge_subgraph (remove isolated nodes)
+  
+  make edge_y = shape(edge_index)
+
+_____________ Data Objects ____________
+
+    data.x: Node feature matrix with shape [num_nodes, num_node_features]
+
+    data.edge_index: Graph connectivity in COO format with shape [2, num_edges] and type torch.long
+
+    data.edge_attr: Edge feature matrix with shape [num_edges, num_edge_features]
+
+    data.y: Target to train against (may have arbitrary shape), e.g., node-level targets of shape [num_nodes, *] or graph-level targets of shape [1, *]
+
+    data.pos: Node position matrix with shape [num_nodes, num_dimensions]
+
+______________ COO Format ____
+
+In COO format, the specified elements are stored as tuples of element indices and the corresponding values. In particular,
+
+        the indices of specified elements are collected in indices tensor of size (ndim, nse) and with element type torch.int64,
+
+        the corresponding values are collected in values tensor of size (nse,) and with an arbitrary integer or floating point number element type,
+
+
+
+Note that the input i is NOT a list of index tuples. If you want to write your indices this way, you should transpose before passing them to the sparse constructor:
+
+>>> i = [[0, 2], [1, 0], [1, 2]]
+>>> v =  [3,      4,      5    ]
+>>> s = torch.sparse_coo_tensor(list(zip(*i)), v, (2, 3))
+>>> # Or another equivalent formulation to get s
+>>> s = torch.sparse_coo_tensor(torch.tensor(i).t(), v, (2, 3))
+>>> torch.sparse_coo_tensor(i.t(	
+	
+	
+	flicker dataset has a good reference for process laoding 
+	
+__________________ Edge Convolutional Layer ____________________
+
+import torch
+from torch.nn import Sequential as Seq, Linear as Lin, ReLU
+from torch_geometric.nn import MessagePassing
+
+class EdgeConv(MessagePassing):
+    def __init__(self, F_in, F_out):
+        super(EdgeConv, self).__init__(aggr='max')  # "Max" aggregation.
+        self.mlp = Seq(Lin(2 * F_in, F_out), ReLU(), Lin(F_out, F_out))
+
+    def forward(self, x, edge_index):
+        # x has shape [N, F_in]
+        # edge_index has shape [2, E]
+        return self.propagate(edge_index, x=x)  # shape [N, F_out]
+
+    def message(self, x_i, x_j):
+        # x_i has shape [E, F_in]
+        # x_j has shape [E, F_in]
+        edge_features = torch.cat([x_i, x_j - x_i], dim=1)  # shape [E, 2 * F_in]
+        return self.mlp(edge_features)  # shape [E, F_out]
+        
+        
+____________________________________
+
+train_dataset = dataset[len(dataset) // 10:]
+train_loader = DataLoader(train_dataset, args.batch_size, shuffle=True)
+
+test_dataset = dataset[:len(dataset) // 10]
+test_loader = DataLoader(test_dataset, args.batch_size)
+_________
+
+# retrieve the labels for each node
+labels = np.asarray([G.nodes[i]['club'] != 'Mr. Hi' for i in G.nodes]).astype(np.int64)
+
+# create edge index from 
+adj = nx.to_scipy_sparse_matrix(G).tocoo()
+row = torch.from_numpy(adj.row.astype(np.int64)).to(torch.long)
+col = torch.from_numpy(adj.col.astype(np.int64)).to(torch.long)
+edge_index = torch.stack([row, col], dim=0)
+
+# using degree as embedding
+embeddings = np.array(list(dict(G.degree()).values()))
+
+# normalizing degree values
+scale = StandardScaler()
+embeddings = scale.fit_transform(embeddings.reshape(-1,1))
+
+row, col = edge_index
+new_edge_attr = self.mlp(torch.cat([x[row], x[col], edge_attr], dim=-1))
+
+
+self.edge_mlp = nn.Sequential(
+            nn.Linear(2 * n_features + n_edge_features, hiddens),
+            nn.ReLU(),
+            nn.Linear(hiddens, n_targets),
+        )
+
+x_target = data.x[edge_index[0]]
+        x_nbr = data.x[edge_index[1]]
+        for i, conv in enumerate(self.edge_convs):#adjs):
+            #[: size[1]]  # Target nodes are always placed first.
+            x_target = self.convs[i](x_target, edge_index)
+            x_nbr = self.convs[i](x_nbr, edge_index)
+            if i != self.num_layers - 1:
+                x_target = F.relu(x_target)
+                x_target = F.dropout(x_target, p=self.dropout, training=self.training)
+
+                x_nbr = F.relu(x_nbr)
+                x_nbr = F.dropout(x_nbr, p=self.dropout, training=self.training)
+            # x = self.convs[i]((x, x), adjs)  # edge_index)
+            # if i != self.num_layers - 1:
+            #     x = F.relu(x)
+            #     x = F.dropout(x, p=self.dropout, training=self.training)
+        #x_src, x_dst = x[edge_index[0]], x[edge_index[1]]
+        edge_rep =  (x_target * x_nbr).sum(dim=-1) # torch.cat([x_src, x_dst], dim=-1)
+
+
+
+'''adjs = [adj.to(device) for adj in adjs]
+            optimizer.zero_grad()
+            out = self(x[n_id], adjs)
+            if isinstance(loss_op, torch.nn.NLLLoss):
+                out = F.log_softmax(out, dim=-1)
+
+            edge_index, _, size = adjs[0]
+            labels = y[n_id[:batch_size]][edge_index[0]] == y[n_id[:batch_size]][edge_index[1]]
+            loss = loss_op(out, labels)
+            loss.backward()
+            optimizer.step()
+            total_loss += float(loss.item())'''
