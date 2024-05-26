@@ -5,6 +5,10 @@ class BaseOptions:
     def __init__(self):
         """Reset the class; indicates the class hasn't been initailized"""
 
+    # Define a custom argument type for a list of integers
+    def list_of_floats(self, arg):
+        return list(map(float, arg.split(',')))
+
     def initialize(self):
         parser = argparse.ArgumentParser(description="Constrained learing")
 
@@ -27,9 +31,23 @@ class BaseOptions:
                 "ogbn-arxiv",
                 "Planetoid",
                 "MixHopSyntheticDataset",
+                "HeterophilousGraphDataset",
                 "TopologicalPriorsDataset",
                 "WebKB"
             ],
+        )
+        parser.add_argument(
+            "--data_subset",
+            type=str,
+            required=False,
+            choices=[
+                "roman",
+                "minesweeper",
+                "tolokers",
+                "questions",
+                "amazon_rating"
+            ],
+            default='minesweeper',
         )
 
         parser.add_argument(
@@ -39,8 +57,9 @@ class BaseOptions:
             choices=[
                 "GraphSAGE",
                 "GraphSAGE_MLPInit",
-                "GCN",
+                "EdgeMLP",
                 "GCN_MLPInit",
+                "HierGNN",
                 "FastGCN",
                 "LADIES",
                 "ClusterGCN",
@@ -52,6 +71,15 @@ class BaseOptions:
                 "SAGN",
                 "GAMLP",
                 "EnGCN",
+            ],
+        )
+        parser.add_argument(
+            "--subtype_model",
+            type=str,
+            required=False,
+            choices=[
+                "HST",
+                "HJT",
             ],
         )
         parser.add_argument("--exp_name", type=str, default="")
@@ -69,6 +97,10 @@ class BaseOptions:
             default=50,
             help="number of training the one shot model",
         )
+        parser.add_argument('--persistence',
+                            type=self.list_of_floats,
+                            default=[0.2,0.5,1.0],
+                            help="persistence values for topological filtration for hierarchical learning")
         parser.add_argument(
             "--eval_steps",
             type=int,
@@ -175,6 +207,7 @@ class BaseOptions:
         parser.add_argument("--filter_rate", type=float, default=0.2)
         parser.add_argument("--homophily", type=float, default=0.2)
         args = parser.parse_args()
+        print(" IN BASE OP INITIALIZE MULTILABLE: ", args.multi_label)
         args = self.reset_dataset_dependent_parameters(args)
 
         if args.type_model == "LP_Adj":
@@ -184,6 +217,7 @@ class BaseOptions:
 
     # setting the common hyperparameters used for comparing different methods of a trick
     def reset_dataset_dependent_parameters(self, args):
+        print("IN BASE OPTION MULTILABEL", args.multi_label)
         if args.dataset == "Flickr":
             args.num_classes = 7
             args.num_feats = 500
@@ -195,10 +229,26 @@ class BaseOptions:
             args.num_classes = 7
             args.num_feats = 1433
         elif args.dataset == "MixHopSyntheticDataset":
-            args.multi_label = False
+            # args.multi_label = False
             args.num_classes = 10
             args.num_feats = 2
-
+        elif args.dataset == "HeterophilousGraphDataset":
+            if args.data_subset == "roman":
+                args.num_classes = 18 #roman
+                args.num_feats = 300
+            if args.data_subset == "amazon_rating":
+                args.num_classes = 5 # amazon_ratings
+                args.num_feats = 300
+            if args.data_subset == "tolokers":
+                args.num_classes = 2 #
+                args.num_feats = 10
+            if args.data_subset == "minesweeper":
+                args.num_classes = 2 #
+                args.num_feats = 7
+            if args.data_subset == "questions":
+                args.num_classes = 2 #
+                args.num_feats = 301
+            args.multi_label = False
         elif args.dataset == "Reddit":
             args.num_classes = 41
             args.num_feats = 602

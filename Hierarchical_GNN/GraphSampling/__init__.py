@@ -1,10 +1,11 @@
 
-from .GCN import GCN
-
+from .EdgeMLP import EdgeMLP
+from .HierGNN import HierGNN
 from .MLPInit import  MLPInit
 
 __all__ = [
 
-    "GCN",
+    "EdgeMLP",
     "MLPInit",
+    "HierGNN",
 ]

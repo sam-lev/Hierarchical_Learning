@@ -7,6 +7,7 @@ import copy
 
 import torch
 import torch_geometric.datasets
+# from torch_geometric.datasets import HeterophilousGraphDataset
 from sklearn.metrics import f1_score
 from torch.profiler import ProfilerActivity, profile
 from torch_geometric.transforms import ToSparseTensor, ToUndirected, RandomLinkSplit
@@ -21,6 +22,11 @@ from utils import pout, pout_model
 from GraphSampling.utils import add_edge_attributes
 
 from TopologicalPriorsDataset import *
+
+#memory profiling tools
+from guppy import hpy
+# from memory_profiler import profile
+# from memory_profiler import memory_usage
 
 def edge_label(data, node_idx=None):
     edge_index = data.edge_index
@@ -119,7 +125,8 @@ def get_splits(data, split_percents = [0.3, .3, 1.0]):
 #     return split_masks
 
 
-def load_data(dataset_name, to_sparse=True, homophily=0.1):
+def load_data(dataset_name, datasubset_name='minesweeper',
+              to_sparse=True, homophily=0.1):
     if dataset_name in ["ogbn-products", "ogbn-papers100M", "ogbn-arxiv"]:
         root = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
@@ -274,6 +281,58 @@ def load_data(dataset_name, to_sparse=True, homophily=0.1):
 
         pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
 
+    elif dataset_name in ["HeterophilousGraphDataset"]:
+        pout(("USING HETEROPHILOUSGRAPHDATASET"))
+        pout(("homophily of graph", homophily))
+        path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
+        )
+        transform = lambda x: x #ToSparseTensor() if to_sparse else lambda x: x
+        # Transform.Compose([
+        #     Transform.NormalizeFeatures(),
+        #     # Transform.ToDevice(device),
+        #     Transform.RandomLinkSplit(num_val=0.05, num_test=0.1, is_undirected=True,
+        #                       add_negative_train_samples=False),
+        # ])
+
+
+
+        # self.name in [
+        #     'roman_empire',
+        #     'amazon_ratings',
+        #     'minesweeper',
+        #     'tolokers',
+        #     'questions',
+        # ]
+        dataset_class = getattr(torch_geometric.datasets, dataset_name)
+        dataset =  dataset_class(path,
+                                 name=datasubset_name, # questions',
+                                 transform = transform)
+        # After applying the `RandomLinkSplit` transform, the data is transformed from
+        # a data object to a list of tuples (train_data, val_data, test_data), with
+        # each element representing the corresponding split.
+        processed_dir = dataset.processed_dir
+        data = dataset[0]
+        # train_data, val_data, test_data = dataset[0]
+        evaluator = None
+
+
+
+
+        data, split_masks = get_splits(data)
+        data.train_mask = split_masks['train']
+        data.val_mask = split_masks['valid']
+        data.test_mask = split_masks['test']
+        dataset.data = data
+        x = data.x
+        y = data.y
+
+        edge_weights = [(edge[0], edge[1], 0) for edge in data.edge_index]
+        data.edge_weights = edge_weights
+
+        pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
+
+
 
     elif "TopologicalPriorsDataset" in dataset_name:
         root = os.path.join(
@@ -312,8 +371,15 @@ def load_data(dataset_name, to_sparse=True, homophily=0.1):
         raise Exception(f"the dataset of {dataset_name} has not been implemented")
     return data, x, y, split_masks, evaluator, processed_dir, dataset
 
-
-
+def update_dataset(data, dataset):
+    data, split_masks = get_splits(data)
+    data.train_mask = split_masks['train']
+    data.val_mask = split_masks['valid']
+    data.test_mask = split_masks['test']
+    dataset.data = data
+    x = data.x
+    y = data.y
+    return data, x, y, split_masks, None, None, dataset
 def idx2mask(idx, N_nodes):
     mask = torch.tensor([False] * N_nodes, device=idx.device)
     mask[idx] = True
@@ -322,7 +388,7 @@ def idx2mask(idx, N_nodes):
 
 class trainer(object):
     def __init__(self, args, seed):
-
+        pout(("ARGS MULTILABEL", args.multi_label))
         self.dataset = args.dataset
         self.device = torch.device(f"cuda:{args.cuda_num}" if args.cuda else "cpu")
         self.args = args
@@ -353,7 +419,8 @@ class trainer(object):
             self.evaluator,
             self.processed_dir,
             self.dataset,
-        ) = load_data(args.dataset, args.tosparse, args.homophily)
+        ) = load_data(args.dataset, datasubset_name=args.data_subset,
+                      to_sparse=args.tosparse, homophily=args.homophily)
 
         #
         #            NOTE GLOBAL CHANGE TO DATA FOR EDGE FEAT
@@ -374,56 +441,127 @@ class trainer(object):
         # or a HeteroData object (functional name: random_link_split).
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
-        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.3, num_test=0.1)
+        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.1, num_test=0.4)
         self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         # pout(("dataset nodes points", self.dataset.node_points))
 
-        if self.type_model in ["GCN", "GCN_MLPInit"]:# and self.type_model in ["MLPInit"]:
-            self.model = GCN(
+        if self.type_model in ["EdgeMLP", "GCN_MLPInit"]:# and self.type_model in ["MLPInit"]:
+            self.model = EdgeMLP(
+                args, self.data, self.split_masks, self.processed_dir,
+                train_data=self.train_data, test_data=self.test_data
+            )
+        # initialize and learn edge embeddings and predicted weights for
+        # topological filtration and hierarchical learning
+        elif self.type_model in ["HierGNN"]:# and self.type_model in ["MLPInit"]:
+
+            #
+            # learn and infer edge embeddings and update dataset
+            #
+            ( args,
+              self.data,
+              self.x,
+              self.y,
+              self.split_masks,
+              self.dataset
+              ) = self.learn_edge_embeddings(args)
+
+            # then perform hierarchical learning
+            #
+            pout(("%%%%%%%%%%", "BEGINNING HIERARCHICAL GNN FOR NODE CLASSIFICATION","%%%%%%%%%%"))
+            self.model = HierGNN(
                 args, self.data, self.split_masks, self.processed_dir,
                 train_data=self.train_data, test_data=self.test_data
             )
         else:
             raise NotImplementedError("please specify `type_model`")
-        self.model.to(self.device)
 
-        #if len(list(self.model.parameters())) != 0:
+
+        self.model.to(self.device)
         self.optimizer =  torch.optim.SGD(#)
                 self.model.parameters(), lr=args.lr,
             weight_decay=args.weight_decay, momentum=0.9
             )
-        #else:
-        #    self.optimizer = None
-        # Define the learning rate scheduler
         self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
                                            factor=0.1, patience=3, threshold=1e-2)
 
         if "MLPInit" in self.type_model:# in ["GraphSAGE_MLPInit"]:
+            self.mlp_embedding_initialization(args, seed)
 
-            gnn_model = self.model
-            pout("gnn model param")
-            pout(self.model)
 
-            input_dict = self.get_input_dict(0)
-            mlp_init_model = MLPInit(
-                args,
-                self.data,
-                self.processed_dir,
-                split_masks = self.split_masks,
-                input_dict=input_dict,
-                evaluator= self.evaluator,
-                dataset=self.dataset,
-                gnn_model=self.model
-            )
-            self.model = mlp_init_model.to(self.device)
-            self.train_and_test(seed)
-            self.model.save_mlp_weights()
-            pout("mlp_init model param")
-            pout_model(self.model)
-            pout(" initializing gnn model with trained mlp weights ")
-            self.model = mlp_init_model.init_model_weights(gnn_model=gnn_model)
-            pout(" mlp initialized ")
+
+
+        pout(("WHY DOES MULTILABEL CHANGE", "self", self.multi_label))
+
+    def learn_edge_embeddings(self, args):
+        # first train and infer over edge embeddings to update graph
+        # for filtration
+        pout(("%%%", "LEARNING AND CLASSIFYING EDGE EMBEDDINGS", "..."))
+        self.model = EdgeMLP(
+            args, self.data, self.split_masks, self.processed_dir,
+            train_data=self.train_data, test_data=self.test_data
+        )
+
+        self.model.to(self.device)
+        self.optimizer = torch.optim.SGD(  # )
+            self.model.parameters(), lr=args.lr,
+            weight_decay=args.weight_decay, momentum=0.9
+        )
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
+                                           factor=0.1, patience=3, threshold=1e-2)
+
+        self.train_and_test(0)
+
+        input_dict = self.get_input_dict(0)
+        self.test_net()
+        pred, loss, ground_truth, self.data = self.model.edge_inference(input_dict)
+
+        pout(("%%%%%%%", "FINSISHED INFERING OVER EDGES", "%%%%%%%"))
+        pout(("updating dataset"))
+        (
+            self.data,
+            self.x,
+            self.y,
+            self.split_masks,
+            self.evaluator,
+            self.processed_dir,
+            self.dataset,
+        ) = update_dataset(self.data, self.dataset)
+        args.dataset = self.dataset
+        args.data = self.data
+
+        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.1, num_test=0.4)
+        self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+
+        torch.cuda.empty_cache()
+        del self.model
+
+        return args, self.data, self.x, self.y, self.split_masks, self.dataset
+
+    def mlp_embedding_initialization(self,args, seed):
+        gnn_model = self.model
+        pout("gnn model param")
+        pout(self.model)
+
+        input_dict = self.get_input_dict(0)
+        mlp_init_model = MLPInit(
+            args,
+            self.data,
+            self.processed_dir,
+            split_masks=self.split_masks,
+            input_dict=input_dict,
+            evaluator=self.evaluator,
+            dataset=self.dataset,
+            gnn_model=self.model
+        )
+        self.model = mlp_init_model.to(self.device)
+        self.train_and_test(seed)
+        self.model.save_mlp_weights()
+        pout("mlp_init model param")
+        pout_model(self.model)
+        pout(" initializing gnn model with trained mlp weights ")
+        self.model = mlp_init_model.init_model_weights(gnn_model=gnn_model)
+        pout(" mlp initialized ")
 
     def mem_speed_bench(self):
         input_dict = self.get_input_dict(0)
@@ -449,6 +587,10 @@ class trainer(object):
         results = []
         results_train = []
         results_test = []
+        f1s_test = []
+        f1s_train = []
+        f1s_all = []
+        # f1_scores = []
         for epoch in range(self.epochs):
             train_loss, train_acc, val_loss = self.train_net(epoch)  # -wz-run
             seed = int(seed)
@@ -459,10 +601,16 @@ class trainer(object):
                 f"Val Loss: {val_loss:.4f}, "
                 f"Approx Train Acc: {train_acc:.4f}"
             )
-
+            #
+            # need to adapt test during training eval to be
+            # only evaluation set and entire graph opnly for near last epocjs
+            #
             if epoch % self.eval_steps == 0 and epoch != 0:
-                out, result, f1_scores = self.test_net()
-
+                out, result, f1s = self.test_net()
+                # tr_f1, te_f1, a_f1 = f1s
+                f1s_train.append(f1s[0])
+                f1s_test.append(f1s[1])
+                f1s_all.append(f1s[2])
                 results.append(result[2])
                 results_test.append(result[1])
                 results_train.append(result[0])
@@ -475,7 +623,7 @@ class trainer(object):
                     f"Test: {100 * test_acc:.2f}%"
                 )
 
-        train_f1, test_f1, all_f1 = f1_scores
+        train_f1, test_f1, all_f1 = f1s_train[-1], f1s_test[-1], f1s_all[-1]
         results = 100 * np.array(results)
         results_train = 100 * np.array(results_train)
         results_test = 100 * np.array(results_test)
@@ -506,8 +654,9 @@ class trainer(object):
         if self.type_model in [
             "GraphSAGE",
             "GraphSAGE_MLPInit",
-            "GCN",
+            "EdgeMLP",
             "GCN_MLPInit",
+            "HierGNN",
             "GraphSAINT",
             "ClusterGCN",
             "FastGCN",
@@ -525,6 +674,8 @@ class trainer(object):
                 "train_data":self.train_data,
                 "val_data":copy.copy(self.val_data),
                 "dataset": self.dataset,
+                "epoch": epoch,
+                "total_epochs":self.epochs,
             }
         elif self.type_model in ["DST-GCN", "_GraphSAINT", "GradientSampling"]:
             input_dict = {
@@ -576,6 +727,7 @@ class trainer(object):
 
     @torch.no_grad()
     def test_net(self):
+        pout(("In test net", "multilabel?", self.multi_label))
         self.model.eval()
         train_input_dict = {"data": self.train_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset}
@@ -617,8 +769,10 @@ class trainer(object):
         pout(("y true all shape", y_true_all.size))
 
         if self.evaluator is not None:
+
+            pout(( "%%%%%%%%%%%%%%", "Testing with Evaluator ", "%%%%%%%%%%%"))
             y_true = self.y.unsqueeze(-1)
-            y_pred = out.argmax(dim=0, keepdim=True)
+            y_pred = all_out.argmax(dim=0, keepdim=True)
 
             train_acc = self.evaluator.eval(
                 {
@@ -641,74 +795,70 @@ class trainer(object):
         else:
 
             if not self.multi_label:
+                pout(("%%%%%%%%%%%","Testing inference results",
+                      "multi_Label: ",self.multi_label,"%%%%%%%%%%"))
                 # train results threshold prediction
-                threshold_out = torch.zeros_like(train_out)
-                mask = train_out[:] >= self.inf_threshold
-                threshold_out[mask] = 1.0
+                threshold_out = train_out.argmax(dim=-1).to("cpu")
                 # threshold_out[~mask] = 0.0
-                train_out = threshold_out
+                # train_out = threshold_out
 
-                train_pred = train_out.to("cpu")#.argmax(dim=-1).to("cpu")
+                train_pred = threshold_out.to("cpu")#.argmax(dim=-1).to("cpu")
                 # y_true = self.y
-                train_correct = train_pred.eq(y_true_train)
+                train_correct = train_pred.eq(y_true_train.argmax(dim=-1))
                 train_acc = train_correct.sum().item() / float(train_labels.size()[0])#self.split_masks["train"].sum().item()
 
                 # test results threshold inf pred
-                threshold_out = torch.zeros_like(test_out)
-                mask = test_out[:] >= self.inf_threshold
-                threshold_out[mask] = 1.0
+                threshold_out = test_out.argmax(dim=-1).to("cpu")
                 # threshold_out[~mask] = 0.0
-                test_out = threshold_out
+                # test_out = threshold_out
 
-                test_pred = test_out.to("cpu") #.argmax(dim=-1).to("cpu")
+                test_pred = threshold_out.to("cpu") #.argmax(dim=-1).to("cpu")
                 # y_true = self.y
-                test_correct = test_pred.eq(y_true_test)
+                test_correct = test_pred.eq(y_true_test.argmax(dim=-1))
                 test_acc = test_correct.sum().item() / float(test_labels.size()[0]) #self.split_masks["valid"].sum().item()
 
                 # all results thresholded
-                threshold_out = torch.zeros_like(all_out)
-                mask = all_out[:] >= self.inf_threshold
-                threshold_out[mask] = 1.0
+                threshold_out = all_out.argmax(dim=-1).to("cpu")
                 # threshold_out[~mask] = 0.0
-                all_out = threshold_out
+                # all_out = threshold_out
 
-                all_pred = all_out.to("cpu")
+                all_pred = threshold_out.to("cpu")
                 # y_true = self.y
-                all_correct = all_pred.eq(y_true_all)
+                all_correct = all_pred.eq(y_true_all.argmax(dim=-1))
                 all_acc = all_correct.sum().item() / float(all_labels.size()[0]) #self.split_masks["test"].sum().item()
 
                 # Compute F1 scores
                 train_f1 = (
                     f1_score(
-                        y_true_train,
-                        train_pred,
+                        y_true_train.argmax(dim=-1).to("cpu"),
+                        train_out.argmax(dim=-1).to("cpu"),#.to("cpu"),
                         average="micro",
                     )
-                    if train_pred.sum() > 0
-                    else 0
+                    # if train_pred.sum() > 0
+                    # else 0
                 )
 
                 test_f1 = (
                     f1_score(
-                        y_true_test,
-                        test_pred,
+                        y_true_test.argmax(dim=-1).to("cpu"),
+                        test_out.argmax(dim=-1).to("cpu"),
                         average="micro",
                     )
-                    if test_pred.sum() > 0
-                    else 0
+                    # if test_pred.sum() > 0
+                    # else 0
                 )
 
                 all_f1 = (
                     f1_score(
-                        y_true_all,
-                        all_pred,
+                        y_true_all.argmax(dim=-1).to("cpu"),
+                        all_out.argmax(dim=-1).to("cpu"),
                         average="micro",
                     )
-                    if all_pred.sum() > 0
-                    else 0
+                    # if all_pred.sum() > 0
+                    # else 0
                 )
 
-            # # pred = out.argmax(dim=-1).to("cpu")
+                # # pred = out.argmax(dim=-1).to("cpu")
                 # pred = out.to("cpu")
                 #
                 # if isinstance(self.loss_op, torch.nn.CrossEntropyLoss) or isinstance(self.loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(self.loss_op, torch.nn.NLLLoss):
@@ -748,11 +898,12 @@ class trainer(object):
                 #         / y_true.sum().item()
                 # )
             else:
-
-                pred = (out > 0).float().numpy()
+                pout(("%%%%%%%%%%%", "Testing inference results",
+                      "multi_Label: ", self.multi_label, "%%%%%%%%%%"))
+                pred = (all_out > 0).float().numpy()
                 # y_true = self.labels.numpy()
                 # calculating F1 scores
-                y_true = y_true.numpy()
+                y_true = y_true_all.numpy()
                 train_acc = (
                     f1_score(
                         y_true,#[self.split_masks["edge_train"]],

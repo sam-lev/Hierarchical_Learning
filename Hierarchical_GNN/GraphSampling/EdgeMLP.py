@@ -25,8 +25,14 @@ from torch_geometric.loader import DataLoader, NodeLoader, NeighborLoader, Neigh
 # from torch_geometric.nn.dense.linear import Linear
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
 from .utils import pout, homophily_edge_labels, add_edge_attributes
+#profiling tools
+from guppy import hpy
+# from memory_profiler import profile
+# from memory_profiler import memory_usage
 
-class GCN(torch.nn.Module):
+class EdgeMLP(torch.nn.Module):
+    #fp = open('./run_logs/memory_profiler.log', 'w+')
+    # @profile#stream=fp)
     def __init__(self,
                  args,
                  data,
@@ -110,7 +116,7 @@ class GCN(torch.nn.Module):
             self.train_size_edges = train_data.edge_index.size(0)
 
         self.train_loader = NeighborLoader(#Sampler(
-            data=copy.copy(train_data),
+            data=train_data,#copy.copy(train_data),
             input_nodes=None,
             # edge_index = train_data.edge_index,
             # input_nodes=self.train_dataset.data.train_mask,
@@ -118,7 +124,7 @@ class GCN(torch.nn.Module):
             num_neighbors=[-1],
             batch_size=self.batch_size,
             shuffle=True,
-            directed=False,
+            # directed=False,
         )
 
         self.train_size = train_data.edge_index.size(0)
@@ -153,7 +159,8 @@ class GCN(torch.nn.Module):
     def edge_embed_idx(selfself, row_idx, col_idx, num_col):
         return row_idx * num_col + col_idx
 
-    def edge_labels(self, labels, edge_index, dtype="float", device=None):
+    def edge_labels(self, labels, edge_index, as_logit=False,
+                    dtype="float", device=None):
         labels = torch.eq(labels[edge_index[0]], labels[edge_index[1]])
         neg_labels = ~labels
         # if device is not None:
@@ -171,6 +178,7 @@ class GCN(torch.nn.Module):
         # new[:, 0] = neg_labels[:]#X[~mask, 2]
         # new[:,1] = labels
         labels = [neg_labels, labels]
+        # if not as_logit:
         return torch.stack(labels, dim=1)
 
     def l2_loss(self, weight, factor):
@@ -185,7 +193,7 @@ class GCN(torch.nn.Module):
             edge_attr = embedding_layer(edge_attr)
             if i != self.num_layers - 1:
                 edge_attr = F.relu(edge_attr)
-                edge_attr = self.batchnorm(edge_attr)
+                # edge_attr = self.batchnorm(edge_attr)
                 edge_attr = F.dropout(edge_attr, p=self.dropout, training=self.training)
         # data.edge_attr[edge_index] = edge_emb
         edge_logit = self.edge_pred_mlp(edge_attr)
@@ -193,7 +201,8 @@ class GCN(torch.nn.Module):
 
         return edge_logit, edge_attr#F.log_softmax( edge_logit , dim=-1 )
 
-
+    #fp = open('./run_logs/training_memory_profiler.log', 'w+')
+    # @profile#stream=fp)
     def train_net(self, input_dict):
 
         device = input_dict["device"]
@@ -215,15 +224,15 @@ class GCN(torch.nn.Module):
 
         all_nodes = self.train_dataset.data.to(device)
 
-        y_full = self.edge_labels(labels=self.train_dataset.data.y.to(device),
-                             edge_index=self.train_dataset.data.edge_index.to(device),
-                                  device=device)
-        hetero_sz = torch.sum(y_full, 0)[0]
-        homoph_sz = torch.sum(y_full, 0)[1]
-        max_class = torch.max(torch.tensor((hetero_sz,
-                                            homoph_sz)))
-        self.c1 = max_class/hetero_sz
-        self.c2 = max_class/homoph_sz
+        # y_full = self.edge_labels(labels=self.train_dataset.data.y.to(device),
+        #                      edge_index=self.train_dataset.data.edge_index.to(device),
+        #                           device=device)
+        # hetero_sz = torch.sum(y_full, 0)[0]
+        # homoph_sz = torch.sum(y_full, 0)[1]
+        # max_class = torch.max(torch.tensor((hetero_sz,
+        #                                     homoph_sz)))
+        # self.c1 = max_class/hetero_sz
+        # self.c2 = max_class/homoph_sz
 
         self.train()
         self.training = True
@@ -231,9 +240,7 @@ class GCN(torch.nn.Module):
         # self.edge_embeddings.to(device)
 
         first_idx = torch.tensor([0,0]).to(device)
-        sanity_check_embedding = self.edge_embeddings.weight.clone()
-
-        sanity = 0
+        # sanity_check_embedding = self.edge_embeddings.weight.clone()
 
         train_sample_size = total_batches = 0
 
@@ -271,19 +278,6 @@ class GCN(torch.nn.Module):
 
             out = out#[:,1]
 
-            if sanity < 1:
-                pout(("pred out", out))
-                pout(("labels batch", y))
-            sanity += 1
-
-
-
-            if sanity < 1:
-                pout(("pred out", out))
-            sanity += 1
-
-
-
             # update edge attribute with new embedding
             # self.dataset.data.edge_attr[e_id] = edge_embedding
 
@@ -299,9 +293,11 @@ class GCN(torch.nn.Module):
             #                                     self.c2)))
             # sum_class_count = torch.sum(torch.tensor((self.c1,self.c2)))
 
-            loss = self.c1 * loss_op(out[:,0], y[:,0]) \
-                   + self.c2 * loss_op(out[:,1], y[:,1])
-            # loss = loss_op(out, y)
+            # loss = self.c1 * loss_op(out[:,0], y[:,0]) \
+            #        + self.c2 * loss_op(out[:,1], y[:,1])
+
+            loss = loss_op(out, y)
+
             # pout(("c1", self.c1, "c2", self.c2,"sum", sum_class_count,
             #       "max", max_class, "wc1", max_class/self.c1))
             # compute l2 loss of weights in mlps used for
@@ -323,17 +319,17 @@ class GCN(torch.nn.Module):
 
             total_loss += float(loss.item())
 
-            if self.threshold_pred:
-                threshold_out = torch.zeros_like(out)
-                mask = out[:] >= 0.5
-                threshold_out[mask] = 1.0
-                mask = out[:] < 0.5
-                threshold_out[mask] = 0.0
-                # threshold_out[~mask] = 0.0
-                out = threshold_out
+            # if self.threshold_pred:
+            #     threshold_out = torch.zeros_like(out)
+            #     mask = out[:] >= 0.5
+            #     threshold_out[mask] = 1.0
+            #     mask = out[:] < 0.5
+            #     threshold_out[mask] = 0.0
+            #     # threshold_out[~mask] = 0.0
+            #     out = threshold_out
 
             if (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
-                total_correct += int(out[:,1].eq(y[:,1]).sum()) #y[:,1]
+                total_correct += int(out.argmax(dim=-1).eq(y.argmax(dim=-1)).sum()) #y[:,1]
             else:
                 total_correct += int(out.eq(y).sum())
 
@@ -353,15 +349,15 @@ class GCN(torch.nn.Module):
         val_out, val_loss, val_labels = self.inference(val_input_dict)
         val_labels = val_labels.to(device)
         val_out = val_out.to(device)
-        threshold_out = torch.zeros_like(val_out)
-        mask = val_out[:] >= self.inf_threshold
-        threshold_out[mask] = 1.0
-        # threshold_out[~mask] = 0.0
-        val_out = threshold_out
+        # threshold_out = torch.zeros_like(val_out)
+        # mask = val_out[:] >= self.inf_threshold
+        # threshold_out[mask] = 1.0
+        # # threshold_out[~mask] = 0.0
+        val_out = val_out.argmax(dim=-1) #threshold_out
 
         # train_pred = train_out.to("cpu")  # .argmax(dim=-1).to("cpu")
         # y_true = self.y
-        val_correct = val_out.eq(val_labels)
+        val_correct = val_out.eq(val_labels.argmax(dim=-1))
         val_acc = val_correct.sum().item() / float(val_labels.size()[0])
         val_loss = val_acc
         # scheduler.step(val_loss)
@@ -387,7 +383,7 @@ class GCN(torch.nn.Module):
         # torch.mean(torch.max(a, -1, True)[0], 1, True)
         return torch.max(edge_attr_target, -1, True)[0]
 
-
+    # @profile
     @torch.no_grad()
     def inference(self, input_dict):
         # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
@@ -410,9 +406,391 @@ class GCN(torch.nn.Module):
         labels = data.y.to(device)
         # all_edge_idx = data.edge_index.to(device)
         labels = self.edge_labels(labels=labels, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
-        pout(("edge labels", labels, "edge labels size", labels.size(0),
-              "shape", labels.shape))
-        pout(("sum of edge labels", torch.sum(labels, 0)))
+        # pout(("edge labels", labels, "edge labels size", labels.size(0),
+        #       "shape", labels.shape))
+        # pout(("sum of edge labels", torch.sum(labels, 0)))
+        graph_sz = labels.size(0)
+        hetero_sz = torch.sum(labels, 0)[0]
+        homoph_sz  = torch.sum(labels, 0)[1]
+        pout(("heterophily, homophily percents", hetero_sz/graph_sz, " ", homoph_sz/graph_sz ))
+        edge_pred = torch.zeros(data.edge_attr.shape[0]).type(torch.FloatTensor)
+        # edge_pred = torch.zeros(data.edge_index.shape).type(torch.FloatTensor)
+        # edge_pred.to(device)
+        node_pred = torch.zeros(data.y.shape)
+        # edge_index = data.edge_index.to(device)
+        # edge_attr = data.edge_attr.to(device)
+
+
+        row, col = data.edge_index
+        # pout(("row col", row, col, "row_shape col_shape", row.shape, col.shape))
+        # dim edfe feature shoould be num_edges , 2 * dim_node_features
+        data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
+
+        # pout(("edge attr shape", data.edge_attr.shape))
+
+        # create edge embeddings
+        # pred_edge_embeddings = nn.Embedding.from_pretrained(data.edge_index.shape).requires_grad_(False)
+        # self.edge_embeddings.requires_grad_(False)
+        # self.edge_embeddings.weight.requires_grad = False
+        # self.edge_embeddings.to(device)
+
+        # pout(("labels shape in inf", labels.shape))
+
+        x = data.x
+        row, col = data.edge_index
+        # data.edge_attr = torch.cat([x[row], x[col]], dim=-1)
+        data.edge_attr.to(device)
+
+        data.edge_embeddings = torch.cat([x[row], x[col]], dim=-1)
+        data.edge_embeddings.to(device)
+
+        data.edge_weights = torch.zeros(data.edge_index.shape)
+
+        global_edge_index = data.edge_index.t().cpu().numpy()
+
+        # create learnable edge embeddings
+        # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
+        edge_embeddings = nn.Embedding.from_pretrained(data.edge_embeddings,
+                                                            freeze=True).requires_grad_(False).to(device)
+
+        # edge_embeddings = nn.Embedding.from_pretrained(self.edge_embeddings.weight.data.detach().clone(),
+        #                                                freeze=True).requires_grad_(False)
+
+        inference_loader = NeighborLoader(
+            data,#copy.copy(data),#.edge_index,
+            input_nodes=None,
+            # directed=False,
+            # edge_index = train_data.edge_index,
+            # input_nodes=self.train_dataset.data.train_mask,
+            # sizes=[-1],
+            num_neighbors=[-1],
+            batch_size=self.batch_size, #data.edge_index.shape[1],
+            shuffle=False,
+        )
+
+        train_sample_size = 0
+        #     # [test_split[0]:test_split[1]],#.edge_index,  # split_masks["test"],  # .edge_index,
+        #     # node_idx=self.split_masks["test"],
+        #     sizes=[-1],
+        #     batch_size=data.edge_index.shape[1],#self.batch_size,
+        #     shuffle=False,
+        # )
+        # Hence, an item returned by :class:`NeighborSampler` holds the current
+        # :obj:`batch_size`, the IDs :obj:`n_id` of all nodes involved in the computation,
+        # and a list of bipartite graph objects via the tupl :obj:`(edge_index, e_id, size)`,
+        # where :obj:`edge_index` represents the bipartite edges between source
+        # and target nodes, :obj:`e_id` denotes the IDs of original edges in
+        # the full graph, and :obj:`size` holds the shape of the bipartite graph.
+        # For each bipartite graph, target nodes are also included at the beginning
+        # of the list of source nodes so that one can easily apply skip-connections
+        # or add self-loops.
+        # kwargs = {'batch_size': 1024, 'num_workers': 6, 'persistent_workers': True}
+        # subgraph_loader = NeighborLoader(copy.copy(data), input_nodes=None,
+        #                                  num_neighbors=[-1], shuffle=False, )
+        edges = []
+        edge_weights = []
+        x_pred = []
+        preds = []
+        ground_truths = []
+        total_loss = 0
+        edge_embeddings_dict = {}
+        edge_weights_dict = {}
+        with torch.no_grad():
+            for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
+
+                #batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
+                # edge_index, e_id, size = adjs
+                # _, _, size = adjs
+
+                # batch.n_id # global node index of each node
+                e_id = batch.e_id.to(device)  # adjs.e_id.to(device) # global edge index of each edge
+                edge_index = batch.edge_index.to(device)
+                train_sample_size += edge_index.shape[1]
+                # batch_size, n_id, adjs = batch_size.to(device), n_id.to(device), adjs
+                # n_id.to(device)
+                # edge_index, e_id, size = adjs
+                # edge_index, e_id, size = edge_index.to(device), e_id.to(device), size
+                # x = all_nodes[n_id].to(device) # subgraph ref
+                # pout(("shape batch", x.shape))
+                # x_target = x[:size[1]]
+                edge_attr = edge_embeddings(e_id).to(device)#all_edge_attr[e_id]
+                # edge_emb = self.edge_emb_mlp(edge_attr)
+                # out = self.edge_pred_mlp(edge_emb)
+
+                for i, embedding_layer in enumerate(self.edge_emb_mlp):
+                    edge_attr = embedding_layer(edge_attr)
+                    if i != self.num_layers - 1:
+                        edge_attr = F.relu(edge_attr)
+                        edge_attr = self.batchnorm(edge_attr)
+                    # data.edge_attr[edge_index] = edge_emb
+
+                out = self.edge_pred_mlp(edge_attr)
+                out = self.activation(out)#[:,1]#[:,1]
+
+                # return just homophily prediction
+                preds.append(out)#.argmax(dim=1))#[:,1])
+                # add predicted edge value as weight for each edge
+                for edge, p in zip(e_id.detach().cpu().numpy(), out[:,1].detach().cpu().numpy()):
+                    source, target = global_edge_index[edge]
+                    edges.append((source, target))
+                    edge_weights_dict[(source,target)] = [p]# edge_weights_dict[edge] = [p]#.append
+                for edge, emb_e in zip(e_id.detach().cpu().numpy(), edge_attr.detach().cpu().numpy()):
+                    source, target = global_edge_index[edge]
+                    edge_embeddings_dict[(source, target)] = emb_e
+                    #self.filtration.append(dion.Simplex([source, target], p))
+
+
+
+
+                # pout(("edge_index", edge_index, "e_id", e_id))
+
+                batch_labels = self.edge_labels(labels=batch.y.to(device),#data.y[n_id].to(device),
+                                                edge_index=edge_index,
+                                                )
+
+                # total_loss += loss_op(out, batch_labels.to(device))
+                ground_truths.append(batch_labels)#.argmax(dim=1))#[:,1])
+
+                # if isinstance(loss_op, torch.nn.NLLLoss):
+                #     edge_logit = F.log_softmax(out, dim=-1)
+                #     edge_logit = edge_logit.argmax(dim=-1)
+                #     edge_logit = F.softmax(out, dim=-1)
+
+                # edge_logit = edge_logit.cpu()
+
+                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
+
+                # x_pred.append(edge_logit)
+                # edge_pred[e_id] = edge_logit.cpu()
+        data.edge_weights = torch.tensor([edge_weights_dict[(data.edge_index[0, i].item(), data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))], dtype=torch.float)
+
+        data.edge_embeddings = torch.tensor([edge_embeddings_dict[(data.edge_index[0, i].item(), data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))], dtype=torch.float)
+
+        #
+
+        pred = torch.cat(preds, dim=0)#.cpu()#.numpy()
+        ground_truth = torch.cat(ground_truths, dim=0)#.cpu()#.numpy()
+        # pout(("xpred ", x_pred))
+        # pout(("edge pred ", pred))
+
+        return pred, total_loss/train_sample_size, ground_truth
+    @torch.no_grad()
+    def edge_inference(self, input_dict):
+        # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
+        self.eval()
+        self.training = False
+        device = input_dict["device"]
+        # x = input_dict["x"].to(device)
+        data = input_dict["data"]#.to(device)
+        data = add_edge_attributes(data)
+
+        all_nodes = data.x
+        dataset = input_dict["dataset"]
+        all_data = dataset.data.to(device)
+        all_node_labels = all_data.y.to(device)
+        node_labels = data.y.to(device)
+
+        # for validation testing
+        loss_op  = input_dict["loss_op"]
+
+        labels = data.y.to(device)
+        # all_edge_idx = data.edge_index.to(device)
+        labels = self.edge_labels(labels=labels, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
+        # pout(("edge labels", labels, "edge labels size", labels.size(0),
+        #       "shape", labels.shape))
+        # pout(("sum of edge labels", torch.sum(labels, 0)))
+        graph_sz = labels.size(0)
+        hetero_sz = torch.sum(labels, 0)[0]
+        homoph_sz  = torch.sum(labels, 0)[1]
+        pout(("heterophily, homophily percents", hetero_sz/graph_sz, " ", homoph_sz/graph_sz ))
+        edge_pred = torch.zeros(data.edge_attr.shape[0]).type(torch.FloatTensor)
+        # edge_pred = torch.zeros(data.edge_index.shape).type(torch.FloatTensor)
+        # edge_pred.to(device)
+        node_pred = torch.zeros(data.y.shape)
+        # edge_index = data.edge_index.to(device)
+        # edge_attr = data.edge_attr.to(device)
+
+
+        row, col = data.edge_index
+        # pout(("row col", row, col, "row_shape col_shape", row.shape, col.shape))
+        # dim edfe feature shoould be num_edges , 2 * dim_node_features
+        data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
+
+        # pout(("edge attr shape", data.edge_attr.shape))
+
+        # create edge embeddings
+        # pred_edge_embeddings = nn.Embedding.from_pretrained(data.edge_index.shape).requires_grad_(False)
+        # self.edge_embeddings.requires_grad_(False)
+        # self.edge_embeddings.weight.requires_grad = False
+        # self.edge_embeddings.to(device)
+
+        # pout(("labels shape in inf", labels.shape))
+
+        x = data.x
+        row, col = data.edge_index
+        # data.edge_attr = torch.cat([x[row], x[col]], dim=-1)
+        data.edge_attr.to(device)
+
+        data.edge_embeddings = torch.cat([x[row], x[col]], dim=-1)
+        data.edge_embeddings.to(device)
+
+        data.edge_weights = torch.zeros(data.edge_index.shape)
+
+        global_edge_index = data.edge_index.t().cpu().numpy()
+
+        # create learnable edge embeddings
+        # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
+        edge_embeddings = nn.Embedding.from_pretrained(data.edge_embeddings,
+                                                            freeze=True).requires_grad_(False).to(device)
+
+        # edge_embeddings = nn.Embedding.from_pretrained(self.edge_embeddings.weight.data.detach().clone(),
+        #                                                freeze=True).requires_grad_(False)
+
+        inference_loader = NeighborLoader(
+            data,#copy.copy(data),#.edge_index,
+            input_nodes=None,
+            # directed=False,
+            # edge_index = train_data.edge_index,
+            # input_nodes=self.train_dataset.data.train_mask,
+            # sizes=[-1],
+            num_neighbors=[-1],
+            batch_size=self.batch_size, #data.edge_index.shape[1],
+            shuffle=False,
+        )
+
+        train_sample_size = 0
+        #     # [test_split[0]:test_split[1]],#.edge_index,  # split_masks["test"],  # .edge_index,
+        #     # node_idx=self.split_masks["test"],
+        #     sizes=[-1],
+        #     batch_size=data.edge_index.shape[1],#self.batch_size,
+        #     shuffle=False,
+        # )
+        # Hence, an item returned by :class:`NeighborSampler` holds the current
+        # :obj:`batch_size`, the IDs :obj:`n_id` of all nodes involved in the computation,
+        # and a list of bipartite graph objects via the tupl :obj:`(edge_index, e_id, size)`,
+        # where :obj:`edge_index` represents the bipartite edges between source
+        # and target nodes, :obj:`e_id` denotes the IDs of original edges in
+        # the full graph, and :obj:`size` holds the shape of the bipartite graph.
+        # For each bipartite graph, target nodes are also included at the beginning
+        # of the list of source nodes so that one can easily apply skip-connections
+        # or add self-loops.
+        # kwargs = {'batch_size': 1024, 'num_workers': 6, 'persistent_workers': True}
+        # subgraph_loader = NeighborLoader(copy.copy(data), input_nodes=None,
+        #                                  num_neighbors=[-1], shuffle=False, )
+        edges = []
+        edge_weights = []
+        x_pred = []
+        preds = []
+        ground_truths = []
+        total_loss = 0
+        edge_embeddings_dict = {}
+        edge_weights_dict = {}
+        with torch.no_grad():
+            for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
+
+                #batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
+                # edge_index, e_id, size = adjs
+                # _, _, size = adjs
+
+                # batch.n_id # global node index of each node
+                e_id = batch.e_id.to(device)  # adjs.e_id.to(device) # global edge index of each edge
+                edge_index = batch.edge_index.to(device)
+                train_sample_size += edge_index.shape[1]
+                # batch_size, n_id, adjs = batch_size.to(device), n_id.to(device), adjs
+                # n_id.to(device)
+                # edge_index, e_id, size = adjs
+                # edge_index, e_id, size = edge_index.to(device), e_id.to(device), size
+                # x = all_nodes[n_id].to(device) # subgraph ref
+                # pout(("shape batch", x.shape))
+                # x_target = x[:size[1]]
+                edge_attr = edge_embeddings(e_id).to(device)#all_edge_attr[e_id]
+                # edge_emb = self.edge_emb_mlp(edge_attr)
+                # out = self.edge_pred_mlp(edge_emb)
+
+                for i, embedding_layer in enumerate(self.edge_emb_mlp):
+                    edge_attr = embedding_layer(edge_attr)
+                    if i != self.num_layers - 1:
+                        edge_attr = F.relu(edge_attr)
+                        edge_attr = self.batchnorm(edge_attr)
+                    # data.edge_attr[edge_index] = edge_emb
+
+                out = self.edge_pred_mlp(edge_attr)
+                out = self.activation(out)#[:,1]#[:,1]
+
+                # return just homophily prediction
+                preds.append(out)#.argmax(dim=1))#[:,1])
+                # add predicted edge value as weight for each edge
+                for edge, p in zip(e_id.detach().cpu().numpy(), out[:,1].detach().cpu().numpy()):
+                    source, target = global_edge_index[edge]
+                    edges.append((source, target))
+                    edge_weights_dict[(source,target)] = [p]# edge_weights_dict[edge] = [p]#.append
+                for edge, emb_e in zip(e_id.detach().cpu().numpy(), edge_attr.detach().cpu().numpy()):
+                    source, target = global_edge_index[edge]
+                    edge_embeddings_dict[(source, target)] = emb_e
+                    #self.filtration.append(dion.Simplex([source, target], p))
+
+
+
+
+                # pout(("edge_index", edge_index, "e_id", e_id))
+
+                batch_labels = self.edge_labels(labels=batch.y.to(device),#data.y[n_id].to(device),
+                                                edge_index=edge_index,
+                                                )
+
+                # total_loss += loss_op(out, batch_labels.to(device))
+                ground_truths.append(batch_labels)#.argmax(dim=1))#[:,1])
+
+                # if isinstance(loss_op, torch.nn.NLLLoss):
+                #     edge_logit = F.log_softmax(out, dim=-1)
+                #     edge_logit = edge_logit.argmax(dim=-1)
+                #     edge_logit = F.softmax(out, dim=-1)
+
+                # edge_logit = edge_logit.cpu()
+
+                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
+
+                # x_pred.append(edge_logit)
+                # edge_pred[e_id] = edge_logit.cpu()
+        data.edge_weights = torch.tensor([edge_weights_dict[(data.edge_index[0, i].item(), data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))], dtype=torch.float)
+
+        data.edge_embeddings = torch.tensor([edge_embeddings_dict[(data.edge_index[0, i].item(), data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))], dtype=torch.float)
+
+        #
+
+        pred = torch.cat(preds, dim=0)#.cpu()#.numpy()
+        ground_truth = torch.cat(ground_truths, dim=0)#.cpu()#.numpy()
+        # pout(("xpred ", x_pred))
+        # pout(("edge pred ", pred))
+
+        return pred, total_loss/train_sample_size, ground_truth, data
+
+    # @profile
+    @torch.no_grad()
+    def old_inference(self, input_dict):
+        # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
+        self.eval()
+        self.training = False
+        device = input_dict["device"]
+        # x = input_dict["x"].to(device)
+        data = input_dict["data"]#.to(device)
+        data = add_edge_attributes(data)
+
+        all_nodes = data.x
+        dataset = input_dict["dataset"]
+        all_data = dataset.data.to(device)
+        all_node_labels = all_data.y.to(device)
+        node_labels = data.y.to(device)
+
+        # for validation testing
+        loss_op  = input_dict["loss_op"]
+
+        labels = data.y.to(device)
+        # all_edge_idx = data.edge_index.to(device)
+        labels = self.edge_labels(labels=labels, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
+        # pout(("edge labels", labels, "edge labels size", labels.size(0),
+        #       "shape", labels.shape))
+        # pout(("sum of edge labels", torch.sum(labels, 0)))
         graph_sz = labels.size(0)
         hetero_sz = torch.sum(labels, 0)[0]
         homoph_sz  = torch.sum(labels, 0)[1]
@@ -453,7 +831,7 @@ class GCN(torch.nn.Module):
         #                                                freeze=True).requires_grad_(False)
 
         inference_loader = NeighborLoader(
-            copy.copy(data),#.edge_index,
+            data,#copy.copy(data),#.edge_index,
             input_nodes=None,
             # edge_index = train_data.edge_index,
             # input_nodes=self.train_dataset.data.train_mask,

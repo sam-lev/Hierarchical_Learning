@@ -10,6 +10,11 @@ python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --ep
 
 notes also in google doc under leventhal.info account
 
+__________Run Notes____________
+python main.py --cuda_num=0 --dropout=0.3 --dim_hidden=64 --num_layers=2 --batch_size=512\
+ --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 --dataset=HeterophilousGraphDataset\
+  --epochs=10 --homophily=0.9 --multi_label=False --type_model=HierGNN --eval_steps=5\
+   --lr=1e-1 --weight_decay=1e-5 --data_subset=minesweeper
 __________  Vertex Filter Function _________
 
 from paper: learning vertex filter Gin -> latent node representation --> MLP maping [0,1] 
