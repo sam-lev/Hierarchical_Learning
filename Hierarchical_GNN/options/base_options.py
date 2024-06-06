@@ -74,7 +74,7 @@ class BaseOptions:
             ],
         )
         parser.add_argument(
-            "--subtype_model",
+            "--hier_model",
             type=str,
             required=False,
             choices=[
@@ -82,6 +82,16 @@ class BaseOptions:
                 "HJT",
             ],
         )
+        #
+        # from crit p[paper
+        #
+        parser.add_argument('--num_steps', type=int, default=1000)
+        parser.add_argument('--num_warmup_steps', type=int, default=None,
+                            help='If None, warmup_proportion is used instead.')
+        parser.add_argument('--warmup_proportion', type=float, default=0, help='Only used if num_warmup_steps is None.')
+        parser.add_argument('--amp', default=False, action='store_true')
+        #
+        #
         parser.add_argument("--exp_name", type=str, default="")
         parser.add_argument("--N_exp", type=int, default=20)
         parser.add_argument("--resume", action="store_true", default=False)
@@ -99,7 +109,7 @@ class BaseOptions:
         )
         parser.add_argument('--persistence',
                             type=self.list_of_floats,
-                            default=[0.2,0.5,1.0],
+                            default=[0.5,1.0],
                             help="persistence values for topological filtration for hierarchical learning")
         parser.add_argument(
             "--eval_steps",
@@ -122,7 +132,7 @@ class BaseOptions:
         parser.add_argument(
             "--weight_decay", type=float, default=0.0, help="weight decay"
         )  # 5e-4
-        parser.add_argument("--dim_hidden", type=int, default=128)
+        parser.add_argument("--dim_hidden", type=int, default=512)
         parser.add_argument(
             "--batch_size",
             type=int,
@@ -134,7 +144,7 @@ class BaseOptions:
         parser.add_argument(
             "--walk_length", type=int, default=2, help="walk length of RW sampler"
         )
-        parser.add_argument("--num_steps", type=int, default=5)
+        # parser.add_argument("--num_steps", type=int, default=5)
         parser.add_argument("--sample_coverage", type=int, default=0)
         parser.add_argument("--use_norm", type=bool, default=False)
         # parameters for ClusterGCN

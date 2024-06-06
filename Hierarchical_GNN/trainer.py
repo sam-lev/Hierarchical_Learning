@@ -7,19 +7,24 @@ import copy
 
 import torch
 import torch_geometric.datasets
+from torch.cuda.amp import autocast, GradScaler
+
 # from torch_geometric.datasets import HeterophilousGraphDataset
-from sklearn.metrics import f1_score
+# import sklearn.metrics.f1_score as f1
+# import sklearn.metrics.roc_auc_score as roc_auc
+from sklearn import metrics
 from torch.profiler import ProfilerActivity, profile
 from torch_geometric.transforms import ToSparseTensor, ToUndirected, RandomLinkSplit
 import torch_geometric.transforms as Transform
-from torch.optim.lr_scheduler import ReduceLROnPlateau
+from torch.optim.lr_scheduler import ReduceLROnPlateau, LambdaLR
+from torch.nn import functional as F
 
 from GraphSampling import *
 # from LP.LP_Adj import LabelPropagation_Adj
 # from Precomputing import *
 from GraphSampling.MLPInit import *
-from utils import pout, pout_model
-from GraphSampling.utils import add_edge_attributes
+from utils import pout, pout_model, get_lr_scheduler_with_warmup
+# from GraphSampling.utils import init_edge_embedding
 
 from TopologicalPriorsDataset import *
 
@@ -240,7 +245,7 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         x = data.x
         y = data.y
     elif dataset_name in ["MixHopSyntheticDataset"]:
-        pout(("homophily of graph", homophily))
+        # pout(("homophily of graph", homophily))
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
@@ -279,11 +284,11 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         y = data.y
 
 
-        pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
+        # pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
 
     elif dataset_name in ["HeterophilousGraphDataset"]:
         pout(("USING HETEROPHILOUSGRAPHDATASET"))
-        pout(("homophily of graph", homophily))
+        # pout(("homophily of graph", homophily))
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
@@ -330,7 +335,7 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         edge_weights = [(edge[0], edge[1], 0) for edge in data.edge_index]
         data.edge_weights = edge_weights
 
-        pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
+        # pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
 
 
 
@@ -369,6 +374,12 @@ def load_data(dataset_name, datasubset_name='minesweeper',
 
     else:
         raise Exception(f"the dataset of {dataset_name} has not been implemented")
+
+    all_nodes = data.x
+    row, col = data.edge_index
+    data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
+    dataset.data = data
+
     return data, x, y, split_masks, evaluator, processed_dir, dataset
 
 def update_dataset(data, dataset):
@@ -400,13 +411,15 @@ class trainer(object):
         self.epochs = args.epochs
         self.eval_steps = args.eval_steps
 
+
         # used to indicate multi-label classification.
         # If it is, using BCE and micro-f1 performance metric
         self.multi_label = args.multi_label
         if self.multi_label:
-            self.loss_op = torch.nn.BCELoss()#BCEWithLogitsLoss()
+            self.loss_op = torch.nn.BCEWithLogitsLoss()
         else:
-            self.loss_op = torch.nn.BCELoss()#BCEWithLogitsLoss()#torch.nn.NLLLoss() #torch.nn.CrossEntropyLoss()#
+            self.loss_op = torch.nn.BCEWithLogitsLoss()#torch.nn.NLLLoss() #torch.nn.CrossEntropyLoss()#
+
 
         # threshold for class assignment from inferred logit value
         self.inf_threshold = 0.5
@@ -441,7 +454,7 @@ class trainer(object):
         # or a HeteroData object (functional name: random_link_split).
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
-        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.1, num_test=0.4)
+        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.2, num_test=0.4)
         self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         # pout(("dataset nodes points", self.dataset.node_points))
@@ -469,6 +482,13 @@ class trainer(object):
             # then perform hierarchical learning
             #
             pout(("%%%%%%%%%%", "BEGINNING HIERARCHICAL GNN FOR NODE CLASSIFICATION","%%%%%%%%%%"))
+
+            self.type_model = self.type_model + "_" + args.hier_model
+            args.type_model = self.type_model
+
+            pout(("USING MODEL:"))
+            pout((self.type_model))
+
             self.model = HierGNN(
                 args, self.data, self.split_masks, self.processed_dir,
                 train_data=self.train_data, test_data=self.test_data
@@ -478,20 +498,32 @@ class trainer(object):
 
 
         self.model.to(self.device)
+        old_implementation = """
         self.optimizer =  torch.optim.SGD(#)
                 self.model.parameters(), lr=args.lr,
             weight_decay=args.weight_decay, momentum=0.9
             )
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
-                                           factor=0.1, patience=3, threshold=1e-2)
 
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
+                                           factor=0.1, patience=4, threshold=1e-3)
+        """
+        #
+        # used by gnn critical eval
+        self.optimizer = torch.optim.AdamW(self.model.parameters(),
+                                      lr=args.lr,
+                                      weight_decay=args.weight_decay)
+        self.scheduler = get_lr_scheduler_with_warmup(optimizer=self.optimizer, num_warmup_steps=args.num_warmup_steps,
+                                                 num_steps=args.num_steps, warmup_proportion=args.warmup_proportion)
+        self.grad_scalar = GradScaler(enabled=args.amp)
+        #
+        #
         if "MLPInit" in self.type_model:# in ["GraphSAGE_MLPInit"]:
             self.mlp_embedding_initialization(args, seed)
 
 
 
 
-        pout(("WHY DOES MULTILABEL CHANGE", "self", self.multi_label))
+        # pout(("WHY DOES MULTILABEL CHANGE", "self", self.multi_label))
 
     def learn_edge_embeddings(self, args):
         # first train and infer over edge embeddings to update graph
@@ -503,12 +535,19 @@ class trainer(object):
         )
 
         self.model.to(self.device)
-        self.optimizer = torch.optim.SGD(  # )
-            self.model.parameters(), lr=args.lr,
-            weight_decay=args.weight_decay, momentum=0.9
-        )
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
-                                           factor=0.1, patience=3, threshold=1e-2)
+        self.optimizer = torch.optim.AdamW(self.model.parameters(),
+                                           lr=args.lr,
+                                           weight_decay=args.weight_decay)
+        self.scheduler = get_lr_scheduler_with_warmup(optimizer=self.optimizer, num_warmup_steps=args.num_warmup_steps,
+                                                      num_steps=args.num_steps,
+                                                      warmup_proportion=args.warmup_proportion)
+        self.grad_scalar = GradScaler(enabled=args.amp)
+        # self.optimizer = torch.optim.SGD(  # )
+        #     self.model.parameters(), lr=args.lr,
+        #     weight_decay=args.weight_decay, momentum=0.9
+        # )
+        # self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
+        #                                    factor=0.1, patience=4, threshold=1e-3)
 
         self.train_and_test(0)
 
@@ -530,11 +569,11 @@ class trainer(object):
         args.dataset = self.dataset
         args.data = self.data
 
-        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.1, num_test=0.4)
+        edge_train_transform = RandomLinkSplit(is_undirected=True, num_val=0.2, num_test=0.4)
         self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         torch.cuda.empty_cache()
-        del self.model
+        # del self.model
 
         return args, self.data, self.x, self.y, self.split_masks, self.dataset
 
@@ -590,9 +629,12 @@ class trainer(object):
         f1s_test = []
         f1s_train = []
         f1s_all = []
+        roc_all = []
         # f1_scores = []
         for epoch in range(self.epochs):
             train_loss, train_acc, val_loss = self.train_net(epoch)  # -wz-run
+            # if self.type_model  in ["HierGNN"]:
+            #     self.trian_data = self.model.get_train_data()
             seed = int(seed)
             print(
                 f"Seed: {seed:02d}, "
@@ -606,7 +648,7 @@ class trainer(object):
             # only evaluation set and entire graph opnly for near last epocjs
             #
             if epoch % self.eval_steps == 0 and epoch != 0:
-                out, result, f1s = self.test_net()
+                out, result, f1s, roc = self.test_net()
                 # tr_f1, te_f1, a_f1 = f1s
                 f1s_train.append(f1s[0])
                 f1s_test.append(f1s[1])
@@ -614,6 +656,7 @@ class trainer(object):
                 results.append(result[2])
                 results_test.append(result[1])
                 results_train.append(result[0])
+                roc_all.append(roc[2])
                 train_acc, valid_acc, test_acc = result
                 print(
                     f"Epoch: {epoch:02d}, "
@@ -621,6 +664,7 @@ class trainer(object):
                     f"Train: {100 * train_acc:.2f}%, "
                     f"Valid: {100 * valid_acc:.2f}% "
                     f"Test: {100 * test_acc:.2f}%"
+                    f"RoC: {roc[2]:.2f}%"
                 )
 
         train_f1, test_f1, all_f1 = f1s_train[-1], f1s_test[-1], f1s_all[-1]
@@ -633,6 +677,9 @@ class trainer(object):
         best_train = results_train[best_idx_train]
         best_valid = results[best_idx]
         best_test = results_test[best_idx_test]
+        best_idx_all_roc = np.argmax(roc_all)
+        best_roc_all = roc_all[best_idx_all_roc]
+
         print(
             f"Best train: {best_train:.2f}%, "
             f"Best valid (all): {best_valid:.2f}% "
@@ -640,6 +687,7 @@ class trainer(object):
             f" F1 Train: {train_f1:.2f} "
             f"F1 Test: {test_f1:.2f} "
             f"F1 All: {all_f1:.2f} "
+            f"ROC All: {best_roc_all:.2f} "
         )
 
         return best_train, best_valid, best_test
@@ -657,6 +705,8 @@ class trainer(object):
             "EdgeMLP",
             "GCN_MLPInit",
             "HierGNN",
+            "HierGNN_HST",
+            "HierGNN_HJT",
             "GraphSAINT",
             "ClusterGCN",
             "FastGCN",
@@ -667,12 +717,13 @@ class trainer(object):
                 "y": self.y,
                 "split_masks": self.split_masks,
                 "optimizer": self.optimizer,
+                "grad_scalar": self.grad_scalar,
                 "scheduler": self.scheduler,
                 "loss_op": self.loss_op,
                 "device": self.device,
                 "data": self.data,
                 "train_data":self.train_data,
-                "val_data":copy.copy(self.val_data),
+                "val_data":self.val_data,
                 "dataset": self.dataset,
                 "epoch": epoch,
                 "total_epochs":self.epochs,
@@ -727,7 +778,7 @@ class trainer(object):
 
     @torch.no_grad()
     def test_net(self):
-        pout(("In test net", "multilabel?", self.multi_label))
+        # pout(("In test net", "multilabel?", self.multi_label))
         self.model.eval()
         train_input_dict = {"data": self.train_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset}
@@ -737,36 +788,10 @@ class trainer(object):
                            "device": self.device, "dataset": self.dataset}
 
         # infer over training set
-        pout(("train set"))
-        train_out, loss, train_labels = self.model.inference(train_input_dict)
-        # train_out.to("cpu")
-
-        edge_index = self.train_data.edge_index
-        # train_labels = self.train_data.y
-        # train_labels = torch.eq(train_labels[edge_index[0]], train_labels[edge_index[1]])
-        y_true_train = train_labels#.type(torch.FloatTensor)
-
-        # infer over test set
-        pout(("test set"))
-        test_out, loss, test_labels = self.model.inference(test_input_dict)
-        # test_out.to("cpu")
-        edge_index = self.test_data.edge_index
-        # test_labels = self.test_data.y
-        # test_labels = torch.eq(test_labels[edge_index[0]], test_labels[edge_index[1]])
-        y_true_test = test_labels#.type(torch.FloatTensor)
-
-        # infer over entire graph
-        pout(("all set"))
-        all_out, loss, all_labels = self.model.inference(all_input_dict)
-        # all_out.to("cpu")
-        edge_index = self.dataset.data.edge_index
-        # all_labels = self.dataset.data.y
-        # all_labels = torch.eq(all_labels[edge_index[0]], all_labels[edge_index[1]])
-        y_true_all = all_labels#.type(torch.FloatTensor)
-
-        pout(("y true train shape", y_true_train.size))
-        pout(("y true test shape", y_true_test.size))
-        pout(("y true all shape", y_true_all.size))
+        # pout(("train set"))
+        train_out, loss, y_train = self.model.inference(train_input_dict)
+        test_out, loss, y_test = self.model.inference(test_input_dict)
+        all_out, loss, y_all = self.model.inference(all_input_dict)
 
         if self.evaluator is not None:
 
@@ -795,43 +820,38 @@ class trainer(object):
         else:
 
             if not self.multi_label:
-                pout(("%%%%%%%%%%%","Testing inference results",
-                      "multi_Label: ",self.multi_label,"%%%%%%%%%%"))
                 # train results threshold prediction
-                threshold_out = train_out.argmax(dim=-1).to("cpu")
-                # threshold_out[~mask] = 0.0
-                # train_out = threshold_out
-
-                train_pred = threshold_out.to("cpu")#.argmax(dim=-1).to("cpu")
+                train_pred = train_out > 0.5
+                train_acc = (train_pred.long() == y_train).float().mean().item()
+                print((train_acc))
+                # threshold_out = train_out.argmax(dim=-1).to("cpu")
+                # train_pred = threshold_out.to("cpu")#.argmax(dim=-1).to("cpu")
                 # y_true = self.y
-                train_correct = train_pred.eq(y_true_train.argmax(dim=-1))
-                train_acc = train_correct.sum().item() / float(train_labels.size()[0])#self.split_masks["train"].sum().item()
+                # train_correct = train_pred.eq(y_true_train)#.argmax(dim=-1)
+                # train_acc = train_correct.sum().item() / float(train_labels.size()[0])#self.split_masks["train"].sum().item()
 
-                # test results threshold inf pred
-                threshold_out = test_out.argmax(dim=-1).to("cpu")
-                # threshold_out[~mask] = 0.0
-                # test_out = threshold_out
+                # test_pred = threshold_out.to("cpu") #.argmax(dim=-1).to("cpu")
+                # # y_true = self.y
+                # test_correct = test_pred.eq(y_true_test.argmax(dim=-1).to("cpu"))
+                # test_acc = test_correct.sum().item() / float(test_labels.size()[0]) #self.split_masks["valid"].sum().item()
+                test_pred = test_out > 0.5
+                test_acc = (test_pred.long() == y_test).float().mean().item()
 
-                test_pred = threshold_out.to("cpu") #.argmax(dim=-1).to("cpu")
-                # y_true = self.y
-                test_correct = test_pred.eq(y_true_test.argmax(dim=-1))
-                test_acc = test_correct.sum().item() / float(test_labels.size()[0]) #self.split_masks["valid"].sum().item()
+                # threshold_out = all_out.argmax(dim=-1).to("cpu")
+                # all_pred = threshold_out.to("cpu")
+                # # y_true = self.y
+                # all_correct = all_pred.eq(y_true_all.argmax(dim=-1).to("cpu"))
+                # all_acc = all_correct.sum().item() / float(all_labels.size()[0]) #self.split_masks["test"].sum().item()
 
-                # all results thresholded
-                threshold_out = all_out.argmax(dim=-1).to("cpu")
-                # threshold_out[~mask] = 0.0
-                # all_out = threshold_out
+                all_pred = all_out > 0.5
+                all_acc = (all_pred.long() == y_all).float().mean().item()
 
-                all_pred = threshold_out.to("cpu")
-                # y_true = self.y
-                all_correct = all_pred.eq(y_true_all.argmax(dim=-1))
-                all_acc = all_correct.sum().item() / float(all_labels.size()[0]) #self.split_masks["test"].sum().item()
-
+                pout((y_train, train_out))
                 # Compute F1 scores
                 train_f1 = (
-                    f1_score(
-                        y_true_train.argmax(dim=-1).to("cpu"),
-                        train_out.argmax(dim=-1).to("cpu"),#.to("cpu"),
+                    metrics.f1_score(
+                        y_train.to("cpu"),
+                        train_pred.to("cpu"),#.to("cpu"),
                         average="micro",
                     )
                     # if train_pred.sum() > 0
@@ -839,9 +859,9 @@ class trainer(object):
                 )
 
                 test_f1 = (
-                    f1_score(
-                        y_true_test.argmax(dim=-1).to("cpu"),
-                        test_out.argmax(dim=-1).to("cpu"),
+                    metrics.f1_score(
+                        y_test.to("cpu"),
+                        test_pred.to("cpu"),
                         average="micro",
                     )
                     # if test_pred.sum() > 0
@@ -849,14 +869,26 @@ class trainer(object):
                 )
 
                 all_f1 = (
-                    f1_score(
-                        y_true_all.argmax(dim=-1).to("cpu"),
-                        all_out.argmax(dim=-1).to("cpu"),
+                    metrics.f1_score(
+                        y_all.to("cpu"),
+                        all_pred.to("cpu"),
                         average="micro",
                     )
                     # if all_pred.sum() > 0
                     # else 0
                 )
+
+                train_roc = metrics.roc_auc_score(y_true=y_train.cpu().numpy().astype(int),
+                              y_score=train_out.cpu().numpy()).item()
+
+                test_roc = metrics.roc_auc_score(y_true=y_test.cpu().numpy().astype(int),
+                                                y_score=test_out.cpu().numpy()).item()
+
+                all_roc = metrics.roc_auc_score(y_true=y_all.cpu().numpy().astype(int),
+                                                y_score=all_out.cpu().numpy()).item()
+
+                # all_roc = metrics.roc_auc_score(y_true_all.argmax(dim=1).cpu().numpy(),
+                #         all_out.argmax(dim=1).cpu().numpy())#.argmax(dim=-1).to("cpu"),)
 
                 # # pred = out.argmax(dim=-1).to("cpu")
                 # pred = out.to("cpu")
@@ -903,7 +935,7 @@ class trainer(object):
                 pred = (all_out > 0).float().numpy()
                 # y_true = self.labels.numpy()
                 # calculating F1 scores
-                y_true = y_true_all.numpy()
+                y_true = y_all.numpy()
                 train_acc = (
                     f1_score(
                         y_true,#[self.split_masks["edge_train"]],
@@ -934,4 +966,4 @@ class trainer(object):
                     else 0
                 )
 
-        return all_out, (train_acc, test_acc, all_acc), (train_f1, test_f1, all_f1)
+        return all_out, (train_acc, test_acc, all_acc), (train_f1, test_f1, all_f1), (train_roc,test_roc,all_roc)

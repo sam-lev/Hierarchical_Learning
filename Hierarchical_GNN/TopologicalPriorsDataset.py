@@ -133,7 +133,7 @@ class TopologicalPriorsDataset(InMemoryDataset):
 
         labels = np.array(labels).astype(dtype=np.float64)
 
-        pout(("labels shape in topo dataset gen",labels.shape, "num nodes", num_nodes, "num edges", num_edges))
+        # pout(("labels shape in topo dataset gen",labels.shape, "num nodes", num_nodes, "num edges", num_edges))
         # labels = np.stack(labels, axis = 0)
         y = torch.from_numpy(labels).to(torch.float)  # .argmax(dim=-1)
 

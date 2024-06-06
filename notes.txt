@@ -1,8 +1,6 @@
 
 To Run
-python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --epochs=50 --dim_hidden=512 --num_layers=4\
- --batch_size=256 --use_batch_norm=False --SLE_threshold=0.95 --N_exp=1 --dataset=TopologicalPriorsDataset\
- --homophily=0.9 --multi_label=False  --type_model=GCN_MLPInit
+python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --epochs=50 --dim_hidden=512 --num_layers=4 --batch_size=256 --use_batch_norm=False --SLE_threshold=0.95 --N_exp=1 --dataset=TopologicalPriorsDataset --homophily=0.9 --multi_label=False  --type_model=GCN_MLPInit
 
 python main.py --cuda_num=0 --lr=0.01 --weight_decay=0.000001 --dropout=0.0 --epochs=50 --dim_hidden=512 --num_layers=4\
  --batch_size=256 --use_batch_norm=False --SLE_threshold=0.95 --N_exp=1 --dataset=MixHopSyntheticDataset\
@@ -15,6 +13,13 @@ python main.py --cuda_num=0 --dropout=0.3 --dim_hidden=64 --num_layers=2 --batch
  --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 --dataset=HeterophilousGraphDataset\
   --epochs=10 --homophily=0.9 --multi_label=False --type_model=HierGNN --eval_steps=5\
    --lr=1e-1 --weight_decay=1e-5 --data_subset=minesweeper
+
+  ______ Settings From A Critival Lok at Evaluating GNNS Under Heterophily
+   python main.py --cuda_num=0 --dropout=0.2 --dim_hidden=512 --num_layers=4 --batch_size=512\
+    --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 --dataset=HeterophilousGraphDataset --epochs=20\
+     --homophily=0.9 --multi_label=True --type_model=HierGNN --eval_steps=100 --lr=3e-5 --weight_decay=1e-8\
+      --data_subset=minesweeper --persistence=0.4,0.5,1.0
+
 __________  Vertex Filter Function _________
 
 from paper: learning vertex filter Gin -> latent node representation --> MLP maping [0,1] 

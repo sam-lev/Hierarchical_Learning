@@ -90,7 +90,7 @@ def main(args):
         list_valid_acc.append(valid_acc)
         list_train_loss.append(train_loss)
 
-        del trnr
+        # del trnr
         torch.cuda.empty_cache()
         gc.collect()
 

@@ -15,14 +15,21 @@ def print_args(args):
         t.add_row([k, _dict[k]])
     print(t.draw())
 
-def add_edge_attributes(data):
+def init_edge_embedding(data):
+
+    # data.edge_index = data.edge_index.t().contiguous()
+    # adj_n1 = data.edge_index[:,0]
+    # adj_n2 = data.edge_index[:,1]
+    # pout(("data edge ", data.edge_index))
+    # pout(("data edge ", data.edge_index[:,0]))
+    # pout(("data edge ", data.edge_index[:,1]))
     x = data.x
-    row, col = data.edge_index
+    adj_n1, adj_n2 = data.edge_index
 
     # dim edfe feature shoould be num_edges , 2 * dim_node_features
-    data.edge_attr = torch.cat([x[row], x[col]], dim=-1)# np.concatenate([x[row], x[col]], axis=-1)#self.mlp(torch.cat([x[row], x[col], edge_attr], dim=-1))
+    data.edge_attr = torch.cat([x[adj_n1], x[adj_n2]], dim=-1)# np.concatenate([x[row], x[col]], axis=-1)#self.mlp(torch.cat([x[row], x[col], edge_attr], dim=-1))
 
-    pout(("add edge attr shape", np.shape(data.edge_index)))
+    # pout(("add edge attr shape", np.shape(data.edge_index)))
 
     """row, col = data.edge_index
     data.edge_attr = torch.cat([data.x[row], data.x[col], data.edge_attr], dim=-1)"""
@@ -82,3 +89,9 @@ def pout(show=None):
         else:
             print("    * ", str(show))
         print("    *")
+
+
+def edge_index_from_adjacency(adj):
+    # adj_t = torch.tensor([[0, 1, 0, 0], [1, 0, 0, 0], [1, 0, 0, 1], [0, 0, 1, 0]])
+    edge_index = adj.nonzero().t().contiguous()
+    return edge_index

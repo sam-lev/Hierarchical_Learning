@@ -4,7 +4,8 @@
 # import json
 # import time
 import numpy as np
-import copy
+from copy import copy
+from copy import deepcopy
 from sklearn.metrics import f1_score
 from typing import Callable, List, Optional
 import torch
@@ -28,7 +29,7 @@ from torch_geometric.data import Data, InMemoryDataset, download_url
 #
 # from torch_geometric.nn.dense.linear import Linear
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
-from .utils import pout, homophily_edge_labels, add_edge_attributes
+from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency
 #profiling tools
 from guppy import hpy
 # from memory_profiler import profile
@@ -117,7 +118,10 @@ class HierGNN(torch.nn.Module):
         self.edge_index = data.edge_index
 
         heterophily_num_class = 2
-        self.cat = 2
+        self.num_classes = args.num_classes
+        self.out_dim = self.num_classes if self.num_classes != 2 else 1
+
+        self.cat = 1
 
         self.c1 = 0
         self.c2 = 0
@@ -127,34 +131,59 @@ class HierGNN(torch.nn.Module):
 
         self.weight_decay = args.weight_decay
 
+        self.use_batch_norm = args.use_batch_norm
+
+
+        old_imp="""batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        """
         self.edge_emb_mlp = torch.nn.ModuleList()
+        self.batch_norms = []
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
         self.edge_emb_mlp.append(GCNConv(self.cat * self.num_feats , self.dim_hidden))
-        # inherent class imbalance / overfitting
-        # self.edge_emb_mlp.append(nn.BatchNorm1d(self.dim_hidden))
-        for _ in range(self.num_layers - 1):
+
+        for _ in range(self.num_layers - 2):
             self.edge_emb_mlp.append(GCNConv(self.dim_hidden, self.dim_hidden))
-            # self.edge_emb_mlp.append(nn.BatchNorm1d(self.dim_hidden))
-        self.edge_emb_mlp.append(GCNConv(self.dim_hidden, self.num_classes))
+            old_imp="""batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            """
+            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            self.batch_norms.append(batch_norm_layer)
 
-        self.batchnorm = nn.BatchNorm1d(self.dim_hidden)
-        self.activation = nn.Sigmoid() #nn.Softmax(dim=1) #nn.Sigmoid()
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
 
+        self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
+
+        self.act = nn.GELU()
+        self.sig = nn.Sigmoid() #nn.Softmax(dim=1) #nn.Sigmoid()
+        self.dropout = nn.Dropout(self.dropout)
         self.thresholds = args.persistence
-        self.graphs = self.process_graph_filtrations(data=self.data,
+
+
+
+        self.graphs, self.node_mappings = self.process_graph_filtrations(data=self.data,
                                                      thresholds=self.thresholds,
                                                      filtration=None)
 
+        pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY","Total graphs: ", len(self.graphs),"%%%%%%%"))
+        self.graph_levels = np.flip(np.arange(len(self.graphs)+1))
         graph = self.graphs[0]
         self.graphlevelloader = self.get_graph_dataloader(graph)
         self.graph_level = 0
 
-
-
-    def get_graph_dataloader(self, graph):
-        return DataLoader(graph,
-                                        batch_size=self.batch_size,
-                                               # num_neighbors=[-1],
-                                        shuffle=True) #for graph in self.graphs]
+    def expand_labels(self, labels):
+        neg_labels = ~labels
+        labels = labels.type(torch.FloatTensor)  # labels.type(torch.FloatTensor)
+        neg_labels = neg_labels.type(torch.FloatTensor)
+        labels = [neg_labels, labels]
+        # if not as_logit:
+        return torch.stack(labels, dim=1)
+    def get_graph_dataloader(self, graph, shuffle=True):
+        # pout(("graph data edge index",graph.edge_index))
+        return NeighborLoader(graph,
+                              batch_size=self.batch_size,
+                              num_neighbors=[-1],
+                              shuffle=shuffle) #for graph in self.graphs]
 
 
     def l2_loss(self, weight, factor):
@@ -165,195 +194,32 @@ class HierGNN(torch.nn.Module):
         #     x_target = x[: size[1]]  # Target nodes are always placed first.
         #     x = self.convs[i]((x, x_target), edge_index)
         x, edge_attr = data.x, data.edge_index
+        x = self.edge_emb_mlp[0](x, edge_attr)
+        x = self.dropout(x)
+        x = self.act(x)
         for i,embedding_layer in enumerate(self.edge_emb_mlp):
-            x = embedding_layer(x, edge_attr)
-            if i != self.num_layers - 1:
-                x = F.relu(x)
-                x = self.batchnorm(x)
-                x = F.dropout(x, p=self.dropout, training=self.training)
+            if i ==0:
+                x_res = x
+                continue
+            x_hidden = x_res
+            x_res = self.batch_norms[i](x_res)
+            x_res = embedding_layer(x_res, edge_attr)
+            x_res = x_hidden + x_res
+            # if i != self.num_layers - 1:
+            x_res = self.dropout(x_res)
+            x_res = self.act(x_res)
 
-        # x = self.activation( x )
 
-        return F.log_softmax( x , dim=1 )
+        x = x + x_res  # torch.cat([x,x_res],axis=1)
+        x = self.batch_norms[-1](x)
+        x = self.edge_pred_mlp(x).squeeze(1)
+        # x = self.sig(x)
+        # x = torch.squeeze(x)
+        return x#F.log_softmax( x , dim=1 )
 
     #fp = open('./run_logs/training_memory_profiler.log', 'w+')
     # @profile#stream=fp)
     def train_net(self, input_dict):
-        a = """
-        device = input_dict["device"]
-
-        optimizer = input_dict["optimizer"]
-        loss_op = input_dict["loss_op"]
-        scheduler = input_dict["scheduler"]
-
-        total_loss = total_correct = 0
-        last_loss, last_acc = 0, 0
-
-
-        val_data = input_dict["val_data"]
-        val_input_dict = {"data": val_data,
-                            "device": device,
-                          "dataset": input_dict["dataset"],
-                          "loss_op":loss_op}
-
-        # y_full = self.edge_labels(labels=self.train_dataset.data.y.to(device),
-        #                      edge_index=self.train_dataset.data.edge_index.to(device),
-        #                           device=device)
-        # hetero_sz = torch.sum(y_full, 0)[0]
-        # homoph_sz = torch.sum(y_full, 0)[1]
-        # max_class = torch.max(torch.tensor((hetero_sz,
-        #                                     homoph_sz)))
-        # self.c1 = max_class/hetero_sz
-        # self.c2 = max_class/homoph_sz
-
-        self.train()
-        self.training = True
-        # self.edge_embeddings.weight.requires_grad = True
-        # self.edge_embeddings.to(device)
-
-        first_idx = torch.tensor([0,0]).to(device)
-        # sanity_check_embedding = self.edge_embeddings.weight.clone()
-
-        sanity = 0
-
-        train_sample_size = total_batches = 0
-
-        for batch in self.train_loader:#_size, n_id, adjs in self.train_loader:
-            batch=batch.to(device)
-            batch_size, n_id = batch.batch_size, batch.n_id.to(device)#batch_size, n_id.to(device), adjs
-            # edge_index, e_id, size = adjs
-            # _, _, size = adjs
-
-            # batch.n_id # global node index of each node
-            e_id = batch.e_id.to(device)#adjs.e_id.to(device) # global edge index of each edge
-            edge_index  = batch.edge_index.to(device)#adjs.edge_index.to(device)
-            # batch.input_id # global index of input_nodes
-            # batch_data = self.train_dataset.data.x[n_id].to(device)
-
-            train_sample_size += edge_index.shape[1]
-            total_batches += 1
-
-            row, col = edge_index
-
-            # x = all_nodes.x[n_id].to(device)  # subgraph ref
-            # y = labels[n_id].to(device)  # subgraph ref
-            y = self.edge_labels(labels=batch.y.to(device),
-                                 edge_index=edge_index, device=device)
-            # y = y[:,1].to(device)
-            y = y.to(device)
-            # pout(("shape batch", y.shape))
-
-            #torch.tensor(data.edge_attr[e_id], requires_grad=True).to(device)
-            # edge_attr = data.edge_attr[e_id]
-
-            optimizer.zero_grad()
-            # out = self(x[n_id], adjs)
-            out, edge_embedding = self(edge_index = e_id)
-
-
-
-
-
-            # update edge attribute with new embedding
-            # self.dataset.data.edge_attr[e_id] = edge_embedding
-
-            if isinstance(loss_op, torch.nn.NLLLoss):
-                pout(("performing softmax"))
-                out = F.log_softmax(out, dim=-1)
-
-            # hetero_sz = torch.sum(y, 0)[0]
-            # homoph_sz = torch.sum(y, 0)[1]
-            # self.c1 = self.c1 + hetero_sz
-            # self.c2 = self.c2 + homoph_sz
-            # max_class = torch.max(torch.tensor((self.c1,
-            #                                     self.c2)))
-            # sum_class_count = torch.sum(torch.tensor((self.c1,self.c2)))
-
-            # loss = self.c1 * loss_op(out[:,0], y[:,0]) \
-            #        + self.c2 * loss_op(out[:,1], y[:,1])
-
-            loss = loss_op(out, y)
-
-            # pout(("c1", self.c1, "c2", self.c2,"sum", sum_class_count,
-            #       "max", max_class, "wc1", max_class/self.c1))
-            # compute l2 loss of weights in mlps used for
-            # leaarning embeddings and prediction
-            # Compute l2 loss component
-            l2_factor = self.weight_decay
-            l2_loss = 0.0
-            for parameter in self.edge_emb_mlp.parameters():
-                l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-            for parameter in self.edge_pred_mlp.parameters():
-                l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-
-            # add L2 normalization of weights
-            loss += l2_loss
-
-            # back prop
-            loss.backward()
-            optimizer.step()
-
-            total_loss += float(loss.item())
-
-            if self.threshold_pred:
-                threshold_out = torch.zeros_like(out)
-                mask = out[:] >= 0.5
-                threshold_out[mask] = 1.0
-                mask = out[:] < 0.5
-                threshold_out[mask] = 0.0
-                # threshold_out[~mask] = 0.0
-                out = threshold_out
-
-            if (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCELoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
-                total_correct += int(out[:,1].eq(y[:,1]).sum()) #y[:,1]
-                total_correct += int(out.argmax(dim=-1).eq(y[:,1]).sum())
-            else:
-                total_correct += int(out.eq(y).sum())
-
-            # last_acc = total_correct# float(total_correct)
-            # pout(("edge embedding weight:", self.edge_embeddings.weight))
-            # pout(("edge embedding weight data:", self.edge_embeddings.weight.data))
-            # pout(("edge embedding grad", self.edge_embeddings.weight.grad))
-            # pout(("embedding updated:", ~torch.eq(self.edge_embeddings(e_id), edge_embedding )))
-            # pout(("embedding sanity check, updated:", ~torch.eq(self.edge_embeddings.weight,
-            #                                                    sanity_check_embedding)))
-            # pout(("edge embedding", edge_attr))
-
-            torch.cuda.empty_cache()
-            del y, batch_size, n_id, loss, out, l2_loss, l2_factor, edge_embedding, batch
-
-
-            # x = scatter(data.x, data.batch, dim=0, reduce='mean')
-        val_out, val_loss, val_labels = self.inference(val_input_dict)
-        val_labels = val_labels.to(device)
-        val_out = val_out.to(device)
-        threshold_out = torch.zeros_like(val_out)
-        mask = val_out[:] >= self.inf_threshold
-        threshold_out[mask] = 1.0
-        # threshold_out[~mask] = 0.0
-        val_out = threshold_out
-
-        # train_pred = train_out.to("cpu")  # .argmax(dim=-1).to("cpu")
-        # y_true = self.y
-        val_correct = val_out.eq(val_labels)
-        val_acc = val_correct.sum().item() / float(val_labels.size()[0])
-        val_loss = val_acc
-        # scheduler.step(val_loss)
-
-        # for multilabel
-        # train_size_edges = y.size(0)
-        # train_size = (
-        #     train_size_edges
-        #     if isinstance(loss_op, torch.nn.NLLLoss) or isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss)
-        #     else train_size_edges * self.num_classes
-        # )
-        '''val_acc = self.test()
-        '''
-        #len(self.train_dataset.data)
-        # return total_loss/ self.train_size_edges, total_correct / train_size#total_loss, total_correct / self.train_size[0]  # / len(self.train_loader)
-        # return total_loss / float(len(self.train_loader)), total_correct / float(train_size)
-        return total_loss / float(total_batches) , total_correct / float(train_sample_size), val_loss
-        """
         return self.hierarchical_successive_train_net(input_dict)
 
 
@@ -366,193 +232,21 @@ class HierGNN(torch.nn.Module):
     # @profile
     @torch.no_grad()
     def inference(self, input_dict):
-        # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
-        self.eval()
-        self.training = False
-        device = input_dict["device"]
-        # x = input_dict["x"].to(device)
-        data = input_dict["data"]#.to(device)
-        data = add_edge_attributes(data)
-
-        all_nodes = data.x
-        dataset = input_dict["dataset"]
-        all_data = dataset.data.to(device)
-        all_node_labels = all_data.y.to(device)
-        node_labels = data.y.to(device)
-
-        # for validation testing
-        loss_op  = input_dict["loss_op"]
-
-        labels = data.y.to(device)
-        # all_edge_idx = data.edge_index.to(device)
-        labels = self.edge_labels(labels=labels, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
-        # pout(("edge labels", labels, "edge labels size", labels.size(0),
-        #       "shape", labels.shape))
-        # pout(("sum of edge labels", torch.sum(labels, 0)))
-        graph_sz = labels.size(0)
-        hetero_sz = torch.sum(labels, 0)[0]
-        homoph_sz  = torch.sum(labels, 0)[1]
-        pout(("heterophily, homophily percents", hetero_sz/graph_sz, " ", homoph_sz/graph_sz ))
-        edge_pred = torch.zeros(data.edge_attr.shape[0]).type(torch.FloatTensor)
-        # edge_pred = torch.zeros(data.edge_index.shape).type(torch.FloatTensor)
-        # edge_pred.to(device)
-        node_pred = torch.zeros(data.y.shape)
-        # edge_index = data.edge_index.to(device)
-        # edge_attr = data.edge_attr.to(device)
-
-
-        row, col = data.edge_index
-        # pout(("row col", row, col, "row_shape col_shape", row.shape, col.shape))
-        # dim edfe feature shoould be num_edges , 2 * dim_node_features
-        data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
-
-        # pout(("edge attr shape", data.edge_attr.shape))
-
-        # create edge embeddings
-        # pred_edge_embeddings = nn.Embedding.from_pretrained(data.edge_index.shape).requires_grad_(False)
-        # self.edge_embeddings.requires_grad_(False)
-        # self.edge_embeddings.weight.requires_grad = False
-        # self.edge_embeddings.to(device)
-
-        # pout(("labels shape in inf", labels.shape))
-
-        x = data.x
-        row, col = data.edge_index
-        # data.edge_attr = torch.cat([x[row], x[col]], dim=-1)
-        data.edge_attr.to(device)
-
-        data.edge_embeddings = torch.cat([x[row], x[col]], dim=-1)
-        data.edge_embeddings.to(device)
-
-        data.edge_weights = torch.zeros(data.edge_index.shape)
-
-        global_edge_index = data.edge_index.t().cpu().numpy()
-
-        # create learnable edge embeddings
-        # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
-        edge_embeddings = nn.Embedding.from_pretrained(data.edge_emb,
-                                                            freeze=True).requires_grad_(False).to(device)
-
-        # edge_embeddings = nn.Embedding.from_pretrained(self.edge_embeddings.weight.data.detach().clone(),
-        #                                                freeze=True).requires_grad_(False)
-
-        inference_loader = NeighborLoader(
-            data,#copy.copy(data),#.edge_index,
-            input_nodes=None,
-            # edge_index = train_data.edge_index,
-            # input_nodes=self.train_dataset.data.train_mask,
-            # sizes=[-1],
-            num_neighbors=[-1],
-            batch_size=data.edge_index.shape[1],
-            shuffle=False,
-        )
-
-        train_sample_size = 0
-        #     # [test_split[0]:test_split[1]],#.edge_index,  # split_masks["test"],  # .edge_index,
-        #     # node_idx=self.split_masks["test"],
-        #     sizes=[-1],
-        #     batch_size=data.edge_index.shape[1],#self.batch_size,
-        #     shuffle=False,
-        # )
-        # Hence, an item returned by :class:`NeighborSampler` holds the current
-        # :obj:`batch_size`, the IDs :obj:`n_id` of all nodes involved in the computation,
-        # and a list of bipartite graph objects via the tupl :obj:`(edge_index, e_id, size)`,
-        # where :obj:`edge_index` represents the bipartite edges between source
-        # and target nodes, :obj:`e_id` denotes the IDs of original edges in
-        # the full graph, and :obj:`size` holds the shape of the bipartite graph.
-        # For each bipartite graph, target nodes are also included at the beginning
-        # of the list of source nodes so that one can easily apply skip-connections
-        # or add self-loops.
-        # kwargs = {'batch_size': 1024, 'num_workers': 6, 'persistent_workers': True}
-        # subgraph_loader = NeighborLoader(copy.copy(data), input_nodes=None,
-        #                                  num_neighbors=[-1], shuffle=False, )
-        edges = []
-        edge_weights = []
-        x_pred = []
-        preds = []
-        ground_truths = []
-        total_loss = 0
-        for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
-            with torch.no_grad():
-                batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
-                # edge_index, e_id, size = adjs
-                # _, _, size = adjs
-
-                # batch.n_id # global node index of each node
-                e_id = batch.e_id.to(device)  # adjs.e_id.to(device) # global edge index of each edge
-                edge_index = batch.edge_index.to(device)
-                train_sample_size += edge_index.shape[1]
-                # batch_size, n_id, adjs = batch_size.to(device), n_id.to(device), adjs
-                # n_id.to(device)
-                # edge_index, e_id, size = adjs
-                # edge_index, e_id, size = edge_index.to(device), e_id.to(device), size
-                # x = all_nodes[n_id].to(device) # subgraph ref
-                # pout(("shape batch", x.shape))
-                # x_target = x[:size[1]]
-                edge_attr = edge_embeddings(e_id).to(device)#all_edge_attr[e_id]
-                # edge_emb = self.edge_emb_mlp(edge_attr)
-                # out = self.edge_pred_mlp(edge_emb)
-
-                for i, embedding_layer in enumerate(self.edge_emb_mlp):
-                    edge_attr = embedding_layer(edge_attr)
-                    if i != self.num_layers - 1:
-                        edge_attr = F.relu(edge_attr)
-                        edge_attr = self.batchnorm(edge_attr)
-                    # data.edge_attr[edge_index] = edge_emb
-                data.edge_embeddings[e_id] = edge_attr
-                out = self.edge_pred_mlp(edge_attr)
-                out = self.activation(out)#[:,1]#[:,1]
-
-                # return just homophily prediction
-                preds.append(out[:,1])
-                # add predicted edge value as weight for each edge
-                for edge, p in zip(e_id.t().cpu().numpy(), out[:,1].cpu().numpy()):
-                    source, target = global_edge_index[edge]
-                    edges.append((source, target))
-                    data.edge_weights[edge] = p#.append(p)
-
-                    #self.filtration.append(dion.Simplex([source, target], p))
-
-
-
-
-                # pout(("edge_index", edge_index, "e_id", e_id))
-
-                batch_labels = self.edge_labels(labels=batch.y.to(device),#data.y[n_id].to(device),
-                                                edge_index=edge_index, dtype="int")
-
-                total_loss += loss_op(out, batch_labels.to(device))
-                ground_truths.append(batch_labels[:,1])
-
-                # if isinstance(loss_op, torch.nn.NLLLoss):
-                #     edge_logit = F.log_softmax(out, dim=-1)
-                #     edge_logit = edge_logit.argmax(dim=-1)
-                #     edge_logit = F.softmax(out, dim=-1)
-
-                # edge_logit = edge_logit.cpu()
-
-                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
-
-                # x_pred.append(edge_logit)
-                # edge_pred[e_id] = edge_logit.cpu()
-
-        # self.filtration.sort()
-
-        pred = torch.cat(preds, dim=0)#.cpu()#.numpy()
-        ground_truth = torch.cat(ground_truths, dim=0)#.cpu()#.numpy()
-        # pout(("xpred ", x_pred))
-        # pout(("edge pred ", pred))
-
-        return pred, total_loss/train_sample_size, ground_truth#torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
+        return self.node_inference(input_dict)
 
     def hierarchical_successive_train_net(self, input_dict,
                                           filtration=None, thresholds=[.5, 1.0]):
 
         device = input_dict["device"]
 
+        #
+        # from crit
         optimizer = input_dict["optimizer"]
         loss_op = input_dict["loss_op"]
+        grad_scalar = input_dict["grad_scalar"]
         scheduler = input_dict["scheduler"]
+        #
+        #
 
         data = input_dict["data"]
 
@@ -579,86 +273,106 @@ class HierGNN(torch.nn.Module):
 
         sanity = 0
 
-        train_sample_size = total_batches = 0
+        length_training_batches = data.y.size()[0]
+        # self.train_scheduler = input_dict["scheduler"]
+        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
-        subgraph_embeddings = {}
+        total_training_points = 0
         # for graph_level, trainloader in enumerate(self.graphLoaders):#_size, n_id, adjs in self.train_loader:
 
-        for batch_idx, batch in enumerate(self.graphlevelloader):
+        for batch in self.graphlevelloader:
             batch=batch.to(device)
 
 
 
-            optimizer.zero_grad()
+
+            # optimizer.zero_grad()
+
+
             # out = self(x[n_id], adjs)
             out = self(batch)
+            y = batch.y#.squeeze()
+            # y = batch.y.unsqueeze(-1)
+            # y = y.type_as(out)
 
+            loss = loss_op(out, y)#.float())
 
-            y = batch.y
-            loss = loss_op(out, y)
-
-            # Compute l2 loss component
-            # l2_factor = self.weight_decay
-            # l2_loss = 0.0
-            # for parameter in self.edge_emb_mlp.parameters():
-            #     l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-            # for parameter in self.edge_pred_mlp.parameters():
-            #     l2_loss += self.l2_loss(parameter, l2_factor)#.view(-1))
-            # # add L2 normalization of weights
-            # loss += l2_loss
+            #
+            #
+            #
+            grad_scalar.scale(loss).backward()
+            grad_scalar.step(optimizer)
+            grad_scalar.update()
+            optimizer.zero_grad()
+            #
+            #
+            #
+            total_training_points += batch.batch_size
 
             # back prop
-            loss.backward()
-            optimizer.step()
+            # loss.backward()
+            # optimizer.step()
 
-            total_loss += float(loss.item())
+            total_loss += loss/y.size()[0]
 
-            if self.threshold_pred:
-                threshold_out = torch.zeros_like(out)
-                mask = out[:] >= 0.5
-                threshold_out[mask] = 1.0
-                mask = out[:] < 0.5
-                threshold_out[mask] = 0.0
-                # threshold_out[~mask] = 0.0
-                out = threshold_out
-
-            if (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCELoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
-                total_correct += int(out[:,1].eq(y[:,1]).sum()) #y[:,1]
-                total_correct += int(out.argmax(dim=-1).eq(y[:,1]).sum())
+            if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
+                total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().mean().item()
             else:
-                total_correct += int(out.eq(y).sum())
+                probs = self.sig(out)
+                probs = probs > 0.5
+                total_correct = (probs.long() == y).float().mean().item()  # int(out.eq(y).sum())
+
+            scheduler.step()
 
             torch.cuda.empty_cache()
+
             #del y, batch_size, n_id, loss, out, l2_loss, l2_factor, edge_embedding, batch
 
-        if epoch % (total_epochs // len(self.graphLoaders)) == 0 and epoch != 0:
+        if epoch == int(total_epochs/self.graph_levels[self.graph_level]):#% (total_epochs // self.data_size) == 0 and epoch != 0:
             pout(("%%%%%%"))
             pout(("Moving up graph level hierarchy for successive training"))
+            pout(("Epoch ", epoch, " of ", total_epochs ))
             pout(("%%%%%%"))
             self.graph_level += 1
             # Save embeddings for each node in the last graph
             subgraph_embeddings = {}
             with torch.no_grad():
                 for batch in self.graphlevelloader:
-                    out = self(batch)
-                    for i, node in enumerate(batch.x):
-                        subgraph_embeddings[node] = out[i].detach().numpy()
-            self.graphs[self.graph_level] = self.initialize_from_subgraph(subgraph_embeddings,
-                                                                          self.graphs[self.graph_level])
+                    batch.to(device)
+                    for i, node in zip(batch.n_id.detach().cpu().numpy(), batch.x.detach().cpu().numpy()):#zip(e_id.detach().cpu().numpy()
+                        subgraph_embeddings[i] = node#node] = out[i]#.detach().cpu().numpy()
+
+            self.graphs[self.graph_level] = self.initialize_from_subgraph(
+                subgraph_embeddings,
+                self.graphs[self.graph_level],
+                graph_levels=[self.graph_level-1,
+                              self.graph_level],
+                node_mappings=[self.node_mappings[self.graph_level-1],
+                               self.node_mappings[self.graph_level]])
             self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level])
             # x = scatter(data.x, data.batch, dim=0, reduce='mean')
-        val_out, val_loss, val_labels = self.inference(val_input_dict)
+
+
+
+        val_out, val_loss, val_labels = self.node_inference(val_input_dict)
         val_labels = val_labels.to(device)
         val_out = val_out.to(device)
-        threshold_out = torch.zeros_like(val_out)
-        mask = val_out[:] >= self.inf_threshold
-        threshold_out[mask] = 1.0
-        # threshold_out[~mask] = 0.0
-        val_out = threshold_out
-        val_correct = val_out.eq(val_labels)
-        val_acc = val_correct.sum().item() / float(val_labels.size()[0])
-        val_loss = val_acc
-        return total_loss / float(total_batches) , total_correct / float(train_sample_size), val_loss
+        # threshold_out = torch.zeros_like(val_out)
+        # mask = val_out[:] >= self.inf_threshold
+        # threshold_out[mask] = 1.0
+        # # threshold_out[~mask] = 0.0
+        # val_out = val_out.argmax(dim=-1)
+        # val_correct = val_out.eq(val_labels.argmax(dim=-1))
+        # val_acc = val_correct.sum().item() / float(val_labels.size()[0])
+        # val_loss = val_acc
+
+        old_imp="""
+        if self.train_scheduler is not None:
+            self.train_scheduler.step(total_loss/float(total_training_points))
+        """
+        # torch.cuda.empty_cache()
+        #len(self.graphlevelloader)
+        return total_loss , total_correct, val_loss
 
     @torch.no_grad()
     def node_inference(self, input_dict):
@@ -672,14 +386,7 @@ class HierGNN(torch.nn.Module):
         # for validation testing
         loss_op = input_dict["loss_op"]
 
-        labels = data.y.to(device)
-
-        graph_sz = labels.size(0)
-        hetero_sz = torch.sum(labels, 0)[0]
-        homoph_sz = torch.sum(labels, 0)[1]
-        pout(("heterophily, homophily percents", hetero_sz / graph_sz, " ", homoph_sz / graph_sz))
-
-
+        # labels = data.y.to(device)
 
         inference_loader = NeighborLoader(
             data,  # copy.copy(data),#.edge_index,
@@ -688,29 +395,14 @@ class HierGNN(torch.nn.Module):
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
             num_neighbors=[-1],
-            batch_size=data.edge_index.shape[1],
+            batch_size=self.batch_size,
             shuffle=False,
         )
 
+
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+
         train_sample_size = 0
-        #     # [test_split[0]:test_split[1]],#.edge_index,  # split_masks["test"],  # .edge_index,
-        #     # node_idx=self.split_masks["test"],
-        #     sizes=[-1],
-        #     batch_size=data.edge_index.shape[1],#self.batch_size,
-        #     shuffle=False,
-        # )
-        # Hence, an item returned by :class:`NeighborSampler` holds the current
-        # :obj:`batch_size`, the IDs :obj:`n_id` of all nodes involved in the computation,
-        # and a list of bipartite graph objects via the tupl :obj:`(edge_index, e_id, size)`,
-        # where :obj:`edge_index` represents the bipartite edges between source
-        # and target nodes, :obj:`e_id` denotes the IDs of original edges in
-        # the full graph, and :obj:`size` holds the shape of the bipartite graph.
-        # For each bipartite graph, target nodes are also included at the beginning
-        # of the list of source nodes so that one can easily apply skip-connections
-        # or add self-loops.
-        # kwargs = {'batch_size': 1024, 'num_workers': 6, 'persistent_workers': True}
-        # subgraph_loader = NeighborLoader(copy.copy(data), input_nodes=None,
-        #                                  num_neighbors=[-1], shuffle=False, )
         edges = []
         node_ids = []
         edge_weights = []
@@ -720,59 +412,64 @@ class HierGNN(torch.nn.Module):
         all_preds = []
         all_labels = []
         total_loss = 0
-        with torch.no_grad():
-            for batch in inference_loader:  # _size, n_id, adjs  in inference_loader:
 
-                # batch_size, n_id = batch.batch_size, batch.n_id.to(device)
-                # x = data.x[n_id].to(device)
-                # y = batch.y.to(device)
-                # for i, embedding_layer in enumerate(self.edge_emb_mlp):
-                #     x = embedding_layer(x)
-                #     if i != self.num_layers - 1:
-                #         x = F.relu(x)
-                #         x = self.batchnorm(x)
-                # out = F.log_softmax( x , dim=1 )
+        with torch.no_grad():
+            for batch in inference_loader:  # _size, n
+                batch = batch.to(device)
 
                 out = self(batch)
-                pred = out.argmax(dim=1)
+                # pred = out.argmax(dim=1)
+                y = batch.y#.squeeze()
+                y = y.type_as(out)
 
-                for nid, p in zip(batch.n_id.detach().cpu().numpy(), out[:,1].detach().cpu().numpy()):
-                    node_ids.append(batch.n_id.cpu().numpy())
-                    node_pred_dict[nid] = p#.append
+                loss = loss_op(out, y)#.to(torch.float))
 
-                train_sample_size += batch.batch_size.cpu().float()
-                all_preds.append(pred.cpu().numpy())
-                all_labels.append(batch.y.cpu().numpy())
+                total_loss += loss/batch.batch_size#float(loss.item())/batch.batch_size
+
+                if self.num_classes <= 2:
+                    probs = self.sig(out)
+                for nid, p in zip(batch.n_id.detach().cpu().numpy(), probs.detach().cpu().numpy()):
+                    # node_ids.append(batch.n_id.cpu().numpy())
+                    node_pred_dict[nid] = p#[0]#.append
+
+                train_sample_size += batch.batch_size#.cpu().float()
+                all_preds.extend(probs)#pred)#.cpu().numpy())
+                all_labels.extend(batch.y)#F.one_hot(batch.y, num_classes=2))#.cpu().numpy()
 
 
-
-
-                # total_loss += loss_op(out, batch.y.cpu().numpy())
-
-
-        # pred = torch.cat(preds, dim=0)  # .cpu()#.numpy()
-        # ground_truth = torch.cat(ground_truths, dim=0)  #
         data.node_preds = torch.tensor([node_pred_dict[i] for i in range(len(node_pred_dict))],
                                        dtype=torch.float)
-        all_preds = np.concatenate(all_preds)
-        all_labels = np.concatenate(all_labels)
-
+        # all_preds_np = np.concatenate(all_preds)
+        # all_labels_np = np.concatenate(all_labels)
         # Compute F1 score
-        f1 = f1_score(all_labels, all_preds, average='micro')
+        # f1 = f1_score(all_labels_np, all_preds_np, average='micro')
 
-        return all_preds, f1, all_labels  # torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
+        # all_preds = torch.cat(all_preds,dim=0)
+        # all_labels = torch.cat(all_labels,dim=0)
 
-    def initialize_from_subgraph(self, subgraph, supergraph):
 
-        new_node_features = supergraph.x.clone()
+
+        return torch.tensor(all_preds), total_loss, torch.tensor(all_labels)  # torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
+
+    def initialize_from_subgraph(self, subgraph, supergraph, graph_levels, node_mappings):
+        subgraph_mapping = node_mappings[graph_levels[0]]
+        supgraph_mapping = node_mappings[graph_levels[1]]
+        supsubsub_mapping = {global_id: sub_id for sub_id,global_id in subgraph_mapping.items()}
+        supsub_mapping = {global_id: sub_id for sub_id, global_id in supgraph_mapping.items()}
+
+
+        # for node, i in subgraph_mapping.items():
+
+        new_node_features = supergraph.x.clone().detach().cpu().numpy()
         for node, embedding in subgraph.items():
-            new_node_features[node] = embedding
+            # global_id = supsubsub_mapping[node]
+            new_node_features[supgraph_mapping[node]] = embedding#supsub_mapping[global_id]] = embedding
         supergraph.x = new_node_features
         return supergraph
 
     def pyg_to_dionysus(self, data):
         # Extract edge list and weights
-        # data = data.copy()
+        data = data.clone()
         edge_index = data.edge_index.t().cpu().numpy()
         edge_attr = data.edge_weights.cpu().numpy()
         filtration = dion.Filtration()
@@ -781,33 +478,94 @@ class HierGNN(torch.nn.Module):
         filtration.sort()
         return filtration
 
+    def filtration_to_networkx(self,filtration, data, clone_data=False, node_mapping=True):
+        if clone_data:
+            data = data.clone()
+        node_mapping_true = node_mapping
 
-    def create_filtered_graphs(self,filtration, thresholds, data):
-        # data = data.copy()
-        graphs = []
-        edge_emb = data.edge_embeddings.cpu().numpy()
+        edge_emb = data.edge_attr.cpu().numpy()
         y = data.y.cpu().numpy()
+        G = nx.Graph()
+        for simplex in filtration:
+            u, v = simplex
+            G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
+            G.nodes[u]['y'] = y[u]  # , features=data.x[u])#.tolist() if data.x is not None else {})
+            G.nodes[v]['y'] = y[v]
+            G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
+            G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
+
+        # if node_mapping_true:
+        node_mapping = {node: i for i, node in enumerate(G.nodes())}
+        return G, node_mapping
+    def create_filtered_graphs(self,filtration, thresholds, data, clone_data=False, nid_mapping=None):
+        if clone_data:
+            data = data.clone()
+
+        edge_emb = data.edge_attr.cpu().numpy()
+        y = data.y.cpu().numpy()
+
+
+        node_mappings = []
+        graphs = []
+
         for threshold in thresholds:
             G = nx.Graph()
+
             for simplex in filtration:
-                if simplex.data <= threshold:
+                if 1.0-simplex.data <= threshold:
                     u, v = simplex
                     G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
                     G.nodes[u]['y'] = y[u]#, features=data.x[u])#.tolist() if data.x is not None else {})
                     G.nodes[v]['y'] = y[v]
                     G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
                     G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
-
             graphs.append(G)
-        return graphs
 
-    def nx_to_pyg(self, graph):
-        edge_index = torch.tensor(list(graph.edges), dtype=torch.long).t().contiguous()
+            if nid_mapping is None:
+                node_mapping = {node: i for i, node in enumerate(G.nodes())}
+            else:
+                node_mapping = {node: nid_mapping[node] for i, node in enumerate(G.nodes())}
+            node_mappings.append(node_mapping)
+        return graphs, node_mappings
+
+    def pyg_to_networkx(self,data, clone_data=False):
+        if clone_data:
+            data = data.clone()
+        # Initialize a directed or undirected graph based on your need
+        G = nx.DiGraph() if data.is_directed() else nx.Graph()
+
+        # Add nodes along with node features if available
+        for i in range(data.num_nodes):
+            node_features = data.x[i].tolist() if data.x is not None else {}
+            G.add_node(i, features=node_features)
+
+        # Add edges along with edge attributes if available
+        edge_index = data.edge_index.t().cpu().numpy()
+        if data.edge_attr is not None:
+            edge_attributes = data.edge_attr.cpu().numpy()
+            for idx, (source, target) in enumerate(edge_index):
+                G.add_edge(source, target, weight=edge_attributes[idx])
+        else:
+            for source, target in edge_index:
+                G.add_edge(source, target)
+
+        return G
+    def nx_to_pyg(self, graph, node_mapping = True, graph_level = None):
+        # Mapping nodes to contiguous integers
+        node_mapping = {node: i for i, node in enumerate(graph.nodes())}
+
+        int_mapping = {v:u for u,v in node_mapping.items()}
+        # Convert edges to tensor format
+        edge_list = [(node_mapping[u], node_mapping[v]) for u, v in graph.edges()]
+        edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+
+        # edge_index = torch.tensor(list(graph.edges), dtype=torch.long).t().contiguous()
         edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.edges], dtype=torch.float)
+        #edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.nodes(data=True)], dtype=torch.float)
 
         num_nodes = graph.number_of_nodes()
-        node_features = torch.tensor([graph.nodes[i]['features'] for i in range(num_nodes)], dtype=torch.float)
-        y = torch.tensor([graph.nodes[i]['y'] for i in range(num_nodes)], dtype=torch.float)
+        node_features = torch.tensor([attr['features'] for node, attr in graph.nodes(data=True)], dtype=torch.float)
+        y = torch.tensor([attr['y'] for node, attr in graph.nodes(data=True)], dtype=torch.float)
         # node_embeddings = torch.tensor([graph.nodes[i]['embeddings'] for i in range(num_nodes)], dtype=torch.float)
 
         #x = torch.tensor([graph[u]['features'] for u in graph.nodes], dtype=torch.float)
@@ -822,15 +580,29 @@ class HierGNN(torch.nn.Module):
                     num_nodes=graph.number_of_nodes())
         return data
 
+    #
+    #  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    # from pytorch_geometric.utils import subgraph
+    # subgraph(sub_nid, sub_edge_index, sub_edge_attr
     def process_graph_filtrations(self, thresholds, data=None, filtration=None):
         # Convert PyG data to Dionysus filtration
         if data is not None and filtration is None:
             filtration = self.pyg_to_dionysus(data)
         filtration = self.filtration if filtration is None else filtration
 
+        # full graph
+        full_graph, node_mapping = self.filtration_to_networkx(filtration=filtration,
+                                                      data=data,
+                                                      clone_data=True,
+                                                      node_mapping=True)
         # Create filtered graphs
-        filtered_graphs = self.create_filtered_graphs(filtration=filtration, thresholds=thresholds, data=data)
-
+        filtered_graphs, node_mappings = self.create_filtered_graphs(filtration=filtration,
+                                                      thresholds=thresholds,
+                                                      data=data,
+                                                      clone_data=True,
+                                                      nid_mapping=node_mapping)
+        filtered_graphs.append(full_graph)
+        node_mappings.append(node_mapping)
         # Convert back to PyG data objects
-        pyg_graphs = [self.nx_to_pyg(graph) for graph in filtered_graphs]
-        return pyg_graphs
+        pyg_graphs = [self.nx_to_pyg(graph) for i, graph in enumerate(filtered_graphs)]
+        return pyg_graphs, node_mappings
