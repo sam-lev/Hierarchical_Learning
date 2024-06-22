@@ -66,7 +66,7 @@ def print_args(args):
     print(t.draw())
 
 def get_lr_scheduler_with_warmup(optimizer, num_warmup_steps=None, num_steps=None, warmup_proportion=None,
-                                 last_step=-1):
+                                 last_step=-1, num_reset=None):
 
     if num_warmup_steps is None and (num_steps is None or warmup_proportion is None):
         raise ValueError('Either num_warmup_steps or num_steps and warmup_proportion should be provided.')
@@ -75,6 +75,10 @@ def get_lr_scheduler_with_warmup(optimizer, num_warmup_steps=None, num_steps=Non
         num_warmup_steps = int(num_steps * warmup_proportion)
 
     def get_lr_multiplier(step):
+        # resets =
+        # if num_steps
+        # intervals = np.flip(np.arange(len(num_reset) + 1))
+        # epoch == int(total_epochs / self.graph_levels[self.graph_level])
         if step < num_warmup_steps:
             return (step + 1) / (num_warmup_steps + 1)
         else:

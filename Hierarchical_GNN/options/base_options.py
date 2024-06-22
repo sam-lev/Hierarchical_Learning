@@ -117,6 +117,12 @@ class BaseOptions:
             default=5,
             help="interval steps to evaluate model performance",
         )
+        parser.add_argument(
+            "--train_by_steps",
+            type=bool,
+            default=False,
+            help="whether to update lr depending on number steps between epochs",
+        )
 
         parser.add_argument(
             "--multi_label",
@@ -129,6 +135,8 @@ class BaseOptions:
         )
         parser.add_argument("--norm", type=str, default="None")
         parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
+
+        parser.add_argument("--lr2", type=float, default=0.001, help="learning rate")
         parser.add_argument(
             "--weight_decay", type=float, default=0.0, help="weight decay"
         )  # 5e-4

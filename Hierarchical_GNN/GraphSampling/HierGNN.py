@@ -12,7 +12,7 @@ import torch
 import dionysus as dion
 import networkx as nx
 from torch import Tensor
-from torch_geometric.nn import GINEConv, GATConv, GCNConv, NNConv, EdgeConv
+from torch_geometric.nn import GINEConv, GATConv, GCNConv, NNConv, EdgeConv, SAGEConv
 from torch.nn import Embedding
 import torch.nn as nn
 import torch.nn.functional as F
@@ -34,6 +34,10 @@ from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency
 from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
+
+
+from .conv import SAgeConv
+
 class HierarchicalGraphData(InMemoryDataset):
     def __init__(self, root : str, name : str,
                  split_percents=[0.5, 0.2, 1.0],
@@ -43,12 +47,12 @@ class HierarchicalGraphData(InMemoryDataset):
         super().__init__(root, transform, pre_transform, pre_filter)
         self.load(self.processed_paths[0])
         self.name = name
-        self.split_masks = {}
-        self.split_percents = split_percents
-        self.split_masks["split_percents"] = self.split_percents
-        self.train_percent = self.split_percents[0]
-        self.val_percent = self.split_percents[1]
-        self.test_percent = self.split_percents[2]
+        # self.split_masks = {}
+        # self.split_percents = split_percents
+        # self.split_masks["split_percents"] = self.split_percents
+        # self.train_percent = self.split_percents[0]
+        # self.val_percent = self.split_percents[1]
+        # self.test_percent = self.split_percents[2]
 
         super().__init__(root, transform, pre_transform, pre_filter)
         # For PyG<2.4:
@@ -88,8 +92,9 @@ class HierGNN(torch.nn.Module):
     def __init__(self,
                  args,
                  data,
-                 split_masks,
+                 # split_masks,
                  processed_dir,
+                 out_dim = 1,
                  train_data=None,
                  test_data = None,
                  # in_channels,
@@ -98,9 +103,9 @@ class HierGNN(torch.nn.Module):
                  ):
         super().__init__()
 
-        train_idx = split_masks["train"]
         # train_idx = split_masks["train"]
-        self.split_masks = split_masks
+        # train_idx = split_masks["train"]
+        # self.split_masks = split_masks
         self.save_dir = processed_dir
 
         self.type_model = args.type_model
@@ -119,7 +124,7 @@ class HierGNN(torch.nn.Module):
 
         heterophily_num_class = 2
         self.num_classes = args.num_classes
-        self.out_dim = self.num_classes if self.num_classes != 2 else 1
+        self.out_dim = out_dim
 
         self.cat = 1
 
@@ -134,18 +139,20 @@ class HierGNN(torch.nn.Module):
         self.use_batch_norm = args.use_batch_norm
 
 
-        old_imp="""batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        """
+        #old_imp="""batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+
+
         self.edge_emb_mlp = torch.nn.ModuleList()
+
         self.batch_norms = []
-        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        """batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
         self.edge_emb_mlp.append(GCNConv(self.cat * self.num_feats , self.dim_hidden))
 
         for _ in range(self.num_layers - 2):
             self.edge_emb_mlp.append(GCNConv(self.dim_hidden, self.dim_hidden))
-            old_imp="""batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-            """
+            #old_imp=batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            
             batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             self.batch_norms.append(batch_norm_layer)
 
@@ -153,9 +160,45 @@ class HierGNN(torch.nn.Module):
         self.batch_norms.append(batch_norm_layer)
 
         self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
+        """
+
+        # GraphSage, ego- neighborhood embedding seperation performs better
+        self.edge_emb_mlp.append(SAgeConv(self.num_feats,
+                                          self.dim_hidden,
+                                          dropout=args.dropout,
+                                          hidden_dim_multiplier=1))
+
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
+
+        # construct MLP classifier
+        for _ in range(self.num_layers - 2):
+            self.edge_emb_mlp.append(SAgeConv(self.dim_hidden,
+                                              self.dim_hidden,
+                                          dropout=args.dropout,
+                                              hidden_dim_multiplier=1))
+            # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            self.batch_norms.append(batch_norm_layer)
+
+        self.edge_emb_mlp.append(SAgeConv(self.dim_hidden,
+                                          self.out_dim,
+                                          dropout=args.dropout,
+                                          hidden_dim_multiplier=1))
+
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
+
+        # self.edge_emb_mlp.append(nn.Linear(self.dim_hidden,
+        #                                    self.dim_hidden))#self.cat * self.num_feats))
+        # self.edge_pred_mlp = SAGEConv(self.dim_hidden, self.dim_hidden)
+
+        self.num_neighbors = [-1, 25, 10, 5, 5, 5, 5, 5, 5, 5]
+
+
 
         self.act = nn.GELU()
-        self.sig = nn.Sigmoid() #nn.Softmax(dim=1) #nn.Sigmoid()
+        self.probability = nn.Sigmoid() if out_dim == 1 else nn.Softmax() #nn.Softmax(dim=1) #nn.Sigmoid()
         self.dropout = nn.Dropout(self.dropout)
         self.thresholds = args.persistence
 
@@ -168,8 +211,17 @@ class HierGNN(torch.nn.Module):
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY","Total graphs: ", len(self.graphs),"%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs)+1))
         graph = self.graphs[0]
-        self.graphlevelloader = self.get_graph_dataloader(graph)
+        self.graphlevelloader = self.get_graph_dataloader(graph,
+                                                          shuffle=True,
+                                                          num_neighbors=self.num_neighbors[:self.num_layers])
         self.graph_level = 0
+
+        self.reset_parameters()
+
+    def reset_parameters(self):
+        for embedding_layer in self.edge_emb_mlp:
+            embedding_layer.reset_parameters()
+        # self.edge_pred_mlp.reset_parameters()
 
     def expand_labels(self, labels):
         neg_labels = ~labels
@@ -178,23 +230,40 @@ class HierGNN(torch.nn.Module):
         labels = [neg_labels, labels]
         # if not as_logit:
         return torch.stack(labels, dim=1)
-    def get_graph_dataloader(self, graph, shuffle=True):
+    def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
         # pout(("graph data edge index",graph.edge_index))
-        return NeighborLoader(graph,
+        neighborloader = NeighborLoader(data=graph,
                               batch_size=self.batch_size,
-                              num_neighbors=[-1],
-                              shuffle=shuffle) #for graph in self.graphs]
+                              num_neighbors=num_neighbors,
+                              # directed=True,
+                              shuffle=shuffle,
+                                        num_workers=8
+                                        ) #for graph in self.graphs]
+
+        neighborsampler = NeighborSampler(
+            graph.edge_index,
+            # node_idx=train_idx,
+            sizes=self.num_neighbors[: self.num_layers],
+            batch_size=self.batch_size,
+            shuffle=shuffle,
+            num_workers=8,
+        )
+        return neighborsampler
 
 
     def l2_loss(self, weight, factor):
         return factor * torch.square(weight).sum()
 
-    def forward(self, data):
+    def forward_nonsep(self, data):
+        # batch_size, n_id, adjs in self.train_loader:
         # for i, (edge_index, _, size) in enumerate(adjs):
+        # for i, (edge_index, _, size) in enumerate(adjs):
+        # x_target = x[: size[1]]  # Target nodes are always placed first.
+        # x = self.convs[i]((x, x_target), edge_index)
         #     x_target = x[: size[1]]  # Target nodes are always placed first.
         #     x = self.convs[i]((x, x_target), edge_index)
-        x, edge_attr = data.x, data.edge_index
-        x = self.edge_emb_mlp[0](x, edge_attr)
+        x, edge_index = data.x, data.edge_index
+        x = self.edge_emb_mlp[0](x, edge_index)
         x = self.dropout(x)
         x = self.act(x)
         for i,embedding_layer in enumerate(self.edge_emb_mlp):
@@ -203,7 +272,7 @@ class HierGNN(torch.nn.Module):
                 continue
             x_hidden = x_res
             x_res = self.batch_norms[i](x_res)
-            x_res = embedding_layer(x_res, edge_attr)
+            x_res = embedding_layer(x_res, edge_index)
             x_res = x_hidden + x_res
             # if i != self.num_layers - 1:
             x_res = self.dropout(x_res)
@@ -216,6 +285,30 @@ class HierGNN(torch.nn.Module):
         # x = self.sig(x)
         # x = torch.squeeze(x)
         return x#F.log_softmax( x , dim=1 )
+
+
+
+    def forward(self, x, adjs):
+        # `train_loader` computes the k-hop neighborhood of a batch of nodes,
+        # and returns, for each layer, a bipartite graph object, holding the
+        # bipartite edges `edge_index`, the index `e_id` of the original edges,
+        # and the size/shape `size` of the bipartite graph.
+        # Target nodes are also included in the source nodes so that one can
+        # easily apply skip-connections or add self-loops.
+        x_source = x
+        for i, (edge_index, _, size) in enumerate(adjs):
+            x_target = x[: size[1]]  # Target nodes are always placed first.
+            x = self.edge_emb_mlp[i]((x, x_target), edge_index)
+
+            if i == 0:
+                x = self.batch_norms[0](x)
+            x = self.dropout(x)
+            if i != self.num_layers - 1:
+                x = self.act(x)
+        # x = self.edge_pred_mlp(x)
+        x = x_source + x
+
+        return x.squeeze(1)
 
     #fp = open('./run_logs/training_memory_profiler.log', 'w+')
     # @profile#stream=fp)
@@ -233,7 +326,7 @@ class HierGNN(torch.nn.Module):
     @torch.no_grad()
     def inference(self, input_dict):
         return self.node_inference(input_dict)
-
+    
     def hierarchical_successive_train_net(self, input_dict,
                                           filtration=None, thresholds=[.5, 1.0]):
 
@@ -252,6 +345,7 @@ class HierGNN(torch.nn.Module):
 
         total_loss = total_correct = 0
         last_loss, last_acc = 0, 0
+        total_val_loss = 0
 
 
         val_data = input_dict["val_data"]
@@ -262,6 +356,8 @@ class HierGNN(torch.nn.Module):
 
         epoch = input_dict["epoch"]
         total_epochs = input_dict["total_epochs"]
+        eval_steps = input_dict['eval_steps']
+        self.steps = input_dict["steps"]
 
 
 
@@ -274,28 +370,33 @@ class HierGNN(torch.nn.Module):
         sanity = 0
 
         length_training_batches = data.y.size()[0]
-        # self.train_scheduler = input_dict["scheduler"]
-        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
         total_training_points = 0
         # for graph_level, trainloader in enumerate(self.graphLoaders):#_size, n_id, adjs in self.train_loader:
 
-        for batch in self.graphlevelloader:
-            batch=batch.to(device)
+        # for batch in self.graphlevelloader:
+        for batch_size, n_id, adjs in self.graphlevelloader:
+            # batch=batch.to(device)
+            # batch_size = batch.batch_size
 
 
 
 
             # optimizer.zero_grad()
 
+            adjs = [adj.to(device) for adj in adjs]
 
-            # out = self(x[n_id], adjs)
-            out = self(batch)
-            y = batch.y#.squeeze()
+            x = data.x[n_id].to(device)
+            y = data.y[n_id[:batch_size]].to(device).float()
+
+            out = self(x, adjs)
+            # out = self(batch)
+            # y = batch.y#.squeeze()
             # y = batch.y.unsqueeze(-1)
             # y = y.type_as(out)
 
-            loss = loss_op(out, y)#.float())
+            loss = loss_op(out, y)
 
             #
             #
@@ -307,13 +408,28 @@ class HierGNN(torch.nn.Module):
             #
             #
             #
-            total_training_points += batch.batch_size
+            total_training_points += batch_size
 
             # back prop
             # loss.backward()
             # optimizer.step()
 
             total_loss += loss/y.size()[0]
+
+            if self.steps != -1:
+                self.steps += 1#self.model.steps
+                counter = self.steps
+            else:
+                counter = epoch
+
+            if counter % eval_steps == 0 and counter != 0:
+                with torch.no_grad():
+                    val_pred, val_loss, val_ground_truth  = self.inference(val_input_dict)
+                    # val_out, val_loss, val_labels = self.inference(val_input_dict)
+                    if scheduler is not None:
+                        scheduler.step(val_loss)
+
+                    total_val_loss += val_loss
 
             if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
                 total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().mean().item()
@@ -322,7 +438,7 @@ class HierGNN(torch.nn.Module):
                 probs = probs > 0.5
                 total_correct = (probs.long() == y).float().mean().item()  # int(out.eq(y).sum())
 
-            scheduler.step()
+
 
             torch.cuda.empty_cache()
 
@@ -349,27 +465,16 @@ class HierGNN(torch.nn.Module):
                               self.graph_level],
                 node_mappings=[self.node_mappings[self.graph_level-1],
                                self.node_mappings[self.graph_level]])
-            self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level])
+
+            self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level],
+                                                              shuffle=True,
+                                                              num_neighbors=self.num_neighbors[:self.num_layers]
+                                                              )
             # x = scatter(data.x, data.batch, dim=0, reduce='mean')
 
 
 
-        val_out, val_loss, val_labels = self.node_inference(val_input_dict)
-        val_labels = val_labels.to(device)
-        val_out = val_out.to(device)
-        # threshold_out = torch.zeros_like(val_out)
-        # mask = val_out[:] >= self.inf_threshold
-        # threshold_out[mask] = 1.0
-        # # threshold_out[~mask] = 0.0
-        # val_out = val_out.argmax(dim=-1)
-        # val_correct = val_out.eq(val_labels.argmax(dim=-1))
-        # val_acc = val_correct.sum().item() / float(val_labels.size()[0])
-        # val_loss = val_acc
 
-        old_imp="""
-        if self.train_scheduler is not None:
-            self.train_scheduler.step(total_loss/float(total_training_points))
-        """
         # torch.cuda.empty_cache()
         #len(self.graphlevelloader)
         return total_loss , total_correct, val_loss
@@ -388,16 +493,18 @@ class HierGNN(torch.nn.Module):
 
         # labels = data.y.to(device)
 
-        inference_loader = NeighborLoader(
-            data,  # copy.copy(data),#.edge_index,
+        inference_loader = self.get_graph_dataloader(data, shuffle=False, num_neighbors=[-1])
+        """NeighborLoader(
+            data=data,  # copy.copy(data),#.edge_index,
             input_nodes=None,
+            # directed=True,
             # edge_index = train_data.edge_index,
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
             num_neighbors=[-1],
             batch_size=self.batch_size,
             shuffle=False,
-        )
+        )"""
 
 
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
@@ -414,27 +521,40 @@ class HierGNN(torch.nn.Module):
         total_loss = 0
 
         with torch.no_grad():
-            for batch in inference_loader:  # _size, n
-                batch = batch.to(device)
+            # for batch in inference_loader:
+            for batch_size, n_id, adjs in inference_loader:
+                # batch=batch.to(device)
+                # batch_size = batch.batch_size
+                # n_id = batch.n_id
 
-                out = self(batch)
-                # pred = out.argmax(dim=1)
-                y = batch.y#.squeeze()
-                y = y.type_as(out)
+                # optimizer.zero_grad()
+
+                adjs = [adj.to(device) for adj in adjs]
+
+                x = data.x[n_id].to(device)
+                y = data.y[n_id[:batch_size]].to(device).float()
+                # y = batch.y
+
+                out = self(x, adjs)
+
+
+                # out = self(batch)
+                # y = batch.y#.squeeze()
+                # y = y.type_as(out)
 
                 loss = loss_op(out, y)#.to(torch.float))
 
-                total_loss += loss/batch.batch_size#float(loss.item())/batch.batch_size
+                total_loss += loss/batch_size#float(loss.item())/batch.batch_size
 
                 if self.num_classes <= 2:
                     probs = self.sig(out)
-                for nid, p in zip(batch.n_id.detach().cpu().numpy(), probs.detach().cpu().numpy()):
+                for nid, p in zip(n_id.detach().cpu().numpy(), probs.detach().cpu().numpy()):
                     # node_ids.append(batch.n_id.cpu().numpy())
                     node_pred_dict[nid] = p#[0]#.append
 
-                train_sample_size += batch.batch_size#.cpu().float()
+                train_sample_size += batch_size#.cpu().float()
                 all_preds.extend(probs)#pred)#.cpu().numpy())
-                all_labels.extend(batch.y)#F.one_hot(batch.y, num_classes=2))#.cpu().numpy()
+                all_labels.extend(y)#F.one_hot(batch.y, num_classes=2))#.cpu().numpy()
 
 
         data.node_preds = torch.tensor([node_pred_dict[i] for i in range(len(node_pred_dict))],
@@ -471,10 +591,10 @@ class HierGNN(torch.nn.Module):
         # Extract edge list and weights
         data = data.clone()
         edge_index = data.edge_index.t().cpu().numpy()
-        edge_attr = data.edge_weights.cpu().numpy()
+        edge_weight = data.edge_weights.cpu().numpy()
         filtration = dion.Filtration()
         for i, (u, v) in enumerate(edge_index):
-            filtration.append(dion.Simplex([u, v], edge_attr[i]))
+            filtration.append(dion.Simplex([u, v], edge_weight[i]))
         filtration.sort()
         return filtration
 

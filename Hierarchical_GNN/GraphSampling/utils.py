@@ -1,6 +1,7 @@
 from texttable import Texttable
 from torch_sparse import SparseTensor
 import torch
+import torch.nn.functional as F
 import numpy as np
 
 MB = 1024 ** 2
@@ -17,20 +18,28 @@ def print_args(args):
 
 def init_edge_embedding(data):
 
-    # data.edge_index = data.edge_index.t().contiguous()
-    # adj_n1 = data.edge_index[:,0]
-    # adj_n2 = data.edge_index[:,1]
-    # pout(("data edge ", data.edge_index))
-    # pout(("data edge ", data.edge_index[:,0]))
-    # pout(("data edge ", data.edge_index[:,1]))
-    x = data.x
+    x = data.x#.detach().cpu().numpy()
     adj_n1, adj_n2 = data.edge_index
-
+    x1 = x[adj_n1]
+    x2 = x[adj_n2]
+    # for heterophily meodels that concatenate ego- and neighborhood-
+    # embeddings perform better
     # dim edfe feature shoould be num_edges , 2 * dim_node_features
-    data.edge_attr = torch.cat([x[adj_n1], x[adj_n2]], dim=-1)# np.concatenate([x[row], x[col]], axis=-1)#self.mlp(torch.cat([x[row], x[col], edge_attr], dim=-1))
+    concat_adj_features = torch.cat([x1,x2], dim=-1)
+    data.edge_attr = concat_adj_features
+    # data.edge_attr = torch.pow(x[adj_n1] - x[adj_n2], exponent=2)#
 
-    # pout(("add edge attr shape", np.shape(data.edge_index)))
+    # cossim = F.cosine_similarity(x1,x2,dim=1)
+    # # pout(("cossim shape", cossim.shape, "cossim unsqueeze ", cossim.unsqueeze(1).shape,
+    # #       "x shape ", x.shape))
+    # duplicated_cosim = cossim.unsqueeze(1)#.repeat(x1.shape[-1])
+    # combined_node_features = torch.add(x1,x2)
+    # scale_factor = 10
+    # edge_features = torch.add(combined_node_features,duplicated_cosim,alpha=scale_factor)
+    # data.edge_attr = edge_features
 
+    # data.edge_attr = torch.cdist(x[adj_n1], x[adj_n2], p=1.0,
+    #                              compute_mode='donot_use_mm_for_euclid_dist')
     """row, col = data.edge_index
     data.edge_attr = torch.cat([data.x[row], data.x[col], data.edge_attr], dim=-1)"""
 

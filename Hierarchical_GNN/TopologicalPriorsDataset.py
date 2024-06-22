@@ -40,12 +40,12 @@ class TopologicalPriorsDataset(InMemoryDataset):
         self.node_points = []
         self.edge_points = []
 
-        self.split_masks = {}
-        self.split_percents = split_percents
-        self.split_masks["split_percents"] = self.split_percents
-        self.train_percent = self.split_percents[0]
-        self.val_percent = self.split_percents[1]
-        self.test_percent = self.split_percents[2]
+        # self.split_masks = {}
+        # self.split_percents = split_percents
+        # self.split_masks["split_percents"] = self.split_percents
+        # self.train_percent = self.split_percents[0]
+        # self.val_percent = self.split_percents[1]
+        # self.test_percent = self.split_percents[2]
 
         super().__init__(root, transform, pre_transform, pre_filter)
 
@@ -165,7 +165,7 @@ class TopologicalPriorsDataset(InMemoryDataset):
             test_mask[int((self.train_percent+self.val_percent) * num_nodes):] = 1.
             test_mask = test_mask.to(torch.bool)
 
-        self.split_masks["split_idx"] = [train_split,val_split,test_split]
+        # self.split_masks["split_idx"] = [train_split,val_split,test_split]
 
         data = Data(x=x, edge_index=edge_index, y=y, train_idx=train_idx,
                     train_mask=train_mask,test_mask=test_mask,val_mask=val_mask)#points=points, y=y)

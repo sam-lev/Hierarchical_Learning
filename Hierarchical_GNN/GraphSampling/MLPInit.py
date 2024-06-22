@@ -209,14 +209,14 @@ class MLPInit(torch.nn.Module):#_GraphSampling):
                  args,
                  data,
                  processed_dir,
-                 split_masks,
+                 # split_masks,
                  input_dict,
                  evaluator,
                  dataset=None,
                  gnn_model=None):
 
-        train_idx = split_masks["train"]
-        self.split_masks = split_masks
+        # train_idx = split_masks["train"]
+        # self.split_masks = split_masks
         self.save_dir = processed_dir
 
         super(MLPInit, self).__init__()#args, data, train_idx, processed_dir)
@@ -327,8 +327,8 @@ class MLPInit(torch.nn.Module):#_GraphSampling):
         #for data in self.train_loader:#enumerate(self.train_loader):#_size, n_id, adjs in self.train_loader:
 
         nodes, labels = self.data.x.to(device), self.data.y.to(device)
-        nodes = nodes[self.split_masks["train"]]
-        labels = labels[self.split_masks["train"]]
+        # nodes = nodes[self.split_masks["train"]]
+        # labels = labels[self.split_masks["train"]]
         # `adjs` holds a list of `(edge_index, e_id, size)` tuples.
         # adjs = [adj.to(device) for adj in adjs]
 
@@ -446,8 +446,8 @@ class MLPInit(torch.nn.Module):#_GraphSampling):
     def test(self):
         self.eval()
         nodes, labels = self.data.x.to(self.device), self.data.y.to(self.device)
-        nodes = nodes[self.split_masks["valid"]]
-        labels = labels[self.split_masks["valid"]]
+        # nodes = nodes[self.split_masks["valid"]]
+        # labels = labels[self.split_masks["valid"]]
         pred = self(nodes, labels).argmax(dim=-1)
 
         accs = []
