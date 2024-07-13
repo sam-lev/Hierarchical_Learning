@@ -1,38 +1,33 @@
-import os
 from ogb.nodeproppred import Evaluator, PygNodePropPredDataset
 
-
-import numpy as np
-import copy
-
-import torch
 import torch_geometric.datasets
-from torch.cuda.amp import autocast, GradScaler
+from torch.cuda.amp import GradScaler
 
 # from torch_geometric.datasets import HeterophilousGraphDataset
 # import sklearn.metrics.f1_score as f1
 # import sklearn.metrics.roc_auc_score as roc_auc
 from sklearn import metrics
+import random
+
 from torch.profiler import ProfilerActivity, profile
 from torch_geometric.transforms import ToSparseTensor, ToUndirected, RandomLinkSplit
-import torch_geometric.transforms as Transform
-from torch.optim.lr_scheduler import ReduceLROnPlateau, LambdaLR
-from torch.nn import functional as F
 
 from GraphSampling import *
 # from LP.LP_Adj import LabelPropagation_Adj
 # from Precomputing import *
 from GraphSampling.MLPInit import *
-from utils import pout, pout_model, get_lr_scheduler_with_warmup
+from utils import pout_model
 # from GraphSampling.utils import init_edge_embedding
 
 from TopologicalPriorsDataset import *
 
+from torch.optim.lr_scheduler import ReduceLROnPlateau
 #memory profiling tools
-from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
+from sklearn.metrics import accuracy_score
 
+from GraphSampling.experiments.metrics import optimal_metric_threshold
 
 
 def get_splits(data, split_percents = [0.3, .3, 1.0]):
@@ -223,7 +218,7 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         # dataset = Planetoid(path, name='Cora', transform=transform)
 
         dataset_class = getattr(torch_geometric.datasets, dataset_name)
-        dataset = dataset_class(path,name='wisconsin', transform=transform)
+        dataset = dataset_class(path,name=datasubset_name, transform=transform)
         # After applying the `RandomLinkSplit` transform, the data is transformed from
         # a data object to a list of tuples (train_data, val_data, test_data), with
         # each element representing the corresponding split.
@@ -382,9 +377,9 @@ def update_dataset(data, dataset):
     # data.train_mask = split_masks['train']
     # data.val_mask = split_masks['valid']
     # data.test_mask = split_masks['test']
-    # dataset.data = data
     x = data.x
     y = data.y
+    dataset.data = data
     return data, x, y, None, None, dataset
 def idx2mask(idx, N_nodes):
     mask = torch.tensor([False] * N_nodes, device=idx.device)
@@ -394,6 +389,7 @@ def idx2mask(idx, N_nodes):
 
 class trainer(object):
     def __init__(self, args, seed):
+        self.set_seed(args)
         pout(("ARGS MULTILABEL", args.multi_label))
         self.dataset = args.dataset
         self.device = torch.device(f"cuda:{args.cuda_num}" if args.cuda else "cpu")
@@ -439,21 +435,7 @@ class trainer(object):
         labels = self.y
         labels = torch.eq(labels[self.data.edge_index[0]], labels[self.data.edge_index[1]])
 
-        #
-        #  check if multicloss to adjust metrics and loss
-        self.multi_label = len(labels.unique())
-        args.multi_label = self.multi_label
-        self.num_targets = 1 if self.multi_label == 2 else self.multi_label
-        if self.num_targets == 1:
-            labels = labels.float()
-            self.y = self.y.float()
-            self.data.y = self.data.y.float()
-            self.dataset.data.y = self.dataset.data.y.float()
-        args.dataset = self.dataset
 
-        self.loss_op = F.binary_cross_entropy_with_logits if self.num_targets == 1 else F.cross_entropy
-
-        self.metric = 'ROC AUC' if self.num_targets == 1 else 'accuracy'
 
 
 
@@ -462,14 +444,31 @@ class trainer(object):
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
         edge_train_transform = RandomLinkSplit(is_undirected=False,
-                                               num_val=0.25,
-                                               num_test=0.25,
+                                               num_val=0.2,
+                                               num_test=0.2,
                                                add_negative_train_samples=False)
         self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         # pout(("dataset nodes points", self.dataset.node_points))
 
         if self.type_model in ["EdgeMLP", "GCN_MLPInit"]:# and self.type_model in ["MLPInit"]:
+            #
+            #  check if multicloss to adjust metrics and loss
+            self.multi_label = False
+            self.num_targets = 1
+            if self.num_targets == 1:
+                labels = labels.float()
+                self.y = self.y.float()
+                self.data.y = self.data.y.float()
+                self.dataset.data.y = self.dataset.data.y.float()
+            args.dataset = self.dataset
+
+            self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+
+            self.loss_op = F.binary_cross_entropy_with_logits #if self.num_targets == 1 else F.cross_entropy
+
+            self.metric = 'ROC AUC' if self.num_targets == 1 else 'accuracy'
+
             self.model = EdgeMLP(
                 args, self.data, self.processed_dir,
                 train_data=self.train_data, test_data=self.test_data
@@ -478,8 +477,10 @@ class trainer(object):
         # topological filtration and hierarchical learning
         elif self.type_model in ["HierGNN"]:# and self.type_model in ["MLPInit"]:
 
+
             #
             # learn and infer edge embeddings and update dataset
+            # binary classification for edge inference
             #
             ( args,
               self.data,
@@ -489,6 +490,37 @@ class trainer(object):
               self.dataset
               ) = self.learn_edge_embeddings(args)
 
+            pout((" multilabel before checking for node inference", self.multi_label,
+                  " number of targets before ", self.num_targets))
+            #
+            #  check if multicloss to adjust metrics and loss
+            #  potentially no longer binaryt classification for node inference
+            #
+            self.multi_label = len(self.y.unique())
+            args.multi_label = self.multi_label
+            self.num_targets = 1 if self.multi_label == 2 else self.multi_label
+            self.num_classes = self.num_targets
+            args.num_classes = self.num_targets
+            args.multi_label = False if self.num_targets == 1 else True
+            self.multi_label = args.multi_label
+            if self.num_targets == 1:
+                self.y = self.y.float()
+                self.data.y = self.data.y.float()
+                self.dataset.data.y = self.dataset.data.y.float()
+            else:
+                self.y = self.y.long()#type(torch.LongTensor)
+                self.data.y = self.data.y.long()#type(torch.LongTensor)
+                self.dataset.data.y = self.dataset.data.y.long()#type(torch.LongTensor)
+            args.dataset = self.dataset
+
+            self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+
+            pout((" multilabel after checking for node inference", self.multi_label,
+                  " number of targets after ", self.num_targets))
+
+            self.loss_op = F.binary_cross_entropy_with_logits if self.num_targets == 1 else F.cross_entropy
+
+            self.metric = 'ROC AUC' if self.num_targets == 1 else 'accuracy'
             # then perform hierarchical learning
             #
             pout(("%%%%%%%%%%", "BEGINNING HIERARCHICAL GNN FOR NODE CLASSIFICATION","%%%%%%%%%%"))
@@ -498,6 +530,10 @@ class trainer(object):
 
             pout(("USING MODEL:"))
             pout((self.type_model))
+
+            #
+            # Instantiate the Hierarchical GNN Model
+            #
 
             self.model = HierGNN(
                 args, self.data, self.processed_dir,out_dim = self.num_targets,
@@ -524,9 +560,7 @@ class trainer(object):
                                       weight_decay=args.weight_decay)
         # self.scheduler = get_lr_scheduler_with_warmup(optimizer=self.optimizer, num_warmup_steps=args.num_warmup_steps,
         #                                          num_steps=args.num_steps, warmup_proportion=args.warmup_proportion)
-        self.scheduler = None
-        # ReduceLROnPlateau(self.optimizer, mode='min',
-        #                                    factor=0.1, patience=20, threshold=1e-5)
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',factor=0.1, patience=100, threshold=1e-5)
         self.grad_scalar = GradScaler(enabled=args.amp)
         #
         #
@@ -541,6 +575,16 @@ class trainer(object):
     def learn_edge_embeddings(self, args):
         # first train and infer over edge embeddings to update graph
         # for filtration
+
+        self.multi_label = False
+        self.num_targets = 1
+        if self.num_targets == 1:
+            self.y = self.y.float()
+            self.data.y = self.data.y.float()
+            self.dataset.data.y = self.dataset.data.y.float()
+
+        self.loss_op = F.binary_cross_entropy_with_logits
+
         pout(("%%%", "LEARNING AND CLASSIFYING EDGE EMBEDDINGS", "..."))
         self.model = EdgeMLP(
             args, self.data,self.processed_dir,
@@ -559,15 +603,16 @@ class trainer(object):
         #     self.model.parameters(), lr=args.lr,
         #     weight_decay=args.weight_decay, momentum=0.9
         # )
-        self.scheduler = None
-        # ReduceLROnPlateau(self.optimizer, mode='min',
-        #                                    factor=0.1, patience=20, threshold=1e-5)
+        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
+                                           factor=0.1, patience=20, threshold=1e-5)
 
         self.train_and_test(0)
 
         input_dict = self.get_input_dict(0)
         self.test_net()
-        pred, loss, ground_truth, self.data = self.model.edge_inference(input_dict)
+
+        pred, loss, ground_truth, self.data = self.model.edge_inference(input_dict,
+                                                                        assign_edge_weights=True)
 
         pout(("%%%%%%%", "FINSISHED INFERING OVER EDGES", "%%%%%%%"))
         pout(("updating dataset"))
@@ -585,14 +630,14 @@ class trainer(object):
         # From a crit look at evaluating gnns benchmark paper:
         # ese datasets, we use the same splits with duplicates removed.
         # For eac ts, we fix 10 random 50%/25%/25% train/validation/test splits. We tr
-        edge_train_transform = RandomLinkSplit(is_undirected=False,
-                                               num_val=0.25,
-                                               num_test=0.25,
-                                               add_negative_train_samples=False)
-        self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+        # edge_train_transform = RandomLinkSplit(is_undirected=False,
+        #                                        num_val=0.2,
+        #                                        num_test=0.2,
+        #                                        add_negative_train_samples=False)
+        # self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
 
         torch.cuda.empty_cache()
-        # del self.model
+        del self.model
 
         return args, self.data, self.x, self.y,  self.dataset
 
@@ -682,14 +727,13 @@ class trainer(object):
             # need to adapt test during training eval to be
             # only evaluation set and entire graph opnly for near last epocjs
             #
-            pout(("training counter ", counter,
-                  "eval steps ", self.eval_steps,
-                  "mod ", counter % self.eval_steps))
-            if self.train_by_steps:
-                perform_eval = counter % self.eval_steps < self.eval_steps
-            else:
-                perform_eval = counter % self.eval_steps == 0
-            if perform_eval and counter != 0:
+
+            # if self.train_by_steps:
+            #     perform_eval = counter % self.eval_steps < self.eval_steps
+            # else:
+            #     perform_eval = counter % self.eval_steps == 0
+
+            if epoch % self.eval_steps == 0 and epoch != 0:
                 out, result, f1s, roc = self.test_net()
                 # tr_f1, te_f1, a_f1 = f1s
                 f1s_train.append(f1s[0])
@@ -821,26 +865,7 @@ class trainer(object):
             Exception(f"the model of {self.type_model} has not been implemented")
         return input_dict
 
-    def optimal_metric_threshold(self, y_probs, y_true, metric, metric_name='other'):
-        thresholds = np.arange(0.0, 1.0, 0.01)
-        metric_scores = []
 
-        def acc_metric(y_true, y_pred):
-            return np.mean(y_pred == y_true)
-
-        # if metric_name == accuracy
-        for threshold in thresholds:
-            if metric_name=='other':
-                y_pred = (y_probs >= threshold).astype(int)
-            else:
-                y_pred = y_probs
-            f1 = metric(y_true, y_pred) if metric != 'accuracy' else acc_metric(y_true,y_pred)
-            metric_scores.append(f1)
-
-        # Find the threshold with the maximum F1 score
-        optimal_threshold = thresholds[np.argmax(metric_scores)]
-        optimal_score = metric_scores[np.argmax(metric_scores)]
-        return optimal_threshold, optimal_score
 
     @torch.no_grad()
     def test_net(self):
@@ -887,48 +912,118 @@ class trainer(object):
 
 
 
-            y_true_train = y_train.cpu().numpy()#.astype(int)
-            y_score_train=train_out.cpu().numpy()
+            if self.multi_label == True:
 
-            y_true_test=y_test.cpu().numpy()#.astype(int)
-            y_score_test=test_out.cpu().numpy()
+                train_thresh, train_acc = optimal_metric_threshold(train_out,
+                                                                   y_train,
+                                                                   metric=metrics.accuracy_score,
+                                                               metric_name='accuracy',
+                                                               num_targets=self.num_targets)
+                test_thresh, test_acc = optimal_metric_threshold(test_out,
+                                                                 y_test,
+                                                                   metric=metrics.accuracy_score,
+                                                               metric_name='accuracy',
+                                                               num_targets=self.num_targets)
+                all_thresh, all_acc = optimal_metric_threshold(all_out,
+                                                               y_all,
+                                                                   metric=metrics.accuracy_score,
+                                                               metric_name='accuracy',
+                                                               num_targets=self.num_targets)
+                # total_correct = 0
+                # correct = pred.eq(data.y).sum().item()
+                # accuracy = correct / (num_nodes * num_classes)
+                # total_correct = train_out.argmax(dim=-1).eq(y_train).sum().item()
+                # train_acc = total_correct/float(y_train.size(0)*self.num_targets)
+                #
+                #
+                # total_correct = 0
+                # total_correct = test_out.argmax(dim=-1).eq(y_test).sum().item()
+                # test_acc = total_correct / float(y_test.size(0) * self.num_targets)
+                #
+                # total_correct = 0
+                # # for y_t, y_s in zip(y_all, all_out):
+                # total_correct = all_out.argmax(dim=-1).eq(y_all).sum().item()
+                # all_acc = total_correct / float(y_all.size(0) * self.num_targets)
 
-            y_true_all=y_all.cpu().numpy()#.astype(int)
-            y_score_all=all_out.cpu().numpy()
+                print(" ALL ACCURACY thresh ", all_acc)
+                # all_acc_mean = (all_out == y_all).float().mean().item()
+                # pout((" ALL ACCURACY Mean ", all_acc_mean))
 
-            train_thresh, train_acc = self.optimal_metric_threshold(y_score_train,
-                                             y_true_train,
-                                             metric='accuracy')
-            test_thresh, test_acc = self.optimal_metric_threshold(y_score_test,
-                                                                    y_true_test,
-                                                                    metric='accuracy')
-            all_thresh, all_acc = self.optimal_metric_threshold(y_score_all,
-                                                                    y_true_all,
-                                                                    metric='accuracy')
+                # train_thresh, train_acc = optimal_metric_threshold(y_score_train,
+                #                                                    y_true_train,
+                #                                                    metric='accuracy')
+                # test_thresh, test_acc = optimal_metric_threshold(y_score_test,
+                #                                                  y_true_test,
+                #                                                  metric='accuracy')
+                # all_thresh, all_acc = optimal_metric_threshold(y_score_all,
+                #                                                y_true_all,
+                #                                                metric='accuracy')
+
+                # train_thresh, train_f1 = optimal_metric_threshold((train_out > 0).float().numpy(),
+                #                                                   y_true_train,
+                #                                                   metric=metrics.f1_score)
+                # test_thresh, test_f1 = optimal_metric_threshold((test_out > 0).float().numpy(),
+                #                                                 y_true_test,
+                #                                                 metric=metrics.f1_score)
+                # all_thresh, all_f1 = optimal_metric_threshold((all_out > 0).float().numpy(),
+                #                                               y_true_all,
+                #                                               metric=metrics.f1_score)
+
+                """
+                            cCHANGER THIAS AHCKL HACL HACL
+                """
+                train_f1, test_f1, all_f1 = 0, 0 ,0
+                train_roc, test_roc, all_roc = 0, 0, 0
 
 
-            train_thresh, train_f1 = self.optimal_metric_threshold(y_score_train,
-                                                                    y_true_train,
-                                                                    metric=metrics.f1_score)
-            test_thresh, test_f1 = self.optimal_metric_threshold(y_score_test,
-                                                                   y_true_test,
-                                                                   metric=metrics.f1_score)
-            all_thresh, all_f1 = self.optimal_metric_threshold(y_score_all,
+
+            if self.multi_label == False:
+
+                y_true_train = y_train.cpu().numpy()
+                y_score_train = train_out.cpu().numpy()
+
+                y_true_test = y_test.cpu().numpy()
+                y_score_test = test_out.cpu().numpy()
+
+                y_true_all = y_all.cpu().numpy()
+                y_score_all = all_out.cpu().numpy()
+
+                train_thresh, train_acc = optimal_metric_threshold(y_score_train,
+                                                                   y_true_train,
+                                                               metric = accuracy_score,
+                                                                   metric_name='accuracy')
+                test_thresh, test_acc = optimal_metric_threshold(y_score_test,
+                                                                 y_true_test,
+                                                               metric = accuracy_score,
+                                                                 metric_name='accuracy')
+                all_thresh, all_acc = optimal_metric_threshold(y_score_all,
+                                                               y_true_all,
+                                                               metric = accuracy_score,
+                                                               metric_name='accuracy')
+                train_thresh, train_f1 = optimal_metric_threshold(y_score_train,
+                                                                        y_true_train,
+                                                                        metric=metrics.f1_score)
+                test_thresh, test_f1 = optimal_metric_threshold(y_score_test,
+                                                                       y_true_test,
+                                                                       metric=metrics.f1_score)
+                all_thresh, all_f1 = optimal_metric_threshold(y_score_all,
+                                                                       y_true_all,
+                                                                       metric=metrics.f1_score)
+
+                all_thresh, all_roc = optimal_metric_threshold(y_score_all,
                                                                    y_true_all,
-                                                                   metric=metrics.f1_score)
+                                                                   metric=metrics.roc_auc_score,
+                                                                      metric_name='ROC AUC')
+                all_thresh, test_roc = optimal_metric_threshold(y_score_all,
+                                                                   y_true_all,
+                                                                   metric=metrics.roc_auc_score,
+                                                                      metric_name='ROC AUC')
+                all_thresh, train_roc = optimal_metric_threshold(y_score_train,
+                                                                   y_true_train,
+                                                                   metric=metrics.roc_auc_score,
+                                                                      metric_name='ROC AUC')
+                print("ALL ACC Thresh: ",all_acc, " ALL ROC: ", all_roc )
 
-            all_thresh, all_roc = self.optimal_metric_threshold(y_score_all,
-                                                               y_true_all,
-                                                               metric=metrics.roc_auc_score,
-                                                                  metric_name='ROC AUC')
-            all_thresh, test_roc = self.optimal_metric_threshold(y_score_all,
-                                                               y_true_all,
-                                                               metric=metrics.roc_auc_score,
-                                                                  metric_name='ROC AUC')
-            all_thresh, train_roc = self.optimal_metric_threshold(y_score_train,
-                                                               y_true_train,
-                                                               metric=metrics.roc_auc_score,
-                                                                  metric_name='ROC AUC')
 
             """
             # train results threshold prediction
@@ -1070,7 +1165,8 @@ class trainer(object):
             #         else 0
             #     )
 
-        return all_out, (train_acc, test_acc, all_acc), (train_f1, test_f1, all_f1), (train_roc,test_roc,all_roc)
+        return (all_out, (train_acc, test_acc, all_acc),
+                (train_f1, test_f1, all_f1), (train_roc,test_roc,all_roc))
     def compute_metrics(self, logits):
         self.model.eval()
         train_input_dict = {"data": self.train_data, "y": self.y, "loss_op": self.loss_op,
@@ -1109,3 +1205,16 @@ class trainer(object):
         }
 
         return metrics
+
+    def set_seed(self, args):
+        torch.backends.cudnn.deterministic = True
+        torch.backends.cudnn.benchmark = False
+        if args.cuda and not torch.cuda.is_available():  # cuda is not available
+            args.cuda = False
+        if args.cuda:
+            torch.cuda.manual_seed(args.random_seed)
+            torch.cuda.manual_seed_all(args.random_seed)
+            os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda_num)
+        torch.manual_seed(args.random_seed)
+        np.random.seed(args.random_seed)
+        random.seed(args.random_seed)

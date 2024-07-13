@@ -1,5 +1,6 @@
 import argparse
-# from ..utils import pout
+from ..utils import pout
+# from .utils import pout
 
 class BaseOptions:
     def __init__(self):
@@ -41,11 +42,14 @@ class BaseOptions:
             type=str,
             required=False,
             choices=[
-                "roman",
+                "roman_empire",
                 "minesweeper",
                 "tolokers",
                 "questions",
-                "amazon_rating"
+                "amazon_rating",
+                "Cornell",
+                "Texas",
+                "Wisconsin"
             ],
             default='minesweeper',
         )
@@ -225,7 +229,10 @@ class BaseOptions:
         parser.add_argument("--filter_rate", type=float, default=0.2)
         parser.add_argument("--homophily", type=float, default=0.2)
         args = parser.parse_args()
-        print(" IN BASE OP INITIALIZE MULTILABLE: ", args.multi_label)
+        pout(("print2"))
+        pout((args))
+        pout(("end print 2"))
+
         args = self.reset_dataset_dependent_parameters(args)
 
         if args.type_model == "LP_Adj":
@@ -243,7 +250,6 @@ class BaseOptions:
             # args.batch_size = 10000
             # args.num_layers = 4
         elif args.dataset == "Planetoid":
-            args.multi_label = False
             args.num_classes = 7
             args.num_feats = 1433
         elif args.dataset == "MixHopSyntheticDataset":
@@ -251,22 +257,30 @@ class BaseOptions:
             args.num_classes = 10
             args.num_feats = 2
         elif args.dataset == "HeterophilousGraphDataset":
-            if args.data_subset == "roman":
+            if args.data_subset == "roman_empire":
                 args.num_classes = 18 #roman
                 args.num_feats = 300
+                args.multi_label = True
             if args.data_subset == "amazon_rating":
                 args.num_classes = 5 # amazon_ratings
                 args.num_feats = 300
+                args.multi_label = True
             if args.data_subset == "tolokers":
                 args.num_classes = 2 #
                 args.num_feats = 10
+                args.multi_label = False
             if args.data_subset == "minesweeper":
                 args.num_classes = 2 #
                 args.num_feats = 7
+                args.multi_label = False
             if args.data_subset == "questions":
                 args.num_classes = 2 #
                 args.num_feats = 301
-            args.multi_label = False
+                args.multi_label = False
+        elif args.dataset == "WebKB":
+            args.multi_label = True
+            args.num_classes = 5
+            args.num_feats = 1703
         elif args.dataset == "Reddit":
             args.num_classes = 41
             args.num_feats = 602

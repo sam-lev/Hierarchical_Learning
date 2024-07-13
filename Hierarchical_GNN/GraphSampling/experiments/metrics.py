@@ -2,7 +2,7 @@ import os
 import numpy as np
 from sklearn.metrics import f1_score, precision_score, recall_score, average_precision_score
 
-class Quality_Metrics:
+class metrics:
     def __init__(self, x_ids = None,
                  y = None,
                  preds = None,
@@ -40,9 +40,10 @@ class Quality_Metrics:
         self.precision_dict = {}
         self.f1_recall_precision = {}
 
-        self.threshold_f1()
-        self.confusion_matrix()
-        self.compute_prediction_metrics()
+        # self.threshold_f1()
+        # self.confusion_matrix()
+        # self.compute_prediction_metrics()
+        # self.optimal_metric_threshold()
 
     def confusion_matrix(self, x_ids = None,
                          y = None,
@@ -209,3 +210,46 @@ class Quality_Metrics:
             score = scoring_dict[mode]
             scoring_file.write(mode + ' ' + str(score) + "\n")
         scoring_file.close()
+
+def optimal_metric_threshold( y_probs,
+                              y_true,
+                              metric,
+                              metric_name='other',
+                              multi_class=False,
+                              num_targets=1):
+    thresholds = np.arange(0.0, 1.0, 0.01)
+    metric_scores = []
+
+    def acc_metric(y_true, y_pred):
+        if num_targets != 1:
+            y_max = y_pred.argmax(axis=1)
+            # total_correct = y_pred.eq(y_true).sum().item()
+            # = int(out.argmax(dim=-1).eq(y).sum())
+            train_acc = y_max.eq(y_true).float().mean().item()
+            # train_acc = total_correct / float(y_true.size(0) * num_targets)
+            return train_acc
+        else:
+            # correct = pred.eq(data.y).sum().item()
+            # accuracy = correct / (num_nodes * num_classes)
+            return np.mean(y_pred == y_true)
+
+    if 'ROC AUC' not in metric_name:
+        if num_targets == 1:
+            for threshold in thresholds:
+                y_pred = (y_probs >= threshold).astype(int)
+
+                f1 = metric(y_true, y_pred, average='micro') if metric_name != 'accuracy' else metric(y_true,y_pred)
+                metric_scores.append(f1)
+        else:
+            y_pred = y_probs
+            f1 = metric(y_true, y_pred, average='micro') if metric_name != 'accuracy' else metric(y_true, y_pred)
+            metric_scores.append(f1)
+    else:
+        y_pred = y_probs
+        f1 = metric(y_true, y_pred)# if metric != 'accuracy' else acc_metric(y_true, y_pred)
+        metric_scores.append(f1)
+
+    # Find the threshold with the maximum F1 score
+    optimal_threshold = thresholds[np.argmax(metric_scores)]
+    optimal_score = metric_scores[np.argmax(metric_scores)]
+    return optimal_threshold, optimal_score

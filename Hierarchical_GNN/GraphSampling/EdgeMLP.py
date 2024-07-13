@@ -31,6 +31,9 @@ from .utils import pout, homophily_edge_labels, init_edge_embedding
 from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
+from sklearn.metrics import accuracy_score
+
+from .experiments.metrics import optimal_metric_threshold
 
 class EdgeMLP(torch.nn.Module):
     #fp = open('./run_logs/memory_profiler.log', 'w+')
@@ -97,9 +100,9 @@ class EdgeMLP(torch.nn.Module):
         # construct MLP classifier
         for _ in range(self.num_layers - 2):
             self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
-            """batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-            self.batch_norms.append(batch_norm_layer)"""
+            self.batch_norms.append(batch_norm_layer)
         batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
@@ -107,7 +110,7 @@ class EdgeMLP(torch.nn.Module):
         #                                    self.dim_hidden))#self.cat * self.num_feats))
         self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
 
-        self.num_neighbors = [6]*46#[-1, 25, 25, 10, 5, 5, 5, 5, 5, 5, 5]
+        self.num_neighbors = [-1, 25, 10, 5, 5, 5, 5, 5, 5, 5]#[-1, 25, 25, 10, 5, 5, 5, 5, 5, 5, 5]
 
 
 
@@ -180,22 +183,22 @@ class EdgeMLP(torch.nn.Module):
             #     x_res = x
             #     continue
             # x_hidden = x_res
+            if i != self.num_layers - 1:
+                x = self.dropout(x)
 
             x = embedding_layer(x)
-            if i == 0:
-                x = self.batch_norms[0](x)
+
+            x = self.batch_norms[i](x)
+            # if i == 0:
             # x_res = x_hidden + x_res
-            x = self.dropout(x)
             if i != self.num_layers - 1:
-
-
                 x = self.act(x)
 
         # x = x + x_res  # torch.cat([x,x_res],axis=1)
+        edge_logit = self.edge_pred_mlp(x)#.squeeze(1)#_jump)
         x = self.batch_norms[-1](x)
-        edge_logit = self.edge_pred_mlp(x).squeeze(1)#_jump)
 
-        edge_logit = self.probability( edge_logit )
+        edge_logit = self.probability( edge_logit ).squeeze(1)
 
         return edge_logit, x#F.log_softmax( edge_logit , dim=-1 )
 
@@ -226,7 +229,7 @@ class EdgeMLP(torch.nn.Module):
         optimizer = input_dict["optimizer"]
         loss_op = input_dict["loss_op"]
         grad_scalar = input_dict["grad_scalar"]
-        scheduler = input_dict["scheduler"]
+        scheduler = None#input_dict["scheduler"]
 
 
         val_data = input_dict["val_data"]
@@ -250,6 +253,7 @@ class EdgeMLP(torch.nn.Module):
         )
 
         self.train()
+        self.training = True
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
         train_sample_size, total_training_points, number_batches = 0, 0, 0.0
@@ -257,7 +261,9 @@ class EdgeMLP(torch.nn.Module):
         batch_sizes = []
         train_edge_embeddings = {}
         total_acc = 0.
-        total_loss = total_correct = total_val_loss = 0
+        total_loss = total_correct = total_val_loss = 0.
+        predictions = []
+        all_labels = []
         for batch in train_loader:
             number_batches += 1.0
             batch=batch.to(device)
@@ -303,7 +309,7 @@ class EdgeMLP(torch.nn.Module):
                    
                    
             """
-            grad_scalar.scale(loss.mean()).backward()
+            grad_scalar.scale(loss).backward()
             grad_scalar.step(optimizer)
             grad_scalar.update()
             #
@@ -316,7 +322,7 @@ class EdgeMLP(torch.nn.Module):
                               !!!!!!!!!!!!!  added sum to take loss per sample
             
             """
-            total_loss += loss.sum().item()
+            total_loss += loss.item()
 
             if input_steps != -1:
                 self.steps += 1#self.model.steps
@@ -325,14 +331,7 @@ class EdgeMLP(torch.nn.Module):
                 self.steps = -1
                 counter = epoch
 
-            if counter % eval_steps == 0 and counter != 0:
-                with torch.no_grad():
-                    val_pred, val_loss, val_ground_truth  = self.inference(val_input_dict)
-                    # val_out, val_loss, val_labels = self.inference(val_input_dict)
-                    if scheduler is not None:
-                        scheduler.step(val_loss)
 
-                    total_val_loss += val_loss#.item()
 
 
 
@@ -352,18 +351,68 @@ class EdgeMLP(torch.nn.Module):
 
 
             if self.num_classes > 2:#(isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
-                total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().mean().item()#.sum() #y[:,1]
-                total_acc = total_correct/np.sum(batch_sizes).item()
+                #total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()#.sum() #y[:,1]
+                #total_acc = total_correct/np.sum(batch_sizes).item()
+                total_correct += int(out.argmax(dim=-1).eq(y).sum())
+                # preds = out.detach().cpu().numpy()
+                # ground_truth = y.detach().cpu().numpy()
+                all_labels.extend(y)#ground_truth)
+                predictions.extend(out)#.argmax(axis=1))
+
             else:
-                probs = out
-                probs = probs > 0.5
-                total_correct = (probs.long() == y).float().mean().item()#int(out.eq(y).sum())
 
-
+                # if False: # because too slow
+                preds = out.detach().cpu().numpy()
+                ground_truth = y.detach().cpu().numpy()
+                optimal_threshold, optimal_score = optimal_metric_threshold(y_probs=preds,
+                                                                                    y_true=ground_truth,
+                                                                            metric=accuracy_score,
+                                                                                    metric_name='accuracy')
+                # optimal_threshold = 0.0
+                thresh_out = out >= optimal_threshold#).float()
+                predictions.extend(thresh_out)
+                all_labels.extend(y)
+                # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
+                total_correct += (y == thresh_out).float().sum()#.item()  # int(out.eq(y).sum())
+                # approx_acc = (y == thresh_out).float().mean().item()
+                # print(">>> epoch: ", epoch, " Approx Train ACC: ", optimal_score)
 
             torch.cuda.empty_cache()
             # del y, batch_size, n_id, loss, out, edge_embedding
 
+        # if epoch % eval_steps == 0 and epoch != 0:
+        # pout((" counter ", counter, " epoch ", epoch))
+        with torch.no_grad():
+            self.eval()
+            val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+        self.training = True
+        self.train()
+        # val_out, val_loss, val_labels = self.inference(val_input_dict)
+
+        if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
+            # total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()#.sum() #y[:,1]
+            # total_acc = total_correct/np.sum(batch_sizes).item()
+            val_acc = (val_pred == val_ground_truth).float().mean().item()
+            print(">>> epoch: ", epoch, " validation acc: ", val_acc)
+        else:
+
+            # if False:  # because too slow
+            val_preds = val_pred.detach().cpu().numpy()
+            val_ground_truth = val_ground_truth.detach().cpu().numpy()
+            val_optimal_threshold, val_optimal_score = optimal_metric_threshold(y_probs=val_preds,
+                                                                                y_true=val_ground_truth,
+                                                                                metric=accuracy_score,
+                                                                                metric_name='accuracy')
+
+            print(">>> epoch: ", epoch, " validation acc: ", val_optimal_score)
+            # thresh_out = out >= optimal_threshold
+            # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
+            # val_total_correct += (val_ground_truth == thresh_out)  # int(out.eq(y).sum())
+
+        if scheduler is not None:
+            scheduler.step(val_loss)
+
+        total_val_loss += val_loss
         # train_data.edge_attr = torch.tensor([train_edge_embeddings[i] for i in range(len(train_edge_embeddings))],
         #                                dtype=torch.float)
         # train_data.edge_attr = torch.from_numpy(
@@ -383,14 +432,21 @@ class EdgeMLP(torch.nn.Module):
         )
         '''val_acc = self.test()
         '''
-        total_loss = total_loss/train_sample_size#number_batches
+        total_loss = total_loss/number_batches#train_sample_size#number_batches
         total_val_loss = total_val_loss#/number_batches
 
-        pout(("Step:", self.steps))
+        # pout(("Step:", self.steps))
 
-        avg_total_per_batch = np.sum(batch_sizes) / np.mean(batch_sizes)
-
-        return total_loss , total_correct, total_val_loss#float(train_sample_size), val_loss
+        predictions = torch.tensor(predictions)
+        all_labels = torch.tensor(all_labels)
+        t_loss = total_correct / train_sample_size
+        if self.num_classes > 2:
+            predictions = predictions.argmax(axis=1)
+            approx_acc = (predictions == all_labels).float().mean().item()
+        else:
+            approx_acc = accuracy_score(all_labels.cpu().numpy(),
+                                        predictions.cpu().numpy())
+        return total_loss , approx_acc, total_val_loss#float(train_sample_size), val_loss
 
     def get_train_data(self):
         return self.train_data
@@ -399,6 +455,154 @@ class EdgeMLP(torch.nn.Module):
         # pout(("target edge attr", edge_attr_target, "target edge shape", edge_attr_target.shape))
         # torch.mean(torch.max(a, -1, True)[0], 1, True)
         return torch.max(edge_attr_target, -1, True)[0]
+
+    @torch.no_grad()
+    def inference(self,input_dict):
+        pred, loss, ground_truth, _ = self.edge_inference(input_dict)
+        return pred, loss, ground_truth
+
+    @torch.no_grad()
+    def edge_inference(self, input_dict, assign_edge_weights = False):
+        # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
+        self.eval()
+        self.training = False
+        device = input_dict["device"]
+        # x = input_dict["x"].to(device)
+        data = input_dict["data"]#.to(device)
+
+        data = init_edge_embedding(data)
+
+        # for validation testing
+        loss_op  = input_dict["loss_op"]
+
+        # labels = data.y.to(device)
+        # labels = self.edge_labels(labels=data.y, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
+
+        data.edge_weights = torch.zeros(data.edge_index.shape)
+
+        global_edge_index = data.edge_index.t().cpu().numpy()
+
+        # # create learnable edge embeddings
+        # # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
+        # edge_embeddings = nn.Embedding.from_pretrained(data.edge_embeddings,
+        #                                                     freeze=True).requires_grad_(False).to(device)
+
+
+        inference_loader = NeighborLoader(
+            data=data,#copy.copy(data),#.edge_index,
+            input_nodes=None,
+            # directed=True,
+            # edge_index = train_data.edge_index,
+            # input_nodes=self.train_dataset.data.train_mask,
+            # sizes=[-1],
+            num_neighbors=[-1],
+            batch_size=self.batch_size, #data.edge_index.shape[1],
+            shuffle=False,
+            # num_workers=8
+        )
+
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+
+
+        train_sample_size = 0
+        edges = []
+        edge_weights = []
+        x_pred = []
+        preds = []
+        ground_truths = []
+        total_loss = 0
+        edge_embeddings_dict = {}
+        edge_weights_dict = {}
+        batch_sizes = []
+        number_batches = 0.0
+        with torch.no_grad():
+            for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
+                number_batches += 1.0
+                #batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
+                # edge_index, e_id, size = adjs
+                # _, _, size = adjs
+
+                # batch.n_id # global node index of each node
+                batch = batch.to(device)
+                e_id = batch.e_id
+                train_sample_size += batch.edge_index.size(0)#shape[1]
+                edge_attr = batch.edge_attr#edge_embeddings(e_id).to(device)#
+
+                # for i, embedding_layer in enumerate(self.edge_emb_mlp):
+                #     edge_attr = embedding_layer(edge_attr)
+                #     if i != self.num_layers - 1:
+                #         edge_attr = F.relu(edge_attr)
+                #         edge_attr = self.batch_norms[i](edge_attr)
+
+                out, emb = self(edge_index=batch.edge_index,
+                                       edge_attr=batch.edge_attr)#self.edge_pred_mlp(edge_attr)
+                # out = self.probabil(out)#[:,1]#[:,1]
+
+                # if self.num_classes ==2:
+                #     _, out = out.max(dim=1)
+
+                # add predicted edge value as weight for each edge
+                if assign_edge_weights:
+                    for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
+                        source, target = global_edge_index[edge]
+                        edges.append((source, target))
+                        edge_weights_dict[(source,target)] = p#[0]#[p]# edge_weights_dict[edge] = [p]#.append
+                # for edge, emb_e in zip(e_id.detach().cpu().numpy(), edge_attr.detach().cpu().numpy()):
+                #     source, target = global_edge_index[edge]
+                #     edge_embeddings_dict[(source, target)] = emb_e
+                #     #self.filtration.append(dion.Simplex([source, target], p))
+
+
+
+
+                # pout(("edge_index", edge_index, "e_id", e_id))
+
+                batch_labels = self.edge_labels(labels=batch.y,  #data.y[n_id].to(device),
+                                                edge_index=batch.edge_index,
+                                                )
+                preds.extend(out)
+                batch_sizes.append(batch_labels.size()[0])
+                loss = loss_op(out, batch_labels.to(device))
+                """
+                Added 
+                
+                """
+                total_loss += loss.item()# / batch_sizes[-1]
+                ground_truths.extend(batch_labels)#append(batch_labels)#.argmax(dim=1))#[:,1])
+
+                # if isinstance(loss_op, torch.nn.NLLLoss):
+                #     edge_logit = F.log_softmax(out, dim=-1)
+                #     edge_logit = edge_logit.argmax(dim=-1)
+                #     edge_logit = F.softmax(out, dim=-1)
+
+                # edge_logit = edge_logit.cpu()
+
+                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
+
+                # x_pred.append(edge_logit)
+                # edge_pred[e_id] = edge_logit.cpu()
+
+        if assign_edge_weights:
+            data.edge_weights = torch.from_numpy(np.array(
+                [edge_weights_dict[(data.edge_index[0, i].item(),
+                                    data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]))
+
+        # data.edge_attr = torch.from_numpy(np.array(
+        #     [edge_embeddings_dict[(data.edge_index[0, i].item(),
+        #                            data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]
+        #                               ))
+
+        #
+
+        # pred = torch.cat(preds, dim=0)#.cpu()#.numpy()
+        # ground_truth = torch.cat(ground_truths, dim=0)#.cpu()#.numpy()
+        # ground_truths = [item for sublist in ground_truths for item in sublist]
+        # preds = [item for sublist in preds for item in sublist]
+        avg_total_per_batch = np.sum(batch_sizes)/np.mean(batch_sizes)
+        return torch.tensor(preds), total_loss/train_sample_size, torch.tensor(ground_truths), data.to("cpu")
+
+
+
 
     # @profile
     @torch.no_grad()
@@ -546,144 +750,3 @@ class EdgeMLP(torch.nn.Module):
         # ground_truths = torch.cat(ground_truths, dim=1)#.cpu()#.numpy()
 
         return torch.tensor(preds), total_loss/number_batches, torch.tensor(ground_truths)
-
-    @torch.no_grad()
-    def inference(self,input_dict):
-        pred, loss, ground_truth, _ = self.edge_inference(input_dict)
-        return pred, loss, ground_truth
-
-    @torch.no_grad()
-    def edge_inference(self, input_dict):
-        # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
-        self.eval()
-        self.training = False
-        device = input_dict["device"]
-        # x = input_dict["x"].to(device)
-        data = input_dict["data"]#.to(device)
-
-        data = init_edge_embedding(data)
-
-        # for validation testing
-        loss_op  = input_dict["loss_op"]
-
-        # labels = data.y.to(device)
-        # labels = self.edge_labels(labels=data.y, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
-
-        data.edge_weights = torch.zeros(data.edge_index.shape)
-
-        global_edge_index = data.edge_index.t().cpu().numpy()
-
-        # # create learnable edge embeddings
-        # # train_edge_embeddings = nn.Embedding(row.shape[0],self.cat * self.num_feats)
-        # edge_embeddings = nn.Embedding.from_pretrained(data.edge_embeddings,
-        #                                                     freeze=True).requires_grad_(False).to(device)
-
-
-        inference_loader = NeighborLoader(
-            data=data,#copy.copy(data),#.edge_index,
-            input_nodes=None,
-            # directed=True,
-            # edge_index = train_data.edge_index,
-            # input_nodes=self.train_dataset.data.train_mask,
-            # sizes=[-1],
-            num_neighbors=[-1],
-            batch_size=self.batch_size, #data.edge_index.shape[1],
-            shuffle=False,
-            # num_workers=8
-        )
-
-        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
-
-
-        train_sample_size = 0
-        edges = []
-        edge_weights = []
-        x_pred = []
-        preds = []
-        ground_truths = []
-        total_loss = 0
-        edge_embeddings_dict = {}
-        edge_weights_dict = {}
-        batch_sizes = []
-        number_batches = 0.0
-        with torch.no_grad():
-            for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
-                number_batches += 1.0
-                #batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
-                # edge_index, e_id, size = adjs
-                # _, _, size = adjs
-
-                # batch.n_id # global node index of each node
-                batch = batch.to(device)
-                e_id = batch.e_id
-                train_sample_size += batch.edge_index.size(0)#shape[1]
-                edge_attr = batch.edge_attr#edge_embeddings(e_id).to(device)#
-
-                # for i, embedding_layer in enumerate(self.edge_emb_mlp):
-                #     edge_attr = embedding_layer(edge_attr)
-                #     if i != self.num_layers - 1:
-                #         edge_attr = F.relu(edge_attr)
-                #         edge_attr = self.batch_norms[i](edge_attr)
-
-                out, emb = self(edge_index=batch.edge_index,
-                                       edge_attr=batch.edge_attr)#self.edge_pred_mlp(edge_attr)
-                # out = self.probabil(out)#[:,1]#[:,1]
-
-                # if self.num_classes ==2:
-                #     _, out = out.max(dim=1)
-
-                # add predicted edge value as weight for each edge
-                for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
-                    source, target = global_edge_index[edge]
-                    edges.append((source, target))
-                    edge_weights_dict[(source,target)] = p#[0]#[p]# edge_weights_dict[edge] = [p]#.append
-                for edge, emb_e in zip(e_id.detach().cpu().numpy(), edge_attr.detach().cpu().numpy()):
-                    source, target = global_edge_index[edge]
-                    edge_embeddings_dict[(source, target)] = emb_e
-                    #self.filtration.append(dion.Simplex([source, target], p))
-
-
-
-
-                # pout(("edge_index", edge_index, "e_id", e_id))
-
-                batch_labels = self.edge_labels(labels=batch.y,  #data.y[n_id].to(device),
-                                                edge_index=batch.edge_index,
-                                                )
-                preds.extend(out)
-                batch_sizes.append(batch_labels.size()[0])
-                loss = loss_op(out, batch_labels.to(device))
-                """
-                Added 
-                
-                """
-                total_loss += loss.item()# / batch_sizes[-1]
-                ground_truths.extend(batch_labels)#append(batch_labels)#.argmax(dim=1))#[:,1])
-
-                # if isinstance(loss_op, torch.nn.NLLLoss):
-                #     edge_logit = F.log_softmax(out, dim=-1)
-                #     edge_logit = edge_logit.argmax(dim=-1)
-                #     edge_logit = F.softmax(out, dim=-1)
-
-                # edge_logit = edge_logit.cpu()
-
-                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
-
-                # x_pred.append(edge_logit)
-                # edge_pred[e_id] = edge_logit.cpu()
-        data.edge_weights = torch.from_numpy(np.array(
-            [edge_weights_dict[(data.edge_index[0, i].item(),
-                                data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]))
-
-        data.edge_attr = torch.from_numpy(np.array(
-            [edge_embeddings_dict[(data.edge_index[0, i].item(),
-                                   data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]
-                                      ))
-
-        #
-
-        # pred = torch.cat(preds, dim=0)#.cpu()#.numpy()
-        # ground_truth = torch.cat(ground_truths, dim=0)#.cpu()#.numpy()
-
-        avg_total_per_batch = np.sum(batch_sizes)/np.mean(batch_sizes)
-        return torch.tensor(preds), total_loss/train_sample_size, torch.tensor(ground_truths), data.to("cpu")

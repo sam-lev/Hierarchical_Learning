@@ -40,7 +40,7 @@ class ResidualModuleWrapper(nn.Module):
 
 
 class FeedForwardModule(nn.Module):
-    def __init__(self, dim, hidden_dim_multiplier, dropout, input_dim_multiplier=1, **kwargs):
+    def __init__(self, dim, hidden_dim_multiplier, dropout,  input_dim_multiplier=1, **kwargs):
         super().__init__()
         input_dim = int(dim * input_dim_multiplier)
         hidden_dim = int(dim * hidden_dim_multiplier)
@@ -50,7 +50,7 @@ class FeedForwardModule(nn.Module):
         self.linear_2 = nn.Linear(in_features=hidden_dim, out_features=dim)
         self.dropout_2 = nn.Dropout(p=dropout)
 
-    def forward(self, graph, x):
+    def forward(self, x):
         x = self.linear_1(x)
         x = self.dropout_1(x)
         x = self.act(x)
@@ -117,12 +117,13 @@ class SAgeConv(MessagePassing):
     """
     def __init__(
         self,
-        in_channels,#: Union[int, Tuple[int, int]],
+        in_channels: Union[int, Tuple[int, int]],
         out_channels: int,
         hidden_dim_multiplier,
         dropout,
         aggr: Optional[Union[str, List[str], Aggregation]] = "mean",
         normalize: bool = False,
+            normalization = None,
         root_weight: bool = True,
         project: bool = True,
         bias: bool = True,
@@ -157,24 +158,29 @@ class SAgeConv(MessagePassing):
         else:
             aggr_out_channels = in_channels[0]
 
-        self.lin_l = Linear(aggr_out_channels, out_channels, bias=bias)
-        # if self.root_weight:
-        self.lin_r = Linear(in_channels[1], out_channels, bias=False)
-
-        self.feed_forward_module = FeedForwardModule(dim=in_channels[0],
-                                                     input_dim_multiplier=2,
+        self.lin_out = Linear(out_channels, in_channels[0], bias=bias)
+        # # if self.root_weight:
+        self.lin_target = Linear(in_channels[0], out_channels, bias=False)
+        self.lin_source = Linear(in_channels[0], out_channels, bias=bias)
+        # self.lin_in = Linear(in_channels[0], in_channels[1], bias=bias)
+        self.feed_forward_module = FeedForwardModule(dim=out_channels,
                                                      hidden_dim_multiplier=hidden_dim_multiplier,
-                                                     dropout=dropout)
-
+                                                     dropout=dropout,
+                                                     input_dim_multiplier=2)
+        if normalization is not None:
+            self.normalization = normalization
         self.reset_parameters()
 
     def reset_parameters(self):
         super().reset_parameters()
         if self.project:
             self.lin.reset_parameters()
-        self.lin_l.reset_parameters()
-        if self.root_weight:
-            self.lin_r.reset_parameters()
+        # self.lin_in.reset_parameters()
+        self.lin_out.reset_parameters()
+        # if self.root_weight:
+        self.feed_forward_module.reset_parameters()
+        self.lin_target.reset_parameters()
+        self.lin_source.reset_parameters()
 
     def forward(
         self,
@@ -183,7 +189,10 @@ class SAgeConv(MessagePassing):
         size: Size = None,
     ) -> Tensor:
         if isinstance(x, Tensor):
+            # x = self.lin_in(x)
             x = (x, x)
+        else:
+            x = x#(self.lin_source(x[0]), self.lin_target(x[1]))
         """
         
         # else:
@@ -209,19 +218,41 @@ class SAgeConv(MessagePassing):
         return out"""
         # Step 1: Add self-loops to the adjacency matrix.
         # edge_index, _ = add_self_loops(edge_index, num_nodes=x[0].size(0))
+        # row, col = edge_index
+        # deg = degree(col, x[1].size(0), dtype=x[1].dtype)
+        # deg_inv_sqrt = deg.pow(-0.5)
+        # deg_inv_sqrt[deg_inv_sqrt == float('inf')] = 0
+        # norm = deg_inv_sqrt[row] * deg_inv_sqrt[col]
 
         #is desired perform transformation on target nodes here
         # Start propagating messages.
         # calls message , aggregate then update
-        x = (self.lin_r(x[0]), x[1])
-        return self.propagate(edge_index, x=x)
+        #self.lin_target(x[1]))#self.lin_r(x[1]))
+
+
+        # edge_index, _ = add_self_loops(edge_index, num_nodes=x[0].size(0))
+        # x = (self.lin_source(x[0]), x[1])
+
+        out = self.propagate(edge_index, x=x)
+
+        x_target = self.lin_target(x[1])
+        out = torch.cat([x_target, out], dim=1)
+        out = self.feed_forward_module(out)
+        # if self.normalization is not None:
+        #     out = self.normalization(out)
+        # out = self.lin_out(out)
+
+        out = x_target + out#self.lin_out(out)  # self.lin_target(x[1])
+
+
+        return out
 
     # def message(self, x_j):
     #     return x_j
 
 
 
-    def message(self, x_j: Tensor) -> Tensor:
+    def message(self, x_i, x_j, norm) -> Tensor:
         r"""
          would perform linear or op on neighbors here
          eg functional transform of neighbors to be passed to sourceConstructs messages from node :math:`j` to node :math:`i`
@@ -233,54 +264,61 @@ class SAgeConv(MessagePassing):
                 respective nodes :math:`i` and :math:`j` by appending :obj:`_i` or
                 :obj:`_j` to the variable name, *.e.g.* :obj:`x_i` and :obj:`x_j`.
                 """
-        message = self.lin(x_j)
+        message = self.lin_source(x_j)#norm.view(-1, 1) * x_j
+        # message = torch.cat([x_i, x_j], dim=1)#self.feed_forward_module(x_j)
         return message
 
-    def aggregate(
-        self,
-        inputs: Tensor,
-        index: Tensor,
-        ptr: Optional[Tensor] = None,
-        dim_size: Optional[int] = None,
-    ) -> Tensor:
-        r"""Aggregates messages from neighbors as
-        :math:`\bigoplus_{j \in \mathcal{N}(i)}`.
+    # def aggregate(
+    #     self,
+    #     inputs: Tensor,
+    #     index: Tensor,
+    #     ptr: Optional[Tensor] = None,
+    #     dim_size: Optional[int] = None,
+    # ) -> Tensor:
+    #     r"""Aggregates messages from neighbors as
+    #     :math:`\bigoplus_{j \in \mathcal{N}(i)}`.
+    #
+    #     Takes in the output of message computation as first argument and any
+    #     argument which was initially passed to :meth:`propagate`.
+    #
+    #     By default, this function will delegate its call to the underlying
+    #     :class:`~torch_geometric.nn.aggr.Aggregation` module to reduce messages
+    #     as specified in :meth:`__init__` by the :obj:`aggr` argument.
+    #     """
+    #     return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
+    #                             dim=self.node_dim)
 
-        Takes in the output of message computation as first argument and any
-        argument which was initially passed to :meth:`propagate`.
-
-        By default, this function will delegate its call to the underlying
-        :class:`~torch_geometric.nn.aggr.Aggregation` module to reduce messages
-        as specified in :meth:`__init__` by the :obj:`aggr` argument.
-        """
-        return self.aggr_module(inputs, index, ptr=ptr, dim_size=dim_size,
-                                dim=self.node_dim)
-
-    def update(self, aggr_out, x) -> Tensor:
-        # performs combination function psi of source and neighbor node
-        # message represntations
-        # Concat target node features with aggregated messages
-        r"""Updates node embeddings in analogy to
-                :math:`\gamma_{\mathbf{\Theta}}` for each node
-                :math:`i \in \mathcal{V}`.
-                Takes in the output of aggregation as first argument and any argument
-                which was initially passed to :meth:`propagate`.
-                """
-        # x = kwargs['x']
-        # is desired perform transformation on target nodes here
-        if isinstance(x, Tensor):
-            x = (x, x)
-        x_target = x[0]#self.lin_l(x[0])
-        out = torch.cat([x_target, aggr_out], dim=1)
-        out = self.feed_forward_module(out)
-        # Apply the final linear transformation
-        return out
+    # def update(self, aggr_out, x) -> Tensor:
+    #     # performs combination function psi of source and neighbor node
+    #     # message represntations
+    #     # Concat target node features with aggregated messages
+    #     r"""Updates node embeddings in analogy to
+    #             :math:`\gamma_{\mathbf{\Theta}}` for each node
+    #             :math:`i \in \mathcal{V}`.
+    #             Takes in the output of aggregation as first argument and any argument
+    #             which was initially passed to :meth:`propagate`.
+    #             """
+    #     # x = kwargs['x']
+    #     # is desired perform transformation on target nodes here
+    #     # if isinstance(x, Tensor):
+    #     #     x = (x, x)
+    #     # x_target = x[1]#self.lin_target(x[1])#self.lin_r(x[1])
+    #     out = torch.cat([x[1], aggr_out], dim=1)
+    #     out = self.feed_forward_module(out)
+    #     # if self.normalization is not None:
+    #     #     out = self.normalization(out)
+    #     # out = self.lin_out(out)
+    #
+    #     out = x[1] + out #self.lin_target(x[1])
+    #     # out = self.lin_out(out)
+    #     # Apply the final linear transformation
+    #     return out
 
     # def message_and_aggregate(self, adj_t: Adj, x: OptPairTensor) -> Tensor:
     #     if isinstance(adj_t, SparseTensor):
     #         adj_t = adj_t.set_value(None, layout=None)
     #     return spmm(adj_t, x[0], reduce=self.aggr)
 
-    def __repr__(self) -> str:
-        return (f'{self.__class__.__name__}({self.in_channels}, '
-                f'{self.out_channels}, aggr={self.aggr})')
+    # def __repr__(self) -> str:
+    #     return (f'{self.__class__.__name__}({self.in_channels}, '
+    #             f'{self.out_channels}, aggr={self.aggr})')
