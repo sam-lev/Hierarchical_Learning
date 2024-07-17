@@ -214,10 +214,11 @@ class metrics:
 def optimal_metric_threshold( y_probs,
                               y_true,
                               metric,
+                              thresholds = np.arange(0.0, 1.0, 0.01),
                               metric_name='other',
                               multi_class=False,
                               num_targets=1):
-    thresholds = np.arange(0.0, 1.0, 0.01)
+    # thresholds = thresholds#np.arange(0.0, 1.0, 0.01)
     metric_scores = []
 
     def acc_metric(y_true, y_pred):

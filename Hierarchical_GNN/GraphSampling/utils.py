@@ -1,6 +1,10 @@
 from texttable import Texttable
 from torch_sparse import SparseTensor
 import torch
+from torch import Tensor
+
+from torch_geometric.typing import Adj, SparseTensor
+from torch_geometric.utils import coalesce, degree
 import torch.nn.functional as F
 import numpy as np
 
@@ -51,6 +55,15 @@ def homophily_edge_labels(data):
     y_edge = torch.eq(labels[edge_index[0]], labels[edge_index[1]])
     return y_edge
 
+def node_degree_statistics(data):
+    # Compute the degree of each node
+    node_degrees = degree(data.edge_index[0], data.num_nodes)
+
+    # Get the maximum node degree
+    max_degree = node_degrees.max().item()
+    avg_degree = node_degrees.mean().item()
+
+    return max_degree, avg_degree, node_degrees
 
 def get_memory_usage(gpu, print_info=False):
     """Get accurate gpu memory usage by querying torch runtime"""

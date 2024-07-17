@@ -1,3 +1,5 @@
+import sys
+
 from ogb.nodeproppred import Evaluator, PygNodePropPredDataset
 
 import torch_geometric.datasets
@@ -8,9 +10,10 @@ from torch.cuda.amp import GradScaler
 # import sklearn.metrics.roc_auc_score as roc_auc
 from sklearn import metrics
 import random
+import numpy as np
 
 from torch.profiler import ProfilerActivity, profile
-from torch_geometric.transforms import ToSparseTensor, ToUndirected, RandomLinkSplit
+from torch_geometric.transforms import Compose, ToSparseTensor, ToUndirected, RandomLinkSplit, AddSelfLoops
 
 from GraphSampling import *
 # from LP.LP_Adj import LabelPropagation_Adj
@@ -168,7 +171,9 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
-        transform = ToSparseTensor() if to_sparse else lambda x: x
+        transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
+
+        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -184,7 +189,7 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         # dataset = Planetoid(path, name='Cora', transform=transform)
 
         dataset_class = getattr(torch_geometric.datasets, dataset_name)
-        dataset = dataset_class(path,name='Cora', transform=transform)
+        dataset = dataset_class(path,name=dataset_name, transform=transform)
         # After applying the `RandomLinkSplit` transform, the data is transformed from
         # a data object to a list of tuples (train_data, val_data, test_data), with
         # each element representing the corresponding split.
@@ -202,7 +207,9 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
-        transform = ToSparseTensor() if to_sparse else lambda x: x
+        transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
+
+        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -231,7 +238,45 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         # data.train_mask = split_masks['train']
         # data.val_mask = split_masks['valid']
         # data.test_mask = split_masks['test']
-        dataset.data = data
+        # dataset.data = data
+        x = data.x
+        y = data.y
+    elif dataset_name in ["WikipediaNetwork"]:
+        path = os.path.join(
+            os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
+        )
+        transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
+
+        transform = Compose([ AddSelfLoops(),  ToUndirected(), transform_sparse ])
+        # Transform.Compose([
+        #     Transform.NormalizeFeatures(),
+        #     # Transform.ToDevice(device),
+        #     Transform.RandomLinkSplit(num_val=0.05, num_test=0.1, is_undirected=True,
+        #                       add_negative_train_samples=False),
+        # ])
+        # data_path = osp.join(osp.dirname(osp.realpath(__file__)), '../..', 'data', 'Planetoid')
+        # dataset = Planetoid(data_path, name='Cora')
+        # print(">>>> Data Stats")
+        # print(">>>> Number Features ", dataset.num_features)
+        # print(">>>> Number Classes  ", dataset.num_classes)
+
+        # dataset = Planetoid(path, name='Cora', transform=transform)
+
+        dataset_class = getattr(torch_geometric.datasets, dataset_name)
+        dataset = dataset_class(path,name=datasubset_name, transform=transform)
+        # After applying the `RandomLinkSplit` transform, the data is transformed from
+        # a data object to a list of tuples (train_data, val_data, test_data), with
+        # each element representing the corresponding split.
+        processed_dir = dataset.processed_dir
+        data = dataset[0]
+        # train_data, val_data, test_data = dataset[0]
+        evaluator = None
+
+        # split_masks = get_splits(data)
+        # data.train_mask = split_masks['train']
+        # data.val_mask = split_masks['valid']
+        # data.test_mask = split_masks['test']
+        # dataset.data = data
         x = data.x
         y = data.y
     elif dataset_name in ["MixHopSyntheticDataset"]:
@@ -239,7 +284,9 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
-        transform = lambda x: x #ToSparseTensor() if to_sparse else lambda x: x
+        transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
+
+        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -282,7 +329,9 @@ def load_data(dataset_name, datasubset_name='minesweeper',
         path = os.path.join(
             os.path.dirname(os.path.realpath(__file__)), "..", "dataset", dataset_name
         )
-        transform = lambda x: x #ToSparseTensor() if to_sparse else lambda x: x
+        transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
+
+        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -336,7 +385,7 @@ def load_data(dataset_name, datasubset_name='minesweeper',
 
         split_percents = [0.3,0.2,0.5]
         dataset = TopologicalPriorsDataset(name=dataset_name, root=root, split_percents=split_percents)
-        data = dataset.data
+        data = dataset(0)
         x = data.x
         y = data.y
 
@@ -365,10 +414,10 @@ def load_data(dataset_name, datasubset_name='minesweeper',
     else:
         raise Exception(f"the dataset of {dataset_name} has not been implemented")
 
-    all_nodes = data.x
-    row, col = data.edge_index
-    data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
-    dataset.data = data
+    # all_nodes = data.x
+    # row, col = data.edge_index
+    # data.edge_attr = torch.cat([all_nodes[row], all_nodes[col]], dim=-1)
+    # # dataset.data = data
 
     return data, x, y, evaluator, processed_dir, dataset
 
@@ -379,7 +428,7 @@ def update_dataset(data, dataset):
     # data.test_mask = split_masks['test']
     x = data.x
     y = data.y
-    dataset.data = data
+    # dataset.data = data
     return data, x, y, None, None, dataset
 def idx2mask(idx, N_nodes):
     mask = torch.tensor([False] * N_nodes, device=idx.device)
@@ -389,6 +438,15 @@ def idx2mask(idx, N_nodes):
 
 class trainer(object):
     def __init__(self, args, seed):
+
+
+        print(" MANUALLY SETTING SEED AT START OF TRAINER"," NEW SEED :")
+        max_int64 = 2**32-1
+        random_int = np.random.randint(1, max_int64)
+        args.random_seed = random_int
+        seed = args.random_seed
+        print(f"seed (which_run) = <{seed}>")
+
         self.set_seed(args)
         pout(("ARGS MULTILABEL", args.multi_label))
         self.dataset = args.dataset
@@ -443,7 +501,7 @@ class trainer(object):
         # or a HeteroData object (functional name: random_link_split).
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
-        edge_train_transform = RandomLinkSplit(is_undirected=False,
+        edge_train_transform = RandomLinkSplit(is_undirected=True,
                                                num_val=0.2,
                                                num_test=0.2,
                                                add_negative_train_samples=False)
@@ -460,7 +518,7 @@ class trainer(object):
                 labels = labels.float()
                 self.y = self.y.float()
                 self.data.y = self.data.y.float()
-                self.dataset.data.y = self.dataset.data.y.float()
+                # self.dataset.data.y = self.dataset.data.y.float()
             args.dataset = self.dataset
 
             self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
@@ -506,11 +564,11 @@ class trainer(object):
             if self.num_targets == 1:
                 self.y = self.y.float()
                 self.data.y = self.data.y.float()
-                self.dataset.data.y = self.dataset.data.y.float()
+                # self.dataset.data.y = self.dataset.data.y.float()
             else:
                 self.y = self.y.long()#type(torch.LongTensor)
                 self.data.y = self.data.y.long()#type(torch.LongTensor)
-                self.dataset.data.y = self.dataset.data.y.long()#type(torch.LongTensor)
+                # self.dataset.data.y = self.dataset.data.y.long()#type(torch.LongTensor)
             args.dataset = self.dataset
 
             self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
@@ -560,7 +618,7 @@ class trainer(object):
                                       weight_decay=args.weight_decay)
         # self.scheduler = get_lr_scheduler_with_warmup(optimizer=self.optimizer, num_warmup_steps=args.num_warmup_steps,
         #                                          num_steps=args.num_steps, warmup_proportion=args.warmup_proportion)
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',factor=0.1, patience=100, threshold=1e-5)
+        self.scheduler = None #ReduceLROnPlateau(self.optimizer, mode='min',factor=0.1, patience=100, threshold=1e-5)
         self.grad_scalar = GradScaler(enabled=args.amp)
         #
         #
@@ -581,7 +639,7 @@ class trainer(object):
         if self.num_targets == 1:
             self.y = self.y.float()
             self.data.y = self.data.y.float()
-            self.dataset.data.y = self.dataset.data.y.float()
+            # self.dataset.data.y = self.dataset.data.y.float()
 
         self.loss_op = F.binary_cross_entropy_with_logits
 
@@ -603,8 +661,7 @@ class trainer(object):
         #     self.model.parameters(), lr=args.lr,
         #     weight_decay=args.weight_decay, momentum=0.9
         # )
-        self.scheduler = ReduceLROnPlateau(self.optimizer, mode='min',
-                                           factor=0.1, patience=20, threshold=1e-5)
+        self.scheduler = None #ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=20, threshold=1e-5)
 
         self.train_and_test(0)
 
@@ -749,7 +806,7 @@ class trainer(object):
                     f"Loss: {train_loss:.4f}, "
                     f"Train: {100 * train_acc:.2f}%, "
                     f"Valid: {100 * valid_acc:.2f}% "
-                    f"Test: {100 * test_acc:.2f}%"
+                    f"Test: {100 * test_acc:.2f}% "
                     f"RoC: {roc[2]:.2f}"
                 )
         train_f1, test_f1, all_f1 = (f1s_train[np.argmax(f1s_train)],
@@ -1207,8 +1264,10 @@ class trainer(object):
         return metrics
 
     def set_seed(self, args):
-        torch.backends.cudnn.deterministic = True
+        # torch.backends.cudnn.deterministic = True
+        torch.backends.cuda.matmul.allow_tf32 = True
         torch.backends.cudnn.benchmark = False
+        torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
         if args.cuda and not torch.cuda.is_available():  # cuda is not available
             args.cuda = False
         if args.cuda:

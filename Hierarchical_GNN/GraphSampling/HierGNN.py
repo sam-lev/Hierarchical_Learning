@@ -4,7 +4,7 @@
 # import json
 # import time
 import numpy as np
-from copy import copy
+import copy
 from copy import deepcopy
 from sklearn.metrics import f1_score
 from typing import Callable, List, Optional
@@ -13,9 +13,12 @@ import dionysus as dion
 import networkx as nx
 from torch import Tensor
 from torch_geometric.nn import GINEConv, GATConv, GCNConv, NNConv, EdgeConv, SAGEConv
+from torch_geometric.utils import homophily
+
 from torch.nn import Embedding
 import torch.nn as nn
 import torch.nn.functional as F
+from torch_geometric.nn import JumpingKnowledge
 # import torch_geometric.transforms as T
 # from torch_geometric.typing import Adj, OptPairTensor, Size
 # from torch_geometric.utils import negative_sampling
@@ -29,15 +32,18 @@ from torch_geometric.data import Data, InMemoryDataset, download_url
 #
 # from torch_geometric.nn.dense.linear import Linear
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
-from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency
+from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency, node_degree_statistics
 #profiling tools
 from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
 from typing import Union, List,Optional
 from sklearn.metrics import accuracy_score
+from sklearn import metrics
+from torch.cuda.amp import autocast
 
 from .conv import SAgeConv
+
 from .experiments.metrics import optimal_metric_threshold
 
 
@@ -69,12 +75,26 @@ class FiltrationHierarchyGraphLoader():
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         graph = self.graphs[0]
-        self.graphlevelloader = self.get_graph_dataloader(graph,
-                                                          shuffle=True,
-                                                          num_neighbors=self.num_neighbors[:self.num_layers])
+        # self.graphlevelloader = self.get_graph_dataloader(graph,
+        #                                                   shuffle=True,
+        #                                                   num_neighbors=self.num_neighbors[:self.num_layers])
         self.graph_level = 0
 
+        for graph_num, g in enumerate(self.graphs):
+            pout(("GRAPH NUMBER ", graph_num))
+            pout(("GRAPH NUMBER NODES ", g.num_nodes))
+            self.graph_statistics(g)
 
+    def graph_statistics(self, graph):
+        edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+        node_homophily = homophily(graph.edge_index, graph.y, method='node')
+        # edge_insensitive_homophily = homophily(graph.edge_index, graph.y, method='edge_insensitive')
+        pout(("node_homophily ", node_homophily))
+        pout(("edge_homophily ",edge_homophily))
+        # graph.edge_homophily = edge_homophily
+        # graph.node_homophily = node_homophily
+        #
+        # pout(("edge_insensitive_homophily ",edge_insensitive_homophily))
     def expand_labels(self, labels):
         neg_labels = ~labels
         labels = labels.type(torch.FloatTensor)  # labels.type(torch.FloatTensor)
@@ -83,25 +103,69 @@ class FiltrationHierarchyGraphLoader():
         # if not as_logit:
         return torch.stack(labels, dim=1)
 
-    def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
-        # pout(("graph data edge index",graph.edge_index))
-        neighborloader = NeighborLoader(data=graph,
-                                        batch_size=self.batch_size,
-                                        num_neighbors=num_neighbors,
-                                        # directed=True,
-                                        shuffle=shuffle,
-                                        # num_workers=8
-                                        )  # for graph in self.graphs]
-
-        neighborsampler = NeighborSampler(
-            graph.edge_index,
-            # node_idx=train_idx,
-            sizes=self.num_neighbors[: self.num_layers],
-            batch_size=self.batch_size,
-            shuffle=shuffle,
-            # num_workers=8,
-        )
-        return neighborsampler
+    # def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
+    #     # pout(("graph data edge index",graph.edge_index))
+    #     # Compute the degree of each node
+    #     if num_neighbors==[-1]:
+    #         max_degree, avg_degree, degrees = node_degree_statistics(graph)
+    #         # pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
+    #         if avg_degree > 25:
+    #             self.val_batch_size = 8
+    #         else:
+    #             self.val_batch_size = self.batch_size
+    #         batch_size = self.val_batch_size
+    #         pout(("NOW USING NEW VALIDATION BATCH SIZE AND NUMBER NEIGHBORS"))
+    #         pout(("VAL BATCH_SIZE", self.val_batch_size))
+    #     else:
+    #         batch_size = self.batch_size
+    #
+    #     if graph.num_nodes < 1200:
+    #         num_workers=1
+    #     else:
+    #         num_workers=4
+    #
+    #     if shuffle:
+    #         neighborloader = NeighborLoader(data=graph,
+    #                               batch_size=self.batch_size,
+    #                               num_neighbors=self.num_neighbors[: self.num_layers],
+    #                                         subgraph_type='induced', #for undirected graph
+    #                               # directed=False,#True,
+    #                               shuffle=shuffle,
+    #                             num_workers=num_workers
+    #                                         ) #for graph in self.graphs]
+    #         neighborsampler = NeighborSampler(
+    #             graph.edge_index,
+    #             # node_idx=train_idx,
+    #             # directed=False,
+    #             sizes=self.num_neighbors[: self.num_layers],
+    #             batch_size=self.batch_size,
+    #             # subgraph_type='induced',  # for undirected graph
+    #             # directed=False,#True,
+    #             shuffle=shuffle,
+    #             num_workers=num_workers
+    #         )
+    #     else:
+    #         neighborloader = NeighborLoader(data=graph,
+    #                               batch_size=batch_size,
+    #                               num_neighbors=num_neighbors,
+    #                                         subgraph_type='induced', #for undirected graph
+    #                               # directed=False,#True,
+    #                               shuffle=shuffle
+    #                                         # num_workers=8
+    #                                         ) #for graph in self.graphs]
+    #
+    #         neighborsampler = NeighborSampler(
+    #             graph.edge_index,
+    #             # node_idx=train_idx,
+    #             # directed=False,
+    #             sizes=self.num_neighbors[: self.num_layers],
+    #             batch_size=batch_size,
+    #             # subgraph_type='induced',  # for undirected graph
+    #             # directed=False,#True,
+    #             shuffle=shuffle,
+    #             # num_workers=8,
+    #         )
+    #     return neighborsampler
 
     def initialize_from_subgraph(self, subgraph, supergraph, graph_level, node_mappings):
         pout(("graph level ", graph_level, "graph levelS ", self.graph_levels, " node mappings length ",
@@ -117,12 +181,12 @@ class FiltrationHierarchyGraphLoader():
         for node, embedding in subgraph.items():
             global_id = supsubsub_mapping[node]
             new_node_features[supgraph_mapping[global_id]] = embedding  # supsub_mapping[global_id]] = embedding
-        supergraph.x = new_node_features
+        supergraph.x = torch.tensor(new_node_features)
         return supergraph
 
     def pyg_to_dionysus(self, data):
         # Extract edge list and weights
-        data = data.clone()
+        data = copy.copy(data)#.clone()
         edge_index = data.edge_index.t().cpu().numpy()
         edge_weight = data.edge_weights.cpu().numpy()
         filtration = dion.Filtration()
@@ -132,8 +196,8 @@ class FiltrationHierarchyGraphLoader():
         return filtration
 
     def filtration_to_networkx(self, filtration, data, clone_data=False, node_mapping=True):
-        if clone_data:
-            data = data.clone()
+        # if clone_data:
+        data = copy.copy(data)#.clone()
         node_mapping_true = node_mapping
 
         edge_emb = data.edge_attr.cpu().numpy()
@@ -152,8 +216,8 @@ class FiltrationHierarchyGraphLoader():
         return G, node_mapping
 
     def create_filtered_graphs(self, filtration, thresholds, data, clone_data=False, nid_mapping=None):
-        if clone_data:
-            data = data.clone()
+        # if clone_data:
+        data = copy.copy(data)#.clone()
 
         edge_emb = data.edge_attr.cpu().numpy()
         y = data.y.cpu().numpy()
@@ -182,10 +246,10 @@ class FiltrationHierarchyGraphLoader():
         return graphs, node_mappings
 
     def pyg_to_networkx(self, data, clone_data=False):
-        if clone_data:
-            data = data.clone()
+        # if clone_data:
+        data = copy.copy(data)#.clone()
         # Initialize a directed or undirected graph based on your need
-        G = nx.DiGraph() if data.is_directed() else nx.Graph()
+        G = nx.Graph()# nx.DiGraph() if data.is_directed() else nx.Graph()
 
         # Add nodes along with node features if available
         for i in range(data.num_nodes):
@@ -233,7 +297,7 @@ class FiltrationHierarchyGraphLoader():
                     y=y,
                     edge_attr=edge_attr,
                     # edge_embedding=edge_emb,
-                    num_nodes=graph.number_of_nodes())
+                    num_nodes=int(graph.number_of_nodes()))
         return data
 
     #
@@ -306,6 +370,8 @@ class HierGNN(torch.nn.Module):
         self.steps=0
         self.dropout = args.dropout
 
+        self.epochs = args.epochs
+
         self.device = args.device
 
         self.data = data
@@ -353,20 +419,20 @@ class HierGNN(torch.nn.Module):
         """
 
         # GraphSage, ego- neighborhood embedding seperation performs better
-        self.edge_emb_mlp.append(SAgeConv(in_channels=self.num_feats,
-                                          out_channels=self.dim_hidden,
-                                          dropout=args.dropout,
-                                          hidden_dim_multiplier=1))
+        self.edge_emb_mlp.append(SAGEConv(in_channels=self.num_feats,
+                                          out_channels=self.dim_hidden))
+                                          # dropout=args.dropout,
+                                          # hidden_dim_multiplier=1))
 
         batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
 
         # construct MLP classifier
-        for _ in range(self.num_layers - 1):
-            self.edge_emb_mlp.append(SAgeConv(in_channels=self.dim_hidden,
-                                              out_channels=self.dim_hidden,
-                                                dropout=args.dropout,
-                                              hidden_dim_multiplier=1))
+        for _ in range(self.num_layers-1):
+            self.edge_emb_mlp.append(SAGEConv(in_channels=self.dim_hidden,
+                                              out_channels=self.dim_hidden))
+                                              #   dropout=args.dropout,
+                                              # hidden_dim_multiplier=1))
             # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             self.batch_norms.append(batch_norm_layer)
@@ -378,7 +444,9 @@ class HierGNN(torch.nn.Module):
 
         batch_norm_layer = nn.LayerNorm(self.out_dim) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
-        self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
+
+        self.edge_pred_mlp = nn.Linear(self.dim_hidden,# * self.num_layers,
+                                       self.out_dim)
 
         self.act = nn.GELU()
 
@@ -386,8 +454,19 @@ class HierGNN(torch.nn.Module):
 
         self.dropout = nn.Dropout(self.dropout)
 
+        self.jump = JumpingKnowledge(mode='cat')
 
-        self.num_neighbors = [25, 25, 10, 5, 5, 5, 5, 5, 5, 5]
+        num_neighbors = args.num_neighbors
+        if num_neighbors is None:
+            self.num_neighbors = [25, 25, 10, 5, 5, 5, 5, 5, 5, 5]
+        else:
+            if len(num_neighbors) < self.num_layers:
+                self.num_neighbors = num_neighbors
+                last_hop_nbrs = num_neighbors[-1]
+                add_hop_neighbors = [last_hop_nbrs] * (self.num_layers-(len(num_neighbors)-1))
+                self.num_neighbors.extend(add_hop_neighbors)
+            else:
+                self.num_neighbors = num_neighbors
 
         self.thresholds = args.persistence
 
@@ -403,7 +482,7 @@ class HierGNN(torch.nn.Module):
         #                                                   num_neighbors=self.num_neighbors[:self.num_layers])
         # self.graph_level = 0
 
-        hierarchicalgraphloader = FiltrationHierarchyGraphLoader(graph=data,
+        hierarchicalgraphloader = FiltrationHierarchyGraphLoader(graph=train_data,
                                                                  persistence=self.thresholds,
                                                                  num_neighbors=self.num_neighbors,
                                                                  num_classes=self.num_classes,
@@ -442,22 +521,66 @@ class HierGNN(torch.nn.Module):
         return torch.stack(labels, dim=1)
     def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
         # pout(("graph data edge index",graph.edge_index))
-        neighborloader = NeighborLoader(data=graph,
-                              batch_size=self.batch_size,
-                              num_neighbors=num_neighbors,
-                              # directed=True,
-                              shuffle=shuffle,
-                                        # num_workers=8
-                                        ) #for graph in self.graphs]
+        # Compute the degree of each node
+        if num_neighbors==[-1]:
+            max_degree, avg_degree, degrees = node_degree_statistics(graph)
+            # pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
+            if avg_degree > 25:
+                self.val_batch_size = 8
+            else:
+                self.val_batch_size = self.batch_size
+            batch_size = self.val_batch_size
+            pout(("NOW USING NEW VALIDATION BATCH SIZE AND NUMBER NEIGHBORS"))
+            pout(("VAL BATCH_SIZE", self.val_batch_size))
+        else:
+            batch_size = self.batch_size
 
-        neighborsampler = NeighborSampler(
-            graph.edge_index,
-            # node_idx=train_idx,
-            sizes=self.num_neighbors[: self.num_layers],
-            batch_size=self.batch_size,
-            shuffle=shuffle,
-            # num_workers=8,
-        )
+        if graph.num_nodes < 1200:
+            num_workers = 1
+        else:
+            num_workers = 4
+
+        if shuffle:
+            neighborloader = NeighborLoader(data=graph,
+                                  batch_size=self.batch_size,
+                                  num_neighbors=self.num_neighbors[: self.num_layers],
+                                            subgraph_type='induced', #for undirected graph
+                                  # directed=False,#True,
+                                  shuffle=shuffle,
+                                num_workers=num_workers
+                                            ) #for graph in self.graphs]
+            neighborsampler = NeighborSampler(
+                graph.edge_index,
+                # node_idx=train_idx,
+                # directed=False,
+                sizes=self.num_neighbors[: self.num_layers],
+                batch_size=self.batch_size,
+                # subgraph_type='induced',  # for undirected graph
+                # directed=False,#True,
+                shuffle=shuffle,
+                num_workers=num_workers
+            )
+        else:
+            neighborloader = NeighborLoader(data=graph,
+                                  batch_size=batch_size,
+                                  num_neighbors=num_neighbors,
+                                            subgraph_type='induced', #for undirected graph
+                                  # directed=False,#True,
+                                  shuffle=shuffle
+                                            # num_workers=8
+                                            ) #for graph in self.graphs]
+
+            neighborsampler = NeighborSampler(
+                graph.edge_index,
+                # node_idx=train_idx,
+                # directed=False,
+                sizes=self.num_neighbors[: self.num_layers],
+                batch_size=batch_size,
+                # subgraph_type='induced',  # for undirected graph
+                # directed=False,#True,
+                shuffle=shuffle,
+                # num_workers=8,
+            )
         return neighborsampler
 
 
@@ -505,24 +628,31 @@ class HierGNN(torch.nn.Module):
         # and the size/shape `size` of the bipartite graph.
         # Target nodes are also included in the source nodes so that one can
         # easily apply skip-connections or add self-loops.
-        x_source = x
-        for i, (edge_index, _, size) in enumerate(adjs):#embedding_layer in enumerate(self.edge_emb_mlp):#(edge_index, _, size) in enumerate(adjs):
+        xs = []
+        # for i, (edge_index, _, size) in enumerate(adjs):#
+        for i, (edge_index, _, size) in enumerate(adjs):
             x_target = x[: size[1]]  # Target nodes are always placed first.
-            if i != self.num_layers - 1:
-                x = self.dropout(x)
-            x = self.edge_emb_mlp[i]((x, x_target), edge_index)
+            # if i != self.num_layers - 1:
+            # x = self.dropout(x)
+            # x_target = x[:batch_size]
+            x = self.edge_emb_mlp[i]((x,x_target), edge_index)#(x, x_target), edge_index)
+            x = self.dropout(x)
 
 
             x = self.batch_norms[i](x)
 
-            if i != self.num_layers - 1:
-                x = self.act(x)
+            # if i != self.num_layers - 1:
+            x = self.act(x)
 
-        x = self.edge_pred_mlp(x)
+            xs.append(x)
+
+        # x = self.jump(xs)
+
+        x = self.edge_pred_mlp(x)#[batch_size])#[batch])
         # x = x_source + x
         x = self.batch_norms[-1](x)
 
-        return self.probability(x.squeeze(1))
+        return self.probability(x).squeeze(1)
 
     #fp = open('./run_logs/training_memory_profiler.log', 'w+')
     # @profile#stream=fp)
@@ -551,7 +681,7 @@ class HierGNN(torch.nn.Module):
         optimizer = input_dict["optimizer"]
         loss_op = input_dict["loss_op"]
         grad_scalar = input_dict["grad_scalar"]
-        scheduler = None#input_dict["scheduler"]
+        scheduler = input_dict["scheduler"]
         #
         #
         """ NOTE ON WHAT NEEDS TO BE DONE:
@@ -560,8 +690,8 @@ class HierGNN(torch.nn.Module):
                 collection of nodes comprising the training set, validations set, and 
                 graph in it's entirety """
 
-        data = input_dict["train_data"]
-        data = data.to(device)
+
+        # global_edge_index = data.edge_index.t()
 
         # hierarchicalgraphloader = FiltrationHierarchyGraphLoader(graph=data,
         #                                                          persistence=self.thresholds,
@@ -606,9 +736,24 @@ class HierGNN(torch.nn.Module):
         self.train()
         self.training = True
 
-        sanity = 0
+        data = self.graphs[self.graph_level]  # input_dict["train_data"]
+        # data = data.to(device)
 
-        length_training_batches = data.y.size()[0]
+        # Compute the degree of each node
+        if epoch == 0:
+            max_degree, avg_degree, degrees = node_degree_statistics(data)
+            pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
+            if avg_degree > 25:
+                num_neighbors = 25
+                self.val_batch_size = self.batch_size
+            else:
+                num_neighbors = -1
+                self.val_batch_size = self.batch_size
+
+        approx_thresholds = np.arange(0.0, 1.0, 0.1)
+        precise_thresholds = np.arange(0.0, 1.0, 0.01)
+
+        # length_training_batches = data.y.size()[0]
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
         total_training_points = 0
@@ -616,7 +761,7 @@ class HierGNN(torch.nn.Module):
         all_labels = []
         # for graph_level, trainloader in enumerate(self.graphLoaders):#_size, n_id, adjs in self.train_loader:
 
-        #for batch in self.graphlevelloader:
+        # for batch in self.graphlevelloader:
         for batch_size, n_id, adjs in self.graphlevelloader:
             # batch=batch.to(device)
             # batch_size = batch.batch_size
@@ -626,18 +771,33 @@ class HierGNN(torch.nn.Module):
 
             optimizer.zero_grad()
 
-            adjs = [adj.to(device) for adj in adjs]
+            # x = batch.x
+            # edge_index = batch.edge_index
+            target_nid = n_id[:batch_size]
+            # target_eid = batch.e_id[:batch_size]
+            # x_target = x[batch.batch]#:batch_size]#x_target_id]
+            # y = batch.y[:batch_size]
+            #
+            # # adjs = [adj.to(device) for adj in adjs]
             # n_id = batch.n_id
-            x = data.x[n_id].to(device)
-            x_target = x[:batch_size]#
-            y =  data.y[n_id[:batch_size]].to(device)#.float()
-            # edge_index = adjs.edge_index
+            adjs = [adj.to(device) for adj in adjs]
 
-            out = self(x, adjs)#edge_index)
-            # out = self(batch)
-            # y = batch.y#.squeeze()
-            # y = batch.y.unsqueeze(-1)
-            # y = y.type_as(out)
+            x = data.x[n_id].to(device)
+            y = data.y[n_id[:batch_size]].to(device)  # .float()
+            # edge_index = data.edge_index[:,batch.e_id]#.edge_index
+            # x = data.x[n_id]#.to(device)
+            # x_target = x[target_nid]#
+            # y = data.y[:batch_size].to(device)  # .float()
+            # y =  data.y[target_nid]#.to(device)#.float()
+            # # edge_index = adjs.edge_index
+            #
+            with autocast():
+                out = self(x, adjs)[:batch_size]
+            # out = out[:batch_size]#target_nid]#x_target_id]#adjs)#edge_index)
+            # # out = self(batch)
+            # # y = batch.y#.squeeze()
+            # # y = batch.y.unsqueeze(-1)
+            # # y = y.type_as(out)
 
             loss = loss_op(out, y)
 
@@ -674,24 +834,19 @@ class HierGNN(torch.nn.Module):
                 all_labels.extend(y)  # ground_truth)
                 predictions.extend(out.argmax(axis=1))
             else:
+                predictions.extend(out)#preds)
+                all_labels.extend(y)#ground_truth)
+                # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
+                # total_correct += (y == thresh_out).float().sum().item()  # int(out.eq(y).sum())
+                # # approx_acc = (y == thresh_out).float().mean().item()
 
-                # if False:  # because too slow
-                preds = out.detach().cpu().numpy()
-                ground_truth = y.detach().cpu().numpy()
-                optimal_threshold, optimal_score = optimal_metric_threshold(y_probs=preds,
-                                                                            y_true=ground_truth,
-                                                                            metric=accuracy_score,
-                                                                            metric_name='accuracy')
-                # optimal_threshold = 0.0
-                thresh_out = out >= optimal_threshold
-                predictions.extend(thresh_out)
-                all_labels.extend(y)
-                # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
-                total_correct += (y == thresh_out).float().sum().item()  # int(out.eq(y).sum())
-                # approx_acc = (y == thresh_out).float().mean().item()
+            del adjs, batch_size, n_id, loss, out, x, y
+            torch.cuda.empty_cache()
+
 
         predictions = torch.tensor(predictions)
         all_labels = torch.tensor(all_labels)
+
 
         # if epoch % eval_steps == 0 and epoch != 0:
         with torch.no_grad():
@@ -711,7 +866,7 @@ class HierGNN(torch.nn.Module):
             val_pred = val_pred
             val_acc = (val_pred == val_ground_truth).float().mean().item()
             # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
-            print(">>> epoch: ", epoch, " validation acc: ", val_acc)
+            print(">>> epoch: ", epoch,  f" validation acc: {val_acc:.4f}")
         else:
             # if False:  # because too slow
             val_pred = val_pred.detach().cpu().numpy()
@@ -721,8 +876,14 @@ class HierGNN(torch.nn.Module):
                                                                                 y_true=val_ground_truth,
                                                                                 metric=accuracy_score,
                                                                                 metric_name='accuracy',
-                                                                      num_targets=num_targets)
+                                                                      num_targets=num_targets,
+                                                                      thresholds=approx_thresholds)
 
+            val_thresh, val_roc = optimal_metric_threshold(val_pred,
+                                                             val_ground_truth,
+                                                             metric=metrics.roc_auc_score,
+                                                             metric_name='ROC AUC',
+                                                           thresholds=approx_thresholds)
 
             all_labels = all_labels.detach().cpu().numpy()
             predictions = predictions.detach().cpu().numpy()
@@ -730,9 +891,11 @@ class HierGNN(torch.nn.Module):
                                                                                 y_true=all_labels,
                                                                                 metric=accuracy_score,
                                                                                 metric_name='accuracy',
-                                                                      num_targets=num_targets)
+                                                                      num_targets=num_targets,
+                                                                    thresholds=approx_thresholds)
 
-            print(">>> epoch: ", epoch, " validation acc: ", val_acc)
+            print(">>> epoch: ", epoch, f" validation acc: {val_acc:.4f}",
+                  f" validation roc: {val_roc:.4f}")
             # thresh_out = out >= optimal_threshold
             # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
             # val_total_correct += (val_ground_truth == thresh_out)  # int(out.eq(y).sum())
@@ -797,7 +960,9 @@ class HierGNN(torch.nn.Module):
 
         # labels = data.y.to(device)
 
-        inference_loader = self.get_graph_dataloader(data, shuffle=False, num_neighbors=[-1])
+        inference_loader = self.get_graph_dataloader(data,
+                                                     shuffle=False,
+                                                     num_neighbors=[-1])
         """NeighborLoader(
             data=data,  # copy.copy(data),#.edge_index,
             input_nodes=None,
@@ -839,7 +1004,8 @@ class HierGNN(torch.nn.Module):
                 y = data.y[n_id[:batch_size]].to(device)#.float()
                 # y = batch.y
 
-                out = self(x, adjs)
+                with autocast():
+                    out = self(x, adjs)[:batch_size]
 
 
                 # out = self(batch)
@@ -861,6 +1027,9 @@ class HierGNN(torch.nn.Module):
                 train_sample_size += batch_size#.cpu().float()
                 all_preds.extend(pred.cpu().numpy())#pred)#.cpu().numpy())
                 all_labels.extend(y.cpu().numpy())#F.one_hot(batch.y, num_classes=2))#.cpu().numpy()
+
+                del y, adjs, loss, out, x
+                torch.cuda.empty_cache()
 
 
         # data.node_preds = torch.tensor([node_pred_dict[i] for i in range(len(node_pred_dict))],
@@ -903,121 +1072,121 @@ class HierGNN(torch.nn.Module):
         for node, embedding in subgraph.items():
             global_id = supsubsub_mapping[node]
             new_node_features[supgraph_mapping[global_id]] = embedding#supsub_mapping[global_id]] = embedding
-        supergraph.x = new_node_features
+        supergraph.x = torch.tensor(new_node_features)
         return supergraph
 
-    def pyg_to_dionysus(self, data):
-        # Extract edge list and weights
-        data = data.clone()
-        edge_index = data.edge_index.t().cpu().numpy()
-        edge_weight = data.edge_weights.cpu().numpy()
-        filtration = dion.Filtration()
-        for i, (u, v) in enumerate(edge_index):
-            filtration.append(dion.Simplex([u, v], edge_weight[i]))
-        filtration.sort()
-        return filtration
-
-    def filtration_to_networkx(self,filtration, data, clone_data=False, node_mapping=True):
-        if clone_data:
-            data = data.clone()
-        node_mapping_true = node_mapping
-
-        edge_emb = data.edge_attr.cpu().numpy()
-        y = data.y.cpu().numpy()
-        G = nx.Graph()
-        for simplex in filtration:
-            u, v = simplex
-            G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
-            G.nodes[u]['y'] = y[u]  # , features=data.x[u])#.tolist() if data.x is not None else {})
-            G.nodes[v]['y'] = y[v]
-            G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
-            G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
-
-        # if node_mapping_true:
-        node_mapping = {node: i for i, node in enumerate(G.nodes())}
-        return G, node_mapping
-    def create_filtered_graphs(self,filtration, thresholds, data, clone_data=False, nid_mapping=None):
-        if clone_data:
-            data = data.clone()
-
-        edge_emb = data.edge_attr.cpu().numpy()
-        y = data.y.cpu().numpy()
-
-
-        node_mappings = []
-        graphs = []
-
-        for threshold in thresholds:
-            G = nx.Graph()
-
-            for simplex in filtration:
-                if simplex.data >= threshold:
-                    u, v = simplex
-                    G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
-                    G.nodes[u]['y'] = y[u]#, features=data.x[u])#.tolist() if data.x is not None else {})
-                    G.nodes[v]['y'] = y[v]
-                    G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
-                    G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
-            graphs.append(G)
-
-            # if nid_mapping is None:
-            node_mapping = {node: i for i, node in enumerate(G.nodes())}
-            # else:
-            #     node_mapping = {node: nid_mapping[node] for i, node in enumerate(G.nodes())}
-            node_mappings.append(node_mapping)
-        return graphs, node_mappings
-
-    def pyg_to_networkx(self,data, clone_data=False):
-        if clone_data:
-            data = data.clone()
-        # Initialize a directed or undirected graph based on your need
-        G = nx.DiGraph() if data.is_directed() else nx.Graph()
-
-        # Add nodes along with node features if available
-        for i in range(data.num_nodes):
-            node_features = data.x[i].tolist() if data.x is not None else {}
-            G.add_node(i, features=node_features)
-
-        # Add edges along with edge attributes if available
-        edge_index = data.edge_index.t().cpu().numpy()
-        if data.edge_attr is not None:
-            edge_attributes = data.edge_attr.cpu().numpy()
-            for idx, (source, target) in enumerate(edge_index):
-                G.add_edge(source, target, weight=edge_attributes[idx])
-        else:
-            for source, target in edge_index:
-                G.add_edge(source, target)
-
-        return G
-    def nx_to_pyg(self, graph, node_mapping = True, graph_level = None):
-
-        target_type = torch.long if self.num_classes > 1 else torch.float
-        # Mapping nodes to contiguous integers
-        node_mapping = {node: i for i, node in enumerate(graph.nodes())}
-
-        int_mapping = {v:u for u,v in node_mapping.items()}
-        # Convert edges to tensor format
-        edge_list = [(node_mapping[u], node_mapping[v]) for u, v in graph.edges()]
-        edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
-
-        # edge_index = torch.tensor(list(graph.edges), dtype=torch.long).t().contiguous()
-        edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.edges], dtype=torch.float)
-        #edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.nodes(data=True)], dtype=torch.float)
-
-        num_nodes = graph.number_of_nodes()
-        node_features = torch.tensor([attr['features'] for node, attr in graph.nodes(data=True)], dtype=torch.float)
-        y = torch.tensor([attr['y'] for node, attr in graph.nodes(data=True)], dtype=target_type)
-        # node_embeddings = torch.tensor([graph.nodes[i]['embeddings'] for i in range(num_nodes)], dtype=torch.float)
-
-        #x = torch.tensor([graph[u]['features'] for u in graph.nodes], dtype=torch.float)
-        #y = torch.tensor([graph[u]['y'] for u in graph.nodes], dtype=torch.float)
-        # edge_emb = torch.tensor([graph[u]['embedding'] for u in graph.nodes], dtype=torch.float)
-
-        data = Data(x=node_features,
-                    edge_index=edge_index,
-                    y=y,
-                    edge_attr=edge_attr,
-                    # edge_embedding=edge_emb,
-                    num_nodes=graph.number_of_nodes())
-        return data
-
+    # def pyg_to_dionysus(self, data):
+    #     # Extract edge list and weights
+    #     data = data.clone()
+    #     edge_index = data.edge_index.t().cpu().numpy()
+    #     edge_weight = data.edge_weights.cpu().numpy()
+    #     filtration = dion.Filtration()
+    #     for i, (u, v) in enumerate(edge_index):
+    #         filtration.append(dion.Simplex([u, v], edge_weight[i]))
+    #     filtration.sort()
+    #     return filtration
+    #
+    # def filtration_to_networkx(self,filtration, data, clone_data=False, node_mapping=True):
+    #     if clone_data:
+    #         data = data.clone()
+    #     node_mapping_true = node_mapping
+    #
+    #     edge_emb = data.edge_attr.cpu().numpy()
+    #     y = data.y.cpu().numpy()
+    #     G = nx.Graph()
+    #     for simplex in filtration:
+    #         u, v = simplex
+    #         G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
+    #         G.nodes[u]['y'] = y[u]  # , features=data.x[u])#.tolist() if data.x is not None else {})
+    #         G.nodes[v]['y'] = y[v]
+    #         G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
+    #         G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
+    #
+    #     # if node_mapping_true:
+    #     node_mapping = {node: i for i, node in enumerate(G.nodes())}
+    #     return G, node_mapping
+    # def create_filtered_graphs(self,filtration, thresholds, data, clone_data=False, nid_mapping=None):
+    #     if clone_data:
+    #         data = data.clone()
+    #
+    #     edge_emb = data.edge_attr.cpu().numpy()
+    #     y = data.y.cpu().numpy()
+    #
+    #
+    #     node_mappings = []
+    #     graphs = []
+    #
+    #     for threshold in thresholds:
+    #         G = nx.Graph()
+    #
+    #         for simplex in filtration:
+    #             if simplex.data >= threshold:
+    #                 u, v = simplex
+    #                 G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
+    #                 G.nodes[u]['y'] = y[u]#, features=data.x[u])#.tolist() if data.x is not None else {})
+    #                 G.nodes[v]['y'] = y[v]
+    #                 G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
+    #                 G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
+    #         graphs.append(G)
+    #
+    #         # if nid_mapping is None:
+    #         node_mapping = {node: i for i, node in enumerate(G.nodes())}
+    #         # else:
+    #         #     node_mapping = {node: nid_mapping[node] for i, node in enumerate(G.nodes())}
+    #         node_mappings.append(node_mapping)
+    #     return graphs, node_mappings
+    #
+    # def pyg_to_networkx(self,data, clone_data=False):
+    #     if clone_data:
+    #         data = data.clone()
+    #     # Initialize a directed or undirected graph based on your need
+    #     G = nx.Graph()#nx.DiGraph() if data.is_directed() else nx.Graph()
+    #
+    #     # Add nodes along with node features if available
+    #     for i in range(data.num_nodes):
+    #         node_features = data.x[i].tolist() if data.x is not None else {}
+    #         G.add_node(i, features=node_features)
+    #
+    #     # Add edges along with edge attributes if available
+    #     edge_index = data.edge_index.t().cpu().numpy()
+    #     if data.edge_attr is not None:
+    #         edge_attributes = data.edge_attr.cpu().numpy()
+    #         for idx, (source, target) in enumerate(edge_index):
+    #             G.add_edge(source, target, weight=edge_attributes[idx])
+    #     else:
+    #         for source, target in edge_index:
+    #             G.add_edge(source, target)
+    #
+    #     return G
+    # def nx_to_pyg(self, graph, node_mapping = True, graph_level = None):
+    #
+    #     target_type = torch.long if self.num_classes > 1 else torch.float
+    #     # Mapping nodes to contiguous integers
+    #     node_mapping = {node: i for i, node in enumerate(graph.nodes())}
+    #
+    #     int_mapping = {v:u for u,v in node_mapping.items()}
+    #     # Convert edges to tensor format
+    #     edge_list = [(node_mapping[u], node_mapping[v]) for u, v in graph.edges()]
+    #     edge_index = torch.tensor(edge_list, dtype=torch.long).t().contiguous()
+    #
+    #     # edge_index = torch.tensor(list(graph.edges), dtype=torch.long).t().contiguous()
+    #     edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.edges], dtype=torch.float)
+    #     #edge_attr = torch.tensor([graph[u][v]['weight'] for u, v in graph.nodes(data=True)], dtype=torch.float)
+    #
+    #     num_nodes = graph.number_of_nodes()
+    #     node_features = torch.tensor([attr['features'] for node, attr in graph.nodes(data=True)], dtype=torch.float)
+    #     y = torch.tensor([attr['y'] for node, attr in graph.nodes(data=True)], dtype=target_type)
+    #     # node_embeddings = torch.tensor([graph.nodes[i]['embeddings'] for i in range(num_nodes)], dtype=torch.float)
+    #
+    #     #x = torch.tensor([graph[u]['features'] for u in graph.nodes], dtype=torch.float)
+    #     #y = torch.tensor([graph[u]['y'] for u in graph.nodes], dtype=torch.float)
+    #     # edge_emb = torch.tensor([graph[u]['embedding'] for u in graph.nodes], dtype=torch.float)
+    #
+    #     data = Data(x=node_features,
+    #                 edge_index=edge_index,
+    #                 y=y,
+    #                 edge_attr=edge_attr,
+    #                 # edge_embedding=edge_emb,
+    #                 num_nodes=graph.number_of_nodes())
+    #     return data
+    #

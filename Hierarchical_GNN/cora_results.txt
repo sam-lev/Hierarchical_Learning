@@ -1,0 +1,1152 @@
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0906, Approx Train Acc: 0.9540
+Best train: 89.96%, Best valid (all): 91.80% Best test: 90.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9091.5805 0.0000 
+final mean and std of test acc:  9091.5805 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.0001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9540
+Best train: 90.14%, Best valid (all): 91.62% Best test: 90.66% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9065.7312 0.0000 
+final mean and std of test acc:  9065.7312 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0902, Approx Train Acc: 0.9625
+Best train: 90.44%, Best valid (all): 92.17% Best test: 91.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9146.9719 0.0000 
+final mean and std of test acc:  9146.9719 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0904, Approx Train Acc: 0.9634
+Best train: 91.40%, Best valid (all): 93.06% Best test: 92.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9213.4417 0.0000 
+final mean and std of test acc:  9213.4417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0889, Val Loss: 0.0909, Approx Train Acc: 0.9446
+Best train: 88.77%, Best valid (all): 89.77% Best test: 89.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8958.6411 0.0000 
+final mean and std of test acc:  8958.6411 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0906, Approx Train Acc: 0.9540
+Best train: 89.29%, Best valid (all): 91.65% Best test: 90.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9073.1167 0.0000 
+final mean and std of test acc:  9073.1167 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0903, Approx Train Acc: 0.9497
+Best train: 90.03%, Best valid (all): 91.43% Best test: 90.84% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9084.1950 0.0000 
+final mean and std of test acc:  9084.1950 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.0001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9493
+Best train: 88.11%, Best valid (all): 90.32% Best test: 89.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8988.1832 0.0000 
+final mean and std of test acc:  8988.1832 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0907, Approx Train Acc: 0.9455
+Best train: 89.29%, Best valid (all): 90.95% Best test: 89.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8991.8759 0.0000 
+final mean and std of test acc:  8991.8759 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0907, Approx Train Acc: 0.9532
+Best train: 90.14%, Best valid (all): 91.95% Best test: 91.06% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9106.3516 0.0000 
+final mean and std of test acc:  9106.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0904, Approx Train Acc: 0.9561
+Best train: 89.59%, Best valid (all): 91.06% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0911, Approx Train Acc: 0.9472
+Best train: 89.55%, Best valid (all): 91.69% Best test: 90.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9058.3456 0.0000 
+final mean and std of test acc:  9058.3456 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0904, Approx Train Acc: 0.9523
+Best train: 90.25%, Best valid (all): 92.17% Best test: 91.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9154.3575 0.0000 
+final mean and std of test acc:  9154.3575 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0904, Approx Train Acc: 0.9664
+Best train: 90.99%, Best valid (all): 92.69% Best test: 92.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9209.7489 0.0000 
+final mean and std of test acc:  9209.7489 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0904, Approx Train Acc: 0.9591
+Best train: 90.32%, Best valid (all): 92.69% Best test: 91.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9161.7430 0.0000 
+final mean and std of test acc:  9161.7430 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0902, Approx Train Acc: 0.9519
+Best train: 90.29%, Best valid (all): 91.91% Best test: 91.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9154.3575 0.0000 
+final mean and std of test acc:  9154.3575 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.0001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0903, Approx Train Acc: 0.9527
+Best train: 89.03%, Best valid (all): 90.95% Best test: 90.25% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9025.1108 0.0000 
+final mean and std of test acc:  9025.1108 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0901, Approx Train Acc: 0.9659
+Best train: 90.36%, Best valid (all): 91.58% Best test: 91.03% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9102.6588 0.0000 
+final mean and std of test acc:  9102.6588 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0909, Approx Train Acc: 0.9523
+Best train: 89.14%, Best valid (all): 90.73% Best test: 90.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9010.3397 0.0000 
+final mean and std of test acc:  9010.3397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0901, Approx Train Acc: 0.9638
+Best train: 90.66%, Best valid (all): 92.47% Best test: 91.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9194.9778 0.0000 
+final mean and std of test acc:  9194.9778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0906, Approx Train Acc: 0.9587
+Best train: 90.21%, Best valid (all): 92.25% Best test: 91.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9121.1226 0.0000 
+final mean and std of test acc:  9121.1226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0905, Approx Train Acc: 0.9655
+Best train: 91.03%, Best valid (all): 93.02% Best test: 92.02% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9202.3634 0.0000 
+final mean and std of test acc:  9202.3634 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.0001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0904, Approx Train Acc: 0.9472
+Best train: 89.66%, Best valid (all): 91.21% Best test: 90.51% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9050.9601 0.0000 
+final mean and std of test acc:  9050.9601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9485
+Best train: 89.77%, Best valid (all): 90.95% Best test: 90.77% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9076.8095 0.0000 
+final mean and std of test acc:  9076.8095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0903, Approx Train Acc: 0.9502
+Best train: 90.36%, Best valid (all): 92.43% Best test: 91.51% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9150.6647 0.0000 
+final mean and std of test acc:  9150.6647 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0903, Approx Train Acc: 0.9698
+Best train: 91.40%, Best valid (all): 93.50% Best test: 92.61% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9261.4476 0.0000 
+final mean and std of test acc:  9261.4476 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0907, Approx Train Acc: 0.9570
+Best train: 87.92%, Best valid (all): 89.14% Best test: 88.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8847.8582 0.0000 
+final mean and std of test acc:  8847.8582 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0906, Approx Train Acc: 0.9604
+Best train: 90.40%, Best valid (all): 92.54% Best test: 91.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9158.0502 0.0000 
+final mean and std of test acc:  9158.0502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0904, Approx Train Acc: 0.9591
+Best train: 89.92%, Best valid (all): 91.17% Best test: 90.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9047.2674 0.0000 
+final mean and std of test acc:  9047.2674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.0001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0890, Val Loss: 0.0908, Approx Train Acc: 0.9421
+Best train: 88.88%, Best valid (all): 91.21% Best test: 90.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9010.3397 0.0000 
+final mean and std of test acc:  9010.3397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0903, Approx Train Acc: 0.9647
+Best train: 91.06%, Best valid (all): 92.87% Best test: 91.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9187.5923 0.0000 
+final mean and std of test acc:  9187.5923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0904, Approx Train Acc: 0.9604
+Best train: 85.67%, Best valid (all): 86.67% Best test: 86.30% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8629.9852 0.0000 
+final mean and std of test acc:  8629.9852 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0908, Approx Train Acc: 0.9497
+Best train: 89.33%, Best valid (all): 91.17% Best test: 89.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8995.5687 0.0000 
+final mean and std of test acc:  8995.5687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0907, Approx Train Acc: 0.9591
+Best train: 91.03%, Best valid (all): 93.09% Best test: 91.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9198.6706 0.0000 
+final mean and std of test acc:  9198.6706 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0904, Approx Train Acc: 0.9510
+Best train: 89.96%, Best valid (all): 92.13% Best test: 91.06% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9106.3516 0.0000 
+final mean and std of test acc:  9106.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0908, Approx Train Acc: 0.9514
+Best train: 88.37%, Best valid (all): 89.18% Best test: 88.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8888.4786 0.0000 
+final mean and std of test acc:  8888.4786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0901, Approx Train Acc: 0.9719
+Best train: 91.21%, Best valid (all): 93.02% Best test: 91.80% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9180.2068 0.0000 
+final mean and std of test acc:  9180.2068 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0906, Approx Train Acc: 0.9604
+Best train: 90.73%, Best valid (all): 92.25% Best test: 91.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9161.7430 0.0000 
+final mean and std of test acc:  9161.7430 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0902, Approx Train Acc: 0.9629
+Best train: 91.51%, Best valid (all): 93.28% Best test: 92.43% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9242.9838 0.0000 
+final mean and std of test acc:  9242.9838 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0907, Approx Train Acc: 0.9519
+Best train: 89.99%, Best valid (all): 91.95% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0908, Approx Train Acc: 0.9480
+Best train: 90.03%, Best valid (all): 91.51% Best test: 90.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9069.4239 0.0000 
+final mean and std of test acc:  9069.4239 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0907, Approx Train Acc: 0.9574
+Best train: 89.96%, Best valid (all): 92.06% Best test: 91.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9128.5081 0.0000 
+final mean and std of test acc:  9128.5081 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0908, Approx Train Acc: 0.9591
+Best train: 90.51%, Best valid (all): 91.99% Best test: 91.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9121.1226 0.0000 
+final mean and std of test acc:  9121.1226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0909, Approx Train Acc: 0.9459
+Best train: 89.33%, Best valid (all): 90.99% Best test: 90.36% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9036.1891 0.0000 
+final mean and std of test acc:  9036.1891 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0907, Approx Train Acc: 0.9591
+Best train: 91.03%, Best valid (all): 92.95% Best test: 92.17% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9217.1344 0.0000 
+final mean and std of test acc:  9217.1344 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.0001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0902, Approx Train Acc: 0.9527
+Best train: 89.33%, Best valid (all): 90.92% Best test: 90.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9043.5746 0.0000 
+final mean and std of test acc:  9043.5746 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0905, Approx Train Acc: 0.9544
+Best train: 89.51%, Best valid (all): 91.65% Best test: 91.03% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9102.6588 0.0000 
+final mean and std of test acc:  9102.6588 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0905, Approx Train Acc: 0.9578
+Best train: 91.29%, Best valid (all): 93.02% Best test: 92.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9213.4417 0.0000 
+final mean and std of test acc:  9213.4417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0904, Approx Train Acc: 0.9676
+Best train: 91.36%, Best valid (all): 92.98% Best test: 92.39% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9239.2910 0.0000 
+final mean and std of test acc:  9239.2910 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0905, Approx Train Acc: 0.9544
+Best train: 89.59%, Best valid (all): 91.73% Best test: 90.66% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9065.7312 0.0000 
+final mean and std of test acc:  9065.7312 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0905, Approx Train Acc: 0.9659
+Best train: 91.03%, Best valid (all): 92.91% Best test: 92.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9209.7489 0.0000 
+final mean and std of test acc:  9209.7489 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0904, Approx Train Acc: 0.9544
+Best train: 89.55%, Best valid (all): 91.54% Best test: 90.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9058.3456 0.0000 
+final mean and std of test acc:  9058.3456 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9523
+Best train: 90.21%, Best valid (all): 92.06% Best test: 91.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9110.0443 0.0000 
+final mean and std of test acc:  9110.0443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.0001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9480
+Best train: 89.77%, Best valid (all): 91.95% Best test: 90.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9091.5805 0.0000 
+final mean and std of test acc:  9091.5805 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0910, Approx Train Acc: 0.9544
+Best train: 89.96%, Best valid (all): 91.88% Best test: 91.17% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9117.4298 0.0000 
+final mean and std of test acc:  9117.4298 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0899, Approx Train Acc: 0.9655
+Best train: 91.40%, Best valid (all): 93.09% Best test: 92.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9246.6765 0.0000 
+final mean and std of test acc:  9246.6765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.0001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9523
+Best train: 89.55%, Best valid (all): 90.92% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0903, Approx Train Acc: 0.9544
+Best train: 89.62%, Best valid (all): 91.77% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.0001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0904, Approx Train Acc: 0.9497
+Best train: 88.96%, Best valid (all): 90.36% Best test: 89.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8958.6411 0.0000 
+final mean and std of test acc:  8958.6411 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0875, Val Loss: 0.0900, Approx Train Acc: 0.9749
+Best train: 92.28%, Best valid (all): 93.72% Best test: 93.17% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9316.8390 0.0000 
+final mean and std of test acc:  9316.8390 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0909, Approx Train Acc: 0.9519
+Best train: 89.92%, Best valid (all): 91.54% Best test: 90.81% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9080.5022 0.0000 
+final mean and std of test acc:  9080.5022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0911, Approx Train Acc: 0.9612
+Best train: 91.10%, Best valid (all): 92.47% Best test: 91.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9158.0502 0.0000 
+final mean and std of test acc:  9158.0502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0909, Approx Train Acc: 0.9578
+Best train: 90.03%, Best valid (all): 92.02% Best test: 91.03% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9102.6588 0.0000 
+final mean and std of test acc:  9102.6588 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9527
+Best train: 89.84%, Best valid (all): 91.65% Best test: 90.77% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9076.8095 0.0000 
+final mean and std of test acc:  9076.8095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0906, Approx Train Acc: 0.9527
+Best train: 88.85%, Best valid (all): 90.69% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0901, Approx Train Acc: 0.9702
+Best train: 91.88%, Best valid (all): 93.50% Best test: 92.76% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9276.2186 0.0000 
+final mean and std of test acc:  9276.2186 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0904, Approx Train Acc: 0.9578
+Best train: 90.69%, Best valid (all): 91.84% Best test: 90.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9091.5805 0.0000 
+final mean and std of test acc:  9091.5805 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0905, Approx Train Acc: 0.9566
+Best train: 89.07%, Best valid (all): 91.06% Best test: 89.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8995.5687 0.0000 
+final mean and std of test acc:  8995.5687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0903, Approx Train Acc: 0.9497
+Best train: 89.22%, Best valid (all): 90.88% Best test: 90.55% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9054.6529 0.0000 
+final mean and std of test acc:  9054.6529 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0904, Approx Train Acc: 0.9519
+Best train: 90.55%, Best valid (all): 91.69% Best test: 91.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9121.1226 0.0000 
+final mean and std of test acc:  9121.1226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0904, Approx Train Acc: 0.9617
+Best train: 91.17%, Best valid (all): 93.24% Best test: 92.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9257.7548 0.0000 
+final mean and std of test acc:  9257.7548 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0903, Approx Train Acc: 0.9702
+Best train: 90.62%, Best valid (all): 92.58% Best test: 91.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9194.9778 0.0000 
+final mean and std of test acc:  9194.9778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0906, Approx Train Acc: 0.9497
+Best train: 89.07%, Best valid (all): 91.06% Best test: 90.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9043.5746 0.0000 
+final mean and std of test acc:  9043.5746 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0908, Approx Train Acc: 0.9455
+Best train: 90.21%, Best valid (all): 91.32% Best test: 90.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9087.8877 0.0000 
+final mean and std of test acc:  9087.8877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0906, Approx Train Acc: 0.9583
+Best train: 90.10%, Best valid (all): 90.81% Best test: 90.40% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9039.8818 0.0000 
+final mean and std of test acc:  9039.8818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0907, Approx Train Acc: 0.9527
+Best train: 90.73%, Best valid (all): 92.91% Best test: 91.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9187.5923 0.0000 
+final mean and std of test acc:  9187.5923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9489
+Best train: 89.33%, Best valid (all): 91.14% Best test: 90.66% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9065.7312 0.0000 
+final mean and std of test acc:  9065.7312 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0904, Approx Train Acc: 0.9583
+Best train: 89.18%, Best valid (all): 91.58% Best test: 90.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9069.4239 0.0000 
+final mean and std of test acc:  9069.4239 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0902, Approx Train Acc: 0.9634
+Best train: 91.54%, Best valid (all): 93.06% Best test: 92.50% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9250.3693 0.0000 
+final mean and std of test acc:  9250.3693 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0907, Approx Train Acc: 0.9523
+Best train: 89.25%, Best valid (all): 90.66% Best test: 90.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9021.4180 0.0000 
+final mean and std of test acc:  9021.4180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.0001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0904, Approx Train Acc: 0.9459
+Best train: 89.81%, Best valid (all): 91.29% Best test: 91.03% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9102.6588 0.0000 
+final mean and std of test acc:  9102.6588 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0903, Approx Train Acc: 0.9557
+Best train: 90.25%, Best valid (all): 91.58% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9480
+Best train: 88.96%, Best valid (all): 90.55% Best test: 90.18% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9017.7253 0.0000 
+final mean and std of test acc:  9017.7253 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0904, Approx Train Acc: 0.9642
+Best train: 91.47%, Best valid (all): 93.21% Best test: 92.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9246.6765 0.0000 
+final mean and std of test acc:  9246.6765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.0001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0889, Val Loss: 0.0909, Approx Train Acc: 0.9429
+Best train: 89.84%, Best valid (all): 92.02% Best test: 91.14% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9113.7371 0.0000 
+final mean and std of test acc:  9113.7371 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0904, Approx Train Acc: 0.9676
+Best train: 90.92%, Best valid (all): 92.69% Best test: 91.91% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9191.2851 0.0000 
+final mean and std of test acc:  9191.2851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0890, Val Loss: 0.0907, Approx Train Acc: 0.9425
+Best train: 89.29%, Best valid (all): 91.25% Best test: 90.40% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9039.8818 0.0000 
+final mean and std of test acc:  9039.8818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0906, Approx Train Acc: 0.9612
+Best train: 90.69%, Best valid (all): 92.73% Best test: 91.80% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9180.2068 0.0000 
+final mean and std of test acc:  9180.2068 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0906, Approx Train Acc: 0.9634
+Best train: 91.69%, Best valid (all): 93.02% Best test: 92.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9268.8331 0.0000 
+final mean and std of test acc:  9268.8331 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0905, Approx Train Acc: 0.9578
+Best train: 89.88%, Best valid (all): 91.77% Best test: 90.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9087.8877 0.0000 
+final mean and std of test acc:  9087.8877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0902, Approx Train Acc: 0.9693
+Best train: 91.10%, Best valid (all): 92.54% Best test: 91.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9194.9778 0.0000 
+final mean and std of test acc:  9194.9778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0912, Approx Train Acc: 0.9549
+Best train: 87.92%, Best valid (all): 89.84% Best test: 89.14% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8914.3279 0.0000 
+final mean and std of test acc:  8914.3279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0908, Approx Train Acc: 0.9553
+Best train: 88.88%, Best valid (all): 90.99% Best test: 90.36% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9036.1891 0.0000 
+final mean and std of test acc:  9036.1891 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0908, Approx Train Acc: 0.9502
+Best train: 89.22%, Best valid (all): 91.95% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0901, Approx Train Acc: 0.9698
+Best train: 91.06%, Best valid (all): 92.76% Best test: 91.58% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9158.0502 0.0000 
+final mean and std of test acc:  9158.0502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0909, Approx Train Acc: 0.9523
+Best train: 89.59%, Best valid (all): 91.65% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0908, Approx Train Acc: 0.9472
+Best train: 89.59%, Best valid (all): 90.95% Best test: 90.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9021.4180 0.0000 
+final mean and std of test acc:  9021.4180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0908, Approx Train Acc: 0.9476
+Best train: 89.92%, Best valid (all): 91.65% Best test: 90.81% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9080.5022 0.0000 
+final mean and std of test acc:  9080.5022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0908, Approx Train Acc: 0.9506
+Best train: 89.51%, Best valid (all): 91.25% Best test: 90.40% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9039.8818 0.0000 
+final mean and std of test acc:  9039.8818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0902, Approx Train Acc: 0.9544
+Best train: 90.10%, Best valid (all): 91.99% Best test: 91.14% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9113.7371 0.0000 
+final mean and std of test acc:  9113.7371 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0903, Approx Train Acc: 0.9642
+Best train: 90.81%, Best valid (all): 92.69% Best test: 91.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9161.7430 0.0000 
+final mean and std of test acc:  9161.7430 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0904, Approx Train Acc: 0.9642
+Best train: 89.73%, Best valid (all): 91.51% Best test: 90.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9095.2733 0.0000 
+final mean and std of test acc:  9095.2733 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0901, Approx Train Acc: 0.9706
+Best train: 91.88%, Best valid (all): 94.09% Best test: 92.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9254.0620 0.0000 
+final mean and std of test acc:  9254.0620 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0905, Approx Train Acc: 0.9570
+Best train: 90.73%, Best valid (all): 92.25% Best test: 91.14% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9113.7371 0.0000 
+final mean and std of test acc:  9113.7371 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0907, Approx Train Acc: 0.9595
+Best train: 90.07%, Best valid (all): 91.99% Best test: 91.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9121.1226 0.0000 
+final mean and std of test acc:  9121.1226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0880, Val Loss: 0.0905, Approx Train Acc: 0.9647
+Best train: 91.47%, Best valid (all): 92.84% Best test: 92.06% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9206.0561 0.0000 
+final mean and std of test acc:  9206.0561 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0906, Approx Train Acc: 0.9621
+Best train: 91.17%, Best valid (all): 93.50% Best test: 92.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9213.4417 0.0000 
+final mean and std of test acc:  9213.4417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0906, Approx Train Acc: 0.9540
+Best train: 89.73%, Best valid (all): 91.88% Best test: 90.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9087.8877 0.0000 
+final mean and std of test acc:  9087.8877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0902, Approx Train Acc: 0.9689
+Best train: 91.36%, Best valid (all): 92.54% Best test: 92.32% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9231.9055 0.0000 
+final mean and std of test acc:  9231.9055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0909, Approx Train Acc: 0.9612
+Best train: 90.32%, Best valid (all): 92.65% Best test: 91.43% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9143.2792 0.0000 
+final mean and std of test acc:  9143.2792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.0001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0906, Approx Train Acc: 0.9463
+Best train: 89.29%, Best valid (all): 90.66% Best test: 90.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9028.8035 0.0000 
+final mean and std of test acc:  9028.8035 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0908, Approx Train Acc: 0.9502
+Best train: 89.36%, Best valid (all): 90.69% Best test: 89.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8995.5687 0.0000 
+final mean and std of test acc:  8995.5687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0906, Approx Train Acc: 0.9617
+Best train: 89.51%, Best valid (all): 91.65% Best test: 90.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9047.2674 0.0000 
+final mean and std of test acc:  9047.2674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0906, Approx Train Acc: 0.9527
+Best train: 89.25%, Best valid (all): 91.62% Best test: 90.32% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9032.4963 0.0000 
+final mean and std of test acc:  9032.4963 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0909, Approx Train Acc: 0.9485
+Best train: 89.25%, Best valid (all): 90.88% Best test: 90.07% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9006.6470 0.0000 
+final mean and std of test acc:  9006.6470 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9527
+Best train: 89.88%, Best valid (all): 92.06% Best test: 91.32% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9132.2009 0.0000 
+final mean and std of test acc:  9132.2009 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0904, Approx Train Acc: 0.9510
+Best train: 89.59%, Best valid (all): 91.25% Best test: 90.81% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9080.5022 0.0000 
+final mean and std of test acc:  9080.5022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0904, Approx Train Acc: 0.9570
+Best train: 90.32%, Best valid (all): 91.80% Best test: 91.43% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9143.2792 0.0000 
+final mean and std of test acc:  9143.2792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0903, Approx Train Acc: 0.9685
+Best train: 91.36%, Best valid (all): 93.13% Best test: 92.47% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9246.6765 0.0000 
+final mean and std of test acc:  9246.6765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0907, Approx Train Acc: 0.9514
+Best train: 90.10%, Best valid (all): 91.99% Best test: 91.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9154.3575 0.0000 
+final mean and std of test acc:  9154.3575 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0904, Approx Train Acc: 0.9514
+Best train: 89.14%, Best valid (all): 91.03% Best test: 90.51% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9050.9601 0.0000 
+final mean and std of test acc:  9050.9601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0905, Approx Train Acc: 0.9715
+Best train: 91.29%, Best valid (all): 92.91% Best test: 92.06% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9206.0561 0.0000 
+final mean and std of test acc:  9206.0561 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0894, Val Loss: 0.0910, Approx Train Acc: 0.9340
+Best train: 89.11%, Best valid (all): 91.21% Best test: 90.55% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9054.6529 0.0000 
+final mean and std of test acc:  9054.6529 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0881, Val Loss: 0.0904, Approx Train Acc: 0.9617
+Best train: 89.33%, Best valid (all): 90.77% Best test: 90.07% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9006.6470 0.0000 
+final mean and std of test acc:  9006.6470 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0902, Approx Train Acc: 0.9685
+Best train: 91.21%, Best valid (all): 93.21% Best test: 92.17% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9217.1344 0.0000 
+final mean and std of test acc:  9217.1344 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.0001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0890, Val Loss: 0.0906, Approx Train Acc: 0.9438
+Best train: 88.52%, Best valid (all): 90.29% Best test: 89.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8921.7134 0.0000 
+final mean and std of test acc:  8921.7134 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.0001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0905, Approx Train Acc: 0.9510
+Best train: 89.29%, Best valid (all): 91.17% Best test: 90.10% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9010.3397 0.0000 
+final mean and std of test acc:  9010.3397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.0001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0909, Approx Train Acc: 0.9451
+Best train: 89.55%, Best valid (all): 91.36% Best test: 90.40% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9039.8818 0.0000 
+final mean and std of test acc:  9039.8818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0882, Val Loss: 0.0907, Approx Train Acc: 0.9595
+Best train: 89.77%, Best valid (all): 92.10% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0903, Approx Train Acc: 0.9523
+Best train: 89.55%, Best valid (all): 91.62% Best test: 90.62% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9062.0384 0.0000 
+final mean and std of test acc:  9062.0384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0905, Approx Train Acc: 0.9527
+Best train: 89.66%, Best valid (all): 91.65% Best test: 90.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9087.8877 0.0000 
+final mean and std of test acc:  9087.8877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0903, Approx Train Acc: 0.9570
+Best train: 89.88%, Best valid (all): 91.99% Best test: 90.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9087.8877 0.0000 
+final mean and std of test acc:  9087.8877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0885, Val Loss: 0.0908, Approx Train Acc: 0.9519
+Best train: 89.92%, Best valid (all): 91.43% Best test: 90.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9073.1167 0.0000 
+final mean and std of test acc:  9073.1167 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0888, Val Loss: 0.0905, Approx Train Acc: 0.9463
+Best train: 90.07%, Best valid (all): 91.47% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0906, Approx Train Acc: 0.9493
+Best train: 89.99%, Best valid (all): 91.73% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0883, Val Loss: 0.0906, Approx Train Acc: 0.9587
+Best train: 91.17%, Best valid (all): 92.80% Best test: 92.36% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9235.5982 0.0000 
+final mean and std of test acc:  9235.5982 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0879, Val Loss: 0.0904, Approx Train Acc: 0.9672
+Best train: 91.03%, Best valid (all): 92.84% Best test: 92.02% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9202.3634 0.0000 
+final mean and std of test acc:  9202.3634 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0877, Val Loss: 0.0903, Approx Train Acc: 0.9710
+Best train: 91.32%, Best valid (all): 93.17% Best test: 92.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9254.0620 0.0000 
+final mean and std of test acc:  9254.0620 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0884, Val Loss: 0.0904, Approx Train Acc: 0.9553
+Best train: 90.10%, Best valid (all): 91.80% Best test: 90.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9091.5805 0.0000 
+final mean and std of test acc:  9091.5805 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0887, Val Loss: 0.0907, Approx Train Acc: 0.9476
+Best train: 90.25%, Best valid (all): 91.99% Best test: 91.21% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9121.1226 0.0000 
+final mean and std of test acc:  9121.1226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0878, Val Loss: 0.0901, Approx Train Acc: 0.9689
+Best train: 91.14%, Best valid (all): 92.98% Best test: 92.17% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9217.1344 0.0000 
+final mean and std of test acc:  9217.1344 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0905, Approx Train Acc: 0.9502
+Best train: 90.44%, Best valid (all): 91.58% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.0001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0891, Val Loss: 0.0909, Approx Train Acc: 0.9387
+Best train: 89.18%, Best valid (all): 90.84% Best test: 90.25% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9025.1108 0.0000 
+final mean and std of test acc:  9025.1108 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_stwo_Planetoid_Cora_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0886, Val Loss: 0.0905, Approx Train Acc: 0.9506
+Best train: 89.59%, Best valid (all): 91.14% Best test: 90.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 9098.9660 0.0000 
+final mean and std of test acc:  9098.9660 $\pm$ 0.0000
+
+----------------------------------------
+

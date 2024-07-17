@@ -1,0 +1,1736 @@
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0770, Val Loss: 0.0869, Approx Train Acc: 0.8624
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0791, Val Loss: 0.0855, Approx Train Acc: 0.8073
+Best train: 63.19%, Best valid (all): 63.39% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0726, Val Loss: 0.0794, Approx Train Acc: 0.9633
+Best train: 63.74%, Best valid (all): 61.75% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0720, Val Loss: 0.0809, Approx Train Acc: 0.9725
+Best train: 67.03%, Best valid (all): 68.85% Best test: 65.38% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6538.4615 0.0000 
+final mean and std of test acc:  6538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0770, Val Loss: 0.0862, Approx Train Acc: 0.8624
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0732, Val Loss: 0.0813, Approx Train Acc: 0.9450
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0785, Val Loss: 0.0887, Approx Train Acc: 0.8165
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0796, Val Loss: 0.0893, Approx Train Acc: 0.7982
+Best train: 62.64%, Best valid (all): 63.39% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0738, Val Loss: 0.0830, Approx Train Acc: 0.9266
+Best train: 58.24%, Best valid (all): 62.84% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0726, Val Loss: 0.0794, Approx Train Acc: 0.9541
+Best train: 61.54%, Best valid (all): 61.20% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0751, Val Loss: 0.0840, Approx Train Acc: 0.8991
+Best train: 57.69%, Best valid (all): 62.30% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0723, Val Loss: 0.0791, Approx Train Acc: 0.9633
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0827, Approx Train Acc: 0.9174
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-4_PERS0.8.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0763, Val Loss: 0.0834, Approx Train Acc: 0.8716
+Best train: 70.33%, Best valid (all): 72.68% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0734, Val Loss: 0.0830, Approx Train Acc: 0.9358
+Best train: 60.99%, Best valid (all): 59.02% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0757, Val Loss: 0.0847, Approx Train Acc: 0.8899
+Best train: 57.69%, Best valid (all): 58.47% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0789, Approx Train Acc: 0.9541
+Best train: 78.02%, Best valid (all): 73.77% Best test: 75.27% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7527.4725 0.0000 
+final mean and std of test acc:  7527.4725 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0832, Val Loss: 0.0871, Approx Train Acc: 0.7248
+Best train: 59.89%, Best valid (all): 61.75% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0777, Val Loss: 0.0871, Approx Train Acc: 0.8349
+Best train: 60.99%, Best valid (all): 61.20% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0825, Approx Train Acc: 0.9174
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0824, Approx Train Acc: 0.9174
+Best train: 64.84%, Best valid (all): 65.57% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0833, Val Loss: 0.0920, Approx Train Acc: 0.7248
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0730, Val Loss: 0.0803, Approx Train Acc: 0.9450
+Best train: 61.54%, Best valid (all): 63.39% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0783, Val Loss: 0.0836, Approx Train Acc: 0.8257
+Best train: 57.69%, Best valid (all): 63.39% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0744, Val Loss: 0.0841, Approx Train Acc: 0.9174
+Best train: 62.64%, Best valid (all): 63.39% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0728, Val Loss: 0.0829, Approx Train Acc: 0.9541
+Best train: 64.84%, Best valid (all): 68.85% Best test: 63.74% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6373.6264 0.0000 
+final mean and std of test acc:  6373.6264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0750, Val Loss: 0.0858, Approx Train Acc: 0.8991
+Best train: 62.64%, Best valid (all): 66.67% Best test: 62.64% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6263.7363 0.0000 
+final mean and std of test acc:  6263.7363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0759, Val Loss: 0.0831, Approx Train Acc: 0.8807
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0739, Val Loss: 0.0828, Approx Train Acc: 0.9266
+Best train: 64.29%, Best valid (all): 62.84% Best test: 63.74% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6373.6264 0.0000 
+final mean and std of test acc:  6373.6264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0729, Val Loss: 0.0792, Approx Train Acc: 0.9450
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0862, Val Loss: 0.0932, Approx Train Acc: 0.6514
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0712, Val Loss: 0.0779, Approx Train Acc: 0.9908
+Best train: 80.22%, Best valid (all): 79.78% Best test: 76.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7692.3077 0.0000 
+final mean and std of test acc:  7692.3077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0819, Val Loss: 0.0872, Approx Train Acc: 0.7615
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0814, Approx Train Acc: 0.8899
+Best train: 63.74%, Best valid (all): 65.03% Best test: 63.74% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6373.6264 0.0000 
+final mean and std of test acc:  6373.6264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0832, Val Loss: 0.0909, Approx Train Acc: 0.7248
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0827, Val Loss: 0.0863, Approx Train Acc: 0.7248
+Best train: 61.54%, Best valid (all): 61.75% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0731, Val Loss: 0.0811, Approx Train Acc: 0.9450
+Best train: 63.19%, Best valid (all): 65.57% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0877, Approx Train Acc: 0.8899
+Best train: 57.69%, Best valid (all): 58.47% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0728, Val Loss: 0.0799, Approx Train Acc: 0.9541
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0877, Approx Train Acc: 0.9174
+Best train: 62.64%, Best valid (all): 61.20% Best test: 62.09% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6208.7912 0.0000 
+final mean and std of test acc:  6208.7912 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0765, Val Loss: 0.0828, Approx Train Acc: 0.8716
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0826, Approx Train Acc: 0.8899
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0769, Val Loss: 0.0882, Approx Train Acc: 0.8624
+Best train: 70.88%, Best valid (all): 72.13% Best test: 73.08% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7307.6923 0.0000 
+final mean and std of test acc:  7307.6923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0724, Val Loss: 0.0801, Approx Train Acc: 0.9633
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0832, Approx Train Acc: 0.8991
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0746, Val Loss: 0.0842, Approx Train Acc: 0.9083
+Best train: 57.69%, Best valid (all): 62.30% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0775, Val Loss: 0.0878, Approx Train Acc: 0.8440
+Best train: 54.40%, Best valid (all): 60.11% Best test: 50.55% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5054.9451 0.0000 
+final mean and std of test acc:  5054.9451 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0763, Val Loss: 0.0885, Approx Train Acc: 0.8807
+Best train: 57.69%, Best valid (all): 61.20% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0723, Val Loss: 0.0797, Approx Train Acc: 0.9633
+Best train: 67.03%, Best valid (all): 68.85% Best test: 65.38% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6538.4615 0.0000 
+final mean and std of test acc:  6538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0767, Val Loss: 0.0877, Approx Train Acc: 0.8716
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0773, Val Loss: 0.0862, Approx Train Acc: 0.8532
+Best train: 60.99%, Best valid (all): 60.66% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0788, Val Loss: 0.0885, Approx Train Acc: 0.8165
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0811, Val Loss: 0.0881, Approx Train Acc: 0.7706
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0734, Val Loss: 0.0839, Approx Train Acc: 0.9358
+Best train: 73.08%, Best valid (all): 72.68% Best test: 74.18% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7417.5824 0.0000 
+final mean and std of test acc:  7417.5824 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0845, Approx Train Acc: 0.9083
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD0_PERS0.8.log
+>>> epoch:  38  val acc: 0.8766  val roc: 0.5420
+Seed: 00, Epoch: 38, Loss: 0.6931, Val Loss: 0.3466, Approx Train Acc: 0.8492
+>>> epoch:  39  val acc: 0.8766  val roc: 0.5436
+Seed: 00, Epoch: 39, Loss: 0.6932, Val Loss: 0.3466, Approx Train Acc: 0.8361
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0753, Val Loss: 0.0879, Approx Train Acc: 0.8991
+Best train: 59.89%, Best valid (all): 60.11% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0817, Val Loss: 0.0905, Approx Train Acc: 0.7431
+Best train: 57.14%, Best valid (all): 56.28% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0803, Val Loss: 0.0886, Approx Train Acc: 0.7982
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0744, Val Loss: 0.0844, Approx Train Acc: 0.9174
+Best train: 58.24%, Best valid (all): 53.01% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0802, Val Loss: 0.0871, Approx Train Acc: 0.7890
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0758, Val Loss: 0.0829, Approx Train Acc: 0.8899
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0772, Val Loss: 0.0818, Approx Train Acc: 0.8624
+Best train: 66.48%, Best valid (all): 64.48% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0768, Val Loss: 0.0879, Approx Train Acc: 0.8716
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0821, Val Loss: 0.0962, Approx Train Acc: 0.7431
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0748, Val Loss: 0.0829, Approx Train Acc: 0.9083
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0793, Val Loss: 0.0853, Approx Train Acc: 0.8165
+Best train: 57.14%, Best valid (all): 56.28% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0720, Val Loss: 0.0827, Approx Train Acc: 0.9725
+Best train: 66.48%, Best valid (all): 68.31% Best test: 64.84% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6483.5165 0.0000 
+final mean and std of test acc:  6483.5165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0726, Val Loss: 0.0786, Approx Train Acc: 0.9541
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0812, Approx Train Acc: 0.9174
+Best train: 55.49%, Best valid (all): 62.30% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0717, Val Loss: 0.0803, Approx Train Acc: 0.9725
+Best train: 80.22%, Best valid (all): 79.78% Best test: 76.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7692.3077 0.0000 
+final mean and std of test acc:  7692.3077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0736, Val Loss: 0.0843, Approx Train Acc: 0.9358
+Best train: 60.99%, Best valid (all): 60.66% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0774, Val Loss: 0.0847, Approx Train Acc: 0.8532
+Best train: 78.57%, Best valid (all): 72.68% Best test: 75.82% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7582.4176 0.0000 
+final mean and std of test acc:  7582.4176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0804, Val Loss: 0.0894, Approx Train Acc: 0.7982
+Best train: 58.24%, Best valid (all): 56.28% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0782, Val Loss: 0.0844, Approx Train Acc: 0.8257
+Best train: 61.54%, Best valid (all): 64.48% Best test: 60.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6043.9560 0.0000 
+final mean and std of test acc:  6043.9560 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0828, Val Loss: 0.0924, Approx Train Acc: 0.7431
+Best train: 58.24%, Best valid (all): 55.74% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0759, Val Loss: 0.0840, Approx Train Acc: 0.8807
+Best train: 62.64%, Best valid (all): 61.20% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0818, Val Loss: 0.0986, Approx Train Acc: 0.7523
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0730, Val Loss: 0.0827, Approx Train Acc: 0.9450
+Best train: 58.24%, Best valid (all): 59.56% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0730, Val Loss: 0.0823, Approx Train Acc: 0.9450
+Best train: 66.48%, Best valid (all): 68.85% Best test: 66.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6648.3516 0.0000 
+final mean and std of test acc:  6648.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0763, Val Loss: 0.0825, Approx Train Acc: 0.8807
+Best train: 64.84%, Best valid (all): 65.03% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0844, Approx Train Acc: 0.9174
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0721, Val Loss: 0.0786, Approx Train Acc: 0.9633
+Best train: 67.03%, Best valid (all): 68.85% Best test: 65.38% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6538.4615 0.0000 
+final mean and std of test acc:  6538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0716, Val Loss: 0.0781, Approx Train Acc: 0.9817
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0843, Approx Train Acc: 0.9174
+Best train: 62.64%, Best valid (all): 67.21% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0777, Val Loss: 0.0833, Approx Train Acc: 0.8440
+Best train: 70.33%, Best valid (all): 72.68% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0774, Val Loss: 0.0907, Approx Train Acc: 0.8532
+Best train: 55.49%, Best valid (all): 61.20% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0769, Val Loss: 0.0837, Approx Train Acc: 0.8716
+Best train: 70.33%, Best valid (all): 72.13% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0832, Approx Train Acc: 0.9083
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0780, Val Loss: 0.0881, Approx Train Acc: 0.8532
+Best train: 62.64%, Best valid (all): 63.39% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0806, Val Loss: 0.0970, Approx Train Acc: 0.7798
+Best train: 58.24%, Best valid (all): 55.74% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0792, Val Loss: 0.0909, Approx Train Acc: 0.8073
+Best train: 58.79%, Best valid (all): 56.28% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0718, Val Loss: 0.0805, Approx Train Acc: 0.9817
+Best train: 70.33%, Best valid (all): 71.58% Best test: 68.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6813.1868 0.0000 
+final mean and std of test acc:  6813.1868 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0735, Val Loss: 0.0811, Approx Train Acc: 0.9358
+Best train: 63.74%, Best valid (all): 66.12% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0753, Val Loss: 0.0842, Approx Train Acc: 0.8991
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0772, Val Loss: 0.0886, Approx Train Acc: 0.8532
+Best train: 57.69%, Best valid (all): 58.47% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0801, Val Loss: 0.0892, Approx Train Acc: 0.7982
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0838, Approx Train Acc: 0.9174
+Best train: 63.74%, Best valid (all): 67.21% Best test: 63.74% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6373.6264 0.0000 
+final mean and std of test acc:  6373.6264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0739, Val Loss: 0.0829, Approx Train Acc: 0.9266
+Best train: 57.14%, Best valid (all): 57.92% Best test: 58.24% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5824.1758 0.0000 
+final mean and std of test acc:  5824.1758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0818, Val Loss: 0.0878, Approx Train Acc: 0.7431
+Best train: 57.14%, Best valid (all): 56.28% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0767, Val Loss: 0.0841, Approx Train Acc: 0.8716
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0781, Val Loss: 0.0874, Approx Train Acc: 0.8349
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0760, Val Loss: 0.0865, Approx Train Acc: 0.8807
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0739, Val Loss: 0.0833, Approx Train Acc: 0.9266
+Best train: 57.69%, Best valid (all): 32.24% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0795, Approx Train Acc: 0.9541
+Best train: 76.37%, Best valid (all): 74.86% Best test: 76.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7692.3077 0.0000 
+final mean and std of test acc:  7692.3077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0826, Approx Train Acc: 0.9541
+Best train: 61.54%, Best valid (all): 61.20% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0782, Val Loss: 0.0859, Approx Train Acc: 0.8257
+Best train: 61.54%, Best valid (all): 65.57% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0731, Val Loss: 0.0801, Approx Train Acc: 0.9450
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0797, Approx Train Acc: 0.9266
+Best train: 70.88%, Best valid (all): 70.49% Best test: 66.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6648.3516 0.0000 
+final mean and std of test acc:  6648.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0749, Val Loss: 0.0844, Approx Train Acc: 0.9083
+Best train: 66.48%, Best valid (all): 64.48% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0826, Approx Train Acc: 0.9174
+Best train: 57.14%, Best valid (all): 62.30% Best test: 57.14% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5714.2857 0.0000 
+final mean and std of test acc:  5714.2857 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0805, Val Loss: 0.0911, Approx Train Acc: 0.7798
+Best train: 58.79%, Best valid (all): 55.74% Best test: 58.24% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5824.1758 0.0000 
+final mean and std of test acc:  5824.1758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0766, Val Loss: 0.0823, Approx Train Acc: 0.8716
+Best train: 70.88%, Best valid (all): 72.13% Best test: 73.08% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7307.6923 0.0000 
+final mean and std of test acc:  7307.6923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0794, Val Loss: 0.0909, Approx Train Acc: 0.7982
+Best train: 58.24%, Best valid (all): 55.74% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0799, Approx Train Acc: 0.9541
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0757, Val Loss: 0.0823, Approx Train Acc: 0.8899
+Best train: 64.84%, Best valid (all): 65.03% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0751, Val Loss: 0.0847, Approx Train Acc: 0.8991
+Best train: 62.09%, Best valid (all): 65.03% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0740, Val Loss: 0.0839, Approx Train Acc: 0.9266
+Best train: 66.48%, Best valid (all): 64.48% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0840, Approx Train Acc: 0.8899
+Best train: 57.14%, Best valid (all): 60.11% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0723, Val Loss: 0.0787, Approx Train Acc: 0.9633
+Best train: 59.89%, Best valid (all): 59.02% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0783, Val Loss: 0.0860, Approx Train Acc: 0.8257
+Best train: 61.54%, Best valid (all): 65.03% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0724, Val Loss: 0.0804, Approx Train Acc: 0.9633
+Best train: 66.48%, Best valid (all): 68.31% Best test: 64.84% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6483.5165 0.0000 
+final mean and std of test acc:  6483.5165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0761, Val Loss: 0.0851, Approx Train Acc: 0.8807
+Best train: 58.79%, Best valid (all): 52.46% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0754, Val Loss: 0.0804, Approx Train Acc: 0.8899
+Best train: 64.84%, Best valid (all): 65.57% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0803, Approx Train Acc: 0.9541
+Best train: 80.22%, Best valid (all): 79.78% Best test: 76.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7692.3077 0.0000 
+final mean and std of test acc:  7692.3077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0769, Val Loss: 0.0850, Approx Train Acc: 0.8624
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0771, Val Loss: 0.0864, Approx Train Acc: 0.8532
+Best train: 55.49%, Best valid (all): 57.92% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0789, Val Loss: 0.0860, Approx Train Acc: 0.8165
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0836, Approx Train Acc: 0.9174
+Best train: 58.79%, Best valid (all): 62.84% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0836, Approx Train Acc: 0.9083
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0819, Val Loss: 0.0862, Approx Train Acc: 0.7431
+Best train: 57.14%, Best valid (all): 56.28% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0793, Val Loss: 0.0885, Approx Train Acc: 0.8165
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0771, Val Loss: 0.0820, Approx Train Acc: 0.8532
+Best train: 72.53%, Best valid (all): 71.58% Best test: 73.08% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7307.6923 0.0000 
+final mean and std of test acc:  7307.6923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0825, Val Loss: 0.0877, Approx Train Acc: 0.7339
+Best train: 54.95%, Best valid (all): 55.19% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0815, Val Loss: 0.0923, Approx Train Acc: 0.7431
+Best train: 58.79%, Best valid (all): 55.74% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0773, Val Loss: 0.0882, Approx Train Acc: 0.8532
+Best train: 54.40%, Best valid (all): 60.11% Best test: 50.55% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5054.9451 0.0000 
+final mean and std of test acc:  5054.9451 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0821, Val Loss: 0.0966, Approx Train Acc: 0.7431
+Best train: 54.95%, Best valid (all): 55.19% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0775, Val Loss: 0.0842, Approx Train Acc: 0.8440
+Best train: 70.88%, Best valid (all): 72.13% Best test: 73.08% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7307.6923 0.0000 
+final mean and std of test acc:  7307.6923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0744, Val Loss: 0.0858, Approx Train Acc: 0.9174
+Best train: 58.24%, Best valid (all): 52.46% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0809, Approx Train Acc: 0.9541
+Best train: 79.67%, Best valid (all): 74.32% Best test: 76.37% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7637.3626 0.0000 
+final mean and std of test acc:  7637.3626 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0756, Val Loss: 0.0832, Approx Train Acc: 0.8899
+Best train: 57.69%, Best valid (all): 32.24% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0726, Val Loss: 0.0796, Approx Train Acc: 0.9541
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0755, Val Loss: 0.0850, Approx Train Acc: 0.8899
+Best train: 56.04%, Best valid (all): 59.02% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0723, Val Loss: 0.0807, Approx Train Acc: 0.9633
+Best train: 70.33%, Best valid (all): 71.58% Best test: 68.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6813.1868 0.0000 
+final mean and std of test acc:  6813.1868 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0815, Val Loss: 0.0918, Approx Train Acc: 0.7615
+Best train: 58.79%, Best valid (all): 56.28% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0760, Val Loss: 0.0881, Approx Train Acc: 0.8807
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0757, Val Loss: 0.0826, Approx Train Acc: 0.8899
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-4_PERS0.8.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0835, Val Loss: 0.0907, Approx Train Acc: 0.7156
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0759, Val Loss: 0.0862, Approx Train Acc: 0.8899
+Best train: 63.19%, Best valid (all): 63.93% Best test: 62.09% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6208.7912 0.0000 
+final mean and std of test acc:  6208.7912 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0794, Val Loss: 0.0891, Approx Train Acc: 0.8165
+Best train: 58.79%, Best valid (all): 55.74% Best test: 58.24% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5824.1758 0.0000 
+final mean and std of test acc:  5824.1758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0748, Val Loss: 0.0844, Approx Train Acc: 0.9083
+Best train: 58.24%, Best valid (all): 53.01% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0826, Approx Train Acc: 0.9174
+Best train: 67.03%, Best valid (all): 68.85% Best test: 65.38% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6538.4615 0.0000 
+final mean and std of test acc:  6538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0727, Val Loss: 0.0787, Approx Train Acc: 0.9541
+Best train: 67.03%, Best valid (all): 68.85% Best test: 65.38% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6538.4615 0.0000 
+final mean and std of test acc:  6538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0746, Val Loss: 0.0918, Approx Train Acc: 0.9083
+Best train: 64.29%, Best valid (all): 61.75% Best test: 63.19% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0795, Val Loss: 0.0909, Approx Train Acc: 0.8073
+Best train: 57.14%, Best valid (all): 55.74% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0737, Val Loss: 0.0833, Approx Train Acc: 0.9358
+Best train: 58.24%, Best valid (all): 53.01% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0769, Val Loss: 0.0827, Approx Train Acc: 0.8624
+Best train: 70.33%, Best valid (all): 72.68% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0711, Val Loss: 0.0792, Approx Train Acc: 0.9908
+Best train: 70.33%, Best valid (all): 71.58% Best test: 68.13% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6813.1868 0.0000 
+final mean and std of test acc:  6813.1868 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0752, Val Loss: 0.0814, Approx Train Acc: 0.9083
+Best train: 66.48%, Best valid (all): 64.48% Best test: 60.99% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6098.9011 0.0000 
+final mean and std of test acc:  6098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0838, Val Loss: 0.0919, Approx Train Acc: 0.7064
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0768, Val Loss: 0.0828, Approx Train Acc: 0.8624
+Best train: 70.33%, Best valid (all): 72.68% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0763, Val Loss: 0.0819, Approx Train Acc: 0.8716
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0732, Val Loss: 0.0829, Approx Train Acc: 0.9450
+Best train: 58.24%, Best valid (all): 62.30% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0734, Val Loss: 0.0877, Approx Train Acc: 0.9358
+Best train: 60.99%, Best valid (all): 60.66% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0832, Val Loss: 0.0945, Approx Train Acc: 0.7339
+Best train: 55.49%, Best valid (all): 55.19% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0771, Val Loss: 0.0858, Approx Train Acc: 0.8624
+Best train: 55.49%, Best valid (all): 55.74% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0831, Val Loss: 0.0909, Approx Train Acc: 0.7248
+Best train: 58.24%, Best valid (all): 56.28% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0780, Val Loss: 0.0848, Approx Train Acc: 0.8257
+Best train: 59.89%, Best valid (all): 58.47% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0738, Val Loss: 0.0805, Approx Train Acc: 0.9358
+Best train: 71.98%, Best valid (all): 68.31% Best test: 71.98% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7197.8022 0.0000 
+final mean and std of test acc:  7197.8022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD0_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0775, Val Loss: 0.0881, Approx Train Acc: 0.8716
+Best train: 58.79%, Best valid (all): 56.28% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0746, Val Loss: 0.0829, Approx Train Acc: 0.9083
+Best train: 63.74%, Best valid (all): 66.12% Best test: 62.64% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6263.7363 0.0000 
+final mean and std of test acc:  6263.7363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0808, Val Loss: 0.0860, Approx Train Acc: 0.7798
+Best train: 75.82%, Best valid (all): 71.04% Best test: 73.63% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7362.6374 0.0000 
+final mean and std of test acc:  7362.6374 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0722, Val Loss: 0.0799, Approx Train Acc: 0.9633
+Best train: 78.02%, Best valid (all): 73.22% Best test: 74.73% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7472.5275 0.0000 
+final mean and std of test acc:  7472.5275 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0757, Val Loss: 0.0816, Approx Train Acc: 0.8899
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0759, Val Loss: 0.0815, Approx Train Acc: 0.8807
+Best train: 64.84%, Best valid (all): 65.03% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0738, Val Loss: 0.0800, Approx Train Acc: 0.9358
+Best train: 54.40%, Best valid (all): 38.25% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0783, Val Loss: 0.0838, Approx Train Acc: 0.8257
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0742, Val Loss: 0.0835, Approx Train Acc: 0.9174
+Best train: 57.14%, Best valid (all): 62.30% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0831, Approx Train Acc: 0.9174
+Best train: 58.24%, Best valid (all): 53.01% Best test: 56.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5604.3956 0.0000 
+final mean and std of test acc:  5604.3956 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0724, Val Loss: 0.0800, Approx Train Acc: 0.9633
+Best train: 65.93%, Best valid (all): 67.21% Best test: 64.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6428.5714 0.0000 
+final mean and std of test acc:  6428.5714 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0762, Val Loss: 0.0906, Approx Train Acc: 0.8807
+Best train: 57.69%, Best valid (all): 58.47% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0720, Val Loss: 0.0785, Approx Train Acc: 0.9725
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0748, Val Loss: 0.0849, Approx Train Acc: 0.9083
+Best train: 63.19%, Best valid (all): 65.57% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0720, Val Loss: 0.0783, Approx Train Acc: 0.9725
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0730, Val Loss: 0.0783, Approx Train Acc: 0.9541
+Best train: 70.88%, Best valid (all): 70.49% Best test: 66.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6648.3516 0.0000 
+final mean and std of test acc:  6648.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0801, Val Loss: 0.0880, Approx Train Acc: 0.7890
+Best train: 57.69%, Best valid (all): 57.92% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0740, Val Loss: 0.0860, Approx Train Acc: 0.9266
+Best train: 45.60%, Best valid (all): 54.64% Best test: 51.65% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5164.8352 0.0000 
+final mean and std of test acc:  5164.8352 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0828, Val Loss: 0.0863, Approx Train Acc: 0.7339
+Best train: 59.89%, Best valid (all): 61.75% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0726, Val Loss: 0.0789, Approx Train Acc: 0.9633
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0770, Val Loss: 0.0824, Approx Train Acc: 0.8624
+Best train: 68.68%, Best valid (all): 71.04% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0780, Val Loss: 0.0869, Approx Train Acc: 0.8349
+Best train: 55.49%, Best valid (all): 57.92% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0731, Val Loss: 0.0820, Approx Train Acc: 0.9450
+Best train: 58.79%, Best valid (all): 64.48% Best test: 58.24% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5824.1758 0.0000 
+final mean and std of test acc:  5824.1758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0720, Val Loss: 0.0782, Approx Train Acc: 0.9725
+Best train: 81.87%, Best valid (all): 76.50% Best test: 80.22% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8021.9780 0.0000 
+final mean and std of test acc:  8021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0744, Val Loss: 0.0838, Approx Train Acc: 0.9266
+Best train: 57.69%, Best valid (all): 32.24% Best test: 56.59% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0730, Val Loss: 0.0825, Approx Train Acc: 0.9450
+Best train: 58.24%, Best valid (all): 61.75% Best test: 54.95% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0766, Val Loss: 0.0889, Approx Train Acc: 0.8716
+Best train: 57.14%, Best valid (all): 61.20% Best test: 59.34% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5934.0659 0.0000 
+final mean and std of test acc:  5934.0659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0782, Val Loss: 0.0837, Approx Train Acc: 0.8257
+Best train: 78.57%, Best valid (all): 72.68% Best test: 75.82% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7582.4176 0.0000 
+final mean and std of test acc:  7582.4176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD0_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0791, Val Loss: 0.0862, Approx Train Acc: 0.8257
+Best train: 57.14%, Best valid (all): 56.28% Best test: 55.49% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5549.4505 0.0000 
+final mean and std of test acc:  5549.4505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0745, Val Loss: 0.0837, Approx Train Acc: 0.9174
+Best train: 70.88%, Best valid (all): 70.49% Best test: 66.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6648.3516 0.0000 
+final mean and std of test acc:  6648.3516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.003_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0764, Val Loss: 0.0832, Approx Train Acc: 0.8716
+Best train: 70.33%, Best valid (all): 72.13% Best test: 72.53% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0751, Val Loss: 0.0829, Approx Train Acc: 0.8991
+Best train: 61.54%, Best valid (all): 62.30% Best test: 61.54% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6153.8462 0.0000 
+final mean and std of test acc:  6153.8462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.01_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 00, Epoch: 79, Loss: 0.0789, Val Loss: 0.0886, Approx Train Acc: 0.8257
+Best train: 58.24%, Best valid (all): 56.28% Best test: 58.24% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5824.1758 0.0000 
+final mean and std of test acc:  5824.1758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sthree_WebKB_texas_LR0.03_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 00, Epoch: 79, Loss: 0.0747, Val Loss: 0.0879, Approx Train Acc: 0.9083
+Best train: 54.40%, Best valid (all): 60.11% Best test: 50.55% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5054.9451 0.0000 
+final mean and std of test acc:  5054.9451 $\pm$ 0.0000
+
+----------------------------------------
+

@@ -1,5 +1,5 @@
 import argparse
-from ..utils import pout
+# from ..utils import pout
 # from .utils import pout
 
 class BaseOptions:
@@ -9,6 +9,9 @@ class BaseOptions:
     # Define a custom argument type for a list of integers
     def list_of_floats(self, arg):
         return list(map(float, arg.split(',')))
+
+    def list_of_ints(self, arg):
+        return list(map(int, arg.split(',')))
 
     def initialize(self):
         parser = argparse.ArgumentParser(description="Constrained learing")
@@ -34,7 +37,8 @@ class BaseOptions:
                 "MixHopSyntheticDataset",
                 "HeterophilousGraphDataset",
                 "TopologicalPriorsDataset",
-                "WebKB"
+                "WebKB",
+                "WikipediaNetwork"
             ],
         )
         parser.add_argument(
@@ -46,10 +50,15 @@ class BaseOptions:
                 "minesweeper",
                 "tolokers",
                 "questions",
-                "amazon_rating",
-                "Cornell",
-                "Texas",
-                "Wisconsin"
+                "amazon_ratings",
+                "cornell",
+                "texas",
+                "wisconsin",
+                "Cora",
+                "CiteSeer",
+                "PubMed",
+                "chameleon",
+                "squirrel"
             ],
             default='minesweeper',
         )
@@ -152,6 +161,10 @@ class BaseOptions:
             help="batch size depending on methods, "
             "need to provide fair batch for different approaches",
         )
+        parser.add_argument(
+            "--num_neighbors", type=self.list_of_ints, default=[25, 25, 10, 5, 5, 5, 5, 5, 5, 5],
+            help="number of node neighbors to sample for each hop in order of list"
+        )
         # parameters for GraphSAINT
         parser.add_argument(
             "--walk_length", type=int, default=2, help="walk length of RW sampler"
@@ -229,9 +242,11 @@ class BaseOptions:
         parser.add_argument("--filter_rate", type=float, default=0.2)
         parser.add_argument("--homophily", type=float, default=0.2)
         args = parser.parse_args()
-        pout(("print2"))
-        pout((args))
-        pout(("end print 2"))
+        print("ARGS")
+        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
+        for arg in vars(args):
+            print(f"{arg}: {getattr(args, arg)}")
+        print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
         args = self.reset_dataset_dependent_parameters(args)
 
@@ -250,8 +265,16 @@ class BaseOptions:
             # args.batch_size = 10000
             # args.num_layers = 4
         elif args.dataset == "Planetoid":
-            args.num_classes = 7
-            args.num_feats = 1433
+            args.num_neighbors = [-1]
+            if args.data_subset == "Cora":
+                args.num_classes = 7
+                args.num_feats = 1433
+            if args.data_subset == "CiteSeer":
+                args.num_classes = 6
+                args.num_feats = 3703
+            if args.data_subset == "PubMed":
+                args.num_classes = 3
+                args.num_feats = 500
         elif args.dataset == "MixHopSyntheticDataset":
             # args.multi_label = False
             args.num_classes = 10
@@ -261,30 +284,40 @@ class BaseOptions:
                 args.num_classes = 18 #roman
                 args.num_feats = 300
                 args.multi_label = True
-            if args.data_subset == "amazon_rating":
+                args.num_neighbors = [-1]
+            if args.data_subset == "amazon_ratings":
                 args.num_classes = 5 # amazon_ratings
                 args.num_feats = 300
                 args.multi_label = True
+                args.num_neighbors = [-1]
             if args.data_subset == "tolokers":
                 args.num_classes = 2 #
                 args.num_feats = 10
                 args.multi_label = False
+                args.num_neighbors = [25,5]
             if args.data_subset == "minesweeper":
                 args.num_classes = 2 #
                 args.num_feats = 7
                 args.multi_label = False
+                args.num_neighbors = [-1]
             if args.data_subset == "questions":
                 args.num_classes = 2 #
                 args.num_feats = 301
+                args.num_neighbors = [-1]
                 args.multi_label = False
         elif args.dataset == "WebKB":
             args.multi_label = True
             args.num_classes = 5
             args.num_feats = 1703
+            args.num_neighbors = [-1]
+            # self.batch_size = 64
+        elif args.dataset == "WikipediaNetwork":
+            args.multi_label = True
+            args.num_classes = 128
+            args.num_neighbors = [25,5]
         elif args.dataset == "Reddit":
             args.num_classes = 41
             args.num_feats = 602
-
         elif args.dataset == "ogbn-products":
             args.multi_label = False
             args.num_classes = 47
