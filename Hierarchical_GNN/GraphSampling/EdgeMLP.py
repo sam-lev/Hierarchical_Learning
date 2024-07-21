@@ -254,20 +254,21 @@ class EdgeMLP(torch.nn.Module):
         if epoch == 0:
             max_degree, avg_degree, degrees = node_degree_statistics(train_data)
             pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
-            if avg_degree > 25:
-                self.num_neighbors = [25]
-                self.val_batch_size = self.batch_size
-            else:
-                self.num_neighbors = [-1]
-                self.val_batch_size = self.batch_size
-            pout(("NOW USING NEW VALIDATION BATCH SIZE AND NUMBER NEIGHBORS"))
-            pout(("NUMBER NEIGHBORS", self.num_neighbors))
-            pout(("VAL BATCH_SIZE", self.val_batch_size))
-            pout(("Number Nodes Training ", train_data.num_nodes))
+        #     if avg_degree > 25:
+        #         self.num_neighbors = [25]
+        #         self.val_batch_size = self.batch_size
+        #     else:
+        #         self.num_neighbors = [-1]
+        #         self.val_batch_size = self.batch_size
+        #     pout(("NOW USING NEW VALIDATION BATCH SIZE AND NUMBER NEIGHBORS"))
+        #     pout(("NUMBER NEIGHBORS", self.num_neighbors))
+        #     pout(("VAL BATCH_SIZE", self.val_batch_size))
+        #     pout(("Number Nodes Training ", train_data.num_nodes))
+
         if train_data.num_nodes < 1200:
             num_workers=1
         else:
-            num_workers=4
+            num_workers=8
 
         train_loader = NeighborLoader(  # Sampler(
             train_data,  # copy.copy(train_data),
@@ -275,12 +276,13 @@ class EdgeMLP(torch.nn.Module):
             # edge_index = train_data.edge_index,
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
-            num_neighbors=self.num_neighbors,#self.num_neighbors[: self.num_layers],
+            num_neighbors=[-1],#self.num_neighbors[: self.num_layers],
             batch_size=self.batch_size,
             shuffle=True,
             # drop_last=True,
-            num_workers=num_workers,
-            subgraph_type='induced'
+            num_workers=num_workers
+            # directed=False
+            # subgraph_type='induced'
         )
 
         self.train()
@@ -396,55 +398,88 @@ class EdgeMLP(torch.nn.Module):
 
         predictions = torch.tensor(predictions)
         all_labels = torch.tensor(all_labels)
-        with torch.no_grad():
-            self.eval()
-            val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
-        self.training = True
-        self.train()
-        # val_out, val_loss, val_labels = self.inference(val_input_dict)
-
         if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
             # total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()#.sum() #y[:,1]
             # total_acc = total_correct/np.sum(batch_sizes).item()
+
             approx_acc = (predictions == all_labels).float().mean().item()
-            val_acc = (val_pred == val_ground_truth).float().mean().item()
-            print(">>> epoch: ", epoch, " validation acc: ", val_acc)
+
+            del predictions, all_labels
         else:
-            # if False:  # because too slow
-            val_preds = val_pred.detach().cpu().numpy()
-            val_ground_truth = val_ground_truth.detach().cpu().numpy()
-            val_optimal_threshold, val_optimal_score = optimal_metric_threshold(y_probs=val_preds,
-                                                                                y_true=val_ground_truth,
-                                                                                metric=accuracy_score,
-                                                                                metric_name='accuracy',
-                                                                                thresholds=approx_thresholds)
-
-
-            val_thresh, val_roc = optimal_metric_threshold(val_pred,
-                                                             val_ground_truth,
-                                                             metric=metrics.roc_auc_score,
-                                                             metric_name='ROC AUC',
-                                                           thresholds=approx_thresholds)
-
-
-
+            predictions = (predictions > 0).float()
+            total_correct = (predictions == all_labels).float().sum()
+            approx_acc = total_correct/all_labels.numel()
+            # total_correct = float(predictions.eq(all_labels).sum()) #chanmged
             all_labels = all_labels.detach().cpu().numpy()
             predictions = predictions.detach().cpu().numpy()
-            train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
-                                                                                y_true=all_labels,
-                                                                                metric=accuracy_score,
-                                                                                metric_name='accuracy',
-                                                                    thresholds=approx_thresholds)
-            print(">>> epoch: ", epoch, f" val acc: {val_optimal_score:.4f}",
-                  f" val roc: {val_roc:.4f}")
-            # thresh_out = out >= optimal_threshold
-            # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
-            # val_total_correct += (val_ground_truth == thresh_out)  # int(out.eq(y).sum())
+            # approx_acc = total_correct/all_labels.shape[0] # changed
 
-        if scheduler is not None:
-            scheduler.step(val_loss)
 
-        total_val_loss += val_loss
+            # approx_acc = 0
+            # train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+            #                                                                     y_true=all_labels,
+            #                                                                     metric=accuracy_score,
+            #                                                                     metric_name='accuracy',
+            #                                                         thresholds=approx_thresholds)
+
+        if epoch % eval_steps == 0 and epoch != 0:
+            with torch.no_grad():
+                self.eval()
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+            self.training = True
+            self.train()
+            # val_out, val_loss, val_labels = self.inference(val_input_dict)
+
+            if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
+                # total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()#.sum() #y[:,1]
+                # total_acc = total_correct/np.sum(batch_sizes).item()
+                # approx_acc = (predictions == all_labels).float().mean().item()
+
+                val_acc = (val_pred == val_ground_truth).float().mean().item()
+                print(">>> epoch: ", epoch, " validation acc: ", val_acc)
+                del val_ground_truth, val_pred
+
+            else:
+                # if False:  # because too slow
+                val_preds = val_pred.detach().cpu().numpy()
+                val_ground_truth = val_ground_truth.detach().cpu().numpy()
+                val_optimal_threshold, val_optimal_score = optimal_metric_threshold(y_probs=val_preds,
+                                                                                    y_true=val_ground_truth,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                                    thresholds=approx_thresholds)
+
+
+                val_thresh, val_roc = optimal_metric_threshold(val_pred,
+                                                                 val_ground_truth,
+                                                                 metric=metrics.roc_auc_score,
+                                                                 metric_name='ROC AUC',
+                                                               thresholds=approx_thresholds)
+
+
+
+                # all_labels = all_labels.detach().cpu().numpy()
+                # predictions = predictions.detach().cpu().numpy()
+                train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+                                                                                    y_true=all_labels,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                        thresholds=approx_thresholds)
+                print("Epoch: ", epoch, f" Val ACC: {val_optimal_score:.4f}",
+                      f" Val ROC: {val_roc:.4f}")
+                # thresh_out = out >= optimal_threshold
+                # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
+                # val_total_correct += (val_ground_truth == thresh_out)  # int(out.eq(y).sum())
+
+                del predictions, all_labels
+
+            if scheduler is not None:
+                scheduler.step(val_loss)
+
+            total_val_loss += val_loss
+
+            del val_loss
+
         # train_data.edge_attr = torch.tensor([train_edge_embeddings[i] for i in range(len(train_edge_embeddings))],
         #                                dtype=torch.float)
         # train_data.edge_attr = torch.from_numpy(
@@ -465,7 +500,6 @@ class EdgeMLP(torch.nn.Module):
         '''val_acc = self.test()
         '''
         total_loss = total_loss/number_batches#train_sample_size#number_batches
-        total_val_loss = total_val_loss#/number_batches
 
         # pout(("Step:", self.steps))
 
@@ -478,8 +512,13 @@ class EdgeMLP(torch.nn.Module):
         # else:
         #     approx_acc = accuracy_score(all_labels.cpu().numpy(),
         #                                 predictions.cpu().numpy())
-        return total_loss , approx_acc, total_val_loss#float(train_sample_size), val_loss
+        # del val_loss
+        torch.cuda.empty_cache()
 
+        if epoch % eval_steps == 0 and epoch != 0:
+            return total_loss , approx_acc, total_val_loss#float(train_sample_size), val_loss
+        else:
+            return total_loss, approx_acc, 666
     def get_train_data(self):
         return self.train_data
     def aggregate_edge_attr(self, edge_attr, edge_index):
@@ -517,12 +556,12 @@ class EdgeMLP(torch.nn.Module):
         inference_loader = NeighborLoader(
             data=data,#copy.copy(data),#.edge_index,
             input_nodes=None,
-                                        subgraph_type='induced',
+                                        # subgraph_type='induced',
             # edge_index = train_data.edge_index,
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
             num_neighbors=[-1],
-            batch_size=self.val_batch_size, #data.edge_index.shape[1],
+            batch_size=self.batch_size, #data.edge_index.shape[1],
             shuffle=False,
             # drop_last=True,
             # num_workers=8
@@ -627,6 +666,9 @@ class EdgeMLP(torch.nn.Module):
         # ground_truths = [item for sublist in ground_truths for item in sublist]
         # preds = [item for sublist in preds for item in sublist]
         # avg_total_per_batch = np.sum(batch_sizes)/np.mean(batch_sizes)
+
+        torch.cuda.empty_cache()
+
         if assign_edge_weights:
             return torch.tensor(preds), total_loss/train_sample_size, torch.tensor(ground_truths), data.to("cpu")
         else:

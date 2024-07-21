@@ -12,7 +12,7 @@ import torch
 import dionysus as dion
 import networkx as nx
 from torch import Tensor
-from torch_geometric.nn import GINEConv, GATConv, GCNConv, NNConv, EdgeConv, SAGEConv
+from torch_geometric.nn import GINEConv, GATConv, GCNConv, NNConv, EdgeConv, SAGEConv, GINConv
 from torch_geometric.utils import homophily
 
 from torch.nn import Embedding
@@ -47,6 +47,26 @@ from .conv import SAgeConv
 from .experiments.metrics import optimal_metric_threshold
 
 
+def gin_mlp_factory(gin_mlp_type: str, dim_in: int, dim_out: int):
+    if gin_mlp_type == 'lin':
+        return nn.Linear(dim_in, dim_out)
+
+    elif gin_mlp_type == 'lin_lrelu_lin':
+        return nn.Sequential(
+            nn.Linear(dim_in, dim_in),
+            nn.LeakyReLU(),
+            nn.Linear(dim_in, dim_out)
+        )
+
+    elif gin_mlp_type == 'lin_bn_lrelu_lin':
+        return nn.Sequential(
+            nn.Linear(dim_in, dim_in),
+            nn.BatchNorm1d(dim_in),
+            nn.LeakyReLU(),
+            nn.Linear(dim_in, dim_out)
+        )
+    else:
+        raise ValueError("Unknown gin_mlp_type!")
 
 
 class FiltrationHierarchyGraphLoader():
@@ -68,7 +88,7 @@ class FiltrationHierarchyGraphLoader():
         self.num_classes = num_classes
         self.filtration = filtration
 
-        self.graphs, self.node_mappings = self.process_graph_filtrations(data=self.graph,
+        self.graphs, self.node_mappings, self.sub_to_sup_mappings = self.process_graph_filtrations(data=self.graph,
                                                                          thresholds=self.thresholds,
                                                                          )
 
@@ -321,7 +341,7 @@ class FiltrationHierarchyGraphLoader():
             thresholds.append(0.0)
         thresholds = np.flip(np.sort(thresholds))
         # Create filtered graphs
-        filtered_graphs, node_mappings = self.create_filtered_graphs(filtration=filtration,
+        filtered_graphs, nodeidx_mappings = self.create_filtered_graphs(filtration=filtration,
                                                                      thresholds=thresholds,
                                                                      data=data,
                                                                      clone_data=True)
@@ -330,14 +350,113 @@ class FiltrationHierarchyGraphLoader():
         # filtered_graphs.append(full_graph)
         # node_mappings.append(node_mapping)
 
-        for m in node_mappings:
+        for m in nodeidx_mappings:
             pout(("map length ", len(m)))
         # Convert back to PyG data objects
         pyg_graphs = [self.nx_to_pyg(graph) for i, graph in enumerate(filtered_graphs)]
-        return pyg_graphs, node_mappings
+        sub_to_sup_mappings = [{sub_id: global_id for global_id,sub_id\
+                                             in subidx_map.items()}\
+                                            for subidx_map in nodeidx_mappings]
+        return pyg_graphs, nodeidx_mappings, sub_to_sup_mappings
 
 
+class SubLevelGraphFiltration(torch.nn.Module):
+    def __init__(self,
+                 dataset,
+                 use_node_degree=None,
+                 set_node_degree_uninformative=None,
+                 use_node_label=None,
+                 gin_number=None,
+                 gin_dimension=None,
+                 gin_mlp_type=None,
+                 **kwargs
+                 ):
+        super().__init__()
 
+        dim = gin_dimension
+
+        max_node_deg = dataset.max_node_deg
+        num_node_lab = dataset.num_node_lab
+
+        # if set_node_degree_uninformative and use_node_degree:
+        #     self.embed_deg = UniformativeDummyEmbedding(gin_dimension)
+        if use_node_degree:
+            self.embed_deg = nn.Embedding(max_node_deg + 1, dim)
+        else:
+            self.embed_deg = None
+
+        self.embed_lab = nn.Embedding(num_node_lab, dim) if use_node_label else None
+
+        dim_input = dim * ((self.embed_deg is not None) + (self.embed_lab is not None))
+
+        dims = [dim_input] + (gin_number) * [dim]
+
+        self.convs = nn.ModuleList()
+        self.bns = nn.ModuleList()
+        self.act = torch.nn.functional.leaky_relu
+
+        for n_1, n_2 in zip(dims[:-1], dims[1:]):
+            l = gin_mlp_factory(gin_mlp_type, n_1, n_2)
+            self.convs.append(GINConv(l, train_eps=True))
+            self.bns.append(nn.BatchNorm1d(n_2))
+
+        self.fc = nn.Sequential(
+            nn.Linear(sum(dims), dim),
+            nn.BatchNorm1d(dim),
+            nn.LeakyReLU(),
+            nn.Linear(dim, 1),
+            nn.Sigmoid()
+        )
+
+    def forward(self, batch):
+
+        node_deg = batch.node_deg
+        node_lab = batch.node_lab
+
+        edge_index = batch.edge_index
+
+        tmp = [e(x) for e, x in
+               zip([self.embed_deg, self.embed_lab], [node_deg, node_lab])
+               if e is not None]
+
+        tmp = torch.cat(tmp, dim=1)
+
+        z = [tmp]
+
+        for conv, bn in zip(self.convs, self.bns):
+            x = conv(z[-1], edge_index)
+            x = bn(x)
+            x = self.act(x)
+            z.append(x)
+
+        x = torch.cat(z, dim=1)
+        ret = self.fc(x).squeeze()
+        return ret
+
+
+class FiltrationHierarchyGraphSampler:
+    def __init__(self, super_data, subset_samplers, subset_to_super_mapping, batch_size):
+        self.super_data = super_data
+        self.subset_samplers = subset_samplers
+        self.subset_to_super_mapping = subset_to_super_mapping
+        self.batch_size = batch_size
+
+    def sample(self):
+        # Sample nodes from the super-graph
+        node_indices = torch.randint(0, self.super_data.num_nodes, (self.batch_size,))
+
+        # Get valid nodes for each subset graph
+        valid_subset_nodes = []
+        for mapping in self.subset_to_super_mapping:
+            valid_nodes = [n for n in node_indices.tolist() if n in mapping.values()]
+            valid_subset_nodes.append(torch.tensor(valid_nodes))
+
+        # Get neighborhood information from each subset graph
+        subset_samples = []
+        for i, sampler in enumerate(self.subset_samplers):
+            subset_samples.append(sampler.sample(valid_subset_nodes[i]))
+
+        return node_indices, subset_samples
 
 class HierGNN(torch.nn.Module):
     #fp = open('./run_logs/memory_profiler.log', 'w+')
@@ -494,6 +613,7 @@ class HierGNN(torch.nn.Module):
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         graph = self.graphs[0]
+        self.established_graph_density = False
         self.graphlevelloader = self.get_graph_dataloader(graph,
                                                           shuffle=True,
                                                           num_neighbors=self.num_neighbors[:self.num_layers])
@@ -503,6 +623,8 @@ class HierGNN(torch.nn.Module):
                           range(len(self.graphs))[1:]]
 
         pout(("Graph Lifting Epochs: ", self.graph_lift_intervals))
+
+
 
 
         self.reset_parameters()
@@ -520,25 +642,11 @@ class HierGNN(torch.nn.Module):
         # if not as_logit:
         return torch.stack(labels, dim=1)
     def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
-        # pout(("graph data edge index",graph.edge_index))
-        # Compute the degree of each node
-        if num_neighbors==[-1]:
-            max_degree, avg_degree, degrees = node_degree_statistics(graph)
-            # pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
-            if avg_degree > 25:
-                self.val_batch_size = 8
-            else:
-                self.val_batch_size = self.batch_size
-            batch_size = self.val_batch_size
-            pout(("NOW USING NEW VALIDATION BATCH SIZE AND NUMBER NEIGHBORS"))
-            pout(("VAL BATCH_SIZE", self.val_batch_size))
-        else:
-            batch_size = self.batch_size
 
         if graph.num_nodes < 1200:
             num_workers = 1
         else:
-            num_workers = 4
+            num_workers = 8
 
         if shuffle:
             neighborloader = NeighborLoader(data=graph,
@@ -558,11 +666,12 @@ class HierGNN(torch.nn.Module):
                 # subgraph_type='induced',  # for undirected graph
                 # directed=False,#True,
                 shuffle=shuffle,
-                num_workers=num_workers
+                num_workers=num_workers,
+                # directed=False
             )
         else:
             neighborloader = NeighborLoader(data=graph,
-                                  batch_size=batch_size,
+                                  batch_size=self.batch_size,
                                   num_neighbors=num_neighbors,
                                             subgraph_type='induced', #for undirected graph
                                   # directed=False,#True,
@@ -575,11 +684,11 @@ class HierGNN(torch.nn.Module):
                 # node_idx=train_idx,
                 # directed=False,
                 sizes=self.num_neighbors[: self.num_layers],
-                batch_size=batch_size,
+                batch_size=self.batch_size,
                 # subgraph_type='induced',  # for undirected graph
                 # directed=False,#True,
                 shuffle=shuffle,
-                # num_workers=8,
+                num_workers=num_workers
             )
         return neighborsampler
 
@@ -743,15 +852,14 @@ class HierGNN(torch.nn.Module):
         if epoch == 0:
             max_degree, avg_degree, degrees = node_degree_statistics(data)
             pout((" MAX DEGREE ", max_degree," AVERAGE DEGREE ", avg_degree))
-            if avg_degree > 25:
-                num_neighbors = 25
-                self.val_batch_size = self.batch_size
-            else:
-                num_neighbors = -1
-                self.val_batch_size = self.batch_size
+            # if avg_degree > 25:
+            #     num_neighbors = 25
+            #     self.val_batch_size = self.batch_size
+            # else:
+            #     num_neighbors = -1
+            #     self.val_batch_size = self.batch_size
 
         approx_thresholds = np.arange(0.0, 1.0, 0.1)
-        precise_thresholds = np.arange(0.0, 1.0, 0.01)
 
         # length_training_batches = data.y.size()[0]
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
@@ -819,18 +927,11 @@ class HierGNN(torch.nn.Module):
 
             total_loss += loss.item()
 
-            if input_steps != -1:
-                self.steps += 1  # self.model.steps
-                counter = self.steps
-            else:
-                self.steps = -1
-                counter = epoch
-
 
 
             if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
                 #total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()
-                total_correct += int(out.argmax(axis=1).eq(y).sum())
+                total_correct += float(out.argmax(axis=1).eq(y).sum())
                 all_labels.extend(y)  # ground_truth)
                 predictions.extend(out.argmax(axis=1))
             else:
@@ -846,64 +947,89 @@ class HierGNN(torch.nn.Module):
 
         predictions = torch.tensor(predictions)
         all_labels = torch.tensor(all_labels)
+        # all_labels=torch.cat(all_labels,dim=0)
 
-
-        # if epoch % eval_steps == 0 and epoch != 0:
-        with torch.no_grad():
-            self.eval()
-            val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
-        self.training = True
-        self.train()
-        # val_out, val_loss, val_labels = self.inference(val_input_dict)
-        # if scheduler is not None:
-        #     scheduler.step(val_loss)
         num_classes = len(all_labels.unique())
         num_targets = 1 if num_classes == 2 else num_classes
         if num_targets != 1:
-            predictions = predictions
+            # approx_acc = total_correct/all_labels.numel()
             approx_acc = (predictions == all_labels).float().mean().item()
 
-            val_pred = val_pred
-            val_acc = (val_pred == val_ground_truth).float().mean().item()
-            # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
-            print(">>> epoch: ", epoch,  f" validation acc: {val_acc:.4f}")
+            del predictions, all_labels
+
         else:
-            # if False:  # because too slow
-            val_pred = val_pred.detach().cpu().numpy()
-            val_ground_truth = val_ground_truth.detach().cpu().numpy()
-            # val_acc = accuracy_score(val_ground_truth, val_pred)
-            val_optimal_threshold, val_acc = optimal_metric_threshold(y_probs=val_pred,
-                                                                                y_true=val_ground_truth,
-                                                                                metric=accuracy_score,
-                                                                                metric_name='accuracy',
-                                                                      num_targets=num_targets,
-                                                                      thresholds=approx_thresholds)
-
-            val_thresh, val_roc = optimal_metric_threshold(val_pred,
-                                                             val_ground_truth,
-                                                             metric=metrics.roc_auc_score,
-                                                             metric_name='ROC AUC',
-                                                           thresholds=approx_thresholds)
-
+            total_correct = int(predictions.eq(all_labels).sum())
             all_labels = all_labels.detach().cpu().numpy()
             predictions = predictions.detach().cpu().numpy()
-            train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
-                                                                                y_true=all_labels,
-                                                                                metric=accuracy_score,
-                                                                                metric_name='accuracy',
-                                                                      num_targets=num_targets,
-                                                                    thresholds=approx_thresholds)
+            approx_acc = total_correct/all_labels.shape[0]
+            # approx_acc = 0
+            # train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+            #                                                                     y_true=all_labels,
+            #                                                                     metric=accuracy_score,
+            #                                                                     metric_name='accuracy',
+            #                                                           num_targets=num_targets,
+            #                                                         thresholds=approx_thresholds)
 
-            print(">>> epoch: ", epoch, f" validation acc: {val_acc:.4f}",
-                  f" validation roc: {val_roc:.4f}")
-            # thresh_out = out >= optimal_threshold
-            # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
-            # val_total_correct += (val_ground_truth == thresh_out)  # int(out.eq(y).sum())
+        if epoch % eval_steps == 0 and epoch != 0:
+            with torch.no_grad():
+                self.eval()
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+            self.training = True
+            self.train()
+            # val_out, val_loss, val_labels = self.inference(val_input_dict)
+            # if scheduler is not None:
+            #     scheduler.step(val_loss)
+            # num_classes = len(all_labels.unique())
+            # num_targets = 1 if num_classes == 2 else num_classes
+            if num_targets != 1:
+                # predictions = predictions
+                # approx_acc = (predictions == all_labels).float().mean().item()
 
-        if scheduler is not None:
-            scheduler.step(val_loss)
+                val_pred = val_pred
+                val_acc = (val_pred == val_ground_truth).float().mean().item()
+                # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
+                print("Epoch: ", epoch,  f" Validation ACC: {val_acc:.4f}")
 
-        total_val_loss += val_loss  # .item(
+                del val_pred, val_ground_truth
+
+            else:
+                # if False:  # because too slow
+                val_pred = val_pred.detach().cpu().numpy()
+                val_ground_truth = val_ground_truth.detach().cpu().numpy()
+                # val_acc = accuracy_score(val_ground_truth, val_pred)
+                val_optimal_threshold, val_acc = optimal_metric_threshold(y_probs=val_pred,
+                                                                                    y_true=val_ground_truth,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                          num_targets=num_targets,
+                                                                          thresholds=approx_thresholds)
+
+                val_thresh, val_roc = optimal_metric_threshold(val_pred,
+                                                                 val_ground_truth,
+                                                                 metric=metrics.roc_auc_score,
+                                                                 metric_name='ROC AUC',
+                                                               thresholds=approx_thresholds)
+
+                # all_labels = all_labels.detach().cpu().numpy()
+                # predictions = predictions.detach().cpu().numpy()
+                train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+                                                                                    y_true=all_labels,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                          num_targets=num_targets,
+                                                                        thresholds=approx_thresholds)
+
+                print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}",
+                      f" Validation ROC: {val_roc:.4f}")
+
+            total_val_loss += val_loss
+
+            # if scheduler is not None:
+            #     scheduler.step(val_loss)
+
+            del val_loss
+
+        #  # .item(
 
 
             #del y, batch_size, n_id, loss, out, l2_loss, l2_factor, edge_embedding, batch
@@ -933,6 +1059,8 @@ class HierGNN(torch.nn.Module):
                 node_mappings=[self.node_mappings[self.graph_level-1],
                                self.node_mappings[self.graph_level]])
 
+
+
             self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level],
                                                               shuffle=True,
                                                               num_neighbors=self.num_neighbors[:self.num_layers]
@@ -943,8 +1071,14 @@ class HierGNN(torch.nn.Module):
 
 
         torch.cuda.empty_cache()
-        #len(self.graphlevelloader)
-        return total_loss/total_training_points , approx_acc, total_val_loss
+
+        if scheduler is not None:
+            scheduler.step(total_loss / total_training_points)
+
+        if epoch % eval_steps == 0 and epoch != 0:
+            return total_loss/total_training_points , approx_acc, total_val_loss
+        else:
+            return total_loss / total_training_points, approx_acc, 666
 
     @torch.no_grad()
     def node_inference(self, input_dict):
@@ -1062,15 +1196,15 @@ class HierGNN(torch.nn.Module):
               len(node_mappings)))
         subgraph_mapping = node_mappings[0]
         supgraph_mapping = node_mappings[1]
-        supsubsub_mapping = {global_id: sub_id for sub_id,global_id in subgraph_mapping.items()}
-        supsub_mapping = {global_id: sub_id for sub_id, global_id in supgraph_mapping.items()}
+        subsup_mapping = {sub_id: global_id for global_id,sub_id in subgraph_mapping.items()}
+        # supsub_mapping = {global_id: sub_id for sub_id, global_id in supgraph_mapping.items()}
 
 
         # for node, i in subgraph_mapping.items():
 
         new_node_features = supergraph.x.clone().detach().cpu().numpy()
         for node, embedding in subgraph.items():
-            global_id = supsubsub_mapping[node]
+            global_id = subsup_mapping[node]
             new_node_features[supgraph_mapping[global_id]] = embedding#supsub_mapping[global_id]] = embedding
         supergraph.x = torch.tensor(new_node_features)
         return supergraph
@@ -1190,3 +1324,174 @@ class HierGNN(torch.nn.Module):
     #                 num_nodes=graph.number_of_nodes())
     #     return data
     #
+
+
+class HierJGNN(torch.nn.Module):
+    def __init__(self,
+                 in_channels,
+                 out_channels,
+                 args,
+                 data,
+                 # split_masks,
+                 processed_dir,
+                 out_dim = 1,
+                 train_data=None,
+                 test_data = None,
+                 # in_channels,
+                 # hidden_channels,
+                 # out_channels
+                 ):
+        super(HierJGNN, self).__init__()
+        # base params
+        self.save_dir = processed_dir
+        self.type_model = args.type_model
+        self.num_layers = args.num_layers
+        self.dim_hidden = args.dim_hidden
+        self.num_classes = out_dim#args.num_classes
+        self.num_feats = data.x.shape[-1]#args.num_feats
+        self.batch_size = args.batch_size
+        self.steps=0
+        self.dropout = args.dropout
+        self.epochs = args.epochs
+        self.device = args.device
+        self.data = data
+        self.edge_index = data.edge_index
+        heterophily_num_class = 2
+        self.num_classes = out_dim#args.num_classes
+        self.out_dim = out_dim
+        self.cat = 1
+        self.c1 = 0
+        self.c2 = 0
+        self.inf_threshold = args.inf_threshold
+        self.threshold_pred = False
+        self.weight_decay = args.weight_decay
+        self.use_batch_norm = args.use_batch_norm
+        self.thresholds = args.persistence
+        #using base options expand samples to number of layers (hops)
+        num_neighbors = args.num_neighbors
+        if num_neighbors is None:
+            self.num_neighbors = [25, 25, 10, 5, 5, 5, 5, 5, 5, 5]
+        else:
+            if len(num_neighbors) < self.num_layers:
+                self.num_neighbors = num_neighbors
+                last_hop_nbrs = num_neighbors[-1]
+                add_hop_neighbors = [last_hop_nbrs] * (self.num_layers-(len(num_neighbors)-1))
+                self.num_neighbors.extend(add_hop_neighbors)
+            else:
+                self.num_neighbors = num_neighbors
+        #set degree information of data
+        max_degree, avg_degree, degrees = node_degree_statistics(train_data)
+        pout((" MAX DEGREE ", max_degree, " AVERAGE DEGREE ", avg_degree))
+        train_data.max_node_degree = max_degree
+
+
+
+        # compute persistence filtration for graph hierarchy
+        filtration_graph_hierarchy = FiltrationHierarchyGraphLoader(graph=train_data,
+                                                                 persistence=self.thresholds,
+                                                                 num_neighbors=self.num_neighbors,
+                                                                 num_classes=self.num_classes,
+                                                                 filtration=None,
+                                                                 batch_size=self.batch_size,
+                                                                 num_layers=self.num_layers)
+        self.graphs, self.sub_to_sup_mappings = (filtration_graph_hierarchy.graphs,
+                                           filtration_graph_hierarchy.sub_to_sup_mappings)
+        pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
+        self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
+        # get neighborhood loaders for each sublevel graph
+        self.sublevel_graph_loaders = [self.get_graph_dataloader(graph,
+                                                          shuffle=True,
+                                                          num_neighbors=self.num_neighbors[:self.num_layers])\
+                                       for graph in self.graphs]
+        self.super_graph = self.graphs[-1]
+        #hierarchical graph neighborhood sampler
+        super_graph_sampler = FiltrationHierarchyGraphSampler(self.super_graph,
+                                                              self.sublevel_graph_loaders,
+                                                              self.sub_to_sup_mappings,
+                                                              self.batch_size)
+        # per sublevel graph node embeding neighborhood GNN
+        self.fil = SubLevelGraphFiltration(
+            train_data,
+            use_node_degree=None,
+            use_node_label=None,
+            gin_number=1,
+            gin_dimension=64,
+            gin_mlp_type ='lin_bn_lrelu_lin',
+        )
+        # per sublevel graph filtration function
+
+        # MLP out layer combining each nodes',
+        # at each graph level in the hierarchy's,
+        # learned embedding representation
+        self.combine_hier_node_emb = torch.nn.Linear(out_channels * (len(self.graphs) + 1),
+                                                     out_channels)
+
+
+    def forward(self, super_x, super_adjs, subset_xs, subset_adjs):
+        # Super-graph convolution
+        super_x = self.super_conv1((super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
+        super_x = F.relu(super_x)
+        super_x = self.super_conv2((super_x, super_x[super_adjs[1].src_node]), super_adjs[1].edge_index)
+
+        # Subset-graph convolutions
+        subset_outs = []
+        for subset_x, subset_adj in zip(subset_xs, subset_adjs):
+            subset_x = self.subset_conv1((subset_x, subset_x[subset_adj[0].src_node]), subset_adj[0].edge_index)
+            subset_x = F.relu(subset_x)
+            subset_x = self.subset_conv2((subset_x, subset_x[subset_adj[1].src_node]), subset_adj[1].edge_index)
+            subset_outs.append(subset_x)
+
+        # Concatenate super-graph and subset-graph embeddings
+        combined = torch.cat([super_x] + subset_outs, dim=1)
+        out = self.combine_fc(combined)
+        return F.log_softmax(out, dim=1)
+
+    def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
+
+        if graph.num_nodes < 1200:
+            num_workers = 1
+        else:
+            num_workers = 8
+
+        if shuffle:
+            neighborloader = NeighborLoader(data=graph,
+                                  batch_size=self.batch_size,
+                                  num_neighbors=self.num_neighbors[: self.num_layers],
+                                            subgraph_type='induced', #for undirected graph
+                                  # directed=False,#True,
+                                  shuffle=shuffle,
+                                num_workers=num_workers
+                                            ) #for graph in self.graphs]
+            neighborsampler = NeighborSampler(
+                graph.edge_index,
+                # node_idx=train_idx,
+                # directed=False,
+                sizes=self.num_neighbors[: self.num_layers],
+                batch_size=self.batch_size,
+                # subgraph_type='induced',  # for undirected graph
+                # directed=False,#True,
+                shuffle=shuffle,
+                num_workers=num_workers
+            )
+        else:
+            neighborloader = NeighborLoader(data=graph,
+                                  batch_size=self.batch_size,
+                                  num_neighbors=num_neighbors,
+                                            subgraph_type='induced', #for undirected graph
+                                  # directed=False,#True,
+                                  shuffle=shuffle
+                                            # num_workers=8
+                                            ) #for graph in self.graphs]
+
+            neighborsampler = NeighborSampler(
+                graph.edge_index,
+                # node_idx=train_idx,
+                # directed=False,
+                sizes=self.num_neighbors[: self.num_layers],
+                batch_size=self.batch_size,
+                # subgraph_type='induced',  # for undirected graph
+                # directed=False,#True,
+                shuffle=shuffle,
+                # num_workers=8,
+            )
+        return neighborsampler

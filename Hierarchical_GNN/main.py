@@ -69,6 +69,15 @@ def main(args):
         trnr.mem_speed_bench()
 
     for seed in range(resume_seed, args.N_exp):
+        """
+        
+        manually setting seed here bc not currently doing multiruns of single model
+        
+        
+        """
+        max_int64 = 2**32-1
+        random_int = np.random.randint(1, max_int64)
+        seed = random_int
         print(f"seed (which_run) = <{seed}>")
         seed = int(seed)
         args.random_seed = int(seed)

@@ -1,0 +1,8 @@
+All Results:
+73.25,49.28,44.97,60.65,78.79,56.65,79.67,81.86
+Largest value: 81.86%
+Line number: 211
+Two lines above the largest value line:
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3356195942, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8804
+Best test: 81.86% F1 Test: 0.00 Best ROC Test: 0.00

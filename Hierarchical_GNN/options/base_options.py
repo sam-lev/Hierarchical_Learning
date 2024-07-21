@@ -242,16 +242,21 @@ class BaseOptions:
         parser.add_argument("--filter_rate", type=float, default=0.2)
         parser.add_argument("--homophily", type=float, default=0.2)
         args = parser.parse_args()
+
+
+
+        args = self.reset_dataset_dependent_parameters(args)
+
+        if args.type_model == "LP_Adj":
+            set_labprop_configs(args)
+
+
         print("ARGS")
         print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         for arg in vars(args):
             print(f"{arg}: {getattr(args, arg)}")
         print("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
 
-        args = self.reset_dataset_dependent_parameters(args)
-
-        if args.type_model == "LP_Adj":
-            set_labprop_configs(args)
 
         return args
 
@@ -315,6 +320,7 @@ class BaseOptions:
             args.multi_label = True
             args.num_classes = 128
             args.num_neighbors = [25,5]
+            # args.batch_size = 256
         elif args.dataset == "Reddit":
             args.num_classes = 41
             args.num_feats = 602

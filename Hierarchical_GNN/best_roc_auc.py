@@ -5,7 +5,7 @@ def find_largest_best_test_value(file_path):
     try:
         with open(file_path, 'r') as file:
             lines = file.readlines()
-        best_test_pattern = re.compile(r"Best ROC All: (\d+(\.\d+)?)")
+        best_test_pattern = re.compile(r"Best ROC Test: (\d+(\.\d+)?)")
         best_tests = []
         for i, line in enumerate(lines):
             match = best_test_pattern.search(line)

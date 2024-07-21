@@ -1,0 +1,1154 @@
+File: exp_julfourteen_WebKB_wisconsin_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4200.0000 0.0000 
+final mean and std of test acc:  4200.0000 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_cornell_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 46.70%, Best valid (all): 39.89% Best test: 45.05% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4505.4945 0.0000 
+final mean and std of test acc:  4505.4945 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_minesweeper_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 80.00%, Best valid (all): 80.00% Best test: 80.00% F1 Train: 0.80 F1 Test: 0.80 F1 All: 0.80 Best ROC All: 0.50 
+mean and std of test acc: 8000.0000 0.0000 
+final mean and std of test acc:  8000.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_cornell_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4780.2198 0.0000 
+final mean and std of test acc:  4780.2198 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_wisconsin_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.08%, Best valid (all): 89.66% Best test: 88.48% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8847.8582 0.0000 
+final mean and std of test acc:  8847.8582 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_wisconsin_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 5000.0000 0.0000 
+final mean and std of test acc:  5000.0000 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_questions_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8818.3161 0.0000 
+final mean and std of test acc:  8818.3161 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_minesweeper_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 80.00%, Best valid (all): 80.00% Best test: 80.00% F1 Train: 0.80 F1 Test: 0.80 F1 All: 0.80 Best ROC All: 0.50 
+mean and std of test acc: 8000.0000 0.0000 
+final mean and std of test acc:  8000.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_tolokers_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_questions_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/functional.py", line 2416, in _verify_batch_size
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 512])
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cornell_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 46.15%, Best valid (all): 33.33% Best test: 43.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4395.6044 0.0000 
+final mean and std of test acc:  4395.6044 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_cornell_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_amazon_ratings_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    row, col = data.edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_PubMed_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_tolokers_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 178.00 MiB (GPU 0; 2.93 GiB total capacity; 2.42 GiB already allocated; 159.56 MiB free; 2.44 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_questions_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 512])
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_Cora_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.11%, Best valid (all): 89.25% Best test: 88.66% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8866.3220 0.0000 
+final mean and std of test acc:  8866.3220 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_questions_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 5000.0000 0.0000 
+final mean and std of test acc:  5000.0000 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_Cora_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8836.7799 0.0000 
+final mean and std of test acc:  8836.7799 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp__Texas__LR0.001_WD1e-4_PERS0.8,0.7,0.6.log
+               [--type_run {complete,filtered}] [--filter_rate FILTER_RATE]
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cornell_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4780.2198 0.0000 
+final mean and std of test acc:  4780.2198 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_cornell_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_PubMed_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8829.3944 0.0000 
+final mean and std of test acc:  8829.3944 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_texas_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 60.44%, Best valid (all): 59.56% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cornell_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4230.7692 0.0000 
+final mean and std of test acc:  4230.7692 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_CiteSeer_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_questions_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/functional.py", line 2416, in _verify_batch_size
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 512])
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_minesweeper_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_amazon_ratings_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8674.2984 0.0000 
+final mean and std of test acc:  8674.2984 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_minesweeper_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8000.0000 0.0000 
+final mean and std of test acc:  8000.0000 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cora_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cora_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_tolokers_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 178.00 MiB (GPU 0; 2.93 GiB total capacity; 2.42 GiB already allocated; 159.56 MiB free; 2.44 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_Cora_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_wisconsin_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_CiteSeer_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.67%, Best valid (all): 90.32% Best test: 88.37% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8836.7799 0.0000 
+final mean and std of test acc:  8836.7799 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_minesweeper_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8000.0000 0.0000 
+final mean and std of test acc:  8000.0000 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_CiteSeer_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8899.5569 0.0000 
+final mean and std of test acc:  8899.5569 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_minesweeper_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_amazon_ratings_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_texas_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Wisconsin_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 41.22%, Best valid (all): 29.48% Best test: 40.00% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4000.0000 0.0000 
+final mean and std of test acc:  4000.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_tolokers_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8796.1595 0.0000 
+final mean and std of test acc:  8796.1595 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.001_WD0_PERS0.8,0.7,0.6.log
+Seed: 00, Epoch: 79, Loss: 0.0447, Val Loss: 0.0410, Approx Train Acc: 0.8532
+Best train: 59.34%, Best valid (all): 58.47% Best test: 58.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5879.1209 0.0000 
+final mean and std of test acc:  5879.1209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_CiteSeer_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_tolokers_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_texas_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8818.3161 0.0000 
+final mean and std of test acc:  8818.3161 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 60.44%, Best valid (all): 59.56% Best test: 59.89% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5989.0110 0.0000 
+final mean and std of test acc:  5989.0110 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_questions_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8796.1595 0.0000 
+final mean and std of test acc:  8796.1595 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_PubMed_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_wisconsin_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8829.3944 0.0000 
+final mean and std of test acc:  8829.3944 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_questions_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.52%, Best valid (all): 89.77% Best test: 88.07% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8807.2378 0.0000 
+final mean and std of test acc:  8807.2378 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_cornell_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_CiteSeer_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_wisconsin_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 41.22%, Best valid (all): 29.48% Best test: 40.00% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4000.0000 0.0000 
+final mean and std of test acc:  4000.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_wisconsin_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 59.18%, Best valid (all): 49.00% Best test: 57.60% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5760.0000 0.0000 
+final mean and std of test acc:  5760.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_minesweeper_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.59%, Best valid (all): 89.81% Best test: 88.52% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8851.5510 0.0000 
+final mean and std of test acc:  8851.5510 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_Cora_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.001_WD1e-4_PERS0.8,0.7,0.6.log
+Best train: 53.85%, Best valid (all): 60.11% Best test: 53.30% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5329.6703 0.0000 
+final mean and std of test acc:  5329.6703 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_amazon_ratings_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Seed: 00, Epoch: 00, Loss: 0.6965, Val Loss: 0.3466, Approx Train Acc: 0.6228
+>>> epoch:  1  val acc: 0.6196  val roc: 0.5102
+Seed: 00, Epoch: 01, Loss: 0.6934, Val Loss: 0.3466, Approx Train Acc: 0.6230
+>>> epoch:  2  val acc: 0.6196 
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_tolokers_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.19%, Best valid (all): 88.77% Best test: 87.85% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8785.0812 0.0000 
+final mean and std of test acc:  8785.0812 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_amazon_ratings_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Wisconsin_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 59.18%, Best valid (all): 49.00% Best test: 57.60% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5760.0000 0.0000 
+final mean and std of test acc:  5760.0000 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_texas_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_CiteSeer_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_tolokers_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.41%, Best valid (all): 89.81% Best test: 88.88% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8888.4786 0.0000 
+final mean and std of test acc:  8888.4786 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_texas_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_tolokers_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp__WebKB_Texas_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Seed: 00, Epoch: 35, Loss: 0.0740, Val Loss: 0.0461, Approx Train Acc: 0.8750
+>>> epoch:  36  validation acc:   validation roc: 0.5659
+Seed: 00, Epoch: 36, Loss: 0.0740, Val Loss: 0.0461, Approx Train Acc: 0.8750
+>>> epoch:  37 
+----------------------------------------
+
+File: exp__Texas__LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+               [--type_run {complete,filtered}] [--filter_rate FILTER_RATE]
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_minesweeper_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8814.6233 0.0000 
+final mean and std of test acc:  8814.6233 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp__Texas__LR0.001_WD0_PERS0.9,0.8,0.7.log
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_amazon_ratings_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_amazon_ratings_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    row, col = data.edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Wisconsin_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 5000.0000 0.0000 
+final mean and std of test acc:  5000.0000 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_wisconsin_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_wisconsin_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_PubMed_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_PubMed_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_Cora_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8870.0148 0.0000 
+final mean and std of test acc:  8870.0148 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_cornell_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 46.15%, Best valid (all): 33.33% Best test: 43.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4395.6044 0.0000 
+final mean and std of test acc:  4395.6044 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cornell_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 46.70%, Best valid (all): 39.89% Best test: 45.05% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4505.4945 0.0000 
+final mean and std of test acc:  4505.4945 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_tolokers_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_CiteSeer_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_texas_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.85%, Best valid (all): 89.29% Best test: 88.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8803.5451 0.0000 
+final mean and std of test acc:  8803.5451 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_CiteSeer_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_tolokers_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8703.8405 0.0000 
+final mean and std of test acc:  8703.8405 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 3571.4286 0.0000 
+final mean and std of test acc:  3571.4286 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_questions_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    raise ValueError("Expected more than 1 value per channel when training, got input size {}".format(size))
+ValueError: Expected more than 1 value per channel when training, got input size torch.Size([1, 512])
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_wisconsin_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_amazon_ratings_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 85.93%, Best valid (all): 88.29% Best test: 87.56% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8755.5391 0.0000 
+final mean and std of test acc:  8755.5391 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_amazon_ratings_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_Cora_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp__Texas__LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+               [--type_run {complete,filtered}] [--filter_rate FILTER_RATE]
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+WD=0
+
+----------------------------------------
+
+File: exp__Texas__LR0.003_WD0_PERS0.8,0.7,0.6.log
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_questions_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_texas_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 5000.0000 0.0000 
+final mean and std of test acc:  5000.0000 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_PubMed_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_amazon_ratings_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/sampler/utils.py", line 71, in to_csc
+    row, col = data.edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_texas_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8881.0931 0.0000 
+final mean and std of test acc:  8881.0931 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.003_WD1e-4_PERS0.8,0.7,0.6.log
+Best train: 58.24%, Best valid (all): 57.38% Best test: 57.69% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 5769.2308 0.0000 
+final mean and std of test acc:  5769.2308 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_minesweeper_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.78%, Best valid (all): 90.29% Best test: 89.25% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8925.4062 0.0000 
+final mean and std of test acc:  8925.4062 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_CiteSeer_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 62.64%, Best valid (all): 62.30% Best test: 60.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6043.9560 0.0000 
+final mean and std of test acc:  6043.9560 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cora_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_Cora_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.48%, Best valid (all): 88.88% Best test: 88.04% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8803.5451 0.0000 
+final mean and std of test acc:  8803.5451 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Texas_LR0.003_WD0_PERS0.8,0.7,0.6.log
+mean and std of test acc: 3571.4286 0.0000 
+final mean and std of test acc:  3571.4286 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_PubMed_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_cornell_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4230.7692 0.0000 
+final mean and std of test acc:  4230.7692 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp__Texas__LR0.003_WD0_PERS0.9,0.8,0.7.log
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_amazon_ratings_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.41%, Best valid (all): 89.48% Best test: 89.00% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8899.5569 0.0000 
+final mean and std of test acc:  8899.5569 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_wisconsin_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8903.2496 0.0000 
+final mean and std of test acc:  8903.2496 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_texas_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 62.64%, Best valid (all): 62.30% Best test: 60.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6043.9560 0.0000 
+final mean and std of test acc:  6043.9560 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_cornell_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.00%, Best valid (all): 89.48% Best test: 88.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8844.1654 0.0000 
+final mean and std of test acc:  8844.1654 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_PubMed_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_tolokers_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 178.00 MiB (GPU 0; 2.93 GiB total capacity; 2.42 GiB already allocated; 159.56 MiB free; 2.44 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_wisconsin_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.30%, Best valid (all): 89.29% Best test: 88.44% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8844.1654 0.0000 
+final mean and std of test acc:  8844.1654 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_tolokers_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/autograd/__init__.py", line 200, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 178.00 MiB (GPU 0; 2.93 GiB total capacity; 2.42 GiB already allocated; 159.56 MiB free; 2.44 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_CiteSeer_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8825.7016 0.0000 
+final mean and std of test acc:  8825.7016 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_minesweeper_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_cornell_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_PubMed_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_texas_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.93%, Best valid (all): 89.84% Best test: 88.29% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8829.3944 0.0000 
+final mean and std of test acc:  8829.3944 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_PubMed_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 86.82%, Best valid (all): 89.14% Best test: 87.92% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8792.4668 0.0000 
+final mean and std of test acc:  8792.4668 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_texas_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_PubMed_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.00%, Best valid (all): 90.25% Best test: 88.37% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8836.7799 0.0000 
+final mean and std of test acc:  8836.7799 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Wisconsin_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 4200.0000 0.0000 
+final mean and std of test acc:  4200.0000 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_questions_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.52%, Best valid (all): 89.73% Best test: 88.96% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8895.8641 0.0000 
+final mean and std of test acc:  8895.8641 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_CiteSeer_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.00%, Best valid (all): 89.81% Best test: 88.52% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8851.5510 0.0000 
+final mean and std of test acc:  8851.5510 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_Cora_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/heterophilous_graph_dataset.py", line 83, in __init__
+    assert self.name in [
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_minesweeper_LR0.001_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_amazon_ratings_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8777.6957 0.0000 
+final mean and std of test acc:  8777.6957 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_PubMed_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8548.7445 0.0000 
+final mean and std of test acc:  8548.7445 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_minesweeper_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8840.4727 0.0000 
+final mean and std of test acc:  8840.4727 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_cornell_LR0.001_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8810.9306 0.0000 
+final mean and std of test acc:  8810.9306 $\pm$ 0.0000
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_cornell_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+Best train: 87.00%, Best valid (all): 88.85% Best test: 87.74% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 8774.0030 0.0000 
+final mean and std of test acc:  8774.0030 $\pm$ 0.0000
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_questions_LR0.003_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_questions_LR0.001_WD1e-4_PERS0.9,0.8,0.7.log
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/datasets/webkb.py", line 74, in __init__
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_Cora_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in ['cornell', 'texas', 'wisconsin']
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_WebKB_texas_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 3571.4286 0.0000 
+final mean and std of test acc:  3571.4286 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp__Texas__LR0.001_WD0_PERS0.8,0.7,0.6.log
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+LR=0.003
+WD=1e-4
+
+----------------------------------------
+
+File: exp_julfourteen_Planetoid_cornell_LR0.003_WD0_PERS0.9,0.8,0.7.log
+mean and std of test acc: 8888.4786 0.0000 
+final mean and std of test acc:  8888.4786 $\pm$ 0.0000
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
+File: exp__Texas__LR0.003_WD1e-4_PERS0.8,0.7,0.6.log
+               [--type_run {complete,filtered}] [--filter_rate FILTER_RATE]
+               [--homophily HOMOPHILY]
+main.py: error: argument --dataset: invalid choice: 'Texas' (choose from 'Flickr', 'Reddit', 'ogbn-products', 'ogbn-papers100M', 'ogbn-arxiv', 'Planetoid', 'MixHopSyntheticDataset', 'HeterophilousGraphDataset', 'TopologicalPriorsDataset', 'WebKB')
+WD=0
+
+----------------------------------------
+
+File: exp_julfourteen_HeterophilousGraphDataset_CiteSeer_LR0.003_WD0_PERS0.9,0.8,0.7.log
+    assert self.name in [
+AssertionError
+LR=0.001
+WD=1e-4
+
+----------------------------------------
+
