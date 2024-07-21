@@ -34,7 +34,7 @@ from torch_geometric.data import Data, InMemoryDataset, download_url
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
 from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency, node_degree_statistics
 #profiling tools
-from guppy import hpy
+# from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
 from typing import Union, List,Optional

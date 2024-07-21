@@ -28,7 +28,7 @@ from torch_geometric.loader import DataLoader, NodeLoader, NeighborLoader, Neigh
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
 from .utils import pout, homophily_edge_labels, init_edge_embedding, node_degree_statistics
 #profiling tools
-from guppy import hpy
+# from guppy import hpy
 # from memory_profiler import profile
 # from memory_profiler import memory_usage
 from sklearn.metrics import accuracy_score

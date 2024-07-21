@@ -1,5 +1,5 @@
 from texttable import Texttable
-from torch_sparse import SparseTensor
+# from torch_sparse import SparseTensor
 import torch
 from torch import Tensor
 
