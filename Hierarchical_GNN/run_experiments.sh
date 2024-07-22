@@ -37,7 +37,7 @@ python main.py --cuda_num=0 --dropout=0.2 --dim_hidden=512 --num_layers=5 \
 --multi_label=True --type_model=HierGNN \
 --eval_steps=50 --train_by_steps=False \
 --lr=1e-4 --lr2=1e-4 --weight_decay=1e-8 \
---data_subset=Wisconsin --persistence=0.8 --hier_model=HST 2>&1 | tee -- "$run_base/$run_path/$exp_name"
+--data_subset=wisconsin --persistence=0.8 --hier_model=HST 2>&1 | tee -- "$run_base/$run_path/$exp_name"
 }
 exp4
 exp_name="exp5_${name}_tolokers.log"

@@ -1,6 +1,6 @@
 import os
 from texttable import Texttable
-from torch_sparse import SparseTensor
+# from torch_sparse import SparseTensor
 import torch
 import matplotlib.pyplot as plt
 import matplotlib.cm as cm
