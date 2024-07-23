@@ -88,6 +88,7 @@ class FiltrationHierarchyGraphLoader():
         self.num_classes = num_classes
         self.filtration = filtration
 
+        pout((" %%%%% %%%% %%%% %%%% %%% %%%% ", "PERFORMING FILTRATION OF GRAPH"))
         self.graphs, self.node_mappings, self.sub_to_sup_mappings = self.process_graph_filtrations(data=self.graph,
                                                                          thresholds=self.thresholds,
                                                                          )
@@ -206,7 +207,7 @@ class FiltrationHierarchyGraphLoader():
 
     def pyg_to_dionysus(self, data):
         # Extract edge list and weights
-        data = copy.copy(data)#.clone()
+        # data = copy.copy(data)#.clone()
         edge_index = data.edge_index.t().cpu().numpy()
         edge_weight = data.edge_weights.cpu().numpy()
         filtration = dion.Filtration()
@@ -217,7 +218,8 @@ class FiltrationHierarchyGraphLoader():
 
     def filtration_to_networkx(self, filtration, data, clone_data=False, node_mapping=True):
         # if clone_data:
-        data = copy.copy(data)#.clone()
+        # data = copy.copy(data)#.copy()
+        # data = data.clone()
         node_mapping_true = node_mapping
 
         edge_emb = data.edge_attr.cpu().numpy()
@@ -237,20 +239,23 @@ class FiltrationHierarchyGraphLoader():
 
     def create_filtered_graphs(self, filtration, thresholds, data, clone_data=False, nid_mapping=None):
         # if clone_data:
-        data = copy.copy(data)#.clone()
+        # data = copy.copy(data)#.copy()
 
-        edge_emb = data.edge_attr.cpu().numpy()
-        y = data.y.cpu().numpy()
+
 
         node_mappings = []
         graphs = []
 
         for threshold in thresholds:
             G = nx.Graph()
-
+            data_clone = data.clone()
+            edge_emb = data_clone.edge_attr.cpu().numpy()
+            y = data_clone.y.cpu().numpy()
             for simplex in filtration:
                 if simplex.data >= threshold:
+                    # copy simplex for new simplicial level
                     u, v = simplex
+                    # add edge, incident nodes, labels, and features to subgraph
                     G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
                     G.nodes[u]['y'] = y[u]  # , features=data.x[u])#.tolist() if data.x is not None else {})
                     G.nodes[v]['y'] = y[v]
@@ -267,7 +272,7 @@ class FiltrationHierarchyGraphLoader():
 
     def pyg_to_networkx(self, data, clone_data=False):
         # if clone_data:
-        data = copy.copy(data)#.clone()
+        # data = copy.copy(data)#.clone()
         # Initialize a directed or undirected graph based on your need
         G = nx.Graph()# nx.DiGraph() if data.is_directed() else nx.Graph()
 
@@ -289,6 +294,7 @@ class FiltrationHierarchyGraphLoader():
         return G
 
     def nx_to_pyg(self, graph, node_mapping=True, graph_level=None):
+        # graph = copy.copy(graph)
 
         target_type = torch.long if self.num_classes > 2 else torch.float
         # Mapping nodes to contiguous integers
@@ -360,7 +366,22 @@ class FiltrationHierarchyGraphLoader():
         return pyg_graphs, nodeidx_mappings, sub_to_sup_mappings
 
 
+
+####################################################
+#
+#
 class SubLevelGraphFiltration(torch.nn.Module):
+    r"""
+    A node level learnable filtration function used for Hierarchical Joint Training
+    More specifically, :obj:`num_neighbors` denotes how much neighbors are
+    sampled for each node in each iteration.
+    :class:`~HierGNN.SubLevelGraphFiltration` takes in a subgraph
+    :obj:`dataset` and uses a graph isomorphism network GIN-e of type :obj:`gin_mlp_type'
+    to produce a node embedding of dimension :obj:`gin_dimension' with learnable
+    epsilon parameter as discussed in "How Powerful are Graph Neural Nets" Xu et al. The node embedding is then
+    passed to :obj:`gin_mlp_type' multi-layer perceptron with output dimension 1.
+    This output is then a lernable factor to multiply the final subgraophs node embedding by.
+    """
     def __init__(self,
                  dataset,
                  use_node_degree=None,
@@ -646,7 +667,7 @@ class HierGNN(torch.nn.Module):
         if graph.num_nodes < 1200:
             num_workers = 1
         else:
-            num_workers = 8
+            num_workers = 4
 
         if shuffle:
             neighborloader = NeighborLoader(data=graph,
@@ -670,9 +691,12 @@ class HierGNN(torch.nn.Module):
                 # directed=False
             )
         else:
+
+            pout(("Batch Size in Edge Inference ", self.batch_size))
+
             neighborloader = NeighborLoader(data=graph,
                                   batch_size=self.batch_size,
-                                  num_neighbors=num_neighbors,
+                                  num_neighbors=[-1,-1],
                                             subgraph_type='induced', #for undirected graph
                                   # directed=False,#True,
                                   shuffle=shuffle
@@ -683,12 +707,12 @@ class HierGNN(torch.nn.Module):
                 graph.edge_index,
                 # node_idx=train_idx,
                 # directed=False,
-                sizes=self.num_neighbors[: self.num_layers],
+                sizes=[-1],#self.num_neighbors[: self.num_layers],#num_neighbors,
                 batch_size=self.batch_size,
                 # subgraph_type='induced',  # for undirected graph
                 # directed=False,#True,
                 shuffle=shuffle,
-                num_workers=num_workers
+                # num_workers=1
             )
         return neighborsampler
 
@@ -1022,12 +1046,12 @@ class HierGNN(torch.nn.Module):
                 print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}",
                       f" Validation ROC: {val_roc:.4f}")
 
-            total_val_loss += val_loss
+                total_val_loss += val_loss
 
-            # if scheduler is not None:
-            #     scheduler.step(val_loss)
+                # if scheduler is not None:
+                #     scheduler.step(val_loss)
 
-            del val_loss
+                del val_loss, val_pred, val_ground_truth
 
         #  # .item(
 
@@ -1129,10 +1153,10 @@ class HierGNN(torch.nn.Module):
                 # batch=batch.to(device)
                 # batch_size = batch.batch_size
                 # n_id = batch.n_id
-
+                adjs= [adjs.to(device)]
                 # optimizer.zero_grad()
 
-                adjs = [adj.to(device) for adj in adjs]
+                # adjs = [adj.to(device) for adj in adjs]
 
                 x = data.x[n_id].to(device)
                 y = data.y[n_id[:batch_size]].to(device)#.float()

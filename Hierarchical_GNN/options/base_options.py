@@ -319,7 +319,7 @@ class BaseOptions:
         elif args.dataset == "WikipediaNetwork":
             args.multi_label = True
             args.num_classes = 128
-            args.num_neighbors = [25,5]
+            args.num_neighbors = [25,5] if args.data_subset == "chameleon" else [10,5]
             # args.batch_size = 256
         elif args.dataset == "Reddit":
             args.num_classes = 41
