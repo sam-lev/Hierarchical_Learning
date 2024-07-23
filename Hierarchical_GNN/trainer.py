@@ -1310,16 +1310,18 @@ class trainer(object):
         return metrics
 
     def set_seed(self, args):
-        # torch.backends.cudnn.deterministic = True
-        torch.backends.cuda.matmul.allow_tf32 = True
-        torch.backends.cudnn.benchmark = False
-        torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
+
+
         if args.cuda and not torch.cuda.is_available():  # cuda is not available
             args.cuda = False
         if args.cuda:
             torch.cuda.manual_seed(args.random_seed)
             torch.cuda.manual_seed_all(args.random_seed)
             os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda_num)
+            torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
+            # torch.backends.cudnn.deterministic = True
+            torch.backends.cuda.matmul.allow_tf32 = True
+            torch.backends.cudnn.benchmark = False
         torch.manual_seed(args.random_seed)
         np.random.seed(args.random_seed)
         random.seed(args.random_seed)
