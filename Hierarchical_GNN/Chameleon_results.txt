@@ -1,0 +1,1056 @@
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 280607063, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9229
+Best test: 84.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8476.0650 0.0000 
+final mean and std of test acc:  8476.0650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 1304765744, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9361
+Best test: 86.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8612.2090 0.0000 
+final mean and std of test acc:  8612.2090 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 580108432, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8700
+Best test: 82.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8291.6118 0.0000 
+final mean and std of test acc:  8291.6118 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2276817329, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9070
+Best test: 85.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8528.7659 0.0000 
+final mean and std of test acc:  8528.7659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 314188480, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9204
+Best test: 78.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7891.9631 0.0000 
+final mean and std of test acc:  7891.9631 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 488385720, Epoch: 79, Loss: 0.0027, Approx Train Acc: 0.8675
+Best test: 54.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5415.0198 0.0000 
+final mean and std of test acc:  5415.0198 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 3162135931, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9119
+Best test: 81.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8173.0347 0.0000 
+final mean and std of test acc:  8173.0347 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 4111373107, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9278
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.3742 0.0000 
+final mean and std of test acc:  8524.3742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 804642268, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9310
+Best test: 87.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8722.0026 0.0000 
+final mean and std of test acc:  8722.0026 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1991829643, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9321
+Best test: 87.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8708.8274 0.0000 
+final mean and std of test acc:  8708.8274 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2247535007, Epoch: 79, Loss: 0.0052, Approx Train Acc: 0.7234
+Best test: 48.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4826.5261 0.0000 
+final mean and std of test acc:  4826.5261 $\pm$ 0.0000
+
+----------------------------------------
+
+File: DIDNOTRUN_exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD0_PERS0.6.log
+    return self.hierarchical_successive_train_net(input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 950, in hierarchical_successive_train_net
+    all_labels=torch.cat(all_labels,dim=0)
+RuntimeError: zero-dimensional tensor (at position 0) cannot be concatenated
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2977851647, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9053
+Best test: 61.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6135.2657 0.0000 
+final mean and std of test acc:  6135.2657 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+    neighborsampler = NeighborSampler(
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/loader/neighbor_sampler.py", line 165, in __init__
+    super().__init__(
+TypeError: DataLoader.__init__() got an unexpected keyword argument 'directed'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 2957148882, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8917
+Best test: 63.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6315.3272 0.0000 
+final mean and std of test acc:  6315.3272 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 809565604, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8076
+Best test: 55.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5586.2978 0.0000 
+final mean and std of test acc:  5586.2978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: ABOVEHEREWOULDBEERRORSexp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3339081645, Epoch: 79, Loss: 0.0054, Approx Train Acc: 0.6505
+Best test: 47.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4765.0417 0.0000 
+final mean and std of test acc:  4765.0417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2390594275, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9405
+Best test: 85.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8599.0338 0.0000 
+final mean and std of test acc:  8599.0338 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.8.log
+Seed: 1369209591, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9192
+Best test: 80.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8054.4576 0.0000 
+final mean and std of test acc:  8054.4576 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 558170276, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8428
+Best test: 73.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7325.4282 0.0000 
+final mean and std of test acc:  7325.4282 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+    if not self.established_graph_density:
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'HierGNN' object has no attribute 'established_graph_density'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 423378429, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8975
+Best test: 81.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8124.7255 0.0000 
+final mean and std of test acc:  8124.7255 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.03_WD0_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 784134451, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9206
+Best test: 77.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7773.3860 0.0000 
+final mean and std of test acc:  7773.3860 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 1394184840, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9222
+Best test: 80.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8058.8494 0.0000 
+final mean and std of test acc:  8058.8494 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3856730074, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8714
+Best test: 77.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7742.6438 0.0000 
+final mean and std of test acc:  7742.6438 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.8.log
+Seed: 710127466, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9325
+Best test: 85.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8502.4155 0.0000 
+final mean and std of test acc:  8502.4155 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3748155633, Epoch: 79, Loss: 0.0061, Approx Train Acc: 0.3781
+Best test: 22.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2288.0984 0.0000 
+final mean and std of test acc:  2288.0984 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD0_PERS0.5.log
+    train_loss, train_acc, val_loss = self.model.train_net(input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/EdgeMLP.py", line 503, in train_net
+    del val_loss
+UnboundLocalError: local variable 'val_loss' referenced before assignment
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1203400883, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8360
+Best test: 70.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7079.4906 0.0000 
+final mean and std of test acc:  7079.4906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 582548531, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9076
+Best test: 71.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7149.7585 0.0000 
+final mean and std of test acc:  7149.7585 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 2538121490, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9256
+Best test: 84.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8484.8485 0.0000 
+final mean and std of test acc:  8484.8485 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 1269715848, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9101
+Best test: 76.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7646.0255 0.0000 
+final mean and std of test acc:  7646.0255 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 983274613, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8723
+Best test: 70.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7066.3153 0.0000 
+final mean and std of test acc:  7066.3153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 801979866, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9076
+Best test: 60.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6047.4308 0.0000 
+final mean and std of test acc:  6047.4308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 61462504, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8336
+Best test: 74.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7426.4383 0.0000 
+final mean and std of test acc:  7426.4383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 3361698078, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9448
+Best test: 89.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8902.0641 0.0000 
+final mean and std of test acc:  8902.0641 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 2460306406, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8812
+Best test: 59.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5968.3794 0.0000 
+final mean and std of test acc:  5968.3794 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 876072682, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9062
+Best test: 77.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7790.9530 0.0000 
+final mean and std of test acc:  7790.9530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0195, Val Loss: 0.0194, Approx Train Acc: 0.8328
+Best train: 50.81%, Best valid (all): 47.47% Best test: 49.28% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 4927.5362 0.0000 
+final mean and std of test acc:  4927.5362 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 1916689500, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9219
+Best test: 83.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8317.9622 0.0000 
+final mean and std of test acc:  8317.9622 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3402906067, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9233
+Best test: 88.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8818.6210 0.0000 
+final mean and std of test acc:  8818.6210 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2893455076, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9152
+Best test: 81.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8151.0760 0.0000 
+final mean and std of test acc:  8151.0760 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3856091635, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9235
+Best test: 85.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.5907 0.0000 
+final mean and std of test acc:  8515.5907 $\pm$ 0.0000
+
+----------------------------------------
+
+File: DIDNOTRUN_exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.001_WD0_PERS0.5.log
+    neighborsampler = NeighborSampler(
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/loader/neighbor_sampler.py", line 165, in __init__
+    super().__init__(
+TypeError: DataLoader.__init__() got an unexpected keyword argument 'directed'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 2361644861, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9160
+Best test: 86.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8625.3843 0.0000 
+final mean and std of test acc:  8625.3843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 12818244, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8213
+Best test: 47.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4738.6913 0.0000 
+final mean and std of test acc:  4738.6913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 956981593, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8797
+Best test: 58.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5876.1528 0.0000 
+final mean and std of test acc:  5876.1528 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 798480204, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8941
+Best test: 51.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5142.7317 0.0000 
+final mean and std of test acc:  5142.7317 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2630531283, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9208
+Best test: 85.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8506.8072 0.0000 
+final mean and std of test acc:  8506.8072 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3958522035, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9329
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.3742 0.0000 
+final mean and std of test acc:  8524.3742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: CHECKFORERRORAbv_exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3320040100, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9284
+Best test: 85.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8550.7246 0.0000 
+final mean and std of test acc:  8550.7246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 3917331852, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8060
+Best test: 50.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5050.5051 0.0000 
+final mean and std of test acc:  5050.5051 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 2274535654, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9454
+Best test: 89.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8906.4559 0.0000 
+final mean and std of test acc:  8906.4559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2010719092, Epoch: 79, Loss: 0.0049, Approx Train Acc: 0.8304
+Best test: 48.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4874.8353 0.0000 
+final mean and std of test acc:  4874.8353 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2521062505, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8832
+Best test: 74.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7400.0878 0.0000 
+final mean and std of test acc:  7400.0878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 2787530822, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9140
+Best test: 63.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6394.3786 0.0000 
+final mean and std of test acc:  6394.3786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 1879786515, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8977
+Best test: 77.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7711.9016 0.0000 
+final mean and std of test acc:  7711.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.03_WD0_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 3183359746, Epoch: 79, Loss: 0.0050, Approx Train Acc: 0.7974
+Best test: 45.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4558.6298 0.0000 
+final mean and std of test acc:  4558.6298 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3853361884, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9353
+Best test: 87.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8713.2191 0.0000 
+final mean and std of test acc:  8713.2191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 1579573148, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9226
+Best test: 82.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8274.0448 0.0000 
+final mean and std of test acc:  8274.0448 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3794648655, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8917
+Best test: 76.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7698.7264 0.0000 
+final mean and std of test acc:  7698.7264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.01_WD0_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 19980091, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9430
+Best test: 88.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8814.2292 0.0000 
+final mean and std of test acc:  8814.2292 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 488625706, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9152
+Best test: 75.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7523.0567 0.0000 
+final mean and std of test acc:  7523.0567 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2142226019, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9426
+Best test: 88.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8853.7549 0.0000 
+final mean and std of test acc:  8853.7549 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 373524653, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9297
+Best test: 86.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8638.5595 0.0000 
+final mean and std of test acc:  8638.5595 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1637617528, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8748
+Best test: 80.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8014.9319 0.0000 
+final mean and std of test acc:  8014.9319 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 2227871911, Epoch: 79, Loss: 0.0052, Approx Train Acc: 0.7093
+Best test: 44.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4497.1454 0.0000 
+final mean and std of test acc:  4497.1454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2162346130, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9037
+Best test: 72.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7299.0777 0.0000 
+final mean and std of test acc:  7299.0777 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+    if not self.established_graph_density:
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'HierGNN' object has no attribute 'established_graph_density'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 185813520, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9016
+Best test: 73.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7347.3869 0.0000 
+final mean and std of test acc:  7347.3869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 491971688, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8561
+Best test: 78.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7808.5200 0.0000 
+final mean and std of test acc:  7808.5200 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 1803106733, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9448
+Best test: 90.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9011.8577 0.0000 
+final mean and std of test acc:  9011.8577 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 2417191584, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9315
+Best test: 88.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8818.6210 0.0000 
+final mean and std of test acc:  8818.6210 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 2013865008, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8961
+Best test: 81.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8159.8595 0.0000 
+final mean and std of test acc:  8159.8595 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.9.log
+Seed: 1231175796, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9490
+Best test: 87.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8730.7861 0.0000 
+final mean and std of test acc:  8730.7861 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 807629622, Epoch: 79, Loss: 0.0051, Approx Train Acc: 0.7441
+Best test: 47.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4751.8665 0.0000 
+final mean and std of test acc:  4751.8665 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 3710536912, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8906
+Best test: 57.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5713.6583 0.0000 
+final mean and std of test acc:  5713.6583 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2527734944, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8964
+Best test: 81.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8186.2099 0.0000 
+final mean and std of test acc:  8186.2099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 4234371420, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8542
+Best test: 64.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6490.9969 0.0000 
+final mean and std of test acc:  6490.9969 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0202, Val Loss: 0.0203, Approx Train Acc: 0.7717
+Best train: 61.88%, Best valid (all): 60.30% Best test: 60.65% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 6064.9978 0.0000 
+final mean and std of test acc:  6064.9978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 1325799597, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9343
+Best test: 88.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8831.7962 0.0000 
+final mean and std of test acc:  8831.7962 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 2298337026, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9335
+Best test: 87.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8704.4357 0.0000 
+final mean and std of test acc:  8704.4357 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 3996134176, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9421
+Best test: 85.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8559.5081 0.0000 
+final mean and std of test acc:  8559.5081 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 887457826, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9244
+Best test: 84.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8440.9310 0.0000 
+final mean and std of test acc:  8440.9310 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+    train_loss, train_acc, val_loss = self.model.train_net(input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/EdgeMLP.py", line 503, in train_net
+    del val_loss
+UnboundLocalError: local variable 'val_loss' referenced before assignment
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.01_WD0_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 1955837028, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9207
+Best test: 85.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8528.7659 0.0000 
+final mean and std of test acc:  8528.7659 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 1643092450, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9156
+Best test: 86.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8695.6522 0.0000 
+final mean and std of test acc:  8695.6522 $\pm$ 0.0000
+
+----------------------------------------
+
+File: DIDNOTRUN_exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 570279169, Epoch: 07, Loss: 0.0064, Approx Train Acc: 0.5045
+Seed: 570279169, Epoch: 08, Loss: 0.0064, Approx Train Acc: 0.5045
+Seed: 570279169, Epoch: 09, Loss: 0.0064, Approx Train Acc: 0.5090
+Seed: 570279169, Epoch: 10, Loss: 0.0061, Approx Train Acc: 0.6121
+
+----------------------------------------
+
+File: DIDNOTRUN_exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+    return self.hierarchical_successive_train_net(input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 950, in hierarchical_successive_train_net
+    # all_labels=torch.cat(all_labels,dim=0)
+RuntimeError: zero-dimensional tensor (at position 0) cannot be concatenated
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 00, Epoch: 79, Loss: 0.0191, Val Loss: 0.0191, Approx Train Acc: 0.8680
+Best train: 79.53%, Best valid (all): 78.44% Best test: 78.79% F1 Train: 0.00 F1 Test: 0.00 F1 All: 0.00 Best ROC All: 0.00 
+mean and std of test acc: 7878.7879 0.0000 
+final mean and std of test acc:  7878.7879 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 997755949, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.9095
+Best test: 82.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8243.3026 0.0000 
+final mean and std of test acc:  8243.3026 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 373473887, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.9012
+Best test: 84.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8449.7145 0.0000 
+final mean and std of test acc:  8449.7145 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 3286591994, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8869
+Best test: 82.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8287.2200 0.0000 
+final mean and std of test acc:  8287.2200 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.01_WD0_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+    if not self.established_graph_density:
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'HierGNN' object has no attribute 'established_graph_density'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2949061003, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9094
+Best test: 80.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8054.4576 0.0000 
+final mean and std of test acc:  8054.4576 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD0_PERS0.9.log
+Seed: 2266785499, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9307
+Best test: 87.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8779.0953 0.0000 
+final mean and std of test acc:  8779.0953 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 549174822, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8387
+Best test: 56.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5665.3491 0.0000 
+final mean and std of test acc:  5665.3491 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3212854535, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8537
+Best test: 79.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7966.6227 0.0000 
+final mean and std of test acc:  7966.6227 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4148990148, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9339
+Best test: 89.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8932.8063 0.0000 
+final mean and std of test acc:  8932.8063 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1487765806, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9269
+Best test: 88.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8836.1880 0.0000 
+final mean and std of test acc:  8836.1880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 1359083878, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9402
+Best test: 87.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8787.8788 0.0000 
+final mean and std of test acc:  8787.8788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 4161365943, Epoch: 79, Loss: 0.0048, Approx Train Acc: 0.8584
+Best test: 73.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7303.4695 0.0000 
+final mean and std of test acc:  7303.4695 $\pm$ 0.0000
+
+----------------------------------------
+
+File: DIDNOTRUN_exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+    neighborsampler = NeighborSampler(
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/loader/neighbor_sampler.py", line 165, in __init__
+    super().__init__(
+TypeError: DataLoader.__init__() got an unexpected keyword argument 'directed'
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3281990213, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8952
+Best test: 69.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6943.3465 0.0000 
+final mean and std of test acc:  6943.3465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3695896016, Epoch: 79, Loss: 0.0050, Approx Train Acc: 0.7924
+Best test: 49.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4997.8041 0.0000 
+final mean and std of test acc:  4997.8041 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3356195942, Epoch: 79, Loss: 0.0047, Approx Train Acc: 0.8804
+Best test: 81.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8186.2099 0.0000 
+final mean and std of test acc:  8186.2099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 1576640147, Epoch: 79, Loss: 0.0046, Approx Train Acc: 0.9284
+Best test: 86.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8664.9100 0.0000 
+final mean and std of test acc:  8664.9100 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 750000897, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9194
+Best test: 81.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8194.9934 0.0000 
+final mean and std of test acc:  8194.9934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 3790759968, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8993
+Best test: 60.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6051.8226 0.0000 
+final mean and std of test acc:  6051.8226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 814295990, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9328
+Best test: 87.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8779.0953 0.0000 
+final mean and std of test acc:  8779.0953 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3969508347, Epoch: 27, Loss: 0.6934, Approx Train Acc: 0.2560
+Seed: 3969508347, Epoch: 28, Loss: 0.6933, Approx Train Acc: 0.3245
+Seed: 3969508347, Epoch: 29, Loss: 0.6934, Approx Train Acc: 0.2670
+Seed: 3969508347, Epoch: 30, Loss: 0.6942, Approx Train Acc: 0.2011
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1853560304, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9182
+Best test: 84.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8498.0237 0.0000 
+final mean and std of test acc:  8498.0237 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 3970823211, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9299
+Best test: 86.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8634.1678 0.0000 
+final mean and std of test acc:  8634.1678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 3530308601, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.8955
+Best test: 70.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7048.7484 0.0000 
+final mean and std of test acc:  7048.7484 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sfive_WikipediaNetwork_chameleon_LR0.01_LRE_0.01_WD0_PERS0.5.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3892599396, Epoch: 79, Loss: 0.0026, Approx Train Acc: 0.9128
+Best test: 84.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8436.5393 0.0000 
+final mean and std of test acc:  8436.5393 $\pm$ 0.0000
+
+----------------------------------------
+

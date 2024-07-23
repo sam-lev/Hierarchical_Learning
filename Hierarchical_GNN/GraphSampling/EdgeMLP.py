@@ -532,6 +532,8 @@ class EdgeMLP(torch.nn.Module):
         pred, loss, ground_truth, _ = self.edge_inference(input_dict)
         return pred, loss, ground_truth
 
+
+
     @torch.no_grad()
     def edge_inference(self, input_dict, assign_edge_weights = False):
         # input dict input_dict = {"data": self.data, "y": self.y, "device": self.device, "dataset": self.dataset}
@@ -548,6 +550,8 @@ class EdgeMLP(torch.nn.Module):
 
         # labels = data.y.to(device)
         # labels = self.edge_labels(labels=data.y, edge_index=data.edge_index)#torch.eq(labels[all_edge_idx[0]], labels[all_edge_idx[1]])
+
+        pout(("Batch Size in Edge Inference ", self.batch_size))
 
         data.edge_weights = torch.zeros(data.edge_index.shape)
 
@@ -581,79 +585,76 @@ class EdgeMLP(torch.nn.Module):
         edge_weights_dict = {}
         batch_sizes = []
         number_batches = 0.0
+
+        # pout(("BEFORE INFER"))
+
         with torch.no_grad():
             for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
                 self.eval()
                 self.training = False
                 number_batches += 1.0
-                #batch_size, n_id = batch.batch_size, batch.n_id.to(device)  # batch_size, n_id.to(device), adjs
-                # edge_index, e_id, size = adjs
-                # _, _, size = adjs
 
-                # batch.n_id # global node index of each node
+
+
+
+                # target_nodes = batch.n_id[:batch.batch_size]
+                # target_edge_index = target_nodes[batch.edge_index]
+                # target_attr = batch.edge_attr[]
                 batch = batch.to(device)
                 batch_size = batch.batch_size
-                # target_nid = batch.n_id[:batch_size]
-                # target_eid = batch.e_id[:batch_size]
-                e_id = batch.e_id
+
                 train_sample_size += batch.edge_index.size(0)
+
+                e_id = batch.e_id
+
                 with autocast():
                     out = self(edge_index=batch.edge_index,
                                            edge_attr=batch.edge_attr)
-                # pout(("edge_index", edge_index, "e_id", e_id))
-                # y =  data.y#data.y[target_nid]
-                # edge_index =data.edge_index# global_edge_index[target_eid]
-                # edge_index = edge_index.to(device)
-                batch_labels = self.edge_labels(labels=batch.y,  #data.y[n_id].to(device),
-                                                edge_index=batch.edge_index,
-                                                )
 
+                batch_labels = self.edge_labels(labels=batch.y,  #data.y[n_id].to(device),
+                                                edge_index=batch.edge_index
+                                                )
+                # pout(("AFTER OUT INFER AND LABELS"))
+                # pout((batch_labels.size()))
+                # batch_labels = batch_labels
 
                 batch_labels = batch_labels.to(device)
                 batch_labels_target = batch_labels[:batch_size]
-
-                # batch_sizes.append(batch_labels.size()[0])
+                # pout(("after label cut"))
 
                 out_target = out[:batch_size]
 
+                # loss = loss_op(out_target, batch_labels_target)
                 loss = loss_op(out_target, batch_labels_target)
-                # add predicted edge value as weight for each edge
 
-                # e_id = e_id[:batch_size]
-                # e_id = e_id[:batch_size]
                 if assign_edge_weights:
                     for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
                         source, target = global_edge_index[edge]
                         edges.append((source, target))
                         edge_weights_dict[(source, target)] = p  # [0]#[p]# edge_weights_dict[edge] = [p]#.append
 
+                # pout(("AFTER LOSS INFER"))
 
                 preds.extend(out)
                 total_loss += loss#.item()# / batch_sizes[-1]
-                ground_truths.extend(batch_labels)#append(batch_labels)#.argmax(dim=1))#[:,1])
+                ground_truths.extend(batch_labels)
 
-                # if isinstance(loss_op, torch.nn.NLLLoss):
-                #     edge_logit = F.log_softmax(out, dim=-1)
-                #     edge_logit = edge_logit.argmax(dim=-1)
-                #     edge_logit = F.softmax(out, dim=-1)
+                # del batch, loss, out, out_target, batch_labels, e_id, batch_size, batch_labels_target
+                del batch, loss, out, batch_labels, e_id,batch_size, batch_labels_target, out_target
 
-                # edge_logit = edge_logit.cpu()
-
-                # pout(("logit shape", edge_logit.shape, "edge pred shape", edge_pred.shape, "edge id shape", e_id.shape))
-
-                # x_pred.append(edge_logit)
-                # edge_pred[e_id] = edge_logit.cpu()
-
-                del batch, loss, out, out_target, batch_labels
                 torch.cuda.empty_cache()
 
+        # pout(("after inference loop"))
         del global_edge_index
 
         if assign_edge_weights:
+            # pout(("%%%%%% ", "ASSIGNING INFERED FILTRATION VALUES TO EDGES"))
             data.edge_weights = torch.from_numpy(np.array(
                 [edge_weights_dict[(data.edge_index[0, i].item(),
                                     data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]))
+            # pout(("Done."))
 
+        # del edge_weights_dict
         # data.edge_attr = torch.from_numpy(np.array(
         #     [edge_embeddings_dict[(data.edge_index[0, i].item(),
         #                            data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]
@@ -668,6 +669,8 @@ class EdgeMLP(torch.nn.Module):
         # avg_total_per_batch = np.sum(batch_sizes)/np.mean(batch_sizes)
 
         torch.cuda.empty_cache()
+
+        # pout(("returning inference"))
 
         if assign_edge_weights:
             return torch.tensor(preds), total_loss/train_sample_size, torch.tensor(ground_truths), data.to("cpu")
