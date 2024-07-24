@@ -527,16 +527,22 @@ class FiltrationHierarchyGraphSampler:
         self.subset_samplers = subset_samplers
         self.subset_to_super_mapping = subset_to_super_mapping
         self.batch_size = batch_size
+        self.num_nodes = super_data.num_nodes
+        self.current_idx = 0
         self.shuffle = shuffle
 
     def sample(self):
+        if self.current_idx >= self.num_nodes:
+            self.current_idx = 0  # Reset for the next epoch
+
         if self.shuffle:
             # Sample nodes from the super-graph
             node_indices = torch.randint(0, self.super_data.num_nodes, (self.batch_size,))
         else:
             # Sample nodes from the super-graph without shuffling
-            all_node_indices = torch.arange(self.super_data.num_nodes)
-            node_indices = all_node_indices[:self.batch_size]
+            end_idx = min(self.current_idx + self.batch_size, self.num_nodes)
+            node_indices = torch.arange(self.current_idx, end_idx)
+            self.current_idx = end_idx
 
         # Get valid nodes for each subset graph
         valid_subset_nodes = []
@@ -885,14 +891,21 @@ class HierGNN(torch.nn.Module):
                                           filtration=None, thresholds=[.5, 1.0]):
 
         device = input_dict["device"]
-
-        #
-        # from crit
         optimizer = input_dict["optimizer"]
         loss_op = input_dict["loss_op"]
         grad_scalar = input_dict["grad_scalar"]
         scheduler = input_dict["scheduler"]
-        #
+
+        total_epochs = input_dict["total_epochs"]
+        epoch = input_dict['epoch']
+        eval_steps = input_dict['eval_steps']
+        input_steps = input_dict["steps"]
+
+        val_data = input_dict["val_data"]
+        val_input_dict = {"data": val_data,
+                            "device": device,
+                          "dataset": input_dict["dataset"],
+                          "loss_op":loss_op}
         #
         """ NOTE ON WHAT NEEDS TO BE DONE:
                 create a hierarchical set of neioghborhood loaders for each each leve
@@ -922,26 +935,7 @@ class HierGNN(torch.nn.Module):
 
 
         total_loss = total_correct = 0
-        last_loss, last_acc = 0, 0
         total_val_loss = 0
-
-
-        val_data = input_dict["val_data"]
-        val_input_dict = {"data": val_data,
-                            "device": device,
-                          "dataset": input_dict["dataset"],
-                          "loss_op":loss_op}
-
-
-        total_epochs = input_dict["total_epochs"]
-        epoch = input_dict['epoch']
-        eval_steps = input_dict['eval_steps']
-        input_steps = input_dict["steps"]
-
-
-
-
-
 
         self.train()
         self.training = True
@@ -1520,9 +1514,10 @@ class HierJGNN(torch.nn.Module):
         self.super_graph = self.graphs[-1]
         #hierarchical graph neighborhood sampler
         self.hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(self.super_graph,
-                                                              self.sublevel_graph_loaders,
-                                                              self.sub_to_sup_mappings,
-                                                              self.batch_size)
+                                                                          self.sublevel_graph_loaders,
+                                                                          self.sub_to_sup_mappings,
+                                                                          self.batch_size,
+                                                                          shuffle=True)
 
         ######################################################################################
         #           Define message passing / neighborhood aggration scheme for each
@@ -1549,7 +1544,7 @@ class HierJGNN(torch.nn.Module):
                                                                             use_node_degree=None,
                                                                             use_node_label=None,
                                                                             gin_number=1,
-                                                                            gin_dimension=64,
+                                                                            gin_dimension=self.dim_hidden,
                                                                             gin_mlp_type ='lin_bn_lrelu_lin')\
                                                     for graph in self.graphs]
         # MLP out layer combining (concatenating) each nodes',
@@ -1557,35 +1552,6 @@ class HierJGNN(torch.nn.Module):
         # learned embedding representation
         self.hypergraph_node_embedding = torch.nn.Linear(self.dim_hidden * (len(self.graphs) + 1),
                                                            out_channels)
-
-
-    def forward(self, super_x, super_adjs, subset_xs, subset_adjs):
-        # Super-graph convolution
-        super_x = self.levelset_modules[-1](super_x, super_adjs)#(super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
-        super_filtration_value = self.levelset_graph_filtration_functions[-1](super_x)
-        super_x = super_filtration_value * super_x
-        # super_x = self.super_conv1((super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
-        # super_x = F.relu(super_x)
-        # super_x = self.super_conv2((super_x, super_x[super_adjs[1].src_node]), super_adjs[1].edge_index)
-
-        # Subset-graph convolutions
-        subset_outs = []
-        for i, (subset_x, subset_adj) in enumerate(zip(subset_xs, subset_adjs)):
-            if subset_x.size(0) == 0:
-                continue  # Skip if no valid nodes
-            if i != len(self.levelset_modules)-1:
-                subset_x = self.levelset_modules[i](subset_x, subset_adj)
-                sub_filtration_value = self.levelset_graph_filtration_functions[i](subset_x)
-                subset_x = sub_filtration_value * subset_x
-                # subset_x = self.subset_conv1((subset_x, subset_x[subset_adj[0].src_node]), subset_adj[0].edge_index)
-                # subset_x = F.relu(subset_x)
-                # subset_x = self.subset_conv2((subset_x, subset_x[subset_adj[1].src_node]), subset_adj[1].edge_index)
-                subset_outs.append(subset_x)
-
-        # Concatenate super-graph and subset-graph embeddings
-        combined = torch.cat([super_x] + subset_outs, dim=1)
-        out = self.hypergraph_node_embedding(combined)
-        return F.log_softmax(out, dim=1)
 
     def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
 
@@ -1638,31 +1604,207 @@ class HierJGNN(torch.nn.Module):
         return neighborsampler
 
 
-    # def train(self, input_dict):
-    #     node_indices, subset_samples = super_graph_sampler.sample()
-    #     optimizer.zero_grad()
-    #     loss = 0
-    #
-    #     super_adjs = [adj.to(device) for adj in
-    #                   subset_samples[0][2]]  # Assuming first subset_sample is for super-graph
-    #     super_x = super_data.x.to(device)
-    #     subset_adjs = []
-    #     subset_xs = []
-    #
-    #     for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
-    #         if len(n_id) == 0:
-    #             continue  # Skip empty batches
-    #         adjs = [adj.to(device) for adj in adjs]
-    #         subset_adjs.append(adjs)
-    #         subset_xs.append(subset_data[i].x[n_id].to(device))
-    #
-    #     out = model(super_x, super_adjs, subset_xs, subset_adjs)
-    #     y = torch.randint(0, 3, (super_x.size(0),)).to(device)  # Dummy labels
-    #     loss += F.nll_loss(out, y)
-    #
-    #     loss.backward()
-    #     optimizer.step()
+    def forward(self, super_x, super_adjs, subset_xs, subset_adjs):
+        # Super-graph convolution
+        super_x = self.levelset_modules[-1](super_x, super_adjs)#(super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
+        super_filtration_value = self.levelset_graph_filtration_functions[-1](super_x)
+        super_x = super_filtration_value * super_x
 
+        # Subset-graph convolutions
+        subset_outs = []
+        for i, (subset_x, subset_adj) in enumerate(zip(subset_xs, subset_adjs)):
+            if subset_x.size(0) == 0:
+                subset_outs.append(torch.zeros(subset_x.size(0), self.dim_hidden).to(subset_x.device))
+                continue  # Skip if no valid nodes
+            """ need to put each modules batch norms to a device"""
+            subset_x = self.levelset_modules[i](subset_x, subset_adj)
+            sub_filtration_value = self.levelset_graph_filtration_functions[i](subset_x)
+            subset_x = sub_filtration_value * subset_x
+            subset_outs.append(subset_x)
+
+        # Concatenate super-graph and subset-graph embeddings
+        combined = torch.cat([super_x] + subset_outs, dim=1)
+        out = self.hypergraph_node_embedding(combined)
+        return F.log_softmax(out, dim=1)
+
+
+    def train(self, input_dict):
+        device = input_dict["device"]
+        optimizer = input_dict["optimizer"]
+        loss_op = input_dict["loss_op"]
+        grad_scalar = input_dict["grad_scalar"]
+        scheduler = input_dict["scheduler"]
+
+        total_epochs = input_dict["total_epochs"]
+        epoch = input_dict['epoch']
+        eval_steps = input_dict['eval_steps']
+        input_steps = input_dict["steps"]
+
+        val_data = input_dict["val_data"]
+        val_input_dict = {"data": val_data,
+                          "device": device,
+                          "dataset": input_dict["dataset"],
+                          "loss_op": loss_op}
+
+        self.train()
+        self.training = True
+
+        approx_thresholds = np.arange(0.0, 1.0, 0.1)
+
+        total_loss, total_correct, total_training_points = 0, 0, 0
+        predictions, all_labels = [], []
+
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+
+        while True:
+
+            node_indices, subset_samples = self.hierarchical_graph_sampler.sample()
+
+            if node_indices.numel() == 0:
+                break  # End of epoch
+
+            optimizer.zero_grad()
+            loss = 0
+
+            super_adjs = [adj.to(device) for adj in subset_samples[-1][2]]  # Last subset sample is the supergraph
+            super_x = self.super_graph.x[node_indices].to(device)
+            subset_adjs = []
+            subset_xs = []
+
+            for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
+                if len(n_id) == 0:
+                    continue  # Skip empty batches
+                adjs = [adj.to(device) for adj in adjs]
+                subset_adjs.append(adjs)
+                subset_xs.append(self.graphs[i].x[n_id].to(device))
+                total_training_points += batch_size
+
+            with autocast():
+                out = self(super_x,
+                           super_adjs,
+                           subset_xs,
+                           subset_adjs)
+
+            y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
+            loss = loss_op(out, y)
+
+            grad_scalar.scale(loss).backward()
+            grad_scalar.step(optimizer)
+            grad_scalar.update()
+            # optimizer.zero_grad()
+
+
+            total_loss += loss.item()
+
+            if self.num_classes > 2:  # (isinstance(loss_op, torch.nn.CrossEntropyLoss) or isinstance(loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(loss_op, torch.nn.NLLLoss)):
+                #total_correct += out.argmax(dim=-1).eq(y.argmax(dim=-1)).float().item()
+                total_correct += float(out.argmax(axis=1).eq(y).sum())
+                all_labels.extend(y)  # ground_truth)
+                predictions.extend(out.argmax(axis=1))
+            else:
+                predictions.extend(out)#preds)
+                all_labels.extend(y)#ground_truth)
+                # # total_correct += (out.long() == thresh_out).float().sum().item()#int(out.eq(y).sum())
+                # total_correct += (y == thresh_out).float().sum().item()  # int(out.eq(y).sum())
+                # # approx_acc = (y == thresh_out).float().mean().item()
+
+            del adjs, batch_size, n_id, loss, out, \
+                super_x, subset_xs, subset_adjs, super_adjs, y, \
+                node_indices, subset_samples
+            torch.cuda.empty_cache()
+
+        predictions = torch.tensor(predictions)
+        all_labels = torch.tensor(all_labels)
+        # all_labels=torch.cat(all_labels,dim=0)
+
+        num_classes = len(all_labels.unique())
+        num_targets = 1 if num_classes == 2 else num_classes
+        if num_targets != 1:
+            # approx_acc = total_correct/all_labels.numel()
+            approx_acc = (predictions == all_labels).float().mean().item()
+
+            del predictions, all_labels
+
+        else:
+            total_correct = int(predictions.eq(all_labels).sum())
+            all_labels = all_labels.detach().cpu().numpy()
+            predictions = predictions.detach().cpu().numpy()
+            approx_acc = total_correct/all_labels.shape[0]
+            # approx_acc = 0
+            # train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+            #                                                                     y_true=all_labels,
+            #                                                                     metric=accuracy_score,
+            #                                                                     metric_name='accuracy',
+            #                                                           num_targets=num_targets,
+            #                                                         thresholds=approx_thresholds)
+
+        if epoch % eval_steps == 0 and epoch != 0:
+            with torch.no_grad():
+                self.eval()
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+            self.training = True
+            self.train()
+            # val_out, val_loss, val_labels = self.inference(val_input_dict)
+            # if scheduler is not None:
+            #     scheduler.step(val_loss)
+            # num_classes = len(all_labels.unique())
+            # num_targets = 1 if num_classes == 2 else num_classes
+            if num_targets != 1:
+                # predictions = predictions
+                # approx_acc = (predictions == all_labels).float().mean().item()
+
+                val_pred = val_pred
+                val_acc = (val_pred == val_ground_truth).float().mean().item()
+                # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
+                print("Epoch: ", epoch,  f" Validation ACC: {val_acc:.4f}")
+
+                del val_pred, val_ground_truth
+
+            else:
+                # if False:  # because too slow
+                val_pred = val_pred.detach().cpu().numpy()
+                val_ground_truth = val_ground_truth.detach().cpu().numpy()
+                # val_acc = accuracy_score(val_ground_truth, val_pred)
+                val_optimal_threshold, val_acc = optimal_metric_threshold(y_probs=val_pred,
+                                                                                    y_true=val_ground_truth,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                          num_targets=num_targets,
+                                                                          thresholds=approx_thresholds)
+
+                val_thresh, val_roc = optimal_metric_threshold(val_pred,
+                                                                 val_ground_truth,
+                                                                 metric=metrics.roc_auc_score,
+                                                                 metric_name='ROC AUC',
+                                                               thresholds=approx_thresholds)
+
+                # all_labels = all_labels.detach().cpu().numpy()
+                # predictions = predictions.detach().cpu().numpy()
+                train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+                                                                                    y_true=all_labels,
+                                                                                    metric=accuracy_score,
+                                                                                    metric_name='accuracy',
+                                                                          num_targets=num_targets,
+                                                                        thresholds=approx_thresholds)
+
+                print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}",
+                      f" Validation ROC: {val_roc:.4f}")
+
+                # if scheduler is not None:
+                #     scheduler.step(val_loss)
+
+                del val_loss, val_pred, val_ground_truth
+
+
+        torch.cuda.empty_cache()
+
+        if scheduler is not None:
+            scheduler.step(total_loss / total_training_points)
+
+        if epoch % eval_steps == 0 and epoch != 0:
+            return total_loss/total_training_points , approx_acc, val_loss
+        else:
+            return total_loss / total_training_points, approx_acc, 666
     def inference(self, input_dict):
         r"""
         Given input data, applies Hierarchical Filtration Function to infer
@@ -1671,6 +1813,17 @@ class HierJGNN(torch.nn.Module):
         :param input_dict:
         :return:
         """
+        device = input_dict["device"]
+        optimizer = input_dict["optimizer"]
+        loss_op = input_dict["loss_op"]
+
+        # total_epochs = input_dict["total_epochs"]
+        # epoch = input_dict['epoch']
+        # eval_steps = input_dict['eval_steps']
+        # input_steps = input_dict["steps"]
+        #
+        # data = input_dict["data"]
+        #
         _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
                                                              assign_edge_weights=True)
         # compute persistence filtration for graph hierarchy
@@ -1682,30 +1835,77 @@ class HierJGNN(torch.nn.Module):
                                                                     batch_size=self.batch_size,
                                                                     num_layers=self.num_layers)
         graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
-                                                                          filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                                          filtration_graph_hierarchy.node_mappings)
+                                                           filtration_graph_hierarchy.sub_to_sup_mappings,
+                                                           filtration_graph_hierarchy.node_mappings)
         pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs), "%%%%%%%"))
         graph_levels = np.flip(np.arange(len(graphs) + 1))
         # get neighborhood loaders for each sublevel graph
         sublevel_graph_loaders = [self.get_graph_dataloader(graph,
                                                                  shuffle=False,
-                                                                 num_neighbors=[-1]) \
-                                       for graph in graphs]
+                                                                 num_neighbors=[-1])
+                                  for graph in graphs]
         super_graph = graphs[-1]
         # hierarchical graph neighborhood sampler
-        """
-        %%%%%%%%%%%%    NOTE: have to address shuffle for inference    !!!!!!
-        """
         hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_graph,
                                                                      sublevel_graph_loaders,
                                                                      sub_to_sup_mappings,
-                                                                     self.batch_size)
+                                                                     self.batch_size,
+                                                                     shuffle=False)
 
 
-        preds = None
-        loss = None
-        train_size = None
-        total_loss = loss / train_size
-        y = None
 
-        return torch.tensor(preds), total_loss, torch.tensor(y), None
+        self.eval()
+        self.training = False
+
+        approx_thresholds = np.arange(0.0, 1.0, 0.1)
+
+        total_loss, total_correct, total_samples= 0, 0, 0
+        predictions, labels = [], []
+
+        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        with torch.no_grad():
+            while True:
+
+                node_indices, subset_samples = self.hierarchical_graph_sampler.sample()
+
+                if node_indices.numel() == 0:
+                    break  # End of epoch
+
+                # optimizer.zero_grad()
+                loss = 0
+
+                super_adjs = [adj.to(device) for adj in subset_samples[-1][2]]  # Last subset sample is the supergraph
+                super_x = self.super_graph.x[node_indices].to(device)
+                subset_adjs = []
+                subset_xs = []
+
+                for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
+                    if len(n_id) == 0:
+                        continue  # Skip empty batches
+                    adjs = [adj.to(device) for adj in adjs]
+                    subset_adjs.append(adjs)
+                    subset_xs.append(self.graphs[i].x[n_id].to(device))
+                    total_samples += batch_size
+
+                with autocast():
+                    out = self(super_x,
+                               super_adjs,
+                               subset_xs,
+                               subset_adjs)
+
+                y = self.super_graph.y[node_indices].to(device)  # n_id[:batch_size]].to(device)
+                loss = loss_op(out, y)
+                total_loss += loss.item()
+
+                predictions.extend(out)
+                labels.extend(y)
+
+                del adjs, batch_size, n_id, loss, out,\
+                    super_x, subset_xs, subset_adjs, super_adjs, y,\
+                    node_indices, subset_samples
+                torch.cuda.empty_cache()
+
+
+        total_loss = total_loss / total_samples
+
+        return torch.tensor(predictions), total_loss, torch.tensor(labels)
