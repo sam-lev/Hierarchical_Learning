@@ -517,15 +517,26 @@ class SubLevelGraphFiltration(torch.nn.Module):
 
 
 class FiltrationHierarchyGraphSampler:
-    def __init__(self, super_data, subset_samplers, subset_to_super_mapping, batch_size):
+    def __init__(self,
+                 super_data,
+                 subset_samplers,
+                 subset_to_super_mapping,
+                 batch_size,
+                 shuffle=False):
         self.super_data = super_data
         self.subset_samplers = subset_samplers
         self.subset_to_super_mapping = subset_to_super_mapping
         self.batch_size = batch_size
+        self.shuffle = shuffle
 
     def sample(self):
-        # Sample nodes from the super-graph
-        node_indices = torch.randint(0, self.super_data.num_nodes, (self.batch_size,))
+        if self.shuffle:
+            # Sample nodes from the super-graph
+            node_indices = torch.randint(0, self.super_data.num_nodes, (self.batch_size,))
+        else:
+            # Sample nodes from the super-graph without shuffling
+            all_node_indices = torch.arange(self.super_data.num_nodes)
+            node_indices = all_node_indices[:self.batch_size]
 
         # Get valid nodes for each subset graph
         valid_subset_nodes = []
@@ -535,8 +546,13 @@ class FiltrationHierarchyGraphSampler:
 
         # Get neighborhood information from each subset graph
         subset_samples = []
+        # for i, sampler in enumerate(self.subset_samplers):
+        #     subset_samples.append(sampler.sample(valid_subset_nodes[i]))
         for i, sampler in enumerate(self.subset_samplers):
-            subset_samples.append(sampler.sample(valid_subset_nodes[i]))
+            if len(valid_subset_nodes[i]) > 0:  # Ensure there are valid nodes to sample
+                subset_samples.append(sampler.sample(valid_subset_nodes[i]))
+            else:
+                subset_samples.append((0, torch.tensor([]), []))  # Handle empty batches
 
         return node_indices, subset_samples
 
@@ -1503,7 +1519,7 @@ class HierJGNN(torch.nn.Module):
                                        for graph in self.graphs]
         self.super_graph = self.graphs[-1]
         #hierarchical graph neighborhood sampler
-        hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(self.super_graph,
+        self.hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(self.super_graph,
                                                               self.sublevel_graph_loaders,
                                                               self.sub_to_sup_mappings,
                                                               self.batch_size)
@@ -1555,6 +1571,8 @@ class HierJGNN(torch.nn.Module):
         # Subset-graph convolutions
         subset_outs = []
         for i, (subset_x, subset_adj) in enumerate(zip(subset_xs, subset_adjs)):
+            if subset_x.size(0) == 0:
+                continue  # Skip if no valid nodes
             if i != len(self.levelset_modules)-1:
                 subset_x = self.levelset_modules[i](subset_x, subset_adj)
                 sub_filtration_value = self.levelset_graph_filtration_functions[i](subset_x)
@@ -1618,6 +1636,32 @@ class HierJGNN(torch.nn.Module):
                 # num_workers=8,
             )
         return neighborsampler
+
+
+    # def train(self, input_dict):
+    #     node_indices, subset_samples = super_graph_sampler.sample()
+    #     optimizer.zero_grad()
+    #     loss = 0
+    #
+    #     super_adjs = [adj.to(device) for adj in
+    #                   subset_samples[0][2]]  # Assuming first subset_sample is for super-graph
+    #     super_x = super_data.x.to(device)
+    #     subset_adjs = []
+    #     subset_xs = []
+    #
+    #     for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
+    #         if len(n_id) == 0:
+    #             continue  # Skip empty batches
+    #         adjs = [adj.to(device) for adj in adjs]
+    #         subset_adjs.append(adjs)
+    #         subset_xs.append(subset_data[i].x[n_id].to(device))
+    #
+    #     out = model(super_x, super_adjs, subset_xs, subset_adjs)
+    #     y = torch.randint(0, 3, (super_x.size(0),)).to(device)  # Dummy labels
+    #     loss += F.nll_loss(out, y)
+    #
+    #     loss.backward()
+    #     optimizer.step()
 
     def inference(self, input_dict):
         r"""
