@@ -200,7 +200,8 @@ class EdgeMLP(torch.nn.Module):
 
             x = embedding_layer(x)
 
-            x = self.batch_norms[i](x)
+            if self.training:
+                x = self.batch_norms[i](x)
             # if i == 0:
             # x_res = x_hidden + x_res
             if i != self.num_layers - 1:
@@ -208,7 +209,7 @@ class EdgeMLP(torch.nn.Module):
 
         # x = x + x_res  # torch.cat([x,x_res],axis=1)
         edge_logit = self.edge_pred_mlp(x)#.squeeze(1)#_jump)
-        x = self.batch_norms[-1](x)
+        # x = self.batch_norms[-1](x)
 
         edge_logit = self.probability( edge_logit ).squeeze(1)
 
@@ -565,13 +566,13 @@ class EdgeMLP(torch.nn.Module):
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
             num_neighbors=[-1],
-            batch_size=self.batch_size, #data.edge_index.shape[1],
+            batch_size=1,#self.batch_size, #data.edge_index.shape[1],
             shuffle=False,
             # drop_last=True,
             # num_workers=8
         )
 
-        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
 
         train_sample_size = 0

@@ -124,11 +124,9 @@ class LevelSetMessageAggregator(nn.Module):
 
     def forward(self, x, adjs):
         xs = []
-        for i, adj in enumerate(adjs):#(edge_index, _, size) in enumerate(adjs):
-            pout(("ADJ ADJ ln 128 ", adj))
-            # super_x = conv((super_x, super_x[super_adjs[i].src_node]), super_adjs[i].edge_index
-            x_target = x[: adj.size[1]]# x[: size[1]]  # Target nodes are always placed first.
-            edge_index = adj.edge_index
+        for i, (edge_index, _, size) in enumerate(adjs): #
+            pout(("edge_indexs subsamp ", edge_index, " size subsamp ", size))
+            x_target = x[: size[1]]
             x = self.model_nbr_msg_aggr[i]((x,x_target), edge_index)#(x, x_target), edge_index)
             x = self.dropout(x)
             x = self.batch_norms[i](x)
@@ -477,8 +475,8 @@ class SubLevelGraphFiltration(torch.nn.Module):
         max_node_deg = max_node_deg
         num_node_lab = num_targets
 
-        # if set_node_degree_uninformative and use_node_degree:
-        #     self.embed_deg = UniformativeDummyEmbedding(gin_dimension)
+        if set_node_degree_uninformative and use_node_degree:
+            self.embed_deg = UniformativeDummyEmbedding(gin_dimension)
         if use_node_degree:
             self.embed_deg = nn.Embedding(max_node_deg + 1, dim)
         else:
@@ -507,7 +505,7 @@ class SubLevelGraphFiltration(torch.nn.Module):
             nn.Sigmoid()
         )
 
-    def forward(self, batch, edge_index, degree, node_label):
+    def forward(self, batch, edge_index, degree=None, node_label=None):
 
         node_deg = degree#batch.node_deg
         node_lab = node_label#batch.node_lab
@@ -518,16 +516,17 @@ class SubLevelGraphFiltration(torch.nn.Module):
                zip([self.embed_deg, self.embed_lab], [node_deg, node_lab])
                if e is not None]
 
-        # tmp = torch.cat(tmp, dim=1)
-
-        z = [batch]#tmp]
+        tmp = torch.cat(tmp, dim=1)
+        # tmp = torch.cat(batch,dim=1)
+        z = [tmp]
 
         for conv, bn in zip(self.convs, self.bns):
             x = conv(z[-1], edge_index)
             x = bn(x)
             x = self.act(x)
             z.append(x)
-
+        # x = z[-1]
+        # x = self.global_pool_fn(x, batch.batch)
         x = torch.cat(z, dim=1)
         ret = self.fc(x).squeeze()
         return ret
@@ -576,7 +575,7 @@ class FiltrationHierarchyGraphSampler:
         #     subset_samples.append(sampler.sample(valid_subset_nodes[i]))
         for i, sampler in enumerate(self.subset_samplers):
             if len(valid_subset_nodes[i]) > 0:  # Ensure there are valid nodes to sample
-                subset_samples.append(sampler.sample(valid_subset_nodes[i]))
+                subset_samples.append(sampler(valid_subset_nodes[i])) # .sample(valid_subset_nodes[i]))
             else:
                 subset_samples.append((0, torch.tensor([]), []))  # Handle empty batches
 
@@ -1559,6 +1558,7 @@ class HierJGNN(torch.nn.Module):
                                                                             num_targets=num_targets,
                                                                             eps=epsilon,
                                                                             use_node_degree=None,
+                                                                            set_node_degree_uninformative=True,
                                                                             use_node_label=None,
                                                                             gin_number=1,
                                                                             gin_dimension=self.dim_hidden,
@@ -1621,7 +1621,7 @@ class HierJGNN(torch.nn.Module):
         return neighborsampler
 
 
-    def forward(self, super_x, super_adjs, subset_xs, subset_adjs, subset_ys=None):
+    def forward(self, super_x, super_adjs, subset_xs, subset_adjs, subset_bs, subset_ys=None):
         # Super-graph convolution
         # super_x = self.levelset_modules[-1](super_x, super_adjs)#(super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
         # super_filtration_value = self.levelset_graph_filtration_functions[-1](super_x)
@@ -1691,8 +1691,10 @@ class HierJGNN(torch.nn.Module):
             optimizer.zero_grad()
             loss = 0
 
+            # batch_size, n_id, adjs  for subset_nbr_sampler in subset_samples
             super_adjs = [adj.to(device) for adj in subset_samples[-1][2]]  # Last subset sample is the supergraph
             super_x = self.super_graph.x[node_indices].to(device)
+            subset_bs = []
             subset_adjs = []
             subset_xs = []
             subset_ys = []
@@ -1704,14 +1706,16 @@ class HierJGNN(torch.nn.Module):
                 subset_adjs.append(adjs)
                 subset_xs.append(self.graphs[i].x[n_id].to(device))
                 subset_ys.append(self.graphs[i].y[n_id].to(device))
+                subset_bs.append(batch_size)
                 total_training_points += batch_size
 
             with autocast():
-                out = self(super_x,
-                           super_adjs,
-                           subset_xs,
-                           subset_ys,
-                           subset_adjs)
+                out = self(super_x=super_x,  #  super_x, super_adjs, subset_xs, subset_adjs, subset_ys=None):
+                           super_adjs=super_adjs,
+                           subset_xs=subset_xs,
+                           subset_adjs=subset_adjs,
+                           subset_bs=subset_bs,
+                           subset_ys=None)
 
             y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
             loss = loss_op(out, y)
@@ -1943,3 +1947,18 @@ class HierJGNN(torch.nn.Module):
         total_loss = total_loss / total_samples
 
         return torch.tensor(predictions), total_loss, torch.tensor(labels)
+
+
+class UniformativeDummyEmbedding(nn.Module):
+    def __init__(self, dim):
+        super().__init__()
+        b = torch.ones(1, dim, dtype=torch.float)
+        self.register_buffer('ones', b)
+
+    def forward(self, batch):
+        assert batch.dtype == torch.long
+        return self.ones.expand(batch.size(0), -1)
+
+    @property
+    def dim(self):
+        return self.ones.size(1)
