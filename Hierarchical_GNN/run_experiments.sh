@@ -32,12 +32,12 @@ python main.py --cuda_num=0 --dropout=0.2 --dim_hidden=512 --num_layers=5 \
 exp_name="exp4_${name}_Wisconsin.log"
 exp4() {
 python main.py --cuda_num=0 --dropout=0.2 --dim_hidden=512 --num_layers=5 \
---batch_size=32 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
---dataset=WebKB --epochs=80 --homophily=0.9 \
+--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+--dataset=WebKB --epochs=2 --homophily=0.9 \
 --multi_label=True --type_model=HierGNN \
---eval_steps=50 --train_by_steps=False \
+--eval_steps=1 --train_by_steps=False \
 --lr=1e-4 --lr2=1e-4 --weight_decay=1e-8 \
---data_subset=wisconsin --persistence=0.8 --hier_model=HST 2>&1 | tee -- "$run_base/$run_path/$exp_name"
+--data_subset=wisconsin --persistence=0.3 --hier_model=HJT 2>&1 | tee -- "$run_base/$run_path/$exp_name"
 }
 exp4
 exp_name="exp5_${name}_tolokers.log"
