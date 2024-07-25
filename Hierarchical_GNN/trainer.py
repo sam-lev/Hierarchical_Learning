@@ -16,6 +16,7 @@ from torch.profiler import ProfilerActivity, profile
 from torch_geometric.transforms import Compose, ToSparseTensor, ToUndirected, RandomLinkSplit, AddSelfLoops
 
 from GraphSampling import *
+from GraphSampling.HierGNN import HierJGNN, HierSGNN
 # from LP.LP_Adj import LabelPropagation_Adj
 # from Precomputing import *
 from GraphSampling.MLPInit import *
@@ -596,11 +597,19 @@ class trainer(object):
             #
             # Instantiate the Hierarchical GNN Model
             #
-
-            self.model = HierGNN(
-                args, self.data, self.processed_dir,out_dim = self.num_targets,
-                train_data=self.train_data, test_data=self.test_data
-            )
+            if args.hier_model == "HST":
+                self.model = HierSGNN(
+                    args, self.data, self.processed_dir,out_dim = self.num_targets,
+                    train_data=self.train_data, test_data=self.test_data
+                )
+            elif args.hier_model == "HJT":
+                self.model = HierJGNN(
+                    args=args, data=self.data, processed_dir=self.processed_dir,
+                    train_data=self.train_data, filtration_function=None
+                    #, out_dim, dim_hidden, in_channels taken in model
+                )
+            else:
+                raise NotImplementedError(f"{args.hier_model} not implemented. Please specify valid hierarchical gnn `hier_model`")
         else:
             raise NotImplementedError("please specify `type_model`")
 
