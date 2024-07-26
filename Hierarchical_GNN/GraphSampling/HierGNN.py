@@ -145,7 +145,8 @@ class SubgraphFilterConv(nn.Module):
             x = self.model_nbr_msg_aggr[i]((x,x_target), edge_index)#(x, x_target), edge_index)
             x = self.dropout(x)
             x = self.batch_norms[i](x)
-            x = self.act(x)
+            if i!=self.num_layers-1:
+                x = self.act(x)
 
             xs.append(x)
         # x = self.jump(xs)
@@ -175,7 +176,7 @@ class PersistenceFiltrationGraphHierarchy():
         self.filtration = filtration
 
         pout((" %%%%% %%%% %%%% %%%% %%% %%%% ", "PERFORMING FILTRATION OF GRAPH"))
-        self.graphs, self.node_mappings, self.sub_to_sup_mappings = self.process_graph_filtrations(data=self.graph,
+        self.graphs, self.supergraph_to_subgraph_mappings, self.sub_to_sup_mappings = self.process_graph_filtrations(data=self.graph,
                                                                          thresholds=self.thresholds,
                                                                          )
 
@@ -338,8 +339,16 @@ class PersistenceFiltrationGraphHierarchy():
             edge_emb = data_clone.edge_attr.cpu().numpy()
             y = data_clone.y.cpu().numpy()
             for simplex in filtration:
-                if simplex.data >= threshold:
+                if simplex.data >= threshold and threshold != 0.0:
                     # copy simplex for new simplicial level
+                    u, v = simplex
+                    # add edge, incident nodes, labels, and features to subgraph
+                    G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
+                    G.nodes[u]['y'] = y[u]  # , features=data.x[u])#.tolist() if data.x is not None else {})
+                    G.nodes[v]['y'] = y[v]
+                    G.nodes[u]['features'] = data.x[u].tolist() if data.x is not None else {}
+                    G.nodes[v]['features'] = data.x[v].tolist() if data.x is not None else {}
+                else:
                     u, v = simplex
                     # add edge, incident nodes, labels, and features to subgraph
                     G.add_edge(u, v, weight=simplex.data, embedding=edge_emb[simplex])
@@ -350,10 +359,15 @@ class PersistenceFiltrationGraphHierarchy():
             graphs.append(G)
 
             # if nid_mapping is None:
-            if threshold != 0.0:
-                node_mapping = {node: i for i, node in enumerate(G.nodes())}
-            else:
-                node_mapping = {node:node for node in G.nodes()}
+            # if threshold != 0.0:
+            node_mapping = {node: i for i, node in enumerate(np.sort(G.nodes()))}
+            # else:
+            #     node_mapping = {node:node for node in np.sort(G.nodes())} # must also do sup to int bc train/val/test splits
+            # if threshold == 0:
+            #     pout(("SANITY CHECK FOR NODE MAPPINGS ", "CHECKING IF GLOBAL ID MAP EQUAL TO ITER"))
+            #     pout(("IS EQUAL: ",node_mapping.values() == node_mapping.keys()))
+            #     pout(("Keys sample: ", [k for k in node_mapping.keys()][:10]))
+            #     pout(("values sample: ", [k for k in node_mapping.values()][:10]))
             # else:
             #     node_mapping = {node: nid_mapping[node] for i, node in enumerate(G.nodes())}
             node_mappings.append(node_mapping)
@@ -382,12 +396,12 @@ class PersistenceFiltrationGraphHierarchy():
 
         return G
 
-    def nx_to_pyg(self, graph, node_mapping=True, graph_level=None):
+    def nx_to_pyg(self, graph, supergraph_to_subgraph_mapping, graph_level=None):
         # graph = copy.copy(graph)
 
         target_type = torch.long if self.num_classes > 2 else torch.float
         # Mapping nodes to contiguous integers
-        node_mapping = {node: i for i, node in enumerate(graph.nodes())}
+        node_mapping = supergraph_to_subgraph_mapping #{node: i for i, node in enumerate(graph.nodes())}
 
         int_mapping = {v: u for u, v in node_mapping.items()}
         # Convert edges to tensor format
@@ -448,7 +462,9 @@ class PersistenceFiltrationGraphHierarchy():
         for m in nodeidx_mappings:
             pout(("map length ", len(m)))
         # Convert back to PyG data objects
-        pyg_graphs = [self.nx_to_pyg(graph) for i, graph in enumerate(filtered_graphs)]
+        pyg_graphs = [self.nx_to_pyg(graph,
+                                     supergraph_to_subgraph_mapping=nodeidx_mappings[i])
+                      for i, graph in enumerate(filtered_graphs)]
         sub_to_sup_mappings = [{sub_id: global_id for global_id,sub_id\
                                              in subidx_map.items()}\
                                             for subidx_map in nodeidx_mappings]
@@ -565,15 +581,15 @@ class SubLevelGraphFiltration(torch.nn.Module):
             x = self.act(x)
             z.append(x)
         # x = z[-1]
-        pout((z[-1].size()," zneg1"))
+        # pout((z[-1].size()," zneg1"))
         filt_feat_val = z[-1]
         # x = self.global_pool_fn(x, batch.batch)
         x = torch.cat(z, dim=1)
-        pout((x.size()," cat"))
+        # pout((x.size()," cat"))
         ret = self.fc(x)
-        pout((ret.size(), " fc"))
+        # pout((ret.size(), " fc"))
         # ret = ret.squeeze()
-        pout((ret.size(), " ret sqz"))
+        # pout((ret.size(), " ret sqz"))
         return ret.view(-1,1)
 
 
@@ -611,10 +627,11 @@ class FiltrationHierarchyGraphSampler:
     def __next__(self):
         if self.current_idx >= self.num_nodes:
             raise StopIteration
-
+        # pout(("current idx ", self.current_idx))
         end_idx = min(self.current_idx + self.batch_size, self.num_nodes)
         sampled_indices = self.node_indices[self.current_idx:end_idx]
         self.current_idx = end_idx
+        # pout(("end idx ", self.current_idx))
 
         # if self.shuffle:
         #     # Sample nodes from the super-graph
@@ -628,9 +645,10 @@ class FiltrationHierarchyGraphSampler:
         # Get valid nodes for each subset graph
         valid_subset_nodes = []
         for i,mapping in enumerate(self.subset_to_super_mapping):
-            valid_nodes = [n for n in self.node_indices.tolist() if n in mapping.values()]
+            valid_nodes = [n for n in sampled_indices.tolist() if n in mapping.values()]
             valid_nodes_sub_idx = [self.super_to_subset_mapping[i][n] for n in valid_nodes]
             valid_subset_nodes.append(torch.tensor(valid_nodes_sub_idx))
+            """ Should I resample subgraph nodes to ensure same sized batches, or add dummy nodes?"""
 
         # Get neighborhood information from each subset graph
         subset_samples = []
@@ -638,7 +656,11 @@ class FiltrationHierarchyGraphSampler:
         #     subset_samples.append(sampler.sample(valid_subset_nodes[i]))
         for i, sampler in enumerate(self.subset_samplers):
             if len(valid_subset_nodes[i]) > 0:  # Ensure there are valid nodes to sample .sample_from_nodes()
-                subset_samples.append(sampler.collate_fn(valid_subset_nodes[i])) # .sample(valid_subset_nodes[i]))
+                subgraph_samples = sampler.collate_fn(valid_subset_nodes[i])
+                # pout(("subsamples size ", subgraph_samples[0], " len valid subnodes ", len(valid_subset_nodes[i])))
+                # subgraph_samples = sampler.filter_fn(subgraph_samples)
+                subset_samples.append(subgraph_samples) # .sample(valid_subset_nodes[i]))
+                # sample_from_nodes collate_fn
             else:
                 subset_samples.append((0, torch.tensor([]), []))  # Handle empty batches
 
@@ -795,7 +817,9 @@ class HierSGNN(torch.nn.Module):
                                                                       batch_size=self.batch_size,
                                                                       num_layers=self.num_layers)
 
-        self.graphs, self.node_mappings = hierarchicalgraphloader.graphs, hierarchicalgraphloader.node_mappings
+        self.graphs, self.sub_to_sup_mappings, self.supergraph_to_subgraph_mappings = (hierarchicalgraphloader.graphs,
+                                                                          hierarchicalgraphloader.sub_to_sup_mappings,
+                                                                          hierarchicalgraphloader.supergraph_to_subgraph_mappings)
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         graph = self.graphs[0]
@@ -1233,8 +1257,10 @@ class HierSGNN(torch.nn.Module):
                 subgraph_embeddings,
                 self.graphs[self.graph_level],
                 graph_level=self.graph_level,
-                node_mappings=[self.node_mappings[self.graph_level-1],
-                               self.node_mappings[self.graph_level]])
+                supergraph_to_subgraph_mappings=[self.supergraph_to_subgraph_mappings[self.graph_level-1],
+                               self.supergraph_to_subgraph_mappings[self.graph_level]],
+            subgraph_to_supergraph_mappings=[self.sub_to_sup_mappings[self.graph_level-1],
+                                             self.sub_to_sup_mappings[self.graph_level]])
 
 
 
@@ -1368,12 +1394,18 @@ class HierSGNN(torch.nn.Module):
 
         return torch.tensor(all_preds), total_loss, torch.tensor(all_labels) # torch.from_numpy(np.cat(x_pred,axis=0))##torch.stack(torch.tensor(x_pred).tolist(),dim=0)  # _all
 
-    def initialize_from_subgraph(self, subgraph, supergraph, graph_level, node_mappings):
+    def initialize_from_subgraph(self,
+                                 subgraph,
+                                 supergraph,
+                                 graph_level,
+                                 supergraph_to_subgraph_mappings,
+                                 subgraph_to_supergraph_mappings):
         pout(("graph level ", graph_level, "graph levelS ", self.graph_levels, " node mappings length ",
-              len(node_mappings)))
-        subgraph_mapping = node_mappings[0]
-        supgraph_mapping = node_mappings[1]
-        subsup_mapping = {sub_id: global_id for global_id,sub_id in subgraph_mapping.items()}
+              len(supergraph_to_subgraph_mappings)))
+        sup_to_sub_lower = supergraph_to_subgraph_mappings[0] # mapping of supergrpah to lower level subgraph
+        sup_to_sub_higher = supergraph_to_subgraph_mappings[1] # mapping supergraph idx to higher level subgraph
+        sub_to_sup_lower = subgraph_to_supergraph_mappings[0] #mapping of lower level graph to supergraph idx
+        # {sub_id: global_id for global_id,sub_id in subgraph_mapping.items()}
         # supsub_mapping = {global_id: sub_id for sub_id, global_id in supgraph_mapping.items()}
 
 
@@ -1381,8 +1413,8 @@ class HierSGNN(torch.nn.Module):
 
         new_node_features = supergraph.x.clone().detach().cpu().numpy()
         for node, embedding in subgraph.items():
-            global_id = subsup_mapping[node]
-            new_node_features[supgraph_mapping[global_id]] = embedding#supsub_mapping[global_id]] = embedding
+            global_id = sub_to_sup_lower[node]
+            new_node_features[sup_to_sub_higher[global_id]] = embedding#supsub_mapping[global_id]] = embedding
         supergraph.x = torch.tensor(new_node_features)
         return supergraph
 
@@ -1635,6 +1667,9 @@ class HierJGNN(torch.nn.Module):
         self.hypergraph_node_embedding = torch.nn.Linear(self.dim_hidden * len(self.graphs) ,
                                                            self.out_dim)
 
+        self.probability = nn.Sigmoid() if out_dim == 1 else nn.Softmax(dim=1) #nn.Softmax(dim=1) #nn.Sigmoid()
+
+
     def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
 
         if graph.num_nodes < 1200:
@@ -1676,7 +1711,7 @@ class HierJGNN(torch.nn.Module):
                 graph.edge_index,
                 # node_idx=train_idx,
                 # directed=False,
-                sizes=self.num_neighbors[: self.num_layers],
+                sizes=num_neighbors,
                 batch_size=self.batch_size,
                 # subgraph_type='induced',  # for undirected graph
                 # directed=False,#True,
@@ -1686,7 +1721,7 @@ class HierJGNN(torch.nn.Module):
         return neighborsampler
 
 
-    def forward(self, super_x, super_adjs, subset_xs, subset_adjs, subset_bs, subset_ys=None):
+    def forward(self, subset_xs, subset_adjs, subset_bs, subset_ys=None):
         # Super-graph convolution
         # super_x = self.levelset_modules[-1](super_x, super_adjs)#(super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
         # super_filtration_value = self.levelset_graph_filtration_functions[-1](super_x)
@@ -1694,33 +1729,39 @@ class HierJGNN(torch.nn.Module):
 
         # Subset-graph convolutions
         subset_outs = []
+        supergraph_emb_size = 0
         for i, (subset_x, subset_adj) in enumerate(zip(subset_xs, subset_adjs)):
             if subset_x.size(0) == 0:
                 subset_outs.append(torch.zeros(subset_x.size(0), self.dim_hidden).to(subset_x.device))
                 continue  # Skip if no valid nodes
             """ need to put each modules batch norms to a device"""
             subset_x = self.levelset_modules[i](subset_x, subset_adj, filtration_function=self.levelset_graph_filtration_functions[i])
-            # # subset_edge_index, subset_e_idx, subset_size = subset_adj[0].edge_index
-            subset_src, subset_dst = subset_adj[-1][0]
-            # subset_src = subset_x[:subset_adj[2][1]]
-            # deg = degree(subset_src, num_nodes=subset_adj[-1][2][1], dtype=torch.long).to(subset_x.device)  # size[1] is the number of nodes in the batch at layer i
-            node_lab = None #implement if wanted
-            sub_ys = subset_ys[i] if subset_ys is not None else None
-            size_last= subset_adj[-1][2][1]
-            size_first = subset_adj[0][2][1]
-            # subg_global_edge_index = self.graphs[i].edge_index.to(subset_x.device)
-            # sub_filtration_value = self.levelset_graph_filtration_functions[i](x=subset_x,
-            #                                                                    edge_index=subset_adj[0][0],
-            #                                                                    degree=deg
-            #                                                                    )
-            # subset_x = sub_filtration_value * subset_x
-            pout(("subx hid ", subset_x.size()))
+
+            if i ==len(subset_xs)-1:
+                supergraph_emb_size = subset_x.size(0)
+            # subset_src, subset_dst = subset_adj[-1][0]
+            # # subset_src = subset_x[:subset_adj[2][1]]
+            # # deg = degree(subset_src, num_nodes=subset_adj[-1][2][1], dtype=torch.long).to(subset_x.device)  # size[1] is the number of nodes in the batch at layer i
+            # node_lab = None #implement if wanted
+            # sub_ys = subset_ys[i] if subset_ys is not None else None
+            # size_last= subset_adj[-1][2][1]
+            # size_first = subset_adj[0][2][1]
+
             subset_outs.append(subset_x)
 
+        # Pad subset_outs to the same size as super_x
+        padded_subset_outs = []
+        for out in subset_outs[:-1]:
+            if out.size(0) < supergraph_emb_size:
+                padding = UniformativeDummyEmbedding(dim_in=supergraph_emb_size - out.size(0),
+                                                     dim_out=out.size(1)).to(out.device)
+                out = torch.cat([out, padding], dim=0)
+            padded_subset_outs.append(out)
+
         # Concatenate super-graph and subset-graph embeddings
-        combined = torch.cat(subset_outs, dim=1)
+        combined = torch.cat([subset_outs[-1]] + padded_subset_outs, dim=1)
         out = self.hypergraph_node_embedding(combined)
-        return F.log_softmax(out, dim=1)
+        return self.probability(out).squeeze(1)#F.log_softmax(out, dim=1)
 
     def train_net(self, input_dict):
         return self.hierarchical_joint_train_net(input_dict)
@@ -1759,13 +1800,9 @@ class HierJGNN(torch.nn.Module):
         for node_indices, subset_samples in self.hierarchical_graph_sampler:
             # if node_indices.numel() == 0:
             #     break  # End of epoch
-
             optimizer.zero_grad()
             loss = 0
 
-            # batch_size, n_id, adjs  for subset_nbr_sampler in subset_samples
-            super_adjs = [adj.to(device) for adj in subset_samples[-1][2]]  # Last subset sample is the supergraph
-            super_x = self.super_graph.x[node_indices].to(device)
             subset_bs = []
             subset_adjs = []
             subset_xs = []
@@ -1777,23 +1814,23 @@ class HierJGNN(torch.nn.Module):
                 adjs = [adj.to(device) for adj in adjs]
                 subset_adjs.append(adjs)
                 subset_xs.append(self.graphs[i].x[n_id].to(device))
-                subset_ys.append(self.graphs[i].y[n_id].to(device))
+                subset_ys.extend(self.graphs[i].y[n_id[:batch_size]].to(device))
                 subset_bs.append(batch_size)
                 total_training_points += batch_size
 
             with autocast():
-                out = self(super_x=super_x,  #  super_x, super_adjs, subset_xs, subset_adjs, subset_ys=None):
-                           super_adjs=super_adjs,
-                           subset_xs=subset_xs,
+                out = self(subset_xs=subset_xs,
                            subset_adjs=subset_adjs,
                            subset_bs=subset_bs,
                            subset_ys=None)
 
-            y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
-            out_size = out.size(0)
-            num_sampled = np.min([out_size, self.batch_size])
-            y=y[:num_sampled]
-            out=out[:num_sampled]
+            # y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
+            # out_size = out.size(0)
+            # num_sampled = np.min([out_size, self.batch_size])
+            supergraph_bs = subset_bs[-1]
+            y = torch.tensor(subset_ys).to(device)
+            y=y[:supergraph_bs]
+            out=out[:supergraph_bs]
             loss = loss_op(out, y)
 
             grad_scalar.scale(loss).backward()
@@ -1817,7 +1854,7 @@ class HierJGNN(torch.nn.Module):
                 # # approx_acc = (y == thresh_out).float().mean().item()
 
             del adjs, batch_size, n_id, loss, out, \
-                super_x, subset_xs, subset_adjs, super_adjs, y, \
+                subset_xs, subset_adjs, subset_bs, y, \
                 node_indices, subset_samples
             torch.cuda.empty_cache()
 
@@ -1960,75 +1997,83 @@ class HierJGNN(torch.nn.Module):
                                   for graph in graphs]
         super_graph = graphs[-1]
         # hierarchical graph neighborhood sampler
-        hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_graph,
-                                                                     sublevel_graph_loaders,
-                                                                     sub_to_sup_mappings,
-                                                                     self.batch_size,
+        hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_data=super_graph,
+                                                                     subset_samplers=sublevel_graph_loaders,
+                                                                     subset_to_super_mapping=sub_to_sup_mappings,
+                                                                     super_to_subset_mapping=sup_to_sub_mapping,
+                                                                     batch_size=self.batch_size,
                                                                      shuffle=False)
-
-
 
         self.eval()
         self.training = False
 
         approx_thresholds = np.arange(0.0, 1.0, 0.1)
 
-        total_loss, total_correct, total_samples= 0, 0, 0
+        total_loss, total_correct, total_training_points= 0, 0, 0
         predictions, labels = [], []
 
         # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
         with torch.no_grad():
-            while True:
-
-                node_indices, subset_samples = self.hierarchical_graph_sampler.sample()
-
-                if node_indices.numel() == 0:
-                    break  # End of epoch
-
-                # optimizer.zero_grad()
+            for node_indices, subset_samples in hierarchical_graph_sampler:
                 loss = 0
 
-                super_adjs = [adj.to(device) for adj in subset_samples[-1][2]]  # Last subset sample is the supergraph
-                super_x = self.super_graph.x[node_indices].to(device)
+                subset_bs = []
                 subset_adjs = []
                 subset_xs = []
+                subset_ys = []
 
                 for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
                     if len(n_id) == 0:
                         continue  # Skip empty batches
-                    adjs = [adj.to(device) for adj in adjs]
+                    # adjs = [adj.to(device) for adj in adjs]
+                    adjs = [adjs.to(device)]
                     subset_adjs.append(adjs)
-                    subset_xs.append(self.graphs[i].x[n_id].to(device))
-                    total_samples += batch_size
+                    subset_xs.append(graphs[i].x[n_id].to(device))
+                    subset_ys.extend(graphs[i].y[n_id[:batch_size]].to(device))
+                    subset_bs.append(batch_size)
+
 
                 with autocast():
-                    out = self(super_x,
-                               super_adjs,
-                               subset_xs,
-                               subset_adjs)
+                    out = self(subset_xs=subset_xs,
+                               subset_adjs=subset_adjs,
+                               subset_bs=subset_bs,
+                               subset_ys=None)
 
-                y = self.super_graph.y[node_indices].to(device)  # n_id[:batch_size]].to(device)
+                # y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
+                # out_size = out.size(0)
+                # num_sampled = np.min([out_size, self.batch_size])
+                total_training_points += subset_bs[-1]
+                supergraph_bs = subset_bs[-1]
+                y = torch.tensor(subset_ys).to(device)
+                y = y[:supergraph_bs]
+                out = out[:supergraph_bs]
+
                 loss = loss_op(out, y)
                 total_loss += loss.item()
 
-                predictions.extend(out)
-                labels.extend(y)
+                # for metrics
+                if self.num_classes > 2:
+                    out = out.argmax(axis=1)
+                predictions.extend(out.detach().cpu().numpy())
+                labels.extend(y.detach().cpu().numpy())
 
                 del adjs, batch_size, n_id, loss, out,\
-                    super_x, subset_xs, subset_adjs, super_adjs, y,\
+                    subset_xs, subset_adjs, y,\
                     node_indices, subset_samples
                 torch.cuda.empty_cache()
 
 
-        total_loss = total_loss / total_samples
-
-        return torch.tensor(predictions), total_loss, torch.tensor(labels)
+        total_loss = total_loss / total_training_points
+        pout(("PREDS ", predictions, "LABELS:", labels))
+        predictions = torch.tensor(predictions)
+        labels = torch.tensor(labels)
+        return predictions, total_loss, labels
 
 
 class UniformativeDummyEmbedding(nn.Module):
-    def __init__(self, dim):
+    def __init__(self, dim_out, dim_in=1):
         super().__init__()
-        b = torch.ones(1, dim, dtype=torch.float)
+        b = torch.ones(dim_in, dim_out, dtype=torch.float)
         self.register_buffer('ones', b)
 
     def forward(self, batch):
