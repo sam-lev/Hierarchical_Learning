@@ -1327,7 +1327,7 @@ class trainer(object):
             torch.cuda.manual_seed(args.random_seed)
             torch.cuda.manual_seed_all(args.random_seed)
             os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda_num)
-            torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
+            # torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
             # torch.backends.cudnn.deterministic = True
             torch.backends.cuda.matmul.allow_tf32 = True
             torch.backends.cudnn.benchmark = False
