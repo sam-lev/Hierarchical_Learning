@@ -1613,7 +1613,8 @@ class HierJGNN(torch.nn.Module):
                                                                          num_layers=self.num_layers)
         self.graphs, self.sub_to_sup_mappings, self.sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
                                                                           filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                                          filtration_graph_hierarchy.node_mappings)
+                                                                          filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
+
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         # get neighborhood loaders for each sublevel graph
@@ -1987,7 +1988,8 @@ class HierJGNN(torch.nn.Module):
                                                                          num_layers=self.num_layers)
         graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
                                                            filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                           filtration_graph_hierarchy.node_mappings)
+                                                           filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
+
         pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs), "%%%%%%%"))
         graph_levels = np.flip(np.arange(len(graphs) + 1))
         # get neighborhood loaders for each sublevel graph
@@ -2042,8 +2044,9 @@ class HierJGNN(torch.nn.Module):
                 # y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
                 # out_size = out.size(0)
                 # num_sampled = np.min([out_size, self.batch_size])
-                total_training_points += subset_bs[-1]
+
                 supergraph_bs = subset_bs[-1]
+                total_training_points += supergraph_bs
                 y = torch.tensor(subset_ys).to(device)
                 y = y[:supergraph_bs]
                 out = out[:supergraph_bs]
@@ -2063,8 +2066,8 @@ class HierJGNN(torch.nn.Module):
                 torch.cuda.empty_cache()
 
 
-        total_loss = total_loss / total_training_points
-        pout(("PREDS ", predictions, "LABELS:", labels))
+        total_loss = total_loss / float(total_training_points)
+        # pout(("PREDS ", predictions, "LABELS:", labels))
         predictions = torch.tensor(predictions)
         labels = torch.tensor(labels)
         return predictions, total_loss, labels
