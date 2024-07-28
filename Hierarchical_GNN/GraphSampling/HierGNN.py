@@ -856,7 +856,7 @@ class HierSGNN(torch.nn.Module):
         if graph.num_nodes < 1200:
             num_workers = 1
         else:
-            num_workers = 4
+            num_workers = 18
 
         if shuffle:
             neighborloader = NeighborLoader(data=graph,
@@ -1676,7 +1676,7 @@ class HierJGNN(torch.nn.Module):
         if graph.num_nodes < 1200:
             num_workers = 1
         else:
-            num_workers = 8
+            num_workers = 18
 
         if shuffle:
             neighborloader = NeighborLoader(data=graph,

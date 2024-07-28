@@ -1321,8 +1321,8 @@ class trainer(object):
     def set_seed(self, args):
 
 
-        if args.cuda and not torch.cuda.is_available():  # cuda is not available
-            args.cuda = False
+        #if args.cuda and not torch.cuda.is_available():  # cuda is not available
+        args.cuda = False
         if args.cuda:
             torch.cuda.manual_seed(args.random_seed)
             torch.cuda.manual_seed_all(args.random_seed)
