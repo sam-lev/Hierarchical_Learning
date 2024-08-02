@@ -269,7 +269,7 @@ class EdgeMLP(torch.nn.Module):
         if train_data.num_nodes < 1200:
             num_workers=1
         else:
-            num_workers=18
+            num_workers=4
 
         train_loader = NeighborLoader(  # Sampler(
             train_data,  # copy.copy(train_data),

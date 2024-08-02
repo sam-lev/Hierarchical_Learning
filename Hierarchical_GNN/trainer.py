@@ -463,6 +463,13 @@ class trainer(object):
 
         self.type_model = args.type_model
         self.epochs = args.epochs
+        """  
+        ################################CHANGED THISS   S!!! args.epochs
+        
+        
+        
+        #######################################################
+        """
         self.eval_steps = args.eval_steps
         self.train_by_steps = args.train_by_steps
         self.steps = -1
@@ -506,11 +513,11 @@ class trainer(object):
         # or a HeteroData object (functional name: random_link_split).
         # The split is performed such that the training split does not include edges
         # in validation and test splits; and the validation split does not include edges in the test split.
-        edge_train_transform = RandomLinkSplit(is_undirected=True,
+        self.edge_train_transform = RandomLinkSplit(is_undirected=True,
                                                num_val=0.2,
                                                num_test=0.2,
                                                add_negative_train_samples=False)
-        self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+        self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
 
         # pout(("dataset nodes points", self.dataset.node_points))
 
@@ -526,7 +533,7 @@ class trainer(object):
                 # self.dataset.data.y = self.dataset.data.y.float()
             args.dataset = self.dataset
 
-            self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+            self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
 
             self.loss_op = F.binary_cross_entropy_with_logits #if self.num_targets == 1 else F.cross_entropy
 
@@ -576,7 +583,7 @@ class trainer(object):
                 # self.dataset.data.y = self.dataset.data.y.long()#type(torch.LongTensor)
             args.dataset = self.dataset
 
-            self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+            self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
 
             pout((" multilabel after checking for node inference", self.multi_label,
                   " number of targets after ", self.num_targets))
@@ -605,7 +612,8 @@ class trainer(object):
             elif args.hier_model == "HJT":
                 self.model = HierJGNN(
                     args=args, data=self.data, processed_dir=self.processed_dir,
-                    train_data=self.train_data, filtration_function=None
+                    train_data=self.train_data, filtration_function=None, out_dim = self.num_targets
+                    # test_data=self.test_data
                     #, out_dim, dim_hidden, in_channels taken in model
                 )
             else:
@@ -705,7 +713,7 @@ class trainer(object):
         #                                        num_val=0.2,
         #                                        num_test=0.2,
         #                                        add_negative_train_samples=False)
-        # self.train_data, self.val_data, self.test_data = edge_train_transform(self.data)
+        self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
 
         torch.cuda.empty_cache()
         del self.model
@@ -1321,13 +1329,13 @@ class trainer(object):
     def set_seed(self, args):
 
 
-        #if args.cuda and not torch.cuda.is_available():  # cuda is not available
-        args.cuda = False
+        if args.cuda and not torch.cuda.is_available():  # cuda is not available
+            args.cuda = False
         if args.cuda:
             torch.cuda.manual_seed(args.random_seed)
             torch.cuda.manual_seed_all(args.random_seed)
             os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda_num)
-            # torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
+            torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
             # torch.backends.cudnn.deterministic = True
             torch.backends.cuda.matmul.allow_tf32 = True
             torch.backends.cudnn.benchmark = False

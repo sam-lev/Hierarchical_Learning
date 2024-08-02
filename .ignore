@@ -17,7 +17,7 @@ data/Planetoid/*
 # results
 ./Hierarchical_GNN/*_summary.txt
 ./Hierarchical_GNN/*_results.txt
-
+Hierarchical_GNN/runs/
 # logs
 ./Hierarchical_GNN/logs/*
 *.json
