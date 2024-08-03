@@ -566,7 +566,7 @@ class EdgeMLP(torch.nn.Module):
             # input_nodes=self.train_dataset.data.train_mask,
             # sizes=[-1],
             num_neighbors=[-1],
-            batch_size=1,#self.batch_size, #data.edge_index.shape[1],
+            batch_size=self.batch_size,#self.batch_size, #data.edge_index.shape[1],
             shuffle=False,
             # drop_last=True,
             # num_workers=8
@@ -575,21 +575,22 @@ class EdgeMLP(torch.nn.Module):
         # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
 
 
-        train_sample_size = 0
-        edges = []
-        edge_weights = []
-        x_pred = []
-        preds = []
-        ground_truths = []
-        total_loss = 0
-        edge_embeddings_dict = {}
-        edge_weights_dict = {}
-        batch_sizes = []
-        number_batches = 0.0
+
 
         # pout(("BEFORE INFER"))
 
         with torch.no_grad():
+            train_sample_size = 0.
+            edges = []
+            edge_weights = []
+            x_pred = []
+            preds = []
+            ground_truths = []
+            total_loss = 0.
+            edge_embeddings_dict = {}
+            edge_weights_dict = {}
+            batch_sizes = []
+            number_batches = 0.0
             for batch in inference_loader:#_size, n_id, adjs  in inference_loader:
                 self.eval()
                 self.training = False
@@ -637,12 +638,11 @@ class EdgeMLP(torch.nn.Module):
                 # pout(("AFTER LOSS INFER"))
 
                 preds.extend(out)
-                total_loss += loss#.item()# / batch_sizes[-1]
+                total_loss += loss.item()# / batch_sizes[-1]
                 ground_truths.extend(batch_labels)
 
                 # del batch, loss, out, out_target, batch_labels, e_id, batch_size, batch_labels_target
-                del batch, loss, out, batch_labels, e_id,batch_size, batch_labels_target, out_target
-
+                del batch, out, batch_labels, e_id,batch_size, batch_labels_target, out_target, loss
                 torch.cuda.empty_cache()
 
         # pout(("after inference loop"))
@@ -669,10 +669,10 @@ class EdgeMLP(torch.nn.Module):
         # preds = [item for sublist in preds for item in sublist]
         # avg_total_per_batch = np.sum(batch_sizes)/np.mean(batch_sizes)
 
-        torch.cuda.empty_cache()
+
 
         # pout(("returning inference"))
-
+        torch.cuda.empty_cache()
         if assign_edge_weights:
             return torch.tensor(preds), total_loss/train_sample_size, torch.tensor(ground_truths), data.to("cpu")
         else:
