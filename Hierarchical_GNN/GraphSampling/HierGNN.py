@@ -1577,6 +1577,7 @@ class HierJGNN(torch.nn.Module):
                  out_dim=None,     # defaults to number of unique labels i.e. num_classes
                  processed_dir=None,
                  train_data=None,
+                 val_data=None,
                  filtration_function=None,
                  # hidden_channels,
                  # out_channels
@@ -1602,6 +1603,7 @@ class HierJGNN(torch.nn.Module):
         self.weight_decay = args.weight_decay
         self.use_batch_norm = args.use_batch_norm
         self.thresholds = args.persistence
+        self.val_data = val_data
         #using base options expand samples to number of layers (hops)
         num_neighbors = args.num_neighbors
         if num_neighbors is None:
@@ -1659,6 +1661,51 @@ class HierJGNN(torch.nn.Module):
                                                                           super_to_subset_mapping=self.sup_to_sub_mapping,
                                                                           batch_size=self.batch_size,
                                                                           shuffle=True)
+        #
+        # validation graph hierarchy
+        #
+        # if self.filtration_function:
+        #     _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
+        #                                                          assign_edge_weights=True)
+        # compute persistence filtration for graph hierarchy
+        pout(("Performing Filtration,"
+              "On",
+              "Inference Dataset"))
+        self.val_filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=self.val_data,
+                                                              persistence=self.thresholds,
+                                                              filtration=None)
+        pout(("Filtration on",
+              "Inference",
+              "Done"))
+        self.val_graphs, self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping = (self.val_filtration_graph_hierarchy.graphs,
+                                                           self.val_filtration_graph_hierarchy.sub_to_sup_mappings,
+                                                           self.val_filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
+
+        pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(self.val_graphs), "%%%%%%%"))
+        graph_levels = np.flip(np.arange(len(self.val_graphs) + 1))
+        # get neighborhood loaders for each sublevel graph
+        self.val_sublevel_graph_loaders = [self.get_graph_dataloader(graph,
+                                                            shuffle=False,
+                                                            num_neighbors=[-1])
+                                  for graph in self.val_graphs]
+        self.val_super_graph = self.val_graphs[-1]
+        # hierarchical graph neighborhood sampler
+        self.val_hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_data=self.val_super_graph,
+                                                                     subset_samplers=self.val_sublevel_graph_loaders,
+                                                                     subset_to_super_mapping=self.val_sub_to_sup_mappings,
+                                                                     super_to_subset_mapping=self.val_sup_to_sub_mapping,
+                                                                     batch_size=self.batch_size,
+                                                                     shuffle=False)
+        # Graph_Filtration_Family_Val = GraphFiltrationFamilyWrapper( data=val_data,
+        #                                                             thresholds=self.thresholds,
+        #                                                             num_neighbors=[-1],
+        #                                                             num_layers=self.num_layers,
+        #                                                             batch_size=self.batch_size)
+        #
+        # self.val_graphs = Graph_Filtration_Family_Val.get_graphs()
+        # self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping = Graph_Filtration_Family_Val.get_node_maps()
+        # self.val_sublevel_graph_loaders = Graph_Filtration_Family_Val.get_graph_loaders()
+        # self.val_hierarchical_graph_sampler = Graph_Filtration_Family_Val.get_graph_sampler
 
         ######################################################################################
         #           Define message passing / neighborhood aggration scheme for each
@@ -1999,7 +2046,7 @@ class HierJGNN(torch.nn.Module):
         if epoch % eval_steps == 0 and epoch != 0:
             with torch.no_grad():
                 self.eval()
-                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict, validation=True)
             self.training = True
             self.train()
             # val_out, val_loss, val_labels = self.inference(val_input_dict)
@@ -2082,46 +2129,51 @@ class HierJGNN(torch.nn.Module):
         # if not validation:
         #     data = input_dict["data"]
         #     Multilevel_Graph_Wrapper = GraphFiltrationFamilyWrapper(data,self.thresholds,self.num_neighbors,self.batch_size)
+        if validation:
+            data = self.val_data
+            graphs, sub_to_sup_mappings, sup_to_sub_mapping = self.val_graphs, self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping
+            sublevel_graph_loaders = self.val_sublevel_graph_loaders
+            hierarchical_graph_sampler = self.val_hierarchical_graph_sampler
+        else:
+            data = input_dict["data"]
+            ###############################################################
+            # if a filtration function hasn't been applied to the data,
+            # e.g. edge inference for filter function value assignment
+            # (logistic prediction of an edge as homopholous for pers-
+            # sistence hierarchy.
+            ##############################################################
+            if self.filtration_function:
+                _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
+                                                                     assign_edge_weights=True)
+            # compute persistence filtration for graph hierarchy
+            pout(("Performing Filtration,"
+                  "On",
+                  "Inference Dataset"))
+            filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=data,
+                                                                  persistence=self.thresholds,
+                                                                  filtration=None)
+            pout(("Filtration on",
+                  "Inference",
+                  "Done"))
+            graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
+                                                               filtration_graph_hierarchy.sub_to_sup_mappings,
+                                                               filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
 
-        data = input_dict["data"]
-        ###############################################################
-        # if a filtration function hasn't been applied to the data,
-        # e.g. edge inference for filter function value assignment
-        # (logistic prediction of an edge as homopholous for pers-
-        # sistence hierarchy.
-        ##############################################################
-        if self.filtration_function:
-            _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
-                                                                 assign_edge_weights=True)
-        # compute persistence filtration for graph hierarchy
-        pout(("Performing Filtration,"
-              "On",
-              "Inference Dataset"))
-        filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=data,
-                                                              persistence=self.thresholds,
-                                                              filtration=None)
-        pout(("Filtration on",
-              "Inference",
-              "Done"))
-        graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
-                                                           filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                           filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
-
-        pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs), "%%%%%%%"))
-        graph_levels = np.flip(np.arange(len(graphs) + 1))
-        # get neighborhood loaders for each sublevel graph
-        sublevel_graph_loaders = [self.get_graph_dataloader(graph,
-                                                                 shuffle=False,
-                                                                 num_neighbors=[-1])
-                                  for graph in graphs]
-        super_graph = graphs[-1]
-        # hierarchical graph neighborhood sampler
-        hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_data=super_graph,
-                                                                     subset_samplers=sublevel_graph_loaders,
-                                                                     subset_to_super_mapping=sub_to_sup_mappings,
-                                                                     super_to_subset_mapping=sup_to_sub_mapping,
-                                                                     batch_size=self.batch_size,
-                                                                     shuffle=False)
+            pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs), "%%%%%%%"))
+            graph_levels = np.flip(np.arange(len(graphs) + 1))
+            # get neighborhood loaders for each sublevel graph
+            sublevel_graph_loaders = [self.get_graph_dataloader(graph,
+                                                                     shuffle=False,
+                                                                     num_neighbors=[-1])
+                                      for graph in graphs]
+            super_graph = graphs[-1]
+            # hierarchical graph neighborhood sampler
+            hierarchical_graph_sampler = FiltrationHierarchyGraphSampler(super_data=super_graph,
+                                                                         subset_samplers=sublevel_graph_loaders,
+                                                                         subset_to_super_mapping=sub_to_sup_mappings,
+                                                                         super_to_subset_mapping=sup_to_sub_mapping,
+                                                                         batch_size=self.batch_size,
+                                                                         shuffle=False)
 
         self.eval()
         self.training = False
@@ -2193,7 +2245,7 @@ class HierJGNN(torch.nn.Module):
         return predictions, total_loss, labels
 
 class GraphFiltrationFamilyWrapper():
-    def __init__(self, data, thresholds, num_neighbors,  batch_size, filter_function=None,input_dict=None):
+    def __init__(self, data, thresholds, num_neighbors, num_layers, batch_size, filter_function=None,input_dict=None):
         ###############################################################
         # if a filtration function hasn't been applied to the data,
         # e.g. edge inference for filter function value assignment
@@ -2223,6 +2275,7 @@ class GraphFiltrationFamilyWrapper():
         self.sublevel_graph_loaders = [get_graph_dataloader(graph,
                                                                  shuffle=False,
                                                                  num_neighbors=num_neighbors,
+                                                            num_layers=num_layers,
                                                             batch_size=batch_size)
                                   for graph in self.graphs]
         super_graph = self.graphs[-1]

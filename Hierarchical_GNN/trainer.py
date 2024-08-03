@@ -612,7 +612,7 @@ class trainer(object):
             elif args.hier_model == "HJT":
                 self.model = HierJGNN(
                     args=args, data=self.data, processed_dir=self.processed_dir,
-                    train_data=self.train_data, filtration_function=None, out_dim = self.num_targets
+                    train_data=self.train_data, val_data=self.val_data, filtration_function=None, out_dim = self.num_targets
                     # test_data=self.test_data
                     #, out_dim, dim_hidden, in_channels taken in model
                 )
