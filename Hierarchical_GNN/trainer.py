@@ -601,6 +601,7 @@ class trainer(object):
             pout(("USING MODEL:"))
             pout((self.type_model))
 
+
             #
             # Instantiate the Hierarchical GNN Model
             #
@@ -612,7 +613,8 @@ class trainer(object):
             elif args.hier_model == "HJT":
                 self.model = HierJGNN(
                     args=args, data=self.data, processed_dir=self.processed_dir,
-                    train_data=self.train_data, val_data=self.val_data, filtration_function=None, out_dim = self.num_targets
+                    train_data=self.train_data, val_data=self.val_data, test_data=self.test_data,
+                    filtration_function=None, out_dim = self.num_targets
                     # test_data=self.test_data
                     #, out_dim, dim_hidden, in_channels taken in model
                 )
@@ -695,15 +697,15 @@ class trainer(object):
 
         pout(("%%%%%%%", "FINSISHED INFERING OVER EDGES", "%%%%%%%"))
         pout(("updating dataset"))
-        (
-            self.data,
-            self.x,
-            self.y,
-            # self.split_masks,
-            self.evaluator,
-            self.processed_dir,
-            self.dataset,
-        ) = update_dataset(self.data, self.dataset)
+        # (
+        #     self.data,
+        #     self.x,
+        #     self.y,
+        #     # self.split_masks,
+        #     self.evaluator,
+        #     self.processed_dir,
+        #     self.dataset,
+        # ) = update_dataset(self.data, self.dataset)
         args.dataset = self.dataset
         args.data = self.data
         # From a crit look at evaluating gnns benchmark paper:
@@ -713,10 +715,11 @@ class trainer(object):
         #                                        num_val=0.2,
         #                                        num_test=0.2,
         #                                        add_negative_train_samples=False)
-        self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
+        # self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
 
         torch.cuda.empty_cache()
         del self.model
+        torch.cuda.empty_cache()
 
         return args, self.data, self.x, self.y,  self.dataset
 
@@ -979,7 +982,8 @@ class trainer(object):
         """train_input_dict = {"data": self.train_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset}"""
         test_input_dict = {"data": self.test_data, "y": self.y,"loss_op":self.loss_op,
-                            "device": self.device, "dataset": self.dataset}
+                            "device": self.device, "dataset": self.dataset,
+                           "type":"test"}
         all_input_dict = {"data": self.data, "y": self.y,"loss_op":self.loss_op,
                            "device": self.device, "dataset": self.dataset}
 
@@ -1335,6 +1339,7 @@ class trainer(object):
             torch.cuda.manual_seed(args.random_seed)
             torch.cuda.manual_seed_all(args.random_seed)
             os.environ["CUDA_VISIBLE_DEVICES"] = str(args.cuda_num)
+            # os.environ['CUDA_LAUNCH_BLOCKING'] = 1
             torch.cuda.memory.set_per_process_memory_fraction(0.99, device=0)
             # torch.backends.cudnn.deterministic = True
             torch.backends.cuda.matmul.allow_tf32 = True

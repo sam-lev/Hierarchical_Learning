@@ -17,9 +17,19 @@ experiment() {
 	local RUN_FILE=$7
 	local MODEL=$8
 	# epochs=84 eval_steps=14
-	python main.py --cuda_num=0 --dropout=0.2 --dim_hidden=512 --num_layers=5 \
-	--batch_size=32 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=84 --homophily=0.9 \
+	#python main.py --cuda_num=0 --dropout=0.0 --dim_hidden=512 --num_layers=2 \
+	#--batch_size=128 --use_batch_norm=False --SLE_threshold=0.9 --N_exp=1 \
+	#--dataset="$DATASET" --epochs=84 --homophily=0.9 \
+	#--multi_label=True --type_model=HierGNN \
+	#--eval_steps=14 --train_by_steps=False \
+	#--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
+	#--data_subset="$DATASUBSET" --persistence="${PERSISTENCE}" --hier_model="$MODEL" 2>&1 | tee -- "$RUN_FILE"
+	
+		# epochs=84 eval_steps=14
+	python main.py --cuda_num=0 \
+	--dropout=0.4 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=2 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=252 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=14 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -34,20 +44,20 @@ experiment() {
 
 ###########################################
 MODEL="HJT"
-
+: << COMMENT
 for DATASET in WikipediaNetwork
 do
 	for DATASUBSET in chameleon squirrel  
 	do
 		DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET"
 		mkdir -p "$DATA_RUN_PATH"
-		for PERSISTENCE in "0.5" "0.6" "0.7" "0.8" "0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
+		for PERSISTENCE in "0.1" "0.9" "0.5" "0.6" "0.7" "0.8" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
 		do
-			for LREDGE in 0.01 0.03 0.003 0.001 # 0.01 #0.03 0.0001
+			for LREDGE in 0.003 0.001 0.01 0.03  # 0.01 #0.03 0.0001
 			do
-				for LR in 0.01 0.03 0.003 0.001  #0.001 #0.01 #0.03 0.0001 #0.01 0.03 0.003
+				for LR in 0.003 0.03 0.003 0.01 0.001  #0.001 #0.01 #0.03 0.0001 #0.01 0.03 0.003
 				do
-					for WD in 0 1e-4 1e-6 1e-8 #1e-12
+					for WD in 5e-3 1e-6 1e-8 0#1e-12
 					do
 			    			exp_name="exp_${name}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
 			    			RUN_FILE="$DATA_RUN_PATH/$exp_name"
@@ -86,19 +96,21 @@ do
 	done
 done
 
+
+
 for DATASET in WebKB
 do
-	for DATASUBSET in wisconsin cornell texas #Wisconsin squirrel squirrel_filtered_directed roman_empire
+	for DATASUBSET in cornell wisconsin texas #Wisconsin squirrel squirrel_filtered_directed roman_empire
 	do
 		DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET"
 		mkdir -p "$DATA_RUN_PATH"
-		for PERSISTENCE in "0.5" "0.6" "0.7" "0.8" "0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
+		for PERSISTENCE in "0.9" "0.1" "0.9" "0.5" "0.6" "0.7" "0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
 		do
 			for LREDGE in 0.01 0.03 0.003 0.001 #0.01 #0.03 0.0001
 			do
-				for LR in 0.01 0.03 0.003 0.001 #0.01 #0.03 0.0001
+				for LR in 0.0003 0.03 0.003 0.01 0.001 #0.01 #0.03 0.0001
 				do
-					for WD in 0 1e-4 1e-6 1e-8 #1e-12
+					for WD in 1e-4 0 1e-6 0 1e-4 #1e-12
 					do
 			    			exp_name="exp_${name}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
 			    			RUN_FILE="$DATA_RUN_PATH/$exp_name"
@@ -136,23 +148,24 @@ do
 		python best_roc_auc.py "$RESULTS_FILE" 2>&1 | tee -- "$OPT_ROC_RESULTS_FILE"
 	done
 done
+COMMENT
 
 ########################################################################################
 MODEL="HJT"
 
 for DATASET in Planetoid 
 do
-	for DATASUBSET in PubMed CiteSeer Cora
+	for DATASUBSET in Cora PubMed CiteSeer
 	do
 		DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET"
 		mkdir -p "$DATA_RUN_PATH"
-		for PERSISTENCE in "0.5" "0.6" "0.7" "0.8" "0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
+		for PERSISTENCE in "0.5,0.7,0.9" "0.5" "0.6" "0.7" "0.8" "0.9" "0.1" "0.6,0.8" "0.6,0.9" "0.8,0.9" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
 		do
-			for LREDGE in 0.01 0.03 0.003 0.001 #0.01 #0.03 0.0001 0.01 
+			for LR in 3e-3 0.03 0.01 3e-4 0.001 #0.01 #0.03 0.0001
 			do
-				for LR in 0.01 0.03 0.003 0.001 #0.01 #0.03 0.0001
+				for LREDGE in 0.01 0.03 0.003 0.001 #0.01 #0.03 0.0001 0.01 
 				do
-					for WD in 0 1e-4 1e-6 1e-8 #1e-12
+					for WD in 5e-8 1e-6 0 1e-4 1e-8 #1e-12
 					do
 			    			exp_name="exp_${name}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
 			    			RUN_FILE="$DATA_RUN_PATH/$exp_name"
@@ -192,7 +205,7 @@ do
 done
 
 
-
+: << COMMENT
 ##########################
 #        switching to HST
 ##########################
@@ -248,7 +261,7 @@ do
 		python best_roc_auc.py "$RESULTS_FILE" 2>&1 | tee -- "$OPT_ROC_RESULTS_FILE"
 	done
 done
-
+COMMENT
 ###########################################
 #        
 #                          Hierarchical SUCCESIVE Training Experiments

@@ -3,6 +3,7 @@
 # from typing import List, Optional, Tuple, Union
 # import json
 # import time
+from collections import defaultdict, Counter
 import numpy as np
 import copy
 from copy import deepcopy
@@ -25,6 +26,7 @@ from torch_geometric.nn import JumpingKnowledge
 # from torch.utils.data import Dataset, DataLoader
 from torch_geometric.loader import DataLoader, NodeLoader, NeighborLoader, NeighborSampler
 from torch_geometric.data import Data, InMemoryDataset, download_url
+from torch_geometric.utils import subgraph, bipartite_subgraph
 # from torch_geometric.nn.conv import MessagePassing
 #
 # from sklearn.metrics import roc_auc_score
@@ -32,7 +34,15 @@ from torch_geometric.data import Data, InMemoryDataset, download_url
 #
 # from torch_geometric.nn.dense.linear import Linear
 # from torch_geometric.nn.aggr import Aggregation, MultiAggregation
-from .utils import pout, homophily_edge_labels,  edge_index_from_adjacency, node_degree_statistics
+from .utils import (pout,
+                    homophily_edge_labels,
+                    edge_index_from_adjacency,
+                    node_degree_statistics,
+                    l2_normalize_features,
+                    min_max_normalize_features,
+                    mean_normalize_features,
+                    standardize_features,
+                    MaskedBatchNorm)
 #profiling tools
 # from guppy import hpy
 # from memory_profiler import profile
@@ -46,7 +56,35 @@ from .conv import SAgeConv
 
 from .experiments.metrics import optimal_metric_threshold
 
+NORMALIZATION = {
+    'None': nn.Identity,
+    'LayerNorm': nn.LayerNorm,
+    'BatchNorm': nn.BatchNorm1d,
+    'MaskedBatchNorm': MaskedBatchNorm
+}
 
+class FeedForwardModule(nn.Module):
+    def __init__(self, dim, dim_out, hidden_dim_multiplier, dropout, input_dim_multiplier=1, **kwargs):
+        super().__init__()
+        input_dim = int(dim * input_dim_multiplier)
+        hidden_dim = int(dim * hidden_dim_multiplier)
+        self.linear_1 = nn.Linear(in_features=input_dim, out_features=hidden_dim)
+        self.dropout_1 = nn.Dropout(p=dropout)
+        self.act = nn.GELU()
+        self.linear_2 = nn.Linear(in_features=hidden_dim, out_features=dim_out)
+        self.dropout_2 = nn.Dropout(p=dropout)
+
+    def reset_parameters(self):
+        self.linear_1.reset_parameters()
+        self.linear_2.reset_parameters()
+    def forward(self, x):
+        x = self.linear_1(x)
+        x = self.dropout_1(x)
+        x = self.act(x)
+        x = self.linear_2(x)
+        x = self.dropout_2(x)
+
+        return x
 def gin_mlp_factory(gin_mlp_type: str, dim_in: int, dim_out: int):
     if gin_mlp_type == 'lin':
         return nn.Linear(dim_in, dim_out)
@@ -82,14 +120,100 @@ def gin_mlp_factory(gin_mlp_type: str, dim_in: int, dim_out: int):
     else:
         raise ValueError("Unknown gin_mlp_type!")
 
-# def
+class combine():
+    def __init__(self):
+        a = 1
+    def mean(self, tensor1, tensor2, padding_value=0, equivalent_nodes=None, device=None):
+
+        # Determine the shape of the combined tensor
+        max_rows = max(tensor1.size(0), tensor2.size(0))
+        embedding_dim = tensor1.size(1)
+
+        # Initialize the combined tensor with padding_value
+        combined_tensor = torch.full((max_rows, embedding_dim), padding_value,dtype=torch.float).to(device)
+
+        for i in range(tensor1.size(0)):
+            if equivalent_nodes is not None:
+                if i in equivalent_nodes:
+                    j = equivalent_nodes[i]
+                    # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                    combined_embedding = (tensor1[i] + tensor2[j]) / 2
+                    combined_tensor[i] = combined_embedding
+                else:
+                    combined_tensor[i] = tensor1[i]
+            else:
+                # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                combined_embedding = (tensor1[i] + tensor2[i]) / 2
+                combined_tensor[i] = combined_embedding
+
+        for j in range(tensor2.size(0)):
+            if equivalent_nodes is not None:
+                if j not in equivalent_nodes.values():
+                    combined_tensor[j] = tensor2[j]
+            else:
+                if j > tensor1.size(0):
+                    combined_tensor[j] = tensor2[j]
+
+        return combined_tensor
+    def mean_comp(self, *tensors, padding_value=0, equivalent_nodes=None, device=None):
+
+        # Determine the shape of the combined tensor
+
+        max_rows = 0
+        embedding_dim=0
+        for tensor in tensors:
+            m = tensor.size(0)
+            if m > max_rows:
+                max_rows=m
+            embedding_dim = tensor.size(1)
+
+        # Initialize the combined tensor with padding_value
+        combined_tensor = torch.full((max_rows, embedding_dim), padding_value,dtype=torch.float).to(device)
+        tensor_count = 0
+        for tensor in tensors:
+            tensor_count+=1
+            for i in range(tensor.size(0)):
+                if equivalent_nodes is not None:
+                    if i in equivalent_nodes:
+                        j = equivalent_nodes[i]
+                        # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                        combined_embedding = (combined_tensor[i] + tensor[i])
+                        combined_tensor[i] = combined_embedding
+                    else:
+                        combined_tensor[i] = tensor[i]
+                else:
+                    # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                    combined_embedding = (combined_tensor[i] + tensor[i])
+                    combined_tensor[i] = combined_embedding
+            #
+        for i in range(combined_tensor.size(0)):
+            if equivalent_nodes is not None:
+                if i in equivalent_nodes:
+                    j = equivalent_nodes[i]
+                    # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                    combined_tensor[i] = combined_tensor[i] / tensor_count
+                else:
+                    combined_tensor[i] = combined_tensor[i]
+            else:
+                # Combine embeddings (e.g., by averaging, concatenating, etc.)
+                combined_tensor[i] = combined_tensor[i] / tensor_count
+            # for j in range(tensor2.size(0)):
+            #     if equivalent_nodes is not None:
+            #         if j not in equivalent_nodes.values():
+            #             combined_tensor[j] = tensor2[j]
+            #     else:
+            #         if j > tensor1.size(0):
+            #             combined_tensor[j] = tensor2[j]
+
+        return combined_tensor
 class SubGraphFilterConv(nn.Module):
     def __init__(self, in_dim,
                  dim_hidden,
                  out_dim,
                  num_layers,
                  dropout=0,
-                 use_batch_norm = True):
+                 use_batch_norm = False,
+                 normalization=None):
 
         super().__init__()
 
@@ -100,30 +224,43 @@ class SubGraphFilterConv(nn.Module):
         self.dropout = dropout
         self.use_batch_norm = use_batch_norm
 
+        self.normalization = normalization
+
         self.model_nbr_msg_aggr = torch.nn.ModuleList()
         # GraphSage, ego- neighborhood embedding seperation performs better
         self.model_nbr_msg_aggr.append(SAGEConv(in_channels=self.num_feats,
                                           out_channels=self.dim_hidden))
         # self.bns.append(nn.BatchNorm1d(n_2)) self.bns = nn.ModuleList()
+        self.normalization_in = normalization(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms = []
-        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        batch_norm_layer = normalization(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
 
-        for _ in range(self.num_layers - 1):
+        for _ in range(self.num_layers - 2):
             self.model_nbr_msg_aggr.append(SAGEConv(in_channels=self.dim_hidden,
                                               out_channels=self.dim_hidden))
             # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = normalization(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             self.batch_norms.append(batch_norm_layer)
+        self.model_nbr_msg_aggr.append(SAGEConv(in_channels=self.dim_hidden,
+                                                out_channels=self.dim_hidden))
 
-        self.model_out_embedding = nn.Linear(self.dim_hidden,  # * self.num_layers,
-                                       self.out_dim)
+        self.linear_in = FeedForwardModule(dim=self.num_feats,
+                                            dim_out=self.dim_hidden,
+                                            input_dim_multiplier=1,
+                                            hidden_dim_multiplier=1,
+                                            dropout=self.dropout)
+        self.linear_out = FeedForwardModule(dim=self.dim_hidden,
+                                            dim_out=self.num_feats,
+                                            input_dim_multiplier=1,
+                                            hidden_dim_multiplier=1,
+                                            dropout=self.dropout)
 
-        batch_norm_layer = nn.LayerNorm(self.out_dim) if self.use_batch_norm else nn.Identity(self.out_dim)
+        batch_norm_layer = normalization(self.out_dim) if self.use_batch_norm else nn.Identity(self.out_dim)
         self.batch_norms.append(batch_norm_layer)
         self.dropout = nn.Dropout(self.dropout)
         self.act = nn.GELU()
-        self.jump = JumpingKnowledge(mode='cat')
+        # self.jump = JumpingKnowledge(mode='cat')
         # self.probability = nn.Sigmoid() if out_dim == 1 else nn.Softmax(dim=1)  # nn.Softmax(dim=1) #nn.Sigmoid()
 
         self.reset_parameters()
@@ -131,7 +268,7 @@ class SubGraphFilterConv(nn.Module):
     def reset_parameters(self):
         for embedding_layer in self.model_nbr_msg_aggr:
             embedding_layer.reset_parameters()
-        self.model_out_embedding.reset_parameters()
+        self.linear_out.reset_parameters()
 
     def set_device(self, device):
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
@@ -139,59 +276,36 @@ class SubGraphFilterConv(nn.Module):
 
     def forward(self, x, adjs, filtration_function_in, filtration_function_hidden, filtration_function_out, single_sample=False):
 
-        xs = []
         num_targets = 0
         edge_index = adjs[0][0]
-        x_source = x
+
+        x = self.linear_in(x)
+
+        x = self.normalization_in(x)
+
+        x_residual = x
+
         for i, (edge_index, _, size) in enumerate(adjs):
-            x_target = x[: size[1]]
-            x_source = x[size[1]:]
+
             num_targets = size[1]
             edge_index = edge_index
-            #
-            # pout(("in gnnmoodule",f"x in size {x.size()}", f"in x target size{x_target.size()}"))
-            # if i == 0:
-            #     sub_filtration_value = filtration_function_in(x=x,
-            #                                                   x_target=x_target,
-            #                                                   edge_index=edge_index,
-            #                                                   degree=None,
-            #                                                   single_sample=single_sample,
-            #                                                   seperate=False)
-            # else:
-            #     sub_filtration_value = filtration_function_hidden(x=x,
-            #                                                       x_target=x_target,
-            #                                                       edge_index=edge_index,
-            #                                                       degree=None,
-            #                                                       single_sample=single_sample,
-            #                                                       seperate=False)
-            x = self.model_nbr_msg_aggr[i](x, edge_index)# (x,x_target), edge_index)#(x, x_target), edge_index)
-            x = self.dropout(x)
-            # if not single_sample:
-            x = self.batch_norms[i](x)
+
+            x = self.model_nbr_msg_aggr[i](x, edge_index)
             if i!=self.num_layers-1:
                 x = self.act(x)
+                x = self.dropout(x)
 
-            # x = sub_filtration_value_hidden[:size[1]] * x  # multiply new target node embeddings with filter coefficient
-            # if i!=0:
-            #     x = x[:size[1]] + x_target
+        x = self.linear_out(x)
 
-            #filtration coefficient scaling
-            # x = sub_filtration_value * x
+        x = x + x_residual
 
-            x_target = x[:size[1]]
-            xs.append(x)
-
-        # x = self.jump(xs)
-        x = self.model_out_embedding(x)
-        # pout(("x out size",x.size(), "out x target size" , x_target.size()))
-
-        sub_filtration_value = filtration_function_hidden(x=x, #(x_source, x[: num_targets]),
+        x , sub_filtration_value = filtration_function_out(x=x, #(x_source, x[: num_targets]),
                                                           x_target=x[: num_targets],
                                                           edge_index=edge_index,
                                                           degree=None,
                                                           single_sample=single_sample)
         # scale new embeddings by filtration coefficient
-        x = sub_filtration_value * x[:num_targets]
+        x = sub_filtration_value * x
         return x #.squeeze(1)
 
 
@@ -212,7 +326,7 @@ class FiltrationGraphHierarchy():
                                                                          thresholds=self.thresholds,
                                                                          )
 
-        pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
+        # pout(("Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         graph = self.graphs[0]
         # self.graphlevelloader = self.get_graph_dataloader(graph,
@@ -509,7 +623,7 @@ class FiltrationGraphHierarchy():
 ####################################################
 #
 #
-class SubGraphFiltration(torch.nn.Module):
+class SubGraphFilterFunction(torch.nn.Module):
     r"""
     A node level learnable filtration function used for Hierarchical Joint Training
     More specifically, :obj:`num_neighbors` denotes how much neighbors are
@@ -534,21 +648,26 @@ class SubGraphFiltration(torch.nn.Module):
                  gin_number=None,
                  gin_dimension=None,
                  gin_mlp_type=None,
+                 use_batch_norm=True,
+                 normalization=None,
                  **kwargs
                  ):
         super().__init__()
+
+        self.use_batch_norm = use_batch_norm
+        self.normalization = normalization
 
         dim = gin_dimension
 
         max_node_deg = max_node_deg
         num_node_feat = dim_in
 
-        if set_node_degree_uninformative and use_node_degree:
-            self.embed_deg = UniformativeDummyEmbedding(gin_dimension)
-        if use_node_degree:
-            self.embed_deg = nn.Embedding(max_node_deg + 1, dim)
-        else:
-            self.embed_deg = None
+        # if set_node_degree_uninformative and use_node_degree:
+        #     self.embed_deg = UniformativeDummyEmbedding(gin_dimension)
+        # if use_node_degree:
+        #     self.embed_deg = nn.Embedding(max_node_deg + 1, dim)
+        # else:
+        #     self.embed_deg = None
 
         # self.embed_feat = nn.Embedding(num_node_feat, dim, dtype=torch.float) if use_node_feat else None
 
@@ -560,35 +679,44 @@ class SubGraphFiltration(torch.nn.Module):
 
         #dim_input = dim * ((self.embed_deg is not None) + (self.embed_feat is not None))
         self.cat = 2 if cat_seperate else 1
-        dims = [self.cat * dim_in] + (gin_number) * [dim] # [dim_input] + (gin_number) * [dim]
+        dims = [self.cat * dim_in] + (gin_number) * [dim]
 
         self.convs = nn.ModuleList()
         self.bns = nn.ModuleList()
         self.act = nn.GELU() # torch.nn.functional.leaky_relu
-
         for n_1, n_2 in zip(dims[:-1], dims[1:]):
             # pout(("n1 ", n_1, " n2 ",n_2))
             l = gin_mlp_factory(gin_mlp_type, n_1, n_2)
             self.convs.append(GINConv(l, eps=eps,train_eps=True))
-            batch_norm_layer = nn.LayerNorm(n_2)# nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = normalization(n_2) if self.use_batch_norm else nn.Identity(n_2)
             self.bns.append(batch_norm_layer)
+
+        b1 = normalization(dim) if self.use_batch_norm else nn.Identity(dim)
+        b2 = normalization(dim_out) if self.use_batch_norm else nn.Identity(dim_out)
 
         self.fc = nn.Sequential(
             nn.Linear(sum(dims), dim),
-            nn.LayerNorm(dim),#nn.BatchNorm1d(dim),
+            # nn.Linear(dim_out, dim),
+            b1,#nn.BatchNorm1d(dim),
             nn.GELU(),
-            nn.Linear(dim, dim_in),
-            nn.LayerNorm(dim_in),#nn.BatchNorm1d(dim_in),
+            nn.Linear(dim, dim_out),
+            b2,#nn.BatchNorm1d(dim_in),
             nn.GELU(),
-            nn.Linear(dim_in, 1),
+            nn.Linear(dim_out, 1),
             nn.Sigmoid()
         )
+        self.reset_parameters()
+        self.reset_model_parameters(self.fc)
+        self.reset_model_parameters(self)
 
     def reset_parameters(self):
         for conv in self.convs:
             conv.reset_parameters()
 
-        self.fc.reset_parameters()
+    def reset_model_parameters(self, model):
+        for layer in model.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
 
     def set_device(self, device):
         self.bns.to(device)
@@ -623,7 +751,6 @@ class SubGraphFiltration(torch.nn.Module):
         #     z = [x[1]]#[x]
         z=[x_target]
         for conv, bn in zip(self.convs, self.bns):
-            # pout((f"in filtration x size {x.size()} and x_target size {x_target.size()}"))
             x = conv((x,x_target),edge_index)#z[-1], edge_index)
             # if not single_sample:
             x = bn(x)
@@ -634,21 +761,23 @@ class SubGraphFiltration(torch.nn.Module):
         # x = self.global_pool_fn(x, batch.batch)
         # z=z[1:]
         # z = [z[0][1]]+z[1:]
-        x = torch.cat(z, dim=1)
-        ret = self.fc(x)
+        x_cat = torch.cat(z, dim=1)
+        ret = self.fc(x_cat)
         # ret = ret.squeeze()
-        return ret.view(-1,1)
+        return x, ret#.view(-1,1)
 
 
 class MultiScaleGraphFiltrationSampler:
     def __init__(self,
                  super_data,
+                 subset_data,
                  subset_samplers,
                  subset_to_super_mapping,
                  super_to_subset_mapping,
                  batch_size,
                  shuffle=False):
         self.super_data = super_data
+        self.subset_data = subset_data
         self.subset_samplers = subset_samplers
         self.subset_to_super_mapping = subset_to_super_mapping
         self.super_to_subset_mapping = super_to_subset_mapping #{super_idx : sub_idx for sub_idx, super_idx in subset_to_super_mapping.items()}
@@ -678,38 +807,216 @@ class MultiScaleGraphFiltrationSampler:
         end_idx = min(self.current_idx + self.batch_size, self.num_nodes)
         sampled_indices = self.node_indices[self.current_idx:end_idx]
         self.current_idx = end_idx
+
+        global_super_indices = [self.subset_to_super_mapping[-1][i] for i in sampled_indices.tolist()]
+        global_super_indices_sorted = np.sort(global_super_indices)
         # pout(("end idx ", self.current_idx))
 
         # # Get valid nodes for each subset graph
-        # valid_subset_nodes = []
-        # for i,mapping in enumerate(self.subset_to_super_mapping):
-        #     valid_nodes = [n for n in sampled_indices.tolist() if n in mapping.values()]
-        #     valid_nodes_sub_idx = [self.super_to_subset_mapping[i][n] for n in valid_nodes]
-        #     valid_subset_nodes.append(torch.tensor(valid_nodes_sub_idx))
-        #     """ Should I resample subgraph nodes to ensure same sized batches, or add dummy nodes?"""
+
+        valid_subset_gids = []
+        for i,mapping in enumerate(self.super_to_subset_mapping[:-1]):
+            valid_nodes = [n for n in global_super_indices_sorted if n in mapping.keys()]
+            # valid_global_nodes =np.sort([mapping[n] for n in valid_nodes])
+            valid_subset_gids.append(valid_nodes)
+            #valid_nodes_sub_idx = [self.super_to_subset_mapping[i][n] for n in valid_nodes]
+            #valid_subset_nodes.append(torch.tensor(valid_nodes_sub_idx))
+            """ Should I resample subgraph nodes to ensure same sized batches, or add dummy nodes?"""
+        valid_subset_gids.append(global_super_indices_sorted)
+
+        #sort nodes so self same nodes are in the same index
+        valid_subset_gids_aligned = self.align_multiple_lists(*valid_subset_gids)
+
+        valid_subset_nodes = []
+        multilevel_sizes = []
+        for i, valid_sub_gid in enumerate(valid_subset_gids_aligned):
+            valid_subset_nodes.append([self.super_to_subset_mapping[i][nid] for nid in valid_sub_gid])
+            multilevel_sizes.append(len(valid_subset_nodes))
 
         # # Get valid nodes for each subset graph
-        valid_subset_nodes = []
-        for i,mapping in enumerate(self.super_to_subset_mapping):
-            valid_nodes = [n for n in sampled_indices.tolist() if n in mapping.keys()]
-            valid_nodes_sub_idx = [mapping[n] for n in valid_nodes]
-            valid_subset_nodes.append(torch.tensor(valid_nodes_sub_idx))
-        # Get neighborhood information from each subset graph
+        # valid_subset_nodes = []
+        # valid_nodes_sub_idx = []
+        # for i,mapping in enumerate(self.super_to_subset_mapping):
+        #     valid_nodes = [n for n in valid_global_indices if n in mapping.keys()]
+        #     # valid_nodes_sorted = np.sort(valid_nodes)
+        #     valid_nodes_sub_idx = [mapping[n] for n in valid_nodes]
+        #     valid_nodes_sub_idx_sorted = np.sort(valid_nodes_sub_idx)
+        #     valid_subset_nodes.append(valid_nodes_sub_idx_sorted)
+        #     multilevel_sizes.append(len(valid_nodes_sub_idx_sorted))
+        #     pout((f"valid subset sorted {valid_nodes_sub_idx}"))
+            # pout((f"valid nodes {valid_nodes}",f"valid ndoes sub idx {valid_nodes_sub_idx} valid nodes size {len(valid_nodes_sub_idx)}"))
+            # pout((f"valid subset nodes {valid_subset_nodes}"))
+        # Custom neighborhood sampling for each subset graph
+        super_nodes_sorted = valid_subset_nodes[-1]
+        # subset_samples = []
+        # for i, data in enumerate(self.subset_data):
+        #     if len(valid_subset_nodes[i]) > 0:  # Ensure there are valid nodes to sample
+        #         sub_edge_index, sub_n_id, sub_mask = bipartite_subgraph(subset=valid_subset_nodes[i],
+        #                                             edge_index=data.edge_index,
+        #                                             edge_attr=data.edge_attr,
+        #                                             relabel_nodes=True,
+        #                                             return_edge_mask=True)
+        #         mask = torch.logical_or(torch.isin(data.edge_index[0], valid_subset_nodes[i]),
+        #                                 torch.isin(data.edge_index[1], valid_subset_nodes[i]))
+        #         filtered_edge_index = data.edge_index[:,mask]
+        #         # Map the original indices to consecutive indices starting from zero
+        #         unique_nodes = torch.unique(filtered_edge_index)
+        #         node_mapping = {node.item(): i for i, node in enumerate(unique_nodes)}
+        #         # Relabel the filtered edge_index
+        #         relabel_edge_index = torch.tensor([
+        #             [node_mapping[node.item()] for node in filtered_edge_index[0]],
+        #             [node_mapping[node.item()] for node in filtered_edge_index[1]]
+        #         ], dtype=torch.long)
+        #
+                #         pout((f"sub edge index {sub_edge_index} sub edge index size {sub_edge_index.size()} sub_n_id {sub_n_id} sub nid size {sub_n_id.size()}"))
+        #         pout((f" sub edge index attempt 2 {filtered_edge_index}"))
+        #         pout((f"sub 2 size {filtered_edge_index.size()}"))
+        #         pout((f"relabel_edge_index {relabel_edge_index} relabeled size {relabel_edge_index.size()}"))
+        #         match = ""
+        #         for n in valid_nodes_sub_idx:
+        #             match += str(n in sub_edge_index[0] or n in sub_edge_index[1]) + " ... "
+        #         pout(("nodes return are in edge index "+ match))
+        #         subset_samples.append((valid_subset_nodes[i].size(0), sub_n_id, [sub_edge_index]))
+        #     else:
+        #         subset_samples.append((0, torch.tensor([]), []))  # Handle empty batches
+
+        # # Get neighborhood information from each subset graph
+
+        #  Note: `batch` returns a tuple (node, row, col, batch_size, n_id, e_id)
+        #                                 batch_size, n_id, adjs, edge_index, thing, size
+        #                                 batch_size, n_id, edge_index, thing, size
+        # supergraph_samples = self.subset_samplers[-1].sample(valid_subset_nodes[-1])
+        #
+        # pout((f"sample samples length {len(supergraph_samples)}"))
+        # pout(supergraph_samples)
+        # pout(("type elm",[type(elm) for elm in supergraph_samples]))
+        # pout(("adj last elm in sample", supergraph_samples[-1]))
+        # pout(("last elm length",len(supergraph_samples[-1])))
+        #
+        # super_batch_size, super_n_id, super_adjs = supergraph_samples
+
+        # supergraph_nodes_sorted, supergraph_indices_sorted  = torch.sort(super_n_id)
+        # supergraph_samples_sorted= self.subset_samplers[-1].sample(supergraph_indices_sorted)#.tolist())
+
+        # supergraph_adj = []
+        # for super_edge_index, super_thing, super_size in super_adjs:
+        #     supergraph_sampled_edge_index = super_edge_index
+        #     supergraph_edge_index_remapped = self.remap_subgraph_edge_index(supergraph_sampled_edge_index,
+        #                                                                     supergraph_sampled_nodes,
+        #                                                                     supergraph_samples_sorted)
+        #     super_adj_layer = (supergraph_edge_index_remapped, super_thing, super_size)
+        #     supergraph_adj.append(super_adj_layer)
+
+        # global_sampled_nids_sorted = [self.subset_to_super_mapping[-1][nid] for nid in valid_subset_nodes[-1]]#supergraph_indices_sorted.tolist()]
+
+        # supergraph_samples = (super_batch_size, supergraph_samples_sorted, supergraph_adj)
+
         subset_samples = []
-        # for i, sampler in enumerate(self.subset_samplers):
-        #     subset_samples.append(sampler.sample(valid_subset_nodes[i]))
+        sampled_indices_ordered = []
         for i, sampler in enumerate(self.subset_samplers):
             if len(valid_subset_nodes[i]) > 0:  # Ensure there are valid nodes to sample .sample_from_nodes()
-                subgraph_samples = sampler.collate_fn(valid_subset_nodes[i])
-                # pout(("subsamples size ", subgraph_samples[0], " len valid subnodes ", len(valid_subset_nodes[i])))
-                # subgraph_samples = sampler.filter_fn(subgraph_samples)
-                subset_samples.append(subgraph_samples) # .sample(valid_subset_nodes[i]))
-                # sample_from_nodes collate_fn
+                # subgraph_samples = sampler.collate_fn(valid_subset_nodes[i])
+                # global_subgraph_indices = [self.subset_to_super_mapping[i][nid] for nid in valid_subset_nodes[i]]
+                # global_subgraph_indices_sorted = np.sort(global_super_indices)
+                # # valid_global_indices = [n for n in global_super_indices_sorted if
+                # #                         n in self.super_to_subset_mapping[-1].keys()]
+                #
+                # # if nid in self.subset_to_super_mapping[i].keys()]
+                # _, global_nid_subgraph = self.align_lists(global_super_indices_sorted, global_subgraph_indices)
+                # valid_subset_nodes_i = [self.super_to_subset_mapping[i][nid] for nid in global_nid_subgraph]
+
+                subgraph_samples = sampler.sample(valid_subset_nodes[i])
+                # sub_batch_size, sub_n_id, sub_adjs = subgraph_samples
+                # subgraph_sampled_nodes = sub_n_id
+
+                # subgraph_samples_global_order = [self.super_to_subset_mapping[i][gid]\
+                #                                  for gid in global_sampled_nids_sorted]
+                # #torch.sort(subgraph_samples.n_id)
+                # subgraph_nids_ordered = subgraph_samples_global_order + [nid for nid in subgraph_sampled_nodes\
+                #                                                             if nid not in subgraph_samples_global_order]
+                #
+                # subgraph_samples_ordered = sampler.sample(subgraph_nids_ordered)
+                # subgraph_adj = []
+                # for sub_edge_index, sub_thing, sub_size in sub_adjs:
+                #     subgraph_sampled_edge_index = sub_edge_index
+                #     subgraph_edge_index_remapped = self.remap_subgraph_edge_index(subgraph_sampled_edge_index,
+                #                                                                     subgraph_sampled_nodes,
+                #                                                                     subgraph_samples_ordered)
+                #     sub_adj_layer = (subgraph_edge_index_remapped, sub_thing, sub_size)
+                #     subgraph_adj.append(sub_adj_layer)
+                #
+                # subgraph_samples = (sub_batch_size, subgraph_samples_ordered, subgraph_adj)
+
+                subset_samples.append(subgraph_samples)#_ordered)
+                sampled_indices_ordered.append(valid_subset_nodes[i])#subgraph_nids_ordered)
             else:
                 subset_samples.append((0, torch.tensor([]), []))  # Handle empty batches
 
-        return sampled_indices, subset_samples
 
+        # subset_samples.append(supergraph_samples)
+
+        return sampled_indices_ordered, subset_samples, multilevel_sizes
+
+
+
+    def align_multiple_lists(self, *lists):
+        # Count the frequency of each element across all lists
+        element_count = Counter()
+        for lst in lists:
+            element_count.update(set(lst))
+
+        # Sort elements by their frequency in descending order
+        sorted_elements = sorted(element_count, key=lambda x: -element_count[x])
+
+        # Initialize dictionaries to keep track of elements that have been placed
+        placed_elements = {i: [] for i in range(len(lists))}
+        remaining_elements = {i: [] for i in range(len(lists))}
+
+        # Place common elements at the start of each list in the same order
+        for element in sorted_elements:
+            for i, lst in enumerate(lists):
+                if element in lst:
+                    placed_elements[i].append(element)
+                else:
+                    remaining_elements[i].append(element)
+
+        # Combine placed elements and remaining elements
+        aligned_lists = []
+        for i in range(len(lists)):
+            # Add elements that were in the original list but not in sorted_elements
+            remaining_elements[i] = [x for x in lists[i] if x not in placed_elements[i]]
+            aligned_list = placed_elements[i] + remaining_elements[i]
+            aligned_lists.append(aligned_list)
+
+        return aligned_lists
+
+    # Function to remap edge_index based on sorted nodes
+    def remap_subgraph_edge_index(self, edge_index, original_nodes, sorted_nodes):
+        mapping = {original_nodes[i].item(): sorted_nodes[i].item() for i in range(len(original_nodes))}
+        remapped_edge_index = torch.zeros_like(edge_index)
+        remapped_edge_index[0] = torch.tensor([mapping[node.item()] for node in edge_index[0]], dtype=torch.long)
+        remapped_edge_index[1] = torch.tensor([mapping[node.item()] for node in edge_index[1]], dtype=torch.long)
+        return remapped_edge_index
+
+    # def remap_edge_index(self, sampler, adjs, sorted_nodes):
+    #     remapped_adjs = []
+    #     n_id = sorted_nodes
+    #     for edge_index, e_id, size in adjs:
+    #
+    #         adj_t, n_id = self.adj_t.sample_adj(n_id, size, replace=False)
+    #         e_id = adj_t.storage.value()
+    #         size = adj_t.sparse_sizes()[::-1]
+    #         if self.__val__ is not None:
+    #             adj_t.set_value_(self.__val__[e_id], layout='coo')
+    #
+    #         if self.is_sparse_tensor:
+    #             adjs.append(Adj(adj_t, e_id, size))
+    #         else:
+    #             row, col, _ = adj_t.coo()
+    #             edge_index = torch.stack([col, row], dim=0)
+    #             adjs.append(EdgeIndex(edge_index, e_id, size))
+    #
+    #     adjs = adjs[0] if len(adjs) == 1 else adjs[::-1]
 
 class HierSGNN(torch.nn.Module):
     #fp = open('./run_logs/memory_profiler.log', 'w+')
@@ -895,9 +1202,9 @@ class HierSGNN(torch.nn.Module):
     def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1]):
 
         if graph.num_nodes < 1200:
-            num_workers = 1
+            num_workers = 0
         else:
-            num_workers = 4
+            num_workers = 8
 
         if shuffle:
             neighborloader = NeighborLoader(data=graph,
@@ -1581,7 +1888,7 @@ def check_node_maps( n_i, n_j, sub_to_super_i, sub_to_super_j):
     for i in n_i:
         n_i_super.append(sub_to_super_i[int(i.detach().cpu())])
     for j in n_j:
-        n_j_super.append(sub_to_super_j[int(j.detach().cpu())])
+        n_j_super.append(sub_to_super_j[j])#int(j.detach().cpu())])
     sim_i_j = []
     for i in n_i_super:
         sim = i in n_j_super
@@ -1598,7 +1905,9 @@ class HierJGNN(torch.nn.Module):
                  processed_dir=None,
                  train_data=None,
                  val_data=None,
+                 test_data=None,
                  filtration_function=None,
+                 normalization=None,
                  # hidden_channels,
                  # out_channels
                  ):
@@ -1622,8 +1931,10 @@ class HierJGNN(torch.nn.Module):
         self.threshold_pred = False
         self.weight_decay = args.weight_decay
         self.use_batch_norm = args.use_batch_norm
+        pout(("Using Batch Normalization: ",self.use_batch_norm))
         self.thresholds = args.persistence
         self.val_data = val_data
+        self.test_data = test_data
         #using base options expand samples to number of layers (hops)
         num_neighbors = args.num_neighbors
         if num_neighbors is None:
@@ -1647,6 +1958,8 @@ class HierJGNN(torch.nn.Module):
         self.num_classes = num_targets if not out_dim else out_dim
         self.dim_hidden = args.dim_hidden if not dim_hidden else dim_hidden
         self.num_feats = data.x.shape[-1] if not in_channels else in_channels
+        self.dim_gin = args.dim_gin if args.dim_gin is not None else self.dim_hidden
+        self.dim_multiscale_filter_conv = args.dim_multiscale_filter_conv if args.dim_multiscale_filter_conv is not None else self.dim_hidden
         ###################################################################################
         #         Hierarchical Joint Training requires the topological persistence graph hierarchy
         #         at inference time in order to employ the neighborhood message aggregating models
@@ -1665,7 +1978,6 @@ class HierJGNN(torch.nn.Module):
         self.graphs, self.sub_to_sup_mappings, self.sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
                                                                           filtration_graph_hierarchy.sub_to_sup_mappings,
                                                                           filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
-
         pout(("%%%%%%%" "FINISHED CREATED GRAPH HIERARCHY", "Total graphs: ", len(self.graphs), "%%%%%%%"))
         self.graph_levels = np.flip(np.arange(len(self.graphs) + 1))
         # get neighborhood loaders for each sublevel graph
@@ -1678,70 +1990,99 @@ class HierJGNN(torch.nn.Module):
         self.super_graph = self.graphs[-1]
         #hierarchical graph neighborhood sampler
         self.hierarchical_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=self.super_graph,
+                                                                           subset_data=self.graphs,#[:-1],
                                                                            subset_samplers=self.sublevel_graph_loaders,
                                                                            subset_to_super_mapping=self.sub_to_sup_mappings,
                                                                            super_to_subset_mapping=self.sup_to_sub_mapping,
                                                                            batch_size=self.batch_size,
                                                                            shuffle=True)
-        #
         # validation graph hierarchy
-        #
-        # if self.filtration_function:
-        #     _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
-        #                                                          assign_edge_weights=True)
-        # compute persistence filtration for graph hierarchy
-        pout(("Performing Filtration,"
-              "On",
-              "Inference Dataset"))
-        self.val_filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=self.val_data,
-                                                              persistence=self.thresholds,
-                                                              filtration=None)
-        pout(("Filtration on",
-              "Inference",
-              "Done"))
-        self.val_graphs, self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping = (self.val_filtration_graph_hierarchy.graphs,
-                                                           self.val_filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                           self.val_filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
+        val_graph_hier = FiltrationGraphHierarchy(graph=val_data,persistence=self.thresholds,filtration=None)
+        val_graphs, val_sub_to_sup_mappings, val_sup_to_sub_mapping = (val_graph_hier.graphs,
+                                                                       val_graph_hier.sub_to_sup_mappings,
+                                                                       val_graph_hier.supergraph_to_subgraph_mappings)
+        val_subgraph_loaders = [self.get_graph_dataloader(graph,
+                                                       shuffle=False,
+                                                       num_neighbors=[-1],
+                                                       batch_size=self.batch_size,
+                                                       num_workers=0) for graph in val_graphs]
+        val_super_graph = val_graphs[-1]
+        val_hier_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=val_super_graph,
+                                                                  subset_data=val_graphs,
+                                                                  subset_samplers=val_subgraph_loaders,
+                                                                  subset_to_super_mapping=val_sub_to_sup_mappings,
+                                                                  super_to_subset_mapping=val_sup_to_sub_mapping,
+                                                                  batch_size=self.batch_size,
+                                                                  shuffle=True)
 
-        pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(self.val_graphs), "%%%%%%%"))
-        self.val_graph_levels = np.flip(np.arange(len(self.val_graphs) + 1))
-        # get neighborhood loaders for each sublevel graph
-        self.val_sublevel_graph_loaders = [self.get_graph_dataloader(graph,
-                                                                     shuffle=False,
-                                                                     num_neighbors=[-1],
-                                                                     batch_size=1,
-                                                                     num_workers=0)
-                                  for graph in self.val_graphs]
-        self.val_super_graph = self.val_graphs[-1]
-        # hierarchical graph neighborhood sampler
-        self.val_hierarchical_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=self.val_super_graph,
-                                                                               subset_samplers=self.val_sublevel_graph_loaders,
-                                                                               subset_to_super_mapping=self.val_sub_to_sup_mappings,
-                                                                               super_to_subset_mapping=self.val_sup_to_sub_mapping,
-                                                                               batch_size=self.batch_size,
-                                                                               shuffle=False)
-        # Graph_Filtration_Family_Val = GraphFiltrationFamilyWrapper( data=val_data,
-        #                                                             thresholds=self.thresholds,
-        #                                                             num_neighbors=[-1],
-        #                                                             num_layers=self.num_layers,
-        #                                                             batch_size=self.batch_size)
-        #
-        # self.val_graphs = Graph_Filtration_Family_Val.get_graphs()
-        # self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping = Graph_Filtration_Family_Val.get_node_maps()
-        # self.val_sublevel_graph_loaders = Graph_Filtration_Family_Val.get_graph_loaders()
-        # self.val_hierarchical_graph_sampler = Graph_Filtration_Family_Val.get_graph_sampler
+        self.validation_dict={"graph_hierarchy":val_graph_hier,
+                              "graphs":val_graphs,
+                              "sub_to_sup_map":val_sub_to_sup_mappings,
+                              "sup_to_sub_map":val_sup_to_sub_mapping,
+                              "subgraph_loaders":val_subgraph_loaders,
+                              "super_graph":val_super_graph,
+                              "hierarchical_graph_sampler":val_hier_graph_sampler}
+        #  Test setting
+        test_graph_hier = FiltrationGraphHierarchy(graph=test_data,
+                                                   persistence=self.thresholds,
+                                                   filtration=None)
+        test_graphs, test_sub_to_sup_mappings, test_sup_to_sub_mapping =(test_graph_hier.graphs,
+                                                                         test_graph_hier.sub_to_sup_mappings,
+                                                                         test_graph_hier.supergraph_to_subgraph_mappings)
 
+        test_subgraph_loaders = [self.get_graph_dataloader(graph,
+                                                           shuffle=False,
+                                                           num_neighbors=[-1],
+                                                           batch_size=self.batch_size,
+                                                           num_workers=0)
+                                 for graph in test_graphs]
+        test_super_graph = test_graphs[-1]
+        test_hier_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=test_super_graph,
+                                                                   subset_data=test_graphs,
+                                                                   subset_samplers=test_subgraph_loaders,
+                                                                   subset_to_super_mapping=test_sub_to_sup_mappings,
+                                                                   super_to_subset_mapping=test_sup_to_sub_mapping,
+                                                                   batch_size=self.batch_size,
+                                                                   shuffle=False)
+
+        self.testing_dict ={"graph_hierarchy":test_graph_hier,
+                            "graphs":test_graphs,
+                            "sub_to_sup_map":test_sub_to_sup_mappings,
+                            "sup_to_sub_map":test_sup_to_sub_mapping,
+                            "subgraph_loaders":test_subgraph_loaders,
+                            "super_graph":test_super_graph,
+                            "hierarchical_graph_sampler":test_hier_graph_sampler}
+        #############################################################################################
+        #
+        #                              Model Design
+        #
+        ############################################################################################
+        #
+        # Normalalization in and out to prevent overfitting
+        # Normalizaation of features
+
+        self.normalizers = {}
+        self.normalizers["in"] = nn.LayerNorm(self.num_feats)
+
+        self.normalizers["hid"] = NORMALIZATION["LayerNorm"](self.dim_hidden)
+
+        self.normalizers["comb"] = NORMALIZATION["MaskedBatchNorm"](self.dim_hidden*len(self.graphs))
+
+        # self.normalizers["comb"] = NORMALIZATION["MaskedBatchNorm"](self.dim_hidden*len(self.graphs))
+
+        self.normalizers["out"] = nn.LayerNorm(self.num_feats)
         ######################################################################################
         #           Define message passing / neighborhood aggration scheme for each
         #             graph levelset for learned node embeddings per-graph level
         ######################################################################################
         self.levelset_modules = [SubGraphFilterConv(in_dim=self.num_feats,
-                                                    dim_hidden=self.dim_hidden,
-                                                    out_dim=self.num_feats,  #outputs node_embedding of dimension dim hidden
+                                                    dim_hidden=self.dim_multiscale_filter_conv,
+                                                    out_dim=self.dim_hidden,  #outputs node_embedding of dimension dim hidden
                                                     num_layers=self.num_layers,
                                                     dropout=self.dropout,
-                                                    use_batch_norm=self.use_batch_norm) \
-                                 for graph in self.graphs]
+                                                    use_batch_norm=self.use_batch_norm,
+                                                    normalization=NORMALIZATION["LayerNorm"]) ]
+                                 #for graph in self.graphs]
 
         #####################################################################################
         #     per sublevel graph filtration function, learns attention factor for learned
@@ -1749,7 +2090,7 @@ class HierJGNN(torch.nn.Module):
         #           all embeddings for hierarchical representation of node
         #####################################################################################
         # define learnable epsilon of GIN s.t. each graphs node embedding contributes equally
-        epsilon = float(0.0) # float(1.0 / len(self.graphs))
+        epsilon = float(0.9) # float(1.0 / len(self.graphs))
         # filttation function for each subgraph.
         # each subgraph has pair of filter functions for (dim in, hidden him)
         # self.levelset_graph_filtration_functions = [(SubLevelGraphFiltration(max_node_deg=int(max_degree),
@@ -1763,94 +2104,128 @@ class HierJGNN(torch.nn.Module):
         #                                                                     gin_dimension=self.dim_hidden,
         #                                                                     gin_mlp_type ='lin_bn_lrelu_lin'),
         # Real valued filtration factor
-        self.levelset_graph_filtration_functions_in = [SubGraphFiltration(max_node_deg=int(max_degree),
-                                                                          dim_in=self.num_feats,  #input nodes
-                                                                          eps=epsilon,
-                                                                          use_node_degree=False,
-                                                                          set_node_degree_uninformative=False,
-                                                                          use_node_feat=True,
-                                                                          gin_number=1,
-                                                                          gin_dimension=self.num_feats * 2,  # as factor
-                                                                          gin_mlp_type ='lin_gelu_lin')
-                                                       for graph in self.graphs]
-        self.levelset_graph_filtration_functions_hidden = [SubGraphFiltration(max_node_deg=int(max_degree),
-                                                                              dim_in=self.dim_hidden,
-                                                                              eps=epsilon,
-                                                                              use_node_degree=False,
-                                                                              set_node_degree_uninformative=False,
-                                                                              use_node_feat=True,
-                                                                              gin_number=1,
-                                                                              gin_dimension=self.dim_hidden * 2,
-                                                                              gin_mlp_type ='lin_gelu_lin')
-                                                           for graph in self.graphs]
-        # self.levelset_graph_filtration_functions_out = [SubLevelGraphFiltration(max_node_deg=int(max_degree),
-        #                                                                            dim_in=self.dim_hidden,
-        #                                                                            eps=epsilon,
-        #                                                                            use_node_degree=False,
-        #                                                                            set_node_degree_uninformative=False,
-        #                                                                            use_node_feat=True,
-        #                                                                            gin_number=1,
-        #                                                                            gin_dimension=self.dim_hidden * 2,
-        #                                                                            gin_mlp_type ='lin_gelu_lin') for graph in self.graphs]
+        # self.levelset_graph_filtration_functions_in = [[SubGraphFilterFunction(max_node_deg=int(max_degree),
+        #                                                                       dim_in=self.num_feats,
+        #                                                                        dim_out=self.dim_hidden,
+        #                                                                       eps=epsilon,
+        #                                                                       use_node_degree=False,
+        #                                                                       set_node_degree_uninformative=False,
+        #                                                                       use_node_feat=True,
+        #                                                                       gin_number=1,
+        #                                                                       gin_dimension=self.dim_hidden,  # as factor
+        #                                                                       gin_mlp_type ='lin_gelu_lin')]
+        #                                                for graph in self.graphs]
+        # self.levelset_graph_filtration_functions_hidden = [[SubGraphFilterFunction(max_node_deg=int(max_degree),
+        #                                                                           dim_in=self.dim_hidden,
+        #                                                                           dim_out=self.dim_hidden,
+        #                                                                           eps=epsilon,
+        #                                                                           use_node_degree=False,
+        #                                                                           set_node_degree_uninformative=False,
+        #                                                                           use_node_feat=True,
+        #                                                                           gin_number=1,
+        #                                                                           gin_dimension=self.dim_hidden,
+        #                                                                           gin_mlp_type ='lin_gelu_lin')
+        #                                                    for _ in range(self.num_layers - 1)]
+        #                                                    for graph in self.graphs]
+        # self.levelset_graph_filtration_functions_hidden = [ filt_in + filt_hid for filt_in,filt_hid in zip(self.levelset_graph_filtration_functions_in,
+        #                                                                                                          self.levelset_graph_filtration_functions_hidden)]
+        self.levelset_graph_filtration_functions_out = [SubGraphFilterFunction(max_node_deg=int(max_degree),
+                                                                               dim_in=self.num_feats,
+                                                                               dim_out=self.dim_hidden,
+                                                                               eps=epsilon,
+                                                                               use_node_degree=False,
+                                                                               set_node_degree_uninformative=False,
+                                                                               use_node_feat=True,
+                                                                               gin_number=1,
+                                                                               gin_dimension=self.dim_gin,
+                                                                               gin_mlp_type ='lin_gelu_lin',
+                                                                               use_batch_norm=self.use_batch_norm,
+                                                                               normalization=NORMALIZATION["LayerNorm"])
+                                                        for graph in self.graphs]
 
         # MLP out layer combining (concatenating) each nodes',
         # at each graph level in the hierarchy's,
         # learned embedding representation
         # self.hypergraph_node_embedding = torch.nn.Linear(self.dim_hidden * len(self.graphs) ,
         #                                                    self.out_dim)
-        multiscale_node_embedding = []
 
-        # multiscale_node_embedding.append(
-        #     torch.nn.Linear(self.dim_hidden * len(self.graphs), self.dim_hidden) # aggregation accross graph neighborhoods
-        # )
-        # multiscale_node_embedding.append(
-        #     nn.LayerNorm(self.dim_hidden))
-        # multiscale_node_embedding.append(
-        #     nn.GELU())
-        # multiscale_node_embedding.append(
-        #     torch.nn.Linear(self.dim_hidden, self.out_dim)       # out layer
-        # )
-
-        # different combonations of nodes are shared accross graphs
-        # to concat those that span different numbers of graphs
-        # requires all len(graphs) embeddings as input to only
-        # supergraph embeddings (if no nodes shared in subgraphs)
-        # self.multiscale_nbr_aggrs = []
-        # for l in range(len(self.graphs)):
-        #     # add classifiers in increasing order for number of graphs with common nodes
-        #     num_shared_levels = len(self.graphs)-np.flip(np.arange(len(self.graphs)))[l]
-        #     # pout(("graph levels ", self.graph_levels))
-        #     self.multiscale_nbr_aggrs.append(nn.Linear(self.dim_hidden * (self.graph_levels[l]+1),
-        #                                                self.out_dim))
-
-
-
-
+        #
+        # multiscale aggregator for all embeddings from
+        # across mmultiscale neioghborhood message passing
         # GraphSage, ego- neighborhood embedding seperation performs better
+        #
         self.multiscale_nbr_msg_aggr = []
-        self.multiscale_nbr_msg_aggr.append(SAGEConv(in_channels=self.num_feats * len(self.graphs),
+        self.multiscale_nbr_msg_aggr.append(SAGEConv(in_channels=self.num_feats,#dim_hidden * (len(self.graphs)+1),
                                                 out_channels=self.dim_hidden))
         # # self.bns.append(nn.BatchNorm1d(n_2)) self.bns = nn.ModuleList()
         self.batch_norms = []
         batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         self.batch_norms.append(batch_norm_layer)
-        for _ in range(self.num_layers - 2):
+        for _ in range(self.num_layers - 1):
             self.multiscale_nbr_msg_aggr.append(SAGEConv(in_channels=self.dim_hidden ,
                                               out_channels=self.dim_hidden))
             # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
             self.batch_norms.append(batch_norm_layer)
-        self.lin_out = nn.Linear(self.dim_hidden , self.out_dim)
 
 
+        # # Target supergraph neiughborhood within neighborhood embedding
+        # #
+        # self.target_super_nbr_aggr = []
+        # self.target_super_nbr_aggr.append(SAGEConv(in_channels=self.num_feats,
+        #                                         out_channels=self.dim_hidden))
+        # # # self.bns.append(nn.BatchNorm1d(n_2)) self.bns = nn.ModuleList()
+        # self.target_batch_norms = [nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)]
+        # for _ in range(self.num_layers - 1):
+        #     self.target_super_nbr_aggr.append(SAGEConv(in_channels=self.dim_hidden ,
+        #                                       out_channels=self.dim_hidden))
+        #     self.target_batch_norms = self.target_batch_norms + [nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)]
+
+        # self.Combiner = combine()
+        # self.combine = lambda tensor1,tensor2,device: self.Combiner.mean(tensor1,tensor2,device=device)
+        # self.combine_comp = lambda *tensors, device: self.Combiner.mean_comp(*tensors, device=device)
+
+        # self.feed_forward = nn.Sequential(
+        #     nn.Linear(self.dim_hidden * len(self.graphs), self.dim_hidden),
+        #     # nn.Linear(dim_out, dim),
+        #     nn.LayerNorm(self.dim_hidden),  # nn.BatchNorm1d(dim),
+        #     # nn.GELU(),
+        #     # nn.Linear(self.dim_hidden, self.dim_hidden)
+        # )
+        self.feed_forward = FeedForwardModule(dim=self.dim_hidden * len(self.graphs),
+                                              dim_out=self.num_feats,
+                                              input_dim_multiplier=1,
+                                              hidden_dim_multiplier=1,
+                                              dropout=self.dropout)
+
+        self.lin_out = nn.Linear(self.num_feats, self.out_dim)#self.dim_hidden*len(self.graphs), self.out_dim)
+
+        self.act = nn.GELU()
         # self.multiscale_nbr_aggr = nn.Linear(self.dim_hidden * len(self.graphs), self.out_dim) #nn.Sequential( *multiscale_node_embedding )
         # self.multiscale_nbr_aggr = nn.Linear(self.dim_hidden , self.out_dim)
 
         self.probability = nn.Sigmoid() if self.out_dim == 1 else nn.Softmax(dim=1) #nn.Softmax(dim=1) #nn.Sigmoid()
 
+        self.reset_parameters()
+        self.reset_model_parameters(self.feed_forward)
+        self.reset_model_parameters(self)
         # for record keeping
         # self.print_class_attr_and_methods()
+    def reset_parameters(self):
+        self.lin_out.reset_parameters()
+        # for l in self.target_batch_norms:
+        #     l.reset_parameters()
+        for l in self.multiscale_nbr_msg_aggr:
+            l.reset_parameters()
+        for l in self.levelset_graph_filtration_functions_out:
+            l.reset_parameters()
+        for l in self.levelset_modules:
+            l.reset_parameters()
 
+    def reset_model_parameters(self, model):
+        for layer in model.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
     def print_class_attr_and_methods(self):
         attributes_and_methods = dir(self)
 
@@ -1868,12 +2243,12 @@ class HierJGNN(torch.nn.Module):
                 else:
                     print(f'  {name} is an attribute with value: {attribute}')
 
-    def get_graph_dataloader(self, graph, shuffle=True, num_neighbors=[-1], num_workers=None, batch_size=1):
+    def get_graph_dataloader(self, graph, shuffle=False, num_neighbors=[-1], num_workers=None, batch_size=1):
         if not num_workers:
             if graph.num_nodes < 1200:
                 num_workers = 0
             else:
-                num_workers = 4
+                num_workers = 8
         neighborloader = NeighborLoader(data=graph,
                               batch_size=self.batch_size,
                               num_neighbors=self.num_neighbors[: self.num_layers],
@@ -1894,11 +2269,10 @@ class HierJGNN(torch.nn.Module):
             num_workers=num_workers
         )
         return neighborsampler
-        """ DONT FORGET TO CHANGE ALL CALLS TO INCVOUDE BATCH_SIZE, NUM_WORKERS< SHUFFLE"""
 
 
 
-    def forward(self, subset_xs, subset_adjs, super_xs, super_adjs, num_empty=0):
+    def forward(self, subset_xs, subset_adjs, super_xs, super_adj, multilevel_sizes, num_empty=0):
         # Super-graph convolution
         # super_x = self.levelset_modules[-1](super_x, super_adjs)#(super_x, super_x[super_adjs[0].src_node]), super_adjs[0].edge_index)
         # super_filtration_value = self.levelset_graph_filtration_functions[-1](super_x)
@@ -1907,103 +2281,99 @@ class HierJGNN(torch.nn.Module):
         # Subset-graph convolutions
         subset_outs = []
         empty_count = len(self.levelset_modules) - len(subset_xs)
+        max_sample_size = 0
         for i, (subset_x, subset_adj) in enumerate(zip(subset_xs, subset_adjs)):
-            # pout((f"Starting forward i={i}",f"x size {subset_x.size()}",f"adj sizes (edge_index,size) {subset_adj[0][0].size()},{subset_adj[0][2][1]}"))
             single_sample = False
             if subset_x.size(0) <= 1: # invalid if empty (0) and can't use batch norm if one element
                 if subset_x.size(0) == 0:
-                    padding = torch.ones(subset_x.size(0),#subset_xs[-1].size(0), #supergraph_emb_size - out.size(0),
+                    padding = torch.zeros(subset_xs[-1].size(0),
                                          self.dim_hidden).to(subset_x.device)
                     subset_outs.append(padding)
-                    # torch.ones(subset_x.size(0),
-                    #            self.dim_hidden, dtype=torch.float).to(subset_x.device))
                     continue  # Skip if no valid nodes
                 else:
                     single_sample = True
 
-            """   %%%%%%%%%%%%%%%%%%%%%     hard set gnn module to be shared      !!!!!     %%%%%%%%%%%%%%%%%%%%%%"""
-            subset_x = self.levelset_modules[i](subset_x, subset_adj,
-                                                filtration_function_in=self.levelset_graph_filtration_functions_in[i],         #filtration function of input node reps
-                                                filtration_function_hidden=self.levelset_graph_filtration_functions_hidden[i],
-                                                filtration_function_out=None,#self.levelset_graph_filtration_functions_out[i],
+            subset_x = self.normalizers["in"](subset_x)
+
+            subset_x = self.levelset_modules[0](subset_x,
+                                                subset_adj,
+                                                filtration_function_in=None,#self.levelset_graph_filtration_functions_in[i],         #filtration function of input node reps
+                                                filtration_function_hidden=None,#self.levelset_graph_filtration_functions_hidden[0],
+                                                filtration_function_out=self.levelset_graph_filtration_functions_out[i],
                                                 single_sample=single_sample) #filtration function of hidden reps
-            # pout((f"subset x in forward after out {subset_x.size()}"))
+            subset_x = self.normalizers["hid"](subset_x)
+
             subset_outs.append(subset_x)
 
+            if max_sample_size < subset_x.size(0):
+                max_sample_size = subset_xs[-1].size(0) #subset_x.size(0)
 
         uninformative_subset = []
         for i in range(num_empty):
-            padding = torch.ones(super_xs.size(0),  # subset_xs[-1].size(0), #supergraph_emb_size - out.size(0),
+            padding = torch.zeros(max_sample_size,
                                  self.dim_hidden).to(subset_outs[-1].device)
             uninformative_subset.append(padding)
-        subset_outs = uninformative_subset + subset_outs
+            subset_outs = subset_outs + uninformative_subset
 
-        # Pad subset_outs to the same size as super_x
-        supergraph_emb_size = super_xs.size(0)
+        # We only want to concatenate nodes that survive
+        # topological filtration across a sequence of multiple
+        # simplification graphs in the filtration hierarchy
+        # different  number of neighbors can be in supersamples
         padded_subset_outs = []
-        for i, out in enumerate(subset_outs): # subset_outs[:-1]):
-            # pout(("sub out size", out.size()))
-            if out.size(0) < supergraph_emb_size:
-                # padding = UniformativeDummyEmbedding(dim_in=supergraph_emb_size - out.size(0),
-                #                                      dim_out=out.size(1)).to(out.device)
-                padding_size = supergraph_emb_size - out.size(0)
-                padding = torch.ones(padding_size, out.size(1)).to(out.device)
+        for i, out in enumerate(subset_outs):
+            multilevel_size = multilevel_sizes[i]
+            if out.size(0) > max_sample_size:
+                out = out[:max_sample_size]
+            target_size = subset_adjs[-1][-1][2][1]
+            num_super_samp = subset_xs[-1].size(0)
+
+            # out = out[:multilevel_size]         # should i truncate to only same ndes?
+            if out.size(0) < max_sample_size:
+                padding_size = max_sample_size - out.size(0)
+                padding = torch.zeros(padding_size, out.size(1)).to(out.device)
                 out = torch.cat([out, padding], dim=0)
+            out = out[:target_size]
             padded_subset_outs.append(out)
 
-        # Concatenate super-graph and subset-graph embeddings
-        x = torch.cat(padded_subset_outs + [super_xs] , dim=1)
+        # padding_masks = [subset_x_padded != 0.0
+        #                  for subset_x_padded in padded_subset_outs]
+        # padded_subset_outs = [self.normalizers["pad"](x_pad[pad_mask])
+        #                       for pad_mask, x_pad in zip(padding_masks,padded_subset_outs)]
+        # padded_subset_outs = [sub_out * pad_mask.float()
+        #                for pad_mask, sub_out in zip(padding_masks,padded_subset_outs) ]
+        # Now aggregate combned embeddings in supergraph neighborhoods
+        supx = subset_xs[-1]
+        for i, (edge_index, _, size) in enumerate(subset_adjs[-1]):#super_adj):
+            x_target = supx[:size[1]]
+            supx = self.multiscale_nbr_msg_aggr[i]((supx,x_target),edge_index)
+            supx = self.batch_norms[i](supx)
+            if i != len(subset_adjs[-1])-1:
+                supx = self.act(supx)
 
-        #multiply each embedding
-        # combined = subset_outs[-1] # start wit super out
-        # for sub_out in padded_subset_outs[:-1]:
-        #     combined = combined * sub_out
+        # padded_subset_outs.append(supx)
+        # # now aggregate supergraph neighborhood only
+        # for i, (edge_index, _, size) in enumerate(super_adj):#super_adj):
+        #     super_x_target = super_xs[:size[1]]
+        #     super_xs = self.target_super_nbr_aggr[i]((super_xs,super_x_target),edge_index)
+        #     super_xs = self.target_batch_norms[i](super_xs)
+        #     if i != len(super_adj)-1:
+        #         super_xs = self.act(super_xs)
+        #
+        # # now combine aggregated accross graph level
+        # # message passing embeddings with supergraph between nbr
+        # # level messaeg passing embedding
+        # # x = self.combine_comp(*(x,super_xs), device=super_xs.device)
+        x = torch.cat(padded_subset_outs, dim=1)
 
-        # out = self.multiscale_nbr_aggr(combined)
-        # last_edge_index_super = subset_adjs[-1][-1][0]
-        # last_size_super = subset_adjs[-1][-1][2][1]
-        for i, (edge_index, _, size) in enumerate(super_adjs):
-            x_target = x[:size[1]]
-            x = self.multiscale_nbr_msg_aggr[i]((x, x_target),edge_index)
-            x = self.batch_norms[i](x)
-            if i != len(super_adjs)-1:
-                x = self.act(x)
-        out = self.lin_out(out)
-        # sorted_multilevel_shared_out = sorted(subset_outs, key=lambda sub_out: sub_out.size(0))
-        # # Print the sizes of the sorted items
-        #
-        # sorted_num_multilevel_nodes = [sub_out.size(0) for sub_out in sorted_multilevel_shared_out]
-        # # pout(("sorted number shared nodes ", sorted_num_multilevel_nodes))
-        # super_out = subset_outs[-1]
-        # combined_nodes = []
-        # for level, sub_out in enumerate(sorted_multilevel_shared_out):#[:-1]):
-        #     if level != len(sorted_multilevel_shared_out)-1:
-        #         graph_level_out = sub_out
-        #     else:
-        #         graph_level_out = super_out[sorted_num_multilevel_nodes[level-1]:super_out.size(0)]
-        #     sublevel_collection = []
-        #     sublevel_collection.append(graph_level_out)
-        #     if level==0:
-        #         num_shared = sorted_num_multilevel_nodes[level]
-        #         last_level = 0
-        #     else:
-        #         num_shared = sorted_num_multilevel_nodes[level] - sorted_num_multilevel_nodes[level-1]
-        #         last_level = sorted_num_multilevel_nodes[level-1]
-        #     for sup_out_shared in sorted_multilevel_shared_out[level:]:
-        #         sup_n = sup_out_shared[last_level:last_level+num_shared]
-        #         sublevel_collection.append(sup_n)
-        #     combined = torch.cat(sublevel_collection,dim=1).to(super_out.device)
-        #     combined_nodes.append(combined)
-        #
-        # comb_outs = []
-        # for multiscale_nbr_aggr, combined_embeddings in zip(self.multiscale_nbr_aggrs,combined_nodes):
-        #     # pout(("number nodes across graphs", combined_embeddings.size()))
-        #     combined_embeddings = combined_embeddings.to(super_out.device)
-        #     multilevel_out = multiscale_nbr_aggr(combined_embeddings)
-        #     comb_outs.append(multilevel_out)
-        #
-        # out = torch.cat(comb_outs,dim=0)
-        return self.probability(out).squeeze(1)#F.log_softmax(out, dim=1)
+        padding_mask = x != 0.0
+        x = self.normalizers["comb"](x, padding_mask)
+
+        x = self.feed_forward(x)
+
+        x = self.normalizers["out"](x)
+
+        x = self.lin_out(x)
+        return self.probability(x).squeeze(1)#F.log_softmax(out, dim=1)
 
     def train_net(self, input_dict):
         return self.hierarchical_joint_train_net(input_dict)
@@ -2020,10 +2390,11 @@ class HierJGNN(torch.nn.Module):
         input_steps = input_dict["steps"]
 
         val_data = input_dict["val_data"]
-        val_input_dict = {"data": val_data,
+        val_input_dict = {"type":"validation",
                           "device": device,
-                          "dataset": input_dict["dataset"],
                           "loss_op": loss_op}
+        self.validation_dict["device"] = device
+        self.validation_dict["loss_op"] = loss_op
 
         self.train()
         self.training = True
@@ -2038,15 +2409,22 @@ class HierJGNN(torch.nn.Module):
         # self.levelset_graph_filtration_functions = [(f_in.set_device(device),
         #                                              f_hid.set_device(device))
         #                                             for f_in, f_hid in self.levelset_graph_filtration_functions]
-        for filtration_function in self.levelset_graph_filtration_functions_in:
-            filtration_function.set_device(device)
-        for filtration_function in self.levelset_graph_filtration_functions_hidden:
-            filtration_function.set_device(device)
-        # for filtration_function in self.levelset_graph_filtration_functions_out:
+        # for filtration_function in self.levelset_graph_filtration_functions_in:
         #     filtration_function.set_device(device)
+        # for filtration_function_layers in self.levelset_graph_filtration_functions_hidden:
+        #     for filtration_function in filtration_function_layers:
+        #         filtration_function.set_device(device)
+        for filtration_function in self.levelset_graph_filtration_functions_out:
+            filtration_function.set_device(device)
+        for normer in self.normalizers.keys():
+            if normer != "pad":
+                self.normalizers[normer].to(device)
         self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        # self.target_batch_norms = [bn.to(device) for bn in self.target_batch_norms]
+        self.multiscale_nbr_msg_aggr = [layer.to(device) for layer in self.multiscale_nbr_msg_aggr]
+        # self.target_super_nbr_aggr = [layer.to(device) for layer in self.target_super_nbr_aggr]
 
-        for node_indices, subset_samples in self.hierarchical_graph_sampler:
+        for node_indices, subset_samples, multilevel_sizes in self.hierarchical_graph_sampler:
             # if node_indices.numel() == 0:
             #     break  # End of epoch
             optimizer.zero_grad()
@@ -2064,42 +2442,89 @@ class HierJGNN(torch.nn.Module):
                     continue  # Skip empty batches
                 adjs = [adj.to(device) for adj in adjs]
                 subset_adjs.append(adjs)
+                # can also set n_id to sampled indices
+                # n_id = n_id[:batch_size]#node_indices[i]
                 subset_nids.append(n_id)
                 subset_xs.append(self.graphs[i].x[n_id].to(device))
-                subset_ys.extend(self.graphs[i].y[n_id[:batch_size]].to(device))
+                subset_ys.append(self.graphs[i].y[n_id].to(device))
                 subset_bs.append(batch_size)
                 total_training_points += batch_size
 
-            super_xs = self.graphs[-1].x[node_indices].to(device)
-            super_adj = subset_samples[-1][2].to(device)
-            # feat_sim = []
-            # sim_mapped_ids = []
-            # for i, xs in enumerate(subset_nids):
-            #     check_node_maps(xs, super_xs, self.sub_to_sup_mappings[i], self.sub_to_sup_mappings[-1])
-            #     for sub_idx in xs:
-            #         gid = self.sub_to_sup_mappings[i][int(sub_idx.detach().cpu())]
-            #         super_nid_from_j = self.sup_to_sub_mapping[-1][gid]
-            #         sim_mapped_ids.append(super_nid_from_j in super_xs)
-            #         super_x_from_j = self.graphs[-1].x[super_nid_from_j]
-            #         x_with_j = self.graphs[i].x[int(sub_idx.detach().cpu())]
-            #         feat_sim.append(super_x_from_j == x_with_j)
-            # pout(( "similarity of node feaurtes from maps",feat_sim,"mapped ids correct ",sim_mapped_ids))
+            super_xs = subset_xs[-1]#self.graphs[-1].x[node_indices].to(device)
+            super_nid = subset_nids[-1]
+            super_adj = subset_samples[-1][2]
+            super_adj = [adj.to(device) for adj in super_adj]
+            # pout((f"length of sampled indices vs lenfth of indices sampled from sampler", f"length sampled {len(node_indices)}", f"subset xs {subset_xs[-1].size()}"))
 
+            """
+            
+            feat_sim = []
+            # sim_mapped_ids = []
+            # super_nid_from_super = [self.sub_to_sup_mappings[-1][int(gid.detach().cpu())] for gid in super_nid]
+            sim_nid = []
+            for i, xs in enumerate(subset_nids):
+                print(xs)
+                # check_node_maps(xs, super_xs, self.sub_to_sup_mappings[i], self.sub_to_sup_mappings[-1])
+                gnids = []
+                feats = []
+                feats.append(self.graphs[i].x[xs].detach().cpu())
+                for k,sub_idx in enumerate(xs):
+                    # print(sub_idx)
+                    gid = self.sub_to_sup_mappings[i][int(sub_idx.detach().cpu())]
+                    gnids.append(gid)
+
+
+                    # super_nid_from_j = self.sup_to_sub_mapping[-1][gid]
+                    # sim_mapped_ids.append(super_nid_from_j in super_nid)
+                    # sim_mapped_to_sup_to_sup.append(super_nid_from_j in super_nid_from_super)
+                    # super_x_from_j = self.graphs[-1].x[super_nid_from_j]
+                    # x_with_j = self.graphs[i].x[int(sub_idx.detach().cpu())]
+                    # feat_sim.append(super_x_from_j == x_with_j)
+                sim_nid.append(gnids)
+                feat_sim.append(feats)
+
+
+
+            print("simnid", sim_nid)
+            id_eq = []
+            for x,y in zip(sim_nid[0], sim_nid[1]):
+                id_eq.append(x==y)#(x == sim_nid[0] for x in sim_nid))
+            print("ids and index equal", id_eq)
+            # print("id set equal", len(set(sim_nid[0]+[s[1:] for s in sim_nid]))==1)
+            all_nids = sim_nid[0]
+            for s in sim_nid[1:]:
+                all_nids.extend(s)
+            print(" set compare")
+            print("number NOT matching ids: all id collection length - set all id collection: ",
+                  len(all_nids) - len(set(all_nids)))
+            print("set all:")
+            print(set(all_nids))
+            print("length compare")
+
+            for l,s in enumerate(sim_nid):
+                print("graph level ",l, " number nids: ",len(s))
+            # print("feats equal: ", np.all(np.array(feat_sim)==feat_sim[0]))
+            # print("feat set equal ", len(set(feat_sim[0] + [f[1:] for f in feat_sim])) == 1)
+            # print("feasim", feat_sim)
+
+            # pout(( "similarity of node feaurtes from maps",feat_sim,"mapped ids correct ",sim_mapped_ids))
+            """
 
             with autocast():
                 out = self(subset_xs=subset_xs,
                            subset_adjs=subset_adjs,
                            super_xs=super_xs,
                            super_adj=super_adj,
+                           multilevel_sizes=multilevel_sizes,
                            num_empty=skip_count)
 
             # y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
             # out_size = out.size(0)
             # num_sampled = np.min([out_size, self.batch_size])
             supergraph_bs = subset_bs[-1]
-            y = torch.tensor(subset_ys).to(device)
+            y = self.graphs[-1].y[super_nid].to(device)#torch.tensor(subset_ys).to(device)
             y=y[:supergraph_bs]
-            out=out[:supergraph_bs]
+            out=out#[:supergraph_bs]
             loss = loss_op(out, y)
 
             grad_scalar.scale(loss).backward()
@@ -2155,7 +2580,8 @@ class HierJGNN(torch.nn.Module):
         if epoch % eval_steps == 0 and epoch != 0:
             with torch.no_grad():
                 self.eval()
-                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict, validation=True)
+                self.training = False
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
             self.training = True
             self.train()
             # val_out, val_loss, val_labels = self.inference(val_input_dict)
@@ -2219,7 +2645,22 @@ class HierJGNN(torch.nn.Module):
             return total_loss/total_training_points , approx_acc, val_loss
         else:
             return total_loss / total_training_points, approx_acc, 666
-    def inference(self, input_dict, validation=False):
+
+    def __early_stopping(self, val_accuracy, min_delta, patience, epoch, epochs_no_improvements, best_score=None):
+        # Early stopping
+        if best_score is None:
+            best_score = val_accuracy
+        elif val_accuracy < best_score + min_delta:
+            epochs_no_improvements += 1
+            if epochs_no_improvements >= patience:
+                early_stop = True
+                print("Early stopping at epoch:", epoch)
+                return None
+        else:
+            best_score = val_accuracy
+            epochs_no_improvements = 0
+        return best_score, epochs_no_improvements
+    def inference(self, input_dict):
         r"""
         Given input data, applies Hierarchical Filtration Function to infer
         filtration alues to edge, performes topological filtration for persistence graph hierarchy,
@@ -2227,6 +2668,9 @@ class HierJGNN(torch.nn.Module):
         :param input_dict:
         :return:
         """
+        self.eval()
+        self.training = False
+
         device = input_dict["device"]
         loss_op = input_dict["loss_op"]
 
@@ -2234,60 +2678,89 @@ class HierJGNN(torch.nn.Module):
         # epoch = input_dict['epoch']
         # eval_steps = input_dict['eval_steps']
         # input_steps = input_dict["steps"]
-        #
-        # if not validation:
-        #     data = input_dict["data"]
-        #     Multilevel_Graph_Wrapper = GraphFiltrationFamilyWrapper(data,self.thresholds,self.num_neighbors,self.batch_size)
-        # if False:#validation:
-        #     data = self.val_data
-        #     graphs, sub_to_sup_mappings, sup_to_sub_mapping = self.val_graphs, self.val_sub_to_sup_mappings, self.val_sup_to_sub_mapping
-        #     sublevel_graph_loaders = self.val_sublevel_graph_loaders
-        #     hierarchical_graph_sampler = self.val_hierarchical_graph_sampler
-        # else:
-        data = input_dict["data"]
+
+
         ###############################################################
         # if a filtration function hasn't been applied to the data,
         # e.g. edge inference for filter function value assignment
         # (logistic prediction of an edge as homopholous for pers-
         # sistence hierarchy.
         ##############################################################
-        if self.filtration_function:
-            _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
-                                                                 assign_edge_weights=True)
-        # compute persistence filtration for graph hierarchy
-        pout(("Performing Filtration,"
-              "On",
-              "Inference Dataset"))
-        filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=data,
-                                                              persistence=self.thresholds,
-                                                              filtration=None)
-        pout(("Filtration on",
-              "Inference",
-              "Done"))
-        graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
-                                                           filtration_graph_hierarchy.sub_to_sup_mappings,
-                                                           filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
+        # if self.filtration_function:
+        #     _, _, _, data = self.graph_hierarchy_filter_function(input_dict,
+        #                                                          assign_edge_weights=True)
+        if input_dict["type"] == "new":
+            # compute persistence filtration for graph hierarchy
+            data = input_dict["data"]
+            pout(("Performing Filtration On Inference Dataset"))
+            filtration_graph_hierarchy = FiltrationGraphHierarchy(graph=data,
+                                                                  persistence=self.thresholds,
+                                                                  filtration=None)
+            pout(("Filtration on Inference Done"))
+            graphs, sub_to_sup_mappings, sup_to_sub_mapping = (filtration_graph_hierarchy.graphs,
+                                                               filtration_graph_hierarchy.sub_to_sup_mappings,
+                                                               filtration_graph_hierarchy.supergraph_to_subgraph_mappings)
 
-        pout(("%%%%%%%" "FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs), "%%%%%%%"))
-        graph_levels = np.flip(np.arange(len(graphs) + 1))
-        # get neighborhood loaders for each sublevel graph
-        sublevel_graph_loaders = [self.get_graph_dataloader(graph,
-                                                                 shuffle=False,
-                                                                 num_neighbors=[-1],
-                                                            num_workers=0,
-                                                            batch_size=1)
-                                  for graph in graphs]
-        super_graph = graphs[-1]
-        # hierarchical graph neighborhood sampler
-        hierarchical_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=super_graph,
-                                                                      subset_samplers=sublevel_graph_loaders,
-                                                                      subset_to_super_mapping=sub_to_sup_mappings,
-                                                                      super_to_subset_mapping=sup_to_sub_mapping,
-                                                                      batch_size=1,
-                                                                      shuffle=False)
+            pout(("FINISHED CREATED INFERENCE GRAPH HIERARCHY", "Total graphs: ", len(graphs)))
+            graph_levels = np.flip(np.arange(len(graphs) + 1))
+            # get neighborhood loaders for each sublevel graph
+            sublevel_graph_loaders = [self.get_graph_dataloader(graph,
+                                                                shuffle=False,
+                                                                num_neighbors=[-1],
+                                                                num_workers=0,
+                                                                batch_size=self.batch_size) for graph in graphs]
+            super_graph = graphs[-1]
+            # hierarchical graph neighborhood sampler
+            hierarchical_graph_sampler = MultiScaleGraphFiltrationSampler(super_data=super_graph,
+                                                                          subset_data= graphs,
+                                                                          subset_samplers=sublevel_graph_loaders,
+                                                                          subset_to_super_mapping=sub_to_sup_mappings,
+                                                                          super_to_subset_mapping=sup_to_sub_mapping,
+                                                                          batch_size=self.batch_size,
+                                                                          shuffle=False)
+        elif input_dict["type"]=="validation":
+            input_dict = self.validation_dict
+            filtration_graph_hierarchy = input_dict["graph_hierarchy"]
+            val_graph_hier = input_dict["graph_hierarchy"]
+            graphs = input_dict["graphs"]
+            sub_to_sup_mappings = input_dict["sub_to_sup_map"]
+            sup_to_sub_mapping = input_dict["sup_to_sub_map"]
+            sublevel_graph_loaders = input_dict["subgraph_loaders"]
+            super_graph = input_dict["super_graph"]
 
-        self.eval()
-        self.training = False
+            hierarchical_graph_sampler = input_dict["hierarchical_graph_sampler"]
+
+        elif input_dict["type"] == "test":
+            input_dict = self.testing_dict
+            filtration_graph_hierarchy = input_dict["graph_hierarchy"]
+            val_graph_hier = input_dict["graph_hierarchy"]
+            graphs = input_dict["graphs"]
+            sub_to_sup_mappings = input_dict["sub_to_sup_map"]
+            sup_to_sub_mapping = input_dict["sup_to_sub_map"]
+            sublevel_graph_loaders = input_dict["subgraph_loaders"]
+            super_graph = input_dict["super_graph"]
+
+            hierarchical_graph_sampler = input_dict["hierarchical_graph_sampler"]
+        else:
+            raise NotImplementedError(
+                """please specify 'type' (validation, test, new) in input dict
+                for data source or, if 'new', to compute with data in input dict""")
+
+        for module in self.levelset_modules:
+            module.set_device(device)
+        # self.levelset_graph_filtration_functions = [(f_in.set_device(device),
+        #                                              f_hid.set_device(device))
+        #                                             for f_in, f_hid in self.levelset_graph_filtration_functions]
+        # for filtration_function in self.levelset_graph_filtration_functions_in:
+        #     filtration_function.set_device(device)
+        # for filtration_function_layers in self.levelset_graph_filtration_functions_hidden:
+        #     for filtration_function in filtration_function_layers:
+        #         filtration_function.set_device(device)
+        for filtration_function in self.levelset_graph_filtration_functions_out:
+            filtration_function.set_device(device)
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        # self.target_batch_norms = [bn.to(device) for bn in self.target_batch_norms]
+        self.multiscale_nbr_msg_aggr = [layer.to(device) for layer in self.multiscale_nbr_msg_aggr]
 
         approx_thresholds = np.arange(0.0, 1.0, 0.1)
 
@@ -2296,13 +2769,14 @@ class HierJGNN(torch.nn.Module):
 
         # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
         with torch.no_grad():
-            for node_indices, subset_samples in hierarchical_graph_sampler:
-                loss = 0
+            for node_indices, subset_samples, multilevel_sizes in hierarchical_graph_sampler:
+
 
                 subset_bs = []
                 subset_adjs = []
                 subset_xs = []
                 subset_ys = []
+                subset_nids = []
                 skip_count = 0
                 for i, (batch_size, n_id, adjs) in enumerate(subset_samples):
                     if len(n_id) == 0:
@@ -2311,29 +2785,85 @@ class HierJGNN(torch.nn.Module):
                     # adjs = [adj.to(device) for adj in adjs]
                     adjs = [adjs.to(device)]
                     subset_adjs.append(adjs)
+                    # n_id = n_id[:batch_size]  #
+                    subset_nids.append(n_id)
                     subset_xs.append(graphs[i].x[n_id].to(device))
-                    subset_ys.extend(graphs[i].y[n_id[:batch_size]].to(device))
+                    subset_ys.append(graphs[i].y[n_id].to(device))
                     subset_bs.append(batch_size)
 
-                super_xs = self.graphs[-1].x[node_indices].to(device)
-                super_adj = subset_samples[-1][2].to(device)
+                super_xs = subset_xs[-1]  # self.graphs[-1].x[node_indices].to(device)
+                super_adj = subset_adjs[-1]#subset_samples[-1][2]
+                # super_adj = [adj.to(device) for adj in super_adj]
+                super_nid = subset_nids[-1]
 
                 with autocast():
                     out = self(subset_xs=subset_xs,
                                subset_adjs=subset_adjs,
                                super_xs=super_xs,
                                super_adj=super_adj,
-                               num_empty=skip_count)
-
+                               multilevel_sizes=multilevel_sizes,
+                               num_empty=skip_count)[:subset_bs[-1]]
+                """
+                ###############################################################################
                 # y = self.super_graph.y[node_indices].to(device)#n_id[:batch_size]].to(device)
                 # out_size = out.size(0)
                 # num_sampled = np.min([out_size, self.batch_size])
+                feat_sim = []
+                # sim_mapped_ids = []
+                # super_nid_from_super = [self.sub_to_sup_mappings[-1][int(gid.detach().cpu())] for gid in super_nid]
+                sim_nid = []
+                for i, xs in enumerate(subset_nids):
+                    print(xs)
+                    # check_node_maps(xs, super_xs, self.sub_to_sup_mappings[i], self.sub_to_sup_mappings[-1])
+                    gnids = []
+                    feats = []
+                    feats.append(graphs[i].x[xs].detach().cpu())
+                    for k, sub_idx in enumerate(xs):
+                        # print(sub_idx)
+                        gid = sub_to_sup_mappings[i][int(sub_idx.detach().cpu())]
+                        gnids.append(gid)
 
+                        # super_nid_from_j = self.sup_to_sub_mapping[-1][gid]
+                        # sim_mapped_ids.append(super_nid_from_j in super_nid)
+                        # sim_mapped_to_sup_to_sup.append(super_nid_from_j in super_nid_from_super)
+                        # super_x_from_j = self.graphs[-1].x[super_nid_from_j]
+                        # x_with_j = self.graphs[i].x[int(sub_idx.detach().cpu())]
+                        # feat_sim.append(super_x_from_j == x_with_j)
+                    sim_nid.append(gnids)
+                    feat_sim.append(feats)
+
+                print("simnid", sim_nid)
+                id_eq = []
+                for x, y in zip(sim_nid[0], sim_nid[1]):
+                    id_eq.append(x == y)  # (x == sim_nid[0] for x in sim_nid))
+                print("ids and index equal", id_eq)
+                all_nids = sim_nid[0]
+                for s in sim_nid[1:]:
+                    all_nids.extend(s)
+
+                print(" set compare")
+                print("number NOT matching ids: all id collection length - set all id collection: ",len(all_nids)-len(set(all_nids)))
+                print("set all:")
+                print(set(all_nids))
+                print("number common: ",len(set(all_nids)))
+                print("length compare")
+                for l, s in enumerate(sim_nid):
+                    print("graph level ", l, " number nids: ", len(s))
+                # print("feats equal: ", np.all(np.array(feat_sim)==feat_sim[0]))
+                # print("feat set equal ", len(set(feat_sim[0] + [f[1:] for f in feat_sim])) == 1)
+                # print("feasim", feat_sim)
+
+                # pout(( "similarity of node feaurtes from maps",feat_sim,"mapped ids correct ",sim_mapped_ids))
+
+                ################################################################################
+                """
                 supergraph_bs = subset_bs[-1]
                 total_training_points += supergraph_bs
-                y = torch.tensor(subset_ys).to(device)
-                y = y[:supergraph_bs]
-                out = out[:supergraph_bs]
+                y = graphs[-1].y[super_nid[:supergraph_bs]].to(device)  # torch.tensor(subset_ys).to(device)
+                # y = y
+                # y = torch.tensor(subset_ys).to(device)
+                # y = y[:supergraph_bs]
+                # out = out[:supergraph_bs]
 
                 # pout(("ys in inference hjt ", y))
 
@@ -2341,13 +2871,16 @@ class HierJGNN(torch.nn.Module):
                 total_loss += loss.item()
                 # for metrics
                 if self.num_classes > 2:
-                    out = out.argmax(axis=1)
-                predictions.extend(out.detach().cpu().numpy())
+                    pred = out.argmax(axis=1)
+                else:
+                    pred = out
+                predictions.extend(pred.detach().cpu().numpy())
                 labels.extend(y.detach().cpu().numpy())
 
-                del adjs, batch_size, n_id, loss, out,\
-                    subset_xs, subset_adjs, y,\
-                    node_indices, subset_samples
+                # del adjs, batch_size, n_id, loss, out,\
+                #     subset_xs, subset_adjs, y,\
+                #     node_indices, subset_samples
+                del subset_adjs, y, out, subset_xs, subset_bs, subset_ys, subset_nids
                 torch.cuda.empty_cache()
 
         total_loss = total_loss / float(total_training_points)
@@ -2411,12 +2944,12 @@ class GraphFiltrationFamilyWrapper():
 
 
 
-def get_graph_dataloader(graph, batch_size, num_layers, shuffle=True, num_neighbors=[-1]):
+def get_graph_dataloader(graph, batch_size, num_layers, shuffle=False, num_neighbors=[-1]):
 
     if graph.num_nodes < 1200:
-        num_workers = 1
+        num_workers = 0
     else:
-        num_workers = 4
+        num_workers = 8
 
     if shuffle:
         neighborloader = NeighborLoader(data=graph,

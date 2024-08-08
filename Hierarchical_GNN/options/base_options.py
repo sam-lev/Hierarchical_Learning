@@ -154,6 +154,9 @@ class BaseOptions:
             "--weight_decay", type=float, default=0.0, help="weight decay"
         )  # 5e-4
         parser.add_argument("--dim_hidden", type=int, default=512)
+        parser.add_argument("--dim_gin", type=int, default=None)
+        parser.add_argument("--dim_multiscale_filter_conv", type=int, default=None)
+
         parser.add_argument(
             "--batch_size",
             type=int,

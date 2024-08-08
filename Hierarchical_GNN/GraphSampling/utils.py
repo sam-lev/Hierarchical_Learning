@@ -7,6 +7,7 @@ from torch_geometric.typing import Adj, SparseTensor
 from torch_geometric.utils import coalesce, degree
 import torch.nn.functional as F
 import numpy as np
+import torch.nn as nn
 
 MB = 1024 ** 2
 GB = 1024 ** 3
@@ -48,6 +49,30 @@ def init_edge_embedding(data):
     data.edge_attr = torch.cat([data.x[row], data.x[col], data.edge_attr], dim=-1)"""
 
     return data
+
+def mean_normalize_features(features):
+    min_val = features.min(dim=0)[0]
+    max_val = features.max(dim=0)[0]
+    mean_val = features.mean(dim=0)
+    normalized_features = (features - mean_val) / (max_val - min_val)
+    return normalized_features
+
+def l2_normalize_features(features):
+    norm = features.norm(p=2, dim=1, keepdim=True)
+    normalized_features = features / norm
+    return normalized_features
+
+def min_max_normalize_features(features):
+    min_val = features.min(dim=0)[0]
+    max_val = features.max(dim=0)[0]
+    normalized_features = (features - min_val) / (max_val - min_val)
+    return normalized_features
+
+def standardize_features(features):
+    mean = features.mean(dim=0)
+    std = features.std(dim=0)
+    standardized_features = (features - mean) / std
+    return standardized_features
 
 def homophily_edge_labels(data):
     labels = data.y
@@ -102,7 +127,7 @@ def pout(show=None):
             if isinstance(elm, str):
                 print("    * ",elm)
             else:
-                print("    * ", str(elm))
+                print(f"    * {elm}")
         print("    *")
     else:
         print("    *")
@@ -117,3 +142,34 @@ def edge_index_from_adjacency(adj):
     # adj_t = torch.tensor([[0, 1, 0, 0], [1, 0, 0, 0], [1, 0, 0, 1], [0, 0, 1, 0]])
     edge_index = adj.nonzero().t().contiguous()
     return edge_index
+
+
+class MaskedBatchNorm(nn.Module):
+    def __init__(self, num_features):
+        super(MaskedBatchNorm, self).__init__()
+        self.batch_norm = nn.BatchNorm1d(num_features)
+
+    def forward(self, x, mask):
+        self.batch_norm.to(x.device)
+        # Flatten the mask for batch normalization
+        mask = mask.view(-1, x.size(1)).to(x.device)
+
+        # Apply batch normalization to non-padding values
+        x_flat = x.view(-1, x.size(1))
+        mask_flat = mask.float()
+
+        # Calculate mean and variance manually for masked elements
+        mean = (x_flat * mask_flat).sum(dim=0) / mask_flat.sum(dim=0)
+        var = ((x_flat - mean) * mask_flat).pow(2).sum(dim=0) / mask_flat.sum(dim=0)
+
+        # Normalize
+        x_norm = (x_flat - mean) / torch.sqrt(var + self.batch_norm.eps)
+
+        # Apply batch norm scale and shift
+        x_norm = self.batch_norm.weight * x_norm + self.batch_norm.bias
+
+        # Restore the original shape and apply mask to retain padding
+        x_norm = x_norm.view(x.size())
+        x_norm = x_norm * mask + x * (1 - mask.float())
+
+        return x_norm
