@@ -146,6 +146,9 @@ class BaseOptions:
         parser.add_argument(
             "--dropout", type=float, default=0.2, help="input feature dropout"
         )
+        parser.add_argument(
+            "--dropout_edge", type=float, default=0.2, help="input feature dropout for edge classification model"
+        )
         parser.add_argument("--norm", type=str, default="None")
         parser.add_argument("--lr", type=float, default=0.001, help="learning rate")
 
@@ -154,6 +157,7 @@ class BaseOptions:
             "--weight_decay", type=float, default=0.0, help="weight decay"
         )  # 5e-4
         parser.add_argument("--dim_hidden", type=int, default=512)
+        parser.add_argument("--dim_hidden_edge", type=int, default=512, help="hidden dim for edge classifer")
         parser.add_argument("--dim_gin", type=int, default=None)
         parser.add_argument("--dim_multiscale_filter_conv", type=int, default=None)
 
@@ -321,8 +325,8 @@ class BaseOptions:
             # self.batch_size = 64
         elif args.dataset == "WikipediaNetwork":
             args.multi_label = True
-            args.num_classes = 128
-            args.num_neighbors = [25,5] if args.data_subset == "chameleon" else [10,5]
+            args.num_classes = 5
+            args.num_neighbors = [-1]#[25,5] if args.data_subset == "chameleon" else [10,5]
             # args.batch_size = 256
         elif args.dataset == "Reddit":
             args.num_classes = 41

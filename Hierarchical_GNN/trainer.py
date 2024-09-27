@@ -270,7 +270,7 @@ def load_data(dataset_name, datasubset_name,
         # dataset = Planetoid(path, name='Cora', transform=transform)
 
         dataset_class = getattr(torch_geometric.datasets, dataset_name)
-        dataset = dataset_class(path,name=datasubset_name, transform=transform)
+        dataset = dataset_class(path,name=datasubset_name, geom_gcn_preprocess=True, transform=transform)
         # After applying the `RandomLinkSplit` transform, the data is transformed from
         # a data object to a list of tuples (train_data, val_data, test_data), with
         # each element representing the corresponding split.
@@ -692,6 +692,7 @@ class trainer(object):
         input_dict = self.get_input_dict(0)
         self.test_net()
 
+        pout(("inferring on full graph for filter values"))
         pred, loss, ground_truth, self.data = self.model.edge_inference(input_dict,
                                                                         assign_edge_weights=True)
 
@@ -768,7 +769,8 @@ class trainer(object):
         print(prof.key_averages().table(sort_by="self_cpu_memory_usage", row_limit=10))
         return acc
 
-    def train_and_test(self, seed):
+    def train_and_test(self, seed, patience=6):
+        pout(("Using early stopping patience of ",patience))
         results = []
         results_train = []
         results_test = []
@@ -777,6 +779,12 @@ class trainer(object):
         f1s_all = []
         roc_train = []
         roc_test = []
+
+        val_score = 0
+        min_delta = 0.0001
+        patience  = patience
+        best_score = None
+        epochs_no_improvements = 0
         # f1_scores = []
         for epoch in range(self.epochs):
 
@@ -787,7 +795,8 @@ class trainer(object):
             else:
                 self.steps = -1
 
-            train_loss, train_acc, val_loss = self.train_net(epoch)  # -wz-run
+            train_loss, train_acc, val_loss_score = self.train_net(epoch)  # -wz-run
+            val_loss_epoch, val_score_epoch, val_roc_epoch = val_loss_score
 
             if self.train_by_steps:
 
@@ -799,7 +808,10 @@ class trainer(object):
             # if self.type_model  in ["HierGNN"]:
             #     self.trian_data = self.model.get_train_data()
             seed = int(seed)
-            if val_loss != 666:
+            if val_loss_epoch != 666:
+                val_loss = val_loss_epoch
+                val_score = val_score_epoch
+                val_roc = val_roc_epoch
                 print(
                     f"Seed: {seed:02d}, "
                     f"Epoch: {epoch:02d}, "
@@ -807,6 +819,15 @@ class trainer(object):
                     f"Val Loss: {val_loss:.4f}, "
                     f"Approx Train Acc: {train_acc:.4f}"
                 )
+                if patience:
+                    end_training, best_score, epochs_no_improvements = self.__early_stopping(val_score,
+                                                                                      min_delta=min_delta,
+                                                                                      patience=patience,
+                                                                                      epoch=epoch,
+                                                                                      epochs_no_improvements=epochs_no_improvements,
+                                                                                      best_score=best_score)
+                    if end_training:
+                        break
             else:
                 print(
                     f"Seed: {seed:02d}, "
@@ -872,7 +893,7 @@ class trainer(object):
         best_idx_train_roc = np.argmax(roc_train)
         best_roc_train = roc_train[best_idx_train_roc]
         best_idx_test_roc = np.argmax(roc_test)
-        best_roc_test = roc_train[best_idx_test_roc]
+        best_roc_test = roc_test[best_idx_test_roc]
 
         print(
             # f"Best train: {best_train:.2f}%, "
@@ -892,7 +913,25 @@ class trainer(object):
         input_dict = self.get_input_dict(epoch)
         train_loss, train_acc, val_loss = self.model.train_net(input_dict)
         return train_loss, train_acc, val_loss
-
+    def __early_stopping(self, val_score,
+                         min_delta,
+                         patience,
+                         epoch,
+                         epochs_no_improvements,
+                         best_score=None):
+        # Early stopping
+        if best_score is None:
+            best_score = val_score
+        elif val_score < best_score + min_delta:
+            epochs_no_improvements += 1
+            if epochs_no_improvements >= patience:
+                early_stop = True
+                pout(("Early stopping at epoch:", epoch))
+                return True, best_score, epochs_no_improvements
+        else:
+            best_score = val_score
+            epochs_no_improvements = 0
+        return False, best_score, epochs_no_improvements
     def get_input_dict(self, epoch):
         if self.type_model in [
             "GraphSAGE",
