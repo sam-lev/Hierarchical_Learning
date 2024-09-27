@@ -1,0 +1,27 @@
+
+\noindent \textbf{Multi-Scale Successive Training}
+For our first method, we use a GNN which learns node features via message passing in the spatial domain~\cite{graphsage}.  For the $i^{\text{th}}$ persistence level $p_i$ (moving from sparsest to densest), the aggregated node embedding for node $v_i$ from neighbors $u_i\in \iNbr\iv$ of persistence subgraph $G_i$ is given by 
+$
+\hk{\iNbr\iv}{k_i}~=~\sigma\big(AGGR(h_{u_i}^{k_{i}-1}~:~\forall~u_i \in~\iNbr\iv  )  \big)
+$.  Node $v_i$'s updated embedding is concatenated %combined \mh{I assume concat?}
+with the target node embedding from the previous iteration of aggregation $h_{v_i}^{k_i}$ and the aggregated neighbor features,  parameterized with target embedding and neighbor embedding weight matrices $W_{s}^{k_i}$ and $W_{n}^{k_i}$ respectively. Similarly, the target node embeddings and neighboring node embeddings are passed through a two-layer multilayer perceptron (MLP), which after mean-pooling, are multiplied with weight matrices $W_{s}$ and $W_{n}$ The target and neighbor node representations are combined (with concatenation), and the combined embeddings are fed through a nonlinear function $\sigma$, specifically a fully connected network with a nonlinear activation function. 
+
+Instead of training a GNN for $N$ epochs on the finest graph $G_P$, we train it for $\frac{N}{P}$ epochs each on graphs $G_1, \ldots, G_P$, using the embeddings from $G_{i-1}$ to initialize the embeddings of corresponding nodes in $G_i~\forall ~ i \in [1 \ldots, P]$. The MLPs and node embedding weight matrices for target and neighboring node embeddings are shared between graph hierarchies. Training begins with the smallest subset graph and iteratively increases in graph size. We also successively share the learned embedding weight matrices and matrices of the MLPs as well.
+
+As a result, when we begin training on graph $G_p$, the embedding for node $v_p \in \vertexSet(G_p)$ is the combined embedding from previous aggregations at lower persistence subgraphs:
+    $h_{v_p}^{k_p} = COMBINE\big( h_{v_{p-1}}^{k_{p-1}}, h_{v_p}^{k_p - 1}\big)$
+    where we implement COMBINE with concatenation.
+
+\noindent \textbf{Multi-Scale Joint Training}
+For node $v_i$ belonging to node set $\iV$ of subgraph $\iG$, the feature representation $h_{v_i}^k$ at GNN layer $k \in \{1,\cdots, K \}$ 
+first combines self-representations from the previous level of aggregation with aggregated neighbor information:
+\begin{align*}
+\hk{\iv}{k} = COMBINE\big(  W_{s}^{k-1} & h_{v}^{k-1} , \\ &AGGR\big(\{W_{n}^{k-1} h_{u}^{k-1} : u \in \iNbr\iv\}\big)\big)
+\end{align*}
+
+
+Once this is done, the resulting embedding is combined with the embedding representation from other persistence subgraphs.  As an example for two persistence levels $p_i$ and $p_j$ where $ \iv \in \iV \subset \iG$ and $ \jv \in \jV\subset \jG$, we have
+$\hk{v}{k} = \sigma \big( COMBINE( \hk{v_{i}}{k} ,\hk{v_{j}}{k} \big)\big)$. 
+
+
+

@@ -1,8 +1,0 @@
-All Results:
-95.62
-Largest value: 95.62%
-Line number: 8
-Two lines above the largest value line:
-File: exp_sfive_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.6.log
-Seed: 2649224904, Epoch: 79, Loss: 0.0192, Approx Train Acc: 0.9784
-Best test: 95.62% F1 Test: 0.00 Best ROC Test: 0.00

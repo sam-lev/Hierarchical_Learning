@@ -59,12 +59,12 @@ class EdgeMLP(torch.nn.Module):
 
         self.type_model = args.type_model
         self.num_layers = args.num_layers
-        self.dim_hidden = args.dim_hidden
+        self.dim_hidden = args.dim_hidden_edge
         self.num_classes = 2# data.y.shape[-1]#args.num_classes
         self.num_feats = data.x.shape[-1]#args.num_feats
         self.batch_size = args.batch_size
         self.steps = 0
-        self.dropout = args.dropout
+        self.dropout = args.dropout_edge
 
         self.device = args.device
 
@@ -86,30 +86,77 @@ class EdgeMLP(torch.nn.Module):
 
         self.use_batch_norm = args.use_batch_norm
 
-        self.edge_emb_mlp = torch.nn.ModuleList()
-        self.batch_norms = []
-
-
-        # or identity op if use_batch_norm false
-        # inherent class imbalance / overfitting
-        batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # batch_norm_layer = nn.BatchNorm1d if self.use_batch_norm else nn.Identity
-
-        self.edge_emb_mlp.append(nn.Linear(self.cat * self.num_feats, self.dim_hidden))
+        # self.batch_norms = []
+        # self.edge_emb_mlp = torch.nn.ModuleList()
+        #
+        #
+        # # or identity op if use_batch_norm false
+        # # inherent class imbalance / overfitting
+        #
+        # """ begin original """
+        # # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
         # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        self.batch_norms.append(batch_norm_layer)
+        # self.batch_norms.append(batch_norm_layer)
+        #
+        # self.edge_emb_mlp.append(nn.Linear(self.cat * self.num_feats, self.dim_hidden))
+        #
+        # # construct MLP classifier
+        # for _ in range(self.num_layers - 2):
+        #     self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
+        #     # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        #     batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        #     self.batch_norms.append(batch_norm_layer)
+        # #batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        # self.batch_norms.append(batch_norm_layer)
+        """ end original """
+
+
+        """ added below"""
+        self.edge_emb_mlp_1 = torch.nn.ModuleList()
+        self.edge_emb_mlp_2 = torch.nn.ModuleList()
+        self.batch_norms_1 = []
+        self.batch_norms_2 = []
+        # self.norm_in = nn.BatchNorm1d(self.num_feats) if self.use_batch_norm else nn.Identity(self.num_feats)
+        self.node_i_norm_in = nn.LayerNorm( self.num_feats) if self.use_batch_norm else nn.Identity( self.num_feats )
+        self.node_j_norm_in = nn.LayerNorm(self.num_feats) if self.use_batch_norm else nn.Identity(self.num_feats)
+
+        ### MODEL 1 for node 1
+        self.lin_in_1 = nn.Linear(self.num_feats ,self.dim_hidden )
         # construct MLP classifier
         for _ in range(self.num_layers - 2):
-            self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
-            batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-            # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-            self.batch_norms.append(batch_norm_layer)
-        batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        self.batch_norms.append(batch_norm_layer)
+            self.edge_emb_mlp_1.append(nn.Linear(self.dim_hidden, self.dim_hidden))
+            # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            self.batch_norms_1.append(batch_norm_layer)
+        # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms_1.append(batch_norm_layer)
+        self.lin_out_1 = nn.Linear(self.dim_hidden, self.num_feats )
+
+        #### MODEL 2 for node 2
+        self.lin_in_2 = nn.Linear(self.num_feats , self.dim_hidden)
+        # construct MLP classifier
+        for _ in range(self.num_layers - 2):
+            self.edge_emb_mlp_2.append(nn.Linear(self.dim_hidden, self.dim_hidden))
+            # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            self.batch_norms_2.append(batch_norm_layer)
+        # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms_2.append(batch_norm_layer)
         # self.edge_emb_mlp.append(nn.Linear(self.dim_hidden,
         #                                    self.dim_hidden))#self.cat * self.num_feats))
+        self.lin_out_2 = nn.Linear(self.dim_hidden, self.num_feats )
+        """"""
+
+        self.lin_out = nn.Linear( self.cat * self.num_feats, self.dim_hidden )
+        self.node_i_norm_out = nn.LayerNorm( self.num_feats) if self.use_batch_norm else nn.Identity( self.num_feats )
+        self.node_j_norm_out = nn.LayerNorm(self.num_feats) if self.use_batch_norm else nn.Identity(self.num_feats)
+        """ end added"""
+
         self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
+
 
         num_neighbors = args.num_neighbors
         if num_neighbors is None:
@@ -158,9 +205,15 @@ class EdgeMLP(torch.nn.Module):
         self.edge_embeddings.weight.requires_grad = True
         """
 
+
     def reset_parameters(self):
-        for embedding_layer in self.edge_emb_mlp:
-            embedding_layer.reset_parameters()
+
+        # for embedding_layer in self.edge_emb_mlp:
+        #     embedding_layer.reset_parameters()
+        for embedding_layer_1, embedding_layer_2 in zip(self.edge_emb_mlp_1,
+                                                        self.edge_emb_mlp_2):
+            embedding_layer_1.reset_parameters()
+            embedding_layer_2.reset_parameters()
         self.edge_pred_mlp.reset_parameters()
     def edge_embed_idx(selfself, row_idx, col_idx, num_col):
         return row_idx * num_col + col_idx
@@ -182,42 +235,61 @@ class EdgeMLP(torch.nn.Module):
         return factor * torch.square(weight).sum()
 
     def forward(self, edge_index, edge_attr=None):
-        # for i, (edge_index, _, size) in enumerate(adjs):
-        #     x_target = x[: size[1]]  # Target nodes are always placed first.
-        #     x = self.convs[i]((x, x_target), edge_index)
+
         x = self.edge_embeddings(edge_index) if edge_attr is None else edge_attr
-        # x = self.edge_emb_mlp[0](x)
-        # x = self.act(x)
-        # x = self.dropout(x)
-        # x_res = x
+
+        xi, xj = torch.split(x,
+                             [int(x.size(1)/2), int(x.size(1)/2)],
+                                        dim=1)
+
+        xi = self.node_i_norm_in(xi)
+        xj = self.node_j_norm_in(xj)
+            # x =torch.cat([ni,nj],dim=1)
+        xi = self.lin_in_1(xi)
+        xj = self.lin_in_2(xj)
+
+        """ begin og
         for i,embedding_layer in enumerate(self.edge_emb_mlp):
-            # if i == 0:
-            #     x_res = x
-            #     continue
-            # x_hidden = x_res
+
+
             if i != self.num_layers - 1:
                 x = self.dropout(x)
 
             x = embedding_layer(x)
 
             if self.training:
-                x = self.batch_norms[i](x)
-            # if i == 0:
-            # x_res = x_hidden + x_res
+               x = self.batch_norms[i](x)
+
             if i != self.num_layers - 1:
-                x = self.act(x)
+                x = self.act(x)"""
+
+        for i, (embedding_layer_1, embedding_layer_2) in enumerate(zip(self.edge_emb_mlp_1, self.edge_emb_mlp_2)):
+            xi = self.dropout(xi)
+
+            xi = embedding_layer_1(xi)
+            # if self.training:
+            xi = self.batch_norms_1[i](xi)
+            xi = self.act(xi)
+
+            xj = self.dropout(xj)
+            xj = embedding_layer_2(xj)
+            xj = self.batch_norms_2[i](xj)
+            xj = self.act(xj)
+        xi = self.lin_out_1(xi)
+        xj = self.lin_out_2(xj)
+
+        xi = self.node_i_norm_out(xi)
+        xj = self.node_j_norm_out(xj)
+        x =torch.cat([xi,xj],dim=1)
+
+        x = self.lin_out(x)
 
         # x = x + x_res  # torch.cat([x,x_res],axis=1)
         edge_logit = self.edge_pred_mlp(x)#.squeeze(1)#_jump)
         # x = self.batch_norms[-1](x)
-
         edge_logit = self.probability( edge_logit ).squeeze(1)
-
         return edge_logit #F.log_softmax( edge_logit , dim=-1 )
 
-
-    #fp = open('./run_logs/training_memory_profiler.log', 'w+')
-    # @profile#stream=fp)
     def train_net(self, input_dict):
         ###############################
         train_data = input_dict["train_data"]
@@ -288,9 +360,12 @@ class EdgeMLP(torch.nn.Module):
 
         self.train()
         self.training = True
-        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
-
-
+        """ from og"""
+        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        """ new added"""
+        self.batch_norms_1 = [bn.to(device) for bn in self.batch_norms_1]
+        self.batch_norms_2 = [bn.to(device) for bn in self.batch_norms_2]
+        """end added"""
         approx_thresholds = np.arange(0.0, 1.0, 0.1)
 
         train_sample_size, total_training_points, number_batches = 0, 0, 0.0
@@ -517,9 +592,11 @@ class EdgeMLP(torch.nn.Module):
         torch.cuda.empty_cache()
 
         if epoch % eval_steps == 0 and epoch != 0:
-            return total_loss , approx_acc, total_val_loss#float(train_sample_size), val_loss
+            return total_loss , approx_acc, (total_val_loss, val_optimal_score, val_roc)#float(train_sample_size), val_loss
         else:
-            return total_loss, approx_acc, 666
+            return total_loss, approx_acc, (666,666,666)
+
+
     def get_train_data(self):
         return self.train_data
     def aggregate_edge_attr(self, edge_attr, edge_index):

@@ -1,0 +1,20 @@
+Let $G=(\nodeSet, \edgeSet)$ be a graph consisting of node set $v\in \nodeSet$ and edge set $\{e=(u,v) | e \in \edgeSet \text{and } u,v\in \nodeSet\}$ where edge $e=(u,v)$ is said to adjoin nodes $u$ and $v$. We denote a neighborhood around node $v$ as $N(v)=\{ u\in\nodeSet | (u,v)\in \edgeSet\}$ to consist of all nodes in $\nodeSet$ that share an incident edge in $\edgeSet$. For $k\geq1$ we denote the $k-$hop neighborhood of node $v$ as $N_k(v) =\{u\in \nodeSet$ such that there is a connected path of $k$ or fewer edges adjoining $u$ and $v$.
+
+ The class balance ratio is defined as the total positively labeled foreground over the total negatively labeled background nodes. For nodes $u$ and $v$ with labels $y_u$ and $y_v$ and edge set $\edgeSet_i$ for graph $G_i$ in the filtration sequence, the homophily ratio~\cite{zhu2020beyond} is given by 
+$
+h_i = \frac{1}{|\edgeSet_i |} \underset{v\in \edgeSet_i }{\sum} \frac{ | \{u \in \mathcal{N}(v) : y_u = y_v \} | }{|\mathcal{N}(v)|}
+$.
+
+To perform topological filtration of a simplicial complex it is first necessary to have a value assignment over, or comparative criteria between, simplicial cells that affords an ordering. Based on the filter value and beginning with the lower bound in the range of filter values, simplices can be added in order of increasing value. Considering a graph as a 1-D simplicial complex comprised of 0-cell simplex vertices (graph nodes) and 1-cell simplices (graph edges), if the graph nodes or edges are naturally imbued with a weight or value a topological filtration can be performed directly. 
+
+As we aim to employ hierarchical graph learning in a manner to combat oversmoothing our methodology focuses on edges, and specifically, the likelihood an edge adjoins nodes of desperate classes. To accomplish this we first frame the task of node classification as an edge classification problem, where the edge classifier serves as a filter function prescribes filter values to edges through the inferred likelihood that an edge is homopholous
+
+Given a graph $G=(\nodeSet, \edgeSet)$ containing labeled nodes $v$ with labels $y_v$ and node features $h_u$ and $h_v$ for a subset or all of node set $\nodeSet$ we can derive binary edge labels for edge $e=(u,v)$ as $y_{(u,v)} = \left\{ \begin{array}{c} 1 \text{ if }y_u = y_v \\ 0 \text{ if } y_u \neq y_v \end{array}\right\}$ for graphs with binary or multi-class labels. Similarly, a derived edge feature for each edge $e=(u,v)$ can be derived from nodes features $h_u$ and $h_v$ the nodes $u$ and $v$ it adjoins as $\text{COMBINE}(h_u,h_v)$ where combine is a functional operator that merges or aggregates the node features of the nodes made adjacent by the given edge such as an element-wise operation, a weighted sum, the dot product, or concatenation. For our purposes, we use concatenation. The resulting process provides a subset of binary edge labels and features for all edges.
+
+We define an edge filter function to be a multilayer perception with a single logistic output defined as $\text{MLP}\big(\text{COMBINE}(h_u,h_v)\big)$. In our study, we define $\text{COMBINE}(h_u,h_v)$ as the concatenation of the feature vectors $h_u$ and $h_v$ of adjacent nodes' $u$ and $v$. Defined over edges $e\in\edgeSet$ for edge set $\edgeSet$ of graph $G$ is then 
+
+\[ f : \mathbb{R} \times G \times \mathbb{E} \to \mathbb{R}\text{ , }( \edgeSet, e=(u,v)) \mapsto f( \edgeSet, e)\]
+where
+\[f( \edgeSet, e):= \text{MLP}(\text{CONCAT}(h_u,h_v))\]. 
+
+We then train the filter function using the derived homophily edge labels $y_{u,v}$ on a subset of the graph and infer values between 0 and 1 to all remaining edges of the graph, predicting whether an edge is homophilous or not.

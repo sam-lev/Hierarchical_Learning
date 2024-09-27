@@ -1,0 +1,44 @@
+ \begin{figure}[t]
+  \centering
+ % \begin{measuredfigure}
+    \resizebox{\columnwidth}{!}{%
+    \includegraphics{./figures/multi_level_filtration_aggr.png}
+    }
+    % \vspace{-.6cm}
+    \caption{\footnotesize{A sequence of three nested graphs from topological filtration (top row) offering three levels of graph resolution. Messages are shown being passed (dotted arrow) to the bottom right node that, having survived the filtration, is common to all graphs in the multi-scale sequence, differing in neighborhood connectivity. For each subgraph $G_p$ of the total $P$ graphs in the graph hierarchy $\{G_0,\cdots,G_p,\cdots,G_P\}$, messages are passed from each neighborhood $N^r(v)$ to the target node. Messages at each graph level are then aggregated within neighborhoods (highlighted in blue). Messages from all neighborhoods within each graph are then aggregated between one another (highlighted in purple). We introduce (highlighted in orange) across neighborhood aggregation, where messages are passed across neighborhoods in the multi-scale sequence of graphs. The target node's feature representation is then updated with the aggregated embeddings.}}
+    \label{fig:multiscaleagg}
+    % \vspace{-.2cm}
+\end{figure}
+
+
+
+\textbf{Message}
+Neighbor Representations, Target node representation
+for neighborhood $r$, denoted $\mathcal{N}_r(v)$ for node $v$. In~\ref{fig:multiscaleagg} node $v$ is highlighted in yellow within each graph of the nested filtration sequence and the dotted blue arrows denote the messages passed to node $v$ in each neighborhood $N^r_{p}(v)$ where $p$ denotes the graph level in the sequence at filtration value $p\in\{0,\cdots,P\}$ that the neighborhood being considered corresponds to. A single node that exists within multiple graphs of the filtration sequence can have neighborhood structures that differ but are subsets to subsequent neighborhoods later in the sequence of graphs resulting from filtration.
+\[
+h^{r}_{m}(u, v ) =\text{Message}(h^r_{u}, h^r_{v} | v \in \mathcal{N}^r_{p}(v)) )
+\]
+where $h_{u}$ and $h_{v}$ are feature vectors of nodes $u$ and nodes $v$
+
+\textbf{Aggregation Within Neighborhoods (blue)}
+Messages are then aggregated for each neighborhood $N^r_{p}(v)$ across nodes in the target node's neighborhood.  In Figure~\ref{fig:multiscaleagg} this is illustrated with the regions highlighted in blue where, of each graph, messages from each neighborhood $r$ of $v$ in that graph are aggregated.
+\[
+h^r_{v,p} = \text{AGG}_{u \in \mathcal{N}_{p}^r(v)} (h^{r}_{m}(u, v))
+\]
+
+\textbf{Aggregation Between Neighborhoods (purple)}
+Messages are then aggregated between all neighborhood $N_{p}^r(v) \in N_{p}(v)$ of nodes in target node $v$'s neighborhood in subspace $p$
+\[
+h^{N_{p}}_{v,p} = \text{AGG}_{  \mathcal{N}_{p}^r  \in N_{p} } (h^r_{v,p}  )
+\]
+
+\textbf{Multi-Neighborhood Aggregation Across Graph Neighborhoods (orange)} This work introduces the step highlighted in orange in Figure~\ref{fig:multiscaleagg}. Namely, once messages from each neighborhood have been aggregated, messages are then aggregated across all target node neighborhoods in all graphs within the sequence of graphs to which target node $v$ belongs.
+\[
+h^{N}_{v} = \text{AGGR}(h^{N_{p}}_{v,p} )
+\]
+
+\textbf{Update}
+Lastly, the feature representation of the target node is updated with aggregated embeddings
+\[
+h_v = \text{Update}(h^N_{v_P}, h^t_a)
+\]

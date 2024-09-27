@@ -1,0 +1,11 @@
+\vspace{-0.1cm}
+We now detail how we obtain features and labels to formulate our image segmentation problems as classification tasks over the derived topological graph structures as described in Section ~\ref{Sec:Background}
+%\mh{it doesn't matter too much to me if you put feature description or labeling description first. just say ``features and labels'' or ``labels and features'' here to match whatever order you prefer}
+
+\vspace{-0.1cm}
+\subsection{Feature Statistics and Models}
+\label{ssec:models}
+A normalized image $\image$ is a 2-D tensor whose $i,j$-th entry $\image_{ij}$ represents the value (e.g. grayscale intensity) of pixel $(i,j)$ in that image.  During feature extraction features for each pixel $(i,j)$ are computed. We apply a series of transformations to the image, each modeled as a function $f(\image)$ that returns an image of the same size, where the values $f(\image)_{ij}$ contribute $d$ additional features for pixel $(i,j)$ for $d$ different choices of image transformation functions $f$. We create features of dimension $d = 47$.  Rather than perform exhaustive feature engineering our goal here is to provide feature samples from a wide variety of used techniques. Our transformations include the identity of the image, Gaussian blurring and differences of Gaussians with standard deviation $\sigma \in \{2,4,8,16\}$ to serve as a smoothing kernel for capturing pixel neighborhood information, the maximum, minimum, median, and variance of pixel neighborhoods for radius sizes $\{2,4,8,16\}$, Sobel filtration, Gaussian edge detection, and Hessian eigenvalue filtration.
+ Nodes having originated from topological priors also afford aggregate pixel statistics for those covered by priors. For these we compute the median, minimum, maximum, standard deviation, and variance among pixel intensities. If the original pixels then have $d-$dimensional features, the priors are represented by a $5 \times d-$dimensional feature vector resulting in $235$ features per topological prior. 
+
+\input{Method/prior_graph_labeling.tex}

@@ -1,8 +1,0 @@
-All Results:
-95.63
-Largest value: 95.63%
-Line number: 8
-Two lines above the largest value line:
-File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
-Seed: 646390992, Epoch: 79, Loss: 0.0201, Approx Train Acc: 1.0000
-Best test: 95.63% F1 Test: 0.00 Best ROC Test: 0.00

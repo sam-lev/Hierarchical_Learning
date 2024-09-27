@@ -1,0 +1,140 @@
+\documentclass[letterpaper]{article} % DO NOT CHANGE THIS
+\usepackage[submission]{aaai25}  % DO NOT CHANGE THIS
+\usepackage{times}  % DO NOT CHANGE THIS
+\usepackage{helvet}  % DO NOT CHANGE THIS
+\usepackage{courier}  % DO NOT CHANGE THIS
+\usepackage[hyphens]{url}  % DO NOT CHANGE THIS
+\usepackage{graphicx} % DO NOT CHANGE THIS
+\urlstyle{rm} % DO NOT CHANGE THIS
+\def\UrlFont{\rm}  % DO NOT CHANGE THIS
+\usepackage{natbib}  % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\usepackage{caption} % DO NOT CHANGE THIS AND DO NOT ADD ANY OPTIONS TO IT
+\frenchspacing  % DO NOT CHANGE THIS
+\setlength{\pdfpagewidth}{8.5in} % DO NOT CHANGE THIS
+\setlength{\pdfpageheight}{11in} % DO NOT CHANGE THIS
+
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsfonts} 
+\usepackage{caption} %
+\usepackage{subcaption}
+\usepackage{amssymb}
+\usepackage{fancybox}  
+\usepackage[breakable]{tcolorbox}  
+\usepackage{graphicx}
+\usepackage{tcolorbox}  
+\usepackage{mathptmx} 
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{tabularx}
+\usepackage{booktabs}
+%
+%               Personal Imports
+%
+\usepackage{multirow}
+%
+% Definitions.
+% --------------------
+\def\x{{\mathbf x}}
+\def\L{{\cal L}}
+\input{dfn}
+
+\title{Filtration Learning for Graph Neural Networks}
+
+\author{Samuel Leventhal$^{\ddagger}$  \qquad Valerio Pascucci$^{\ddagger}$ \qquad
+Mark Heimann$^{\dagger}$}
+
+\affiliations{$^{\ddagger}$ University of Utah, Salt Lake City, UT, USA \\
+$^{\dagger}$Lawrence Livermore National Laboratory, Livermore, CA, USA}
+
+\begin{document}
+\maketitle
+
+ 
+\begin{abstract}
+Graph neural networks (GNNs) are a powerful method of learning representations of graph-structured data. They excel at learning class-discriminative representations of nodes in homophilous graphs, where connecting nodes tend to belong to the same class. However, many graph neural networks struggle with heterophilous graphs whose nodes tend to connect to others of different classes since it has been shown that the heterophilous edges can muddy the message passing.  Inspired by this finding, we propose to design a topological filtration scheme for the graph based on the probability that a classifier predicts an edge is heterophilous. Using topological filtration based on predicted edge assignments, we can create an ordered sequence of subgraphs. As filtration helps track the evolution of graph connectivity and class connectivity over time, the resulting sequence of nested graphs captures the appearance and merging of connected components and cycles through heterophilous edges. We introduce two methodologies to exploit the sequence of graphs obtained through filtration to train a backbone GNN model. Both methodologies aim to reduce oversmoothing by enhancing the influence of early birth nodes in subgraphs with higher co-class connectivity. The first trains a GNN on each graph in the filtration sequence consecutively for a portion of the total training time, using embeddings from previous graphs to initialize node embeddings in subsequent graphs. The second approach uses a novel message passing scheme to pass messages jointly within each graph and between graph levels with common nodes. The second approach introduced further increases the impact of informative relationships while filtering out uninformative ones through a learnable attention scheme and node filter function for each graph level before multi-scale aggregation. Experiments show that our proposed method improves node classification accuracy on heterophilous and homophilous networks alike.
+
+\iffalse
+\mh{Too long and difficult to read for an abstract (this reads more like the introduction to a paper, although it should have paragraph breaks for that). Should be 1 short to medium length paragraph. Good abstract template you can use for an ML paper:
+\\ Sentence 1: we're studying an important problem
+\\ Sentence 2: powerful methods have been introduced to solve this problem (optional: they often work well because...)
+\\ Sentence 3: alas, such methods suffer from a limitation
+\\ Sentence 4: we have a great idea to fix this limitation
+\\ Sentence 5: here is what our method does
+\\ Sentence 6: experiments show that our method is good in this way(s) (be as specific as possible)
+}
+\fi
+
+\end{abstract}
+
+\section{Introduction}
+\input{Introduction.tex}
+\label{Sec:Introduction}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%               BACKGROUND
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Backgropund and Related Work}
+\input{Background/background}
+\label{Sec:background}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%
+%               METHODOLOGY
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Methodologies for Filtration Learning}
+\label{Sec:method}
+
+
+\subsection{Estimating Edge Homophily Scores}
+\input{Method/EstimatingEdgeHomophilyScores.tex}
+\label{sSec:edge_homophily_scores}
+
+\subsection{Homophily-based Topological Filtration of Graphs}
+\input{Method/HomophilyBasedTopologicalFiltration.tex}
+\label{sSec:topo_filtration}
+
+We perform filtration on graphs using a sorted ordering of 1-simplices, or edges, with filter values assigned by $f(\edgeSet, e)\forall e\in \edgeSet$ of graph $G$, which correspond to the likelihood an edge is homophilous or not. Beginning at filter threshold $p=0$ we then add edge $e=(u,v)$ and its incident nodes $u$ and $v$ if $f(e)\leq p $  and such that the expanded graph $G_p$ at level $p$ of the filtration sequence remains a simplicial complex containing all $e=(u,v)$ such that $f(e)\leq p$  Once all edges have been assigned a filter function value. 
+
+We observe the topological filtration sequence at $P$ levels of filtration thresholds to model multiscale topological information. In contrast to hierarchical graph-level representation learning methods that learn to pool each input graph~\cite{ying2018hierarchical}, this gives us several graph representations of the underlying data to use as input to a graph neural network, which we denote the \textit{multi-scale sequence of graphs} or \textit{graph hierarchy}. Computationally, a smaller threshold value produces a graph higher resolution graph, later in the nested subset sequence of graphs in the filtration sequence. Thus, we obtain a hierarchy of graphs $G_1, \ldots, G_P$ where  $\forall p_i$ for $i \in [1, \ldots, P], G_{p_{i-1}} \subseteq G_{p_i}$: that is, $G_{p_{i-1}}$ is an induced subgraph defined on a subset of the vertices in $G_{p_i}$. %
+
+
+
+
+\subsection{Learning from Topological Filtration of Graphs}
+\input{Method/LearningFromNestedSequencesOfGraphs.tex}
+\label{sSec:learning_from_nested_sequences}
+
+\paragraph{Illustrated Example of Multi-Scale Joint Aggregation}
+\input{Method/illustrated_example_msjt.tex}
+
+\subsection{Topological Filtration for Hierarchical Graph Neural Network}
+\input{Method/methodologies_msst_msjt.tex}
+
+\subsection{Learned Node Filtrations of Graphs}
+\input{Method/learnednodefiltration.tex}
+\label{sSec:learned_node_filtration}
+
+\section{Experiments}
+\input{Experiments.tex}
+\label{Sec:Experiments}
+
+\section{Conclusion}
+\input{Conclusion}
+\label{Sec:Conclusion}
+
+\clearpage
+\bibliography{bibliography}
+
+\appendix
+\input{appendix}
+
+\end{document}

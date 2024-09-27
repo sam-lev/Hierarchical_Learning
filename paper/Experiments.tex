@@ -1,0 +1,69 @@
+
+\paragraph{Implementation}
+We implement all models with PyTorch and all GNNs with Pytorch Geometric~\cite{paszke2019pytorch,fey2019fast}. Topological filtration is performed with Dionysus~\cite{dionysus}
+
+%
+% Hyperparam
+%
+\paragraph{Hyperparameters and Computing Environment}
+\label{ssec:param}
+We perform a parameter sweep of the following
+We train for 321 epochs and perform validation every 8. We employ early stopping based on validation scores for a deviation of $1e-3$ with patience of 4 rounds of validation accuracy scores for the edge filter function's training and 10 for the multi-scale model used. For dropout, the edge filter function uses a value of 0.3, and multi-scale models have a value of 0.65. As the size of the datasets tested varied, hidden dimensions varied to account for the limitations of the machine being used and model overfitting. We perform a parameter sweep for each of the following hyperparameters over the values provided here. Filtration thresholds and number of graphs in graph hierarchy with early stopping:(0.5,0.7,0.9), (0.8,0.9), (0.6,0.9), (0.6,0.9), (0.8,0.9), (0.7), (0.8), (0.9), (0.1)
+Learning Rate of Multi-Scale methodology (MsST or MJT):  \text{3e-4, 3e-3, 0.03, 1e-4, 1e-3, 1e-2 }
+Learning rate of edge filter function: 1e-3,3e-3 ,1e-2 ,3e-2  
+Weight decay: 5e-8 ,5e-6 ,5e-5 ,5e-4 ,0 
+
+All experiments were run on a laptop with 3 GB GeForce GTX 970M with 1280 CUDA Cores GPU and 3.5GHz i7-6700HQ processor running Ubuntu, Linux. %(2.6 up to 3.5GHz, 6MB Cache, 4 Cores, 8 Threads) 
+
+
+%
+%   Datasets
+%
+\subsection{Datasets}
+Planetoid (CiteSeer, Cora, and PubMed): The Planetoid datasets, including CiteSeer, Cora, and PubMed, are widely used citation networks. In these datasets, nodes represent documents, and edges represent citation links between them. The task is typically node classification, where the goal is to predict the category of each document~\cite{yang2016revisiting}.
+
+WikipediaNetwork (Chameleon): is a graph derived from the page-page link network of Wikipedia articles. Nodes represent Wikipedia pages, and edges represent hyperlinks between them. The nodes are classified based on the traffic levels of the web pages. This dataset is used to study graph heterophily~\cite{rozemberczki2021multi}.
+
+
+WebKB (Cornell, Wisconsin, and Texas): The WebKB datasets, including Cornell, Wisconsin, and Texas, consist of webpages collected from computer science departments of various universities. Nodes represent webpages, and edges represent hyperlinks between them. The task is to classify the type of webpage (e.g., course, faculty, student)\cite{peixoto2019network}.
+
+
+
+
+\begin{table}[h!]
+\renewcommand{\arraystretch}{.5}
+\centering
+\resizebox{0.5\textwidth}{!}{%
+\begin{tabular}{|l|l|c|c|c|}
+\hline
+\textbf{Dataset} & \textbf{Subdataset} & \textbf{Nodes} & \textbf{Edges} & \textbf{Classes} \\ \hline
+\multirow{3}{*}{Planetoid} & Cora     & 2,708 & 5,429  & 7  \\ \cline{2-5} 
+                           & CiteSeer & 3,327 & 4,732  & 6  \\ \cline{2-5} 
+                           & PubMed   & 19,717 & 44,338 & 3  \\ \hline
+WikipediaNetwork           & Chameleon & 2,277 & 31,421 & 5  \\ \hline
+\multirow{3}{*}{WebKB}     & Cornell   & 183   & 295    & 5  \\ \cline{2-5} 
+                           & Wisconsin & 251   & 499    & 5  \\ \cline{2-5} 
+                           & Texas     & 183   & 309    & 5  \\ \hline
+\end{tabular}
+}
+\caption{Summary of datasets and their characteristics.}
+\label{tab:datasets}
+\end{table}
+
+
+
+\paragraph{Node Classification Results}
+
+In Table~\ref{tab:acc}, we report the test accuracy results of MsST and MsJT in the context of the reported accuracies of other state-of-the-art models with equivalently proportioned train, validation, and test splits. Our methodologies excel in all except one dataset, achieving the highest and second highest accuracies.
+\begin{figure}[t]
+    \centering
+    % \vspace{-.4cm}
+    \resizebox{0.5\textwidth}{!}{%
+    \includegraphics{figures/results_multiscale.png}
+    }
+    % \vspace{-.6cm}
+    \caption{\footnotesize{Test accuracy results for node classification over datasets, sorted by homophily level, for our methodologies (MsST and MsJT), heterophily oriented model designs, and topological deep learning (TDL) models (sorted by row). Accuracy results are reported for test sets with train, validation, and test split of 40\%, 20\%, and 20\% in comparison to the reported optimal accuracy for similar works with equivalently proportioned splits. The highest accuracy scores are highlighted in green, with the second highest outlined in blue ~\cite{feng2019hypergraph,huang2022revisiting,pei2020geom,zhu2020beyond,bodnar2022neural}.
+}}
+    \label{tab:acc}
+    % \vspace{-.2cm}
+\end{figure}

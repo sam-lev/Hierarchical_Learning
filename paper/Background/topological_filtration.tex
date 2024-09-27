@@ -1,0 +1,33 @@
+
+
+
+
+
+\paragraph{Topological Filtration}
+\label{ssSec:filtration_functions}
+Now, let $(K^i)^m_{i=0}$ be a sequence of simplicial complexes such that 
+$\emptyset = K_0 \subseteq K_1 \subseteq \cdots \subseteq K_m = K. \text{ Then, } (K^i)_{i=0}^m$. Then, $(K^i)_{i=0}^m$ is called a filtration of $K$. In the filtration of $K$, the sequence of each simplicial complex $K_i$ is subset to the subsequent $K_{j>i}$.
+
+\paragraph{Filter Functions}
+\label{par:filter_functions}
+
+Let \( \mathbb{E} \) be the domain of simplices \( \mathbb{K} \) the set of possible simplicial complexes over \( \mathbb{E} \), the filter function \( f : \mathbb{R} \times \mathbb{K} \times \mathbb{E} \to \mathbb{R} \), \(( K, e) \mapsto f( K, e)\) for \( K \in \mathbb{K} \), \( e \in E \). The filter function then maps each simplex to a real value
+%
+%               Learnable filter function
+%
+\paragraph{Learnable Filter Function}
+\label{par:learnable_filter_function}
+A Learnable filter \(f_{\epsilon}\) function differs in that it is differentiable in $\epsilon$. A learnable filter function is then \( f : \mathbb{R} \times \mathbb{K} \times \mathbb{E} \to \mathbb{R} \), \((\epsilon, K, e) \mapsto f( \epsilon, K, e)\) for \( K \in \mathbb{K} \), \( e \in E \). Then, we call \( f \) a learnable vertex filter function with parameter \( \epsilon \). It has been shown that if pairwise simplex values are distinct, such a differentiable filter function can be used in the context of $k$-persistent homology as a mapping of simplicial complexes that is differentiable end to end~\cite{hofer2020graph}
+
+\paragraph{Construction of Topological Filtration}
+The filtration is constructed by including simplices in increasing order of their filter values. Simplices are first assigned values through a filter function or a filter function for the compassion of simplices is derived. Starting with the empty set, simplices are added consecutively in sorted order by increasing the filter function value. Simplices are added such that the resulting simplicial complex contains the previous subset simplicial complexes for lower filter function values. Each step corresponds to subcomplex $K_p$ where $p$ is the threshold value. For filter function $f(e)$ over simplices $e\in \mathbb{E}$ the subcomplex $K_p$ during filtration contains all simplices with filter value less than $p$. The set of simplices in $K_p$ is then $\{e\in K_p | f(e)\leq p\}$. As the filtration progresses, you can track how topological features like connected components, loops, and voids appear and disappear. These features are summarized using tools like persistent homology.  
+
+%                top filtration graphs
+%
+\paragraph{Topological Filtration of Graphs}
+Graphs are simplicial complexes. We can interpret a graph $G$ as a 1-dimensional simplicial complex whose vertices (0-simplices) are the graph nodes and whose edges (1-simplices) are the edges. In the topological filtration of graphs, we can think of filtration as a growth process of a weighted graph. As the graph grows, new edges and nodes are introduced, introducing new connected components and neighborhood structures.
+
+%More formally, if we have persistence levels $p_i$ and $p_j$, such that $p_j < p_i$, then $\msc(p_i) \subset \msc(p_j)$ and $\iG \subset \jG$ for priors graphs $\iG$ and $\jG$. 
+Node neighborhoods thus share this property: for each node $v_i \in \iV \cap \jV$, e.g. $\iNbr{v_i}$ for $v_i \in \iV$ and $\jNbr{v_i}$ for $v_i \in \jV$, we have that $\iNbr{v_i} \subseteq \jNbr{v_i}$. %Due to persistence filtrations resulting in a  sequential hierarchy of complexes and corresponding priors graphs,  
+We give all graphs the full node set found at the lowest threshold level of the filtration sequence, but nodes that would not otherwise exist in the graph at a higher persistence level are disconnected. Early birth nodes, which appear for lower value thresholds, then remain in subsequent graphs in the filtration sequence, with neighborhood structure for each node potentially differing for each node between different graphs in the sequence.%have isolated vertices without connections to any other vertex belonging to a graph of a higher persistence level.  
+

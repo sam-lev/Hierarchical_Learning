@@ -1,0 +1,109 @@
+\newcommand\mytop{\rule{0pt}{2ex}} % FOR FIRST DRAFT OF EXPERIMENTS TABLE CAN REMOVE IF WE REFORMAT
+\newcommand\method{GETO-GNN\xspace}
+\newcommand\graph{\mathcal{G}}
+\newcommand\G{\mathcal{G}}
+\newcommand\vertexSet{\mathcal{V}}
+\newcommand\edgeSet{\mathcal{E}}
+\newcommand\polylineSet{\mathcal{P}}
+\newcommand\nodeSet{\mathcal{N}}
+\newcommand\image{\mathbf{X}}
+\newcommand\polyline{\mathbf{p}}
+\newcommand{\matW}{\mathbf{W}}
+\newcommand\msc{\mathbf{MSC}}
+\newcommand\graphMSC{\mathcal{M}}
+\newcommand\neighborPoly{\mathbf{q}}
+\newcommand\Mspace{\mathbb{M}}
+\newcommand\Rspace{\mathbb{R}}
+\newcommand{\V}[1]{\mathbf{#1}}
+\newcommand\MLP{\mathbf{MLP}}
+\newcommand\PCA{\mathbf{PCA}}
+\newcommand\concat{\mathbf{concat}}
+
+\newcommand\subG{\mathcal{G}_{sb}}
+\newcommand\supG{\mathcal{G}_{sp}}
+\newcommand\subE{\mathbf{E}_{sb}}
+\newcommand\supE{\mathbf{E}_{sp}}
+\newcommand\subV{\mathbf{V}_{sb}}
+\newcommand\supV{\mathbf{V}_{sp}}
+\newcommand{\Nbr}[1]{\mathcal{N}(#1)}
+
+\newcommand{\subNbr}[1]{\mathcal{N}_{sb}(#1)}
+\newcommand{\supNbr}[1]{\mathcal{N}_{sp}(#1)}
+
+\newcommand\iG{\mathbf{G}_{p_i}}
+\newcommand\jG{\mathbf{G}_{p_j}}
+\newcommand\iE{\mathbf{E}_{p_i}}
+\newcommand\jE{\mathbf{E}_{p_j}}
+\newcommand\iV{\mathbf{V}_{p_i}}
+\newcommand\jV{\mathbf{V}_{p_j}}
+\newcommand\iv{v_i}
+\newcommand\jv{v_j}
+\newcommand{\hk}[2]{h_{#1}^{#2}}
+\newcommand{\iNbr}[1]{\mathcal{N}_{p_i}(#1)}
+\newcommand{\jNbr}[1]{\mathcal{N}_{p_j}(#1)}
+
+\newcommand\iW{\mathbf{W}_{i}}
+\newcommand\jW{\mathbf{W}_{j}}
+\newcommand*\imap{%
+ \gamma_{p_i} }
+ \newcommand*\jmap{%
+ \gamma_{p_j} }
+
+ \newcommand\Fo{$\text{F}_1$~}
+ 
+\newcommand{\showcomment}{} % Comment this line to hide all comments in the document
+\newcommand{\addcomment}[2]{\ifdefmacro{\showcomment}{{\textcolor{#1}{#2}}}{}}
+\newcommand{\mh}[1]{\addcomment{red}{[Mark: #1]}}
+%\newcommand{\addcomment}[2]{\ifdefmacro{\showcomment}{{\textcolor{#1}{#2}}}{}}
+
+\definecolor{sc}{rgb}{0.6,0.30, 0.6}
+\definecolor{seagreen}{rgb}{0.18, 0.55, 0.34}
+%\newcommand{\scom}[1]{\addcomment{sc}{\red{\big[}{~ #1~}\red{\big]}}}
+\newcommand{\samcom}[1]{\addcomment{blue}{[Sam: #1]}}
+
+\definecolor{sn}{rgb}{0.3,0.60, 0.6}
+\newcommand{\snote}[1]{\addcomment{seagreen}{{\red{\big[}~ #1~\red{\big]}}}} 
+
+
+%%  To see bulleted section outlines
+\newcommand\boxitem[1]{\begin{tcolorbox}[standard jigsaw,colframe=orange, opacityframe=0.5, opacityback=0.5, width=0.9\columnwidth, halign=flush left]{#1} \end{tcolorbox} }
+
+%  To hide bulleted outlines
+\newcommand{\hide}[1]{}
+%\newcommand{\boxitem}[1]{\hide{#1}}
+
+
+%colors
+\newcommand{\blue}[1]{\addcomment{blue}{#1}}
+\newcommand{\red}[1]{\addcomment{red}{#1}}
+\newcommand{\yellow}[1]{\addcomment{yellow}{#1}}
+\newcommand{\lightblue}[1]{\addcomment{cyan}{#1}}
+\newcommand{\green}[1]{\addcomment{green}{#1}}
+\newcommand{\purple}[1]{\addcomment{violet}{#1}}
+\newcommand{\pink}[1]{\addcomment{magenta}{#1}}
+
+
+\definecolor{orangebrown}{rgb}{0.5,0.35, 0.10}
+\newcommand{\orangebrown}[1]{\addcomment{orangebrown}{#1}}
+\definecolor{dorange}{rgb}{1.0,0.30, 0.0}
+\newcommand{\dorange}[1]{\addcomment{dorange}{#1}}
+\definecolor{redorange}{rgb}{0.9,0.50, 0.0}
+\newcommand{\redorange}[1]{\addcomment{redorange}{#1}}
+\definecolor{dyellow}{rgb}{0.75,0.7, 0.0}
+\newcommand{\dyellow}[1]{\addcomment{dyellow}{#1}}
+\definecolor{blonde}{rgb}{1.0, 0.60,0.0}
+\newcommand{\blonde}[1]{\addcomment{blonde}{#1}}
+\definecolor{Blue}{rgb}{0.0, 0.0, 1.0}
+\newcommand{\Blue}[1]{\addcomment{Blue}{#1}}
+\definecolor{lblue}{rgb}{0.25,0.35, 0.95}
+\newcommand{\lblue}[1]{\addcomment{lblue}{#1}}
+\definecolor{grey}{rgb}{0.3,0.33, 0.33}
+\newcommand{\grey}[1]{\addcomment{grey}{#1}}
+\definecolor{Green}{rgb}{0.0, 0.4, 0.0}
+\newcommand{\Green}[1]{\addcomment{Green}{#1}}
+\definecolor{lgreen}{rgb}{0.3, 0.9, 0.1}
+\newcommand{\lgreen}[1]{\addcomment{lgreen}{#1}}
+\definecolor{lorange}{rgb}{1.0,0.50, 0.0}
+\newcommand{\lorange}[1]{\addcomment{lorange}{#1}}
+\definecolor{springgreen}{rgb}{0.0, 0.9, 0.4}
+\newcommand{\springgreen}[1]{\addcomment{springgreen}{#1}}

@@ -1,4 +1,4 @@
-name: torchgeometric
+name: torchgeometric2
 channels:
   - pyg
   - pytorch

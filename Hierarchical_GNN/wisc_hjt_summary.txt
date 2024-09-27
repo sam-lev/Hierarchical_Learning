@@ -1,0 +1,2251 @@
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1430510182, Epoch: 83, Loss: 0.0333, Approx Train Acc: 0.4444
+Best test: 46.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4612.2449 0.0000 
+final mean and std of test acc:  4612.2449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 1333468026, Epoch: 83, Loss: 0.0342, Approx Train Acc: 0.3498
+Best test: 33.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3346.9388 0.0000 
+final mean and std of test acc:  3346.9388 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2984377959, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.5966
+Best test: 34.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3453.8153 0.0000 
+final mean and std of test acc:  3453.8153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+    * 1
+    *
+    *
+    *  GRAPH NUMBER NODES 
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 4169776116, Epoch: 139, Loss: 0.0188, Approx Train Acc: 0.5234
+Best test: 43.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4360.0000 0.0000 
+final mean and std of test acc:  4360.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1912736067, Epoch: 83, Loss: 0.0349, Approx Train Acc: 0.5378
+Best test: 43.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4320.9877 0.0000 
+final mean and std of test acc:  4320.9877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 4105797930, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6218
+Best test: 31.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3170.7317 0.0000 
+final mean and std of test acc:  3170.7317 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 1678731247, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6710
+Best test: 44.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4493.9271 0.0000 
+final mean and std of test acc:  4493.9271 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 589982564, Epoch: 83, Loss: 0.0338, Approx Train Acc: 0.3116
+Best test: 31.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3122.3629 0.0000 
+final mean and std of test acc:  3122.3629 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 3307769661, Epoch: 83, Loss: 0.0281, Approx Train Acc: 0.4346
+Best test: 45.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4530.6122 0.0000 
+final mean and std of test acc:  4530.6122 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1376013797, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.5975
+Best test: 41.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4105.6911 0.0000 
+final mean and std of test acc:  4105.6911 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2765668586, Epoch: 83, Loss: 0.0311, Approx Train Acc: 0.4240
+Best test: 43.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4398.3402 0.0000 
+final mean and std of test acc:  4398.3402 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 4079039951, Epoch: 83, Loss: 0.0334, Approx Train Acc: 0.4118
+Best test: 43.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4344.2623 0.0000 
+final mean and std of test acc:  4344.2623 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3595376997, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.7179
+Best test: 30.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3052.2088 0.0000 
+final mean and std of test acc:  3052.2088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 2023829504, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6229
+Best test: 33.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3346.7742 0.0000 
+final mean and std of test acc:  3346.7742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 2246959956, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.6026
+Best test: 31.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3157.8947 0.0000 
+final mean and std of test acc:  3157.8947 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 1594272458, Epoch: 139, Loss: 0.0192, Approx Train Acc: 0.6121
+Best test: 19.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1983.8057 0.0000 
+final mean and std of test acc:  1983.8057 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 315457647, Epoch: 139, Loss: 0.0172, Approx Train Acc: 0.5847
+Best test: 23.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2388.6640 0.0000 
+final mean and std of test acc:  2388.6640 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 590702201, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.5859
+Best test: 28.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2845.5285 0.0000 
+final mean and std of test acc:  2845.5285 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 70131472, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6109
+Best test: 42.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4280.0000 0.0000 
+final mean and std of test acc:  4280.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 3261130909, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6170
+Best test: 29.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2903.2258 0.0000 
+final mean and std of test acc:  2903.2258 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 3943317714, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.7149
+Best test: 32.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3266.9323 0.0000 
+final mean and std of test acc:  3266.9323 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 164398559, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6795
+Best test: 33.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3360.0000 0.0000 
+final mean and std of test acc:  3360.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 1650444984, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6376
+Best test: 21.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2168.6747 0.0000 
+final mean and std of test acc:  2168.6747 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 3492587363, Epoch: 83, Loss: 0.0520, Approx Train Acc: 0.4459
+Best test: 46.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4696.3563 0.0000 
+final mean and std of test acc:  4696.3563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1213078842, Epoch: 83, Loss: 0.0373, Approx Train Acc: 0.3628
+Best test: 34.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3456.7901 0.0000 
+final mean and std of test acc:  3456.7901 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 1116679660, Epoch: 83, Loss: 0.0378, Approx Train Acc: 0.3578
+Best test: 42.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4279.8354 0.0000 
+final mean and std of test acc:  4279.8354 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 34754966, Epoch: 83, Loss: 0.0332, Approx Train Acc: 0.4439
+Best test: 46.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4655.8704 0.0000 
+final mean and std of test acc:  4655.8704 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 550435541, Epoch: 83, Loss: 0.0362, Approx Train Acc: 0.4375
+Best test: 50.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5061.7284 0.0000 
+final mean and std of test acc:  5061.7284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 308251640, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6121
+Best test: 18.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1847.3896 0.0000 
+final mean and std of test acc:  1847.3896 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 14407798, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6383
+Best test: 30.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3052.2088 0.0000 
+final mean and std of test acc:  3052.2088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 322005521, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6340
+Best test: 33.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3346.7742 0.0000 
+final mean and std of test acc:  3346.7742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 540449855, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6271
+Best test: 32.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3252.0325 0.0000 
+final mean and std of test acc:  3252.0325 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 1355349151, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6197
+Best test: 41.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4105.6911 0.0000 
+final mean and std of test acc:  4105.6911 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1014152307, Epoch: 139, Loss: 0.0204, Approx Train Acc: 0.5000
+Best test: 33.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3373.9837 0.0000 
+final mean and std of test acc:  3373.9837 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1542204068, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.6862
+Best test: 36.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3669.3548 0.0000 
+final mean and std of test acc:  3669.3548 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2488873446, Epoch: 83, Loss: 0.0380, Approx Train Acc: 0.1256
+Best test: 31.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3157.8947 0.0000 
+final mean and std of test acc:  3157.8947 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 1226092072, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6737
+Best test: 15.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1566.2651 0.0000 
+final mean and std of test acc:  1566.2651 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2727215071, Epoch: 83, Loss: 0.0383, Approx Train Acc: 0.1216
+Best test: 11.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1102.0408 0.0000 
+final mean and std of test acc:  1102.0408 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 307828559, Epoch: 139, Loss: 0.0163, Approx Train Acc: 0.5660
+Best test: 32.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3251.0288 0.0000 
+final mean and std of test acc:  3251.0288 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 1263370480, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6694
+Best test: 41.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4193.5484 0.0000 
+final mean and std of test acc:  4193.5484 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 750493771, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6293
+Best test: 38.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3836.7347 0.0000 
+final mean and std of test acc:  3836.7347 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2209117773, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6293
+Best test: 43.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4337.3494 0.0000 
+final mean and std of test acc:  4337.3494 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2772373238, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7124
+Best test: 27.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2720.0000 0.0000 
+final mean and std of test acc:  2720.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 2404154265, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6878
+Best test: 27.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2723.5772 0.0000 
+final mean and std of test acc:  2723.5772 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 2938368072, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6410
+Best test: 32.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3252.0325 0.0000 
+final mean and std of test acc:  3252.0325 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 1824791480, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.6043
+Best test: 38.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3886.6397 0.0000 
+final mean and std of test acc:  3886.6397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 2240409057, Epoch: 83, Loss: 0.0490, Approx Train Acc: 0.4554
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4698.7952 0.0000 
+final mean and std of test acc:  4698.7952 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2734098626, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6638
+Best test: 18.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1862.3482 0.0000 
+final mean and std of test acc:  1862.3482 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3396760754, Epoch: 83, Loss: 0.0407, Approx Train Acc: 0.4749
+Best test: 48.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4857.1429 0.0000 
+final mean and std of test acc:  4857.1429 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 148682110, Epoch: 139, Loss: 0.0201, Approx Train Acc: 0.5105
+Best test: 31.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3107.5697 0.0000 
+final mean and std of test acc:  3107.5697 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1568450850, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.6975
+Best test: 26.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2631.5789 0.0000 
+final mean and std of test acc:  2631.5789 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2796796766, Epoch: 83, Loss: 0.0314, Approx Train Acc: 0.4266
+Best test: 45.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4564.3154 0.0000 
+final mean and std of test acc:  4564.3154 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 595635053, Epoch: 83, Loss: 0.0347, Approx Train Acc: 0.4147
+Best test: 44.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4476.9874 0.0000 
+final mean and std of test acc:  4476.9874 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.5.log
+    *
+    *
+    *  similarity of node feaurtes from maps
+    *  
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 32151083, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.6456
+Best test: 35.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3574.2972 0.0000 
+final mean and std of test acc:  3574.2972 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 159393935, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6597
+Best test: 30.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3064.5161 0.0000 
+final mean and std of test acc:  3064.5161 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3372737602, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5758
+Best test: 37.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3739.8374 0.0000 
+final mean and std of test acc:  3739.8374 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 584002678, Epoch: 83, Loss: 0.0291, Approx Train Acc: 0.4541
+Best test: 46.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4612.2449 0.0000 
+final mean and std of test acc:  4612.2449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 1007372509, Epoch: 83, Loss: 0.0353, Approx Train Acc: 0.3727
+Best test: 44.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4489.7959 0.0000 
+final mean and std of test acc:  4489.7959 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2179199964, Epoch: 83, Loss: 0.0348, Approx Train Acc: 0.3440
+Best test: 32.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3224.4898 0.0000 
+final mean and std of test acc:  3224.4898 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 4256984782, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6398
+Best test: 23.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2307.6923 0.0000 
+final mean and std of test acc:  2307.6923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3269583, Epoch: 83, Loss: 0.0478, Approx Train Acc: 0.4977
+Best test: 48.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4852.3207 0.0000 
+final mean and std of test acc:  4852.3207 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3633229905, Epoch: 139, Loss: 0.0130, Approx Train Acc: 0.7336
+Best test: 21.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2186.2348 0.0000 
+final mean and std of test acc:  2186.2348 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 315795418, Epoch: 139, Loss: 0.0176, Approx Train Acc: 0.5462
+Best test: 42.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4297.1888 0.0000 
+final mean and std of test acc:  4297.1888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1659797234, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.7562
+Best test: 16.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1646.5863 0.0000 
+final mean and std of test acc:  1646.5863 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 3317479451, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6017
+Best test: 38.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3840.0000 0.0000 
+final mean and std of test acc:  3840.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3474473224, Epoch: 139, Loss: 0.0182, Approx Train Acc: 0.5431
+Best test: 31.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3185.4839 0.0000 
+final mean and std of test acc:  3185.4839 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 2192537805, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6422
+Best test: 33.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3346.7742 0.0000 
+final mean and std of test acc:  3346.7742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 2189773393, Epoch: 139, Loss: 0.0183, Approx Train Acc: 0.5252
+Best test: 32.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3212.8514 0.0000 
+final mean and std of test acc:  3212.8514 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 3007104148, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6778
+Best test: 32.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3200.0000 0.0000 
+final mean and std of test acc:  3200.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 456656716, Epoch: 83, Loss: 0.0383, Approx Train Acc: 0.3585
+Best test: 31.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3168.7243 0.0000 
+final mean and std of test acc:  3168.7243 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 4010202637, Epoch: 83, Loss: 0.0409, Approx Train Acc: 0.3271
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2904.5643 0.0000 
+final mean and std of test acc:  2904.5643 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3847777955, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6498
+Best test: 18.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1854.8387 0.0000 
+final mean and std of test acc:  1854.8387 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1202379483, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6525
+Best test: 17.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1740.8907 0.0000 
+final mean and std of test acc:  1740.8907 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 2265863365, Epoch: 83, Loss: 0.0530, Approx Train Acc: 0.4352
+Best test: 45.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4530.6122 0.0000 
+final mean and std of test acc:  4530.6122 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1212742256, Epoch: 139, Loss: 0.0180, Approx Train Acc: 0.5504
+Best test: 41.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4129.5547 0.0000 
+final mean and std of test acc:  4129.5547 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3039139253, Epoch: 83, Loss: 0.0494, Approx Train Acc: 0.4933
+Best test: 47.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4775.5102 0.0000 
+final mean and std of test acc:  4775.5102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp6_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 841548162, Epoch: 02, Loss: 0.6507, Approx Train Acc: 0.5378
+Seed: 841548162, Epoch: 03, Loss: 0.6285, Approx Train Acc: 0.5657
+Seed: 841548162, Epoch: 04, Loss: 0.6091, Approx Train Acc: 0.5498
+Seed: 841548162, Epoch: 05, Loss: 0.5907, Approx Train Acc: 0.5458
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2364852583, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.6239
+Best test: 41.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4136.5462 0.0000 
+final mean and std of test acc:  4136.5462 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 4170803681, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6481
+Best test: 21.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2137.0968 0.0000 
+final mean and std of test acc:  2137.0968 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 3279127633, Epoch: 83, Loss: 0.0520, Approx Train Acc: 0.4583
+Best test: 46.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4658.6345 0.0000 
+final mean and std of test acc:  4658.6345 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 878348361, Epoch: 83, Loss: 0.0338, Approx Train Acc: 0.4035
+Best test: 44.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4462.1514 0.0000 
+final mean and std of test acc:  4462.1514 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2526765693, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.5551
+Best test: 29.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2903.2258 0.0000 
+final mean and std of test acc:  2903.2258 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 4278744835, Epoch: 83, Loss: 0.0484, Approx Train Acc: 0.4732
+Best test: 49.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4980.0797 0.0000 
+final mean and std of test acc:  4980.0797 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 1205770231, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6229
+Best test: 28.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2874.4939 0.0000 
+final mean and std of test acc:  2874.4939 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 2052289350, Epoch: 83, Loss: 0.0507, Approx Train Acc: 0.4667
+Best test: 48.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4817.8138 0.0000 
+final mean and std of test acc:  4817.8138 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2072097671, Epoch: 83, Loss: 0.0304, Approx Train Acc: 0.5304
+Best test: 45.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4560.6695 0.0000 
+final mean and std of test acc:  4560.6695 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 3164710717, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6356
+Best test: 38.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3886.6397 0.0000 
+final mean and std of test acc:  3886.6397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3927038618, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.5169
+Best test: 39.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3911.2903 0.0000 
+final mean and std of test acc:  3911.2903 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 125691404, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.6438
+Best test: 27.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2701.6129 0.0000 
+final mean and std of test acc:  2701.6129 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 4001163045, Epoch: 83, Loss: 0.0620, Approx Train Acc: 0.2844
+Best test: 27.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2757.2016 0.0000 
+final mean and std of test acc:  2757.2016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 439849816, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5622
+Best test: 33.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3360.3239 0.0000 
+final mean and std of test acc:  3360.3239 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1050898825, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.6653
+Best test: 25.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2589.6414 0.0000 
+final mean and std of test acc:  2589.6414 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 482838612, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.6596
+Best test: 19.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1991.8699 0.0000 
+final mean and std of test acc:  1991.8699 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1868004973, Epoch: 83, Loss: 0.0327, Approx Train Acc: 0.5023
+Best test: 46.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4605.8091 0.0000 
+final mean and std of test acc:  4605.8091 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 149592646, Epoch: 83, Loss: 0.0343, Approx Train Acc: 0.5047
+Best test: 48.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4852.3207 0.0000 
+final mean and std of test acc:  4852.3207 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3852239112, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.5890
+Best test: 35.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3588.7097 0.0000 
+final mean and std of test acc:  3588.7097 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 1281520803, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6667
+Best test: 34.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3455.2846 0.0000 
+final mean and std of test acc:  3455.2846 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2199907729, Epoch: 83, Loss: 0.0333, Approx Train Acc: 0.4469
+Best test: 45.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4534.4130 0.0000 
+final mean and std of test acc:  4534.4130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 4173578820, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6276
+Best test: 45.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4593.4959 0.0000 
+final mean and std of test acc:  4593.4959 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 4085668600, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6128
+Best test: 35.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3536.5854 0.0000 
+final mean and std of test acc:  3536.5854 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 489621398, Epoch: 83, Loss: 0.0355, Approx Train Acc: 0.4273
+Best test: 44.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4485.5967 0.0000 
+final mean and std of test acc:  4485.5967 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 2615394765, Epoch: 139, Loss: 0.0159, Approx Train Acc: 0.6157
+Best test: 31.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3157.8947 0.0000 
+final mean and std of test acc:  3157.8947 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2715339972, Epoch: 83, Loss: 0.0327, Approx Train Acc: 0.4360
+Best test: 43.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4331.9838 0.0000 
+final mean and std of test acc:  4331.9838 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1928901967, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6638
+Best test: 36.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3617.8862 0.0000 
+final mean and std of test acc:  3617.8862 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3664812267, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.5915
+Best test: 30.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3064.5161 0.0000 
+final mean and std of test acc:  3064.5161 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2588861705, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6332
+Best test: 19.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1943.3198 0.0000 
+final mean and std of test acc:  1943.3198 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 88019384, Epoch: 83, Loss: 0.0331, Approx Train Acc: 0.3756
+Best test: 45.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4538.1526 0.0000 
+final mean and std of test acc:  4538.1526 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 3741001871, Epoch: 83, Loss: 0.0513, Approx Train Acc: 0.0701
+Best test: 37.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3755.1020 0.0000 
+final mean and std of test acc:  3755.1020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 1032123959, Epoch: 83, Loss: 0.0360, Approx Train Acc: 0.3710
+Best test: 36.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3688.5246 0.0000 
+final mean and std of test acc:  3688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3432688336, Epoch: 83, Loss: 0.0434, Approx Train Acc: 0.4690
+Best test: 48.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4859.4378 0.0000 
+final mean and std of test acc:  4859.4378 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3609423792, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6076
+Best test: 30.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3036.4372 0.0000 
+final mean and std of test acc:  3036.4372 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 4114601019, Epoch: 139, Loss: 0.0192, Approx Train Acc: 0.5598
+Best test: 36.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3684.2105 0.0000 
+final mean and std of test acc:  3684.2105 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1304319436, Epoch: 83, Loss: 0.0341, Approx Train Acc: 0.4798
+Best test: 46.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4612.2449 0.0000 
+final mean and std of test acc:  4612.2449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2118980718, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6094
+Best test: 32.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3280.0000 0.0000 
+final mean and std of test acc:  3280.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 3365203021, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.6509
+Best test: 43.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4320.0000 0.0000 
+final mean and std of test acc:  4320.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 508239553, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6118
+Best test: 43.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4372.4696 0.0000 
+final mean and std of test acc:  4372.4696 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2324704551, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5872
+Best test: 24.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2459.6774 0.0000 
+final mean and std of test acc:  2459.6774 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 3127294640, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6509
+Best test: 23.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2338.7097 0.0000 
+final mean and std of test acc:  2338.7097 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 62236664, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6438
+Best test: 30.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3024.1935 0.0000 
+final mean and std of test acc:  3024.1935 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 415155137, Epoch: 83, Loss: 0.0270, Approx Train Acc: 0.4612
+Best test: 45.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4534.4130 0.0000 
+final mean and std of test acc:  4534.4130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 1334001226, Epoch: 139, Loss: 0.0200, Approx Train Acc: 0.4894
+Best test: 34.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3427.4194 0.0000 
+final mean and std of test acc:  3427.4194 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 5010234, Epoch: 83, Loss: 0.0511, Approx Train Acc: 0.4529
+Best test: 47.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4779.1165 0.0000 
+final mean and std of test acc:  4779.1165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1738658858, Epoch: 139, Loss: 0.0221, Approx Train Acc: 0.5612
+Best test: 26.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2690.7631 0.0000 
+final mean and std of test acc:  2690.7631 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3656832855, Epoch: 139, Loss: 0.0126, Approx Train Acc: 0.7234
+Best test: 34.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3453.8153 0.0000 
+final mean and std of test acc:  3453.8153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 3459243050, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6417
+Best test: 28.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2822.5806 0.0000 
+final mean and std of test acc:  2822.5806 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 4049755748, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6368
+Best test: 26.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2620.9677 0.0000 
+final mean and std of test acc:  2620.9677 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 790611950, Epoch: 139, Loss: 0.0163, Approx Train Acc: 0.5983
+Best test: 33.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3346.7742 0.0000 
+final mean and std of test acc:  3346.7742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 188100791, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.6611
+Best test: 40.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4040.8163 0.0000 
+final mean and std of test acc:  4040.8163 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 1068792892, Epoch: 83, Loss: 0.0321, Approx Train Acc: 0.4862
+Best test: 51.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5141.7004 0.0000 
+final mean and std of test acc:  5141.7004 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 1152798826, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.7173
+Best test: 22.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2200.0000 0.0000 
+final mean and std of test acc:  2200.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 2142344702, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6974
+Best test: 20.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2096.7742 0.0000 
+final mean and std of test acc:  2096.7742 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 572213796, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.6481
+Best test: 39.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3902.4390 0.0000 
+final mean and std of test acc:  3902.4390 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1326457086, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.6261
+Best test: 32.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3279.3522 0.0000 
+final mean and std of test acc:  3279.3522 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 2008095839, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.5798
+Best test: 44.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4471.5447 0.0000 
+final mean and std of test acc:  4471.5447 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 1949175003, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.5756
+Best test: 31.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3147.4104 0.0000 
+final mean and std of test acc:  3147.4104 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 1495784963, Epoch: 83, Loss: 0.0312, Approx Train Acc: 0.4907
+Best test: 42.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4244.8980 0.0000 
+final mean and std of test acc:  4244.8980 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 14766843, Epoch: 139, Loss: 0.0130, Approx Train Acc: 0.6429
+Best test: 24.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2480.0000 0.0000 
+final mean and std of test acc:  2480.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 2710285882, Epoch: 83, Loss: 0.0296, Approx Train Acc: 0.4805
+Best test: 45.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4574.8988 0.0000 
+final mean and std of test acc:  4574.8988 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 695707926, Epoch: 83, Loss: 0.0348, Approx Train Acc: 0.3502
+Best test: 33.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3374.4856 0.0000 
+final mean and std of test acc:  3374.4856 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 781913419, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6180
+Best test: 29.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2983.8710 0.0000 
+final mean and std of test acc:  2983.8710 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 458143767, Epoch: 83, Loss: 0.0326, Approx Train Acc: 0.4318
+Best test: 44.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4408.1633 0.0000 
+final mean and std of test acc:  4408.1633 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 3394560990, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.5900
+Best test: 35.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3545.8167 0.0000 
+final mean and std of test acc:  3545.8167 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 1808564371, Epoch: 139, Loss: 0.0199, Approx Train Acc: 0.5299
+Best test: 42.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4274.1935 0.0000 
+final mean and std of test acc:  4274.1935 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 1546498019, Epoch: 139, Loss: 0.0202, Approx Train Acc: 0.5256
+Best test: 27.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2701.6129 0.0000 
+final mean and std of test acc:  2701.6129 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2079267930, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6891
+Best test: 24.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2459.6774 0.0000 
+final mean and std of test acc:  2459.6774 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 2722985699, Epoch: 83, Loss: 0.0338, Approx Train Acc: 0.3945
+Best test: 41.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4163.2653 0.0000 
+final mean and std of test acc:  4163.2653 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD0_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1284220161, Epoch: 83, Loss: 0.0328, Approx Train Acc: 0.3422
+Best test: 29.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2928.8703 0.0000 
+final mean and std of test acc:  2928.8703 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 2862748243, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6638
+Best test: 13.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1336.0324 0.0000 
+final mean and std of test acc:  1336.0324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 859674188, Epoch: 83, Loss: 0.0484, Approx Train Acc: 0.4764
+Best test: 46.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4650.2058 0.0000 
+final mean and std of test acc:  4650.2058 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 1161272067, Epoch: 139, Loss: 0.0179, Approx Train Acc: 0.5408
+Best test: 25.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2520.0000 0.0000 
+final mean and std of test acc:  2520.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1680302411, Epoch: 00, Loss: 0.7386, Approx Train Acc: 0.4382
+Seed: 1680302411, Epoch: 01, Loss: 0.6582, Approx Train Acc: 0.4701
+Seed: 1680302411, Epoch: 02, Loss: 0.6406, Approx Train Acc: 0.4701
+Seed: 1680302411, Epoch: 03, Loss: 0.6155, Approx Train Acc: 0.5219
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 2999251673, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.6766
+Best test: 49.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4960.0000 0.0000 
+final mean and std of test acc:  4960.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 1500496790, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6538
+Best test: 16.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1659.9190 0.0000 
+final mean and std of test acc:  1659.9190 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3308828850, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6468
+Best test: 20.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2000.0000 0.0000 
+final mean and std of test acc:  2000.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 3071910608, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5630
+Best test: 34.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3493.9759 0.0000 
+final mean and std of test acc:  3493.9759 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1475668270, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5551
+Best test: 26.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2620.9677 0.0000 
+final mean and std of test acc:  2620.9677 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 824472078, Epoch: 139, Loss: 0.0164, Approx Train Acc: 0.5890
+Best test: 32.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3266.1290 0.0000 
+final mean and std of test acc:  3266.1290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3360581171, Epoch: 83, Loss: 0.0323, Approx Train Acc: 0.4266
+Best test: 42.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4279.8354 0.0000 
+final mean and std of test acc:  4279.8354 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 1526932730, Epoch: 139, Loss: 0.0188, Approx Train Acc: 0.5622
+Best test: 30.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3024.1935 0.0000 
+final mean and std of test acc:  3024.1935 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2381078504, Epoch: 139, Loss: 0.0191, Approx Train Acc: 0.5277
+Best test: 29.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2967.4797 0.0000 
+final mean and std of test acc:  2967.4797 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 3641055004, Epoch: 83, Loss: 0.0404, Approx Train Acc: 0.3860
+Best test: 43.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4344.2623 0.0000 
+final mean and std of test acc:  4344.2623 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 716415241, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.7149
+Best test: 40.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4080.0000 0.0000 
+final mean and std of test acc:  4080.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 536214573, Epoch: 83, Loss: 0.0355, Approx Train Acc: 0.3213
+Best test: 32.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3251.0288 0.0000 
+final mean and std of test acc:  3251.0288 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1487333805, Epoch: 83, Loss: 0.0333, Approx Train Acc: 0.4435
+Best test: 42.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4297.1888 0.0000 
+final mean and std of test acc:  4297.1888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 3175725312, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.6624
+Best test: 32.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3293.1727 0.0000 
+final mean and std of test acc:  3293.1727 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 2164101696, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6318
+Best test: 30.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3092.3695 0.0000 
+final mean and std of test acc:  3092.3695 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 3577516764, Epoch: 83, Loss: 0.0317, Approx Train Acc: 0.4420
+Best test: 47.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4779.1165 0.0000 
+final mean and std of test acc:  4779.1165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 1374880612, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6371
+Best test: 31.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3104.8387 0.0000 
+final mean and std of test acc:  3104.8387 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 439134287, Epoch: 83, Loss: 0.0346, Approx Train Acc: 0.4208
+Best test: 43.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4377.5100 0.0000 
+final mean and std of test acc:  4377.5100 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2527152034, Epoch: 83, Loss: 0.0377, Approx Train Acc: 0.3805
+Best test: 36.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3651.4523 0.0000 
+final mean and std of test acc:  3651.4523 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 3965111924, Epoch: 83, Loss: 0.0334, Approx Train Acc: 0.4358
+Best test: 43.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4315.3527 0.0000 
+final mean and std of test acc:  4315.3527 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 2679095719, Epoch: 139, Loss: 0.0174, Approx Train Acc: 0.6000
+Best test: 34.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3401.6393 0.0000 
+final mean and std of test acc:  3401.6393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2629820300, Epoch: 83, Loss: 0.0284, Approx Train Acc: 0.4649
+Best test: 46.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4655.8704 0.0000 
+final mean and std of test acc:  4655.8704 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 603128942, Epoch: 139, Loss: 0.0202, Approx Train Acc: 0.5584
+Best test: 30.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3061.2245 0.0000 
+final mean and std of test acc:  3061.2245 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.01_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD0_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.001_LRE_0.01_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.03_LRE_0.01_WD1e-6_PERS0.7.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1582
+    class HierJGNN(torch.nn.Module):
+IndentationError: expected an indented block after 'for' statement on line 1580
+
+----------------------------------------
+
+File: exp_hjt_exp7_HJT_WebKB_wisconsin_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3830601700, Epoch: 83, Loss: 0.0466, Approx Train Acc: 0.4405
+Best test: 46.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4669.4215 0.0000 
+final mean and std of test acc:  4669.4215 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 2465666989, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6471
+Best test: 37.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3734.9398 0.0000 
+final mean and std of test acc:  3734.9398 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_wisconsin_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 2516106535, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6066
+Best test: 20.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2080.0000 0.0000 
+final mean and std of test acc:  2080.0000 $\pm$ 0.0000
+
+----------------------------------------
+
