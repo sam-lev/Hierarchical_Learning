@@ -473,7 +473,7 @@ class trainer(object):
         self.eval_steps = args.eval_steps
         self.train_by_steps = args.train_by_steps
         self.steps = -1
-
+        self.experiment = None#args.experiment
 
         """# used to indicate multi-label classification.
         # If it is, using BCE and micro-f1 performance metric
@@ -606,15 +606,19 @@ class trainer(object):
             # Instantiate the Hierarchical GNN Model
             #
             if args.hier_model == "HST":
+
+                self.experiment = args.experiment
                 self.model = HierSGNN(
                     args, self.data, self.processed_dir,out_dim = self.num_targets,
-                    train_data=self.train_data, test_data=self.test_data
+                    train_data=self.train_data, test_data=self.test_data, experiment=self.experiment
                 )
             elif args.hier_model == "HJT":
+
+                self.experiment = args.experiment
                 self.model = HierJGNN(
                     args=args, data=self.data, processed_dir=self.processed_dir,
                     train_data=self.train_data, val_data=self.val_data, test_data=self.test_data,
-                    filtration_function=None, out_dim = self.num_targets
+                    filtration_function=None, out_dim = self.num_targets #experiment=experiment
                     # test_data=self.test_data
                     #, out_dim, dim_hidden, in_channels taken in model
                 )
@@ -924,10 +928,10 @@ class trainer(object):
 
         return best_train, best_valid, best_test
 
-    def train_net(self, epoch):
+    def train_net(self, epoch, experiment=None, exp_input_dict=None):
         self.model.train()
         input_dict = self.get_input_dict(epoch)
-        train_loss, train_acc, val_loss = self.model.train_net(input_dict)
+        train_loss, train_acc, val_loss = self.model.train_net(input_dict) if experiment is None else self.model.train_net(input_dict, experiment= experiment, exp_input_dict=exp_input_dict)
         return train_loss, train_acc, val_loss
     def __early_stopping(self, val_score,
                          min_delta,
