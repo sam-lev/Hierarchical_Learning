@@ -1,0 +1,16 @@
+File: exp_zerone_Planetoid_Cora_LR0.01_LRE_0.01_WD0_PERS0.7.log
+    self.graphs[self.graph_level] = self.initialize_from_subgraph(
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1379, in initialize_from_subgraph
+    new_node_features[supgraph_mapping[global_id]] = embedding#supsub_mapping[global_id]] = embedding
+IndexError: index 2636 is out of bounds for axis 0 with size 2581
+
+----------------------------------------
+
+File: exp_zerone_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+    *
+Seed: 196868078, Epoch: 00, Loss: 0.4806, Approx Train Acc: 0.8818
+Seed: 196868078, Epoch: 01, Loss: 0.4343, Approx Train Acc: 0.8722
+Seed: 196868078, Epoch: 02, Loss: 0.4323, Approx Train Acc: 0.8756
+
+----------------------------------------
+

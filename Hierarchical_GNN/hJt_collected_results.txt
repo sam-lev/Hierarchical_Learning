@@ -1,0 +1,892 @@
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 89.66% 
+Best test: 89.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8978.7675 0.0000 
+final mean and std of test acc:  8978.7675 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2073.2403 0.0000 
+final mean and std of test acc:  2073.2403 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD0_PERS0.1.log
+Seed: 2228133601, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3983
+Best test: 39.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3987.8731 0.0000 
+final mean and std of test acc:  3987.8731 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+    *
+Best test: 84.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8442.5933 0.0000 
+final mean and std of test acc:  8442.5933 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.31% 
+Best test: 90.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9031.4231 0.0000 
+final mean and std of test acc:  9031.4231 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2081.1762 0.0000 
+final mean and std of test acc:  2081.1762 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_sxpSix_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD0_PERS0.1.log
+Seed: 4059559487, Epoch: 07, Loss: 0.4433, Approx Train Acc: 0.8632
+Seed: 4059559487, Epoch: 08, Loss: 0.4461, Approx Train Acc: 0.8618
+Seed: 4059559487, Epoch: 09, Loss: 0.4385, Approx Train Acc: 0.8664
+Seed: 4059559487, Epoch: 10, Loss: 0.4305, Approx Train Acc: 0.8751
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.96% 
+Best test: 91.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9108.8238 0.0000 
+final mean and std of test acc:  9108.8238 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-4_PERS0.9.log
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.001_WD5e-5_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 91.73% 
+Best test: 91.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9175.8498 0.0000 
+final mean and std of test acc:  9175.8498 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.001_WD0_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_fit_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD1e-6_PERS0.9.log
+    * 96.0
+    *   AVERAGE DEGREE 
+    * 3.8976516723632812
+    *
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 2238812677, Epoch: 03, Loss: 0.0072, Approx Train Acc: 0.5876
+Best test: 40.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4002.5900 0.0000 
+final mean and std of test acc:  4002.5900 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 80.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8025.4513 0.0000 
+final mean and std of test acc:  8025.4513 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.001_WD5e-5_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-6_PERS0.1.log
+Seed: 4156194280, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.4013
+Best test: 39.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3991.6227 0.0000 
+final mean and std of test acc:  3991.6227 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.001_WD5e-4_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.003_LRE_0.01_WD0_PERS0.0.log
+    * 3.8976516723632812
+    *
+Seed: 145085269, Epoch: 00, Loss: 0.4538, Approx Train Acc: 0.8647
+Seed: 145085269, Epoch: 01, Loss: 0.4508, Approx Train Acc: 0.8618
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.001_WD5e-4_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_sxpSix_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 830041836, Epoch: 10, Loss: 0.4370, Approx Train Acc: 0.8683
+Seed: 830041836, Epoch: 11, Loss: 0.4435, Approx Train Acc: 0.8624
+Seed: 830041836, Epoch: 12, Loss: 0.4448, Approx Train Acc: 0.8609
+Seed: 830041836, Epoch: 13, Loss: 0.4408, Approx Train Acc: 0.8654
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.66% 
+Best test: 90.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9065.6043 0.0000 
+final mean and std of test acc:  9065.6043 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2086.2230 0.0000 
+final mean and std of test acc:  2086.2230 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD1e-4_PERS0.1.log
+Seed: 868537411, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3982
+Best test: 39.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3975.4671 0.0000 
+final mean and std of test acc:  3975.4671 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.003_WD1e-12_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-12_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD5e-4_PERS0.9.log
+Seed: 2510843672, Epoch: 00, Loss: 0.4600, Approx Train Acc: 0.8600
+Seed: 2510843672, Epoch: 01, Loss: 0.4609, Approx Train Acc: 0.8565
+Seed: 2510843672, Epoch: 02, Loss: 0.4515, Approx Train Acc: 0.8640
+Seed: 2510843672, Epoch: 03, Loss: 0.4491, Approx Train Acc: 0.8634
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-4_PERS0.9.log
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2077
+    self.normalizers["cat"] = NORMALIZATION["BatchNorm"]((self.dim_hidden*len(self.graphs)+1)
+                                                        ^
+SyntaxError: '(' was never closed
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.003_WD5e-5_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 86.41% 
+Best test: 86.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8657.0334 0.0000 
+final mean and std of test acc:  8657.0334 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 84.90% 
+Best test: 85.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8531.0734 0.0000 
+final mean and std of test acc:  8531.0734 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.003_LRE_0.01_WD1e-6_PERS0.0.log
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 3597289980, Epoch: 35, Loss: 0.0046, Approx Train Acc: 0.3919
+Seed: 3597289980, Epoch: 36, Loss: 0.0046, Approx Train Acc: 0.3919
+Seed: 3597289980, Epoch: 37, Loss: 0.0046, Approx Train Acc: 0.3919
+Seed: 3597289980, Epoch: 38, Loss: 0.0046, Approx Train Acc: 0.3919
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.003_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 82.03% 
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8203.3109 0.0000 
+final mean and std of test acc:  8203.3109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 91.47% 
+Best test: 91.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9146.7771 0.0000 
+final mean and std of test acc:  9146.7771 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.001_WD5e-8_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 85.77% 
+Best test: 85.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8586.2764 0.0000 
+final mean and std of test acc:  8586.2764 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.003_WD1e-12_PERS0.5,0.7,0.9.log
+    *
+Best test: 73.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7311.3110 0.0000 
+final mean and std of test acc:  7311.3110 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD0_PERS0.9.log
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2077
+    self.normalizers["cat"] = NORMALIZATION["BatchNorm"]((self.dim_hidden*len(self.graphs)+1)
+                                                        ^
+SyntaxError: '(' was never closed
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.001_WD5e-8_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD0_PERS0.9.log
+    * 3.8976516723632812
+    *
+Seed: 2833327224, Epoch: 00, Loss: 0.4538, Approx Train Acc: 0.8649
+Seed: 2833327224, Epoch: 01, Loss: 0.4531, Approx Train Acc: 0.8610
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD1e-8_PERS0.1.log
+Seed: 1025437944, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3954
+Best test: 39.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3984.0431 0.0000 
+final mean and std of test acc:  3984.0431 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 85.67% 
+Best test: 85.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8566.9136 0.0000 
+final mean and std of test acc:  8566.9136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_fitbat_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD5e-4_PERS0.9.log
+Seed: 899176147, Epoch: 83, Loss: 0.0032, Approx Train Acc: 0.7400
+Best test: 36.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3640.1305 0.0000 
+final mean and std of test acc:  3640.1305 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 86.17% 
+Best test: 86.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8617.3351 0.0000 
+final mean and std of test acc:  8617.3351 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 84.96% 
+Best test: 85.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8512.4864 0.0000 
+final mean and std of test acc:  8512.4864 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2077.8347 0.0000 
+final mean and std of test acc:  2077.8347 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 3432622524, Epoch: 51, Loss: 0.4141, Approx Train Acc: 0.8756
+Seed: 3432622524, Epoch: 52, Loss: 0.4117, Approx Train Acc: 0.8771
+Seed: 3432622524, Epoch: 53, Loss: 0.4200, Approx Train Acc: 0.8694
+Seed: 3432622524, Epoch: 54, Loss: 0.4191, Approx Train Acc: 0.8655
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 652533594, Epoch: 83, Loss: 0.0023, Approx Train Acc: 0.9537
+Best test: 35.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3574.5716 0.0000 
+final mean and std of test acc:  3574.5716 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2072.7856 0.0000 
+final mean and std of test acc:  2072.7856 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.01_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.53% 
+Best test: 90.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9052.6697 0.0000 
+final mean and std of test acc:  9052.6697 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2084.8661 0.0000 
+final mean and std of test acc:  2084.8661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD1e-6_PERS0.1.log
+Seed: 139520662, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3973
+Best test: 40.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4004.7626 0.0000 
+final mean and std of test acc:  4004.7626 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2079.9669 0.0000 
+final mean and std of test acc:  2079.9669 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.001_WD5e-5_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.001_WD5e-4_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 86.22% 
+Best test: 86.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8622.3118 0.0000 
+final mean and std of test acc:  8622.3118 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.62% 
+Best test: 90.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9061.6428 0.0000 
+final mean and std of test acc:  9061.6428 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.03_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 86.99% 
+Best test: 86.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8698.9598 0.0000 
+final mean and std of test acc:  8698.9598 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 81.13% 
+Best test: 81.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8112.8364 0.0000 
+final mean and std of test acc:  8112.8364 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.001_WD0_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 50053544, Epoch: 83, Loss: 0.0045, Approx Train Acc: 0.3931
+Best test: 37.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3717.9355 0.0000 
+final mean and std of test acc:  3717.9355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.003_LRE_0.01_WD1e-4_PERS0.0.log
+    check_node_maps(xs, super_xs, self.sub_to_sup_mappings[i], self.sub_to_sup_mappings[-1])
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1862, in check_node_maps
+    n_j_super.append(sub_to_super_j[int(j.detach().cpu())])
+ValueError: only one element tensors can be converted to Python scalars
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 73.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7375.6406 0.0000 
+final mean and std of test acc:  7375.6406 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 85.22% 
+Best test: 85.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8558.5445 0.0000 
+final mean and std of test acc:  8558.5445 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 759203384, Epoch: 83, Loss: 0.0024, Approx Train Acc: 0.9501
+Best test: 39.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3933.7721 0.0000 
+final mean and std of test acc:  3933.7721 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 82.41% 
+Best test: 82.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8272.3136 0.0000 
+final mean and std of test acc:  8272.3136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-6_PERS0.8.log
+    test_out, loss, y_test = self.model.inference(test_input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2621, in inference
+    y = self.graphs[-1].y[super_nid].to(device)  # torch.tensor(subset_ys).to(device)
+IndexError: index 18118 is out of bounds for dimension 0 with size 18068
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 79.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7938.4217 0.0000 
+final mean and std of test acc:  7938.4217 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+    *
+Best test: 85.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8532.1813 0.0000 
+final mean and std of test acc:  8532.1813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2079.5819 0.0000 
+final mean and std of test acc:  2079.5819 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 91.25% 
+Best test: 91.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9126.1532 0.0000 
+final mean and std of test acc:  9126.1532 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD0_PERS0.8.log
+    * 3.8976516723632812
+    *
+Seed: 810507615, Epoch: 00, Loss: 0.4575, Approx Train Acc: 0.8609
+Seed: 810507615, Epoch: 01, Loss: 0.4504, Approx Train Acc: 0.8632
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD0_PERS0.9.log
+Seed: 2975552383, Epoch: 83, Loss: 0.0024, Approx Train Acc: 0.9461
+Best test: 20.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2086.6774 0.0000 
+final mean and std of test acc:  2086.6774 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.003_LRE_0.01_WD1e-8_PERS0.0.log
+    check_node_maps(xs, super_xs, self.sub_to_sup_mappings[i], self.sub_to_sup_mappings[-1])
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 1862, in check_node_maps
+    n_j_super.append(sub_to_super_j[int(j.detach().cpu())])
+ValueError: only one element tensors can be converted to Python scalars
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2075.3839 0.0000 
+final mean and std of test acc:  2075.3839 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.03_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 76.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7688.2027 0.0000 
+final mean and std of test acc:  7688.2027 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.03_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.81% 
+Best test: 90.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9081.0420 0.0000 
+final mean and std of test acc:  9081.0420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_fit_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD5e-4_PERS0.9.log
+Seed: 2434954905, Epoch: 83, Loss: 0.0025, Approx Train Acc: 0.9121
+Best test: 40.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4064.2154 0.0000 
+final mean and std of test acc:  4064.2154 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.43% 
+Best test: 90.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9043.0820 0.0000 
+final mean and std of test acc:  9043.0820 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.0003_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 275445159, Epoch: 83, Loss: 0.0024, Approx Train Acc: 0.9480
+Best test: 22.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2201.2416 0.0000 
+final mean and std of test acc:  2201.2416 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.66% 
+Best test: 90.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9066.4737 0.0000 
+final mean and std of test acc:  9066.4737 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD5e-4_PERS0.9.log
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD0_PERS0.9.log
+Seed: 2644223479, Epoch: 83, Loss: 0.0045, Approx Train Acc: 0.3942
+Best test: 39.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3993.0645 0.0000 
+final mean and std of test acc:  3993.0645 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+    *
+Best test: 77.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7731.7881 0.0000 
+final mean and std of test acc:  7731.7881 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD1e-8_PERS0.9.log
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2077
+    self.normalizers["cat"] = NORMALIZATION["BatchNorm"]((self.dim_hidden*len(self.graphs)+1)
+                                                        ^
+SyntaxError: '(' was never closed
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-8_PERS0.1.log
+    * 64
+    *
+Epoch: 98, Test Acc: 86.24% Test RoC: 0.50
+Seed: 3856862953, Epoch: 99, Loss: 0.4264, Approx Train Acc: 0.8901
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.89% 
+Best test: 91.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9108.8340 0.0000 
+final mean and std of test acc:  9108.8340 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2078.3725 0.0000 
+final mean and std of test acc:  2078.3725 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_fitbat_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD0_PERS0.9.log
+Seed: 1991116882, Epoch: 74, Loss: 0.4393, Approx Train Acc: 0.8643
+Seed: 1991116882, Epoch: 75, Loss: 0.4374, Approx Train Acc: 0.8679
+Seed: 1991116882, Epoch: 76, Loss: 0.4333, Approx Train Acc: 0.8738
+Seed: 1991116882, Epoch: 77, Loss: 0.4396, Approx Train Acc: 0.8637
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.003_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 81.17% 
+Best test: 81.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8117.4582 0.0000 
+final mean and std of test acc:  8117.4582 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-6_PERS0.9.log
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2077
+    self.normalizers["cat"] = NORMALIZATION["BatchNorm"]((self.dim_hidden*len(self.graphs)+1)
+                                                        ^
+SyntaxError: '(' was never closed
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR1e-4_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+Seed: 2048152605, Epoch: 44, Loss: 0.4252, Approx Train Acc: 0.8553
+Seed: 2048152605, Epoch: 45, Loss: 0.4231, Approx Train Acc: 0.8617
+Seed: 2048152605, Epoch: 46, Loss: 0.4184, Approx Train Acc: 0.8668
+Seed: 2048152605, Epoch: 47, Loss: 0.4223, Approx Train Acc: 0.8636
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD0_PERS0.1.log
+Seed: 1409627778, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3955
+Best test: 39.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3998.8615 0.0000 
+final mean and std of test acc:  3998.8615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 90.20% 
+Best test: 90.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9042.5477 0.0000 
+final mean and std of test acc:  9042.5477 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.001_WD1e-12_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_overfit_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD1e-4_PERS0.9.log
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2077
+    self.normalizers["cat"] = NORMALIZATION["BatchNorm"]((self.dim_hidden*len(self.graphs)+1)
+                                                        ^
+SyntaxError: '(' was never closed
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+    *
+Best test: 74.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7478.1258 0.0000 
+final mean and std of test acc:  7478.1258 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_sxpSev_HJT_Planetoid_PubMed_LR0.03_LRE_0.01_WD1e-4_PERS0.1.log
+Seed: 469123711, Epoch: 139, Loss: 0.0083, Approx Train Acc: 0.3983
+Best test: 40.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4004.4557 0.0000 
+final mean and std of test acc:  4004.4557 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 79.71% 
+Best test: 79.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7970.5715 0.0000 
+final mean and std of test acc:  7970.5715 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.003_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 74.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7415.7303 0.0000 
+final mean and std of test acc:  7415.7303 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-12_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.003_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 20.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2079.9917 0.0000 
+final mean and std of test acc:  2079.9917 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 88.79% 
+Best test: 88.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8878.9400 0.0000 
+final mean and std of test acc:  8878.9400 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-5_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 80.49% 
+Best test: 80.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8065.2354 0.0000 
+final mean and std of test acc:  8065.2354 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 85.95% 
+Best test: 86.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8617.2085 0.0000 
+final mean and std of test acc:  8617.2085 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_Planetoid_PubMed_LR0.01_LRE_0.01_WD1e-6_PERS0.0.log
+    * 104.0
+    *   AVERAGE DEGREE 
+    * 3.8976516723632812
+    *
+
+----------------------------------------
+
+File: exp_hjt_fitbat_HJT_Planetoid_PubMed_LR3e-5_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 1642693915, Epoch: 83, Loss: 0.0032, Approx Train Acc: 0.7461
+Best test: 34.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3464.1470 0.0000 
+final mean and std of test acc:  3464.1470 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR3e-3_LRE_0.001_WD1e-12_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_9_HJT_Planetoid_PubMed_LR0.03_LRE_0.001_WD5e-8_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+

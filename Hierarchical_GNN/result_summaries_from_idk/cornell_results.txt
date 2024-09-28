@@ -1,0 +1,4096 @@
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 262799116, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9588
+Best test: 87.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8797.8142 0.0000 
+final mean and std of test acc:  8797.8142 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 2363973185, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9578
+Best test: 75.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7540.9836 0.0000 
+final mean and std of test acc:  7540.9836 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1048352270, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.5460
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 4089995043, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.8036
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 4055368949, Epoch: 79, Loss: 0.0233, Approx Train Acc: 0.6864
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.9.log
+Seed: 3796296865, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9630
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8469.9454 0.0000 
+final mean and std of test acc:  8469.9454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 2895748968, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.9146
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.7.log
+Seed: 3911410599, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.7870
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 2637256933, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9753
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 76137703, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7784
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 1876469669, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7235
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 3005521528, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9281
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.0765 0.0000 
+final mean and std of test acc:  8142.0765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.9.log
+Seed: 2147423019, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9036
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3747915232, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9636
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 899213128, Epoch: 79, Loss: 0.0196, Approx Train Acc: 0.9882
+Best test: 93.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9344.2623 0.0000 
+final mean and std of test acc:  9344.2623 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.8.log
+Seed: 692102554, Epoch: 79, Loss: 0.0261, Approx Train Acc: 0.5120
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.8.log
+Seed: 819278181, Epoch: 79, Loss: 0.0238, Approx Train Acc: 0.6886
+Best test: 56.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5683.0601 0.0000 
+final mean and std of test acc:  5683.0601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 4028742272, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9048
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 4178354861, Epoch: 79, Loss: 0.0267, Approx Train Acc: 0.4518
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.9.log
+Seed: 84849995, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.6000
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 2045394155, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.4353
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 1983729070, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.6012
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2927320448, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9636
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 3598726468, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.6012
+Best test: 45.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4590.1639 0.0000 
+final mean and std of test acc:  4590.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 302584267, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.4639
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 1657750812, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9699
+Best test: 80.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8087.4317 0.0000 
+final mean and std of test acc:  8087.4317 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 2460252285, Epoch: 79, Loss: 0.0233, Approx Train Acc: 0.6784
+Best test: 46.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4644.8087 0.0000 
+final mean and std of test acc:  4644.8087 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 2571297598, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8081
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 471919258, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.4675
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3508611259, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8521
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 450878767, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.5176
+Best test: 47.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4754.0984 0.0000 
+final mean and std of test acc:  4754.0984 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 1363138488, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6294
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2524123620, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9277
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 780816201, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.5060
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4699.4536 0.0000 
+final mean and std of test acc:  4699.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 3020011079, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5503
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 3476009818, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4485
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 2716539229, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9820
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 1181997510, Epoch: 79, Loss: 0.0255, Approx Train Acc: 0.4425
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 575958526, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9583
+Best test: 79.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7923.4973 0.0000 
+final mean and std of test acc:  7923.4973 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 522657886, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.6380
+Best test: 46.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4644.8087 0.0000 
+final mean and std of test acc:  4644.8087 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 2757482463, Epoch: 79, Loss: 0.0256, Approx Train Acc: 0.5060
+Best test: 45.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4505.4945 0.0000 
+final mean and std of test acc:  4505.4945 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.7.log
+Seed: 1976758338, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7471
+Best test: 66.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6666.6667 0.0000 
+final mean and std of test acc:  6666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 3127959899, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.6941
+Best test: 47.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4754.0984 0.0000 
+final mean and std of test acc:  4754.0984 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1954519712, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8963
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 3690952900, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5439
+Best test: 45.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4590.1639 0.0000 
+final mean and std of test acc:  4590.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.9.log
+Seed: 2025812586, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5357
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2352410785, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8242
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 4261504477, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9268
+Best test: 77.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7704.9180 0.0000 
+final mean and std of test acc:  7704.9180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3037502613, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.5244
+Best test: 46.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4644.8087 0.0000 
+final mean and std of test acc:  4644.8087 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 2853145035, Epoch: 79, Loss: 0.0255, Approx Train Acc: 0.5298
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 632759673, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.9565
+Best test: 86.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8633.8798 0.0000 
+final mean and std of test acc:  8633.8798 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3148303377, Epoch: 79, Loss: 0.0219, Approx Train Acc: 0.8107
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6557.3770 0.0000 
+final mean and std of test acc:  6557.3770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 3114281015, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.6190
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3871290396, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.5759
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 3393485161, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.5663
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 362388090, Epoch: 79, Loss: 0.0263, Approx Train Acc: 0.4379
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.7.log
+Seed: 1251570995, Epoch: 79, Loss: 0.0241, Approx Train Acc: 0.6331
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 3525935906, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.5491
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 933689714, Epoch: 79, Loss: 0.0232, Approx Train Acc: 0.7500
+Best test: 63.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6338.7978 0.0000 
+final mean and std of test acc:  6338.7978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3076470923, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9290
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1911271889, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.5235
+Best test: 50.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5027.3224 0.0000 
+final mean and std of test acc:  5027.3224 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 2757981138, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5090
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4699.4536 0.0000 
+final mean and std of test acc:  4699.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 2899122016, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5976
+Best test: 50.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5027.3224 0.0000 
+final mean and std of test acc:  5027.3224 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 3606508712, Epoch: 79, Loss: 0.0250, Approx Train Acc: 0.5783
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 1444483361, Epoch: 79, Loss: 0.0228, Approx Train Acc: 0.8037
+Best test: 59.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5956.2842 0.0000 
+final mean and std of test acc:  5956.2842 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 3885465417, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9880
+Best test: 85.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8516.4835 0.0000 
+final mean and std of test acc:  8516.4835 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.8.log
+Seed: 1798603878, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6766
+Best test: 53.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5384.6154 0.0000 
+final mean and std of test acc:  5384.6154 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 2319115007, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4606
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 4049765914, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9591
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2027639542, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.5824
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 1073128391, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5556
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 1775117607, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9882
+Best test: 85.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.5902 0.0000 
+final mean and std of test acc:  8524.5902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1651900442, Epoch: 79, Loss: 0.0190, Approx Train Acc: 0.9943
+Best test: 92.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9289.6175 0.0000 
+final mean and std of test acc:  9289.6175 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 1217014627, Epoch: 79, Loss: 0.0271, Approx Train Acc: 0.5094
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 3350849412, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.5460
+Best test: 50.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5027.3224 0.0000 
+final mean and std of test acc:  5027.3224 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 3941304273, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9401
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.0765 0.0000 
+final mean and std of test acc:  8142.0765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2336540273, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.8857
+Best test: 76.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7650.2732 0.0000 
+final mean and std of test acc:  7650.2732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2663739893, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6871
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 2366803466, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.5698
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 4108747195, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.5549
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 1820313155, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9583
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8469.9454 0.0000 
+final mean and std of test acc:  8469.9454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 2579349317, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8810
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1916721741, Epoch: 79, Loss: 0.0264, Approx Train Acc: 0.4464
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 2546495897, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.6864
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 770091469, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.4850
+Best test: 49.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.6776 0.0000 
+final mean and std of test acc:  4972.6776 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 95200654, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7879
+Best test: 64.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6448.0874 0.0000 
+final mean and std of test acc:  6448.0874 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 4250215773, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.9085
+Best test: 75.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7540.9836 0.0000 
+final mean and std of test acc:  7540.9836 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 3620275358, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9429
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 4285424561, Epoch: 79, Loss: 0.0228, Approx Train Acc: 0.7927
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.9.log
+Seed: 4264160903, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9755
+Best test: 86.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8688.5246 0.0000 
+final mean and std of test acc:  8688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 1042600431, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9695
+Best test: 86.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8688.5246 0.0000 
+final mean and std of test acc:  8688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 2961795160, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.9146
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6557.3770 0.0000 
+final mean and std of test acc:  6557.3770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 1896162582, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9758
+Best test: 86.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8688.5246 0.0000 
+final mean and std of test acc:  8688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 3392664158, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9467
+Best test: 83.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8306.0109 0.0000 
+final mean and std of test acc:  8306.0109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.8.log
+Seed: 3330956814, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5614
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 3342442132, Epoch: 79, Loss: 0.0239, Approx Train Acc: 0.6568
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 2719953805, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9641
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.7.log
+Seed: 58906817, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.6886
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 2435240965, Epoch: 79, Loss: 0.0222, Approx Train Acc: 0.7558
+Best test: 64.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6448.0874 0.0000 
+final mean and std of test acc:  6448.0874 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3202691692, Epoch: 79, Loss: 0.0239, Approx Train Acc: 0.6548
+Best test: 61.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6120.2186 0.0000 
+final mean and std of test acc:  6120.2186 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 2476726566, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8253
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 3802619616, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9755
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 3173761304, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.5460
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 176795325, Epoch: 79, Loss: 0.0231, Approx Train Acc: 0.7697
+Best test: 60.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6065.5738 0.0000 
+final mean and std of test acc:  6065.5738 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 1374015688, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8324
+Best test: 62.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6284.1530 0.0000 
+final mean and std of test acc:  6284.1530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 3296116034, Epoch: 79, Loss: 0.0228, Approx Train Acc: 0.8037
+Best test: 66.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6666.6667 0.0000 
+final mean and std of test acc:  6666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 3717058299, Epoch: 79, Loss: 0.0237, Approx Train Acc: 0.6627
+Best test: 60.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6043.9560 0.0000 
+final mean and std of test acc:  6043.9560 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 3277797984, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.7953
+Best test: 65.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6502.7322 0.0000 
+final mean and std of test acc:  6502.7322 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3117634726, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9765
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 1960081728, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5294
+Best test: 48.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4808.7432 0.0000 
+final mean and std of test acc:  4808.7432 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 2350200274, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5928
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 3926513463, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.6131
+Best test: 57.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5737.7049 0.0000 
+final mean and std of test acc:  5737.7049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 2172466554, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.5488
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 1708457193, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.8476
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 186765445, Epoch: 79, Loss: 0.0233, Approx Train Acc: 0.6765
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 2706629694, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7118
+Best test: 62.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6229.5082 0.0000 
+final mean and std of test acc:  6229.5082 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2870338807, Epoch: 79, Loss: 0.0241, Approx Train Acc: 0.6687
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 4217855249, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9527
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 2242355439, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9091
+Best test: 78.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7814.2077 0.0000 
+final mean and std of test acc:  7814.2077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 688831071, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8735
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 762191940, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7018
+Best test: 61.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6174.8634 0.0000 
+final mean and std of test acc:  6174.8634 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 2093840890, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.6524
+Best test: 61.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6174.8634 0.0000 
+final mean and std of test acc:  6174.8634 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 975787855, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8588
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 1523832812, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.8199
+Best test: 62.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6284.1530 0.0000 
+final mean and std of test acc:  6284.1530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 4294867532, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.4671
+Best test: 57.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5737.7049 0.0000 
+final mean and std of test acc:  5737.7049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 1325907145, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.5644
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 2018145544, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9349
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 4039884044, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9286
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 1316708411, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9408
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.0765 0.0000 
+final mean and std of test acc:  8142.0765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 167059113, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5439
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 3868463419, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6250
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 2888569845, Epoch: 79, Loss: 0.0219, Approx Train Acc: 0.8095
+Best test: 61.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6120.2186 0.0000 
+final mean and std of test acc:  6120.2186 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 1327551336, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9588
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3985133808, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9881
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.9.log
+Seed: 3564888044, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8922
+Best test: 79.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7923.4973 0.0000 
+final mean and std of test acc:  7923.4973 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 368445682, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9244
+Best test: 69.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6939.8907 0.0000 
+final mean and std of test acc:  6939.8907 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 4229731614, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.9136
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 4109629777, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.6190
+Best test: 56.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5683.0601 0.0000 
+final mean and std of test acc:  5683.0601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 3287293518, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9532
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 2307862684, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7605
+Best test: 70.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7049.1803 0.0000 
+final mean and std of test acc:  7049.1803 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 2340314096, Epoch: 79, Loss: 0.0238, Approx Train Acc: 0.6687
+Best test: 60.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6065.5738 0.0000 
+final mean and std of test acc:  6065.5738 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 1337449355, Epoch: 79, Loss: 0.0261, Approx Train Acc: 0.5247
+Best test: 49.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.6776 0.0000 
+final mean and std of test acc:  4972.6776 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 1572678899, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9881
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 517259398, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.9317
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4155799190, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8727
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.0765 0.0000 
+final mean and std of test acc:  8142.0765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 24918032, Epoch: 79, Loss: 0.0241, Approx Train Acc: 0.6059
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 269311512, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7805
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 4132181652, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9527
+Best test: 83.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8306.0109 0.0000 
+final mean and std of test acc:  8306.0109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 1226482021, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.7378
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4699.4536 0.0000 
+final mean and std of test acc:  4699.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 772487884, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5260
+Best test: 49.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.6776 0.0000 
+final mean and std of test acc:  4972.6776 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 1198815770, Epoch: 79, Loss: 0.0255, Approx Train Acc: 0.5482
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 3392033106, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9756
+Best test: 90.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9010.9890 0.0000 
+final mean and std of test acc:  9010.9890 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.7.log
+Seed: 3540566023, Epoch: 79, Loss: 0.0241, Approx Train Acc: 0.6527
+Best test: 60.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6065.5738 0.0000 
+final mean and std of test acc:  6065.5738 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 1359738836, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.5640
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 3527234476, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9586
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 2098028897, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.4767
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2586472590, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7636
+Best test: 67.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6721.3115 0.0000 
+final mean and std of test acc:  6721.3115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 1448046247, Epoch: 79, Loss: 0.0194, Approx Train Acc: 0.9826
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 2830964615, Epoch: 79, Loss: 0.0250, Approx Train Acc: 0.5904
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4175391116, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5210
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 315351334, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9881
+Best test: 92.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9289.6175 0.0000 
+final mean and std of test acc:  9289.6175 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2539532012, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9412
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8469.9454 0.0000 
+final mean and std of test acc:  8469.9454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 3945730702, Epoch: 79, Loss: 0.0196, Approx Train Acc: 0.9538
+Best test: 74.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7486.3388 0.0000 
+final mean and std of test acc:  7486.3388 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 4097612305, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9583
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 3152828792, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5808
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.8.log
+Seed: 3898213050, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.9036
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.7.log
+Seed: 2276272442, Epoch: 79, Loss: 0.0194, Approx Train Acc: 0.9655
+Best test: 91.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9180.3279 0.0000 
+final mean and std of test acc:  9180.3279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1378732292, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5854
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 875350684, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7353
+Best test: 63.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6338.7978 0.0000 
+final mean and std of test acc:  6338.7978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 843586976, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8855
+Best test: 71.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7158.4699 0.0000 
+final mean and std of test acc:  7158.4699 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 1146837405, Epoch: 79, Loss: 0.0267, Approx Train Acc: 0.4756
+Best test: 45.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4590.1639 0.0000 
+final mean and std of test acc:  4590.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 3402560810, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7151
+Best test: 59.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5901.6393 0.0000 
+final mean and std of test acc:  5901.6393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3133952006, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7471
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 1411614897, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9583
+Best test: 75.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7595.6284 0.0000 
+final mean and std of test acc:  7595.6284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 1211919063, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8589
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 940008994, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8471
+Best test: 67.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6721.3115 0.0000 
+final mean and std of test acc:  6721.3115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 3930145065, Epoch: 79, Loss: 0.0231, Approx Train Acc: 0.7669
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 3596631924, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8605
+Best test: 77.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7704.9180 0.0000 
+final mean and std of test acc:  7704.9180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 3253000204, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4578
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2372578847, Epoch: 79, Loss: 0.0263, Approx Train Acc: 0.4556
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 1034008379, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9231
+Best test: 85.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8579.2350 0.0000 
+final mean and std of test acc:  8579.2350 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 3693745195, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5588
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1202761906, Epoch: 79, Loss: 0.0256, Approx Train Acc: 0.4882
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 2158915445, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.4647
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1809530442, Epoch: 79, Loss: 0.0226, Approx Train Acc: 0.8221
+Best test: 74.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7431.6940 0.0000 
+final mean and std of test acc:  7431.6940 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 1802594452, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4431
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 1145540198, Epoch: 79, Loss: 0.0263, Approx Train Acc: 0.4583
+Best test: 59.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5956.2842 0.0000 
+final mean and std of test acc:  5956.2842 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 534294589, Epoch: 79, Loss: 0.0256, Approx Train Acc: 0.5455
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3569843102, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.6918
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 3279822077, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8129
+Best test: 57.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5792.3497 0.0000 
+final mean and std of test acc:  5792.3497 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 98352816, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5765
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 1507855954, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.8786
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.7.log
+Seed: 1011866832, Epoch: 79, Loss: 0.0223, Approx Train Acc: 0.7751
+Best test: 65.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6593.4066 0.0000 
+final mean and std of test acc:  6593.4066 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 2169452754, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9281
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 819649446, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.7423
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2390300555, Epoch: 79, Loss: 0.0246, Approx Train Acc: 0.5523
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3269521814, Epoch: 79, Loss: 0.0236, Approx Train Acc: 0.7716
+Best test: 59.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5901.6393 0.0000 
+final mean and std of test acc:  5901.6393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 3173620162, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5890
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 3531237552, Epoch: 79, Loss: 0.0241, Approx Train Acc: 0.6272
+Best test: 45.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4535.5191 0.0000 
+final mean and std of test acc:  4535.5191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 4121058596, Epoch: 79, Loss: 0.0249, Approx Train Acc: 0.5621
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 3462395787, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8402
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1867146059, Epoch: 79, Loss: 0.0224, Approx Train Acc: 0.7964
+Best test: 72.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7252.7473 0.0000 
+final mean and std of test acc:  7252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1205185771, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6890
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 3319373608, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8772
+Best test: 75.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7527.4725 0.0000 
+final mean and std of test acc:  7527.4725 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 3174622632, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.4578
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 62519956, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9217
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 1144911731, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9691
+Best test: 85.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.5902 0.0000 
+final mean and std of test acc:  8524.5902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 4107178375, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.4556
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 1048572701, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5879
+Best test: 56.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5659.3407 0.0000 
+final mean and std of test acc:  5659.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 1656895547, Epoch: 79, Loss: 0.0228, Approx Train Acc: 0.7440
+Best test: 57.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5792.3497 0.0000 
+final mean and std of test acc:  5792.3497 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 3179167419, Epoch: 79, Loss: 0.0223, Approx Train Acc: 0.8182
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.8251 0.0000 
+final mean and std of test acc:  7103.8251 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3077282621, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.6000
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 630985773, Epoch: 79, Loss: 0.0236, Approx Train Acc: 0.6529
+Best test: 50.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5054.9451 0.0000 
+final mean and std of test acc:  5054.9451 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 3059344075, Epoch: 79, Loss: 0.0264, Approx Train Acc: 0.4405
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2538268457, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5176
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4699.4536 0.0000 
+final mean and std of test acc:  4699.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 489814303, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8614
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 1206376672, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9186
+Best test: 77.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7704.9180 0.0000 
+final mean and std of test acc:  7704.9180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 3188283393, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9345
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 3447972876, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8421
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6557.3770 0.0000 
+final mean and std of test acc:  6557.3770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 2027209571, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9643
+Best test: 91.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9125.6831 0.0000 
+final mean and std of test acc:  9125.6831 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.9.log
+Seed: 41527039, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9412
+Best test: 83.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8360.6557 0.0000 
+final mean and std of test acc:  8360.6557 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3697011216, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9471
+Best test: 75.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7595.6284 0.0000 
+final mean and std of test acc:  7595.6284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 4124886566, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9636
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.7.log
+Seed: 2114129739, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8623
+Best test: 65.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6593.4066 0.0000 
+final mean and std of test acc:  6593.4066 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 629860878, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9112
+Best test: 73.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7377.0492 0.0000 
+final mean and std of test acc:  7377.0492 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 4269893073, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.5460
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.8.log
+Seed: 1725155195, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5939
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.8.log
+Seed: 4021016809, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8571
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 3183669163, Epoch: 79, Loss: 0.0246, Approx Train Acc: 0.6585
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.9.log
+Seed: 1918289105, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7412
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 3968742, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.4734
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.8.log
+Seed: 1990114219, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.6686
+Best test: 57.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5737.7049 0.0000 
+final mean and std of test acc:  5737.7049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.9.log
+Seed: 4050274203, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.6000
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 488451759, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5774
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 2277446069, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9583
+Best test: 77.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7704.9180 0.0000 
+final mean and std of test acc:  7704.9180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3416576089, Epoch: 79, Loss: 0.0270, Approx Train Acc: 0.4485
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2989608708, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5325
+Best test: 48.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4808.7432 0.0000 
+final mean and std of test acc:  4808.7432 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 3322568050, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9360
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 4146239903, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7160
+Best test: 58.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5846.9945 0.0000 
+final mean and std of test acc:  5846.9945 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 4164771914, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9458
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3229424190, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6213
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 2220032387, Epoch: 79, Loss: 0.0218, Approx Train Acc: 0.8323
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 1395511343, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8412
+Best test: 73.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7377.0492 0.0000 
+final mean and std of test acc:  7377.0492 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2631828419, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.5706
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 1919232209, Epoch: 79, Loss: 0.0269, Approx Train Acc: 0.4458
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 1735113815, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5000
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1700602009, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.6024
+Best test: 45.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4535.5191 0.0000 
+final mean and std of test acc:  4535.5191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 2278490295, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5238
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2928675003, Epoch: 79, Loss: 0.0237, Approx Train Acc: 0.6450
+Best test: 47.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4754.0984 0.0000 
+final mean and std of test acc:  4754.0984 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 3299991049, Epoch: 79, Loss: 0.0269, Approx Train Acc: 0.4451
+Best test: 46.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4699.4536 0.0000 
+final mean and std of test acc:  4699.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.8.log
+Seed: 3601733963, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9758
+Best test: 85.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.5902 0.0000 
+final mean and std of test acc:  8524.5902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 161850151, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8354
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 350188548, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5663
+Best test: 45.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4535.5191 0.0000 
+final mean and std of test acc:  4535.5191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 1959908422, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9702
+Best test: 83.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8306.0109 0.0000 
+final mean and std of test acc:  8306.0109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 2798784222, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5088
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 3515144599, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9532
+Best test: 74.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7486.3388 0.0000 
+final mean and std of test acc:  7486.3388 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 1675739837, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8757
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6557.3770 0.0000 
+final mean and std of test acc:  6557.3770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 92834303, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.6994
+Best test: 59.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5956.2842 0.0000 
+final mean and std of test acc:  5956.2842 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 3332279811, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.6728
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2195076431, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.4882
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1324998894, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.6049
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 865821171, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8963
+Best test: 78.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7814.2077 0.0000 
+final mean and std of test acc:  7814.2077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2347472716, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5060
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 3595841676, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.9202
+Best test: 75.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7540.9836 0.0000 
+final mean and std of test acc:  7540.9836 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2208788883, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.8485
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 2437596937, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8452
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.8251 0.0000 
+final mean and std of test acc:  7103.8251 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2489947561, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9939
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 783740532, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9591
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3068589297, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9760
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 2908064614, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9341
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2005964039, Epoch: 79, Loss: 0.0249, Approx Train Acc: 0.6205
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 3608935391, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9471
+Best test: 83.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8360.6557 0.0000 
+final mean and std of test acc:  8360.6557 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 3333709063, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9756
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 843832779, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8802
+Best test: 80.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8032.7869 0.0000 
+final mean and std of test acc:  8032.7869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2141907392, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8313
+Best test: 72.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7213.1148 0.0000 
+final mean and std of test acc:  7213.1148 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 4052407852, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.5789
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.8.log
+Seed: 3565711906, Epoch: 79, Loss: 0.0267, Approx Train Acc: 0.4578
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 3068901616, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9226
+Best test: 70.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7049.1803 0.0000 
+final mean and std of test acc:  7049.1803 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.7.log
+Seed: 4232490693, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.8036
+Best test: 68.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6813.1868 0.0000 
+final mean and std of test acc:  6813.1868 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1895218311, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.5185
+Best test: 48.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4808.7432 0.0000 
+final mean and std of test acc:  4808.7432 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 1987032044, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8563
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 2591480534, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5647
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1963522535, Epoch: 79, Loss: 0.0255, Approx Train Acc: 0.4483
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 1644331526, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5714
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 4250148112, Epoch: 79, Loss: 0.0274, Approx Train Acc: 0.4720
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3053692642, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.9018
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.7.log
+Seed: 2869257676, Epoch: 79, Loss: 0.0219, Approx Train Acc: 0.8443
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1217627899, Epoch: 79, Loss: 0.0226, Approx Train Acc: 0.7368
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.9.log
+Seed: 4218579974, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9515
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3349227223, Epoch: 79, Loss: 0.0256, Approx Train Acc: 0.4795
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 1631863416, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.5976
+Best test: 56.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5683.0601 0.0000 
+final mean and std of test acc:  5683.0601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 2363443733, Epoch: 79, Loss: 0.0232, Approx Train Acc: 0.7455
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 3853590976, Epoch: 79, Loss: 0.0226, Approx Train Acc: 0.7353
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6557.3770 0.0000 
+final mean and std of test acc:  6557.3770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1177515862, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9000
+Best test: 71.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7158.4699 0.0000 
+final mean and std of test acc:  7158.4699 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 3311338802, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.4790
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 315766907, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9302
+Best test: 75.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7540.9836 0.0000 
+final mean and std of test acc:  7540.9836 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 472438242, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9645
+Best test: 86.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8688.5246 0.0000 
+final mean and std of test acc:  8688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 1935874345, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9070
+Best test: 63.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6338.7978 0.0000 
+final mean and std of test acc:  6338.7978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1909142680, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5427
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 1499891298, Epoch: 79, Loss: 0.0232, Approx Train Acc: 0.6941
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.8.log
+Seed: 1739955889, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7412
+Best test: 61.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6120.2186 0.0000 
+final mean and std of test acc:  6120.2186 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 1920355646, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.4852
+Best test: 45.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4590.1639 0.0000 
+final mean and std of test acc:  4590.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 717415688, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9882
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 1115216635, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7425
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 510305848, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8563
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 228911850, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.6786
+Best test: 65.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6502.7322 0.0000 
+final mean and std of test acc:  6502.7322 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 1873272540, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9583
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 1389150275, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8547
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 3078253498, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.5848
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3149050218, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4578
+Best test: 49.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4918.0328 0.0000 
+final mean and std of test acc:  4918.0328 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 2029391552, Epoch: 79, Loss: 0.0218, Approx Train Acc: 0.8274
+Best test: 65.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6502.7322 0.0000 
+final mean and std of test acc:  6502.7322 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3067007478, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5422
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 515650840, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9701
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.9.log
+Seed: 2785987382, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7697
+Best test: 67.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6721.3115 0.0000 
+final mean and std of test acc:  6721.3115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.8.log
+Seed: 3841713516, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9341
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 1919407898, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9759
+Best test: 92.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9289.6175 0.0000 
+final mean and std of test acc:  9289.6175 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 4144797472, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9763
+Best test: 76.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7650.2732 0.0000 
+final mean and std of test acc:  7650.2732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3921219047, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5951
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.8.log
+Seed: 968302361, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6154
+Best test: 57.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5792.3497 0.0000 
+final mean and std of test acc:  5792.3497 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 4049747843, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9345
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.8251 0.0000 
+final mean and std of test acc:  7103.8251 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 807573633, Epoch: 79, Loss: 0.0268, Approx Train Acc: 0.4337
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3937199618, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7456
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 2451912827, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.6048
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 1263922734, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.4353
+Best test: 50.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5027.3224 0.0000 
+final mean and std of test acc:  5027.3224 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 1827474018, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9461
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 2015286360, Epoch: 79, Loss: 0.0249, Approx Train Acc: 0.5407
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 3018834383, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9059
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 2971765222, Epoch: 79, Loss: 0.0249, Approx Train Acc: 0.5621
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2447319682, Epoch: 79, Loss: 0.0223, Approx Train Acc: 0.7904
+Best test: 67.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6721.3115 0.0000 
+final mean and std of test acc:  6721.3115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 2858409220, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8780
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.8251 0.0000 
+final mean and std of test acc:  7103.8251 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 777392248, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5964
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 507503935, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5740
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 481706163, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9408
+Best test: 83.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8306.0109 0.0000 
+final mean and std of test acc:  8306.0109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 411560581, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.9259
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3158214920, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9940
+Best test: 93.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9344.2623 0.0000 
+final mean and std of test acc:  9344.2623 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 4045959702, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5060
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.9.log
+Seed: 2757047351, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9222
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 982171034, Epoch: 79, Loss: 0.0195, Approx Train Acc: 0.9883
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1738576379, Epoch: 79, Loss: 0.0226, Approx Train Acc: 0.7151
+Best test: 65.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6502.7322 0.0000 
+final mean and std of test acc:  6502.7322 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 1964936400, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9415
+Best test: 77.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7759.5628 0.0000 
+final mean and std of test acc:  7759.5628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 3883447876, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9818
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 1009944102, Epoch: 79, Loss: 0.0196, Approx Train Acc: 0.9538
+Best test: 90.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9010.9890 0.0000 
+final mean and std of test acc:  9010.9890 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 3347202429, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9758
+Best test: 76.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7650.2732 0.0000 
+final mean and std of test acc:  7650.2732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3894080650, Epoch: 79, Loss: 0.0219, Approx Train Acc: 0.7836
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 3098496844, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9529
+Best test: 85.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8579.2350 0.0000 
+final mean and std of test acc:  8579.2350 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 4169505703, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9636
+Best test: 89.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8961.7486 0.0000 
+final mean and std of test acc:  8961.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 350882844, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5767
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 272868084, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.7414
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 2786759824, Epoch: 79, Loss: 0.0239, Approx Train Acc: 0.5920
+Best test: 49.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4918.0328 0.0000 
+final mean and std of test acc:  4918.0328 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 1807259129, Epoch: 79, Loss: 0.0238, Approx Train Acc: 0.7256
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3749898042, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7590
+Best test: 63.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6318.6813 0.0000 
+final mean and std of test acc:  6318.6813 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.9.log
+Seed: 2807746649, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.4360
+Best test: 45.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4535.5191 0.0000 
+final mean and std of test acc:  4535.5191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.8.log
+Seed: 1943599706, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9123
+Best test: 80.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8032.7869 0.0000 
+final mean and std of test acc:  8032.7869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 683782582, Epoch: 79, Loss: 0.0270, Approx Train Acc: 0.4424
+Best test: 45.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4590.1639 0.0000 
+final mean and std of test acc:  4590.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 4223025802, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9235
+Best test: 87.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8797.8142 0.0000 
+final mean and std of test acc:  8797.8142 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 810644155, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8929
+Best test: 80.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8032.7869 0.0000 
+final mean and std of test acc:  8032.7869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 820705275, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5030
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2407199517, Epoch: 79, Loss: 0.0237, Approx Train Acc: 0.6374
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 194313991, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9818
+Best test: 90.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9016.3934 0.0000 
+final mean and std of test acc:  9016.3934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 1341671271, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.7989
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 586742393, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6023
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3941702073, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.5848
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 224157320, Epoch: 79, Loss: 0.0196, Approx Train Acc: 0.9209
+Best test: 79.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7923.4973 0.0000 
+final mean and std of test acc:  7923.4973 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 786060552, Epoch: 79, Loss: 0.0250, Approx Train Acc: 0.5353
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 285488091, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7337
+Best test: 62.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6284.1530 0.0000 
+final mean and std of test acc:  6284.1530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 819756762, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.5952
+Best test: 57.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5737.7049 0.0000 
+final mean and std of test acc:  5737.7049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1827209720, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9096
+Best test: 73.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7377.0492 0.0000 
+final mean and std of test acc:  7377.0492 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 2988481352, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8795
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 59606554, Epoch: 79, Loss: 0.0277, Approx Train Acc: 0.4383
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2238740997, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9357
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 3593718877, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.5241
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 69470480, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9824
+Best test: 90.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9071.0383 0.0000 
+final mean and std of test acc:  9071.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 3088910436, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.6074
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 2592770214, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.4759
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 3131645839, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9286
+Best test: 77.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7704.9180 0.0000 
+final mean and std of test acc:  7704.9180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 1787053736, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5588
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 1711658398, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.7778
+Best test: 59.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5956.2842 0.0000 
+final mean and std of test acc:  5956.2842 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 37015819, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.8947
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 1819931037, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9425
+Best test: 88.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8846.1538 0.0000 
+final mean and std of test acc:  8846.1538 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 3357059550, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9649
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 166541543, Epoch: 79, Loss: 0.0271, Approx Train Acc: 0.4451
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 3191380298, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9467
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 909972093, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.7937
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 155271067, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9012
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 2796162963, Epoch: 79, Loss: 0.0219, Approx Train Acc: 0.7836
+Best test: 67.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6775.9563 0.0000 
+final mean and std of test acc:  6775.9563 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 4122044339, Epoch: 79, Loss: 0.0223, Approx Train Acc: 0.7326
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 2106133071, Epoch: 79, Loss: 0.0222, Approx Train Acc: 0.8303
+Best test: 73.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7322.4044 0.0000 
+final mean and std of test acc:  7322.4044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.7.log
+Seed: 567693579, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.4620
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 718948790, Epoch: 79, Loss: 0.0229, Approx Train Acc: 0.7697
+Best test: 62.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6229.5082 0.0000 
+final mean and std of test acc:  6229.5082 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 284783835, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9524
+Best test: 84.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.3005 0.0000 
+final mean and std of test acc:  8415.3005 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 1048354543, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9157
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2265501, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5090
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 4045844385, Epoch: 79, Loss: 0.0195, Approx Train Acc: 0.9825
+Best test: 90.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9016.3934 0.0000 
+final mean and std of test acc:  9016.3934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 1378481548, Epoch: 79, Loss: 0.0194, Approx Train Acc: 0.9826
+Best test: 93.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9398.9071 0.0000 
+final mean and std of test acc:  9398.9071 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3268766574, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.4503
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 638100903, Epoch: 79, Loss: 0.0233, Approx Train Acc: 0.7186
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 3905843325, Epoch: 79, Loss: 0.0249, Approx Train Acc: 0.6280
+Best test: 57.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5737.7049 0.0000 
+final mean and std of test acc:  5737.7049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 2192218651, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8935
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.8251 0.0000 
+final mean and std of test acc:  7103.8251 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 1878037227, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9341
+Best test: 80.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8032.7869 0.0000 
+final mean and std of test acc:  8032.7869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 864283511, Epoch: 79, Loss: 0.0218, Approx Train Acc: 0.8443
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 1383593215, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6587
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 261325833, Epoch: 79, Loss: 0.0226, Approx Train Acc: 0.7471
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 1126141532, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9814
+Best test: 69.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6994.5355 0.0000 
+final mean and std of test acc:  6994.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 945250093, Epoch: 79, Loss: 0.0221, Approx Train Acc: 0.7661
+Best test: 71.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7158.4699 0.0000 
+final mean and std of test acc:  7158.4699 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.9.log
+Seed: 4209899595, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5562
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 2982233167, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5482
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 1777309739, Epoch: 79, Loss: 0.0250, Approx Train Acc: 0.5964
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 1441874065, Epoch: 79, Loss: 0.0237, Approx Train Acc: 0.6627
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 1187788709, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.6626
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 4228472837, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9583
+Best test: 83.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8306.0109 0.0000 
+final mean and std of test acc:  8306.0109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 595577782, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5706
+Best test: 51.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5191.2568 0.0000 
+final mean and std of test acc:  5191.2568 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 2690150243, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9762
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 125660061, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.7895
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.8.log
+Seed: 2842956523, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9762
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 3468792828, Epoch: 79, Loss: 0.0245, Approx Train Acc: 0.6957
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3338928639, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9048
+Best test: 80.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8032.7869 0.0000 
+final mean and std of test acc:  8032.7869 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2234660666, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5714
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 1363480507, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.5509
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 680164770, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5671
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 700937729, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9157
+Best test: 69.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6923.0769 0.0000 
+final mean and std of test acc:  6923.0769 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 2638839022, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9763
+Best test: 85.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.5902 0.0000 
+final mean and std of test acc:  8524.5902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 2393349192, Epoch: 79, Loss: 0.0242, Approx Train Acc: 0.6768
+Best test: 54.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5494.5055 0.0000 
+final mean and std of test acc:  5494.5055 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 32776970, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9645
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 1899644194, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9524
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 693993713, Epoch: 79, Loss: 0.0257, Approx Train Acc: 0.5697
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 12855485, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.8800
+Best test: 74.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7431.6940 0.0000 
+final mean and std of test acc:  7431.6940 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 1524919380, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9398
+Best test: 86.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8688.5246 0.0000 
+final mean and std of test acc:  8688.5246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3551006907, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.4884
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 2930099644, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8862
+Best test: 79.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7923.4973 0.0000 
+final mean and std of test acc:  7923.4973 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 1496487300, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9571
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3253611097, Epoch: 79, Loss: 0.0272, Approx Train Acc: 0.4634
+Best test: 45.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4535.5191 0.0000 
+final mean and std of test acc:  4535.5191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3420435685, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9755
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 414844425, Epoch: 79, Loss: 0.0222, Approx Train Acc: 0.8364
+Best test: 75.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7595.6284 0.0000 
+final mean and std of test acc:  7595.6284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 511731316, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9938
+Best test: 91.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9125.6831 0.0000 
+final mean and std of test acc:  9125.6831 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 3706669504, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9477
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2433869125, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7246
+Best test: 61.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6174.8634 0.0000 
+final mean and std of test acc:  6174.8634 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.9.log
+Seed: 1736826747, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.7212
+Best test: 67.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6721.3115 0.0000 
+final mean and std of test acc:  6721.3115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 10659944, Epoch: 79, Loss: 0.0244, Approx Train Acc: 0.6527
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 2578479821, Epoch: 79, Loss: 0.0264, Approx Train Acc: 0.5535
+Best test: 55.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5519.1257 0.0000 
+final mean and std of test acc:  5519.1257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 486601836, Epoch: 79, Loss: 0.0201, Approx Train Acc: 0.9471
+Best test: 73.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7377.0492 0.0000 
+final mean and std of test acc:  7377.0492 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 2334456737, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8614
+Best test: 68.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6885.2459 0.0000 
+final mean and std of test acc:  6885.2459 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3995278422, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9515
+Best test: 74.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7431.6940 0.0000 
+final mean and std of test acc:  7431.6940 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 4256410580, Epoch: 79, Loss: 0.0250, Approx Train Acc: 0.5380
+Best test: 63.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6373.6264 0.0000 
+final mean and std of test acc:  6373.6264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 1349429896, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9172
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.7213 0.0000 
+final mean and std of test acc:  8196.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 3340546008, Epoch: 79, Loss: 0.0264, Approx Train Acc: 0.5061
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 1241916787, Epoch: 79, Loss: 0.0253, Approx Train Acc: 0.5449
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 3244364744, Epoch: 79, Loss: 0.0243, Approx Train Acc: 0.6347
+Best test: 55.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5573.7705 0.0000 
+final mean and std of test acc:  5573.7705 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 3930596153, Epoch: 79, Loss: 0.0218, Approx Train Acc: 0.8606
+Best test: 76.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7650.2732 0.0000 
+final mean and std of test acc:  7650.2732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 4201036722, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9217
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8251.3661 0.0000 
+final mean and std of test acc:  8251.3661 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 2789593796, Epoch: 79, Loss: 0.0263, Approx Train Acc: 0.4759
+Best test: 56.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5683.0601 0.0000 
+final mean and std of test acc:  5683.0601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 2226046560, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6788
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 1314549118, Epoch: 79, Loss: 0.0264, Approx Train Acc: 0.4345
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.9.log
+Seed: 3373562887, Epoch: 79, Loss: 0.0235, Approx Train Acc: 0.6864
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 3707275682, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8976
+Best test: 81.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8131.8681 0.0000 
+final mean and std of test acc:  8131.8681 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 1050908624, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.6905
+Best test: 64.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6448.0874 0.0000 
+final mean and std of test acc:  6448.0874 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 3840818146, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9573
+Best test: 90.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9016.3934 0.0000 
+final mean and std of test acc:  9016.3934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 2563462543, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.7070
+Best test: 53.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.1913 0.0000 
+final mean and std of test acc:  5355.1913 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 1485893656, Epoch: 79, Loss: 0.0266, Approx Train Acc: 0.4286
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 1321075538, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.9036
+Best test: 72.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7267.7596 0.0000 
+final mean and std of test acc:  7267.7596 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2239465332, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9818
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 2076672880, Epoch: 79, Loss: 0.0225, Approx Train Acc: 0.7939
+Best test: 66.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6666.6667 0.0000 
+final mean and std of test acc:  6666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 520544796, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8957
+Best test: 60.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6065.5738 0.0000 
+final mean and std of test acc:  6065.5738 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.7.log
+Seed: 1577695868, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5298
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 2432070416, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9762
+Best test: 91.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9180.3279 0.0000 
+final mean and std of test acc:  9180.3279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 3348326421, Epoch: 79, Loss: 0.0227, Approx Train Acc: 0.7396
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 1950625884, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5205
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 1602015593, Epoch: 79, Loss: 0.0197, Approx Train Acc: 0.9824
+Best test: 91.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9125.6831 0.0000 
+final mean and std of test acc:  9125.6831 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 1801744437, Epoch: 79, Loss: 0.0252, Approx Train Acc: 0.5689
+Best test: 51.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5136.6120 0.0000 
+final mean and std of test acc:  5136.6120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.8.log
+Seed: 3287638594, Epoch: 79, Loss: 0.0192, Approx Train Acc: 0.9548
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 3983672928, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.8793
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 2064214340, Epoch: 79, Loss: 0.0265, Approx Train Acc: 0.5123
+Best test: 48.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4863.3880 0.0000 
+final mean and std of test acc:  4863.3880 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 1635939693, Epoch: 79, Loss: 0.0271, Approx Train Acc: 0.4540
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 690245027, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7305
+Best test: 66.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6612.0219 0.0000 
+final mean and std of test acc:  6612.0219 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2831257040, Epoch: 79, Loss: 0.0260, Approx Train Acc: 0.4793
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 3438884235, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9816
+Best test: 88.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8852.4590 0.0000 
+final mean and std of test acc:  8852.4590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 1730339831, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9521
+Best test: 89.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8907.1038 0.0000 
+final mean and std of test acc:  8907.1038 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3036389844, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.9268
+Best test: 79.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7978.1421 0.0000 
+final mean and std of test acc:  7978.1421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 1276500108, Epoch: 79, Loss: 0.0230, Approx Train Acc: 0.7381
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2191734190, Epoch: 79, Loss: 0.0198, Approx Train Acc: 0.9822
+Best test: 86.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8633.8798 0.0000 
+final mean and std of test acc:  8633.8798 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 1958205740, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9345
+Best test: 76.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7650.2732 0.0000 
+final mean and std of test acc:  7650.2732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 2487726305, Epoch: 79, Loss: 0.0262, Approx Train Acc: 0.4940
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2793151744, Epoch: 79, Loss: 0.0240, Approx Train Acc: 0.6727
+Best test: 56.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5628.4153 0.0000 
+final mean and std of test acc:  5628.4153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 2046437410, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9408
+Best test: 75.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7595.6284 0.0000 
+final mean and std of test acc:  7595.6284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 1023129635, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9521
+Best test: 87.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8743.1694 0.0000 
+final mean and std of test acc:  8743.1694 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 4209158077, Epoch: 79, Loss: 0.0222, Approx Train Acc: 0.7870
+Best test: 63.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6393.4426 0.0000 
+final mean and std of test acc:  6393.4426 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 2443367255, Epoch: 79, Loss: 0.0246, Approx Train Acc: 0.5647
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 4083683488, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8720
+Best test: 79.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7923.4973 0.0000 
+final mean and std of test acc:  7923.4973 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 4011334016, Epoch: 79, Loss: 0.0246, Approx Train Acc: 0.6071
+Best test: 54.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5464.4809 0.0000 
+final mean and std of test acc:  5464.4809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 1456270174, Epoch: 79, Loss: 0.0258, Approx Train Acc: 0.5706
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2528878185, Epoch: 79, Loss: 0.0255, Approx Train Acc: 0.5732
+Best test: 56.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5683.0601 0.0000 
+final mean and std of test acc:  5683.0601 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3878165314, Epoch: 79, Loss: 0.0247, Approx Train Acc: 0.5376
+Best test: 52.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5245.9016 0.0000 
+final mean and std of test acc:  5245.9016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2305984418, Epoch: 79, Loss: 0.0268, Approx Train Acc: 0.4398
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 3806318432, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9573
+Best test: 78.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7814.2077 0.0000 
+final mean and std of test acc:  7814.2077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 3096463874, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8521
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 3139162964, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8382
+Best test: 69.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6939.8907 0.0000 
+final mean and std of test acc:  6939.8907 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 137006360, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8788
+Best test: 70.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7049.1803 0.0000 
+final mean and std of test acc:  7049.1803 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.7.log
+Seed: 2005416420, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9172
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8469.9454 0.0000 
+final mean and std of test acc:  8469.9454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 1923335927, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9461
+Best test: 90.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9016.3934 0.0000 
+final mean and std of test acc:  9016.3934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 3667191067, Epoch: 79, Loss: 0.0248, Approx Train Acc: 0.5647
+Best test: 50.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5027.3224 0.0000 
+final mean and std of test acc:  5027.3224 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 2920778128, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9762
+Best test: 85.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.5902 0.0000 
+final mean and std of test acc:  8524.5902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 728454582, Epoch: 79, Loss: 0.0251, Approx Train Acc: 0.5444
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 2726993983, Epoch: 79, Loss: 0.0256, Approx Train Acc: 0.5455
+Best test: 53.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5300.5464 0.0000 
+final mean and std of test acc:  5300.5464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 1141316293, Epoch: 79, Loss: 0.0200, Approx Train Acc: 0.9645
+Best test: 89.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8956.0440 0.0000 
+final mean and std of test acc:  8956.0440 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 646390992, Epoch: 79, Loss: 0.0201, Approx Train Acc: 1.0000
+Best test: 95.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9562.8415 0.0000 
+final mean and std of test acc:  9562.8415 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 2755550340, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9461
+Best test: 78.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7868.8525 0.0000 
+final mean and std of test acc:  7868.8525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 3137280034, Epoch: 79, Loss: 0.0220, Approx Train Acc: 0.8303
+Best test: 68.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6830.6011 0.0000 
+final mean and std of test acc:  6830.6011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2755878715, Epoch: 79, Loss: 0.0203, Approx Train Acc: 0.9464
+Best test: 86.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8633.8798 0.0000 
+final mean and std of test acc:  8633.8798 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 3517144918, Epoch: 79, Loss: 0.0254, Approx Train Acc: 0.5542
+Best test: 54.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5409.8361 0.0000 
+final mean and std of test acc:  5409.8361 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 330110086, Epoch: 79, Loss: 0.0202, Approx Train Acc: 0.9818
+Best test: 90.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9016.3934 0.0000 
+final mean and std of test acc:  9016.3934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3180291644, Epoch: 79, Loss: 0.0259, Approx Train Acc: 0.4647
+Best test: 44.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4480.8743 0.0000 
+final mean and std of test acc:  4480.8743 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 489467788, Epoch: 79, Loss: 0.0234, Approx Train Acc: 0.7152
+Best test: 60.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6010.9290 0.0000 
+final mean and std of test acc:  6010.9290 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sfive_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 3910454856, Epoch: 79, Loss: 0.0199, Approx Train Acc: 0.9763
+Best test: 93.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9344.2623 0.0000 
+final mean and std of test acc:  9344.2623 $\pm$ 0.0000
+
+----------------------------------------
+
