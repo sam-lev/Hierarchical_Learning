@@ -173,3 +173,4 @@ class MaskedBatchNorm(nn.Module):
         x_norm = x_norm * mask + x * (1 - mask.float())
 
         return x_norm
+
