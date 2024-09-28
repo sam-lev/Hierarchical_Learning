@@ -3029,207 +3029,240 @@ class UniformativeDummyEmbedding(nn.Module):
 
 """
 
+class Experiments():
+    def __init__(self):
+        description = "experiments and ablation studies of hierarchical filtration gnns"
+    def run(self, experiment):
+        if experiment == "seq_init_ablation":
+            self.init_type = "seq_init"
+        if experiment == "fixed_init_ablation":
+            self.init_type = "fixed_init"
 
-def train_independent_graph_hierarchies(self, input_dict,
-                                      filtration=None, thresholds=[.5, 1.0]):
-    device = input_dict["device"]
-    optimizer = input_dict["optimizer"]
-    loss_op = input_dict["loss_op"]
-    grad_scalar = input_dict["grad_scalar"]
-    scheduler = input_dict["scheduler"]
+    def train_independent_graph_hierarchies(self, input_dict,
+                                          filtration=None, thresholds=[.5, 1.0]):
+        device = input_dict["device"]
+        optimizer = input_dict["optimizer"]
+        loss_op = input_dict["loss_op"]
+        grad_scalar = input_dict["grad_scalar"]
+        scheduler = input_dict["scheduler"]
 
-    total_epochs = input_dict["total_epochs"]
-    epoch = input_dict['epoch']
-    eval_steps = input_dict['eval_steps']
-    input_steps = input_dict["steps"]
+        total_epochs = input_dict["total_epochs"]
+        epoch = input_dict['epoch']
+        eval_steps = input_dict['eval_steps']
+        input_steps = input_dict["steps"]
 
-    val_data = input_dict["val_data"]
-    val_input_dict = {"data": val_data,
-                      "device": device,
-                      "dataset": input_dict["dataset"],
-                      "loss_op": loss_op}
-    #
-    """ NOTE ON WHAT NEEDS TO BE DONE:
-            create a hierarchical set of neioghborhood loaders for each each leve
-            of the graph hierarchy based on persistent filtration BUT ALSO for each
-            collection of nodes comprising the training set, validations set, and 
-            graph in it's entirety """
+        val_data = input_dict["val_data"]
+        val_input_dict = {"data": val_data,
+                          "device": device,
+                          "dataset": input_dict["dataset"],
+                          "loss_op": loss_op}
+        #
+        """ NOTE ON WHAT NEEDS TO BE DONE:
+                create a hierarchical set of neioghborhood loaders for each each leve
+                of the graph hierarchy based on persistent filtration BUT ALSO for each
+                collection of nodes comprising the training set, validations set, and 
+                graph in it's entirety """
 
-    # global_edge_index = data.edge_index.t()
-
-
-
-    total_loss = total_correct = 0
-    total_val_loss = 0
-
-    self.train()
-    self.training = True
-
-    data = self.graphs[self.graph_level]  # input_dict["train_data"]
-    # data = data.to(device)
-
-    # Compute the degree of each node
-    if epoch == 0:
-        max_degree, avg_degree, degrees = node_degree_statistics(data)
-        pout((" MAX DEGREE ", max_degree, " AVERAGE DEGREE ", avg_degree))
-
-    approx_thresholds = np.arange(0.0, 1.0, 0.1)
-
-    # length_training_batches = data.y.size()[0]
-    self.batch_norms = [bn.to(device) for bn in self.batch_norms]
-
-    total_training_points = 0
-    predictions = []
-    all_labels = []
-
-    """ For sequential experiment """
-    og_node_x = data.x.copy()
-
-    for batch_size, n_id, adjs in self.graphlevelloader:
-        # batch=batch.to(device)
-        # batch_size = batch.batch_size
-
-        optimizer.zero_grad()
+        # global_edge_index = data.edge_index.t()
 
 
-        adjs = [adj.to(device) for adj in adjs]
 
-        x = data.x[n_id].to(device)
-        y = data.y[n_id[:batch_size]].to(device)  # .float()
+        total_loss = total_correct = 0
+        total_val_loss = 0
 
-        with autocast():
-            out = self(x, adjs)[:batch_size]
+        self.train()
+        self.training = True
+
+        data = self.graphs[self.graph_level]  # input_dict["train_data"]
+        # data = data.to(device)
+
+        # Compute the degree of each node
+        if epoch == 0:
+            max_degree, avg_degree, degrees = node_degree_statistics(data)
+            pout((" MAX DEGREE ", max_degree, " AVERAGE DEGREE ", avg_degree))
+
+        approx_thresholds = np.arange(0.0, 1.0, 0.1)
+
+        # length_training_batches = data.y.size()[0]
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+
+        total_training_points = 0
+        predictions = []
+        all_labels = []
+
+        """ For sequential experiment """
+        og_node_x = data.x.copy()
+
+        for batch_size, n_id, adjs in self.graphlevelloader:
+            # batch=batch.to(device)
+            # batch_size = batch.batch_size
+
+            optimizer.zero_grad()
 
 
-        loss = loss_op(out, y)
+            adjs = [adj.to(device) for adj in adjs]
 
-        grad_scalar.scale(loss).backward()
-        grad_scalar.step(optimizer)
-        grad_scalar.update()
-        total_training_points += batch_size
+            x = data.x[n_id].to(device)
+            y = data.y[n_id[:batch_size]].to(device)  # .float()
 
-        total_loss += loss.item()
+            with autocast():
+                out = self(x, adjs)[:batch_size]
 
+
+            loss = loss_op(out, y)
+
+            grad_scalar.scale(loss).backward()
+            grad_scalar.step(optimizer)
+            grad_scalar.update()
+            total_training_points += batch_size
+
+            total_loss += loss.item()
+
+            if self.num_targets != 1:
+                total_correct += float(out.argmax(axis=1).eq(y).sum())
+                all_labels.extend(y)  # ground_truth)
+                predictions.extend(out.argmax(axis=1))
+            else:
+                predictions.extend(out)  # preds)
+                all_labels.extend(y)  # ground_truth)
+
+            del adjs, batch_size, n_id, loss, out, x, y
+            torch.cuda.empty_cache()
+
+        predictions = torch.tensor(predictions)
+        all_labels = torch.tensor(all_labels)
+        # all_labels=torch.cat(all_labels,dim=0)
+
+        num_classes = len(all_labels.unique())
+        num_targets = 1 if num_classes == 2 else num_classes
         if self.num_targets != 1:
-            total_correct += float(out.argmax(axis=1).eq(y).sum())
-            all_labels.extend(y)  # ground_truth)
-            predictions.extend(out.argmax(axis=1))
-        else:
-            predictions.extend(out)  # preds)
-            all_labels.extend(y)  # ground_truth)
+            # approx_acc = total_correct/all_labels.numel()
+            approx_acc = (predictions == all_labels).float().mean().item()
 
-        del adjs, batch_size, n_id, loss, out, x, y
+            del predictions, all_labels
+
+        else:
+            total_correct = int(predictions.eq(all_labels).sum())
+            all_labels = all_labels.detach().cpu().numpy()
+            predictions = predictions.detach().cpu().numpy()
+            approx_acc = total_correct / all_labels.shape[0]
+
+        if epoch % eval_steps == 0 and epoch != 0:
+            with torch.no_grad():
+                self.eval()
+                val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
+            self.training = True
+            self.train()
+            if self.num_targets != 1:
+                # predictions = predictions
+                # approx_acc = (predictions == all_labels).float().mean().item()
+
+                val_pred = val_pred
+                val_acc = (val_pred == val_ground_truth).float().mean().item()
+                # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
+                print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}")
+                val_roc = 0
+                del val_pred, val_ground_truth
+
+            else:
+                # if False:  # because too slow
+                val_pred = val_pred.detach().cpu().numpy()
+                val_ground_truth = val_ground_truth.detach().cpu().numpy()
+                # val_acc = accuracy_score(val_ground_truth, val_pred)
+                val_optimal_threshold, val_acc = optimal_metric_threshold(y_probs=val_pred,
+                                                                          y_true=val_ground_truth,
+                                                                          metric=accuracy_score,
+                                                                          metric_name='accuracy',
+                                                                          num_targets=num_targets,
+                                                                          thresholds=approx_thresholds)
+
+                val_thresh, val_roc = optimal_metric_threshold(val_pred,
+                                                               val_ground_truth,
+                                                               metric=metrics.roc_auc_score,
+                                                               metric_name='ROC AUC',
+                                                               thresholds=approx_thresholds)
+                train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
+                                                                        y_true=all_labels,
+                                                                        metric=accuracy_score,
+                                                                        metric_name='accuracy',
+                                                                        num_targets=num_targets,
+                                                                        thresholds=approx_thresholds)
+
+                print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}",
+                      f" Validation ROC: {val_roc:.4f}")
+
+                total_val_loss += val_loss
+
+                # if scheduler is not None:
+                #     scheduler.step(val_loss)
+
+                del val_loss, val_pred, val_ground_truth
+
+        if epoch in self.graph_lift_intervals and epoch != total_epochs:  # % (total_epochs // self.data_size) == 0 and epoch != 0:
+            pout(("%%%%%%"))
+            pout(("Moving up graph level hierarchy for successive training"))
+            pout(("Epoch ", epoch, " of ", total_epochs))
+            pout(("%%%%%%"))
+            pout(("RESULTS SUBGRAPH: ", self.graph_level))
+            pout((f"Loss: {total_loss / total_training_points}",
+                  f"approx_acc: {approx_acc}",
+                  "(total_val_loss, val_acc, val_roc)", f"({total_val_loss}", f"{val_acc}", f"{val_roc})"))
+            self.graph_level += 1
+            # Save embeddings for each node in the last graph
+            subgraph_embeddings = {}
+            with torch.no_grad():
+                for batch_size, n_id, adjs in self.graphlevelloader:  # batch in self.graphlevelloader:
+                    # batch.to(device)
+                    # n_id = batch.n_id
+                    for nid in n_id.detach().cpu().numpy():
+                        """ changed here """
+                        n_embedding = data.x[nid].detach().cpu().numpy()
+                        subgraph_embeddings[nid] = n_embedding
+
+            self.graphs[self.graph_level] = self.initialize_from_subgraph(
+                subgraph_embeddings,
+                self.graphs[self.graph_level],
+                graph_level=self.graph_level,
+                supergraph_to_subgraph_mappings=[self.supergraph_to_subgraph_mappings[self.graph_level - 1],
+                                                 self.supergraph_to_subgraph_mappings[self.graph_level]],
+                subgraph_to_supergraph_mappings=[self.sub_to_sup_mappings[self.graph_level - 1],
+                                                 self.sub_to_sup_mappings[self.graph_level]])
+
+            self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level],
+                                                              shuffle=True,
+                                                              num_neighbors=self.num_neighbors[:self.num_layers]
+                                                              )
         torch.cuda.empty_cache()
 
-    predictions = torch.tensor(predictions)
-    all_labels = torch.tensor(all_labels)
-    # all_labels=torch.cat(all_labels,dim=0)
+        if scheduler is not None:
+            scheduler.step(total_loss / total_training_points)
 
-    num_classes = len(all_labels.unique())
-    num_targets = 1 if num_classes == 2 else num_classes
-    if self.num_targets != 1:
-        # approx_acc = total_correct/all_labels.numel()
-        approx_acc = (predictions == all_labels).float().mean().item()
-
-        del predictions, all_labels
-
-    else:
-        total_correct = int(predictions.eq(all_labels).sum())
-        all_labels = all_labels.detach().cpu().numpy()
-        predictions = predictions.detach().cpu().numpy()
-        approx_acc = total_correct / all_labels.shape[0]
-
-    if epoch % eval_steps == 0 and epoch != 0:
-        with torch.no_grad():
-            self.eval()
-            val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
-        self.training = True
-        self.train()
-        if self.num_targets != 1:
-            # predictions = predictions
-            # approx_acc = (predictions == all_labels).float().mean().item()
-
-            val_pred = val_pred
-            val_acc = (val_pred == val_ground_truth).float().mean().item()
-            # val_acc = (val_pred.argmax(axis=-1) == val_ground_truth).float().mean().item()
-            print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}")
-            val_roc = 0
-            del val_pred, val_ground_truth
-
+        if epoch % eval_steps == 0 and epoch != 0:
+            return total_loss / total_training_points, approx_acc, (total_val_loss, val_acc, val_roc)
         else:
-            # if False:  # because too slow
-            val_pred = val_pred.detach().cpu().numpy()
-            val_ground_truth = val_ground_truth.detach().cpu().numpy()
-            # val_acc = accuracy_score(val_ground_truth, val_pred)
-            val_optimal_threshold, val_acc = optimal_metric_threshold(y_probs=val_pred,
-                                                                      y_true=val_ground_truth,
-                                                                      metric=accuracy_score,
-                                                                      metric_name='accuracy',
-                                                                      num_targets=num_targets,
-                                                                      thresholds=approx_thresholds)
+            return total_loss / total_training_points, approx_acc, (666, 666, 666)
 
-            val_thresh, val_roc = optimal_metric_threshold(val_pred,
-                                                           val_ground_truth,
-                                                           metric=metrics.roc_auc_score,
-                                                           metric_name='ROC AUC',
-                                                           thresholds=approx_thresholds)
-            train_opt_thresh, approx_acc = optimal_metric_threshold(y_probs=predictions,
-                                                                    y_true=all_labels,
-                                                                    metric=accuracy_score,
-                                                                    metric_name='accuracy',
-                                                                    num_targets=num_targets,
-                                                                    thresholds=approx_thresholds)
 
-            print("Epoch: ", epoch, f" Validation ACC: {val_acc:.4f}",
-                  f" Validation ROC: {val_roc:.4f}")
+    def initialize_from_subgraph(self,
+                                 subgraph,
+                                 supergraph,
+                                 graph_level,
+                                 supergraph_to_subgraph_mappings,
+                                 subgraph_to_supergraph_mappings):
+        pout(("graph level ", graph_level, "graph levelS ", self.graph_levels, " node mappings length ",
+              len(supergraph_to_subgraph_mappings)))
+        sup_to_sub_lower = supergraph_to_subgraph_mappings[0] # mapping of supergrpah to lower level subgraph
+        sup_to_sub_higher = supergraph_to_subgraph_mappings[1] # mapping supergraph idx to higher level subgraph
+        sub_to_sup_lower = subgraph_to_supergraph_mappings[0] #mapping of lower level graph to supergraph idx
+        # {sub_id: global_id for global_id,sub_id in subgraph_mapping.items()}
+        # supsub_mapping = {global_id: sub_id for sub_id, global_id in supgraph_mapping.items()}
 
-            total_val_loss += val_loss
 
-            # if scheduler is not None:
-            #     scheduler.step(val_loss)
+        # for node, i in subgraph_mapping.items():
 
-            del val_loss, val_pred, val_ground_truth
-
-    if epoch in self.graph_lift_intervals and epoch != total_epochs:  # % (total_epochs // self.data_size) == 0 and epoch != 0:
-        pout(("%%%%%%"))
-        pout(("Moving up graph level hierarchy for successive training"))
-        pout(("Epoch ", epoch, " of ", total_epochs))
-        pout(("%%%%%%"))
-        pout(("RESULTS SUBGRAPH: ", self.graph_level))
-        pout((f"Loss: {total_loss / total_training_points}",
-              f"approx_acc: {approx_acc}",
-              "(total_val_loss, val_acc, val_roc)", f"({total_val_loss}", f"{val_acc}", f"{val_roc})"))
-        self.graph_level += 1
-        # Save embeddings for each node in the last graph
-        subgraph_embeddings = {}
-        with torch.no_grad():
-            for batch_size, n_id, adjs in self.graphlevelloader:  # batch in self.graphlevelloader:
-                # batch.to(device)
-                # n_id = batch.n_id
-                for nid in n_id.detach().cpu().numpy():
-                    """ changed here """
-                    n_embedding = og_node_x[nid]#.detach().cpu().numpy()
-                    subgraph_embeddings[nid] = n_embedding
-
-        self.graphs[self.graph_level] = self.initialize_from_subgraph(
-            subgraph_embeddings,
-            self.graphs[self.graph_level],
-            graph_level=self.graph_level,
-            supergraph_to_subgraph_mappings=[self.supergraph_to_subgraph_mappings[self.graph_level - 1],
-                                             self.supergraph_to_subgraph_mappings[self.graph_level]],
-            subgraph_to_supergraph_mappings=[self.sub_to_sup_mappings[self.graph_level - 1],
-                                             self.sub_to_sup_mappings[self.graph_level]])
-
-        self.graphlevelloader = self.get_graph_dataloader(self.graphs[self.graph_level],
-                                                          shuffle=True,
-                                                          num_neighbors=self.num_neighbors[:self.num_layers]
-                                                          )
-    torch.cuda.empty_cache()
-
-    if scheduler is not None:
-        scheduler.step(total_loss / total_training_points)
-
-    if epoch % eval_steps == 0 and epoch != 0:
-        return total_loss / total_training_points, approx_acc, (total_val_loss, val_acc, val_roc)
-    else:
-        return total_loss / total_training_points, approx_acc, (666, 666, 666)
+        new_node_features = supergraph.x.clone().detach().cpu().numpy()
+        for node, embedding in subgraph.items():
+            global_id = sub_to_sup_lower[node]
+            new_node_features[sup_to_sub_higher[global_id]] = embedding#supsub_mapping[global_id]] = embedding
+        supergraph.x = torch.tensor(new_node_features)
+        return supergraph

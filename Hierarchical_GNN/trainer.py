@@ -795,7 +795,18 @@ class trainer(object):
             else:
                 self.steps = -1
 
-            train_loss, train_acc, val_loss_score = self.train_net(epoch)  # -wz-run
+            if self.experiment is None:
+                    train_loss, train_acc, val_loss_score = self.train_net(epoch)
+            if self.experiment is not None:
+
+                exp_input_dict = {"data": self.test_data, "y": self.y, "loss_op": self.loss_op,
+                                   "device": self.device, "dataset": self.dataset,
+                                   "type": "test"}
+                self.train_net(epoch,
+                               experiment=self.experiment,
+                               exp_input_dict=exp_input_dict)  # -wz-run
+
+
             val_loss_epoch, val_score_epoch, val_roc_epoch = val_loss_score
 
             if self.train_by_steps:
@@ -905,6 +916,11 @@ class trainer(object):
             #f"Best ROC Train: {best_roc_train:.2f} "
             f"Best ROC Test: {best_roc_test:.2f} "
         )
+
+        if self.experiment is not None:
+            pout(("Experimental Results for ",
+                  self.experiment,
+                  pout((self.model.experimental_results))))
 
         return best_train, best_valid, best_test
 
@@ -1018,309 +1034,39 @@ class trainer(object):
     def test_net(self):
         # pout(("In test net", "multilabel?", self.multi_label))
         self.model.eval()
-        """train_input_dict = {"data": self.train_data, "y": self.y,"loss_op":self.loss_op,
-                            "device": self.device, "dataset": self.dataset}"""
         test_input_dict = {"data": self.test_data, "y": self.y,"loss_op":self.loss_op,
                             "device": self.device, "dataset": self.dataset,
                            "type":"test"}
-        all_input_dict = {"data": self.data, "y": self.y,"loss_op":self.loss_op,
-                           "device": self.device, "dataset": self.dataset}
 
-        # infer over training set
-        # pout(("train set"))
-        """train_out, loss, y_train = self.model.inference(train_input_dict)"""
         test_out, loss, y_test = self.model.inference(test_input_dict)
-        """all_out, loss, y_all = self.model.inference(all_input_dict)"""
+
         if self.evaluator is not None:
-
-            """pout(( "%%%%%%%%%%%%%%", "Testing with Evaluator ", "%%%%%%%%%%%"))
-            y_true = self.y.unsqueeze(-1)
-            y_pred = all_out.argmax(dim=0, keepdim=True)
-
-            train_acc = self.evaluator.eval(
-                {
-                    "y_true": y_true[self.split_masks["train"]],
-                    "y_pred": y_pred[self.split_masks["train"]],
-                }
-            )["acc"]
-            valid_acc = self.evaluator.eval(
-                {
-                    "y_true": y_true[self.split_masks["valid"]],
-                    "y_pred": y_pred[self.split_masks["valid"]],
-                }
-            )["acc"]
-            test_acc = self.evaluator.eval(
-                {
-                    "y_true": y_true[self.split_masks["test"]],
-                    "y_pred": y_pred[self.split_masks["test"]],
-                }
-            )["acc"]"""
+            """ remove """
         else:
-
-
-
             if self.multi_label == True:
-
-                """train_thresh, train_acc = optimal_metric_threshold(train_out,
-                                                                   y_train,
-                                                                   metric=metrics.accuracy_score,
-                                                               metric_name='accuracy',
-                                                               num_targets=self.num_targets)"""
-                # test_pred= test_out.argmax(axis=1)
-                # test_acc = (test_out == y_test).float().mean().item()
                 test_thresh, test_acc = optimal_metric_threshold(test_out,
                                                                  y_test,
                                                                    metric=metrics.accuracy_score,
                                                                metric_name='accuracy',
                                                                num_targets=self.num_targets)
 
-                """all_thresh, all_acc = optimal_metric_threshold(all_out,
-                                                               y_all,
-                                                                   metric=metrics.accuracy_score,
-                                                               metric_name='accuracy',
-                                                               num_targets=self.num_targets)
-                
-                
-                """
+
                 test_f1 = 0
                 test_roc = 0
-
-
-                # total_correct = 0
-                # correct = pred.eq(data.y).sum().item()
-                # accuracy = correct / (num_nodes * num_classes)
-                # total_correct = train_out.argmax(dim=-1).eq(y_train).sum().item()
-                # train_acc = total_correct/float(y_train.size(0)*self.num_targets)
-                #
-                #
-                # total_correct = 0
-                # total_correct = test_out.argmax(dim=-1).eq(y_test).sum().item()
-                # test_acc = total_correct / float(y_test.size(0) * self.num_targets)
-                #
-                # total_correct = 0
-                # # for y_t, y_s in zip(y_all, all_out):
-                # total_correct = all_out.argmax(dim=-1).eq(y_all).sum().item()
-                # all_acc = total_correct / float(y_all.size(0) * self.num_targets)
-
-                # print(" ALL ACCURACY thresh ", all_acc)
-                # all_acc_mean = (all_out == y_all).float().mean().item()
-                # pout((" ALL ACCURACY Mean ", all_acc_mean))
-
-                # train_thresh, train_acc = optimal_metric_threshold(y_score_train,
-                #                                                    y_true_train,
-                #                                                    metric='accuracy')
-                # test_thresh, test_acc = optimal_metric_threshold(y_score_test,
-                #                                                  y_true_test,
-                #                                                  metric='accuracy')
-                # all_thresh, all_acc = optimal_metric_threshold(y_score_all,
-                #                                                y_true_all,
-                #                                                metric='accuracy')
-
-                # train_thresh, train_f1 = optimal_metric_threshold((train_out > 0).float().numpy(),
-                #                                                   y_true_train,
-                #                                                   metric=metrics.f1_score)
-                # test_thresh, test_f1 = optimal_metric_threshold((test_out > 0).float().numpy(),
-                #                                                 y_true_test,
-                #                                                 metric=metrics.f1_score)
-                # all_thresh, all_f1 = optimal_metric_threshold((all_out > 0).float().numpy(),
-                #                                               y_true_all,
-                #                                               metric=metrics.f1_score)
-
-                """
-                            cCHANGER THIAS AHCKL HACL HACL
-                """
-
-
-
             if self.multi_label == False:
-
-                """y_true_train = y_train.cpu().numpy()
-                y_score_train = train_out.cpu().numpy()"""
-
                 y_true_test = y_test.cpu().numpy()
                 y_score_test = test_out.cpu().numpy()
-
-                """y_true_all = y_all.cpu().numpy()
-                y_score_all = all_out.cpu().numpy()"""
-
-                """train_thresh, train_acc = optimal_metric_threshold(y_score_train,
-                                                                   y_true_train,
-                                                               metric = accuracy_score,
-                                                                   metric_name='accuracy')"""
                 test_thresh, test_acc = optimal_metric_threshold(y_score_test,
                                                                  y_true_test,
                                                                metric = accuracy_score,
                                                                  metric_name='accuracy')
-                """all_thresh, all_acc = optimal_metric_threshold(y_score_all,
-                                                               y_true_all,
-                                                               metric = accuracy_score,
-                                                               metric_name='accuracy')
-                """
-                """train_thresh, train_f1 = optimal_metric_threshold(y_score_train,
-                                                                        y_true_train,
-                                                                        metric=metrics.f1_score)"""
                 test_thresh, test_f1 = optimal_metric_threshold(y_score_test,
                                                                        y_true_test,
                                                                        metric=metrics.f1_score)
-                """all_thresh, all_f1 = optimal_metric_threshold(y_score_all,
-                                                                       y_true_all,
-                                                                       metric=metrics.f1_score)
-                
-                all_thresh, all_roc = optimal_metric_threshold(y_score_all,
-                                                                   y_true_all,
-                                                                   metric=metrics.roc_auc_score,
-                                                                      metric_name='ROC AUC')
-                """
                 all_thresh, test_roc = optimal_metric_threshold(y_score_test,
                                                                    y_true_test,
                                                                    metric=metrics.roc_auc_score,
                                                                       metric_name='ROC AUC')
-                """all_thresh, train_roc = optimal_metric_threshold(y_score_train,
-                                                                   y_true_train,
-                                                                   metric=metrics.roc_auc_score,
-                                                                      metric_name='ROC AUC')"""
-                #print("ALL ACC Thresh: ",all_acc, " ALL ROC: ", all_roc )
-
-
-            """
-            # train results threshold prediction
-            train_pred = train_out > 0.5
-            train_acc = (train_pred.long() == y_train).float().mean().item()
-            print((train_acc))
-            # threshold_out = train_out.argmax(dim=-1).to("cpu")
-            # train_pred = threshold_out.to("cpu")#.argmax(dim=-1).to("cpu")
-            # y_true = self.y
-            # train_correct = train_pred.eq(y_true_train)#.argmax(dim=-1)
-            # train_acc = train_correct.sum().item() / float(train_labels.size()[0])#self.split_masks["train"].sum().item()
-
-            # test_pred = threshold_out.to("cpu") #.argmax(dim=-1).to("cpu")
-            # # y_true = self.y
-            # test_correct = test_pred.eq(y_true_test.argmax(dim=-1).to("cpu"))
-            # test_acc = test_correct.sum().item() / float(test_labels.size()[0]) #self.split_masks["valid"].sum().item()
-            test_pred = test_out > 0.5
-            test_acc = (test_pred.long() == y_test).float().mean().item()
-
-            # threshold_out = all_out.argmax(dim=-1).to("cpu")
-            # all_pred = threshold_out.to("cpu")
-            # # y_true = self.y
-            # all_correct = all_pred.eq(y_true_all.argmax(dim=-1).to("cpu"))
-            # all_acc = all_correct.sum().item() / float(all_labels.size()[0]) #self.split_masks["test"].sum().item()
-
-            all_pred = all_out > 0.5
-            all_acc = (all_pred.long() == y_all).float().mean().item()
-
-            pout((y_train, train_out))
-            # Compute F1 scores
-            train_f1 = (
-                metrics.f1_score(
-                    y_train.to("cpu"),
-                    train_pred.to("cpu"),#.to("cpu"),
-                    average="micro",
-                )
-                # if train_pred.sum() > 0
-                # else 0
-            )
-
-            test_f1 = (
-                metrics.f1_score(
-                    y_test.to("cpu"),
-                    test_pred.to("cpu"),
-                    average="micro",
-                )
-                # if test_pred.sum() > 0
-                # else 0
-            )
-
-            all_f1 = (
-                metrics.f1_score(
-                    y_all.to("cpu"),
-                    all_pred.to("cpu"),
-                    average="micro",
-                )
-                # if all_pred.sum() > 0
-                # else 0
-            )
-            """
-
-
-            # all_roc = metrics.roc_auc_score(y_true_all.argmax(dim=1).cpu().numpy(),
-            #         all_out.argmax(dim=1).cpu().numpy())#.argmax(dim=-1).to("cpu"),)
-
-            # # pred = out.argmax(dim=-1).to("cpu")
-            # pred = out.to("cpu")
-            #
-            # if isinstance(self.loss_op, torch.nn.CrossEntropyLoss) or isinstance(self.loss_op, torch.nn.BCEWithLogitsLoss) or isinstance(self.loss_op, torch.nn.NLLLoss):
-            #     correct = pred.argmax(dim=-1).eq(y_true)
-            # else:
-            #     correct = pred.eq(y_true)
-            #
-            # # if isinstance(self.loss_op, torch.nn.CrossEntropyLoss):
-            # #     correct = int(pred.argmax(dim=0).eq(y_true).sum())
-            # # else:
-            # #     correct = int(pred.eq(y_true).sum())
-            #
-            # # correct = pred.eq(y_true)
-            # if False:
-            #     train_acc = (
-            #         correct[self.split_masks["edge_train"]].sum().item()
-            #         / self.split_masks["edge_train"].sum().item()
-            #     )
-            #     valid_acc = (
-            #         correct[self.split_masks["edge_valid"]].sum().item()
-            #         / self.split_masks["edge_valid"].sum().item()
-            #     )
-            #     test_acc = (
-            #         correct[self.split_masks["edge_test"]].sum().item()
-            #         / self.split_masks["edge_test"].sum().item()
-            #     )
-            # train_acc = (
-            #         correct.sum().item()
-            #         / y_true.sum().item()
-            # )
-            # valid_acc = (
-            #         correct.sum().item()
-            #         / y_true.sum().item()
-            # )
-            # test_acc = (
-            #         correct.sum().item()
-            #         / y_true.sum().item()
-            # )
-            # else:
-            #     pout(("%%%%%%%%%%%", "Testing inference results",
-            #           "multi_Label: ", self.multi_label, "%%%%%%%%%%"))
-            #     pred = (all_out > 0).float().numpy()
-            #     # y_true = self.labels.numpy()
-            #     # calculating F1 scores
-            #     y_true = y_all.numpy()
-            #     train_acc = (
-            #         f1_score(
-            #             y_true,#[self.split_masks["edge_train"]],
-            #             pred,#[self.split_masks["edge_train"]],
-            #             average="micro",
-            #         )
-            #         if pred.sum() > 0#[self.split_masks["edge_train"]].sum() > 0
-            #         else 0
-            #     )
-            #
-            #     valid_acc = (
-            #         f1_score(
-            #             y_true,#[self.split_masks["edge_valid"]],
-            #             pred,#[self.split_masks["edge_valid"]],
-            #             average="micro",
-            #         )
-            #         if pred.sum() > 0#[self.split_masks["edge_valid"]].sum() > 0
-            #         else 0
-            #     )
-            #
-            #     test_acc = (
-            #         f1_score(
-            #             y_true,
-            #             pred,
-            #             average="micro",
-            #         )
-            #         if pred.sum() > 0
-            #         else 0
-            #     )
         train_roc = 0
         all_roc = 0
         train_f1 = 0

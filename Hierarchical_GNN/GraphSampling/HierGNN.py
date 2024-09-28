@@ -1046,8 +1046,20 @@ class HierSGNN(torch.nn.Module):
                  # in_channels,
                  # hidden_channels,
                  # out_channels
+                 experiment=None,
+                 exp_input_dict=None
                  ):
         super().__init__()
+
+        self.experiment = experiment
+        self.exp_input_dict = exp_input_dict
+        if experiment is not None:
+            if experiment == "seq_init_ablation":
+                self.init_type = "seq_init"
+                self.experimmental_results = []
+            if experiment == "fixed_init_ablation":
+                self.init_type = "fixed_init"
+                self.experimmental_results = []
 
         # train_idx = split_masks["train"]
         # train_idx = split_masks["train"]
@@ -1057,6 +1069,7 @@ class HierSGNN(torch.nn.Module):
         self.type_model = args.type_model
         self.num_layers = args.num_layers
         self.dim_hidden = args.dim_hidden
+
         self.num_classes = out_dim#args.num_classes
         self.num_feats = data.x.shape[-1]#args.num_feats
         self.batch_size = args.batch_size
@@ -1073,6 +1086,8 @@ class HierSGNN(torch.nn.Module):
 
         heterophily_num_class = 2
         self.num_classes = out_dim#args.num_classes
+        self.multi_label = True if self.num_classes > 1 else False
+
         self.out_dim = out_dim
         self.num_targets = self.out_dim
         self.cat = 1
@@ -1410,7 +1425,8 @@ class HierSGNN(torch.nn.Module):
 
         data = self.graphs[self.graph_level]  # input_dict["train_data"]
         # data = data.to(device)
-
+        if self.experiment:
+            og_data = data.x.clone()
         # Compute the degree of each node
         if epoch == 0:
             max_degree, avg_degree, degrees = node_degree_statistics(data)
@@ -1602,6 +1618,10 @@ class HierSGNN(torch.nn.Module):
             pout(("Moving up graph level hierarchy for successive training"))
             pout(("Epoch ", epoch, " of ", total_epochs ))
             pout(("%%%%%%"))
+            pout(("RESULTS SUBGRAPH: ", self.graph_level))
+            pout((f"Loss: {total_loss / total_training_points}",
+                  f"approx_acc: {approx_acc}",
+                  "(total_val_loss, val_acc, val_roc)", f"({total_val_loss}", f"{val_acc}", f"{val_roc})"))
             self.graph_level += 1
             # Save embeddings for each node in the last graph
             subgraph_embeddings = {}
@@ -1611,9 +1631,22 @@ class HierSGNN(torch.nn.Module):
                     # n_id = batch.n_id
                     for nid in n_id.detach().cpu().numpy():
                         n_embedding = data.x[nid].detach().cpu().numpy()
+
+                        if self.experiment == "fixed_init_ablation":
+                            n_embedding = og_data.x[nid].detach().cpu().numpy()
+
                         subgraph_embeddings[nid] = n_embedding
                     # for i, node in zip(n_id.detach().cpu().numpy(), data.x[n_id].detach().cpu().numpy()):#zip(e_id.detach().cpu().numpy()
                     #     subgraph_embeddings[i] = node#node] = out[i]#.detach().cpu().numpy()
+                if self.experiment is not None:
+                    pout(("RUNNING TEST ON SUBLEVEL GRAPH FOR EXPERIMENT:"))
+                    pout((self.experiment))
+                    pout(("Graph Level:"))
+                    pout((self.graph_level-1))
+                    test_acc, test_f1, test_roc = self.run_experiment(self.exp_input_dict)
+                    pout(("Exp Test Accuracy: ",test_acc,
+                          "Exp Test F1: ", test_f1,
+                          "Exp Test AUC:", test_roc))
 
             self.graphs[self.graph_level] = self.initialize_from_subgraph(
                 subgraph_embeddings,
@@ -1896,6 +1929,47 @@ class HierSGNN(torch.nn.Module):
     #                 num_nodes=graph.number_of_nodes())
     #     return data
     #
+
+    @torch.no_grad()
+    def run_experiment(self, input_dict=None):
+        # pout(("In test net", "multilabel?", self.multi_label))
+        self.eval()
+        test_input_dict = input_dict
+
+        test_out, loss, y_test = self.inference(test_input_dict)
+
+        if self.multi_label == True:
+            test_thresh, test_acc = optimal_metric_threshold(test_out,
+                                                             y_test,
+                                                             metric=metrics.accuracy_score,
+                                                             metric_name='accuracy',
+                                                             num_targets=self.num_classes)
+
+            test_f1 = 0
+            test_roc = 0
+        if self.multi_label == False:
+            y_true_test = y_test.cpu().numpy()
+            y_score_test = test_out.cpu().numpy()
+            test_thresh, test_acc = optimal_metric_threshold(y_score_test,
+                                                             y_true_test,
+                                                             metric=accuracy_score,
+                                                             metric_name='accuracy')
+            test_thresh, test_f1 = optimal_metric_threshold(y_score_test,
+                                                            y_true_test,
+                                                            metric=metrics.f1_score)
+            all_thresh, test_roc = optimal_metric_threshold(y_score_test,
+                                                            y_true_test,
+                                                            metric=metrics.roc_auc_score,
+                                                            metric_name='ROC AUC')
+        train_roc = 0
+        all_roc = 0
+        train_f1 = 0
+        all_f1 = 0
+        all_out, loss, y_all = 0, 0, 0
+        all_acc = 0
+        train_acc = 0
+
+        return  test_acc, test_f1, test_roc
 def check_node_maps( n_i, n_j, sub_to_super_i, sub_to_super_j):
     pout(("similarity of global maps"))
     n_i_super = []
@@ -3011,3 +3085,4 @@ class UniformativeDummyEmbedding(nn.Module):
     @property
     def dim(self):
         return self.ones.size(1)
+
