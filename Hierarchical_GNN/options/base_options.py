@@ -62,7 +62,15 @@ class BaseOptions:
             ],
             default='minesweeper',
         )
-
+        parser.add_argument(
+            "--experiment",
+            type=str,
+            required=False,
+            choices=[
+                "seq_init_ablation",
+                "fixed_init_ablation"
+            ]
+        )
         parser.add_argument(
             "--type_model",
             type=str,
