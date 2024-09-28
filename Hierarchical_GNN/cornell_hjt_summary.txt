@@ -1,0 +1,4519 @@
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 1041847125, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.6545
+Best test: 30.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3076.9231 0.0000 
+final mean and std of test acc:  3076.9231 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 887892470, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.4438
+Best test: 32.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3222.2222 0.0000 
+final mean and std of test acc:  3222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2533992312, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.5818
+Best test: 17.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1777.7778 0.0000 
+final mean and std of test acc:  1777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.7.log
+Seed: 543450049, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.5906
+Best test: 34.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3444.4444 0.0000 
+final mean and std of test acc:  3444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 1480147745, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.6071
+Best test: 45.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4500.0000 0.0000 
+final mean and std of test acc:  4500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 1618126416, Epoch: 139, Loss: 0.0086, Approx Train Acc: 0.7988
+Best test: 28.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2857.1429 0.0000 
+final mean and std of test acc:  2857.1429 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (7x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 4179320743, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.6882
+Best test: 37.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3701.6575 0.0000 
+final mean and std of test acc:  3701.6575 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 165340328, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6890
+Best test: 28.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2865.1685 0.0000 
+final mean and std of test acc:  2865.1685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 1208283996, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5000
+Best test: 22.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2290.5028 0.0000 
+final mean and std of test acc:  2290.5028 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 960961439, Epoch: 139, Loss: 0.0101, Approx Train Acc: 0.6446
+Best test: 23.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2303.3708 0.0000 
+final mean and std of test acc:  2303.3708 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 418801465, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5529
+Best test: 30.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3016.7598 0.0000 
+final mean and std of test acc:  3016.7598 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 2452026065, Epoch: 139, Loss: 0.0087, Approx Train Acc: 0.7169
+Best test: 26.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2640.4494 0.0000 
+final mean and std of test acc:  2640.4494 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 2600569975, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6023
+Best test: 26.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2622.9508 0.0000 
+final mean and std of test acc:  2622.9508 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 77903, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6098
+Best test: 25.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2555.5556 0.0000 
+final mean and std of test acc:  2555.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 3968610536, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6886
+Best test: 29.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2921.3483 0.0000 
+final mean and std of test acc:  2921.3483 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3444896920, Epoch: 139, Loss: 0.0115, Approx Train Acc: 0.5595
+Best test: 27.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2793.2961 0.0000 
+final mean and std of test acc:  2793.2961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.7.log
+Seed: 2478859800, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6836
+Best test: 21.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2178.7709 0.0000 
+final mean and std of test acc:  2178.7709 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 1756917763, Epoch: 139, Loss: 0.0183, Approx Train Acc: 0.5380
+Best test: 18.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1833.3333 0.0000 
+final mean and std of test acc:  1833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 56348750, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.5714
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 1215844711, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6071
+Best test: 39.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3956.0440 0.0000 
+final mean and std of test acc:  3956.0440 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.9.log
+Seed: 1962674787, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6294
+Best test: 36.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3646.4088 0.0000 
+final mean and std of test acc:  3646.4088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 2300985875, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.6994
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3235396159, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.5655
+Best test: 25.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2513.9665 0.0000 
+final mean and std of test acc:  2513.9665 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.8.log
+Seed: 2319435855, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.7470
+Best test: 50.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5056.1798 0.0000 
+final mean and std of test acc:  5056.1798 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 2261344829, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6545
+Best test: 48.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4804.4693 0.0000 
+final mean and std of test acc:  4804.4693 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.9.log
+Seed: 3458877975, Epoch: 139, Loss: 0.0179, Approx Train Acc: 0.5941
+Best test: 23.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2375.6906 0.0000 
+final mean and std of test acc:  2375.6906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2807589754, Epoch: 10, Loss: 0.5922, Approx Train Acc: 0.4426
+Seed: 2807589754, Epoch: 11, Loss: 0.5852, Approx Train Acc: 0.4973
+Seed: 2807589754, Epoch: 12, Loss: 0.5833, Approx Train Acc: 0.4536
+Seed: 2807589754, Epoch: 13, Loss: 0.5852, Approx Train Acc: 0.4426
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 898841353, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.7035
+Best test: 22.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2277.7778 0.0000 
+final mean and std of test acc:  2277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 2959222399, Epoch: 139, Loss: 0.0110, Approx Train Acc: 0.6864
+Best test: 21.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2197.8022 0.0000 
+final mean and std of test acc:  2197.8022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 3786670560, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.7866
+Best test: 23.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2372.8814 0.0000 
+final mean and std of test acc:  2372.8814 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3847764963, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.7278
+Best test: 21.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2166.6667 0.0000 
+final mean and std of test acc:  2166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 2340379316, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6625
+Best test: 37.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3707.8652 0.0000 
+final mean and std of test acc:  3707.8652 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 4272706731, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.7381
+Best test: 20.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2099.4475 0.0000 
+final mean and std of test acc:  2099.4475 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 810184874, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.6294
+Best test: 28.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2888.8889 0.0000 
+final mean and std of test acc:  2888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 1085247702, Epoch: 139, Loss: 0.0089, Approx Train Acc: 0.7574
+Best test: 31.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3149.1713 0.0000 
+final mean and std of test acc:  3149.1713 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 594613511, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.6412
+Best test: 34.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3463.6872 0.0000 
+final mean and std of test acc:  3463.6872 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 4118880223, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.7289
+Best test: 20.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2011.1732 0.0000 
+final mean and std of test acc:  2011.1732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 888169224, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.7083
+Best test: 40.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4088.3978 0.0000 
+final mean and std of test acc:  4088.3978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 1713409242, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.7229
+Best test: 28.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2865.1685 0.0000 
+final mean and std of test acc:  2865.1685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 532500603, Epoch: 139, Loss: 0.0123, Approx Train Acc: 0.6325
+Best test: 49.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.3757 0.0000 
+final mean and std of test acc:  4972.3757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 3734401208, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.5714
+Best test: 48.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4804.4693 0.0000 
+final mean and std of test acc:  4804.4693 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 878575443, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5569
+Best test: 17.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1758.2418 0.0000 
+final mean and std of test acc:  1758.2418 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.8.log
+Seed: 3262885392, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6395
+Best test: 38.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3879.7814 0.0000 
+final mean and std of test acc:  3879.7814 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 551599406, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.6566
+Best test: 22.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2277.7778 0.0000 
+final mean and std of test acc:  2277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2323500299, Epoch: 139, Loss: 0.0159, Approx Train Acc: 0.4911
+Best test: 28.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2849.1620 0.0000 
+final mean and std of test acc:  2849.1620 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 3335637030, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.4759
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 2535991102, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5610
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 4269334974, Epoch: 139, Loss: 0.0120, Approx Train Acc: 0.7151
+Best test: 15.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1538.4615 0.0000 
+final mean and std of test acc:  1538.4615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 1911566960, Epoch: 139, Loss: 0.0250, Approx Train Acc: 0.4970
+Best test: 21.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2111.1111 0.0000 
+final mean and std of test acc:  2111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 2722115640, Epoch: 139, Loss: 0.0093, Approx Train Acc: 0.7500
+Best test: 32.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3202.2472 0.0000 
+final mean and std of test acc:  3202.2472 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 4001699283, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.6647
+Best test: 22.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2265.1934 0.0000 
+final mean and std of test acc:  2265.1934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3350591366, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.6897
+Best test: 33.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3370.1657 0.0000 
+final mean and std of test acc:  3370.1657 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 1116646958, Epoch: 139, Loss: 0.0099, Approx Train Acc: 0.6509
+Best test: 35.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3500.0000 0.0000 
+final mean and std of test acc:  3500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 1385356973, Epoch: 83, Loss: 0.0256, Approx Train Acc: 0.4731
+Best test: 14.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1436.4641 0.0000 
+final mean and std of test acc:  1436.4641 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 1552778442, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.6424
+Best test: 45.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4500.0000 0.0000 
+final mean and std of test acc:  4500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.8.log
+Seed: 80915652, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6407
+Best test: 34.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3407.8212 0.0000 
+final mean and std of test acc:  3407.8212 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 3149340970, Epoch: 139, Loss: 0.0163, Approx Train Acc: 0.5357
+Best test: 31.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3131.8681 0.0000 
+final mean and std of test acc:  3131.8681 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 3252781827, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6257
+Best test: 41.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4157.3034 0.0000 
+final mean and std of test acc:  4157.3034 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 1474720462, Epoch: 139, Loss: 0.0099, Approx Train Acc: 0.7756
+Best test: 15.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1581.9209 0.0000 
+final mean and std of test acc:  1581.9209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 2505956502, Epoch: 139, Loss: 0.0109, Approx Train Acc: 0.6412
+Best test: 19.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1988.9503 0.0000 
+final mean and std of test acc:  1988.9503 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 489684188, Epoch: 83, Loss: 0.0261, Approx Train Acc: 0.4914
+Best test: 19.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1933.7017 0.0000 
+final mean and std of test acc:  1933.7017 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 30177782, Epoch: 139, Loss: 0.0115, Approx Train Acc: 0.5617
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.4444 0.0000 
+final mean and std of test acc:  3944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2971305904, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6786
+Best test: 31.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3149.1713 0.0000 
+final mean and std of test acc:  3149.1713 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1331364661, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.6587
+Best test: 26.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2670.4545 0.0000 
+final mean and std of test acc:  2670.4545 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3077930307, Epoch: 139, Loss: 0.0115, Approx Train Acc: 0.5549
+Best test: 24.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2485.8757 0.0000 
+final mean and std of test acc:  2485.8757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 14612542, Epoch: 139, Loss: 0.0116, Approx Train Acc: 0.6463
+Best test: 18.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1818.1818 0.0000 
+final mean and std of test acc:  1818.1818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 2860827107, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.6108
+Best test: 25.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2596.6851 0.0000 
+final mean and std of test acc:  2596.6851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 2074789404, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.6084
+Best test: 42.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4237.2881 0.0000 
+final mean and std of test acc:  4237.2881 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 2166336171, Epoch: 139, Loss: 0.0110, Approx Train Acc: 0.6928
+Best test: 21.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2166.6667 0.0000 
+final mean and std of test acc:  2166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 1237231096, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5915
+Best test: 25.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2569.8324 0.0000 
+final mean and std of test acc:  2569.8324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 2672142249, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.7107
+Best test: 27.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2711.8644 0.0000 
+final mean and std of test acc:  2711.8644 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 1410564860, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6648
+Best test: 30.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3038.6740 0.0000 
+final mean and std of test acc:  3038.6740 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 3316918766, Epoch: 139, Loss: 0.0104, Approx Train Acc: 0.6095
+Best test: 43.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4357.5419 0.0000 
+final mean and std of test acc:  4357.5419 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 1143020581, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6867
+Best test: 25.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2541.4365 0.0000 
+final mean and std of test acc:  2541.4365 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 4162544700, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6250
+Best test: 32.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3295.4545 0.0000 
+final mean and std of test acc:  3295.4545 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 742205227, Epoch: 139, Loss: 0.0113, Approx Train Acc: 0.6228
+Best test: 30.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3033.7079 0.0000 
+final mean and std of test acc:  3033.7079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 626662837, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.6264
+Best test: 38.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3833.3333 0.0000 
+final mean and std of test acc:  3833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 104015524, Epoch: 139, Loss: 0.0182, Approx Train Acc: 0.6013
+Best test: 32.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3218.3908 0.0000 
+final mean and std of test acc:  3218.3908 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 1524206058, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6951
+Best test: 17.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1722.2222 0.0000 
+final mean and std of test acc:  1722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1779548656, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6848
+Best test: 20.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2022.4719 0.0000 
+final mean and std of test acc:  2022.4719 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 2580199761, Epoch: 139, Loss: 0.0130, Approx Train Acc: 0.6000
+Best test: 18.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1833.3333 0.0000 
+final mean and std of test acc:  1833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.7.log
+Seed: 3710447759, Epoch: 139, Loss: 0.0189, Approx Train Acc: 0.5644
+Best test: 32.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3296.0894 0.0000 
+final mean and std of test acc:  3296.0894 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 3673635383, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6790
+Best test: 43.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4325.8427 0.0000 
+final mean and std of test acc:  4325.8427 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 1241964442, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5152
+Best test: 33.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3370.7865 0.0000 
+final mean and std of test acc:  3370.7865 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 517959734, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5928
+Best test: 27.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2777.7778 0.0000 
+final mean and std of test acc:  2777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2522477320, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.5562
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 4260872640, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.7530
+Best test: 40.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4078.2123 0.0000 
+final mean and std of test acc:  4078.2123 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 3266019953, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7530
+Best test: 35.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3555.5556 0.0000 
+final mean and std of test acc:  3555.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2967827286, Epoch: 139, Loss: 0.0124, Approx Train Acc: 0.5896
+Best test: 29.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2967.0330 0.0000 
+final mean and std of test acc:  2967.0330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 3188078014, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6726
+Best test: 17.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1777.7778 0.0000 
+final mean and std of test acc:  1777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2806658226, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6667
+Best test: 13.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1333.3333 0.0000 
+final mean and std of test acc:  1333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3059111914, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6687
+Best test: 25.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2555.5556 0.0000 
+final mean and std of test acc:  2555.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 4117985513, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.5238
+Best test: 44.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4475.1381 0.0000 
+final mean and std of test acc:  4475.1381 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 4280710744, Epoch: 83, Loss: 0.0293, Approx Train Acc: 0.4615
+Best test: 14.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1483.5165 0.0000 
+final mean and std of test acc:  1483.5165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 2715194586, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.6303
+Best test: 27.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2793.2961 0.0000 
+final mean and std of test acc:  2793.2961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 1562669965, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6647
+Best test: 41.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4157.3034 0.0000 
+final mean and std of test acc:  4157.3034 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 2051868584, Epoch: 139, Loss: 0.0292, Approx Train Acc: 0.4634
+Best test: 40.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4033.1492 0.0000 
+final mean and std of test acc:  4033.1492 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 189450254, Epoch: 139, Loss: 0.0244, Approx Train Acc: 0.4850
+Best test: 38.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3820.2247 0.0000 
+final mean and std of test acc:  3820.2247 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 1361383979, Epoch: 139, Loss: 0.0113, Approx Train Acc: 0.6587
+Best test: 18.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1833.3333 0.0000 
+final mean and std of test acc:  1833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 843704102, Epoch: 139, Loss: 0.0126, Approx Train Acc: 0.6488
+Best test: 31.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3166.6667 0.0000 
+final mean and std of test acc:  3166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.9.log
+Seed: 209414349, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.6923
+Best test: 18.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1813.1868 0.0000 
+final mean and std of test acc:  1813.1868 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.8,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2142, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 3383439590, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.6185
+Best test: 25.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2582.4176 0.0000 
+final mean and std of test acc:  2582.4176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 924562527, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.6550
+Best test: 44.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4419.8895 0.0000 
+final mean and std of test acc:  4419.8895 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 321321643, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.5417
+Best test: 30.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3093.9227 0.0000 
+final mean and std of test acc:  3093.9227 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1090892582, Epoch: 83, Loss: 0.0281, Approx Train Acc: 0.4142
+Best test: 44.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4438.2022 0.0000 
+final mean and std of test acc:  4438.2022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1669548039, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.5562
+Best test: 38.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3812.1547 0.0000 
+final mean and std of test acc:  3812.1547 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.7.log
+Seed: 2243437027, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6707
+Best test: 33.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3314.9171 0.0000 
+final mean and std of test acc:  3314.9171 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.7.log
+Seed: 1780523596, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5879
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.4444 0.0000 
+final mean and std of test acc:  3944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1946601671, Epoch: 83, Loss: 0.0299, Approx Train Acc: 0.4286
+Best test: 16.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1685.3933 0.0000 
+final mean and std of test acc:  1685.3933 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2318422749, Epoch: 83, Loss: 0.0301, Approx Train Acc: 0.4817
+Best test: 43.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4309.3923 0.0000 
+final mean and std of test acc:  4309.3923 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2969621466, Epoch: 83, Loss: 0.0363, Approx Train Acc: 0.5000
+Best test: 53.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5333.3333 0.0000 
+final mean and std of test acc:  5333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1736502299, Epoch: 139, Loss: 0.0231, Approx Train Acc: 0.5181
+Best test: 24.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2430.9392 0.0000 
+final mean and std of test acc:  2430.9392 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2154912722, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.5706
+Best test: 16.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1657.4586 0.0000 
+final mean and std of test acc:  1657.4586 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 2885488981, Epoch: 139, Loss: 0.0130, Approx Train Acc: 0.5575
+Best test: 34.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3425.4144 0.0000 
+final mean and std of test acc:  3425.4144 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 1144062935, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5091
+Best test: 37.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3777.7778 0.0000 
+final mean and std of test acc:  3777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2250806708, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6747
+Best test: 25.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2542.3729 0.0000 
+final mean and std of test acc:  2542.3729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 260132058, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6867
+Best test: 35.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3579.5455 0.0000 
+final mean and std of test acc:  3579.5455 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 3574722683, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6347
+Best test: 20.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2011.1732 0.0000 
+final mean and std of test acc:  2011.1732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2964556753, Epoch: 139, Loss: 0.0177, Approx Train Acc: 0.5583
+Best test: 39.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3954.8023 0.0000 
+final mean and std of test acc:  3954.8023 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 741010735, Epoch: 83, Loss: 0.0471, Approx Train Acc: 0.4371
+Best test: 11.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1104.9724 0.0000 
+final mean and std of test acc:  1104.9724 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (52x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 4217817328, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.6207
+Best test: 49.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4945.0549 0.0000 
+final mean and std of test acc:  4945.0549 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 1040071900, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.5833
+Best test: 22.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2209.9448 0.0000 
+final mean and std of test acc:  2209.9448 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 452693746, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5588
+Best test: 48.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4802.2599 0.0000 
+final mean and std of test acc:  4802.2599 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2048962646, Epoch: 139, Loss: 0.0099, Approx Train Acc: 0.7186
+Best test: 35.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3559.3220 0.0000 
+final mean and std of test acc:  3559.3220 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 1502089098, Epoch: 139, Loss: 0.0215, Approx Train Acc: 0.4647
+Best test: 23.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2388.8889 0.0000 
+final mean and std of test acc:  2388.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 3198919986, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5780
+Best test: 16.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1611.1111 0.0000 
+final mean and std of test acc:  1611.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2149493715, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.6369
+Best test: 31.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3111.1111 0.0000 
+final mean and std of test acc:  3111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 3977241355, Epoch: 139, Loss: 0.0124, Approx Train Acc: 0.8000
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 3926124369, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.7135
+Best test: 25.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2582.4176 0.0000 
+final mean and std of test acc:  2582.4176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2632164539, Epoch: 139, Loss: 0.0181, Approx Train Acc: 0.5868
+Best test: 39.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3966.4804 0.0000 
+final mean and std of test acc:  3966.4804 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 1098719216, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.5152
+Best test: 29.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2983.4254 0.0000 
+final mean and std of test acc:  2983.4254 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 720052157, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6766
+Best test: 38.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3854.7486 0.0000 
+final mean and std of test acc:  3854.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 270036684, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6127
+Best test: 34.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3461.5385 0.0000 
+final mean and std of test acc:  3461.5385 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 3935861109, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6627
+Best test: 40.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4088.3978 0.0000 
+final mean and std of test acc:  4088.3978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 709956813, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.7321
+Best test: 31.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3111.1111 0.0000 
+final mean and std of test acc:  3111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3731847665, Epoch: 139, Loss: 0.0169, Approx Train Acc: 0.4551
+Best test: 31.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3149.1713 0.0000 
+final mean and std of test acc:  3149.1713 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 1743293019, Epoch: 139, Loss: 0.0110, Approx Train Acc: 0.6205
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 2064091890, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.5928
+Best test: 25.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2541.4365 0.0000 
+final mean and std of test acc:  2541.4365 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1742635226, Epoch: 139, Loss: 0.0177, Approx Train Acc: 0.5427
+Best test: 45.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4525.1397 0.0000 
+final mean and std of test acc:  4525.1397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 3742767630, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.7083
+Best test: 43.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4375.0000 0.0000 
+final mean and std of test acc:  4375.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 677284470, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.6265
+Best test: 20.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2067.0391 0.0000 
+final mean and std of test acc:  2067.0391 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 1658202241, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6453
+Best test: 32.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3259.6685 0.0000 
+final mean and std of test acc:  3259.6685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 2454027347, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6457
+Best test: 31.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3111.1111 0.0000 
+final mean and std of test acc:  3111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 164732053, Epoch: 139, Loss: 0.0089, Approx Train Acc: 0.7831
+Best test: 20.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2022.4719 0.0000 
+final mean and std of test acc:  2022.4719 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1045382139, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.5210
+Best test: 27.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2737.4302 0.0000 
+final mean and std of test acc:  2737.4302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 2914649547, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6886
+Best test: 39.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3977.9006 0.0000 
+final mean and std of test acc:  3977.9006 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 3792376633, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6012
+Best test: 29.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2944.4444 0.0000 
+final mean and std of test acc:  2944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 2507400387, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.5188
+Best test: 28.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2897.7273 0.0000 
+final mean and std of test acc:  2897.7273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 1701255034, Epoch: 139, Loss: 0.0161, Approx Train Acc: 0.5060
+Best test: 35.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3575.4190 0.0000 
+final mean and std of test acc:  3575.4190 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 4151384156, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.5030
+Best test: 36.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3631.2849 0.0000 
+final mean and std of test acc:  3631.2849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3182841097, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6506
+Best test: 19.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1933.7017 0.0000 
+final mean and std of test acc:  1933.7017 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3112628245, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6609
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1665303194, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6667
+Best test: 20.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2055.5556 0.0000 
+final mean and std of test acc:  2055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 4259287578, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.7059
+Best test: 43.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4316.9399 0.0000 
+final mean and std of test acc:  4316.9399 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2926137622, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.5276
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.4444 0.0000 
+final mean and std of test acc:  3944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 1068174065, Epoch: 139, Loss: 0.0122, Approx Train Acc: 0.7176
+Best test: 34.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3497.2678 0.0000 
+final mean and std of test acc:  3497.2678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 111642940, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.6407
+Best test: 31.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3107.3446 0.0000 
+final mean and std of test acc:  3107.3446 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 2465663585, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.7200
+Best test: 10.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1098.9011 0.0000 
+final mean and std of test acc:  1098.9011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 838269035, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.4852
+Best test: 36.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3681.3187 0.0000 
+final mean and std of test acc:  3681.3187 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2912945443, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.5690
+Best test: 31.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3149.1713 0.0000 
+final mean and std of test acc:  3149.1713 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (9x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 2918428580, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.4970
+Best test: 34.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3407.8212 0.0000 
+final mean and std of test acc:  3407.8212 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 878790828, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6826
+Best test: 26.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2681.5642 0.0000 
+final mean and std of test acc:  2681.5642 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 214999178, Epoch: 139, Loss: 0.0190, Approx Train Acc: 0.5588
+Best test: 25.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2569.8324 0.0000 
+final mean and std of test acc:  2569.8324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp8_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+    from .HierGNN import HierSGNN
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2322
+    with autocast():
+IndentationError: unexpected indent
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 1523891, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6545
+Best test: 30.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3011.3636 0.0000 
+final mean and std of test acc:  3011.3636 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 2755709987, Epoch: 139, Loss: 0.0094, Approx Train Acc: 0.7751
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 4073655512, Epoch: 139, Loss: 0.0111, Approx Train Acc: 0.5542
+Best test: 30.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3033.7079 0.0000 
+final mean and std of test acc:  3033.7079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4230083596, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6386
+Best test: 28.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2833.3333 0.0000 
+final mean and std of test acc:  2833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 1415412428, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.7630
+Best test: 43.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4357.5419 0.0000 
+final mean and std of test acc:  4357.5419 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.8.log
+Seed: 2782594971, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6550
+Best test: 27.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2762.4309 0.0000 
+final mean and std of test acc:  2762.4309 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3924007533, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7353
+Best test: 23.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2333.3333 0.0000 
+final mean and std of test acc:  2333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 176407339, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.5749
+Best test: 31.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3166.6667 0.0000 
+final mean and std of test acc:  3166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3391503812, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.6061
+Best test: 34.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3483.1461 0.0000 
+final mean and std of test acc:  3483.1461 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 3564457282, Epoch: 139, Loss: 0.0178, Approx Train Acc: 0.6000
+Best test: 37.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3756.9061 0.0000 
+final mean and std of test acc:  3756.9061 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.8.log
+Seed: 2128756686, Epoch: 139, Loss: 0.0159, Approx Train Acc: 0.5357
+Best test: 30.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3072.6257 0.0000 
+final mean and std of test acc:  3072.6257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.9.log
+Seed: 224620452, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6364
+Best test: 44.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4469.2737 0.0000 
+final mean and std of test acc:  4469.2737 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 3539744417, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.5091
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.9.log
+Seed: 2058762340, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6235
+Best test: 30.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3055.5556 0.0000 
+final mean and std of test acc:  3055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 546274504, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6182
+Best test: 27.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2711.8644 0.0000 
+final mean and std of test acc:  2711.8644 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 707686390, Epoch: 83, Loss: 0.0266, Approx Train Acc: 0.4643
+Best test: 21.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2142.8571 0.0000 
+final mean and std of test acc:  2142.8571 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 180282152, Epoch: 139, Loss: 0.0101, Approx Train Acc: 0.7381
+Best test: 17.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1722.2222 0.0000 
+final mean and std of test acc:  1722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 3024922664, Epoch: 139, Loss: 0.0184, Approx Train Acc: 0.5353
+Best test: 36.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3611.1111 0.0000 
+final mean and std of test acc:  3611.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 156179528, Epoch: 139, Loss: 0.0159, Approx Train Acc: 0.5412
+Best test: 46.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4615.3846 0.0000 
+final mean and std of test acc:  4615.3846 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 195800960, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.6882
+Best test: 43.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4301.6760 0.0000 
+final mean and std of test acc:  4301.6760 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 3284328133, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.7037
+Best test: 31.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3128.4916 0.0000 
+final mean and std of test acc:  3128.4916 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 525410255, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5549
+Best test: 28.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2808.9888 0.0000 
+final mean and std of test acc:  2808.9888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 843416133, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.4854
+Best test: 36.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3666.6667 0.0000 
+final mean and std of test acc:  3666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (13x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1656239055, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5536
+Best test: 38.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3812.1547 0.0000 
+final mean and std of test acc:  3812.1547 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 2393517275, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6667
+Best test: 33.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3351.9553 0.0000 
+final mean and std of test acc:  3351.9553 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 629289275, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.5644
+Best test: 24.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2415.7303 0.0000 
+final mean and std of test acc:  2415.7303 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 1520568032, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6491
+Best test: 43.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4333.3333 0.0000 
+final mean and std of test acc:  4333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 1760568629, Epoch: 139, Loss: 0.0159, Approx Train Acc: 0.5333
+Best test: 28.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2817.6796 0.0000 
+final mean and std of test acc:  2817.6796 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.7.log
+Seed: 1796991656, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5089
+Best test: 17.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1712.7072 0.0000 
+final mean and std of test acc:  1712.7072 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2532728710, Epoch: 139, Loss: 0.0362, Approx Train Acc: 0.4132
+Best test: 22.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2209.9448 0.0000 
+final mean and std of test acc:  2209.9448 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.9.log
+Seed: 663466571, Epoch: 139, Loss: 0.0178, Approx Train Acc: 0.4702
+Best test: 30.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3038.6740 0.0000 
+final mean and std of test acc:  3038.6740 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (8x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3466754201, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.4824
+Best test: 14.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1452.5140 0.0000 
+final mean and std of test acc:  1452.5140 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3805387468, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6871
+Best test: 32.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3240.2235 0.0000 
+final mean and std of test acc:  3240.2235 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.8.log
+Seed: 623209607, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7273
+Best test: 37.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3728.8136 0.0000 
+final mean and std of test acc:  3728.8136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 3533659381, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.6763
+Best test: 25.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2500.0000 0.0000 
+final mean and std of test acc:  2500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 2358933871, Epoch: 139, Loss: 0.0093, Approx Train Acc: 0.7588
+Best test: 28.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2888.8889 0.0000 
+final mean and std of test acc:  2888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 784064267, Epoch: 139, Loss: 0.0126, Approx Train Acc: 0.5030
+Best test: 27.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2784.0909 0.0000 
+final mean and std of test acc:  2784.0909 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3126006988, Epoch: 139, Loss: 0.0177, Approx Train Acc: 0.6108
+Best test: 19.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1923.0769 0.0000 
+final mean and std of test acc:  1923.0769 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3562849837, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.7378
+Best test: 27.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2737.4302 0.0000 
+final mean and std of test acc:  2737.4302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 811167795, Epoch: 139, Loss: 0.0177, Approx Train Acc: 0.5896
+Best test: 25.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2500.0000 0.0000 
+final mean and std of test acc:  2500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 2638218339, Epoch: 139, Loss: 0.0099, Approx Train Acc: 0.7619
+Best test: 18.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1853.9326 0.0000 
+final mean and std of test acc:  1853.9326 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3614892883, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.6748
+Best test: 28.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2881.3559 0.0000 
+final mean and std of test acc:  2881.3559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 1262368344, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.7321
+Best test: 35.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3502.8249 0.0000 
+final mean and std of test acc:  3502.8249 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 1841697775, Epoch: 83, Loss: 0.0310, Approx Train Acc: 0.4671
+Best test: 49.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4944.4444 0.0000 
+final mean and std of test acc:  4944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.8.log
+Seed: 30724637, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.7006
+Best test: 18.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1843.5754 0.0000 
+final mean and std of test acc:  1843.5754 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2306939842, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.6747
+Best test: 28.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2857.1429 0.0000 
+final mean and std of test acc:  2857.1429 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3716734614, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.5060
+Best test: 48.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4888.8889 0.0000 
+final mean and std of test acc:  4888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (46x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 911177720, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.7019
+Best test: 26.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2640.4494 0.0000 
+final mean and std of test acc:  2640.4494 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 813896193, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.6369
+Best test: 19.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1944.4444 0.0000 
+final mean and std of test acc:  1944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 2584736182, Epoch: 139, Loss: 0.0198, Approx Train Acc: 0.5494
+Best test: 20.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2099.4475 0.0000 
+final mean and std of test acc:  2099.4475 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.7.log
+Seed: 972209401, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.7456
+Best test: 17.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1722.2222 0.0000 
+final mean and std of test acc:  1722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 4177869623, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.6082
+Best test: 28.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2833.3333 0.0000 
+final mean and std of test acc:  2833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3035218649, Epoch: 139, Loss: 0.0123, Approx Train Acc: 0.5325
+Best test: 26.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2681.5642 0.0000 
+final mean and std of test acc:  2681.5642 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 3833874021, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.6258
+Best test: 28.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2872.9282 0.0000 
+final mean and std of test acc:  2872.9282 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 1600210693, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6098
+Best test: 20.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2045.4545 0.0000 
+final mean and std of test acc:  2045.4545 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 2150673294, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.4731
+Best test: 32.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3240.2235 0.0000 
+final mean and std of test acc:  3240.2235 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 885742388, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.6905
+Best test: 25.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2582.4176 0.0000 
+final mean and std of test acc:  2582.4176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 2693647864, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.7135
+Best test: 35.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3519.5531 0.0000 
+final mean and std of test acc:  3519.5531 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 1928759973, Epoch: 139, Loss: 0.0102, Approx Train Acc: 0.7024
+Best test: 25.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2569.8324 0.0000 
+final mean and std of test acc:  2569.8324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 4228866301, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.6000
+Best test: 45.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4530.3867 0.0000 
+final mean and std of test acc:  4530.3867 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 2985137136, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6491
+Best test: 16.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1657.4586 0.0000 
+final mean and std of test acc:  1657.4586 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3414207091, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5444
+Best test: 38.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3812.1547 0.0000 
+final mean and std of test acc:  3812.1547 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3291318267, Epoch: 139, Loss: 0.0222, Approx Train Acc: 0.4561
+Best test: 32.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3241.7582 0.0000 
+final mean and std of test acc:  3241.7582 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 359344392, Epoch: 139, Loss: 0.0104, Approx Train Acc: 0.7118
+Best test: 16.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1620.1117 0.0000 
+final mean and std of test acc:  1620.1117 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 1718212245, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.5833
+Best test: 29.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2967.0330 0.0000 
+final mean and std of test acc:  2967.0330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 3392886252, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.7299
+Best test: 26.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2666.6667 0.0000 
+final mean and std of test acc:  2666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 2344459451, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.6706
+Best test: 18.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1888.8889 0.0000 
+final mean and std of test acc:  1888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 1272505562, Epoch: 139, Loss: 0.0123, Approx Train Acc: 0.6707
+Best test: 24.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2415.7303 0.0000 
+final mean and std of test acc:  2415.7303 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 3203021764, Epoch: 139, Loss: 0.0097, Approx Train Acc: 0.7321
+Best test: 16.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1694.9153 0.0000 
+final mean and std of test acc:  1694.9153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 936055904, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6977
+Best test: 20.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2044.1989 0.0000 
+final mean and std of test acc:  2044.1989 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 241518564, Epoch: 139, Loss: 0.0163, Approx Train Acc: 0.6442
+Best test: 33.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3314.2857 0.0000 
+final mean and std of test acc:  3314.2857 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1943029742, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6213
+Best test: 25.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2596.6851 0.0000 
+final mean and std of test acc:  2596.6851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 112899794, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6964
+Best test: 16.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1675.9777 0.0000 
+final mean and std of test acc:  1675.9777 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 2621405490, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5706
+Best test: 25.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2569.8324 0.0000 
+final mean and std of test acc:  2569.8324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 2386493662, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5549
+Best test: 27.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2722.2222 0.0000 
+final mean and std of test acc:  2722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 1727969788, Epoch: 139, Loss: 0.0193, Approx Train Acc: 0.5366
+Best test: 31.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3125.0000 0.0000 
+final mean and std of test acc:  3125.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (16x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 975747562, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.6061
+Best test: 40.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4044.9438 0.0000 
+final mean and std of test acc:  4044.9438 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 3478097032, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.7605
+Best test: 17.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1787.7095 0.0000 
+final mean and std of test acc:  1787.7095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 1271568368, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6860
+Best test: 46.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4696.1326 0.0000 
+final mean and std of test acc:  4696.1326 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 2713550378, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6287
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 4288231538, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.7470
+Best test: 20.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2011.1732 0.0000 
+final mean and std of test acc:  2011.1732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 2638915892, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.5824
+Best test: 35.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3555.5556 0.0000 
+final mean and std of test acc:  3555.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 10753397, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.6140
+Best test: 25.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2541.4365 0.0000 
+final mean and std of test acc:  2541.4365 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 2375588240, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.7399
+Best test: 20.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2055.5556 0.0000 
+final mean and std of test acc:  2055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 3989219539, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6867
+Best test: 23.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2359.5506 0.0000 
+final mean and std of test acc:  2359.5506 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (58x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 2001700560, Epoch: 83, Loss: 0.0302, Approx Train Acc: 0.4545
+Best test: 45.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4545.4545 0.0000 
+final mean and std of test acc:  4545.4545 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.7.log
+Seed: 3118814747, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6503
+Best test: 24.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2458.1006 0.0000 
+final mean and std of test acc:  2458.1006 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 3385496075, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6886
+Best test: 24.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2485.8757 0.0000 
+final mean and std of test acc:  2485.8757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 3864823231, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.4821
+Best test: 22.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2252.7473 0.0000 
+final mean and std of test acc:  2252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1564007418, Epoch: 83, Loss: 0.0270, Approx Train Acc: 0.4545
+Best test: 17.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1777.7778 0.0000 
+final mean and std of test acc:  1777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 2346714614, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7160
+Best test: 22.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2209.9448 0.0000 
+final mean and std of test acc:  2209.9448 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 782869509, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.6242
+Best test: 44.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4494.3820 0.0000 
+final mean and std of test acc:  4494.3820 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 1746042802, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.5614
+Best test: 23.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2320.4420 0.0000 
+final mean and std of test acc:  2320.4420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 379795449, Epoch: 139, Loss: 0.0113, Approx Train Acc: 0.6687
+Best test: 31.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3149.1713 0.0000 
+final mean and std of test acc:  3149.1713 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2498243055, Epoch: 139, Loss: 0.0161, Approx Train Acc: 0.5337
+Best test: 46.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4662.9213 0.0000 
+final mean and std of test acc:  4662.9213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 3782457433, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6570
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 2473834301, Epoch: 139, Loss: 0.0148, Approx Train Acc: 0.7073
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (22x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 595345731, Epoch: 139, Loss: 0.0093, Approx Train Acc: 0.7561
+Best test: 20.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2011.1732 0.0000 
+final mean and std of test acc:  2011.1732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 2722136026, Epoch: 139, Loss: 0.0109, Approx Train Acc: 0.6788
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 209470689, Epoch: 139, Loss: 0.0175, Approx Train Acc: 0.4702
+Best test: 19.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1977.4011 0.0000 
+final mean and std of test acc:  1977.4011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.9.log
+Seed: 2348592078, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.6829
+Best test: 24.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2486.1878 0.0000 
+final mean and std of test acc:  2486.1878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 1378662630, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.6725
+Best test: 17.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1767.9558 0.0000 
+final mean and std of test acc:  1767.9558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 3344089846, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5625
+Best test: 12.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1242.9379 0.0000 
+final mean and std of test acc:  1242.9379 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 854044131, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.5269
+Best test: 22.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2277.7778 0.0000 
+final mean and std of test acc:  2277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 3754555561, Epoch: 139, Loss: 0.0101, Approx Train Acc: 0.7471
+Best test: 38.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3867.4033 0.0000 
+final mean and std of test acc:  3867.4033 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2594015830, Epoch: 139, Loss: 0.0173, Approx Train Acc: 0.5235
+Best test: 28.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2872.9282 0.0000 
+final mean and std of test acc:  2872.9282 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 2425217944, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6807
+Best test: 21.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2159.0909 0.0000 
+final mean and std of test acc:  2159.0909 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.5.log
+    *
+    *
+    *   %%%%% %%%% %%%% %%%% %%% %%%% 
+    *  
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2947570636, Epoch: 139, Loss: 0.0171, Approx Train Acc: 0.4479
+Best test: 27.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2737.4302 0.0000 
+final mean and std of test acc:  2737.4302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 271537588, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6506
+Best test: 24.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2444.4444 0.0000 
+final mean and std of test acc:  2444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 1631245346, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6647
+Best test: 21.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2111.1111 0.0000 
+final mean and std of test acc:  2111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.8.log
+Seed: 2392139545, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.5824
+Best test: 41.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4134.0782 0.0000 
+final mean and std of test acc:  4134.0782 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 2112609372, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6647
+Best test: 35.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3571.4286 0.0000 
+final mean and std of test acc:  3571.4286 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 1455166415, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6628
+Best test: 32.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3224.0437 0.0000 
+final mean and std of test acc:  3224.0437 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 1099712927, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.4940
+Best test: 36.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3646.4088 0.0000 
+final mean and std of test acc:  3646.4088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3458158206, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.5503
+Best test: 36.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3687.1508 0.0000 
+final mean and std of test acc:  3687.1508 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.8.log
+Seed: 1177808015, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5904
+Best test: 20.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2078.6517 0.0000 
+final mean and std of test acc:  2078.6517 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.8.log
+Seed: 2608657813, Epoch: 139, Loss: 0.0176, Approx Train Acc: 0.5058
+Best test: 24.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2458.1006 0.0000 
+final mean and std of test acc:  2458.1006 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 2321173137, Epoch: 139, Loss: 0.0123, Approx Train Acc: 0.7443
+Best test: 29.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2928.1768 0.0000 
+final mean and std of test acc:  2928.1768 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3667394995, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6235
+Best test: 21.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2197.8022 0.0000 
+final mean and std of test acc:  2197.8022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 294302023, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.7410
+Best test: 47.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4751.3812 0.0000 
+final mean and std of test acc:  4751.3812 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 1151814302, Epoch: 139, Loss: 0.0199, Approx Train Acc: 0.5357
+Best test: 31.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3186.8132 0.0000 
+final mean and std of test acc:  3186.8132 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 440603108, Epoch: 139, Loss: 0.0120, Approx Train Acc: 0.4663
+Best test: 20.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2000.0000 0.0000 
+final mean and std of test acc:  2000.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 4231200618, Epoch: 139, Loss: 0.0095, Approx Train Acc: 0.7283
+Best test: 16.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1666.6667 0.0000 
+final mean and std of test acc:  1666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 3111195556, Epoch: 139, Loss: 0.0109, Approx Train Acc: 0.6686
+Best test: 29.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2960.8939 0.0000 
+final mean and std of test acc:  2960.8939 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 1956231044, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7381
+Best test: 32.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3202.2472 0.0000 
+final mean and std of test acc:  3202.2472 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 1501709523, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.6829
+Best test: 40.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4010.9890 0.0000 
+final mean and std of test acc:  4010.9890 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2561409993, Epoch: 139, Loss: 0.0172, Approx Train Acc: 0.5337
+Best test: 26.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2611.1111 0.0000 
+final mean and std of test acc:  2611.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2744524512, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5964
+Best test: 18.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1868.1319 0.0000 
+final mean and std of test acc:  1868.1319 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 96015222, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.7143
+Best test: 21.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2166.6667 0.0000 
+final mean and std of test acc:  2166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1838613363, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5976
+Best test: 27.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2722.2222 0.0000 
+final mean and std of test acc:  2722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 3632515362, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.6347
+Best test: 31.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3111.1111 0.0000 
+final mean and std of test acc:  3111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 4192555899, Epoch: 139, Loss: 0.0101, Approx Train Acc: 0.6928
+Best test: 27.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2747.2527 0.0000 
+final mean and std of test acc:  2747.2527 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 793886042, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.7118
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2338877044, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.6154
+Best test: 27.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2752.8090 0.0000 
+final mean and std of test acc:  2752.8090 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 1404449477, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.5476
+Best test: 28.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2865.1685 0.0000 
+final mean and std of test acc:  2865.1685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 1495934180, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.7019
+Best test: 35.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3500.0000 0.0000 
+final mean and std of test acc:  3500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 2956551541, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.6491
+Best test: 18.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1878.4530 0.0000 
+final mean and std of test acc:  1878.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 3790760307, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5123
+Best test: 24.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2485.8757 0.0000 
+final mean and std of test acc:  2485.8757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 3777694076, Epoch: 139, Loss: 0.0101, Approx Train Acc: 0.7055
+Best test: 20.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2078.6517 0.0000 
+final mean and std of test acc:  2078.6517 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 3161074737, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.5621
+Best test: 23.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2375.6906 0.0000 
+final mean and std of test acc:  2375.6906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 480578584, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.5120
+Best test: 30.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3033.7079 0.0000 
+final mean and std of test acc:  3033.7079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 1894234905, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.6524
+Best test: 36.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3672.3164 0.0000 
+final mean and std of test acc:  3672.3164 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 1110136141, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.5263
+Best test: 14.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1444.4444 0.0000 
+final mean and std of test acc:  1444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 805564649, Epoch: 139, Loss: 0.0097, Approx Train Acc: 0.6386
+Best test: 18.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1843.5754 0.0000 
+final mean and std of test acc:  1843.5754 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 3274396873, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.6941
+Best test: 26.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2666.6667 0.0000 
+final mean and std of test acc:  2666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 269312390, Epoch: 139, Loss: 0.0126, Approx Train Acc: 0.5157
+Best test: 29.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2977.5281 0.0000 
+final mean and std of test acc:  2977.5281 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.9.log
+Seed: 826806899, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.6310
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2889839770, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.7485
+Best test: 48.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4860.3352 0.0000 
+final mean and std of test acc:  4860.3352 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 1440163515, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6131
+Best test: 40.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4067.7966 0.0000 
+final mean and std of test acc:  4067.7966 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 2048825026, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5749
+Best test: 30.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3016.7598 0.0000 
+final mean and std of test acc:  3016.7598 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 4119956656, Epoch: 139, Loss: 0.0100, Approx Train Acc: 0.6882
+Best test: 27.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2722.2222 0.0000 
+final mean and std of test acc:  2722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2835649583, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.7030
+Best test: 24.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2402.2346 0.0000 
+final mean and std of test acc:  2402.2346 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.7.log
+Seed: 2409071166, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6807
+Best test: 30.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3055.5556 0.0000 
+final mean and std of test acc:  3055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 1832539863, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.5488
+Best test: 43.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4364.6409 0.0000 
+final mean and std of test acc:  4364.6409 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 1204088466, Epoch: 139, Loss: 0.0107, Approx Train Acc: 0.7251
+Best test: 22.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2234.6369 0.0000 
+final mean and std of test acc:  2234.6369 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 2319357320, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6905
+Best test: 17.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1731.8436 0.0000 
+final mean and std of test acc:  1731.8436 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 2642928210, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.7560
+Best test: 25.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2500.0000 0.0000 
+final mean and std of test acc:  2500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1744082570, Epoch: 139, Loss: 0.0124, Approx Train Acc: 0.7616
+Best test: 22.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2290.5028 0.0000 
+final mean and std of test acc:  2290.5028 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (13x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 499344939, Epoch: 139, Loss: 0.0177, Approx Train Acc: 0.4852
+Best test: 28.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2817.6796 0.0000 
+final mean and std of test acc:  2817.6796 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 2491013464, Epoch: 57, Loss: 0.5985, Approx Train Acc: 0.8033
+Seed: 2491013464, Epoch: 58, Loss: 0.5922, Approx Train Acc: 0.8415
+Seed: 2491013464, Epoch: 59, Loss: 0.5730, Approx Train Acc: 0.8743
+Seed: 2491013464, Epoch: 60, Loss: 0.5613, Approx Train Acc: 0.8415
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.8.log
+Seed: 1044873786, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.4971
+Best test: 22.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2252.7473 0.0000 
+final mean and std of test acc:  2252.7473 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 2331926401, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6727
+Best test: 47.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4772.7273 0.0000 
+final mean and std of test acc:  4772.7273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 2930672330, Epoch: 139, Loss: 0.0178, Approx Train Acc: 0.6325
+Best test: 14.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1444.4444 0.0000 
+final mean and std of test acc:  1444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2119119100, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.7289
+Best test: 25.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2528.0899 0.0000 
+final mean and std of test acc:  2528.0899 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 404609636, Epoch: 139, Loss: 0.0130, Approx Train Acc: 0.6705
+Best test: 22.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2222.2222 0.0000 
+final mean and std of test acc:  2222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 1404655671, Epoch: 139, Loss: 0.0104, Approx Train Acc: 0.5954
+Best test: 34.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3480.6630 0.0000 
+final mean and std of test acc:  3480.6630 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 320235254, Epoch: 139, Loss: 0.0093, Approx Train Acc: 0.7235
+Best test: 26.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2651.9337 0.0000 
+final mean and std of test acc:  2651.9337 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 3917286955, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.5353
+Best test: 30.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3033.7079 0.0000 
+final mean and std of test acc:  3033.7079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 2748152013, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.6379
+Best test: 35.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3500.0000 0.0000 
+final mean and std of test acc:  3500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.7.log
+Seed: 4042706594, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6667
+Best test: 39.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3910.6145 0.0000 
+final mean and std of test acc:  3910.6145 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (2x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2673979618, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.6667
+Best test: 41.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4166.6667 0.0000 
+final mean and std of test acc:  4166.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 304337713, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5542
+Best test: 22.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2234.6369 0.0000 
+final mean and std of test acc:  2234.6369 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 170965655, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.4588
+Best test: 38.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3854.7486 0.0000 
+final mean and std of test acc:  3854.7486 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1795412472, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5536
+Best test: 18.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1899.4413 0.0000 
+final mean and std of test acc:  1899.4413 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (17x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 3529501645, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6707
+Best test: 30.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3021.9780 0.0000 
+final mean and std of test acc:  3021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 1345003488, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.5879
+Best test: 40.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4022.3464 0.0000 
+final mean and std of test acc:  4022.3464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 1301875537, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.5119
+Best test: 21.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2178.7709 0.0000 
+final mean and std of test acc:  2178.7709 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 1409915621, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.5503
+Best test: 38.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3820.2247 0.0000 
+final mean and std of test acc:  3820.2247 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2017303126, Epoch: 139, Loss: 0.0161, Approx Train Acc: 0.4444
+Best test: 27.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2777.7778 0.0000 
+final mean and std of test acc:  2777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 4196280551, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.5976
+Best test: 27.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2762.4309 0.0000 
+final mean and std of test acc:  2762.4309 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2142, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 510138971, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.7362
+Best test: 20.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2022.4719 0.0000 
+final mean and std of test acc:  2022.4719 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3224441400, Epoch: 139, Loss: 0.0183, Approx Train Acc: 0.4970
+Best test: 43.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4364.6409 0.0000 
+final mean and std of test acc:  4364.6409 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 2585390721, Epoch: 139, Loss: 0.0103, Approx Train Acc: 0.6527
+Best test: 29.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2977.5281 0.0000 
+final mean and std of test acc:  2977.5281 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 1909010738, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5879
+Best test: 28.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2849.1620 0.0000 
+final mean and std of test acc:  2849.1620 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 4283609796, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.6627
+Best test: 30.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3072.6257 0.0000 
+final mean and std of test acc:  3072.6257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 935840415, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.6118
+Best test: 45.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4530.3867 0.0000 
+final mean and std of test acc:  4530.3867 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 295070150, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5000
+Best test: 48.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4887.6404 0.0000 
+final mean and std of test acc:  4887.6404 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 1240658318, Epoch: 139, Loss: 0.0116, Approx Train Acc: 0.6964
+Best test: 26.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2611.1111 0.0000 
+final mean and std of test acc:  2611.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 3468738934, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5385
+Best test: 41.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4143.6464 0.0000 
+final mean and std of test acc:  4143.6464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 1398166866, Epoch: 139, Loss: 0.0116, Approx Train Acc: 0.6667
+Best test: 42.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4277.7778 0.0000 
+final mean and std of test acc:  4277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.9.log
+Seed: 1323617847, Epoch: 139, Loss: 0.0172, Approx Train Acc: 0.6023
+Best test: 36.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3626.3736 0.0000 
+final mean and std of test acc:  3626.3736 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 1594340885, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.6768
+Best test: 25.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2513.6612 0.0000 
+final mean and std of test acc:  2513.6612 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 3525568417, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.4678
+Best test: 30.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3038.6740 0.0000 
+final mean and std of test acc:  3038.6740 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 1149210146, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.5588
+Best test: 35.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3500.0000 0.0000 
+final mean and std of test acc:  3500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 2050707023, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5536
+Best test: 44.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4469.2737 0.0000 
+final mean and std of test acc:  4469.2737 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1167171792, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6048
+Best test: 48.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4833.3333 0.0000 
+final mean and std of test acc:  4833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (55x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2313391570, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.7349
+Best test: 33.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3371.4286 0.0000 
+final mean and std of test acc:  3371.4286 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 3949978787, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5030
+Best test: 32.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3259.6685 0.0000 
+final mean and std of test acc:  3259.6685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 1257377702, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6707
+Best test: 23.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2342.8571 0.0000 
+final mean and std of test acc:  2342.8571 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.9.log
+Seed: 2786088405, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.5422
+Best test: 22.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2259.8870 0.0000 
+final mean and std of test acc:  2259.8870 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 1439923822, Epoch: 139, Loss: 0.0123, Approx Train Acc: 0.5636
+Best test: 29.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2960.8939 0.0000 
+final mean and std of test acc:  2960.8939 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 2721231637, Epoch: 139, Loss: 0.0104, Approx Train Acc: 0.6923
+Best test: 21.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2122.9050 0.0000 
+final mean and std of test acc:  2122.9050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 1306203866, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6667
+Best test: 27.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2722.2222 0.0000 
+final mean and std of test acc:  2722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 110002373, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.7134
+Best test: 40.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4044.9438 0.0000 
+final mean and std of test acc:  4044.9438 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 4036883030, Epoch: 139, Loss: 0.0150, Approx Train Acc: 0.5385
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 1059156280, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6919
+Best test: 36.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3646.4088 0.0000 
+final mean and std of test acc:  3646.4088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 127195093, Epoch: 83, Loss: 0.0270, Approx Train Acc: 0.4675
+Best test: 19.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1944.4444 0.0000 
+final mean and std of test acc:  1944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 2753227216, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6867
+Best test: 24.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2402.2346 0.0000 
+final mean and std of test acc:  2402.2346 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 3283006337, Epoch: 139, Loss: 0.0113, Approx Train Acc: 0.6647
+Best test: 46.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4696.1326 0.0000 
+final mean and std of test acc:  4696.1326 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 2628251351, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6667
+Best test: 36.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3651.6854 0.0000 
+final mean and std of test acc:  3651.6854 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 388961859, Epoch: 139, Loss: 0.0104, Approx Train Acc: 0.6467
+Best test: 21.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2111.1111 0.0000 
+final mean and std of test acc:  2111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 3243540760, Epoch: 139, Loss: 0.0113, Approx Train Acc: 0.6503
+Best test: 25.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2596.6851 0.0000 
+final mean and std of test acc:  2596.6851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3943757779, Epoch: 83, Loss: 0.0285, Approx Train Acc: 0.4639
+Best test: 40.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4055.5556 0.0000 
+final mean and std of test acc:  4055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.5.log
+    return self.hierarchical_joint_train_net(input_dict)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2241, in hierarchical_joint_train_net
+    subset_xs.append(self.graphs[i].x[n_id].to(device))
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 2448336888, Epoch: 139, Loss: 0.0110, Approx Train Acc: 0.5930
+Best test: 23.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2375.6906 0.0000 
+final mean and std of test acc:  2375.6906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 4050060682, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6524
+Best test: 21.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2122.9050 0.0000 
+final mean and std of test acc:  2122.9050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 2564332316, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.5663
+Best test: 27.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2762.4309 0.0000 
+final mean and std of test acc:  2762.4309 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 344086295, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.6220
+Best test: 47.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4775.2809 0.0000 
+final mean and std of test acc:  4775.2809 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 46939713, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.7059
+Best test: 30.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3072.6257 0.0000 
+final mean and std of test acc:  3072.6257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 3662894775, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.6494
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 2468997102, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.7349
+Best test: 25.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2542.3729 0.0000 
+final mean and std of test acc:  2542.3729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.8.log
+Seed: 2940929343, Epoch: 139, Loss: 0.0195, Approx Train Acc: 0.5152
+Best test: 22.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2277.7778 0.0000 
+final mean and std of test acc:  2277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD0_PERS0.7.log
+Seed: 163173377, Epoch: 139, Loss: 0.0211, Approx Train Acc: 0.5361
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1997454396, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.5291
+Best test: 37.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3756.9061 0.0000 
+final mean and std of test acc:  3756.9061 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 3065018789, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.5432
+Best test: 25.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2598.8701 0.0000 
+final mean and std of test acc:  2598.8701 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 704251875, Epoch: 139, Loss: 0.0105, Approx Train Acc: 0.6746
+Best test: 38.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3812.1547 0.0000 
+final mean and std of test acc:  3812.1547 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 1895814174, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.7048
+Best test: 30.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3089.8876 0.0000 
+final mean and std of test acc:  3089.8876 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 3444511399, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.5714
+Best test: 26.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2625.6983 0.0000 
+final mean and std of test acc:  2625.6983 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 2504381085, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.7101
+Best test: 20.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2078.6517 0.0000 
+final mean and std of test acc:  2078.6517 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 3282753177, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.5629
+Best test: 37.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3722.2222 0.0000 
+final mean and std of test acc:  3722.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 2177018061, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6407
+Best test: 37.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3728.8136 0.0000 
+final mean and std of test acc:  3728.8136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 2137177575, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.6707
+Best test: 22.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2203.3898 0.0000 
+final mean and std of test acc:  2203.3898 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 1907142420, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.6566
+Best test: 19.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1966.2921 0.0000 
+final mean and std of test acc:  1966.2921 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 4038634318, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.6471
+Best test: 48.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4833.3333 0.0000 
+final mean and std of test acc:  4833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 561530755, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5503
+Best test: 34.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3426.9663 0.0000 
+final mean and std of test acc:  3426.9663 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.9.log
+Seed: 3219929887, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7560
+Best test: 21.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2146.8927 0.0000 
+final mean and std of test acc:  2146.8927 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 3439605216, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.7531
+Best test: 21.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2122.9050 0.0000 
+final mean and std of test acc:  2122.9050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 288699720, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.7301
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 3708124979, Epoch: 139, Loss: 0.0103, Approx Train Acc: 0.6765
+Best test: 15.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1508.3799 0.0000 
+final mean and std of test acc:  1508.3799 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 4163653785, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.7235
+Best test: 19.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1944.4444 0.0000 
+final mean and std of test acc:  1944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2282147768, Epoch: 139, Loss: 0.0098, Approx Train Acc: 0.6882
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.8.log
+Seed: 757315955, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6687
+Best test: 50.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5082.8729 0.0000 
+final mean and std of test acc:  5082.8729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.9.log
+Seed: 3177640827, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7246
+Best test: 19.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1966.2921 0.0000 
+final mean and std of test acc:  1966.2921 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 802282635, Epoch: 139, Loss: 0.0161, Approx Train Acc: 0.4639
+Best test: 31.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3163.8418 0.0000 
+final mean and std of test acc:  3163.8418 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 2274343584, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.7321
+Best test: 29.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2983.4254 0.0000 
+final mean and std of test acc:  2983.4254 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 1287321465, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.5235
+Best test: 41.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4198.8950 0.0000 
+final mean and std of test acc:  4198.8950 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 2736694738, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.4817
+Best test: 18.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1878.4530 0.0000 
+final mean and std of test acc:  1878.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 4049530641, Epoch: 139, Loss: 0.0116, Approx Train Acc: 0.8121
+Best test: 32.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3220.3390 0.0000 
+final mean and std of test acc:  3220.3390 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 3542596740, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.6108
+Best test: 50.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5081.9672 0.0000 
+final mean and std of test acc:  5081.9672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 3495304255, Epoch: 139, Loss: 0.0143, Approx Train Acc: 0.4940
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 1406946281, Epoch: 139, Loss: 0.0129, Approx Train Acc: 0.7310
+Best test: 17.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1767.9558 0.0000 
+final mean and std of test acc:  1767.9558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 4119754633, Epoch: 139, Loss: 0.0110, Approx Train Acc: 0.5893
+Best test: 32.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3277.7778 0.0000 
+final mean and std of test acc:  3277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 1397156296, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.5357
+Best test: 12.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1222.2222 0.0000 
+final mean and std of test acc:  1222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 309293215, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.7041
+Best test: 29.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2983.4254 0.0000 
+final mean and std of test acc:  2983.4254 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.7.log
+Seed: 3378573400, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.8046
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3112905426, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.6000
+Best test: 27.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2793.2961 0.0000 
+final mean and std of test acc:  2793.2961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 3148822211, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6213
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.4444 0.0000 
+final mean and std of test acc:  3944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 4194858640, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6982
+Best test: 48.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4888.8889 0.0000 
+final mean and std of test acc:  4888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 3803149611, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.7055
+Best test: 49.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4915.2542 0.0000 
+final mean and std of test acc:  4915.2542 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2258250719, Epoch: 139, Loss: 0.0153, Approx Train Acc: 0.5301
+Best test: 35.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3591.1602 0.0000 
+final mean and std of test acc:  3591.1602 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+    *
+Epoch: 84, Test Acc: 83.97% Test RoC: 0.84
+Seed: 719822404, Epoch: 85, Loss: 0.5369, Approx Train Acc: 0.8197
+Seed: 719822404, Epoch: 86, Loss: 0.5152, Approx Train Acc: 0.8689
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 1216419763, Epoch: 139, Loss: 0.0099, Approx Train Acc: 0.6936
+Best test: 35.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3535.9116 0.0000 
+final mean and std of test acc:  3535.9116 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 2997480207, Epoch: 139, Loss: 0.0179, Approx Train Acc: 0.5449
+Best test: 22.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2234.6369 0.0000 
+final mean and std of test acc:  2234.6369 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 3491915361, Epoch: 139, Loss: 0.0160, Approx Train Acc: 0.6213
+Best test: 15.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1581.9209 0.0000 
+final mean and std of test acc:  1581.9209 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 2001307363, Epoch: 139, Loss: 0.0137, Approx Train Acc: 0.5090
+Best test: 30.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3000.0000 0.0000 
+final mean and std of test acc:  3000.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 202484558, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.6228
+Best test: 19.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1977.4011 0.0000 
+final mean and std of test acc:  1977.4011 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 485498241, Epoch: 83, Loss: 0.0268, Approx Train Acc: 0.5000
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 428221505, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.5636
+Best test: 29.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2944.4444 0.0000 
+final mean and std of test acc:  2944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2578498442, Epoch: 139, Loss: 0.0145, Approx Train Acc: 0.6084
+Best test: 33.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3333.3333 0.0000 
+final mean and std of test acc:  3333.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1696800318, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.6548
+Best test: 45.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4505.4945 0.0000 
+final mean and std of test acc:  4505.4945 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2035085171, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6607
+Best test: 39.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3977.9006 0.0000 
+final mean and std of test acc:  3977.9006 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 3438740756, Epoch: 139, Loss: 0.0149, Approx Train Acc: 0.6168
+Best test: 15.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1573.0337 0.0000 
+final mean and std of test acc:  1573.0337 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3404876300, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.6386
+Best test: 12.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1222.2222 0.0000 
+final mean and std of test acc:  1222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 1232195164, Epoch: 139, Loss: 0.0118, Approx Train Acc: 0.6529
+Best test: 41.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4111.1111 0.0000 
+final mean and std of test acc:  4111.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 239518890, Epoch: 139, Loss: 0.0097, Approx Train Acc: 0.7083
+Best test: 17.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1704.5455 0.0000 
+final mean and std of test acc:  1704.5455 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 981104952, Epoch: 139, Loss: 0.0170, Approx Train Acc: 0.6228
+Best test: 22.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2222.2222 0.0000 
+final mean and std of test acc:  2222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 2812041475, Epoch: 139, Loss: 0.0122, Approx Train Acc: 0.7870
+Best test: 23.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2388.8889 0.0000 
+final mean and std of test acc:  2388.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 372346486, Epoch: 139, Loss: 0.0194, Approx Train Acc: 0.5549
+Best test: 17.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1761.3636 0.0000 
+final mean and std of test acc:  1761.3636 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 1963103346, Epoch: 139, Loss: 0.0096, Approx Train Acc: 0.7500
+Best test: 20.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2099.4475 0.0000 
+final mean and std of test acc:  2099.4475 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 1155977460, Epoch: 139, Loss: 0.0161, Approx Train Acc: 0.6012
+Best test: 25.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2596.6851 0.0000 
+final mean and std of test acc:  2596.6851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3587606066, Epoch: 139, Loss: 0.0109, Approx Train Acc: 0.7425
+Best test: 23.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2388.8889 0.0000 
+final mean and std of test acc:  2388.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 2524566287, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.6627
+Best test: 53.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5363.1285 0.0000 
+final mean and std of test acc:  5363.1285 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.8.log
+Seed: 2446137485, Epoch: 139, Loss: 0.0144, Approx Train Acc: 0.6905
+Best test: 27.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2737.4302 0.0000 
+final mean and std of test acc:  2737.4302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 1537536660, Epoch: 139, Loss: 0.0097, Approx Train Acc: 0.6474
+Best test: 27.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2752.8090 0.0000 
+final mean and std of test acc:  2752.8090 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.9.log
+Seed: 94590822, Epoch: 139, Loss: 0.0183, Approx Train Acc: 0.5120
+Best test: 20.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2078.6517 0.0000 
+final mean and std of test acc:  2078.6517 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2127533227, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7857
+Best test: 33.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3351.9553 0.0000 
+final mean and std of test acc:  3351.9553 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 1572929936, Epoch: 139, Loss: 0.0111, Approx Train Acc: 0.6108
+Best test: 48.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4861.8785 0.0000 
+final mean and std of test acc:  4861.8785 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 4137284294, Epoch: 83, Loss: 0.0271, Approx Train Acc: 0.4471
+Best test: 11.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1160.2210 0.0000 
+final mean and std of test acc:  1160.2210 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 16882716, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.5389
+Best test: 29.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2983.4254 0.0000 
+final mean and std of test acc:  2983.4254 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 996168794, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.5818
+Best test: 31.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3107.3446 0.0000 
+final mean and std of test acc:  3107.3446 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 790516751, Epoch: 139, Loss: 0.0136, Approx Train Acc: 0.5583
+Best test: 44.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4494.3820 0.0000 
+final mean and std of test acc:  4494.3820 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 702375082, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.6647
+Best test: 23.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2375.6906 0.0000 
+final mean and std of test acc:  2375.6906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.001_WD0_PERS0.7.log
+Seed: 2396982870, Epoch: 139, Loss: 0.0131, Approx Train Acc: 0.7151
+Best test: 30.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3076.9231 0.0000 
+final mean and std of test acc:  3076.9231 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 4159698307, Epoch: 139, Loss: 0.0152, Approx Train Acc: 0.5217
+Best test: 45.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4525.1397 0.0000 
+final mean and std of test acc:  4525.1397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 671383616, Epoch: 139, Loss: 0.0133, Approx Train Acc: 0.7950
+Best test: 38.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3863.6364 0.0000 
+final mean and std of test acc:  3863.6364 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 504001996, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.5833
+Best test: 32.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3259.6685 0.0000 
+final mean and std of test acc:  3259.6685 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 2462972884, Epoch: 139, Loss: 0.0142, Approx Train Acc: 0.6250
+Best test: 17.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1777.7778 0.0000 
+final mean and std of test acc:  1777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.8.log
+Seed: 895952057, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.6527
+Best test: 30.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3072.6257 0.0000 
+final mean and std of test acc:  3072.6257 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 3996798970, Epoch: 139, Loss: 0.0157, Approx Train Acc: 0.5747
+Best test: 24.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2444.4444 0.0000 
+final mean and std of test acc:  2444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 66635105, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.5122
+Best test: 42.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4222.2222 0.0000 
+final mean and std of test acc:  4222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 1397586373, Epoch: 139, Loss: 0.0171, Approx Train Acc: 0.5090
+Best test: 32.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3276.8362 0.0000 
+final mean and std of test acc:  3276.8362 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 3385632722, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6303
+Best test: 17.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1731.8436 0.0000 
+final mean and std of test acc:  1731.8436 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 1578747337, Epoch: 139, Loss: 0.0175, Approx Train Acc: 0.5941
+Best test: 23.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2359.5506 0.0000 
+final mean and std of test acc:  2359.5506 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 2592321702, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.6503
+Best test: 32.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3296.0894 0.0000 
+final mean and std of test acc:  3296.0894 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 283901299, Epoch: 139, Loss: 0.0171, Approx Train Acc: 0.5808
+Best test: 38.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3888.8889 0.0000 
+final mean and std of test acc:  3888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (57x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 3494698019, Epoch: 139, Loss: 0.0146, Approx Train Acc: 0.6082
+Best test: 29.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2944.4444 0.0000 
+final mean and std of test acc:  2944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 4035438773, Epoch: 139, Loss: 0.0120, Approx Train Acc: 0.5029
+Best test: 38.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3867.4033 0.0000 
+final mean and std of test acc:  3867.4033 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 939071361, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6566
+Best test: 46.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4615.3846 0.0000 
+final mean and std of test acc:  4615.3846 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 3351517834, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.6272
+Best test: 39.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3910.6145 0.0000 
+final mean and std of test acc:  3910.6145 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 511203749, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.5886
+Best test: 27.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2711.8644 0.0000 
+final mean and std of test acc:  2711.8644 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 467310215, Epoch: 139, Loss: 0.0100, Approx Train Acc: 0.6012
+Best test: 39.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3922.6519 0.0000 
+final mean and std of test acc:  3922.6519 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 1310637715, Epoch: 139, Loss: 0.0096, Approx Train Acc: 0.7440
+Best test: 14.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1444.4444 0.0000 
+final mean and std of test acc:  1444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 2045839228, Epoch: 139, Loss: 0.0140, Approx Train Acc: 0.6257
+Best test: 41.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4143.6464 0.0000 
+final mean and std of test acc:  4143.6464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2079468039, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.6914
+Best test: 30.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3016.7598 0.0000 
+final mean and std of test acc:  3016.7598 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 1166303111, Epoch: 139, Loss: 0.0109, Approx Train Acc: 0.7006
+Best test: 28.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2849.1620 0.0000 
+final mean and std of test acc:  2849.1620 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 104683039, Epoch: 139, Loss: 0.0171, Approx Train Acc: 0.5858
+Best test: 23.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2320.4420 0.0000 
+final mean and std of test acc:  2320.4420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 1621463728, Epoch: 139, Loss: 0.0107, Approx Train Acc: 0.6959
+Best test: 16.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1666.6667 0.0000 
+final mean and std of test acc:  1666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1118105469, Epoch: 83, Loss: 0.0270, Approx Train Acc: 0.4821
+Best test: 31.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3128.4916 0.0000 
+final mean and std of test acc:  3128.4916 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 1876176893, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.6970
+Best test: 30.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3000.0000 0.0000 
+final mean and std of test acc:  3000.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 2497477183, Epoch: 139, Loss: 0.0182, Approx Train Acc: 0.4828
+Best test: 24.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2459.0164 0.0000 
+final mean and std of test acc:  2459.0164 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 3535172235, Epoch: 139, Loss: 0.0188, Approx Train Acc: 0.6024
+Best test: 22.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2222.2222 0.0000 
+final mean and std of test acc:  2222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 3277585406, Epoch: 139, Loss: 0.0165, Approx Train Acc: 0.5697
+Best test: 46.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4615.3846 0.0000 
+final mean and std of test acc:  4615.3846 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 3016116262, Epoch: 83, Loss: 0.0513, Approx Train Acc: 0.4431
+Best test: 16.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1666.6667 0.0000 
+final mean and std of test acc:  1666.6667 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 1552645946, Epoch: 139, Loss: 0.0114, Approx Train Acc: 0.5655
+Best test: 15.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1500.0000 0.0000 
+final mean and std of test acc:  1500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 2340785598, Epoch: 139, Loss: 0.0167, Approx Train Acc: 0.5529
+Best test: 30.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3055.5556 0.0000 
+final mean and std of test acc:  3055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 2601620256, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.6235
+Best test: 32.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3220.3390 0.0000 
+final mean and std of test acc:  3220.3390 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 695741695, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7381
+Best test: 29.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2971.4286 0.0000 
+final mean and std of test acc:  2971.4286 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 1627571082, Epoch: 139, Loss: 0.0171, Approx Train Acc: 0.5376
+Best test: 18.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1888.8889 0.0000 
+final mean and std of test acc:  1888.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1694683175, Epoch: 139, Loss: 0.0164, Approx Train Acc: 0.5569
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 339461290, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.5389
+Best test: 42.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4261.3636 0.0000 
+final mean and std of test acc:  4261.3636 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 2117021679, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.5765
+Best test: 28.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2808.9888 0.0000 
+final mean and std of test acc:  2808.9888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 118217301, Epoch: 139, Loss: 0.0119, Approx Train Acc: 0.5655
+Best test: 47.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4777.7778 0.0000 
+final mean and std of test acc:  4777.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD0_PERS0.8.log
+Seed: 3783416185, Epoch: 139, Loss: 0.0173, Approx Train Acc: 0.5706
+Best test: 30.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3055.5556 0.0000 
+final mean and std of test acc:  3055.5556 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 4150909558, Epoch: 139, Loss: 0.0156, Approx Train Acc: 0.5868
+Best test: 32.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3240.2235 0.0000 
+final mean and std of test acc:  3240.2235 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 1400981483, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.6250
+Best test: 17.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1787.7095 0.0000 
+final mean and std of test acc:  1787.7095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD0_PERS0.5.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (15x2215 and 3406x512)
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2983400114, Epoch: 139, Loss: 0.0178, Approx Train Acc: 0.5030
+Best test: 42.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4269.6629 0.0000 
+final mean and std of test acc:  4269.6629 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 1520796127, Epoch: 139, Loss: 0.0115, Approx Train Acc: 0.7052
+Best test: 37.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3701.6575 0.0000 
+final mean and std of test acc:  3701.6575 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 3312866315, Epoch: 139, Loss: 0.0107, Approx Train Acc: 0.7267
+Best test: 49.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.3757 0.0000 
+final mean and std of test acc:  4972.3757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 4221820652, Epoch: 139, Loss: 0.0103, Approx Train Acc: 0.7012
+Best test: 10.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1061.4525 0.0000 
+final mean and std of test acc:  1061.4525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD0_PERS0.9.log
+Seed: 582294081, Epoch: 139, Loss: 0.0147, Approx Train Acc: 0.6725
+Best test: 32.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3240.2235 0.0000 
+final mean and std of test acc:  3240.2235 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 2891845828, Epoch: 139, Loss: 0.0125, Approx Train Acc: 0.5576
+Best test: 32.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3222.2222 0.0000 
+final mean and std of test acc:  3222.2222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 2891734744, Epoch: 139, Loss: 0.0117, Approx Train Acc: 0.5542
+Best test: 52.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5251.3966 0.0000 
+final mean and std of test acc:  5251.3966 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 1997880745, Epoch: 139, Loss: 0.0139, Approx Train Acc: 0.7135
+Best test: 28.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2872.9282 0.0000 
+final mean and std of test acc:  2872.9282 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 3368223334, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6407
+Best test: 24.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2471.9101 0.0000 
+final mean and std of test acc:  2471.9101 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 31008347, Epoch: 139, Loss: 0.0112, Approx Train Acc: 0.7578
+Best test: 40.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4022.3464 0.0000 
+final mean and std of test acc:  4022.3464 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 1471440546, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.5864
+Best test: 18.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1875.0000 0.0000 
+final mean and std of test acc:  1875.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2712851943, Epoch: 139, Loss: 0.0106, Approx Train Acc: 0.6829
+Best test: 29.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2944.4444 0.0000 
+final mean and std of test acc:  2944.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 934340468, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7590
+Best test: 18.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1833.3333 0.0000 
+final mean and std of test acc:  1833.3333 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 3991309832, Epoch: 139, Loss: 0.0126, Approx Train Acc: 0.7110
+Best test: 30.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3021.9780 0.0000 
+final mean and std of test acc:  3021.9780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2204822673, Epoch: 139, Loss: 0.0134, Approx Train Acc: 0.7246
+Best test: 33.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3388.8889 0.0000 
+final mean and std of test acc:  3388.8889 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 417486458, Epoch: 139, Loss: 0.0158, Approx Train Acc: 0.5808
+Best test: 25.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2513.9665 0.0000 
+final mean and std of test acc:  2513.9665 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1809506338, Epoch: 139, Loss: 0.0135, Approx Train Acc: 0.7118
+Best test: 23.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2386.3636 0.0000 
+final mean and std of test acc:  2386.3636 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD0_PERS0.9.log
+Seed: 1441976247, Epoch: 139, Loss: 0.0183, Approx Train Acc: 0.5210
+Best test: 27.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2737.4302 0.0000 
+final mean and std of test acc:  2737.4302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 583010743, Epoch: 139, Loss: 0.0168, Approx Train Acc: 0.5697
+Best test: 18.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1843.5754 0.0000 
+final mean and std of test acc:  1843.5754 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_exp8_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD0_PERS0.5.log
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2131883091, Epoch: 139, Loss: 0.0162, Approx Train Acc: 0.6250
+Best test: 32.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3296.7033 0.0000 
+final mean and std of test acc:  3296.7033 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 448018571, Epoch: 139, Loss: 0.0253, Approx Train Acc: 0.5409
+Best test: 49.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4972.0670 0.0000 
+final mean and std of test acc:  4972.0670 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 3988785648, Epoch: 139, Loss: 0.0097, Approx Train Acc: 0.7212
+Best test: 34.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3444.4444 0.0000 
+final mean and std of test acc:  3444.4444 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3958267005, Epoch: 139, Loss: 0.0141, Approx Train Acc: 0.6509
+Best test: 29.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2905.0279 0.0000 
+final mean and std of test acc:  2905.0279 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 2718697357, Epoch: 139, Loss: 0.0094, Approx Train Acc: 0.7251
+Best test: 22.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2277.7778 0.0000 
+final mean and std of test acc:  2277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 1440767786, Epoch: 139, Loss: 0.0127, Approx Train Acc: 0.5671
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2142933688, Epoch: 139, Loss: 0.0132, Approx Train Acc: 0.7018
+Best test: 25.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2569.8324 0.0000 
+final mean and std of test acc:  2569.8324 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.9.log
+Seed: 3570636965, Epoch: 139, Loss: 0.0167, Approx Train Acc: 0.5663
+Best test: 28.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2872.9282 0.0000 
+final mean and std of test acc:  2872.9282 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2328482293, Epoch: 139, Loss: 0.0163, Approx Train Acc: 0.5783
+Best test: 23.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2346.3687 0.0000 
+final mean and std of test acc:  2346.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2675751370, Epoch: 139, Loss: 0.0154, Approx Train Acc: 0.6646
+Best test: 23.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2303.3708 0.0000 
+final mean and std of test acc:  2303.3708 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 2941361581, Epoch: 139, Loss: 0.0166, Approx Train Acc: 0.5455
+Best test: 31.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3163.8418 0.0000 
+final mean and std of test acc:  3163.8418 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3310938941, Epoch: 139, Loss: 0.0108, Approx Train Acc: 0.5269
+Best test: 31.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3128.4916 0.0000 
+final mean and std of test acc:  3128.4916 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1778367681, Epoch: 83, Loss: 0.0477, Approx Train Acc: 0.4253
+Best test: 45.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4500.0000 0.0000 
+final mean and std of test acc:  4500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 4174106933, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.4691
+Best test: 21.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2146.8927 0.0000 
+final mean and std of test acc:  2146.8927 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_test_HJT_WebKB_cornell_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1123093676, Epoch: 83, Loss: 0.0284, Approx Train Acc: 0.4345
+Best test: 19.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1933.7017 0.0000 
+final mean and std of test acc:  1933.7017 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 3925722321, Epoch: 139, Loss: 0.0138, Approx Train Acc: 0.6905
+Best test: 28.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2817.6796 0.0000 
+final mean and std of test acc:  2817.6796 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 3965648853, Epoch: 139, Loss: 0.0124, Approx Train Acc: 0.7362
+Best test: 18.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1875.0000 0.0000 
+final mean and std of test acc:  1875.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 4066980181, Epoch: 139, Loss: 0.0122, Approx Train Acc: 0.6433
+Best test: 23.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2362.6374 0.0000 
+final mean and std of test acc:  2362.6374 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2517094347, Epoch: 139, Loss: 0.0155, Approx Train Acc: 0.6331
+Best test: 25.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2500.0000 0.0000 
+final mean and std of test acc:  2500.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 4211133631, Epoch: 139, Loss: 0.0151, Approx Train Acc: 0.5058
+Best test: 21.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2154.6961 0.0000 
+final mean and std of test acc:  2154.6961 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.03_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 2221791980, Epoch: 139, Loss: 0.0121, Approx Train Acc: 0.5906
+Best test: 32.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3277.7778 0.0000 
+final mean and std of test acc:  3277.7778 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.003_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 2389183564, Epoch: 139, Loss: 0.0093, Approx Train Acc: 0.7531
+Best test: 46.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4606.7416 0.0000 
+final mean and std of test acc:  4606.7416 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_EXPSEV_HJT_WebKB_cornell_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1464983354, Epoch: 139, Loss: 0.0128, Approx Train Acc: 0.7529
+Best test: 29.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2912.0879 0.0000 
+final mean and std of test acc:  2912.0879 $\pm$ 0.0000
+
+----------------------------------------
+
