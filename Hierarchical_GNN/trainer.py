@@ -807,7 +807,6 @@ class trainer(object):
                                    "device": self.device, "dataset": self.dataset,
                                    "type": "test"}
                 self.train_net(epoch,
-                               experiment=self.experiment,
                                exp_input_dict=exp_input_dict)  # -wz-run
 
 
@@ -928,10 +927,10 @@ class trainer(object):
 
         return best_train, best_valid, best_test
 
-    def train_net(self, epoch, experiment=None, exp_input_dict=None):
+    def train_net(self, epoch, exp_input_dict=None):
         self.model.train()
         input_dict = self.get_input_dict(epoch)
-        train_loss, train_acc, val_loss = self.model.train_net(input_dict) if experiment is None else self.model.train_net(input_dict, experiment= experiment, exp_input_dict=exp_input_dict)
+        train_loss, train_acc, val_loss = self.model.train_net(input_dict) if self.experiment is None else self.model.train_net(input_dict, exp_input_dict=exp_input_dict)
         return train_loss, train_acc, val_loss
     def __early_stopping(self, val_score,
                          min_delta,

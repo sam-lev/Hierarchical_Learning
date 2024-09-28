@@ -1355,7 +1355,7 @@ class HierSGNN(torch.nn.Module):
 
     #fp = open('./run_logs/training_memory_profiler.log', 'w+')
     # @profile#stream=fp)
-    def train_net(self, input_dict):
+    def train_net(self, input_dict, exp_input_dict=None):
         return self.hierarchical_successive_train_net(input_dict)
 
 
