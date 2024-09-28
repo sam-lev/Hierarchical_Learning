@@ -1,0 +1,100 @@
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.001_WD3e-8_PERS0.6,0.95.log
+    *
+Best test: 48.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4884.9683 0.0000 
+final mean and std of test acc:  4884.9683 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-4_LRE_0.03_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.003_WD3e-4_PERS0.6,0.95.log
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.3_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.03_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-4_LRE_0.003_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.03_WD3e-4_PERS0.6,0.95.log
+Epoch: 40, Test Acc: 56.57% Test RoC: 0.50
+Seed: 1863326130, Epoch: 41, Loss: 0.6934, Approx Train Acc: 0.5599
+Seed: 1863326130, Epoch: 42, Loss: 0.6934, Approx Train Acc: 0.5601
+Seed: 1863326130, Epoch: 43, Loss: 0.6934, Approx Train Acc: 0.5674
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.3_WD3e-4_PERS0.6,0.95.log
+Seed: 2124594949, Epoch: 11, Loss: 0.6934, Approx Train Acc: 0.5642
+Seed: 2124594949, Epoch: 12, Loss: 0.6934, Approx Train Acc: 0.5635
+Seed: 2124594949, Epoch: 13, Loss: 0.6934, Approx Train Acc: 0.5628
+Seed: 2124594949, Epoch: 14, Loss: 0.6934, Approx Train Acc: 0.5637
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-4_LRE_0.001_WD3e-8_PERS0.6,0.95.log
+    *  %%%%%%%%%%%%%
+    *
+Epoch: 40, Test Acc: 50.49% 
+Seed: 2459260394, Epoch: 41, Loss: 0.0031, Approx Train Acc: 0.4836
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.01_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.003_WD3e-8_PERS0.6,0.95.log
+    *
+Best test: 43.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4320.7196 0.0000 
+final mean and std of test acc:  4320.7196 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-4_LRE_0.01_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-4_LRE_0.3_WD3e-8_PERS0.6,0.95.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+

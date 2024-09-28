@@ -1,0 +1,3416 @@
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3290380381, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7343
+Best test: 39.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3915.4030 0.0000 
+final mean and std of test acc:  3915.4030 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2686502050, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9615
+Best test: 39.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3970.6852 0.0000 
+final mean and std of test acc:  3970.6852 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1878372915, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9626
+Best test: 39.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3927.0680 0.0000 
+final mean and std of test acc:  3927.0680 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2772119097, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9569
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 832672147, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9635
+Best test: 40.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4018.8670 0.0000 
+final mean and std of test acc:  4018.8670 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 4226378517, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9551
+Best test: 39.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3934.6757 0.0000 
+final mean and std of test acc:  3934.6757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 485786850, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7483
+Best test: 58.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5896.9417 0.0000 
+final mean and std of test acc:  5896.9417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 1026954554, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9381
+Best test: 52.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5269.0572 0.0000 
+final mean and std of test acc:  5269.0572 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.8.log
+Seed: 1083569058, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9619
+Best test: 41.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4176.5989 0.0000 
+final mean and std of test acc:  4176.5989 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.9.log
+Seed: 1622411015, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9684
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 289598102, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9587
+Best test: 39.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3949.3838 0.0000 
+final mean and std of test acc:  3949.3838 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 3842535782, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9300
+Best test: 50.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5072.2727 0.0000 
+final mean and std of test acc:  5072.2727 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-8_PERS0.7,0.9.log
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.001_WD5e-6_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-3_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 222016771, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9622
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3382627556, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9657
+Best test: 39.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3914.8958 0.0000 
+final mean and std of test acc:  3914.8958 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 2884868608, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9578
+Best test: 47.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4740.0720 0.0000 
+final mean and std of test acc:  4740.0720 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 2383330793, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7417
+Best test: 46.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4690.3687 0.0000 
+final mean and std of test acc:  4690.3687 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 1235718866, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9619
+Best test: 45.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4552.9239 0.0000 
+final mean and std of test acc:  4552.9239 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.8.log
+Seed: 20912471, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9647
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1454046298, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9609
+Best test: 39.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3926.5608 0.0000 
+final mean and std of test acc:  3926.5608 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 444237639, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9642
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3924.5321 0.0000 
+final mean and std of test acc:  3924.5321 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 1877076610, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9604
+Best test: 45.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4549.8808 0.0000 
+final mean and std of test acc:  4549.8808 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.9.log
+Seed: 3917916306, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7496
+Best test: 56.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5627.1238 0.0000 
+final mean and std of test acc:  5627.1238 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 865783928, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7366
+Best test: 41.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4107.1157 0.0000 
+final mean and std of test acc:  4107.1157 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 596192160, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9670
+Best test: 31.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3121.1645 0.0000 
+final mean and std of test acc:  3121.1645 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3474530382, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9541
+Best test: 39.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3921.9962 0.0000 
+final mean and std of test acc:  3921.9962 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 597819067, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9651
+Best test: 39.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3976.2641 0.0000 
+final mean and std of test acc:  3976.2641 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 29.79% 
+Best test: 45.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4551.9095 0.0000 
+final mean and std of test acc:  4551.9095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 2000143227, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9503
+Best test: 39.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3918.4460 0.0000 
+final mean and std of test acc:  3918.4460 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2285999823, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9551
+Best test: 38.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3875.3360 0.0000 
+final mean and std of test acc:  3875.3360 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 2068136627, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9547
+Best test: 53.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5351.2198 0.0000 
+final mean and std of test acc:  5351.2198 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 3360137852, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9483
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 681377783, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9404
+Best test: 39.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3942.7905 0.0000 
+final mean and std of test acc:  3942.7905 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 1215734132, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9577
+Best test: 52.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5279.2007 0.0000 
+final mean and std of test acc:  5279.2007 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 996019882, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9562
+Best test: 39.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3926.5608 0.0000 
+final mean and std of test acc:  3926.5608 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 973786934, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9538
+Best test: 41.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4167.4697 0.0000 
+final mean and std of test acc:  4167.4697 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.7.log
+Seed: 2707600461, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9566
+Best test: 35.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3595.3745 0.0000 
+final mean and std of test acc:  3595.3745 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 526020382, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9595
+Best test: 39.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3936.1972 0.0000 
+final mean and std of test acc:  3936.1972 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 509581702, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9570
+Best test: 45.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4567.1248 0.0000 
+final mean and std of test acc:  4567.1248 $\pm$ 0.0000
+
+----------------------------------------
+
+File: ABVHERE_exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 287627027, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9530
+Best test: 39.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3987.9292 0.0000 
+final mean and std of test acc:  3987.9292 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 2456002741, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9469
+Best test: 41.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4157.3262 0.0000 
+final mean and std of test acc:  4157.3262 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3427723149, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9626
+Best test: 28.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2865.5475 0.0000 
+final mean and std of test acc:  2865.5475 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 2994145651, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9527
+Best test: 39.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3923.5178 0.0000 
+final mean and std of test acc:  3923.5178 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1342003120, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9649
+Best test: 58.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5837.6021 0.0000 
+final mean and std of test acc:  5837.6021 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 2890915451, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7431
+Best test: 39.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3975.2498 0.0000 
+final mean and std of test acc:  3975.2498 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.8.log
+Seed: 530318286, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9496
+Best test: 42.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4252.1682 0.0000 
+final mean and std of test acc:  4252.1682 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 167384470, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9655
+Best test: 33.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3380.8389 0.0000 
+final mean and std of test acc:  3380.8389 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 944783857, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9503
+Best test: 39.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3983.3646 0.0000 
+final mean and std of test acc:  3983.3646 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.001_WD5e-6_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 385816259, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9621
+Best test: 39.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3990.9723 0.0000 
+final mean and std of test acc:  3990.9723 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 2292979635, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9564
+Best test: 38.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3884.9724 0.0000 
+final mean and std of test acc:  3884.9724 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 1045653696, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9653
+Best test: 44.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4455.5460 0.0000 
+final mean and std of test acc:  4455.5460 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2270362059, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9618
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.9.log
+Seed: 1459581184, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9642
+Best test: 39.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3940.2546 0.0000 
+final mean and std of test acc:  3940.2546 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 512210404, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7284
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3924.5321 0.0000 
+final mean and std of test acc:  3924.5321 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2704376191, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9639
+Best test: 59.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5961.3531 0.0000 
+final mean and std of test acc:  5961.3531 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 1573855046, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9627
+Best test: 42.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4213.6228 0.0000 
+final mean and std of test acc:  4213.6228 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 2686708896, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.8947
+Best test: 39.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3994.0153 0.0000 
+final mean and std of test acc:  3994.0153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2973964628, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9652
+Best test: 38.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3827.1542 0.0000 
+final mean and std of test acc:  3827.1542 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 879373450, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7494
+Best test: 38.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3806.8672 0.0000 
+final mean and std of test acc:  3806.8672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 201151380, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9625
+Best test: 39.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3930.1111 0.0000 
+final mean and std of test acc:  3930.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 452524100, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9536
+Best test: 40.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4011.2593 0.0000 
+final mean and std of test acc:  4011.2593 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.8.log
+Seed: 2104892812, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7328
+Best test: 39.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3946.3407 0.0000 
+final mean and std of test acc:  3946.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 1031203150, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9520
+Best test: 39.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3975.4514 0.0000 
+final mean and std of test acc:  3975.4514 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 1417423530, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9558
+Best test: 47.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4797.3830 0.0000 
+final mean and std of test acc:  4797.3830 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 1051815338, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9688
+Best test: 42.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4239.4888 0.0000 
+final mean and std of test acc:  4239.4888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1406048394, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9593
+Best test: 26.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2690.5716 0.0000 
+final mean and std of test acc:  2690.5716 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2451033046, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9640
+Best test: 55.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5522.1383 0.0000 
+final mean and std of test acc:  5522.1383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 3569697568, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7310
+Best test: 29.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2907.1360 0.0000 
+final mean and std of test acc:  2907.1360 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 924018929, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9620
+Best test: 39.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3940.7618 0.0000 
+final mean and std of test acc:  3940.7618 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 2520064772, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9600
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3935514235, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9539
+Best test: 49.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4943.4498 0.0000 
+final mean and std of test acc:  4943.4498 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 1460932900, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9522
+Best test: 48.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4871.4307 0.0000 
+final mean and std of test acc:  4871.4307 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1157928613, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9599
+Best test: 46.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4678.1965 0.0000 
+final mean and std of test acc:  4678.1965 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 2182865040, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9572
+Best test: 53.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5379.1145 0.0000 
+final mean and std of test acc:  5379.1145 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 3492254333, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9616
+Best test: 39.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3927.0680 0.0000 
+final mean and std of test acc:  3927.0680 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 723467800, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7489
+Best test: 54.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5478.0139 0.0000 
+final mean and std of test acc:  5478.0139 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.9.log
+Seed: 474680672, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7516
+Best test: 42.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4231.8811 0.0000 
+final mean and std of test acc:  4231.8811 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 3485556461, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9576
+Best test: 41.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4177.1061 0.0000 
+final mean and std of test acc:  4177.1061 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 2324842485, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9431
+Best test: 50.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5048.4354 0.0000 
+final mean and std of test acc:  5048.4354 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 1951792234, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9639
+Best test: 39.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3933.6613 0.0000 
+final mean and std of test acc:  3933.6613 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 38.09% 
+Best test: 46.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4679.7180 0.0000 
+final mean and std of test acc:  4679.7180 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 3626451914, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7608
+Best test: 41.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4118.2736 0.0000 
+final mean and std of test acc:  4118.2736 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3688748817, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9615
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 54.02% 
+Best test: 58.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5896.4345 0.0000 
+final mean and std of test acc:  5896.4345 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 24337623, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9627
+Best test: 43.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4342.9528 0.0000 
+final mean and std of test acc:  4342.9528 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 1783740360, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9582
+Best test: 43.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4383.5269 0.0000 
+final mean and std of test acc:  4383.5269 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 2313704700, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9679
+Best test: 42.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4250.6467 0.0000 
+final mean and std of test acc:  4250.6467 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 2823154428, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9563
+Best test: 40.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4009.7378 0.0000 
+final mean and std of test acc:  4009.7378 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2236374357, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9633
+Best test: 47.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4709.6414 0.0000 
+final mean and std of test acc:  4709.6414 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3199454529, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9638
+Best test: 39.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3965.1063 0.0000 
+final mean and std of test acc:  3965.1063 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 2040745646, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7217
+Best test: 39.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3937.2115 0.0000 
+final mean and std of test acc:  3937.2115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 4128031755, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9647
+Best test: 42.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4239.4888 0.0000 
+final mean and std of test acc:  4239.4888 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 1381989084, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9652
+Best test: 40.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4072.6277 0.0000 
+final mean and std of test acc:  4072.6277 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 2170712412, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9538
+Best test: 47.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4777.0959 0.0000 
+final mean and std of test acc:  4777.0959 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 2308891282, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9646
+Best test: 41.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4153.2688 0.0000 
+final mean and std of test acc:  4153.2688 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 342132929, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9631
+Best test: 44.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4451.4886 0.0000 
+final mean and std of test acc:  4451.4886 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 1607203606, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9545
+Best test: 50.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5089.0095 0.0000 
+final mean and std of test acc:  5089.0095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 4015516044, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9621
+Best test: 39.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3900.6948 0.0000 
+final mean and std of test acc:  3900.6948 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 10.38% 
+Best test: 25.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2598.7726 0.0000 
+final mean and std of test acc:  2598.7726 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 1065997985, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9681
+Best test: 42.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4298.8284 0.0000 
+final mean and std of test acc:  4298.8284 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 110642542, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9563
+Best test: 41.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4143.1252 0.0000 
+final mean and std of test acc:  4143.1252 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 947205897, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9643
+Best test: 41.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4127.9099 0.0000 
+final mean and std of test acc:  4127.9099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 4076640847, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9662
+Best test: 42.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4224.7806 0.0000 
+final mean and std of test acc:  4224.7806 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 36.79% 
+Best test: 60.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6069.3818 0.0000 
+final mean and std of test acc:  6069.3818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 3476727973, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9659
+Best test: 47.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4758.3304 0.0000 
+final mean and std of test acc:  4758.3304 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 23.98% 
+Best test: 32.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3284.9825 0.0000 
+final mean and std of test acc:  3284.9825 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 2106496783, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9383
+Best test: 39.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3937.2115 0.0000 
+final mean and std of test acc:  3937.2115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2848999118, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9578
+Best test: 38.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3897.6518 0.0000 
+final mean and std of test acc:  3897.6518 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.7.log
+Seed: 3613838825, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9628
+Best test: 39.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3926.5608 0.0000 
+final mean and std of test acc:  3926.5608 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 1347107134, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9615
+Best test: 58.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5805.1428 0.0000 
+final mean and std of test acc:  5805.1428 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.03_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 19.32% 
+Best test: 33.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3372.2169 0.0000 
+final mean and std of test acc:  3372.2169 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 15.31% 
+Best test: 19.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1956.6871 0.0000 
+final mean and std of test acc:  1956.6871 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3201945239, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9590
+Best test: 39.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3905.2594 0.0000 
+final mean and std of test acc:  3905.2594 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 746783061, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7522
+Best test: 66.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6660.7496 0.0000 
+final mean and std of test acc:  6660.7496 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-3_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 61.34% 
+Best test: 65.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6565.4004 0.0000 
+final mean and std of test acc:  6565.4004 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2716567838, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9563
+Best test: 43.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4317.5940 0.0000 
+final mean and std of test acc:  4317.5940 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.003_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 55.43% 
+Best test: 56.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5674.7984 0.0000 
+final mean and std of test acc:  5674.7984 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 3749499273, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9509
+Best test: 45.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4568.1392 0.0000 
+final mean and std of test acc:  4568.1392 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 4225562047, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9636
+Best test: 42.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4282.5988 0.0000 
+final mean and std of test acc:  4282.5988 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 203028068, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9593
+Best test: 42.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4226.3022 0.0000 
+final mean and std of test acc:  4226.3022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2582703369, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7336
+Best test: 38.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3864.1781 0.0000 
+final mean and std of test acc:  3864.1781 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    return func(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/sklearn/metrics/_ranking.py", line 619, in roc_auc_score
+    raise ValueError("multi_class must be in ('ovo', 'ovr')")
+ValueError: multi_class must be in ('ovo', 'ovr')
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 3582438418, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9566
+Best test: 39.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3929.6039 0.0000 
+final mean and std of test acc:  3929.6039 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-8_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 596904511, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7328
+Best test: 40.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4082.7712 0.0000 
+final mean and std of test acc:  4082.7712 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 1625164966, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9626
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.2384 0.0000 
+final mean and std of test acc:  3925.2384 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2012987345, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7338
+Best test: 61.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6150.0228 0.0000 
+final mean and std of test acc:  6150.0228 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 3174029747, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9505
+Best test: 40.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4082.7712 0.0000 
+final mean and std of test acc:  4082.7712 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 3289111226, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7492
+Best test: 66.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6671.4003 0.0000 
+final mean and std of test acc:  6671.4003 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 535781220, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7182
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 2047809688, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7475
+Best test: 35.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3509.1545 0.0000 
+final mean and std of test acc:  3509.1545 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 2783721494, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9511
+Best test: 55.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5529.5192 0.0000 
+final mean and std of test acc:  5529.5192 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 271853750, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7475
+Best test: 61.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6170.8171 0.0000 
+final mean and std of test acc:  6170.8171 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 3145056923, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9195
+Best test: 68.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6869.1992 0.0000 
+final mean and std of test acc:  6869.1992 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 48401163, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9457
+Best test: 70.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7028.9598 0.0000 
+final mean and std of test acc:  7028.9598 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 2597374103, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9547
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3488509760, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9508
+Best test: 45.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4523.5076 0.0000 
+final mean and std of test acc:  4523.5076 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 107145569, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9658
+Best test: 39.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3921.9962 0.0000 
+final mean and std of test acc:  3921.9962 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 2707592708, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7307
+Best test: 39.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3909.3168 0.0000 
+final mean and std of test acc:  3909.3168 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 81272121, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9548
+Best test: 37.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3757.1639 0.0000 
+final mean and std of test acc:  3757.1639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.9.log
+Seed: 3971336859, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9122
+Best test: 52.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5239.1337 0.0000 
+final mean and std of test acc:  5239.1337 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.8.log
+Seed: 4246785417, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9598
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 4244527973, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9389
+Best test: 57.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5768.1189 0.0000 
+final mean and std of test acc:  5768.1189 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 408408324, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9655
+Best test: 48.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4893.2393 0.0000 
+final mean and std of test acc:  4893.2393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 1057112093, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9654
+Best test: 39.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3932.6470 0.0000 
+final mean and std of test acc:  3932.6470 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3970407124, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9629
+Best test: 39.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3901.2020 0.0000 
+final mean and std of test acc:  3901.2020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.003_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 48.20% 
+Best test: 62.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6243.3433 0.0000 
+final mean and std of test acc:  6243.3433 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2680581532, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9589
+Best test: 39.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3921.4891 0.0000 
+final mean and std of test acc:  3921.4891 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1863936516, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9380
+Best test: 39.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3991.9866 0.0000 
+final mean and std of test acc:  3991.9866 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 3347301850, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9297
+Best test: 58.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5891.3628 0.0000 
+final mean and std of test acc:  5891.3628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2180153163, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7378
+Best test: 60.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6014.0995 0.0000 
+final mean and std of test acc:  6014.0995 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2794996067, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9142
+Best test: 53.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5306.0810 0.0000 
+final mean and std of test acc:  5306.0810 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3361885774, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9502
+Best test: 40.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4090.3789 0.0000 
+final mean and std of test acc:  4090.3789 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 1743286163, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9527
+Best test: 44.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4426.6369 0.0000 
+final mean and std of test acc:  4426.6369 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 300992495, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9193
+Best test: 64.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6496.9316 0.0000 
+final mean and std of test acc:  6496.9316 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 4005603024, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9364
+Best test: 59.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5951.2096 0.0000 
+final mean and std of test acc:  5951.2096 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 642451068, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9657
+Best test: 64.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6475.1230 0.0000 
+final mean and std of test acc:  6475.1230 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.9.log
+Seed: 3537318315, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9612
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.8.log
+Seed: 1255930583, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9557
+Best test: 44.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4449.4599 0.0000 
+final mean and std of test acc:  4449.4599 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1322901766, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7109
+Best test: 24.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2453.2130 0.0000 
+final mean and std of test acc:  2453.2130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 2540499200, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7448
+Best test: 39.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3928.0824 0.0000 
+final mean and std of test acc:  3928.0824 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 1997478122, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9660
+Best test: 45.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4586.9047 0.0000 
+final mean and std of test acc:  4586.9047 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 22.03% 
+Best test: 38.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3816.5035 0.0000 
+final mean and std of test acc:  3816.5035 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 2637016798, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.8980
+Best test: 51.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5169.1434 0.0000 
+final mean and std of test acc:  5169.1434 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 651816018, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9522
+Best test: 57.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5726.5304 0.0000 
+final mean and std of test acc:  5726.5304 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 3657129728, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7312
+Best test: 54.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5474.4637 0.0000 
+final mean and std of test acc:  5474.4637 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 665640412, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9519
+Best test: 40.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4038.6469 0.0000 
+final mean and std of test acc:  4038.6469 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2882822809, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7443
+Best test: 39.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3994.0153 0.0000 
+final mean and std of test acc:  3994.0153 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3083320758, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7330
+Best test: 14.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1459.7281 0.0000 
+final mean and std of test acc:  1459.7281 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 3020908546, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9465
+Best test: 44.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4472.5096 0.0000 
+final mean and std of test acc:  4472.5096 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 3947205296, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7560
+Best test: 35.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3585.7382 0.0000 
+final mean and std of test acc:  3585.7382 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1197738602, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9581
+Best test: 39.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3930.1111 0.0000 
+final mean and std of test acc:  3930.1111 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 67.82% 
+Best test: 71.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7103.5147 0.0000 
+final mean and std of test acc:  7103.5147 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1760483789, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7439
+Best test: 41.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4120.8095 0.0000 
+final mean and std of test acc:  4120.8095 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 3026314042, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9557
+Best test: 39.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3917.4317 0.0000 
+final mean and std of test acc:  3917.4317 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 3899531693, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9568
+Best test: 39.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.8192 0.0000 
+final mean and std of test acc:  3944.8192 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 1220865601, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9440
+Best test: 68.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6850.4336 0.0000 
+final mean and std of test acc:  6850.4336 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 2592800668, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9572
+Best test: 42.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4288.6849 0.0000 
+final mean and std of test acc:  4288.6849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 1091517933, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9557
+Best test: 52.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5240.1481 0.0000 
+final mean and std of test acc:  5240.1481 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3469216916, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9394
+Best test: 40.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4028.5033 0.0000 
+final mean and std of test acc:  4028.5033 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1120843450, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9515
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3104594683, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7394
+Best test: 11.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1177.6639 0.0000 
+final mean and std of test acc:  1177.6639 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 1556121689, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9553
+Best test: 39.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3942.7905 0.0000 
+final mean and std of test acc:  3942.7905 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 4025718231, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7379
+Best test: 22.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2221.9405 0.0000 
+final mean and std of test acc:  2221.9405 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3709361096, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9608
+Best test: 41.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4175.0773 0.0000 
+final mean and std of test acc:  4175.0773 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3713545947, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9505
+Best test: 40.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4017.8526 0.0000 
+final mean and std of test acc:  4017.8526 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 4152142261, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9605
+Best test: 41.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4136.0248 0.0000 
+final mean and std of test acc:  4136.0248 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.001_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 57.71% 
+Best test: 66.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6648.0702 0.0000 
+final mean and std of test acc:  6648.0702 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 191384519, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7390
+Best test: 69.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6919.9168 0.0000 
+final mean and std of test acc:  6919.9168 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 17.16% 
+Best test: 17.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1715.7783 0.0000 
+final mean and std of test acc:  1715.7783 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 3678147093, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9511
+Best test: 38.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3844.3982 0.0000 
+final mean and std of test acc:  3844.3982 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 2560719144, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9656
+Best test: 40.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4089.8717 0.0000 
+final mean and std of test acc:  4089.8717 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 616776275, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9629
+Best test: 39.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3981.3359 0.0000 
+final mean and std of test acc:  3981.3359 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 1936592782, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9570
+Best test: 39.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3916.4173 0.0000 
+final mean and std of test acc:  3916.4173 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2471839081, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7431
+Best test: 31.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3104.9348 0.0000 
+final mean and std of test acc:  3104.9348 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 6.90% 
+Best test: 10.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1033.6258 0.0000 
+final mean and std of test acc:  1033.6258 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 52.68% 
+Best test: 59.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5932.4441 0.0000 
+final mean and std of test acc:  5932.4441 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.7.log
+Seed: 397926312, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9526
+Best test: 38.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3881.9293 0.0000 
+final mean and std of test acc:  3881.9293 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 3208394478, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9470
+Best test: 43.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4303.9002 0.0000 
+final mean and std of test acc:  4303.9002 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2271773598, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7467
+Best test: 50.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5046.9138 0.0000 
+final mean and std of test acc:  5046.9138 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3966791540, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9661
+Best test: 45.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4540.7516 0.0000 
+final mean and std of test acc:  4540.7516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 4021456197, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7404
+Best test: 39.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3905.2594 0.0000 
+final mean and std of test acc:  3905.2594 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 842890671, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9644
+Best test: 42.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4225.7950 0.0000 
+final mean and std of test acc:  4225.7950 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 1884005904, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9157
+Best test: 67.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6732.2615 0.0000 
+final mean and std of test acc:  6732.2615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 2394864205, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9563
+Best test: 44.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4438.8091 0.0000 
+final mean and std of test acc:  4438.8091 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 744506321, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9434
+Best test: 45.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4540.7516 0.0000 
+final mean and std of test acc:  4540.7516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4062780662, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7422
+Best test: 65.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6556.7784 0.0000 
+final mean and std of test acc:  6556.7784 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1648629250, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9560
+Best test: 40.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4003.6517 0.0000 
+final mean and std of test acc:  4003.6517 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 2466213414, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9646
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.7.log
+Seed: 4224296079, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9453
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1196186122, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9523
+Best test: 39.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3927.5752 0.0000 
+final mean and std of test acc:  3927.5752 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2287360310, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9523
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 1071538240, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9336
+Best test: 70.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6999.5435 0.0000 
+final mean and std of test acc:  6999.5435 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 23488319, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9595
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3236426361, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7359
+Best test: 55.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5592.1286 0.0000 
+final mean and std of test acc:  5592.1286 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 615111603, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9458
+Best test: 61.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6104.8841 0.0000 
+final mean and std of test acc:  6104.8841 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 1487214464, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9512
+Best test: 41.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4154.7903 0.0000 
+final mean and std of test acc:  4154.7903 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 899462260, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7517
+Best test: 65.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6573.5152 0.0000 
+final mean and std of test acc:  6573.5152 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 3975058027, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9493
+Best test: 53.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5327.6527 0.0000 
+final mean and std of test acc:  5327.6527 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1956610123, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9684
+Best test: 43.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4337.8810 0.0000 
+final mean and std of test acc:  4337.8810 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2914277255, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7368
+Best test: 40.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4038.1397 0.0000 
+final mean and std of test acc:  4038.1397 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 1240858140, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9618
+Best test: 39.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3958.5130 0.0000 
+final mean and std of test acc:  3958.5130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 866584603, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7506
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 2724878938, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9415
+Best test: 55.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5587.0569 0.0000 
+final mean and std of test acc:  5587.0569 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 3231726455, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9659
+Best test: 43.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4300.8571 0.0000 
+final mean and std of test acc:  4300.8571 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 645736297, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9246
+Best test: 44.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4473.2972 0.0000 
+final mean and std of test acc:  4473.2972 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 714256183, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7494
+Best test: 42.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4225.2878 0.0000 
+final mean and std of test acc:  4225.2878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 945672733, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7337
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 1957527582, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9406
+Best test: 53.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5351.2198 0.0000 
+final mean and std of test acc:  5351.2198 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 3203298061, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9493
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3943.8048 0.0000 
+final mean and std of test acc:  3943.8048 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 1357349426, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9563
+Best test: 39.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3957.4986 0.0000 
+final mean and std of test acc:  3957.4986 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 246163756, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9550
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 13.59% 
+Best test: 23.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2327.9404 0.0000 
+final mean and std of test acc:  2327.9404 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 2882831860, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9495
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3943.8048 0.0000 
+final mean and std of test acc:  3943.8048 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 2056345826, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9415
+Best test: 39.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3919.9675 0.0000 
+final mean and std of test acc:  3919.9675 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 17.83% 
+Best test: 34.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3399.6044 0.0000 
+final mean and std of test acc:  3399.6044 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 2951511686, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9595
+Best test: 39.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3957.4986 0.0000 
+final mean and std of test acc:  3957.4986 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 1513965290, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9580
+Best test: 38.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3859.6135 0.0000 
+final mean and std of test acc:  3859.6135 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 3837292564, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9502
+Best test: 53.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5378.6073 0.0000 
+final mean and std of test acc:  5378.6073 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 3175947499, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7347
+Best test: 65.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6569.9650 0.0000 
+final mean and std of test acc:  6569.9650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 58.27% 
+Best test: 58.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5846.7312 0.0000 
+final mean and std of test acc:  5846.7312 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.03_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 63.28% 
+Best test: 63.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6331.5920 0.0000 
+final mean and std of test acc:  6331.5920 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.9.log
+Seed: 2627501821, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9651
+Best test: 39.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3923.5178 0.0000 
+final mean and std of test acc:  3923.5178 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 436880569, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9611
+Best test: 47.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4704.0625 0.0000 
+final mean and std of test acc:  4704.0625 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.003_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 48.52% 
+Best test: 55.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5500.3297 0.0000 
+final mean and std of test acc:  5500.3297 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 2045758066, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7465
+Best test: 56.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5680.3773 0.0000 
+final mean and std of test acc:  5680.3773 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 740283614, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9544
+Best test: 40.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4041.8949 0.0000 
+final mean and std of test acc:  4041.8949 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 3500747224, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9645
+Best test: 15.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1577.3191 0.0000 
+final mean and std of test acc:  1577.3191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 4149132674, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9575
+Best test: 39.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3932.1398 0.0000 
+final mean and std of test acc:  3932.1398 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.8.log
+Seed: 692004574, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7465
+Best test: 35.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3524.8770 0.0000 
+final mean and std of test acc:  3524.8770 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2125999227, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9418
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 792562193, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9530
+Best test: 36.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3622.7621 0.0000 
+final mean and std of test acc:  3622.7621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.9.log
+Seed: 4118954686, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9560
+Best test: 38.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3837.2978 0.0000 
+final mean and std of test acc:  3837.2978 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 2896334528, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9512
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 2364083126, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9625
+Best test: 49.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4985.0383 0.0000 
+final mean and std of test acc:  4985.0383 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 1260662805, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7481
+Best test: 41.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4102.0439 0.0000 
+final mean and std of test acc:  4102.0439 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 2926077884, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9627
+Best test: 46.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4665.5171 0.0000 
+final mean and std of test acc:  4665.5171 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 3115289969, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7396
+Best test: 28.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2890.9063 0.0000 
+final mean and std of test acc:  2890.9063 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD0_PERS0.8.log
+Seed: 4121644021, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9639
+Best test: 36.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3616.6760 0.0000 
+final mean and std of test acc:  3616.6760 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 886259762, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9667
+Best test: 39.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3911.3455 0.0000 
+final mean and std of test acc:  3911.3455 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 2014508976, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7298
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1032328374, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7399
+Best test: 39.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.5465 0.0000 
+final mean and std of test acc:  3925.5465 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 1919106588, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7434
+Best test: 67.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6783.4863 0.0000 
+final mean and std of test acc:  6783.4863 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 4225778511, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9407
+Best test: 37.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3772.3792 0.0000 
+final mean and std of test acc:  3772.3792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 4031353329, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9512
+Best test: 45.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4596.0339 0.0000 
+final mean and std of test acc:  4596.0339 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 4053471833, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9506
+Best test: 47.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4736.0146 0.0000 
+final mean and std of test acc:  4736.0146 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-8_PERS0.8,0.9.log
+Seed: 3578034574, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9529
+Best test: 32.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3278.3892 0.0000 
+final mean and std of test acc:  3278.3892 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 1776152669, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9633
+Best test: 39.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3955.4699 0.0000 
+final mean and std of test acc:  3955.4699 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 532480745, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9582
+Best test: 39.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3945.3264 0.0000 
+final mean and std of test acc:  3945.3264 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 3288008217, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9589
+Best test: 50.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5060.1004 0.0000 
+final mean and std of test acc:  5060.1004 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 2603875019, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9579
+Best test: 41.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4151.7472 0.0000 
+final mean and std of test acc:  4151.7472 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1284594425, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7562
+Best test: 39.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3936.1972 0.0000 
+final mean and std of test acc:  3936.1972 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 3062200062, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9536
+Best test: 50.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5039.8134 0.0000 
+final mean and std of test acc:  5039.8134 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 4279275283, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9494
+Best test: 17.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1730.4864 0.0000 
+final mean and std of test acc:  1730.4864 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 1531525432, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9643
+Best test: 38.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3893.5944 0.0000 
+final mean and std of test acc:  3893.5944 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 3462802481, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9577
+Best test: 39.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3961.0488 0.0000 
+final mean and std of test acc:  3961.0488 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3719802815, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.8973
+Best test: 69.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6986.3570 0.0000 
+final mean and std of test acc:  6986.3570 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 2785725353, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9511
+Best test: 43.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4384.5413 0.0000 
+final mean and std of test acc:  4384.5413 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 2711263878, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9650
+Best test: 37.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3723.1830 0.0000 
+final mean and std of test acc:  3723.1830 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 47.86% 
+Best test: 53.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5355.7843 0.0000 
+final mean and std of test acc:  5355.7843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 532014722, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9287
+Best test: 69.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6906.2231 0.0000 
+final mean and std of test acc:  6906.2231 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2098141105, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7454
+Best test: 38.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3842.3695 0.0000 
+final mean and std of test acc:  3842.3695 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 2523502158, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9011
+Best test: 63.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6392.4532 0.0000 
+final mean and std of test acc:  6392.4532 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.8,0.9.log
+Seed: 3808480625, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9465
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 1052344353, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9617
+Best test: 50.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5091.5454 0.0000 
+final mean and std of test acc:  5091.5454 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 660237622, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9471
+Best test: 54.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5445.0474 0.0000 
+final mean and std of test acc:  5445.0474 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 1592826719, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9571
+Best test: 39.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3899.6805 0.0000 
+final mean and std of test acc:  3899.6805 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 3940129932, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9595
+Best test: 41.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4103.0583 0.0000 
+final mean and std of test acc:  4103.0583 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 2295145125, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9573
+Best test: 38.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3888.5226 0.0000 
+final mean and std of test acc:  3888.5226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 325316148, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9527
+Best test: 50.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5059.5932 0.0000 
+final mean and std of test acc:  5059.5932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 3051268822, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9571
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 85701503, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9294
+Best test: 39.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3979.3072 0.0000 
+final mean and std of test acc:  3979.3072 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 4082326628, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9642
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3197554581, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9680
+Best test: 49.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4924.6843 0.0000 
+final mean and std of test acc:  4924.6843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 42.86% 
+Best test: 63.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6381.8025 0.0000 
+final mean and std of test acc:  6381.8025 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 646093748, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9413
+Best test: 42.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4256.2256 0.0000 
+final mean and std of test acc:  4256.2256 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 1020067209, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9634
+Best test: 42.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4254.7041 0.0000 
+final mean and std of test acc:  4254.7041 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 153272252, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7568
+Best test: 37.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3774.4079 0.0000 
+final mean and std of test acc:  3774.4079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.7.log
+Seed: 3282945148, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9620
+Best test: 39.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3959.5273 0.0000 
+final mean and std of test acc:  3959.5273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2495259677, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9623
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3924.5321 0.0000 
+final mean and std of test acc:  3924.5321 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 1150297240, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9511
+Best test: 41.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4139.0678 0.0000 
+final mean and std of test acc:  4139.0678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3088262987, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7591
+Best test: 44.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4494.5986 0.0000 
+final mean and std of test acc:  4494.5986 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3899198091, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9529
+Best test: 65.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6522.2904 0.0000 
+final mean and std of test acc:  6522.2904 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 1081611104, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9483
+Best test: 41.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4158.3405 0.0000 
+final mean and std of test acc:  4158.3405 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.03_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 10.79% 
+Best test: 16.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1689.4051 0.0000 
+final mean and std of test acc:  1689.4051 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3126080438, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9518
+Best test: 42.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4277.0198 0.0000 
+final mean and std of test acc:  4277.0198 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 3903461273, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9602
+Best test: 39.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3934.6757 0.0000 
+final mean and std of test acc:  3934.6757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2148592091, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7452
+Best test: 60.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6075.9750 0.0000 
+final mean and std of test acc:  6075.9750 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2807417701, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9636
+Best test: 44.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4411.4216 0.0000 
+final mean and std of test acc:  4411.4216 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 1505356910, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9629
+Best test: 39.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3984.8861 0.0000 
+final mean and std of test acc:  3984.8861 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-3_LRE_0.03_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 32.30% 
+Best test: 47.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4773.0385 0.0000 
+final mean and std of test acc:  4773.0385 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.7.log
+Seed: 2880931884, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9513
+Best test: 41.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4102.5511 0.0000 
+final mean and std of test acc:  4102.5511 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 800024069, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9637
+Best test: 49.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4980.4737 0.0000 
+final mean and std of test acc:  4980.4737 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 240003333, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9219
+Best test: 38.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3888.5226 0.0000 
+final mean and std of test acc:  3888.5226 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 3461388617, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9610
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 3971436751, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9551
+Best test: 41.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4189.7855 0.0000 
+final mean and std of test acc:  4189.7855 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 470682616, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9663
+Best test: 38.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3874.8288 0.0000 
+final mean and std of test acc:  3874.8288 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2998017588, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9195
+Best test: 46.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4636.6080 0.0000 
+final mean and std of test acc:  4636.6080 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 2617370921, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9661
+Best test: 47.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4788.2538 0.0000 
+final mean and std of test acc:  4788.2538 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2535406650, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9680
+Best test: 52.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5258.9136 0.0000 
+final mean and std of test acc:  5258.9136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 583639238, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9489
+Best test: 22.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2232.5912 0.0000 
+final mean and std of test acc:  2232.5912 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 733540941, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9522
+Best test: 21.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2140.9008 0.0000 
+final mean and std of test acc:  2140.9008 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.7.log
+Seed: 1656081028, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7402
+Best test: 39.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3986.4077 0.0000 
+final mean and std of test acc:  3986.4077 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.8,0.9.log
+Seed: 445651112, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9564
+Best test: 39.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3952.4268 0.0000 
+final mean and std of test acc:  3952.4268 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 1038898940, Epoch: 83, Loss: 0.0016, Approx Train Acc: 0.8682
+Best test: 60.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6034.3866 0.0000 
+final mean and std of test acc:  6034.3866 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 2035579532, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9586
+Best test: 39.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3928.0824 0.0000 
+final mean and std of test acc:  3928.0824 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1541744518, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9589
+Best test: 41.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4176.5989 0.0000 
+final mean and std of test acc:  4176.5989 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 2073847002, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9519
+Best test: 39.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3993.5081 0.0000 
+final mean and std of test acc:  3993.5081 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 3076434273, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9597
+Best test: 39.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3924.0250 0.0000 
+final mean and std of test acc:  3924.0250 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 3965791535, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.8912
+Best test: 68.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6831.6681 0.0000 
+final mean and std of test acc:  6831.6681 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 4157970412, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7528
+Best test: 39.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3959.5273 0.0000 
+final mean and std of test acc:  3959.5273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 162912682, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9474
+Best test: 49.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4948.0144 0.0000 
+final mean and std of test acc:  4948.0144 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 1001327678, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9654
+Best test: 50.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5044.8851 0.0000 
+final mean and std of test acc:  5044.8851 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 1987833578, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7412
+Best test: 41.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4106.6085 0.0000 
+final mean and std of test acc:  4106.6085 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3135993641, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9644
+Best test: 44.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4449.9670 0.0000 
+final mean and std of test acc:  4449.9670 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 767721764, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9650
+Best test: 37.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3707.9677 0.0000 
+final mean and std of test acc:  3707.9677 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 1804788759, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9423
+Best test: 47.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4756.8088 0.0000 
+final mean and std of test acc:  4756.8088 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 4075937207, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9477
+Best test: 40.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4034.5894 0.0000 
+final mean and std of test acc:  4034.5894 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-4_PERS0.8,0.9.log
+Seed: 192145409, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9485
+Best test: 39.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3953.9484 0.0000 
+final mean and std of test acc:  3953.9484 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 377280813, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9649
+Best test: 48.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4819.9432 0.0000 
+final mean and std of test acc:  4819.9432 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD1e-6_PERS0.8,0.9.log
+Seed: 2121892345, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7443
+Best test: 54.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5488.1574 0.0000 
+final mean and std of test acc:  5488.1574 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 3067917813, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9636
+Best test: 39.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3996.5512 0.0000 
+final mean and std of test acc:  3996.5512 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.9.log
+Seed: 84563954, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9564
+Best test: 50.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5079.3731 0.0000 
+final mean and std of test acc:  5079.3731 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 4114284667, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9619
+Best test: 63.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6305.7260 0.0000 
+final mean and std of test acc:  6305.7260 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 378993579, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9494
+Best test: 38.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3833.2404 0.0000 
+final mean and std of test acc:  3833.2404 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.8.log
+Seed: 290339243, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9246
+Best test: 55.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5542.9325 0.0000 
+final mean and std of test acc:  5542.9325 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.9.log
+Seed: 3535984395, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9690
+Best test: 41.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4112.6946 0.0000 
+final mean and std of test acc:  4112.6946 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 3102601539, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9238
+Best test: 42.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4230.8668 0.0000 
+final mean and std of test acc:  4230.8668 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 4081430198, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9605
+Best test: 41.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4142.1109 0.0000 
+final mean and std of test acc:  4142.1109 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 2690679416, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9601
+Best test: 39.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3953.9484 0.0000 
+final mean and std of test acc:  3953.9484 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3476834148, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9588
+Best test: 46.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4645.7372 0.0000 
+final mean and std of test acc:  4645.7372 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 600957409, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9670
+Best test: 42.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4230.8668 0.0000 
+final mean and std of test acc:  4230.8668 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2308537989, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9605
+Best test: 49.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4960.6938 0.0000 
+final mean and std of test acc:  4960.6938 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 1590064628, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9498
+Best test: 45.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4528.5794 0.0000 
+final mean and std of test acc:  4528.5794 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD0_PERS0.8.log
+Seed: 2969192269, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9643
+Best test: 39.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3945.8335 0.0000 
+final mean and std of test acc:  3945.8335 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.9.log
+Seed: 1595410014, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7496
+Best test: 39.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3989.9579 0.0000 
+final mean and std of test acc:  3989.9579 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 1257528244, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9501
+Best test: 47.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4793.3256 0.0000 
+final mean and std of test acc:  4793.3256 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 2977215758, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9483
+Best test: 43.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4307.9576 0.0000 
+final mean and std of test acc:  4307.9576 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.8,0.9.log
+Seed: 1921256072, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9539
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 13.29% 
+Best test: 24.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2447.6340 0.0000 
+final mean and std of test acc:  2447.6340 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 3900584722, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9603
+Best test: 46.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4626.4645 0.0000 
+final mean and std of test acc:  4626.4645 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD0_PERS0.8.log
+Seed: 435826088, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9566
+Best test: 39.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3937.7187 0.0000 
+final mean and std of test acc:  3937.7187 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 25.92% 
+Best test: 35.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3554.2932 0.0000 
+final mean and std of test acc:  3554.2932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 2259040647, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9540
+Best test: 48.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4831.8710 0.0000 
+final mean and std of test acc:  4831.8710 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.001_WD5e-6_PERS0.7,0.9.log
+Epoch: 24, Test Acc: 86.22% Test RoC: 0.71
+Seed: 3631124689, Epoch: 25, Loss: 0.4372, Approx Train Acc: 0.8597
+Seed: 3631124689, Epoch: 26, Loss: 0.4287, Approx Train Acc: 0.8699
+Seed: 3631124689, Epoch: 27, Loss: 0.4403, Approx Train Acc: 0.8548
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 350458273, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9651
+Best test: 52.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5222.3969 0.0000 
+final mean and std of test acc:  5222.3969 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-4_LRE_0.001_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 13.29% 
+Best test: 39.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3939.2402 0.0000 
+final mean and std of test acc:  3939.2402 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.01_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 15.66% 
+Best test: 19.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1958.7158 0.0000 
+final mean and std of test acc:  1958.7158 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 3896843199, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7415
+Best test: 51.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5146.8276 0.0000 
+final mean and std of test acc:  5146.8276 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2678163537, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9622
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 1534435600, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9504
+Best test: 39.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3946.3407 0.0000 
+final mean and std of test acc:  3946.3407 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 4198807311, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9279
+Best test: 21.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2131.6630 0.0000 
+final mean and std of test acc:  2131.6630 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 3946861008, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9574
+Best test: 39.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3928.0824 0.0000 
+final mean and std of test acc:  3928.0824 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 3696780267, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9655
+Best test: 41.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4109.6516 0.0000 
+final mean and std of test acc:  4109.6516 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.001_WD1e-8_PERS0.8,0.9.log
+Seed: 3017416650, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7351
+Best test: 63.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6322.4628 0.0000 
+final mean and std of test acc:  6322.4628 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 4199675834, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9577
+Best test: 39.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3909.8240 0.0000 
+final mean and std of test acc:  3909.8240 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 38718034, Epoch: 83, Loss: 0.0021, Approx Train Acc: 0.4024
+Best test: 52.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5207.4457 0.0000 
+final mean and std of test acc:  5207.4457 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 3419835686, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7352
+Best test: 50.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5011.4115 0.0000 
+final mean and std of test acc:  5011.4115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.7.log
+Seed: 642032790, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9632
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 3442119345, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9639
+Best test: 41.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4160.8764 0.0000 
+final mean and std of test acc:  4160.8764 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 2899175551, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9670
+Best test: 39.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3932.6470 0.0000 
+final mean and std of test acc:  3932.6470 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD0_PERS0.8,0.9.log
+Seed: 2953429864, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9492
+Best test: 39.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3997.0584 0.0000 
+final mean and std of test acc:  3997.0584 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 284568955, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7308
+Best test: 18.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1898.3618 0.0000 
+final mean and std of test acc:  1898.3618 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 1322065992, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9500
+Best test: 43.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4320.6370 0.0000 
+final mean and std of test acc:  4320.6370 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 1237741650, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9574
+Best test: 39.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3990.4651 0.0000 
+final mean and std of test acc:  3990.4651 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 3743198938, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9631
+Best test: 40.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4045.9525 0.0000 
+final mean and std of test acc:  4045.9525 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 3887539682, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9539
+Best test: 42.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4263.3261 0.0000 
+final mean and std of test acc:  4263.3261 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR3e-3_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 40.88% 
+Best test: 43.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4358.6753 0.0000 
+final mean and std of test acc:  4358.6753 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.8,0.9.log
+Seed: 3897743382, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9544
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-6_PERS0.8,0.9.log
+Seed: 1902938192, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9551
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3925.0393 0.0000 
+final mean and std of test acc:  3925.0393 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 34485058, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9653
+Best test: 40.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4056.9052 0.0000 
+final mean and std of test acc:  4056.9052 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-4_PERS0.8,0.9.log
+Seed: 3419710028, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9638
+Best test: 47.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4730.4357 0.0000 
+final mean and std of test acc:  4730.4357 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 538523573, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9598
+Best test: 55.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5583.5066 0.0000 
+final mean and std of test acc:  5583.5066 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 2770065338, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9645
+Best test: 42.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4209.5653 0.0000 
+final mean and std of test acc:  4209.5653 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 3516724262, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9586
+Best test: 40.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4096.9722 0.0000 
+final mean and std of test acc:  4096.9722 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 2114538943, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7411
+Best test: 65.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6554.7497 0.0000 
+final mean and std of test acc:  6554.7497 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-4_LRE_0.01_WD5e-6_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 26.90% 
+Best test: 35.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3539.0780 0.0000 
+final mean and std of test acc:  3539.0780 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 3878526596, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9571
+Best test: 39.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.8192 0.0000 
+final mean and std of test acc:  3944.8192 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 36709708, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9616
+Best test: 39.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3928.5895 0.0000 
+final mean and std of test acc:  3928.5895 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1915472025, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9678
+Best test: 39.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3979.3072 0.0000 
+final mean and std of test acc:  3979.3072 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 4012873559, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9602
+Best test: 38.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3877.8719 0.0000 
+final mean and std of test acc:  3877.8719 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 1982182996, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9667
+Best test: 39.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3993.2035 0.0000 
+final mean and std of test acc:  3993.2035 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 4077576262, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9606
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3944.3120 0.0000 
+final mean and std of test acc:  3944.3120 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR1e-3_LRE_0.01_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 48.82% 
+Best test: 54.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5459.2484 0.0000 
+final mean and std of test acc:  5459.2484 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.9.log
+Seed: 1832934553, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9566
+Best test: 39.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3917.9388 0.0000 
+final mean and std of test acc:  3917.9388 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3893701124, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9602
+Best test: 48.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4885.6317 0.0000 
+final mean and std of test acc:  4885.6317 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 1680782578, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9638
+Best test: 53.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5373.5355 0.0000 
+final mean and std of test acc:  5373.5355 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 197250445, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9499
+Best test: 64.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6495.9172 0.0000 
+final mean and std of test acc:  6495.9172 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 3185002439, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9619
+Best test: 46.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4691.8902 0.0000 
+final mean and std of test acc:  4691.8902 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.01_LRE_0.03_WD0_PERS0.8.log
+Seed: 3651303436, Epoch: 83, Loss: 0.0015, Approx Train Acc: 0.9424
+Best test: 43.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4309.9863 0.0000 
+final mean and std of test acc:  4309.9863 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 1507302652, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9619
+Best test: 40.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4074.6564 0.0000 
+final mean and std of test acc:  4074.6564 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_21_HST_Planetoid_PubMed_LR0.03_LRE_0.003_WD5e-5_PERS0.7,0.9.log
+Epoch: 120, Test Acc: 45.49% 
+Best test: 65.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6541.5631 0.0000 
+final mean and std of test acc:  6541.5631 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 4255474735, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9591
+Best test: 44.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4415.9862 0.0000 
+final mean and std of test acc:  4415.9862 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 1736080625, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9582
+Best test: 39.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3953.4412 0.0000 
+final mean and std of test acc:  3953.4412 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 3226353108, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9670
+Best test: 39.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3924.5321 0.0000 
+final mean and std of test acc:  3924.5321 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3936854246, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9551
+Best test: 56.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5624.5879 0.0000 
+final mean and std of test acc:  5624.5879 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.7.log
+Seed: 2713898952, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7141
+Best test: 39.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3923.0106 0.0000 
+final mean and std of test acc:  3923.0106 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 2485665422, Epoch: 83, Loss: 0.0018, Approx Train Acc: 0.7320
+Best test: 53.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5395.8513 0.0000 
+final mean and std of test acc:  5395.8513 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3553603505, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9605
+Best test: 39.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3943.8048 0.0000 
+final mean and std of test acc:  3943.8048 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 4155406375, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9685
+Best test: 43.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4362.2255 0.0000 
+final mean and std of test acc:  4362.2255 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 366583727, Epoch: 83, Loss: 0.0014, Approx Train Acc: 0.9632
+Best test: 39.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3937.7187 0.0000 
+final mean and std of test acc:  3937.7187 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_sTHIRTEEEEENNNN_Planetoid_PubMed_LR0.03_LRE_0.001_WD0_PERS0.8,0.9.log
+Seed: 2036325415, Epoch: 83, Loss: 0.0017, Approx Train Acc: 0.7321
+Best test: 64.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6432.5202 0.0000 
+final mean and std of test acc:  6432.5202 $\pm$ 0.0000
+
+----------------------------------------
+

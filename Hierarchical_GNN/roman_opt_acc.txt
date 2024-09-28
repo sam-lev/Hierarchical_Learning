@@ -1,0 +1,8 @@
+All Results:
+48.85,43.21
+Largest value: 48.85%
+Line number: 3
+Two lines above the largest value line:
+File: exp_hjt_27_HJT_HeterophilousGraphDataset_roman_empire_LR3e-3_LRE_0.001_WD3e-8_PERS0.6,0.95.log
+*
+Best test: 48.85% F1 Test: 0.00 Best ROC Test: 0.00

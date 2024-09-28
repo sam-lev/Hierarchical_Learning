@@ -1,0 +1,3712 @@
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.8.log
+Seed: 891618781, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9171
+Best test: 87.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8761.6471 0.0000 
+final mean and std of test acc:  8761.6471 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 898447136, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8513
+Best test: 81.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8124.4364 0.0000 
+final mean and std of test acc:  8124.4364 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.5.log
+Seed: 2337435087, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8925
+Best test: 85.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8512.1731 0.0000 
+final mean and std of test acc:  8512.1731 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1182899687, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8897
+Best test: 84.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8488.1274 0.0000 
+final mean and std of test acc:  8488.1274 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 1864677350, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9249
+Best test: 87.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8788.6985 0.0000 
+final mean and std of test acc:  8788.6985 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.6.log
+Seed: 3266917815, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8930
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 2553205038, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8484
+Best test: 82.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8250.1503 0.0000 
+final mean and std of test acc:  8250.1503 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.8.log
+Seed: 331762548, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9107
+Best test: 86.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8650.4358 0.0000 
+final mean and std of test acc:  8650.4358 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 2724797186, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8856
+Best test: 84.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8461.0760 0.0000 
+final mean and std of test acc:  8461.0760 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 2911643419, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8944
+Best test: 84.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8494.1389 0.0000 
+final mean and std of test acc:  8494.1389 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 641293655, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9161
+Best test: 86.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8641.4187 0.0000 
+final mean and std of test acc:  8641.4187 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 2001043590, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8898
+Best test: 85.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8542.2302 0.0000 
+final mean and std of test acc:  8542.2302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.8.log
+Seed: 3056494875, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8861
+Best test: 83.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8301.7734 0.0000 
+final mean and std of test acc:  8301.7734 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.8.log
+Seed: 723550258, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9066
+Best test: 85.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8587.3159 0.0000 
+final mean and std of test acc:  8587.3159 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.8.log
+Seed: 1626577481, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9245
+Best test: 87.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8779.6814 0.0000 
+final mean and std of test acc:  8779.6814 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.7.log
+Seed: 4237748619, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9119
+Best test: 87.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8752.6300 0.0000 
+final mean and std of test acc:  8752.6300 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 119776438, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9125
+Best test: 86.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8614.3673 0.0000 
+final mean and std of test acc:  8614.3673 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 3151633720, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8857
+Best test: 81.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8106.4022 0.0000 
+final mean and std of test acc:  8106.4022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 116233002, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8955
+Best test: 85.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8526.7589 0.0000 
+final mean and std of test acc:  8526.7589 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 872774184, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8997
+Best test: 84.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8464.0818 0.0000 
+final mean and std of test acc:  8464.0818 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 3408941388, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8510
+Best test: 81.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8109.4079 0.0000 
+final mean and std of test acc:  8109.4079 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 4147147800, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9104
+Best test: 87.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8722.5729 0.0000 
+final mean and std of test acc:  8722.5729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 2543681149, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9063
+Best test: 86.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8671.4758 0.0000 
+final mean and std of test acc:  8671.4758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 4032106039, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8462
+Best test: 81.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8121.4307 0.0000 
+final mean and std of test acc:  8121.4307 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 864448544, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8482
+Best test: 81.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8112.4136 0.0000 
+final mean and std of test acc:  8112.4136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 3726805262, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8972
+Best test: 85.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8551.2474 0.0000 
+final mean and std of test acc:  8551.2474 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 1312754641, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8503
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3297606391, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8927
+Best test: 85.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8512.1731 0.0000 
+final mean and std of test acc:  8512.1731 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 3558646651, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8542
+Best test: 82.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8232.6420 0.0000 
+final mean and std of test acc:  8232.6420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 2290888042, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9037
+Best test: 87.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8725.5786 0.0000 
+final mean and std of test acc:  8725.5786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 4020376395, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8566
+Best test: 81.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8181.5449 0.0000 
+final mean and std of test acc:  8181.5449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 3468876485, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8808
+Best test: 83.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8367.8990 0.0000 
+final mean and std of test acc:  8367.8990 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.5.log
+Seed: 2557192548, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8869
+Best test: 82.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8277.7277 0.0000 
+final mean and std of test acc:  8277.7277 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.6.log
+Seed: 238791924, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8577
+Best test: 82.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8265.7048 0.0000 
+final mean and std of test acc:  8265.7048 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 599534601, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8482
+Best test: 80.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8052.2994 0.0000 
+final mean and std of test acc:  8052.2994 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 1591622482, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8535
+Best test: 82.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8226.0974 0.0000 
+final mean and std of test acc:  8226.0974 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 3483171440, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9172
+Best test: 88.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8824.7671 0.0000 
+final mean and std of test acc:  8824.7671 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 4045930783, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8941
+Best test: 84.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8476.1046 0.0000 
+final mean and std of test acc:  8476.1046 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 2709566063, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8573
+Best test: 82.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8223.6249 0.0000 
+final mean and std of test acc:  8223.6249 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 796105313, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8569
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2144187236, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9056
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.1960 0.0000 
+final mean and std of test acc:  8524.1960 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 3743267365, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8926
+Best test: 86.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8662.4587 0.0000 
+final mean and std of test acc:  8662.4587 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 1166746530, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8369
+Best test: 81.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8172.5278 0.0000 
+final mean and std of test acc:  8172.5278 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 3181562925, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8966
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 2432471680, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8954
+Best test: 84.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8452.0589 0.0000 
+final mean and std of test acc:  8452.0589 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 3519762260, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8941
+Best test: 85.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8509.1674 0.0000 
+final mean and std of test acc:  8509.1674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 1348787090, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8514
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 2251090647, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9202
+Best test: 87.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8701.5329 0.0000 
+final mean and std of test acc:  8701.5329 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.9.log
+Seed: 3305186049, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9049
+Best test: 86.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8650.4358 0.0000 
+final mean and std of test acc:  8650.4358 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 3776936803, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8569
+Best test: 82.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8259.6934 0.0000 
+final mean and std of test acc:  8259.6934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 4090687039, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8858
+Best test: 82.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8247.6706 0.0000 
+final mean and std of test acc:  8247.6706 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 701136057, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8568
+Best test: 81.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8193.5678 0.0000 
+final mean and std of test acc:  8193.5678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.5.log
+Seed: 1318048699, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9075
+Best test: 87.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8722.5729 0.0000 
+final mean and std of test acc:  8722.5729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 1956626242, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9019
+Best test: 85.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8539.2245 0.0000 
+final mean and std of test acc:  8539.2245 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.9.log
+Seed: 2965550552, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8989
+Best test: 86.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8605.3502 0.0000 
+final mean and std of test acc:  8605.3502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 804455751, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9180
+Best test: 86.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8689.5101 0.0000 
+final mean and std of test acc:  8689.5101 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 1244838398, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8881
+Best test: 85.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8503.1560 0.0000 
+final mean and std of test acc:  8503.1560 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 425603497, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9115
+Best test: 86.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8677.4872 0.0000 
+final mean and std of test acc:  8677.4872 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.9.log
+Seed: 946921899, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8800
+Best test: 84.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8494.1389 0.0000 
+final mean and std of test acc:  8494.1389 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 4243649937, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9120
+Best test: 86.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8653.4415 0.0000 
+final mean and std of test acc:  8653.4415 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.9.log
+Seed: 353950301, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8468
+Best test: 81.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8151.4878 0.0000 
+final mean and std of test acc:  8151.4878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3375769704, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8541
+Best test: 82.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8226.6306 0.0000 
+final mean and std of test acc:  8226.6306 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 2691048567, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8717
+Best test: 82.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8217.6135 0.0000 
+final mean and std of test acc:  8217.6135 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 419419417, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8983
+Best test: 84.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8479.1103 0.0000 
+final mean and std of test acc:  8479.1103 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 217805500, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8799
+Best test: 84.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8400.9618 0.0000 
+final mean and std of test acc:  8400.9618 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3378619274, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8611
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 3274245313, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9147
+Best test: 87.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8710.5500 0.0000 
+final mean and std of test acc:  8710.5500 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2619476549, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9045
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 3450533773, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8997
+Best test: 84.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8494.1389 0.0000 
+final mean and std of test acc:  8494.1389 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 3911574395, Epoch: 79, Loss: 0.0218, Approx Train Acc: 0.8534
+Best test: 80.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8085.3622 0.0000 
+final mean and std of test acc:  8085.3622 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.8.log
+Seed: 2775622936, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8512
+Best test: 81.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8160.5050 0.0000 
+final mean and std of test acc:  8160.5050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 3432332372, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9152
+Best test: 87.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8740.6072 0.0000 
+final mean and std of test acc:  8740.6072 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2145029746, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9153
+Best test: 87.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8728.5843 0.0000 
+final mean and std of test acc:  8728.5843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 2316844942, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8622
+Best test: 82.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8280.7334 0.0000 
+final mean and std of test acc:  8280.7334 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 1445942548, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9020
+Best test: 85.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8506.1617 0.0000 
+final mean and std of test acc:  8506.1617 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 1891847595, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8570
+Best test: 82.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8229.6363 0.0000 
+final mean and std of test acc:  8229.6363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 2794618302, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9138
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.7.log
+Seed: 441963231, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9040
+Best test: 86.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8605.3502 0.0000 
+final mean and std of test acc:  8605.3502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 726171161, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8994
+Best test: 85.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8512.1731 0.0000 
+final mean and std of test acc:  8512.1731 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 1318651002, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8588
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.5735 0.0000 
+final mean and std of test acc:  8196.5735 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 1948056915, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8855
+Best test: 81.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8145.4764 0.0000 
+final mean and std of test acc:  8145.4764 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 2498135766, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9139
+Best test: 87.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8713.5558 0.0000 
+final mean and std of test acc:  8713.5558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.8.log
+Seed: 2364905161, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8578
+Best test: 81.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8169.5221 0.0000 
+final mean and std of test acc:  8169.5221 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 4096235435, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9053
+Best test: 85.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8596.3330 0.0000 
+final mean and std of test acc:  8596.3330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 2181313043, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9014
+Best test: 85.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8598.9176 0.0000 
+final mean and std of test acc:  8598.9176 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 777554008, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9160
+Best test: 85.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8596.3330 0.0000 
+final mean and std of test acc:  8596.3330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 1303433581, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9118
+Best test: 87.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8746.6186 0.0000 
+final mean and std of test acc:  8746.6186 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 1824220057, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9060
+Best test: 86.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8635.4073 0.0000 
+final mean and std of test acc:  8635.4073 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2846745451, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8463
+Best test: 80.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8061.3165 0.0000 
+final mean and std of test acc:  8061.3165 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 3682827091, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8516
+Best test: 82.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8214.6078 0.0000 
+final mean and std of test acc:  8214.6078 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 799739170, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9073
+Best test: 86.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8677.4872 0.0000 
+final mean and std of test acc:  8677.4872 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 2058790027, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9169
+Best test: 87.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8710.5500 0.0000 
+final mean and std of test acc:  8710.5500 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 1843698705, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8494
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.4707 0.0000 
+final mean and std of test acc:  8142.4707 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 797458850, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8971
+Best test: 84.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8406.9732 0.0000 
+final mean and std of test acc:  8406.9732 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 2841370821, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8453
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 4139799308, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9222
+Best test: 87.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8785.6928 0.0000 
+final mean and std of test acc:  8785.6928 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 2564264556, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8527
+Best test: 82.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8241.6592 0.0000 
+final mean and std of test acc:  8241.6592 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.6.log
+Seed: 320810644, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8901
+Best test: 86.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8608.3559 0.0000 
+final mean and std of test acc:  8608.3559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.7.log
+Seed: 2140727449, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9099
+Best test: 86.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8662.4587 0.0000 
+final mean and std of test acc:  8662.4587 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 994799759, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9094
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 4047602180, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9205
+Best test: 87.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8770.6643 0.0000 
+final mean and std of test acc:  8770.6643 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 2507738586, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8977
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 1896944912, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8571
+Best test: 81.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8124.4364 0.0000 
+final mean and std of test acc:  8124.4364 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 1837845854, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9101
+Best test: 86.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8638.4130 0.0000 
+final mean and std of test acc:  8638.4130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 602975817, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8500
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 4012291877, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8464
+Best test: 81.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8178.5392 0.0000 
+final mean and std of test acc:  8178.5392 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 2320193436, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9100
+Best test: 85.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8548.2417 0.0000 
+final mean and std of test acc:  8548.2417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 2170155810, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8399
+Best test: 80.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8097.3850 0.0000 
+final mean and std of test acc:  8097.3850 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 4193864501, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8381
+Best test: 81.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8103.3965 0.0000 
+final mean and std of test acc:  8103.3965 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 323047920, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8893
+Best test: 84.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8488.1274 0.0000 
+final mean and std of test acc:  8488.1274 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 2695817245, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8573
+Best test: 81.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8130.4479 0.0000 
+final mean and std of test acc:  8130.4479 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 2567008410, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9045
+Best test: 84.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8467.0875 0.0000 
+final mean and std of test acc:  8467.0875 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 2865862845, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9126
+Best test: 86.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8623.3844 0.0000 
+final mean and std of test acc:  8623.3844 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 1771341207, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8901
+Best test: 84.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8461.0760 0.0000 
+final mean and std of test acc:  8461.0760 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2153518461, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8997
+Best test: 85.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8560.2645 0.0000 
+final mean and std of test acc:  8560.2645 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 1524147511, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9112
+Best test: 86.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8689.5101 0.0000 
+final mean and std of test acc:  8689.5101 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.7.log
+Seed: 828189650, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8933
+Best test: 82.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8283.7391 0.0000 
+final mean and std of test acc:  8283.7391 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.5.log
+Seed: 2746245931, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9117
+Best test: 86.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8611.3616 0.0000 
+final mean and std of test acc:  8611.3616 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.9.log
+Seed: 1011702643, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9191
+Best test: 87.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8761.6471 0.0000 
+final mean and std of test acc:  8761.6471 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.8.log
+Seed: 1692520879, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9196
+Best test: 87.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8794.7099 0.0000 
+final mean and std of test acc:  8794.7099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 667993937, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8507
+Best test: 81.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8169.5221 0.0000 
+final mean and std of test acc:  8169.5221 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 3615565793, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8563
+Best test: 82.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8217.6135 0.0000 
+final mean and std of test acc:  8217.6135 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1055025479, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9095
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 4007413188, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9223
+Best test: 87.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8794.7099 0.0000 
+final mean and std of test acc:  8794.7099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 2293687319, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8881
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8470.0932 0.0000 
+final mean and std of test acc:  8470.0932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.6.log
+Seed: 195482923, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8987
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.6.log
+Seed: 1085718928, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8939
+Best test: 85.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8578.2988 0.0000 
+final mean and std of test acc:  8578.2988 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 197611160, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8503
+Best test: 81.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8175.5335 0.0000 
+final mean and std of test acc:  8175.5335 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 1599136993, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8980
+Best test: 84.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8488.1274 0.0000 
+final mean and std of test acc:  8488.1274 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 1536126374, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8912
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 1105179038, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8590
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3960245706, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9002
+Best test: 84.46% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8446.0475 0.0000 
+final mean and std of test acc:  8446.0475 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 1779889140, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9245
+Best test: 87.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8725.5786 0.0000 
+final mean and std of test acc:  8725.5786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 3476543965, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8500
+Best test: 81.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8103.3965 0.0000 
+final mean and std of test acc:  8103.3965 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 1674845415, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8986
+Best test: 86.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8605.3502 0.0000 
+final mean and std of test acc:  8605.3502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 620686226, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9141
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 2999785433, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8864
+Best test: 84.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8425.0075 0.0000 
+final mean and std of test acc:  8425.0075 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2104617176, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9019
+Best test: 84.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8400.4811 0.0000 
+final mean and std of test acc:  8400.4811 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 1698359894, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8495
+Best test: 81.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8151.4878 0.0000 
+final mean and std of test acc:  8151.4878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 967848422, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9017
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 862268451, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8583
+Best test: 82.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8223.6249 0.0000 
+final mean and std of test acc:  8223.6249 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 2182009671, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8525
+Best test: 82.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8199.5792 0.0000 
+final mean and std of test acc:  8199.5792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 812879926, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8986
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.6.log
+Seed: 1907783114, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8555
+Best test: 81.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8133.4536 0.0000 
+final mean and std of test acc:  8133.4536 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2857178375, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8935
+Best test: 86.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8602.3445 0.0000 
+final mean and std of test acc:  8602.3445 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 1049401646, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9212
+Best test: 86.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8668.4701 0.0000 
+final mean and std of test acc:  8668.4701 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 2032227615, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9223
+Best test: 87.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8776.6757 0.0000 
+final mean and std of test acc:  8776.6757 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 474263608, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8496
+Best test: 81.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8106.4022 0.0000 
+final mean and std of test acc:  8106.4022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 4232495638, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9140
+Best test: 87.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8713.5558 0.0000 
+final mean and std of test acc:  8713.5558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 2432549962, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8549
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 3414653964, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8985
+Best test: 86.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8623.3844 0.0000 
+final mean and std of test acc:  8623.3844 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 1788532338, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9113
+Best test: 86.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8680.4929 0.0000 
+final mean and std of test acc:  8680.4929 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 2038445111, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8484
+Best test: 81.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8148.4821 0.0000 
+final mean and std of test acc:  8148.4821 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.5.log
+Seed: 2533715439, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9112
+Best test: 86.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8650.4358 0.0000 
+final mean and std of test acc:  8650.4358 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 2932600984, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8515
+Best test: 82.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8232.6420 0.0000 
+final mean and std of test acc:  8232.6420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.7.log
+Seed: 4020242951, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8494
+Best test: 81.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8160.5050 0.0000 
+final mean and std of test acc:  8160.5050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 2610687718, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8501
+Best test: 82.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8205.5906 0.0000 
+final mean and std of test acc:  8205.5906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.8.log
+Seed: 1768352579, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9035
+Best test: 87.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8701.5329 0.0000 
+final mean and std of test acc:  8701.5329 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3106994152, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8540
+Best test: 81.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8118.4250 0.0000 
+final mean and std of test acc:  8118.4250 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 3272193102, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8615
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 1164295828, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8935
+Best test: 86.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8611.3616 0.0000 
+final mean and std of test acc:  8611.3616 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 2269672522, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8816
+Best test: 82.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8205.5906 0.0000 
+final mean and std of test acc:  8205.5906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3720007766, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8639
+Best test: 82.72% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8271.7163 0.0000 
+final mean and std of test acc:  8271.7163 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 335918835, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9071
+Best test: 86.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8689.5101 0.0000 
+final mean and std of test acc:  8689.5101 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 2249697556, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8963
+Best test: 84.43% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8443.0418 0.0000 
+final mean and std of test acc:  8443.0418 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 3653850313, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8537
+Best test: 81.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8187.5564 0.0000 
+final mean and std of test acc:  8187.5564 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.7.log
+Seed: 3158845698, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9003
+Best test: 85.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8530.2074 0.0000 
+final mean and std of test acc:  8530.2074 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.5.log
+Seed: 2656132993, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8763
+Best test: 82.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8229.6363 0.0000 
+final mean and std of test acc:  8229.6363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 3243638946, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8463
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1798730945, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8829
+Best test: 85.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8518.1846 0.0000 
+final mean and std of test acc:  8518.1846 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 3731511442, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8835
+Best test: 85.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8509.1674 0.0000 
+final mean and std of test acc:  8509.1674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 2808165468, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8992
+Best test: 86.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8698.5272 0.0000 
+final mean and std of test acc:  8698.5272 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 4288083315, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8609
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 1587636951, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8554
+Best test: 81.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8127.4421 0.0000 
+final mean and std of test acc:  8127.4421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 1020955951, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9168
+Best test: 86.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8668.4701 0.0000 
+final mean and std of test acc:  8668.4701 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.9.log
+Seed: 683733711, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9112
+Best test: 87.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8725.5786 0.0000 
+final mean and std of test acc:  8725.5786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 1349766078, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8390
+Best test: 80.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8025.2480 0.0000 
+final mean and std of test acc:  8025.2480 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 2323047308, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9100
+Best test: 86.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8626.3901 0.0000 
+final mean and std of test acc:  8626.3901 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 652751792, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9001
+Best test: 84.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8428.0132 0.0000 
+final mean and std of test acc:  8428.0132 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 4057885384, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8543
+Best test: 81.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8151.4878 0.0000 
+final mean and std of test acc:  8151.4878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 4101402601, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9090
+Best test: 86.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8602.3445 0.0000 
+final mean and std of test acc:  8602.3445 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 103566711, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9187
+Best test: 87.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8734.5957 0.0000 
+final mean and std of test acc:  8734.5957 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3279415628, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9199
+Best test: 85.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8538.7853 0.0000 
+final mean and std of test acc:  8538.7853 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.5.log
+Seed: 4151471262, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9023
+Best test: 86.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8629.3959 0.0000 
+final mean and std of test acc:  8629.3959 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.6,0.9.log
+Seed: 2331873017, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8906
+Best test: 84.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8428.0132 0.0000 
+final mean and std of test acc:  8428.0132 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2466699794, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9174
+Best test: 86.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8647.4301 0.0000 
+final mean and std of test acc:  8647.4301 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.5.log
+Seed: 356001257, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8850
+Best test: 84.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8454.6001 0.0000 
+final mean and std of test acc:  8454.6001 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 380180382, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8953
+Best test: 85.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8527.2017 0.0000 
+final mean and std of test acc:  8527.2017 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 742537255, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8428
+Best test: 80.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8064.3222 0.0000 
+final mean and std of test acc:  8064.3222 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 3501052367, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9210
+Best test: 87.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8725.5786 0.0000 
+final mean and std of test acc:  8725.5786 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 2886395277, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8998
+Best test: 85.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8548.2417 0.0000 
+final mean and std of test acc:  8548.2417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 2192700261, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9144
+Best test: 85.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8596.3330 0.0000 
+final mean and std of test acc:  8596.3330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 1967339529, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8985
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.5.log
+Seed: 3546890991, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9132
+Best test: 87.50% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8749.6243 0.0000 
+final mean and std of test acc:  8749.6243 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3720410650, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8888
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8523.7523 0.0000 
+final mean and std of test acc:  8523.7523 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 2335083024, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9122
+Best test: 85.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8503.1560 0.0000 
+final mean and std of test acc:  8503.1560 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.9.log
+Seed: 1362593226, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8897
+Best test: 86.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8608.3559 0.0000 
+final mean and std of test acc:  8608.3559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 1833655476, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8466
+Best test: 80.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8082.3565 0.0000 
+final mean and std of test acc:  8082.3565 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 4180740609, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9034
+Best test: 85.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8536.2188 0.0000 
+final mean and std of test acc:  8536.2188 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.6,0.8.log
+Seed: 1889705258, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8581
+Best test: 81.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8193.5678 0.0000 
+final mean and std of test acc:  8193.5678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 3312112218, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9157
+Best test: 87.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8716.5615 0.0000 
+final mean and std of test acc:  8716.5615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 37225606, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9217
+Best test: 88.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8800.7214 0.0000 
+final mean and std of test acc:  8800.7214 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 691659295, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8552
+Best test: 81.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8177.9916 0.0000 
+final mean and std of test acc:  8177.9916 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.8.log
+Seed: 373110758, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9014
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8524.1960 0.0000 
+final mean and std of test acc:  8524.1960 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 3164113663, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8667
+Best test: 81.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8130.4479 0.0000 
+final mean and std of test acc:  8130.4479 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 747997019, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9022
+Best test: 86.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8635.4073 0.0000 
+final mean and std of test acc:  8635.4073 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 2789398836, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8397
+Best test: 80.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8022.2423 0.0000 
+final mean and std of test acc:  8022.2423 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.6,0.9.log
+Seed: 390827448, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9066
+Best test: 86.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8608.3559 0.0000 
+final mean and std of test acc:  8608.3559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 1130508771, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9089
+Best test: 85.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8557.2588 0.0000 
+final mean and std of test acc:  8557.2588 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 1874016059, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9110
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.6.log
+Seed: 1229598475, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8890
+Best test: 84.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8476.1046 0.0000 
+final mean and std of test acc:  8476.1046 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.6.log
+Seed: 3797088226, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9129
+Best test: 87.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8773.6700 0.0000 
+final mean and std of test acc:  8773.6700 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 2080647170, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9273
+Best test: 88.13% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8812.7442 0.0000 
+final mean and std of test acc:  8812.7442 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2613146116, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8876
+Best test: 85.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8533.2131 0.0000 
+final mean and std of test acc:  8533.2131 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 1237790699, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8556
+Best test: 82.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8241.6592 0.0000 
+final mean and std of test acc:  8241.6592 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 326563895, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8506
+Best test: 82.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8229.6363 0.0000 
+final mean and std of test acc:  8229.6363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 1784924501, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8588
+Best test: 82.60% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8259.6934 0.0000 
+final mean and std of test acc:  8259.6934 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 1263295439, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8930
+Best test: 85.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8548.2417 0.0000 
+final mean and std of test acc:  8548.2417 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 3498779738, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8421
+Best test: 81.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8184.5506 0.0000 
+final mean and std of test acc:  8184.5506 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 2454511148, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8556
+Best test: 81.87% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8187.0114 0.0000 
+final mean and std of test acc:  8187.0114 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.8.log
+Seed: 4113348718, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9021
+Best test: 85.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8509.1674 0.0000 
+final mean and std of test acc:  8509.1674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1860630267, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8446
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 515685934, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9105
+Best test: 87.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8701.5329 0.0000 
+final mean and std of test acc:  8701.5329 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 2369949115, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8922
+Best test: 83.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8391.9447 0.0000 
+final mean and std of test acc:  8391.9447 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.9.log
+Seed: 3967341767, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8944
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 678400429, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8576
+Best test: 81.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8175.5335 0.0000 
+final mean and std of test acc:  8175.5335 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 1979407453, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8578
+Best test: 83.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8307.7848 0.0000 
+final mean and std of test acc:  8307.7848 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 2386499007, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8505
+Best test: 80.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8079.3508 0.0000 
+final mean and std of test acc:  8079.3508 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2577261758, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8424
+Best test: 80.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8082.3565 0.0000 
+final mean and std of test acc:  8082.3565 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1878291954, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9204
+Best test: 88.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8860.8356 0.0000 
+final mean and std of test acc:  8860.8356 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 2240254757, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9100
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 3457148685, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8805
+Best test: 84.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8400.9618 0.0000 
+final mean and std of test acc:  8400.9618 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.6,0.8.log
+Seed: 4266613553, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8457
+Best test: 81.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8130.4479 0.0000 
+final mean and std of test acc:  8130.4479 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 74724778, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8941
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8470.0932 0.0000 
+final mean and std of test acc:  8470.0932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.9.log
+Seed: 470735115, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9045
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.6.log
+Seed: 2669598597, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8953
+Best test: 81.76% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8175.5335 0.0000 
+final mean and std of test acc:  8175.5335 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 3355311601, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8805
+Best test: 84.10% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8409.9790 0.0000 
+final mean and std of test acc:  8409.9790 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 2467907478, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8636
+Best test: 82.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8253.6820 0.0000 
+final mean and std of test acc:  8253.6820 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 519656696, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9254
+Best test: 87.80% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8779.6814 0.0000 
+final mean and std of test acc:  8779.6814 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 2294318377, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8964
+Best test: 84.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8434.0246 0.0000 
+final mean and std of test acc:  8434.0246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.7.log
+Seed: 705564870, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8552
+Best test: 81.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8187.5564 0.0000 
+final mean and std of test acc:  8187.5564 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 20052904, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9164
+Best test: 86.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8665.4644 0.0000 
+final mean and std of test acc:  8665.4644 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.8.log
+Seed: 1794527914, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8782
+Best test: 82.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8214.6078 0.0000 
+final mean and std of test acc:  8214.6078 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 1105777551, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9017
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 4038310732, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9111
+Best test: 86.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8674.4815 0.0000 
+final mean and std of test acc:  8674.4815 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 1482024400, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8992
+Best test: 86.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8647.4301 0.0000 
+final mean and std of test acc:  8647.4301 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 1508890357, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9034
+Best test: 85.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8542.2302 0.0000 
+final mean and std of test acc:  8542.2302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 566976378, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8968
+Best test: 85.66% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8566.2759 0.0000 
+final mean and std of test acc:  8566.2759 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 656348055, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9124
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 4200193151, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8939
+Best test: 84.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8479.1103 0.0000 
+final mean and std of test acc:  8479.1103 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 2835478686, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8755
+Best test: 83.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8328.8248 0.0000 
+final mean and std of test acc:  8328.8248 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.6.log
+Seed: 4092986265, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9061
+Best test: 87.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8728.5843 0.0000 
+final mean and std of test acc:  8728.5843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 2351969322, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9037
+Best test: 85.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8593.3273 0.0000 
+final mean and std of test acc:  8593.3273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 2894978501, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9115
+Best test: 86.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8635.4073 0.0000 
+final mean and std of test acc:  8635.4073 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.9.log
+Seed: 3132360015, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8575
+Best test: 82.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8250.6763 0.0000 
+final mean and std of test acc:  8250.6763 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.6.log
+Seed: 4209748578, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8905
+Best test: 82.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8247.6706 0.0000 
+final mean and std of test acc:  8247.6706 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 2216050812, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8945
+Best test: 83.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8394.9504 0.0000 
+final mean and std of test acc:  8394.9504 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 3215008458, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8966
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3920559216, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8989
+Best test: 83.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8361.8876 0.0000 
+final mean and std of test acc:  8361.8876 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 2912085568, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8955
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.8.log
+Seed: 3117746607, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9047
+Best test: 87.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8719.5672 0.0000 
+final mean and std of test acc:  8719.5672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 2580971555, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8448
+Best test: 82.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8289.7505 0.0000 
+final mean and std of test acc:  8289.7505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 3441421014, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8487
+Best test: 81.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8145.4764 0.0000 
+final mean and std of test acc:  8145.4764 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-4_PERS0.8.log
+Seed: 42537330, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8496
+Best test: 81.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8124.4364 0.0000 
+final mean and std of test acc:  8124.4364 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 5115271, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8966
+Best test: 85.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8590.3216 0.0000 
+final mean and std of test acc:  8590.3216 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 2159200263, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8468
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 653400056, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8434
+Best test: 80.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8040.2765 0.0000 
+final mean and std of test acc:  8040.2765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.7.log
+Seed: 4076428366, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8535
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.7.log
+Seed: 439714036, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8814
+Best test: 84.22% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8422.0018 0.0000 
+final mean and std of test acc:  8422.0018 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 3120425925, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9175
+Best test: 87.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8701.5329 0.0000 
+final mean and std of test acc:  8701.5329 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.6,0.9.log
+Seed: 108657944, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9074
+Best test: 84.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8482.1160 0.0000 
+final mean and std of test acc:  8482.1160 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 432941248, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8534
+Best test: 81.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8118.4250 0.0000 
+final mean and std of test acc:  8118.4250 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 415192751, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9007
+Best test: 85.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8551.2474 0.0000 
+final mean and std of test acc:  8551.2474 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 431025560, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8800
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 326927022, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8952
+Best test: 85.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8503.1560 0.0000 
+final mean and std of test acc:  8503.1560 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.9.log
+Seed: 187901403, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8581
+Best test: 82.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8274.7220 0.0000 
+final mean and std of test acc:  8274.7220 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.7.log
+Seed: 2774784652, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8904
+Best test: 81.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8169.5221 0.0000 
+final mean and std of test acc:  8169.5221 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.5.log
+Seed: 3585838138, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9083
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.5.log
+Seed: 231613197, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9062
+Best test: 85.81% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8581.3045 0.0000 
+final mean and std of test acc:  8581.3045 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2851646584, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8778
+Best test: 83.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8388.9390 0.0000 
+final mean and std of test acc:  8388.9390 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 12193660, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9148
+Best test: 87.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8728.5843 0.0000 
+final mean and std of test acc:  8728.5843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 2845178434, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8757
+Best test: 81.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8172.5278 0.0000 
+final mean and std of test acc:  8172.5278 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.5.log
+Seed: 2963736444, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8930
+Best test: 82.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8274.7220 0.0000 
+final mean and std of test acc:  8274.7220 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 867560398, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8573
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 3052070557, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9207
+Best test: 86.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8698.1359 0.0000 
+final mean and std of test acc:  8698.1359 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.5.log
+Seed: 2722072557, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9012
+Best test: 86.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8602.3445 0.0000 
+final mean and std of test acc:  8602.3445 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 778500489, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9134
+Best test: 86.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8656.4472 0.0000 
+final mean and std of test acc:  8656.4472 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 511803198, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9225
+Best test: 87.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8764.6528 0.0000 
+final mean and std of test acc:  8764.6528 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 1958939746, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9036
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 1131451482, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8467
+Best test: 81.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8106.4022 0.0000 
+final mean and std of test acc:  8106.4022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.8.log
+Seed: 504928114, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8956
+Best test: 85.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8554.2531 0.0000 
+final mean and std of test acc:  8554.2531 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3284928477, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9028
+Best test: 85.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8542.2302 0.0000 
+final mean and std of test acc:  8542.2302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.9.log
+Seed: 1845514356, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8702
+Best test: 83.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8325.8191 0.0000 
+final mean and std of test acc:  8325.8191 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.9.log
+Seed: 1335770550, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8535
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 3996027915, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9145
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.7.log
+Seed: 4160604218, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8926
+Best test: 85.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8506.1617 0.0000 
+final mean and std of test acc:  8506.1617 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 1890944316, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8576
+Best test: 82.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8229.6363 0.0000 
+final mean and std of test acc:  8229.6363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.6,0.8.log
+Seed: 326032633, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8873
+Best test: 85.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8500.1503 0.0000 
+final mean and std of test acc:  8500.1503 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.6.log
+Seed: 727339205, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8496
+Best test: 81.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8106.4022 0.0000 
+final mean and std of test acc:  8106.4022 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.9.log
+Seed: 2872916914, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8968
+Best test: 84.16% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8415.5141 0.0000 
+final mean and std of test acc:  8415.5141 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.8.log
+Seed: 265507932, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9158
+Best test: 86.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8692.5158 0.0000 
+final mean and std of test acc:  8692.5158 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 1520266853, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9180
+Best test: 87.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8755.6357 0.0000 
+final mean and std of test acc:  8755.6357 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.8.log
+Seed: 962497167, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9118
+Best test: 85.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8575.2931 0.0000 
+final mean and std of test acc:  8575.2931 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.9.log
+Seed: 2912251523, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8541
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 2214884251, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8541
+Best test: 81.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8118.4250 0.0000 
+final mean and std of test acc:  8118.4250 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.7.log
+Seed: 204818037, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8979
+Best test: 85.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8521.1903 0.0000 
+final mean and std of test acc:  8521.1903 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.5.log
+Seed: 2077314164, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9180
+Best test: 87.52% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8752.2550 0.0000 
+final mean and std of test acc:  8752.2550 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 3581224978, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9029
+Best test: 84.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8479.1103 0.0000 
+final mean and std of test acc:  8479.1103 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.6,0.9.log
+Seed: 1914271674, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8936
+Best test: 83.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8346.8590 0.0000 
+final mean and std of test acc:  8346.8590 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3273972849, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9010
+Best test: 84.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8458.0703 0.0000 
+final mean and std of test acc:  8458.0703 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 957737074, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8521
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 2758355411, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9082
+Best test: 86.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8604.9308 0.0000 
+final mean and std of test acc:  8604.9308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.6.log
+Seed: 1526364638, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8987
+Best test: 85.09% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8509.1674 0.0000 
+final mean and std of test acc:  8509.1674 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.9.log
+Seed: 640025805, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8553
+Best test: 81.51% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8151.4878 0.0000 
+final mean and std of test acc:  8151.4878 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.8.log
+Seed: 3288817058, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8489
+Best test: 81.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8163.5107 0.0000 
+final mean and std of test acc:  8163.5107 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.7.log
+Seed: 2202573666, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9197
+Best test: 87.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8725.1954 0.0000 
+final mean and std of test acc:  8725.1954 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2718497017, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8992
+Best test: 86.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8608.3559 0.0000 
+final mean and std of test acc:  8608.3559 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 3026586994, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8803
+Best test: 85.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8569.2816 0.0000 
+final mean and std of test acc:  8569.2816 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.6.log
+Seed: 1695034467, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8964
+Best test: 86.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8623.3844 0.0000 
+final mean and std of test acc:  8623.3844 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.5.log
+Seed: 930807551, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9163
+Best test: 87.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8797.7157 0.0000 
+final mean and std of test acc:  8797.7157 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 1380951447, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9077
+Best test: 87.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8737.6014 0.0000 
+final mean and std of test acc:  8737.6014 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 337519247, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8547
+Best test: 82.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8199.5792 0.0000 
+final mean and std of test acc:  8199.5792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 3959540674, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8816
+Best test: 81.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8178.5392 0.0000 
+final mean and std of test acc:  8178.5392 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.9.log
+Seed: 2779315989, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8950
+Best test: 83.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8382.9276 0.0000 
+final mean and std of test acc:  8382.9276 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 2576005905, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8561
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.7.log
+Seed: 1776671525, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8649
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 2632048644, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9039
+Best test: 86.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8620.3787 0.0000 
+final mean and std of test acc:  8620.3787 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 2289511166, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8947
+Best test: 84.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8467.0875 0.0000 
+final mean and std of test acc:  8467.0875 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 4055346168, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9077
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 978895007, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8600
+Best test: 82.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8241.6592 0.0000 
+final mean and std of test acc:  8241.6592 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2657644746, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8946
+Best test: 82.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8274.2032 0.0000 
+final mean and std of test acc:  8274.2032 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.6.log
+Seed: 911251537, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9241
+Best test: 87.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8770.6643 0.0000 
+final mean and std of test acc:  8770.6643 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.5.log
+Seed: 1212570675, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8588
+Best test: 81.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8187.5564 0.0000 
+final mean and std of test acc:  8187.5564 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 2656457709, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9015
+Best test: 85.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8596.3330 0.0000 
+final mean and std of test acc:  8596.3330 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.7.log
+Seed: 4144395406, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9113
+Best test: 87.29% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8728.5843 0.0000 
+final mean and std of test acc:  8728.5843 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 613340029, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9239
+Best test: 88.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8806.7328 0.0000 
+final mean and std of test acc:  8806.7328 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.6.log
+Seed: 3347510912, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9042
+Best test: 85.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8599.3387 0.0000 
+final mean and std of test acc:  8599.3387 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 3354131560, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9093
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.7.log
+Seed: 1046752594, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8558
+Best test: 82.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8205.5906 0.0000 
+final mean and std of test acc:  8205.5906 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.9.log
+Seed: 4271823550, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8539
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 4267786136, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9166
+Best test: 87.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8770.6643 0.0000 
+final mean and std of test acc:  8770.6643 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-4_PERS0.6,0.8.log
+Seed: 4279949809, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9068
+Best test: 86.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8692.1227 0.0000 
+final mean and std of test acc:  8692.1227 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-6_PERS0.9.log
+Seed: 2752992371, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8749
+Best test: 82.33% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8232.6420 0.0000 
+final mean and std of test acc:  8232.6420 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 3672102028, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9112
+Best test: 86.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8674.4815 0.0000 
+final mean and std of test acc:  8674.4815 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 3943920120, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9215
+Best test: 86.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8668.4701 0.0000 
+final mean and std of test acc:  8668.4701 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.6,0.8.log
+Seed: 3068766742, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8901
+Best test: 84.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8434.0246 0.0000 
+final mean and std of test acc:  8434.0246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.7.log
+Seed: 3605142329, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8634
+Best test: 81.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8112.4136 0.0000 
+final mean and std of test acc:  8112.4136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 418883363, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8823
+Best test: 81.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8148.4821 0.0000 
+final mean and std of test acc:  8148.4821 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.8.log
+Seed: 2577749910, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8661
+Best test: 81.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8178.5392 0.0000 
+final mean and std of test acc:  8178.5392 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 695272086, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9164
+Best test: 87.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8713.5558 0.0000 
+final mean and std of test acc:  8713.5558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 3634282614, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8430
+Best test: 80.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8079.3508 0.0000 
+final mean and std of test acc:  8079.3508 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.7.log
+Seed: 2479043591, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8963
+Best test: 84.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8437.0304 0.0000 
+final mean and std of test acc:  8437.0304 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.9.log
+Seed: 689222570, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9135
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2749856430, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8903
+Best test: 82.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8229.6363 0.0000 
+final mean and std of test acc:  8229.6363 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3882556477, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9142
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 493948112, Epoch: 79, Loss: 0.0217, Approx Train Acc: 0.8502
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 499338446, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8483
+Best test: 82.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8220.0842 0.0000 
+final mean and std of test acc:  8220.0842 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 2331352312, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8586
+Best test: 82.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8295.7619 0.0000 
+final mean and std of test acc:  8295.7619 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD0_PERS0.5.log
+Seed: 473942048, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9126
+Best test: 86.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8677.4872 0.0000 
+final mean and std of test acc:  8677.4872 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 1127893474, Epoch: 79, Loss: 0.0204, Approx Train Acc: 0.9218
+Best test: 87.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8737.6014 0.0000 
+final mean and std of test acc:  8737.6014 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 2826475799, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8918
+Best test: 83.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8340.8476 0.0000 
+final mean and std of test acc:  8340.8476 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.6,0.8.log
+Seed: 3993195076, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9082
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-4_PERS0.6.log
+Seed: 932492414, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8985
+Best test: 86.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8647.4301 0.0000 
+final mean and std of test acc:  8647.4301 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.9.log
+Seed: 2841886173, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9159
+Best test: 87.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8773.6700 0.0000 
+final mean and std of test acc:  8773.6700 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 774221050, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8917
+Best test: 81.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8181.5449 0.0000 
+final mean and std of test acc:  8181.5449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 3770673828, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8505
+Best test: 81.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8169.5221 0.0000 
+final mean and std of test acc:  8169.5221 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 3990127559, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8601
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.5735 0.0000 
+final mean and std of test acc:  8196.5735 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 1858168641, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8490
+Best test: 81.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8193.5678 0.0000 
+final mean and std of test acc:  8193.5678 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.8.log
+Seed: 1320423877, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8970
+Best test: 84.94% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8494.1389 0.0000 
+final mean and std of test acc:  8494.1389 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 1819330051, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9091
+Best test: 85.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8593.3273 0.0000 
+final mean and std of test acc:  8593.3273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.6,0.8.log
+Seed: 980383028, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8414
+Best test: 80.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8097.3850 0.0000 
+final mean and std of test acc:  8097.3850 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.6,0.9.log
+Seed: 2991478743, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8840
+Best test: 85.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8521.1903 0.0000 
+final mean and std of test acc:  8521.1903 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD0_PERS0.6.log
+Seed: 533784434, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9043
+Best test: 86.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8638.4130 0.0000 
+final mean and std of test acc:  8638.4130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 3020742553, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8582
+Best test: 82.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8211.6020 0.0000 
+final mean and std of test acc:  8211.6020 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.8,0.9.log
+Seed: 74645323, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9101
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 2521113277, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8929
+Best test: 85.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8542.2302 0.0000 
+final mean and std of test acc:  8542.2302 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-6_PERS0.6,0.9.log
+Seed: 1604767688, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9141
+Best test: 87.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8737.6014 0.0000 
+final mean and std of test acc:  8737.6014 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.5.log
+Seed: 2690945541, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8961
+Best test: 85.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8506.1617 0.0000 
+final mean and std of test acc:  8506.1617 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 4069694174, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9224
+Best test: 87.23% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8722.5729 0.0000 
+final mean and std of test acc:  8722.5729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 2816996664, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9051
+Best test: 85.84% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8584.3102 0.0000 
+final mean and std of test acc:  8584.3102 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2067843426, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8838
+Best test: 81.61% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8160.5050 0.0000 
+final mean and std of test acc:  8160.5050 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 1826061911, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8517
+Best test: 81.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8190.5621 0.0000 
+final mean and std of test acc:  8190.5621 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-4_PERS0.7.log
+Seed: 1313875711, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8982
+Best test: 85.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8527.2017 0.0000 
+final mean and std of test acc:  8527.2017 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3816550200, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8483
+Best test: 81.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8148.4821 0.0000 
+final mean and std of test acc:  8148.4821 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 1589317349, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8553
+Best test: 82.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8256.6877 0.0000 
+final mean and std of test acc:  8256.6877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 1632207828, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9105
+Best test: 86.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8689.5101 0.0000 
+final mean and std of test acc:  8689.5101 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 500247630, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9042
+Best test: 85.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8563.2702 0.0000 
+final mean and std of test acc:  8563.2702 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 1992599816, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8959
+Best test: 85.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8593.3273 0.0000 
+final mean and std of test acc:  8593.3273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-8_PERS0.8.log
+Seed: 269924240, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8627
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.5735 0.0000 
+final mean and std of test acc:  8196.5735 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.6,0.9.log
+Seed: 2679833481, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8918
+Best test: 84.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8473.0989 0.0000 
+final mean and std of test acc:  8473.0989 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-8_PERS0.6,0.8.log
+Seed: 1749516561, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8469
+Best test: 81.42% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8142.4707 0.0000 
+final mean and std of test acc:  8142.4707 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 2278784625, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8935
+Best test: 81.21% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8121.4307 0.0000 
+final mean and std of test acc:  8121.4307 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.6,0.9.log
+Seed: 456487647, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9087
+Best test: 86.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8605.3502 0.0000 
+final mean and std of test acc:  8605.3502 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 1694442175, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8500
+Best test: 82.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8214.6078 0.0000 
+final mean and std of test acc:  8214.6078 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 4161373672, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8934
+Best test: 85.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8539.2245 0.0000 
+final mean and std of test acc:  8539.2245 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.6,0.8.log
+Seed: 2647990972, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8514
+Best test: 81.27% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8127.4421 0.0000 
+final mean and std of test acc:  8127.4421 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.8,0.9.log
+Seed: 3304337266, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9140
+Best test: 86.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8653.4415 0.0000 
+final mean and std of test acc:  8653.4415 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.6,0.8.log
+Seed: 4218351220, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9213
+Best test: 88.73% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8872.8584 0.0000 
+final mean and std of test acc:  8872.8584 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.6,0.8.log
+Seed: 3216911276, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9155
+Best test: 86.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8635.4073 0.0000 
+final mean and std of test acc:  8635.4073 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 2073019119, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8396
+Best test: 81.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8115.4193 0.0000 
+final mean and std of test acc:  8115.4193 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 2964588108, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9014
+Best test: 85.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8530.2074 0.0000 
+final mean and std of test acc:  8530.2074 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.8,0.9.log
+Seed: 385731463, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8472
+Best test: 81.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8103.3965 0.0000 
+final mean and std of test acc:  8103.3965 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 663617835, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8541
+Best test: 82.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8289.7505 0.0000 
+final mean and std of test acc:  8289.7505 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.6,0.9.log
+Seed: 1455215476, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8889
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8470.0932 0.0000 
+final mean and std of test acc:  8470.0932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.9.log
+Seed: 1301200246, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9048
+Best test: 85.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8593.3273 0.0000 
+final mean and std of test acc:  8593.3273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD0_PERS0.6,0.9.log
+Seed: 734496926, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9186
+Best test: 86.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8647.4301 0.0000 
+final mean and std of test acc:  8647.4301 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.5.log
+Seed: 2577643157, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8496
+Best test: 82.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8199.5792 0.0000 
+final mean and std of test acc:  8199.5792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.5.log
+Seed: 166343856, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8951
+Best test: 85.15% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8515.1788 0.0000 
+final mean and std of test acc:  8515.1788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.8.log
+Seed: 2267639379, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8577
+Best test: 82.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8217.6135 0.0000 
+final mean and std of test acc:  8217.6135 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.6,0.9.log
+Seed: 810782007, Epoch: 79, Loss: 0.0213, Approx Train Acc: 0.8488
+Best test: 81.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8181.5449 0.0000 
+final mean and std of test acc:  8181.5449 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD0_PERS0.8.log
+Seed: 692193213, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8512
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.5735 0.0000 
+final mean and std of test acc:  8196.5735 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-6_PERS0.9.log
+Seed: 3903421739, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9172
+Best test: 86.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8692.5158 0.0000 
+final mean and std of test acc:  8692.5158 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD0_PERS0.6,0.8.log
+Seed: 1330603785, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8984
+Best test: 84.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8484.6663 0.0000 
+final mean and std of test acc:  8484.6663 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.6,0.9.log
+Seed: 3455552732, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8893
+Best test: 83.74% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8373.9104 0.0000 
+final mean and std of test acc:  8373.9104 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.8.log
+Seed: 1817456580, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9014
+Best test: 86.11% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8611.3616 0.0000 
+final mean and std of test acc:  8611.3616 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
+Seed: 2247001581, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9106
+Best test: 86.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8662.4587 0.0000 
+final mean and std of test acc:  8662.4587 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-4_PERS0.6,0.9.log
+Seed: 3142619107, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8938
+Best test: 85.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8539.2245 0.0000 
+final mean and std of test acc:  8539.2245 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 4014805811, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9076
+Best test: 85.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8593.3273 0.0000 
+final mean and std of test acc:  8593.3273 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 1593873668, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8960
+Best test: 84.88% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8488.1274 0.0000 
+final mean and std of test acc:  8488.1274 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-6_PERS0.6.log
+Seed: 2665745488, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8557
+Best test: 82.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8199.5792 0.0000 
+final mean and std of test acc:  8199.5792 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 273045940, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9096
+Best test: 87.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8713.5558 0.0000 
+final mean and std of test acc:  8713.5558 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.8.log
+Seed: 133497485, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8897
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-4_PERS0.6.log
+Seed: 367847015, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8466
+Best test: 81.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8196.5735 0.0000 
+final mean and std of test acc:  8196.5735 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD1e-8_PERS0.5.log
+Seed: 3034342399, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9166
+Best test: 87.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8752.6300 0.0000 
+final mean and std of test acc:  8752.6300 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-8_PERS0.7.log
+Seed: 38784736, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8543
+Best test: 80.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8085.3622 0.0000 
+final mean and std of test acc:  8085.3622 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD0_PERS0.9.log
+Seed: 3867284578, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.9012
+Best test: 84.31% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8431.0189 0.0000 
+final mean and std of test acc:  8431.0189 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 3003703266, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8455
+Best test: 81.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8169.5221 0.0000 
+final mean and std of test acc:  8169.5221 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.6.log
+Seed: 2421203788, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9177
+Best test: 86.44% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8644.4244 0.0000 
+final mean and std of test acc:  8644.4244 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 202568092, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8983
+Best test: 84.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8485.1217 0.0000 
+final mean and std of test acc:  8485.1217 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.7.log
+Seed: 1383697520, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8954
+Best test: 84.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8437.0304 0.0000 
+final mean and std of test acc:  8437.0304 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.01_WD1e-6_PERS0.6,0.8.log
+Seed: 1733512838, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8941
+Best test: 82.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8247.6706 0.0000 
+final mean and std of test acc:  8247.6706 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD0_PERS0.6.log
+Seed: 4014883127, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.8885
+Best test: 85.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8569.2816 0.0000 
+final mean and std of test acc:  8569.2816 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.01_WD0_PERS0.8,0.9.log
+Seed: 3852360974, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9242
+Best test: 87.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8794.7099 0.0000 
+final mean and std of test acc:  8794.7099 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD0_PERS0.5.log
+Seed: 3907433131, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8467
+Best test: 81.54% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8154.4935 0.0000 
+final mean and std of test acc:  8154.4935 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 2700875746, Epoch: 79, Loss: 0.0211, Approx Train Acc: 0.8923
+Best test: 86.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8617.3730 0.0000 
+final mean and std of test acc:  8617.3730 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-8_PERS0.5.log
+Seed: 1336747911, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.8981
+Best test: 85.99% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8599.3387 0.0000 
+final mean and std of test acc:  8599.3387 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-6_PERS0.8.log
+Seed: 2161104853, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9101
+Best test: 86.26% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8626.3901 0.0000 
+final mean and std of test acc:  8626.3901 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD1e-8_PERS0.7.log
+Seed: 2039019276, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9066
+Best test: 86.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8647.4301 0.0000 
+final mean and std of test acc:  8647.4301 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.7.log
+Seed: 2175803085, Epoch: 79, Loss: 0.0212, Approx Train Acc: 0.8852
+Best test: 84.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8434.0246 0.0000 
+final mean and std of test acc:  8434.0246 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD1e-6_PERS0.6,0.8.log
+Seed: 392455088, Epoch: 79, Loss: 0.0216, Approx Train Acc: 0.8453
+Best test: 80.91% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8091.3736 0.0000 
+final mean and std of test acc:  8091.3736 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-6_PERS0.9.log
+Seed: 1115732698, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9099
+Best test: 86.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8638.4130 0.0000 
+final mean and std of test acc:  8638.4130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.6.log
+Seed: 2568163435, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9153
+Best test: 87.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8788.6985 0.0000 
+final mean and std of test acc:  8788.6985 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.5.log
+Seed: 2680364049, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8513
+Best test: 82.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8256.6877 0.0000 
+final mean and std of test acc:  8256.6877 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.003_WD1e-8_PERS0.7.log
+Seed: 1087815467, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9157
+Best test: 86.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8671.4758 0.0000 
+final mean and std of test acc:  8671.4758 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.03_WD0_PERS0.8.log
+Seed: 2657220976, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.8981
+Best test: 85.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8569.2816 0.0000 
+final mean and std of test acc:  8569.2816 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-8_PERS0.6.log
+Seed: 474990184, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9058
+Best test: 87.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8716.5615 0.0000 
+final mean and std of test acc:  8716.5615 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-6_PERS0.5.log
+Seed: 3558121235, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9136
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.001_WD1e-4_PERS0.8.log
+Seed: 1739651762, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8509
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-4_PERS0.6,0.9.log
+Seed: 1384234523, Epoch: 79, Loss: 0.0206, Approx Train Acc: 0.9120
+Best test: 87.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8785.6928 0.0000 
+final mean and std of test acc:  8785.6928 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.03_WD1e-6_PERS0.7.log
+Seed: 3649967290, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8574
+Best test: 81.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8163.5107 0.0000 
+final mean and std of test acc:  8163.5107 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.5.log
+Seed: 3117139022, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8461
+Best test: 81.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8139.4650 0.0000 
+final mean and std of test acc:  8139.4650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.01_WD1e-6_PERS0.6.log
+Seed: 4125951296, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8994
+Best test: 85.78% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8578.2988 0.0000 
+final mean and std of test acc:  8578.2988 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.003_WD1e-4_PERS0.9.log
+Seed: 1077411111, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8541
+Best test: 82.69% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8268.7106 0.0000 
+final mean and std of test acc:  8268.7106 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.7.log
+Seed: 1782309659, Epoch: 79, Loss: 0.0205, Approx Train Acc: 0.9275
+Best test: 87.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8761.6471 0.0000 
+final mean and std of test acc:  8761.6471 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD0_PERS0.5.log
+Seed: 486111799, Epoch: 79, Loss: 0.0209, Approx Train Acc: 0.9081
+Best test: 87.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8719.5672 0.0000 
+final mean and std of test acc:  8719.5672 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.001_WD1e-4_PERS0.6,0.8.log
+Seed: 2978207917, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9110
+Best test: 86.59% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8659.4530 0.0000 
+final mean and std of test acc:  8659.4530 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.6.log
+Seed: 1256123902, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9073
+Best test: 86.32% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8632.4016 0.0000 
+final mean and std of test acc:  8632.4016 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-6_PERS0.7.log
+Seed: 3836336450, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8548
+Best test: 82.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8244.6649 0.0000 
+final mean and std of test acc:  8244.6649 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.01_WD1e-6_PERS0.5.log
+Seed: 441719372, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8437
+Best test: 81.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8112.4136 0.0000 
+final mean and std of test acc:  8112.4136 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.01_LRE_0.001_WD1e-4_PERS0.6,0.9.log
+Seed: 584115517, Epoch: 79, Loss: 0.0210, Approx Train Acc: 0.8888
+Best test: 84.70% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8470.0932 0.0000 
+final mean and std of test acc:  8470.0932 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.003_WD0_PERS0.6.log
+Seed: 2115762785, Epoch: 79, Loss: 0.0215, Approx Train Acc: 0.8490
+Best test: 80.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8040.2765 0.0000 
+final mean and std of test acc:  8040.2765 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.03_LRE_0.03_WD1e-8_PERS0.6,0.8.log
+Seed: 2986816397, Epoch: 79, Loss: 0.0214, Approx Train Acc: 0.8538
+Best test: 82.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8202.5849 0.0000 
+final mean and std of test acc:  8202.5849 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.001_LRE_0.03_WD1e-8_PERS0.6,0.9.log
+Seed: 1333984495, Epoch: 79, Loss: 0.0208, Approx Train Acc: 0.9202
+Best test: 87.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8707.5443 0.0000 
+final mean and std of test acc:  8707.5443 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_ssix_Planetoid_CiteSeer_LR0.003_LRE_0.001_WD0_PERS0.7.log
+Seed: 956409403, Epoch: 79, Loss: 0.0207, Approx Train Acc: 0.9092
+Best test: 85.63% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8563.2702 0.0000 
+final mean and std of test acc:  8563.2702 $\pm$ 0.0000
+
+----------------------------------------
+

@@ -1,0 +1,912 @@
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.01_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 67.86% 
+Best test: 70.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7004.8309 0.0000 
+final mean and std of test acc:  7004.8309 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 77.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7795.5987 0.0000 
+final mean and std of test acc:  7795.5987 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.03_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 30.01% 
+Best test: 30.01% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3000.7446 0.0000 
+final mean and std of test acc:  3000.7446 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.003_LRE_0.01_WD1e-6_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (981x64 and 1433x64)
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD0_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 89.02% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8902.1658 0.0000 
+final mean and std of test acc:  8902.1658 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 12.96% 
+Best test: 12.96% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1295.6069 0.0000 
+final mean and std of test acc:  1295.6069 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-5_LRE_0.01_WD1e-4_PERS0.9.log
+Seed: 2025807901, Epoch: 234, Loss: 0.4166, Approx Train Acc: 0.8763
+Seed: 2025807901, Epoch: 235, Loss: 0.4192, Approx Train Acc: 0.8685
+Seed: 2025807901, Epoch: 236, Loss: 0.4230, Approx Train Acc: 0.8719
+Seed: 2025807901, Epoch: 237, Loss: 0.4071, Approx Train Acc: 0.8837
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-5_LRE_0.01_WD0_PERS0.9.log
+    for l in self.target_batch_norms:
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1614, in __getattr__
+    raise AttributeError("'{}' object has no attribute '{}'".format(
+AttributeError: 'HierJGNN' object has no attribute 'target_batch_norms'
+
+----------------------------------------
+
+File: exp_hjt_ovrfit2_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 67.85% 
+Best test: 67.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6784.9141 0.0000 
+final mean and std of test acc:  6784.9141 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 81.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8100.0373 0.0000 
+final mean and std of test acc:  8100.0373 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-6_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 30.07% 
+Best test: 30.07% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3007.0711 0.0000 
+final mean and std of test acc:  3007.0711 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD1e-12_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 87.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8746.7460 0.0000 
+final mean and std of test acc:  8746.7460 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit5_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.8,0.9.log
+    *  Batch Size in Edge Inference 
+    * 512
+    *
+Epoch: 112, Test Acc: 94.18% Test RoC: 0.87
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD5e-6_PERS0.5,0.7,0.9.log
+Seed: 3065436015, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6234
+Best test: 64.45% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6445.3562 0.0000 
+final mean and std of test acc:  6445.3562 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-8_PERS0.5,0.6,0.7,0.9.log
+Seed: 2221687471, Epoch: 248, Loss: 0.3727, Approx Train Acc: 0.8770
+Seed: 2221687471, Epoch: 249, Loss: 0.3694, Approx Train Acc: 0.8781
+Seed: 2221687471, Epoch: 250, Loss: 0.3731, Approx Train Acc: 0.8789
+Seed: 2221687471, Epoch: 251, Loss: 0.3687, Approx Train Acc: 0.8826
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 54.89% 
+Best test: 54.89% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5488.8060 0.0000 
+final mean and std of test acc:  5488.8060 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD1e-12_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+    *
+Best test: 82.36% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8235.5140 0.0000 
+final mean and std of test acc:  8235.5140 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-8_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1007x64 and 1433x64)
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 86.20% 
+Best test: 86.20% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8620.4325 0.0000 
+final mean and std of test acc:  8620.4325 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-4_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 80.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8035.0485 0.0000 
+final mean and std of test acc:  8035.0485 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD1e-12_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 80.64% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8064.1552 0.0000 
+final mean and std of test acc:  8064.1552 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit4_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+    *   AVERAGE DEGREE 
+    * 3.5391433238983154
+    *
+Seed: 1533352315, Epoch: 00, Loss: 0.4911, Approx Train Acc: 0.8756
+
+----------------------------------------
+
+File: exp_hjt_ovrfit2_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 58.61% 
+Best test: 59.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5935.2919 0.0000 
+final mean and std of test acc:  5935.2919 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 84.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8447.4373 0.0000 
+final mean and std of test acc:  8447.4373 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 58.75% 
+Best test: 58.75% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5875.1394 0.0000 
+final mean and std of test acc:  5875.1394 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Seed: 1201106042, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6220
+Best test: 64.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6427.7716 0.0000 
+final mean and std of test acc:  6427.7716 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit2_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 58.48% 
+Best test: 58.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5847.9314 0.0000 
+final mean and std of test acc:  5847.9314 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Seed: 4002348786, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6184
+Best test: 63.48% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6348.3775 0.0000 
+final mean and std of test acc:  6348.3775 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Seed: 4154276689, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6039
+Best test: 62.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6256.9832 0.0000 
+final mean and std of test acc:  6256.9832 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 57.32% 
+Best test: 58.47% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5847.2998 0.0000 
+final mean and std of test acc:  5847.2998 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.003_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/nn/dense/linear.py", line 147, in forward
+    return F.linear(x, self.weight, self.bias)
+RuntimeError: mat1 and mat2 shapes cannot be multiplied (1006x64 and 1433x64)
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 84.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8462.4018 0.0000 
+final mean and std of test acc:  8462.4018 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 55.18% 
+Best test: 56.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5696.7213 0.0000 
+final mean and std of test acc:  5696.7213 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-6_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 67.65% 
+Best test: 70.34% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7033.5821 0.0000 
+final mean and std of test acc:  7033.5821 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 40.00% 
+Best test: 40.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 4000.0000 0.0000 
+final mean and std of test acc:  4000.0000 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 54.97% 
+Best test: 54.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5496.8366 0.0000 
+final mean and std of test acc:  5496.8366 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.01_LRE_0.01_WD1e-4_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 68.49% 
+Best test: 68.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6848.9583 0.0000 
+final mean and std of test acc:  6848.9583 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 83.04% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8303.5048 0.0000 
+final mean and std of test acc:  8303.5048 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 32.68% 
+Best test: 32.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3267.5847 0.0000 
+final mean and std of test acc:  3267.5847 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 81.95% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8194.7035 0.0000 
+final mean and std of test acc:  8194.7035 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit2_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 58.67% 
+Best test: 58.67% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5866.5673 0.0000 
+final mean and std of test acc:  5866.5673 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit5_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+Epoch: 280, Test Acc: 82.83% 
+Best test: 82.83% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8283.0540 0.0000 
+final mean and std of test acc:  8283.0540 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.6,0.7,0.9.log
+Seed: 3858274015, Epoch: 10, Loss: 0.4264, Approx Train Acc: 0.8663
+Seed: 3858274015, Epoch: 11, Loss: 0.4221, Approx Train Acc: 0.8619
+Seed: 3858274015, Epoch: 12, Loss: 0.4213, Approx Train Acc: 0.8626
+Seed: 3858274015, Epoch: 13, Loss: 0.4026, Approx Train Acc: 0.8874
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 35.31% 
+Best test: 35.79% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3579.4183 0.0000 
+final mean and std of test acc:  3579.4183 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+    return forward_call(*args, **kwargs)
+  File "/home/sam/Documents/PhD/Research/Hierarchical_Learning/Hierarchical_GNN/GraphSampling/HierGNN.py", line 2325, in forward
+    multilevel_size = multilevel_sizes[i]
+IndexError: list index out of range
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD1e-8_PERS0.5,0.7,0.9.log
+Seed: 3410484655, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6150
+Best test: 64.00% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6400.2987 0.0000 
+final mean and std of test acc:  6400.2987 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 82.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8235.2941 0.0000 
+final mean and std of test acc:  8235.2941 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD0_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.3,0.5,0.7,0.9.log
+Seed: 4121916868, Epoch: 251, Loss: 0.0007, Approx Train Acc: 0.3007
+Best test: 30.12% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3011.5542 0.0000 
+final mean and std of test acc:  3011.5542 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 13.05% 
+Best test: 13.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1304.6729 0.0000 
+final mean and std of test acc:  1304.6729 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD0_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 84.93% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8492.5373 0.0000 
+final mean and std of test acc:  8492.5373 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.01_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 69.45% 
+Best test: 70.82% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7082.2479 0.0000 
+final mean and std of test acc:  7082.2479 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 83.14% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8314.1049 0.0000 
+final mean and std of test acc:  8314.1049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 12.92% 
+Best test: 12.92% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1292.3650 0.0000 
+final mean and std of test acc:  1292.3650 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 54.68% 
+Best test: 54.68% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5468.1089 0.0000 
+final mean and std of test acc:  5468.1089 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Seed: 1551040940, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6284
+Best test: 64.90% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6490.3130 0.0000 
+final mean and std of test acc:  6490.3130 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-8_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 30.05% 
+Best test: 30.05% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3005.2200 0.0000 
+final mean and std of test acc:  3005.2200 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 95.39% 
+Best test: 95.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 9538.6905 0.0000 
+final mean and std of test acc:  9538.6905 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 61.55% 
+Best test: 62.08% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6207.5401 0.0000 
+final mean and std of test acc:  6207.5401 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-6_PERS0.5,0.6,0.7,0.9.log
+Epoch: 252, Test Acc: 30.28% 
+Best test: 30.28% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3028.2738 0.0000 
+final mean and std of test acc:  3028.2738 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+Seed: 3555349938, Epoch: 100, Loss: 0.3880, Approx Train Acc: 0.8774
+Seed: 3555349938, Epoch: 101, Loss: 0.3896, Approx Train Acc: 0.8781
+Seed: 3555349938, Epoch: 102, Loss: 0.3847, Approx Train Acc: 0.8907
+Seed: 3555349938, Epoch: 103, Loss: 0.3967, Approx Train Acc: 0.8608
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-5_LRE_0.01_WD5e-6_PERS0.9.log
+Seed: 3095096689, Epoch: 237, Loss: 0.0021, Approx Train Acc: 0.3470
+Best test: 37.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3740.6855 0.0000 
+final mean and std of test acc:  3740.6855 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 84.19% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8418.8988 0.0000 
+final mean and std of test acc:  8418.8988 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD1e-12_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 75.85% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7584.7931 0.0000 
+final mean and std of test acc:  7584.7931 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 320, Test Acc: 83.93% 
+Best test: 85.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8523.6147 0.0000 
+final mean and std of test acc:  8523.6147 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 3289493554, Epoch: 51, Loss: 0.4328, Approx Train Acc: 0.8733
+Seed: 3289493554, Epoch: 52, Loss: 0.4263, Approx Train Acc: 0.8696
+Seed: 3289493554, Epoch: 53, Loss: 0.4285, Approx Train Acc: 0.8667
+Seed: 3289493554, Epoch: 54, Loss: 0.4374, Approx Train Acc: 0.8604
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 15.41% 
+Best test: 15.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1540.7518 0.0000 
+final mean and std of test acc:  1540.7518 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit5_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+Seed: 664797075, Epoch: 76, Loss: 0.4057, Approx Train Acc: 0.8663
+Seed: 664797075, Epoch: 77, Loss: 0.3955, Approx Train Acc: 0.8840
+Seed: 664797075, Epoch: 78, Loss: 0.4114, Approx Train Acc: 0.8589
+Seed: 664797075, Epoch: 79, Loss: 0.3979, Approx Train Acc: 0.8733
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.6,0.7,0.9.log
+Epoch: 252, Test Acc: 65.55% 
+Best test: 65.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6554.8098 0.0000 
+final mean and std of test acc:  6554.8098 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD0_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 12.97% 
+Best test: 12.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1296.5723 0.0000 
+final mean and std of test acc:  1296.5723 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD0_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 70.17% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7017.1514 0.0000 
+final mean and std of test acc:  7017.1514 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+    *
+Best test: 82.35% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8235.2941 0.0000 
+final mean and std of test acc:  8235.2941 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-12_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 83.24% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8324.0015 0.0000 
+final mean and std of test acc:  8324.0015 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-8_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 29.98% 
+Best test: 29.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 2998.1378 0.0000 
+final mean and std of test acc:  2998.1378 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-8_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 89.19% 
+Best test: 89.38% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8937.5929 0.0000 
+final mean and std of test acc:  8937.5929 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.003_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 12.97% 
+Best test: 12.97% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1296.7115 0.0000 
+final mean and std of test acc:  1296.7115 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    *
+Best test: 84.86% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8485.8631 0.0000 
+final mean and std of test acc:  8485.8631 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-8_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-4_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 76.58% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7658.4638 0.0000 
+final mean and std of test acc:  7658.4638 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-8_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 74.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 7498.1385 0.0000 
+final mean and std of test acc:  7498.1385 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-4_PERS0.5,0.7,0.9.log
+Seed: 3428915564, Epoch: 146, Loss: 0.0009, Approx Train Acc: 0.8113
+Seed: 3428915564, Epoch: 147, Loss: 0.0008, Approx Train Acc: 0.8066
+Seed: 3428915564, Epoch: 148, Loss: 0.0008, Approx Train Acc: 0.8089
+Seed: 3428915564, Epoch: 149, Loss: 0.0008, Approx Train Acc: 0.8183
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-6_PERS0.3,0.5,0.7,0.9.log
+Seed: 666887723, Epoch: 16, Loss: 0.4334, Approx Train Acc: 0.8704
+Seed: 666887723, Epoch: 17, Loss: 0.4194, Approx Train Acc: 0.8763
+Seed: 666887723, Epoch: 18, Loss: 0.4337, Approx Train Acc: 0.8652
+Seed: 666887723, Epoch: 19, Loss: 0.4274, Approx Train Acc: 0.8671
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.01_WD5e-6_PERS0.9.log
+Seed: 1584955664, Epoch: 237, Loss: 0.0020, Approx Train Acc: 0.4600
+Best test: 51.56% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5156.4829 0.0000 
+final mean and std of test acc:  5156.4829 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.003_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 89.39% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8938.7145 0.0000 
+final mean and std of test acc:  8938.7145 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 30.18% 
+Best test: 30.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3017.5308 0.0000 
+final mean and std of test acc:  3017.5308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-5_LRE_0.01_WD1e-6_PERS0.9.log
+Seed: 3227826115, Epoch: 24, Loss: 0.4239, Approx Train Acc: 0.8848
+Seed: 3227826115, Epoch: 25, Loss: 0.4239, Approx Train Acc: 0.8778
+Seed: 3227826115, Epoch: 26, Loss: 0.4365, Approx Train Acc: 0.8671
+Seed: 3227826115, Epoch: 27, Loss: 0.4368, Approx Train Acc: 0.8711
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.003_WD0_PERS0.5,0.7,0.9.log
+Seed: 3807197874, Epoch: 52, Loss: 0.4036, Approx Train Acc: 0.8685
+Seed: 3807197874, Epoch: 53, Loss: 0.4073, Approx Train Acc: 0.8704
+Seed: 3807197874, Epoch: 54, Loss: 0.4017, Approx Train Acc: 0.8715
+Seed: 3807197874, Epoch: 55, Loss: 0.3974, Approx Train Acc: 0.8763
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-6_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 88.41% 
+Best test: 88.41% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8841.2817 0.0000 
+final mean and std of test acc:  8841.2817 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-4_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 86.03% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8602.8316 0.0000 
+final mean and std of test acc:  8602.8316 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit3_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-6_PERS0.5,0.6,0.7,0.9.log
+Epoch: 252, Test Acc: 64.98% 
+Best test: 64.98% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6497.9531 0.0000 
+final mean and std of test acc:  6497.9531 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD0_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 81.62% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8162.1218 0.0000 
+final mean and std of test acc:  8162.1218 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.003_WD5e-8_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.001_WD5e-6_PERS0.5,0.7,0.9.log
+    edge_homophily = homophily(graph.edge_index, graph.y, method='edge')
+  File "/home/sam/anaconda3/envs/torchgeometric/lib/python3.10/site-packages/torch_geometric/utils/_homophily.py", line 112, in homophily
+    row, col = edge_index
+ValueError: not enough values to unpack (expected 2, got 0)
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 30.25% 
+Best test: 30.25% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3024.9907 0.0000 
+final mean and std of test acc:  3024.9907 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-4_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 85.53% 
+Best test: 85.53% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8552.7788 0.0000 
+final mean and std of test acc:  8552.7788 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-5_PERS0.5,0.7,0.9.log
+    *
+Best test: 85.49% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8548.5075 0.0000 
+final mean and std of test acc:  8548.5075 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit4_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-5_PERS0.5,0.7,0.8,0.9.log
+Epoch: 01, Test Acc: 13.06% 
+Best test: 13.06% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1305.9701 0.0000 
+final mean and std of test acc:  1305.9701 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 30.18% 
+Best test: 30.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 3017.5308 0.0000 
+final mean and std of test acc:  3017.5308 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.03_WD5e-6_PERS0.5,0.7,0.9.log
+Seed: 2980790759, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6348
+Best test: 65.65% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6565.1690 0.0000 
+final mean and std of test acc:  6565.1690 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-6_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 50.21% 
+Best test: 59.57% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5957.4468 0.0000 
+final mean and std of test acc:  5957.4468 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-6_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 54.40% 
+Best test: 54.40% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5439.9702 0.0000 
+final mean and std of test acc:  5439.9702 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+    *
+Best test: 87.30% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8730.3958 0.0000 
+final mean and std of test acc:  8730.3958 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.003_LRE_0.01_WD0_PERS0.5,0.7,0.9.log
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 56.18% 
+Best test: 56.18% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5617.5150 0.0000 
+final mean and std of test acc:  5617.5150 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit2_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD1e-12_PERS0.5,0.7,0.9.log
+Seed: 4215853751, Epoch: 34, Loss: 0.3963, Approx Train Acc: 0.8752
+Seed: 4215853751, Epoch: 35, Loss: 0.3973, Approx Train Acc: 0.8748
+Seed: 4215853751, Epoch: 36, Loss: 0.3964, Approx Train Acc: 0.8674
+Seed: 4215853751, Epoch: 37, Loss: 0.4123, Approx Train Acc: 0.8560
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.03_WD0_PERS0.5,0.7,0.9.log
+Seed: 512750601, Epoch: 50, Loss: 0.0010, Approx Train Acc: 0.5175
+Seed: 512750601, Epoch: 51, Loss: 0.0010, Approx Train Acc: 0.5093
+Seed: 512750601, Epoch: 52, Loss: 0.0010, Approx Train Acc: 0.5156
+Seed: 512750601, Epoch: 53, Loss: 0.0010, Approx Train Acc: 0.5191
+
+----------------------------------------
+
+File: exp_hjt_7_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD5e-4_PERS0.5,0.7,0.8,0.9.log
+    *
+Best test: 82.77% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 8277.4049 0.0000 
+final mean and std of test acc:  8277.4049 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR0.03_LRE_0.01_WD1e-4_PERS0.5,0.7,0.9.log
+Epoch: 238, Test Acc: 15.71% 
+Best test: 15.71% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 1571.4819 0.0000 
+final mean and std of test acc:  1571.4819 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-3_LRE_0.01_WD5e-4_PERS0.5,0.7,0.9.log
+Epoch: 56, Test Acc: 51.16% 
+Best test: 59.55% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 5954.5116 0.0000 
+final mean and std of test acc:  5954.5116 $\pm$ 0.0000
+
+----------------------------------------
+
+File: exp_hjt_ovrfit_HJT_Planetoid_Cora_LR3e-4_LRE_0.03_WD5e-4_PERS0.5,0.7,0.9.log
+Seed: 3458080444, Epoch: 251, Loss: 0.0009, Approx Train Acc: 0.6101
+Best test: 64.37% F1 Test: 0.00 Best ROC Test: 0.00 
+mean and std of test acc: 6436.5672 0.0000 
+final mean and std of test acc:  6436.5672 $\pm$ 0.0000
+
+----------------------------------------
+
