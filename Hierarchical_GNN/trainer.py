@@ -473,7 +473,7 @@ class trainer(object):
         self.eval_steps = args.eval_steps
         self.train_by_steps = args.train_by_steps
         self.steps = -1
-        self.experiment = "fixed_init_ablation"#args.experiment
+        self.experiment = None#"fixed_init_ablation"#args.experiment
 
         pout(("DOING EXPERIMENT: ", self.experiment))
 
@@ -550,7 +550,6 @@ class trainer(object):
         elif self.type_model in ["HierGNN"]:# and self.type_model in ["MLPInit"]:
 
 
-
             pout(("DOING EXP ", self.experiment))
 
             #
@@ -574,7 +573,7 @@ class trainer(object):
                                                     split_percents=(.2,.4,.4))
 
                 # USING DUMMY EDGE WEIGHTs
-
+            self.experiment = "fixed_init_ablation"
             """
             
             """
