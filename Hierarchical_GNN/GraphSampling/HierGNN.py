@@ -206,6 +206,30 @@ class combine():
             #             combined_tensor[j] = tensor2[j]
 
         return combined_tensor
+
+class DummyEdgeFilterFunction():
+    def __init__(self):
+        self.x = None
+        self.data=None
+        self.y=None
+        self.dataset=None
+
+    def assign_edge_filter_values(self, graph, split_values, split_percents):
+        edge_weights_dict = {}
+        num_edges = graph.edge_index.size(1)
+        split_ranges = [percent*num_edges for percent in split_percents[:-1]]
+        check_len = num_edges - split_ranges[-1]*num_edges
+        last_value = split_ranges[-1]*num_edges + check_len
+        split_ranges.append(last_value)
+        weights = []
+        for value, split_range in zip(split_values,split_ranges):
+            weights += [value for i in np.arange(int(split_range))]
+
+        graph.edge_weights = torch.from_numpy(np.array( weights ))
+        graph.edge_attr = torch.from_numpy(np.array( weights ))
+        print(graph.edge_weights)
+        return graph
+
 class SubGraphFilterConv(nn.Module):
     def  __init__(self, in_dim,
                  dim_hidden,
@@ -1056,10 +1080,10 @@ class HierSGNN(torch.nn.Module):
         if experiment is not None:
             if experiment == "seq_init_ablation":
                 self.init_type = "seq_init"
-                self.experimmental_results = []
+                self.experimental_results = []
             if experiment == "fixed_init_ablation":
                 self.init_type = "fixed_init"
-                self.experimmental_results = []
+                self.experimental_results = []
 
         # train_idx = split_masks["train"]
         # train_idx = split_masks["train"]
@@ -1356,7 +1380,7 @@ class HierSGNN(torch.nn.Module):
     #fp = open('./run_logs/training_memory_profiler.log', 'w+')
     # @profile#stream=fp)
     def train_net(self, input_dict, exp_input_dict=None):
-        return self.hierarchical_successive_train_net(input_dict)
+        return self.hierarchical_successive_train_net(input_dict, exp_input_dict=exp_input_dict)
 
 
     def aggregate_edge_attr(self, edge_attr, edge_index):
@@ -1370,7 +1394,7 @@ class HierSGNN(torch.nn.Module):
     def inference(self, input_dict):
         return self.node_inference(input_dict)
     
-    def hierarchical_successive_train_net(self, input_dict,
+    def hierarchical_successive_train_net(self, input_dict, exp_input_dict=None,
                                           filtration=None, thresholds=[.5, 1.0]):
 
         device = input_dict["device"]
@@ -1426,7 +1450,7 @@ class HierSGNN(torch.nn.Module):
         data = self.graphs[self.graph_level]  # input_dict["train_data"]
         # data = data.to(device)
         if self.experiment:
-            og_data = data.x.clone()
+            og_data = data.clone()
         # Compute the degree of each node
         if epoch == 0:
             max_degree, avg_degree, degrees = node_degree_statistics(data)
@@ -1549,7 +1573,7 @@ class HierSGNN(torch.nn.Module):
             #                                                           num_targets=num_targets,
             #                                                         thresholds=approx_thresholds)
 
-        if epoch % eval_steps == 0 and epoch != 0:
+        if epoch in self.graph_lift_intervals or epoch % eval_steps == 0 and epoch != 0:
             with torch.no_grad():
                 self.eval()
                 val_pred, val_loss, val_ground_truth = self.inference(val_input_dict)
@@ -1643,10 +1667,12 @@ class HierSGNN(torch.nn.Module):
                     pout((self.experiment))
                     pout(("Graph Level:"))
                     pout((self.graph_level-1))
-                    test_acc, test_f1, test_roc = self.run_experiment(self.exp_input_dict)
-                    pout(("Exp Test Accuracy: ",test_acc,
-                          "Exp Test F1: ", test_f1,
-                          "Exp Test AUC:", test_roc))
+                    test_acc, test_f1, test_roc = self.run_experiment(exp_input_dict)
+                    pout(("Experiment Test Accuracy: ",test_acc,
+                          "Experiment Test F1: ", test_f1,
+                          "Experiment Test AUC:", test_roc))
+                    self.experimental_results.append("(test_acc, test_f1, test_roc)")
+                    self.experimental_results.append((test_acc, test_f1, test_roc))
 
             self.graphs[self.graph_level] = self.initialize_from_subgraph(
                 subgraph_embeddings,

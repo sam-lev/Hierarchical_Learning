@@ -126,13 +126,17 @@ def pout(show=None):
         for elm in show:
             if isinstance(elm, str):
                 print("    * ",elm)
+            elif isinstance(elm,float):
+                print(f"    * {elm:.4f} ")
             else:
-                print(f"    * {elm}")
+                print(f"    * f{elm}")
         print("    *")
     else:
         print("    *")
         if isinstance(show, str):
             print("    * ", show)
+        elif isinstance(show,float):
+            print(f"    * f{show}")
         else:
             print("    * ", str(show))
         print("    *")

@@ -16,7 +16,7 @@ from torch.profiler import ProfilerActivity, profile
 from torch_geometric.transforms import Compose, ToSparseTensor, ToUndirected, RandomLinkSplit, AddSelfLoops
 
 from GraphSampling import *
-from GraphSampling.HierGNN import HierJGNN, HierSGNN
+from GraphSampling.HierGNN import HierJGNN, HierSGNN, DummyEdgeFilterFunction
 # from LP.LP_Adj import LabelPropagation_Adj
 # from Precomputing import *
 from GraphSampling.MLPInit import *
@@ -552,6 +552,7 @@ class trainer(object):
             # learn and infer edge embeddings and update dataset
             # binary classification for edge inference
             #
+            """                                                     uncomment   
             ( args,
               self.data,
               self.x,
@@ -559,9 +560,16 @@ class trainer(object):
               # self.split_masks,
               self.dataset
               ) = self.learn_edge_embeddings(args)
-
-            pout((" multilabel before checking for node inference", self.multi_label,
-                  " number of targets before ", self.num_targets))
+            """
+            """                                                      uncomment   """
+            filter_function = DummyEdgeFilterFunction()
+            self.data = filter_function.assign_edge_filter_values(self.data,
+                                                split_values=(1.0,.6,.9),
+                                                split_percents=(.2,.4,.4))
+            """
+            USING DUMMY EDGE WEIGHTs
+            
+            """
             #
             #  check if multicloss to adjust metrics and loss
             #  potentially no longer binaryt classification for node inference
@@ -584,6 +592,8 @@ class trainer(object):
             args.dataset = self.dataset
 
             self.train_data, self.val_data, self.test_data = self.edge_train_transform(self.data)
+
+
 
             pout((" multilabel after checking for node inference", self.multi_label,
                   " number of targets after ", self.num_targets))
@@ -610,7 +620,8 @@ class trainer(object):
                 self.experiment = args.experiment
                 self.model = HierSGNN(
                     args, self.data, self.processed_dir,out_dim = self.num_targets,
-                    train_data=self.train_data, test_data=self.test_data, experiment=self.experiment
+                    train_data=self.train_data, test_data=self.test_data,
+                    experiment=self.experiment
                 )
             elif args.hier_model == "HJT":
 
@@ -806,7 +817,7 @@ class trainer(object):
                 exp_input_dict = {"data": self.test_data, "y": self.y, "loss_op": self.loss_op,
                                    "device": self.device, "dataset": self.dataset,
                                    "type": "test"}
-                self.train_net(epoch,
+                train_loss, train_acc, val_loss_score = self.train_net(epoch,
                                exp_input_dict=exp_input_dict)  # -wz-run
 
 
@@ -923,7 +934,7 @@ class trainer(object):
         if self.experiment is not None:
             pout(("Experimental Results for ",
                   self.experiment,
-                  pout((self.model.experimental_results))))
+                  self.model.experimental_results))
 
         return best_train, best_valid, best_test
 
