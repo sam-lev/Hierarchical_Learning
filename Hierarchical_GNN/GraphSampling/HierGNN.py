@@ -1075,15 +1075,15 @@ class HierSGNN(torch.nn.Module):
                  ):
         super().__init__()
 
-        self.experiment = experiment
+        self.experiment = "fixed_init_ablation"# experiment
         self.exp_input_dict = exp_input_dict
-        if experiment is not None:
-            if experiment == "seq_init_ablation":
-                self.init_type = "seq_init"
-                self.experimental_results = []
-            if experiment == "fixed_init_ablation":
-                self.init_type = "fixed_init"
-                self.experimental_results = []
+        # if experiment is not None:
+        #     if experiment == "seq_init_ablation":
+        #         self.init_type = "seq_init"
+        #         self.experimental_results = []
+        #     if experiment == "fixed_init_ablation":
+        #         self.init_type = "fixed_init"
+        #         self.experimental_results = []
 
         # train_idx = split_masks["train"]
         # train_idx = split_masks["train"]
@@ -1662,17 +1662,17 @@ class HierSGNN(torch.nn.Module):
                         subgraph_embeddings[nid] = n_embedding
                     # for i, node in zip(n_id.detach().cpu().numpy(), data.x[n_id].detach().cpu().numpy()):#zip(e_id.detach().cpu().numpy()
                     #     subgraph_embeddings[i] = node#node] = out[i]#.detach().cpu().numpy()
-                if self.experiment is not None:
-                    pout(("RUNNING TEST ON SUBLEVEL GRAPH FOR EXPERIMENT:"))
-                    pout((self.experiment))
-                    pout(("Graph Level:"))
-                    pout((self.graph_level-1))
-                    test_acc, test_f1, test_roc = self.run_experiment(exp_input_dict)
-                    pout(("Experiment Test Accuracy: ",test_acc,
-                          "Experiment Test F1: ", test_f1,
-                          "Experiment Test AUC:", test_roc))
-                    self.experimental_results.append("(test_acc, test_f1, test_roc)")
-                    self.experimental_results.append((test_acc, test_f1, test_roc))
+                #if self.experiment is not None:
+                pout(("RUNNING TEST ON SUBLEVEL GRAPH FOR EXPERIMENT:"))
+                pout((self.experiment))
+                pout(("Graph Level:"))
+                pout((self.graph_level-1))
+                test_acc, test_f1, test_roc = self.run_experiment(exp_input_dict)
+                pout(("Experiment Test Accuracy: ",test_acc,
+                      "Experiment Test F1: ", test_f1,
+                      "Experiment Test AUC:", test_roc))
+                self.experimental_results.append("(test_acc, test_f1, test_roc)")
+                self.experimental_results.append((test_acc, test_f1, test_roc))
 
             self.graphs[self.graph_level] = self.initialize_from_subgraph(
                 subgraph_embeddings,
