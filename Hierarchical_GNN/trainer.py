@@ -473,7 +473,7 @@ class trainer(object):
         self.eval_steps = args.eval_steps
         self.train_by_steps = args.train_by_steps
         self.steps = -1
-        self.experiment = args.experiment
+        self.experiment = "fixed_init_ablation"#args.experiment
 
         pout(("DOING EXPERIMENT: ", self.experiment))
 

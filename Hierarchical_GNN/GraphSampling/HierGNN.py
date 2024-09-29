@@ -2521,6 +2521,7 @@ class HierJGNN(torch.nn.Module):
         # self.target_batch_norms = [bn.to(device) for bn in self.target_batch_norms]
         # self.multiscale_nbr_msg_aggr = [layer.to(device) for layer in self.multiscale_nbr_msg_aggr]
         # self.target_super_nbr_aggr = [layer.to(device) for layer in self.target_super_nbr_aggr]
+        node_filter_values = [{} for i in self.graphs]
 
         for node_indices, subset_samples, multilevel_sizes in self.hierarchical_graph_sampler:
             # if node_indices.numel() == 0:
@@ -2564,8 +2565,9 @@ class HierJGNN(torch.nn.Module):
                                                multilevel_sizes=multilevel_sizes,
                                                num_empty=skip_count)
             if assign_filter_values:
-                for sub_i, filter_values in enumerate(subset_node_filter_values):
-                    self.graphs[i].node_filter_values[subset_nids[i]] = filter_values
+                for sub_i, filter_values in enumerate(subset_node_filter_values.detach().cpu().numpy()):
+                # self.graphs[i].
+                    node_filter_values[sub_i][subset_nids[sub_i].detach().cpu().numpy()] = subset_node_filter_values[sub_i].detach().cpu().numpy()
                 # for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
                 #     source, target = global_edge_index[edge]
                 #     edges.append((source, target))
@@ -2693,11 +2695,11 @@ class HierJGNN(torch.nn.Module):
         # get average learned filter value assigned to nodes within each subgraph
         #
         pout(( "AVERAGE NODE FILTER FUNCTION VALUE FOR EACH SUBLEVEL GRAPH"))
-        for i,graph in enumerate(self.graphs):
-            subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
+        for i,subgraph_node_filter_values in enumerate(node_filter_values):
+            #subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
             pout(("SUBGRAPH "))
             pout((i, "AVERAGE NODE FILTER VALUE"))
-            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_vals)))
+            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_values)))
 
         torch.cuda.empty_cache()
 
