@@ -79,7 +79,7 @@ do
                   echo "LR=${LR}" >> "$RUN_FILE"
                   echo "WD=${WD}"
                   echo "WD=${WD}" >> "$RUN_FILE"
-
+                  echo "EXPERIMENT=${EXPERIMENT}"
                   echo "EXPERIMENT=${EXPERIMENT}" >> "$RUN_FILE"
 
                   #> "$RUN_FILE"
