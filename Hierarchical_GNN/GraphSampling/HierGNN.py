@@ -2475,7 +2475,7 @@ class HierJGNN(torch.nn.Module):
 
     def train_net(self, input_dict):
         return self.hierarchical_joint_train_net(input_dict)
-    def hierarchical_joint_train_net(self, input_dict, assign_filter_values=False):
+    def hierarchical_joint_train_net(self, input_dict, assign_filter_values=True):
         device = input_dict["device"]
         optimizer = input_dict["optimizer"]
         loss_op = input_dict["loss_op"]
@@ -2689,6 +2689,15 @@ class HierJGNN(torch.nn.Module):
 
                 del val_pred, val_ground_truth
 
+        #
+        # get average learned filter value assigned to nodes within each subgraph
+        #
+        pout(( "AVERAGE NODE FILTER FUNCTION VALUE FOR EACH SUBLEVEL GRAPH"))
+        for i,graph in enumerate(self.graphs):
+            subgraph_node_filter_vals = self.graphs[i].node_filter_values.values()
+            pout(("SUBGRAPH "))
+            pout((i, "AVERAGE NODE FILTER VALUE"))
+            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_vals.detach().cpu().numpy())))
 
         torch.cuda.empty_cache()
 
@@ -2699,6 +2708,7 @@ class HierJGNN(torch.nn.Module):
             return total_loss/total_training_points , approx_acc, (val_loss, val_acc, val_roc)
         else:
             return total_loss / total_training_points, approx_acc, (666, 666, 666)
+
 
 
     def inference(self, input_dict):

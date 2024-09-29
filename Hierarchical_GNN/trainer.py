@@ -475,6 +475,8 @@ class trainer(object):
         self.steps = -1
         self.experiment = args.experiment
 
+        pout(("DOING EXPERIMENT: ", self.experiment))
+
         """# used to indicate multi-label classification.
         # If it is, using BCE and micro-f1 performance metric
         self.multi_label = args.multi_label
@@ -547,28 +549,32 @@ class trainer(object):
         # topological filtration and hierarchical learning
         elif self.type_model in ["HierGNN"]:# and self.type_model in ["MLPInit"]:
 
+            self.experiment = args.experiment
+
+            pout(("DOING EXP ", self.experiment))
 
             #
             # learn and infer edge embeddings and update dataset
             # binary classification for edge inference
             #
+            use_dummy_filt_func = False
+            if not use_dummy_filt_func:
+                ( args,
+                  self.data,
+                  self.x,
+                  self.y,
+                  # self.split_masks,
+                  self.dataset
+                  ) = self.learn_edge_embeddings(args)
 
-            ( args,
-              self.data,
-              self.x,
-              self.y,
-              # self.split_masks,
-              self.dataset
-              ) = self.learn_edge_embeddings(args)
+            else:
+                filter_function = DummyEdgeFilterFunction()
+                self.data = filter_function.assign_edge_filter_values(self.data,
+                                                    split_values=(1.0,.6,.9),
+                                                    split_percents=(.2,.4,.4))
 
-            """
-            filter_function = DummyEdgeFilterFunction()
-            self.data = filter_function.assign_edge_filter_values(self.data,
-                                                split_values=(1.0,.6,.9),
-                                                split_percents=(.2,.4,.4))
+                # USING DUMMY EDGE WEIGHTs
 
-            # USING DUMMY EDGE WEIGHTs
-            """
             """
             
             """
