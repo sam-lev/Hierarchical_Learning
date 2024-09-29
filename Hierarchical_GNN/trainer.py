@@ -561,15 +561,15 @@ class trainer(object):
               self.dataset
               ) = self.learn_edge_embeddings(args)
 
-            """                
+            """
             filter_function = DummyEdgeFilterFunction()
             self.data = filter_function.assign_edge_filter_values(self.data,
                                                 split_values=(1.0,.6,.9),
                                                 split_percents=(.2,.4,.4))
-            """
+
             # USING DUMMY EDGE WEIGHTs
             """
-            
+            """
             
             """
             #

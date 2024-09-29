@@ -16,6 +16,7 @@ hst_ablation_experiment() {
 	local WD=$6
 	local RUN_FILE=$7
 	local MODEL=$8
+	local EXPERIMENT=$9
 	# epochs=84 eval_steps=14
 	#python main.py --cuda_num=0 --dropout=0.0 --dim_hidden=512 --num_layers=2 \
 	#--batch_size=128 --use_batch_norm=False --SLE_threshold=0.9 --N_exp=1 \
@@ -45,7 +46,7 @@ MODEL="HST"
 # hjty for cora best exp_hjt_8_HJT_Planetoid_Cora_LR3e-3_LRE_0.03_WD1e-12_PERS0.5,0.7,0.9.log
 # hst best cora exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
 
-for EXPIREMENT in "fixed_init_ablation" "seq_init_ablation"
+for EXPERIMENT in "fixed_init_ablation" "seq_init_ablation"
 do
   for DATASET in Planetoid #WikipediaNetwork #WebKB
   do
@@ -53,15 +54,15 @@ do
     do
       DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET/EXPERIMENTS"
       mkdir -p "$DATA_RUN_PATH"
-      for PERSISTENCE in "0.5,0.7" "0.5,0.7,0.9" # "0.6,0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" "0.7" "0.8" "0.9" "0.1" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
+      for PERSISTENCE in "0.5,0.7" "0.5,0.7,0.9" "0.5" "0.8"# "0.6,0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" "0.7" "0.8" "0.9" "0.1" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
       do
         for WD in 5e-5 5e-8 #1e-12
         do
-          for LR in 0.01 #0.01 #0.03 0.0001
+          for LR in 0.01 0.1 0.003 #0.01 #0.03 0.0001
           do
-            for LREDGE in 0.01 #0.01 #0.03 0.0001 0.01
+            for LREDGE in 0.01 0.1 0.003 #0.01 #0.03 0.0001 0.01
             do
-                  exp_name="exp_${experiment}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+                  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
                   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
                   echo "MODEL=${MODEL}"
@@ -79,11 +80,11 @@ do
                   echo "WD=${WD}"
                   echo "WD=${WD}" >> "$RUN_FILE"
 
-                  echo "EXPIREMENT=${EXPIREMENT}" >> "$RUN_FILE"
+                  echo "EXPERIMENT=${EXPERIMENT}" >> "$RUN_FILE"
 
                   #> "$RUN_FILE"
 
-              hst_ablation_experiment "$DATASET" "$DATASUBSET" "${PERSISTENCE}" "${LR}" "${LREDGE}" "${WD}" "$RUN_FILE" "$MODEL"
+              hst_ablation_experiment "$DATASET" "$DATASUBSET" "${PERSISTENCE}" "${LR}" "${LREDGE}" "${WD}" "$RUN_FILE" "$MODEL" "$EXPERIMENT"
             done
           done
         done
