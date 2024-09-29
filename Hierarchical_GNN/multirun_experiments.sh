@@ -154,10 +154,10 @@ COMMENT
 ########################################################################################
 
 
-MODEL="HJT"
 
 
 
+: << COMMENT
 #
 #           planetoid
 #
@@ -211,8 +211,10 @@ do
 		python best_roc_auc.py "$RESULTS_FILE" 2>&1 | tee -- "$OPT_ROC_RESULTS_FILE"
 	done
 done
+COMMENT
 
-: << COMMENT
+MODEL="HST"
+
 for DATASET in HeterophilousGraphDataset #Planetoid #WikipediaNetwork #WebKB
 do
 	for DATASUBSET in  roman_empire minesweeper questions amazon_ratings tolokers questions #squirrel  # chameleon # for DATASUBSET in texas # wisconsin cornell    

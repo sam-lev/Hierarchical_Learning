@@ -51,7 +51,7 @@ do
   do
     for DATASUBSET in  Cora PubMed #roman_empire minesweeper questions amazon_ratings tolokers questions #squirrel  # chameleon # for DATASUBSET in texas # wisconsin cornell
     do
-      DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET"
+      DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET/EXPERIMENTS"
       mkdir -p "$DATA_RUN_PATH"
       for PERSISTENCE in "0.5,0.7" "0.5,0.7,0.9" # "0.6,0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" "0.7" "0.8" "0.9" "0.1" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
       do
