@@ -1667,7 +1667,7 @@ class HierSGNN(torch.nn.Module):
                 pout((self.experiment))
                 pout(("Graph Level:"))
                 pout((self.graph_level-1))
-                test_acc, test_f1, test_roc = self.run_experiment(exp_input_dict)
+                test_acc, test_f1, test_roc = self.run_experiment(self.exp_input_dict)
                 pout(("Experiment Test Accuracy: ",test_acc,
                       "Experiment Test F1: ", test_f1,
                       "Experiment Test AUC:", test_roc))

@@ -618,7 +618,9 @@ class trainer(object):
             pout(("USING MODEL:"))
             pout((self.type_model))
 
-
+            self.exp_input_dict = {"data": self.test_data, "y": self.y, "loss_op": self.loss_op,
+                                   "device": self.device, "dataset": self.dataset,
+                                   "type": "test"}
             #
             # Instantiate the Hierarchical GNN Model
             #
@@ -628,7 +630,7 @@ class trainer(object):
                 self.model = HierSGNN(
                     args, self.data, self.processed_dir,out_dim = self.num_targets,
                     train_data=self.train_data, test_data=self.test_data,
-                    experiment=self.experiment
+                    experiment=self.experiment, exp_input_dict=self.exp_input_dict
                 )
             elif args.hier_model == "HJT":
 
