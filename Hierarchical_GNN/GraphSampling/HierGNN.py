@@ -608,7 +608,7 @@ class FiltrationGraphHierarchy():
 
         n_ids = torch.arange(int(graph.number_of_nodes()))
         filter_values = {n_id: float(1.0) for i, n_id in enumerate(n_ids)}
-        graph.node_filter_values = filter_values
+        data.node_filter_values = filter_values
 
         return data
 
@@ -2694,10 +2694,10 @@ class HierJGNN(torch.nn.Module):
         #
         pout(( "AVERAGE NODE FILTER FUNCTION VALUE FOR EACH SUBLEVEL GRAPH"))
         for i,graph in enumerate(self.graphs):
-            subgraph_node_filter_vals = self.graphs[i].node_filter_values.values()
+            subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
             pout(("SUBGRAPH "))
             pout((i, "AVERAGE NODE FILTER VALUE"))
-            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_vals.detach().cpu().numpy())))
+            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_vals)))
 
         torch.cuda.empty_cache()
 

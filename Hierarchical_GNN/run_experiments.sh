@@ -35,7 +35,7 @@ hst_ablation_experiment() {
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
-	--data_subset="$DATASUBSET" --persistence="${PERSISTENCE}" --hier_model="$MODEL" 2>&1 | tee -- "$RUN_FILE"
+	--data_subset="$DATASUBSET" --persistence="${PERSISTENCE}" --hier_model="$MODEL" 2>&1 | tee -- "$RUN_FILE" \
 	--experiment="$EXPERIMENT"
 }
 
