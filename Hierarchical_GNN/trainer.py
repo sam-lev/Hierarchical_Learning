@@ -549,7 +549,7 @@ class trainer(object):
         # topological filtration and hierarchical learning
         elif self.type_model in ["HierGNN"]:# and self.type_model in ["MLPInit"]:
 
-            self.experiment = args.experiment
+
 
             pout(("DOING EXP ", self.experiment))
 
