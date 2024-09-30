@@ -50,7 +50,7 @@ MODEL="HST"
 # hst best cora exp_stwo_Planetoid_Cora_LR0.001_LRE_0.01_WD1e-8_PERS0.6.log
 #File: exp_sseven_WikipediaNetwork_chameleon_LR0.001_LRE_0.001_WD1e-6_PERS0.8.log
 #Seed: 1803106733, Epoch: 79, Loss: 0.0025, Approx Train Acc: 0.9448
-
+: << COMMENT
 for EXPERIMENT in "fixed_init_ablation"
 do
   for DATASET in Planetoid #WikipediaNetwork #WebKB
@@ -106,6 +106,7 @@ do
     done
   done
 done
+COMMENT
 
 for EXPERIMENT in "fixed_init_ablation"
 do
