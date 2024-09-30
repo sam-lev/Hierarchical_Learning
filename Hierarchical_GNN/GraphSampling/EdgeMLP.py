@@ -52,6 +52,9 @@ class EdgeMLP(torch.nn.Module):
                  ):
         super().__init__()
 
+        self.experiment = None
+        self.experimental_results = []
+
         # train_idx = split_masks["train"]
         # train_idx = split_masks["train"]
         # self.split_masks = split_masks
