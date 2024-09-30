@@ -27,7 +27,7 @@ experiment() {
 	
 		# epochs=84 eval_steps=14
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=256 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=121 --homophily=0.9 \
@@ -213,7 +213,6 @@ do
 done
 COMMENT
 
-: << COMMENT
 MODEL="HST"
 
 for DATASET in HeterophilousGraphDataset #Planetoid #WikipediaNetwork #WebKB
@@ -266,8 +265,8 @@ do
 		python best_roc_auc.py "$RESULTS_FILE" 2>&1 | tee -- "$OPT_ROC_RESULTS_FILE"
 	done
 done
-COMMENT
 
+: << COMMENT
 MODEL="HJT"
 
 for DATASET in HeterophilousGraphDataset #Planetoid #WikipediaNetwork #WebKB
@@ -320,7 +319,7 @@ do
 		python best_roc_auc.py "$RESULTS_FILE" 2>&1 | tee -- "$OPT_ROC_RESULTS_FILE"
 	done
 done
-: << COMMENT
+
 #
 #        WikipediaNetwork
 #
