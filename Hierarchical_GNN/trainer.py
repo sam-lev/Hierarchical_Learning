@@ -940,10 +940,10 @@ class trainer(object):
             f"Best ROC Test: {best_roc_test:.2f} "
         )
 
-        if self.experiment is not None:
-            pout(("Experimental Results for ",
-                  self.experiment,
-                  self.model.experimental_results))
+        #if self.experiment is not None:
+        pout(("Experimental Results for ",
+              self.experiment,
+              self.model.experimental_results))
 
         return best_train, best_valid, best_test
 
