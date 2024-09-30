@@ -17,7 +17,7 @@ name="$1"
 hjt_ablation_experiment() {
 
 
-	DATA_RUN_PATH="$run_base/$run_path/HJT/chameleon/EXPERIMENTS_HJT"
+	DATA_RUN_PATH="$run_base/$run_path/HJT/PubMed/EXPERIMENTS_HJT"
   mkdir -p "$DATA_RUN_PATH"
 	exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
@@ -27,11 +27,11 @@ hjt_ablation_experiment() {
 	--dropout_edge=0.4 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset=WikipediaNetwork --epochs=121 --homophily=0.9 \
+	--dataset=Planetoid --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=0.001 --lr2=0.01 --weight_decay=1e-6 \
-	--data_subset=chameleon --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
+	--data_subset=PubMed --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
 	DATA_RUN_PATH="$run_base/$run_path/HJT/Cora/EXPERIMENTS_HJT"
@@ -50,7 +50,8 @@ hjt_ablation_experiment() {
 	--data_subset=Cora --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
-
+  # need tyo transfer runs friom chameleopn, cora , pubmed , and roman to then collect results
+  # need to switch study to successive before bed and run both chameleon and cors
 }
 
 hjt_ablation_experiment
