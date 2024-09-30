@@ -24,9 +24,9 @@ hjt_ablation_experiment() {
 
 	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dropout_edge=0.0 --dim_hidden_edge=256 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
@@ -40,9 +40,9 @@ hjt_ablation_experiment() {
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dropout_edge=0.0 --dim_hidden_edge=256 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
