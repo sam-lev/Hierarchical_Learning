@@ -5,7 +5,7 @@
 run_base=$(pwd)
 run_path="runs"
 
-name="$1"
+name="avgFilt_Exp_"
 
 # best pubmed hst exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.01_WD5e-5_PERS0.7,0.9.log
 # best for hjt exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
@@ -24,7 +24,7 @@ hjt_ablation_experiment() {
 
 	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
@@ -40,7 +40,7 @@ hjt_ablation_experiment() {
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
