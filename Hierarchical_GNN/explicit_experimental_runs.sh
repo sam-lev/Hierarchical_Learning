@@ -26,7 +26,7 @@ hjt_ablation_experiment() {
 	python main.py --cuda_num=0 \
 	--dropout_edge=0.6 --dim_hidden_edge=256 \
 	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
@@ -42,7 +42,7 @@ hjt_ablation_experiment() {
 	python main.py --cuda_num=0 \
 	--dropout_edge=0.6 --dim_hidden_edge=256 \
 	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
