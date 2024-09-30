@@ -2565,11 +2565,13 @@ class HierJGNN(torch.nn.Module):
                                                super_adj=super_adj,
                                                multilevel_sizes=multilevel_sizes,
                                                num_empty=skip_count)
+
             if assign_filter_values:
-                for sub_i, filter_values in enumerate(subset_node_filter_values.detach().cpu().numpy()):
-                # self.graphs[i].
-                    node_filter_values[sub_i][subset_nids[sub_i].detach().cpu().numpy()] = subset_node_filter_values[sub_i].detach().cpu().numpy()
-                # for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
+                node_filter_values = subset_node_filter_values
+                # for sub_i, filter_values in enumerate(subset_node_filter_values):
+                # # self.graphs[i].
+                #     node_filter_values[sub_i][subset_nids[sub_i].detach().cpu().numpy()] = subset_node_filter_values[sub_i].detach().cpu().numpy()
+                # # for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
                 #     source, target = global_edge_index[edge]
                 #     edges.append((source, target))
                 #     edge_weights_dict[(source, target)] = p  # [0]#[p]# edge_weights_dict[edge] = [p]#.append
@@ -2700,7 +2702,7 @@ class HierJGNN(torch.nn.Module):
             #subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
             pout(("SUBGRAPH "))
             pout((i, "AVERAGE NODE FILTER VALUE"))
-            pout(("GRAPH ",i," AVG ", np.mean(subgraph_node_filter_values)))
+            pout(("GRAPH ",i," AVG ", subgraph_node_filter_values.mean().item()))
 
         torch.cuda.empty_cache()
 
