@@ -22,7 +22,7 @@ hjt_ablation_experiment() {
 	exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
-	PERSISTENCE="0.2,0.4,0.6"
+	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
 	--dropout_edge=0.4 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
@@ -38,7 +38,7 @@ hjt_ablation_experiment() {
   mkdir -p "$DATA_RUN_PATH"
 	exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
-	PERSISTENCE="0.2,0.4,0.6"
+	PERSISTENCE="0.4,0.6,0.8"
 	python main.py --cuda_num=0 \
 	--dropout_edge=0.4 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=64 --dim_gin=64 --dim_multiscale_filter_conv=64 --num_layers=3 \
