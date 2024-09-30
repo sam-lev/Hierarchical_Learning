@@ -573,7 +573,7 @@ class trainer(object):
                                                     split_percents=(.2,.4,.4))
 
                 # USING DUMMY EDGE WEIGHTs
-            self.experiment = "fixed_init_ablation"
+            self.experiment = "seq_init_ablation"
             """
             
             """

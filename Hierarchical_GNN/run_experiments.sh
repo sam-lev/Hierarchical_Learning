@@ -108,7 +108,7 @@ do
 done
 COMMENT
 
-for EXPERIMENT in "fixed_init_ablation"
+for EXPERIMENT in "seq_init_ablation"
 do
   for DATASET in WikipediaNetwork #WebKB
   do
