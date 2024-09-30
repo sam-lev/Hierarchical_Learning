@@ -30,7 +30,7 @@ hjt_ablation_experiment() {
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
-	--lr=0.001 --lr2=0.01 --weight_decay=1e-6 \
+	--lr=0.003 --lr2=0.1 --weight_decay=1e-4 \
 	--data_subset=PubMed --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
@@ -46,7 +46,7 @@ hjt_ablation_experiment() {
 	--dataset=Planetoid --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
-	--lr=0.001 --lr2=0.01 --weight_decay=1e-6 \
+	--lr=0.003 --lr2=0.1 --weight_decay=1e-4 \
 	--data_subset=Cora --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
