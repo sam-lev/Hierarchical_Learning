@@ -24,13 +24,13 @@ hjt_ablation_experiment() {
 
 	PERSISTENCE="0.5,0.7,0.9"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.3 --dim_hidden_edge=32 \
+	--dropout_edge=0.6 --dim_hidden_edge=256 \
 	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
-	--lr=3e-4 --lr2=0.03 --weight_decay=5e-4 \
+	--lr=3e-4 --lr2=0.03 --weight_decay=5e-6 \
 	--data_subset=PubMed --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
@@ -40,7 +40,7 @@ hjt_ablation_experiment() {
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 	PERSISTENCE="0.5,0.7,0.9"
 	python main.py --cuda_num=0 \
-	--dropout_edge=0.3 --dim_hidden_edge=32 \
+	--dropout_edge=0.6 --dim_hidden_edge=256 \
 	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset=Planetoid --epochs=321 --homophily=0.9 \
