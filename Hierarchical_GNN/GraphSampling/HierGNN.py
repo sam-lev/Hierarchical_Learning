@@ -2700,9 +2700,8 @@ class HierJGNN(torch.nn.Module):
         pout(( "AVERAGE NODE FILTER FUNCTION VALUE FOR EACH SUBLEVEL GRAPH"))
         for i,subgraph_node_filter_values in enumerate(node_filter_values):
             #subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
-            pout(("SUBGRAPH "))
-            pout((i, "AVERAGE NODE FILTER VALUE"))
-            pout(("GRAPH ",i," AVG ", subgraph_node_filter_values.mean().item()))
+            pout(("SUBGRAPH ",i , " number nodes subgraph ", self.graphs[i].num_nodes))
+            pout(("AVERAGE NODE FILTER VALUE", "GRAPH ",i," AVG ", subgraph_node_filter_values.mean().item()))
 
         torch.cuda.empty_cache()
 
