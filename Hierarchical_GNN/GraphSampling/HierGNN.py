@@ -1075,7 +1075,7 @@ class HierSGNN(torch.nn.Module):
                  ):
         super().__init__()
 
-        self.experiment = "seq_init_ablation"# experiment
+        self.experiment = "fixed_init_ablation"# experiment
         self.exp_input_dict = exp_input_dict
         self.experimental_results = []
         # if experiment is not None:
