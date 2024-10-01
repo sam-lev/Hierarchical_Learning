@@ -30,7 +30,7 @@ hjt_ablation_experiment() {
 	--dataset=Planetoid --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
-	--lr=3e-4 --lr2=0.03 --weight_decay=5e-6 \
+	--lr=3e-4 --lr2=0.3 --weight_decay=5e-6 \
 	--data_subset=PubMed --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
 	--experiment=None
 
