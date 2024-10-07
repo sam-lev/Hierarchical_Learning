@@ -2050,6 +2050,7 @@ class HierJGNN(torch.nn.Module):
         super(HierJGNN, self).__init__()
         self.experiment = args.experiment#"fixed_init_ablation"# experiment
         pout(("Doing Experiment ", self.experiment))
+        self.experimental_results = []
         # base params
         self.save_dir = processed_dir
         self.type_model = args.type_model
@@ -2724,6 +2725,8 @@ class HierJGNN(torch.nn.Module):
             #subgraph_node_filter_vals = list(self.graphs[i].node_filter_values.values())#.detach().cpu().numpy()
             pout(("SUBGRAPH ",i , " number nodes subgraph ", self.graphs[i].num_nodes))
             pout(("AVERAGE NODE FILTER VALUE", "GRAPH ",i," AVG ", subgraph_node_filter_values.mean().item()))
+            self.experimental_results.append("(graph number nodes , avg node filter value)")
+            self.experimental_results.append((self.graphs[i].num_nodes, subgraph_node_filter_values.mean().item()))
 
         torch.cuda.empty_cache()
 
