@@ -68,8 +68,10 @@ class BaseOptions:
             required=False,
             choices=[
                 "seq_init_ablation",
-                "fixed_init_ablation"
-            ]
+                "fixed_init_ablation",
+
+            ],
+            default=None,
         )
         parser.add_argument(
             "--type_model",
@@ -130,7 +132,7 @@ class BaseOptions:
         )
         parser.add_argument('--persistence',
                             type=self.list_of_floats,
-                            default=[0.5,1.0],
+                            default=[0.5],
                             help="persistence values for topological filtration for hierarchical learning")
         parser.add_argument(
             "--eval_steps",

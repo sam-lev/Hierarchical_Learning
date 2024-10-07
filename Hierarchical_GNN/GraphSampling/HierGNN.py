@@ -641,9 +641,12 @@ class FiltrationGraphHierarchy():
 
         filtered_graphs.append(full_graph)
         sup_to_sub_idx_mappings.append(full_node_mapping)
+        thresholds = np.append(thresholds,0.0)
 
-        for m in sup_to_sub_idx_mappings:
-            pout(("subgraph map length ", len(m)))
+        for i,m in enumerate(sup_to_sub_idx_mappings):
+            pout(("subgraph map length "+str( len(m)),
+                  "graph number nodes " + str(filtered_graphs[i].number_of_nodes()),
+                  "filtration value " + str(thresholds[i])))
         # Convert back to PyG data objects
         pyg_graphs = [self.nx_to_pyg(graph,
                                      supergraph_to_subgraph_mapping=sup_to_sub_idx_mappings[i])
@@ -1075,7 +1078,8 @@ class HierSGNN(torch.nn.Module):
                  ):
         super().__init__()
 
-        self.experiment = "fixed_init_ablation"# experiment
+        self.experiment = args.experiment#"fixed_init_ablation"# experiment
+        pout(("Doing Experiment ", self.experiment))
         self.exp_input_dict = exp_input_dict
         self.experimental_results = []
         # if experiment is not None:
@@ -1240,11 +1244,18 @@ class HierSGNN(torch.nn.Module):
 
 
         self.reset_parameters()
+        self.reset_model_parameters(self)
 
     def reset_parameters(self):
         for embedding_layer in self.edge_emb_mlp:
             embedding_layer.reset_parameters()
         self.edge_pred_mlp.reset_parameters()
+
+    def reset_model_parameters(self, model):
+        for layer in model.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
+
 
     def expand_labels(self, labels):
         neg_labels = ~labels
@@ -2028,6 +2039,8 @@ class HierJGNN(torch.nn.Module):
                  # out_channels
                  ):
         super(HierJGNN, self).__init__()
+        self.experiment = args.experiment#"fixed_init_ablation"# experiment
+        pout(("Doing Experiment ", self.experiment))
         # base params
         self.save_dir = processed_dir
         self.type_model = args.type_model

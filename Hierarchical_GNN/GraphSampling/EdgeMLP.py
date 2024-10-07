@@ -52,7 +52,7 @@ class EdgeMLP(torch.nn.Module):
                  ):
         super().__init__()
 
-        self.experiment = None
+        self.experiment = args.experiment
         self.experimental_results = []
 
         # train_idx = split_masks["train"]
@@ -89,33 +89,33 @@ class EdgeMLP(torch.nn.Module):
 
         self.use_batch_norm = args.use_batch_norm
 
-        # self.batch_norms = []
-        # self.edge_emb_mlp = torch.nn.ModuleList()
-        #
-        #
-        # # or identity op if use_batch_norm false
-        # # inherent class imbalance / overfitting
-        #
-        # """ begin original """
-        # # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # self.batch_norms.append(batch_norm_layer)
-        #
-        # self.edge_emb_mlp.append(nn.Linear(self.cat * self.num_feats, self.dim_hidden))
-        #
-        # # construct MLP classifier
-        # for _ in range(self.num_layers - 2):
-        #     self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
-        #     # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        #     batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        #     self.batch_norms.append(batch_norm_layer)
-        # #batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
-        # self.batch_norms.append(batch_norm_layer)
+        self.batch_norms = []
+        self.edge_emb_mlp = torch.nn.ModuleList()
+
+
+        # or identity op if use_batch_norm false
+        # inherent class imbalance / overfitting
+
+        """ begin original """
+        # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
+
+        self.edge_emb_mlp.append(nn.Linear(self.cat * self.num_feats, self.dim_hidden))
+
+        # construct MLP classifier
+        for _ in range(self.num_layers - 2):
+            self.edge_emb_mlp.append(nn.Linear(self.dim_hidden, self.dim_hidden))
+            # batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+            self.batch_norms.append(batch_norm_layer)
+        #batch_norm_layer = nn.BatchNorm1d(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        batch_norm_layer = nn.LayerNorm(self.dim_hidden) if self.use_batch_norm else nn.Identity(self.dim_hidden)
+        self.batch_norms.append(batch_norm_layer)
         """ end original """
 
 
-        """ added below"""
+        """ added below
         self.edge_emb_mlp_1 = torch.nn.ModuleList()
         self.edge_emb_mlp_2 = torch.nn.ModuleList()
         self.batch_norms_1 = []
@@ -153,10 +153,11 @@ class EdgeMLP(torch.nn.Module):
         self.lin_out_2 = nn.Linear(self.dim_hidden, self.num_feats )
         """"""
 
-        self.lin_out = nn.Linear( self.cat * self.num_feats, self.dim_hidden )
+        
         self.node_i_norm_out = nn.LayerNorm( self.num_feats) if self.use_batch_norm else nn.Identity( self.num_feats )
         self.node_j_norm_out = nn.LayerNorm(self.num_feats) if self.use_batch_norm else nn.Identity(self.num_feats)
-        """ end added"""
+        end added"""
+        # self.lin_out = nn.Linear(self.cat * self.num_feats, self.dim_hidden)
 
         self.edge_pred_mlp = nn.Linear(self.dim_hidden, self.out_dim)
 
@@ -184,6 +185,7 @@ class EdgeMLP(torch.nn.Module):
         self.dataset = args.dataset
 
         self.reset_parameters()
+        self.reset_model_parameters(self)
 
         a = """
         row, col = self.train_dataset.data.edge_index
@@ -211,13 +213,19 @@ class EdgeMLP(torch.nn.Module):
 
     def reset_parameters(self):
 
-        # for embedding_layer in self.edge_emb_mlp:
-        #     embedding_layer.reset_parameters()
-        for embedding_layer_1, embedding_layer_2 in zip(self.edge_emb_mlp_1,
+        for embedding_layer in self.edge_emb_mlp:
+             embedding_layer.reset_parameters()
+        """for embedding_layer_1, embedding_layer_2 in zip(self.edge_emb_mlp_1,
                                                         self.edge_emb_mlp_2):
             embedding_layer_1.reset_parameters()
-            embedding_layer_2.reset_parameters()
+            embedding_layer_2.reset_parameters()"""
         self.edge_pred_mlp.reset_parameters()
+
+    def reset_model_parameters(self, model):
+        for layer in model.children():
+            if hasattr(layer, 'reset_parameters'):
+                layer.reset_parameters()
+
     def edge_embed_idx(selfself, row_idx, col_idx, num_col):
         return row_idx * num_col + col_idx
 
@@ -241,7 +249,7 @@ class EdgeMLP(torch.nn.Module):
 
         x = self.edge_embeddings(edge_index) if edge_attr is None else edge_attr
 
-        xi, xj = torch.split(x,
+        """xi, xj = torch.split(x,
                              [int(x.size(1)/2), int(x.size(1)/2)],
                                         dim=1)
 
@@ -249,9 +257,9 @@ class EdgeMLP(torch.nn.Module):
         xj = self.node_j_norm_in(xj)
             # x =torch.cat([ni,nj],dim=1)
         xi = self.lin_in_1(xi)
-        xj = self.lin_in_2(xj)
+        xj = self.lin_in_2(xj)"""
 
-        """ begin og
+
         for i,embedding_layer in enumerate(self.edge_emb_mlp):
 
 
@@ -264,8 +272,8 @@ class EdgeMLP(torch.nn.Module):
                x = self.batch_norms[i](x)
 
             if i != self.num_layers - 1:
-                x = self.act(x)"""
-
+                x = self.act(x)
+        """
         for i, (embedding_layer_1, embedding_layer_2) in enumerate(zip(self.edge_emb_mlp_1, self.edge_emb_mlp_2)):
             xi = self.dropout(xi)
 
@@ -283,9 +291,9 @@ class EdgeMLP(torch.nn.Module):
 
         xi = self.node_i_norm_out(xi)
         xj = self.node_j_norm_out(xj)
-        x =torch.cat([xi,xj],dim=1)
+        x =torch.cat([xi,xj],dim=1)"""
 
-        x = self.lin_out(x)
+        # x = self.lin_out(x)
 
         # x = x + x_res  # torch.cat([x,x_res],axis=1)
         edge_logit = self.edge_pred_mlp(x)#.squeeze(1)#_jump)
@@ -363,12 +371,11 @@ class EdgeMLP(torch.nn.Module):
 
         self.train()
         self.training = True
-        """ from og"""
-        # self.batch_norms = [bn.to(device) for bn in self.batch_norms]
-        """ new added"""
+        self.batch_norms = [bn.to(device) for bn in self.batch_norms]
+        """ new added
         self.batch_norms_1 = [bn.to(device) for bn in self.batch_norms_1]
         self.batch_norms_2 = [bn.to(device) for bn in self.batch_norms_2]
-        """end added"""
+        end added"""
         approx_thresholds = np.arange(0.0, 1.0, 0.1)
 
         train_sample_size, total_training_points, number_batches = 0, 0, 0.0
@@ -406,8 +413,8 @@ class EdgeMLP(torch.nn.Module):
 
             # if self.num_classes == 2:
             #     _, out = out.max(dim=1)
-            out=out[:batch.batch_size]
-            y=y[:batch.batch_size]
+            out=out#[:batch.batch_size]
+            y=y#[:batch.batch_size]
             loss = loss_op(out, y)
             #
             #
@@ -701,10 +708,10 @@ class EdgeMLP(torch.nn.Module):
                 # batch_labels = batch_labels
 
                 batch_labels = batch_labels.to(device)
-                batch_labels_target = batch_labels[:batch_size]
+                batch_labels_target = batch_labels#[:batch_size]
                 # pout(("after label cut"))
 
-                out_target = out[:batch_size]
+                out_target = out#[:batch_size]
 
                 # loss = loss_op(out_target, batch_labels_target)
                 loss = loss_op(out_target, batch_labels_target)
@@ -713,7 +720,7 @@ class EdgeMLP(torch.nn.Module):
                     for edge, p in zip(e_id.detach().cpu().numpy(), out.detach().cpu().numpy()):
                         source, target = global_edge_index[edge]
                         edges.append((source, target))
-                        edge_weights_dict[(source, target)] = p  # [0]#[p]# edge_weights_dict[edge] = [p]#.append
+                        edge_weights_dict[(source, target)] = float(p)  # [0]#[p]# edge_weights_dict[edge] = [p]#.append
 
                 # pout(("AFTER LOSS INFER"))
 
@@ -729,7 +736,8 @@ class EdgeMLP(torch.nn.Module):
         del global_edge_index
 
         if assign_edge_weights:
-            # pout(("%%%%%% ", "ASSIGNING INFERED FILTRATION VALUES TO EDGES"))
+            pout(("%%%%%% ", "ASSIGNING INFERED FILTRATION VALUES TO EDGES"))
+            pout(("Sample weight ", list(edge_weights_dict.values())[:10]))
             data.edge_weights = torch.from_numpy(np.array(
                 [edge_weights_dict[(data.edge_index[0, i].item(),
                                     data.edge_index[1, i].item())] for i in range(data.edge_index.size(1))]))

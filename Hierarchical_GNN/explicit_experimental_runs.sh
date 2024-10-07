@@ -16,39 +16,47 @@ name="_FiltVal_exp_"
 
 hjt_ablation_experiment() {
 
-
-	DATA_RUN_PATH="$run_base/$run_path/HJT/PubMed/EXPERIMENTS_HJT"
+  MODEL="HST"
+  EXPERIMENT="seq_init_ablation"
+  DATASET="WikipediaNetwork"
+  DATASUBSET="chameleon"
+  LR=1e-3
+  LREDGE=1e-2
+  WD=1e-6
+  PERSISTENCE="0.8,0.5,0.3"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
-	exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+
+
+  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
-	PERSISTENCE="0.5,0.7,0.9"
-	python main.py --cuda_num=0 \
-	--dropout_edge=0.5 --dim_hidden_edge=32 \
-	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset=Planetoid --epochs=321 --homophily=0.9 \
-	--multi_label=True --type_model=HierGNN \
-	--eval_steps=8 --train_by_steps=False \
-	--lr=3e-4 --lr2=0.003 --weight_decay=5e-5 \
-	--data_subset=PubMed --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
-	--experiment=None
+  echo "MODEL=${MODEL}"
+  echo "MODEL=${MODEL}" >> "$RUN_FILE"
+  echo "DATASET=${DATASET}"
+  echo "DATASET=${DATASET}" >> "$RUN_FILE"
+  echo "DATASUBSET=${DATASUBSET}"
+  echo "DATASUBSET=${DATASUBSET}" >> "$RUN_FILE"
+  echo "PERSISTENCE=${PERSISTENCE}"
+  echo "PERSISTENCE=${PERSISTENCE}" >> "$RUN_FILE"
+  echo "LREDGE=${LREDGE}"
+  echo "LREDGE=${LREDGE}" >> "$RUN_FILE"
+  echo "LR=${LR}"
+  echo "LR=${LR}" >> "$RUN_FILE"
+  echo "WD=${WD}"
+  echo "WD=${WD}" >> "$RUN_FILE"
 
-	DATA_RUN_PATH="$run_base/$run_path/HJT/Cora/EXPERIMENTS_HJT"
-  mkdir -p "$DATA_RUN_PATH"
-	exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
-  RUN_FILE="$DATA_RUN_PATH/$exp_name"
-	PERSISTENCE="0.5,0.7,0.9"
-	python main.py --cuda_num=0 \
-	--dropout_edge=0.4 --dim_hidden_edge=32 \
-	--dropout=0.6 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset=Planetoid --epochs=321 --homophily=0.9 \
+  # --experiment="$EXPERIMENT" \
+  python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=121 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
-	--lr=0.003 --lr2=0.001 --weight_decay=1e-4 \
-	--data_subset=Cora --persistence="${PERSISTENCE}" --hier_model=HJT 2>&1 | tee -- "$RUN_FILE" \
-	--experiment=None
+	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
+	--data_subset="$DATASUBSET" --persistence="${PERSISTENCE}" --hier_model="$MODEL" 2>&1 | tee -- "$RUN_FILE"
+
 
   # need tyo transfer runs friom chameleopn, cora , pubmed , and roman to then collect results
   # need to switch study to successive before bed and run both chameleon and cors

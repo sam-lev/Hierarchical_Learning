@@ -378,8 +378,8 @@ def load_data(dataset_name, datasubset_name,
         x = data.x
         y = data.y
 
-        edge_weights = [(edge[0], edge[1], 0) for edge in data.edge_index]
-        data.edge_weights = edge_weights
+        # edge_weights = [(edge[0], edge[1], 0) for edge in data.edge_index]
+        # data.edge_weights = edge_weights
 
         # pout(("dimension of training data", x.shape, "dimension edge index", data.edge_index.shape))
 
@@ -573,7 +573,7 @@ class trainer(object):
                                                     split_percents=(.2,.4,.4))
 
                 # USING DUMMY EDGE WEIGHTs
-            self.experiment = "fixed_init_ablation"
+            self.experiment = args.experiment
             """
             
             """
@@ -649,6 +649,8 @@ class trainer(object):
 
 
         self.model.to(self.device)
+
+
         old_implementation = """
         self.optimizer =  torch.optim.SGD(#)
                 self.model.parameters(), lr=args.lr,
@@ -666,6 +668,8 @@ class trainer(object):
         # self.scheduler = get_lr_scheduler_with_warmup(optimizer=self.optimizer, num_warmup_steps=args.num_warmup_steps,
         #                                          num_steps=args.num_steps, warmup_proportion=args.warmup_proportion)
         self.scheduler = None #ReduceLROnPlateau(self.optimizer, mode='min',factor=0.1, patience=3, threshold=1e-4)
+
+        pout(("using amp for grad scalar ", args.amp))
         self.grad_scalar = GradScaler(enabled=args.amp)
         #
         #
@@ -793,7 +797,7 @@ class trainer(object):
         print(prof.key_averages().table(sort_by="self_cpu_memory_usage", row_limit=10))
         return acc
 
-    def train_and_test(self, seed, patience=6):
+    def train_and_test(self, seed, patience=12):
         pout(("Using early stopping patience of ",patience))
         results = []
         results_train = []
