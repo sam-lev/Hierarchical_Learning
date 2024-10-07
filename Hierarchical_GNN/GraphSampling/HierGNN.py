@@ -1658,6 +1658,9 @@ class HierSGNN(torch.nn.Module):
             pout((f"Loss: {total_loss / total_training_points}",
                   f"approx_acc: {approx_acc}",
                   "(total_val_loss, val_acc, val_roc)", f"({total_val_loss}", f"{val_acc}", f"{val_roc})"))
+
+
+
             self.graph_level += 1
             # Save embeddings for each node in the last graph
             subgraph_embeddings = {}
@@ -1685,6 +1688,8 @@ class HierSGNN(torch.nn.Module):
                           "Experiment Test AUC:", test_roc))
                     self.experimental_results.append("(test_acc, test_f1, test_roc)")
                     self.experimental_results.append((test_acc, test_f1, test_roc))
+                    self.experimental_results.append("(number nodes, filtration)")
+                    self.experimental_results.append((data.num_nodes, self.thresholds[self.graph_level-1]))
 
             self.graphs[self.graph_level] = self.initialize_from_subgraph(
                 subgraph_embeddings,
@@ -1701,6 +1706,10 @@ class HierSGNN(torch.nn.Module):
                                                               shuffle=True,
                                                               num_neighbors=self.num_neighbors[:self.num_layers]
                                                               )
+            data = self.graphs[self.graph_level]  # input_dict["train_data"]
+            # data = data.to(device)
+            if self.experiment:
+                og_data = data.clone()
             # x = scatter(data.x, data.batch, dim=0, reduce='mean')
 
 

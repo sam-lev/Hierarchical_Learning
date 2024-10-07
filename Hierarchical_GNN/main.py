@@ -95,7 +95,7 @@ def main(args):
             train_loss, valid_acc, test_acc = trnr.train_ensembling(seed)
         else:
             train_loss, valid_acc, test_acc = trnr.train_and_test(int(seed),
-                                                                  patience=12)
+                                                                  patience=10)
         list_test_acc.append(test_acc)
         list_valid_acc.append(valid_acc)
         list_train_loss.append(train_loss)
