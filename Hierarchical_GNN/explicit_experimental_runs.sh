@@ -20,15 +20,15 @@ hst_ablation_experiment() {
   EXPERIMENT="fixed_init_ablation"
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=3e-3
+  LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -48,10 +48,10 @@ hst_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -70,15 +70,15 @@ hst2_ablation_experiment() {
   EXPERIMENT="seq_init_ablation"
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=3e-3
+  LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -98,10 +98,10 @@ hst2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -120,15 +120,15 @@ hst3_ablation_experiment() {
   EXPERIMENT="fixed_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=3e-3
+  LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -148,10 +148,10 @@ hst3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -170,15 +170,15 @@ hst4_ablation_experiment() {
   EXPERIMENT="seq_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=3e-3
+  LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -198,10 +198,10 @@ hst4_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -223,15 +223,15 @@ hjt_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=3e-2
+  LR=3e-3
   LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -251,10 +251,10 @@ hjt_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -273,15 +273,15 @@ hjt2_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation" LR3e-4_LRE_0.03_WD5e-8_PERS
   DATASET="Planetoid"
   DATASUBSET="PubMed"
-  LR=3e-2
+  LR=3e-3
   LREDGE=3e-2
   WD=1e-6
-  PERSISTENCE="0.8,0.5"
-	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
 
-  exp_name="exp_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
   RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
   echo "MODEL=${MODEL}"
@@ -301,10 +301,10 @@ hjt2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
-	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -316,3 +316,53 @@ hjt2_ablation_experiment() {
 }
 
 hjt2_ablation_experiment
+
+hjt3_ablation_experiment() {
+
+  MODEL="HJT"
+  #EXPERIMENT="seq_init_ablation" LR3e-4_LRE_0.03_WD5e-8_PERS
+  DATASET="WikipediaNetwork"
+  DATASUBSET="chameleon"
+  LR=3e-3
+  LREDGE=3e-2
+  WD=1e-6
+  PERSISTENCE="0.9,0.6"
+	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
+  mkdir -p "$DATA_RUN_PATH"
+
+
+  exp_name="NEW_${EXPERIMENT}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
+  RUN_FILE="$DATA_RUN_PATH/$exp_name"
+
+  echo "MODEL=${MODEL}"
+  echo "MODEL=${MODEL}" >> "$RUN_FILE"
+  echo "DATASET=${DATASET}"
+  echo "DATASET=${DATASET}" >> "$RUN_FILE"
+  echo "DATASUBSET=${DATASUBSET}"
+  echo "DATASUBSET=${DATASUBSET}" >> "$RUN_FILE"
+  echo "PERSISTENCE=${PERSISTENCE}"
+  echo "PERSISTENCE=${PERSISTENCE}" >> "$RUN_FILE"
+  echo "LREDGE=${LREDGE}"
+  echo "LREDGE=${LREDGE}" >> "$RUN_FILE"
+  echo "LR=${LR}"
+  echo "LR=${LR}" >> "$RUN_FILE"
+  echo "WD=${WD}"
+  echo "WD=${WD}" >> "$RUN_FILE"
+
+  # --experiment="$EXPERIMENT" \
+  python main.py --cuda_num=0 \
+	--dropout_edge=0.4 --dim_hidden_edge=64 \
+	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--multi_label=True --type_model=HierGNN \
+	--eval_steps=8 --train_by_steps=False \
+	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
+	--data_subset="$DATASUBSET" --persistence="${PERSISTENCE}" --hier_model="$MODEL" 2>&1 | tee -- "$RUN_FILE"
+
+
+  # need tyo transfer runs friom chameleopn, cora , pubmed , and roman to then collect results
+  # need to switch study to successive before bed and run both chameleon and cors
+}
+
+hjt3_ablation_experiment
