@@ -276,7 +276,7 @@ do
 	do
 		DATA_RUN_PATH="$run_base/$run_path/$MODEL/$DATASUBSET"
 		mkdir -p "$DATA_RUN_PATH"
-		for PERSISTENCE in "0.2,0.4" "0.3,0.6" "0.2,0.5" "0.6,0.8" "0.5,0.9" "0.6,0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" "0.7" "0.8" "0.9" "0.1" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
+		for PERSISTENCE in "0.8" "0.2,0.8" "0.8,0.6" "0.2,0.4" "0.3,0.6" "0.2,0.5" "0.6,0.8" "0.5,0.9" "0.6,0.9" "0.6,0.8" "0.6,0.9" "0.8,0.9" "0.7" "0.8" "0.9" "0.1" #"0.1,0.2,0.3" #"0.9,0.8" "0.9,0.7" "0.8,0.7" "0.9,0.3" "0.8,0.3"
 		do
 			for WD in 3e-8 3e-6 5e-4 0 1e-12 5e-2 1e-12
 			do
@@ -284,6 +284,8 @@ do
 				do
 					for LREDGE in 3e-4 0.003 0.03 0.3 0.01 0.03 0.001 #0.01 #0.03 0.0001 0.01
 					do
+					    for MODEL in "HJT" "HST"
+					    do
 			    			exp_name="exp_${name}_${MODEL}_${DATASET}_${DATASUBSET}_LR${LR}_LRE_${LREDGE}_WD${WD}_PERS${PERSISTENCE}.log"
 			    			RUN_FILE="$DATA_RUN_PATH/$exp_name"
 
@@ -304,7 +306,8 @@ do
 
 			    			#> "$RUN_FILE"
 
-						experiment "$DATASET" "$DATASUBSET" "${PERSISTENCE}" "${LR}" "${LREDGE}" "${WD}" "$RUN_FILE" "$MODEL"
+						    experiment "$DATASET" "$DATASUBSET" "${PERSISTENCE}" "${LR}" "${LREDGE}" "${WD}" "$RUN_FILE" "$MODEL"
+					  done
 					done
 				done
 			done
