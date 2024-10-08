@@ -5,7 +5,7 @@
 run_base=$(pwd)
 run_path="runs"
 
-name="_ABLATION_"
+name="_ABLATION2_"
 
 # best pubmed hst exp_hjt_21_HST_Planetoid_PubMed_LR0.01_LRE_0.01_WD5e-5_PERS0.7,0.9.log
 # best for hjt exp_hjt_9_HJT_Planetoid_PubMed_LR3e-4_LRE_0.03_WD5e-8_PERS0.5,0.7,0.9.log
@@ -21,9 +21,9 @@ hst_ablation_experiment() {
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
   LR=1e-2
-  LREDGE=1e-4
-  WD=1e-8
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  LREDGE=1e-2
+  WD=1e-6
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -49,9 +49,9 @@ hst_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -70,10 +70,10 @@ hst2_ablation_experiment() {
   EXPERIMENT="seq_init_ablation"
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-3
-  LREDGE=1e-3
+  LR=1e-2
+  LREDGE=1e-2
   WD=1e-6
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -99,9 +99,9 @@ hst2_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -121,9 +121,9 @@ hst3_ablation_experiment() {
   DATASET="Planetoid"
   DATASUBSET="Cora"
   LR=1e-2
-  LREDGE=1e-3
-  WD=1e-8
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  LREDGE=1e-2
+  WD=1e-6
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -149,9 +149,9 @@ hst3_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -171,9 +171,9 @@ hst4_ablation_experiment() {
   DATASET="Planetoid"
   DATASUBSET="Cora"
   LR=1e-2
-  LREDGE=1e-3
-  WD=1e-8
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  LREDGE=1e-2
+  WD=1e-6
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -199,9 +199,9 @@ hst4_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -223,10 +223,10 @@ hjt_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=3e-3
+  LR=3e-2
   LREDGE=3e-2
-  WD=1e-12
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  WD=1e-6
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -252,9 +252,9 @@ hjt_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -273,10 +273,10 @@ hjt2_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation" LR3e-4_LRE_0.03_WD5e-8_PERS
   DATASET="Planetoid"
   DATASUBSET="PubMed"
-  LR=3e-4
+  LR=3e-2
   LREDGE=3e-2
-  WD=1e-8
-  PERSISTENCE="0.9,0.8,0.5,0.2"
+  WD=1e-6
+  PERSISTENCE="0.8,0.5"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -302,9 +302,9 @@ hjt2_ablation_experiment() {
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
 	--dropout_edge=0.0 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
+	--dropout=0.4 --dim_hidden=256 --dim_gin=256 --dim_multiscale_filter_conv=256 --num_layers=3 \
 	--batch_size=128 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=621 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
