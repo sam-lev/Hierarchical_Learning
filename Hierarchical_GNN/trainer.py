@@ -797,7 +797,7 @@ class trainer(object):
         print(prof.key_averages().table(sort_by="self_cpu_memory_usage", row_limit=10))
         return acc
 
-    def train_and_test(self, seed, patience=10):
+    def train_and_test(self, seed, patience=15):
         pout(("Using early stopping patience of ",patience))
         results = []
         results_train = []
