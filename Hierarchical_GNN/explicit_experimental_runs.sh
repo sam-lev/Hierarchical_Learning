@@ -70,8 +70,8 @@ hst2_ablation_experiment() {
   EXPERIMENT="seq_init_ablation"
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -98,8 +98,8 @@ hst2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.2 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
+	--dropout=0.2 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
@@ -120,8 +120,8 @@ hst3_ablation_experiment() {
   EXPERIMENT="fixed_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -148,8 +148,8 @@ hst3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.2 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
+	--dropout=0.2 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
@@ -170,8 +170,8 @@ hst4_ablation_experiment() {
   EXPERIMENT="seq_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -198,8 +198,8 @@ hst4_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.2 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
+	--dropout=0.2 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
@@ -265,7 +265,7 @@ hjt_ablation_experiment() {
   # need to switch study to successive before bed and run both chameleon and cors
 }
 
-hjt_ablation_experiment
+#hjt_ablation_experiment
 
 hjt2_ablation_experiment() {
 
@@ -273,8 +273,8 @@ hjt2_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation" LR3e-4_LRE_0.03_WD5e-8_PERS
   DATASET="Planetoid"
   DATASUBSET="PubMed"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -301,8 +301,8 @@ hjt2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.2 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
+	--dropout=0.2 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
@@ -323,8 +323,8 @@ hjt3_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation" LR3e-4_LRE_0.03_WD5e-8_PERS
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW2_EXPERIMENTS/$DATASUBSET"
@@ -351,8 +351,8 @@ hjt3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.2 --dim_hidden_edge=64 \
-	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
+	--dropout=0.2 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \

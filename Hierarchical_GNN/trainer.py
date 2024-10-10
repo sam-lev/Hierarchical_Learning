@@ -177,7 +177,7 @@ def load_data(dataset_name, datasubset_name,
         )
         transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
 
-        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
+        transform = ToSparseTensor() if to_sparse else lambda x: x# Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -216,7 +216,7 @@ def load_data(dataset_name, datasubset_name,
         )
         transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
 
-        transform = Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
+        transform = ToSparseTensor() if to_sparse else lambda x: x# Compose([ AddSelfLoops(), ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
@@ -254,7 +254,7 @@ def load_data(dataset_name, datasubset_name,
         )
         transform_sparse = ToSparseTensor() if to_sparse else lambda x: x
 
-        transform = Compose([ AddSelfLoops(),  ToUndirected(), transform_sparse ])
+        transform = ToSparseTensor() if to_sparse else lambda x: x# Compose([ AddSelfLoops(),  ToUndirected(), transform_sparse ])
         # Transform.Compose([
         #     Transform.NormalizeFeatures(),
         #     # Transform.ToDevice(device),
