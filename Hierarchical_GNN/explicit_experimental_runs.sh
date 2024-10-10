@@ -20,8 +20,8 @@ hst_ablation_experiment() {
   EXPERIMENT="fixed_init_ablation"
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -223,8 +223,8 @@ hjt_ablation_experiment() {
   #EXPERIMENT="seq_init_ablation"
   DATASET="Planetoid"
   DATASUBSET="Cora"
-  LR=1e-2
-  LREDGE=1e-2
+  LR=1e-3
+  LREDGE=1e-3
   WD=1e-6
   PERSISTENCE="0.8,0.6,0.3"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
