@@ -1376,8 +1376,8 @@ class HierSGNN(torch.nn.Module):
 
             x = self.batch_norms[i](x)
 
-            # if i != self.num_layers - 1:
-            x = self.act(x)
+            if i != self.num_layers - 1:
+                x = self.act(x)
 
             xs.append(x)
 
