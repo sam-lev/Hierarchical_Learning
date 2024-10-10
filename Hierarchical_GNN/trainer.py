@@ -625,7 +625,7 @@ class trainer(object):
             # Instantiate the Hierarchical GNN Model
             #
             if args.hier_model == "HST":
-
+                # self.patience = None
                 self.experiment = args.experiment
                 self.model = HierSGNN(
                     args, self.data, self.processed_dir,out_dim = self.num_targets,
@@ -633,7 +633,7 @@ class trainer(object):
                     experiment=self.experiment, exp_input_dict=self.exp_input_dict
                 )
             elif args.hier_model == "HJT":
-
+                # self.patience = None
                 self.experiment = args.experiment
                 self.model = HierJGNN(
                     args=args, data=self.data, processed_dir=self.processed_dir,

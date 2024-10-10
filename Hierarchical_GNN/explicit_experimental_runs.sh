@@ -51,7 +51,7 @@ hst_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -101,7 +101,7 @@ hst2_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -151,7 +151,7 @@ hst3_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -201,7 +201,7 @@ hst4_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -254,7 +254,7 @@ hjt_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -304,7 +304,7 @@ hjt2_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
@@ -354,7 +354,7 @@ hjt3_ablation_experiment() {
 	--dropout_edge=0.1 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
-	--dataset="$DATASET" --epochs=321 --homophily=0.9 \
+	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
 	--lr=${LR} --lr2=${LREDGE} --weight_decay=${WD} \
