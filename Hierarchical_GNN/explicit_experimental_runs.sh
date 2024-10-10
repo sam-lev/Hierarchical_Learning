@@ -22,7 +22,7 @@ hst_ablation_experiment() {
   DATASUBSET="chameleon"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -48,7 +48,7 @@ hst_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -72,7 +72,7 @@ hst2_ablation_experiment() {
   DATASUBSET="chameleon"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -98,7 +98,7 @@ hst2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -122,7 +122,7 @@ hst3_ablation_experiment() {
   DATASUBSET="Cora"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -148,7 +148,7 @@ hst3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -172,7 +172,7 @@ hst4_ablation_experiment() {
   DATASUBSET="Cora"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -198,7 +198,7 @@ hst4_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -225,7 +225,7 @@ hjt_ablation_experiment() {
   DATASUBSET="Cora"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -251,7 +251,7 @@ hjt_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -275,7 +275,7 @@ hjt2_ablation_experiment() {
   DATASUBSET="PubMed"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
+  WD=1e-6
   PERSISTENCE="0.9,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -301,7 +301,7 @@ hjt2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -325,8 +325,8 @@ hjt3_ablation_experiment() {
   DATASUBSET="chameleon"
   LR=3e-3
   LREDGE=1e-3
-  WD=1e-8
-  PERSISTENCE="0.9,0.6"
+  WD=1e-6
+  PERSISTENCE="0.8,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
 
@@ -351,7 +351,7 @@ hjt3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=64 \
+	--dropout_edge=0.0 --dim_hidden_edge=64 \
 	--dropout=0.65 --dim_hidden=128 --dim_gin=128 --dim_multiscale_filter_conv=128 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
