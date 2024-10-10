@@ -48,7 +48,7 @@ hst_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -98,7 +98,7 @@ hst2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -148,7 +148,7 @@ hst3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -198,7 +198,7 @@ hst4_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -251,7 +251,7 @@ hjt_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -301,7 +301,7 @@ hjt2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -351,7 +351,7 @@ hjt3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.3 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.7 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=5 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
