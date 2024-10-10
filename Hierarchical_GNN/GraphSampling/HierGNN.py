@@ -1706,11 +1706,10 @@ class HierSGNN(torch.nn.Module):
                                                               shuffle=True,
                                                               num_neighbors=self.num_neighbors[:self.num_layers]
                                                               )
-            data = self.graphs[self.graph_level]  # input_dict["train_data"]
-            # data = data.to(device)
-            if self.experiment:
-                og_data = data.clone()
-            # x = scatter(data.x, data.batch, dim=0, reduce='mean')
+            """
+            data = self.graphs[self.graph_level]
+            if self.experiment == "fixed_init_ablation":
+                og_data = data.clone()"""
 
 
 

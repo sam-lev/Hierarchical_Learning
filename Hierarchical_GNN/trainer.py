@@ -713,9 +713,9 @@ class trainer(object):
         #     self.model.parameters(), lr=args.lr,
         #     weight_decay=args.weight_decay, momentum=0.9
         # )
-        self.scheduler = None #ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=3, threshold=1e-4)
+        self.scheduler = None#ReduceLROnPlateau(self.optimizer, mode='min', factor=0.1, patience=3, threshold=1e-4)
 
-        self.train_and_test(seed)
+        self.train_and_test(seed, patience=10)
 
         input_dict = self.get_input_dict(0)
         self.test_net()
@@ -797,7 +797,7 @@ class trainer(object):
         print(prof.key_averages().table(sort_by="self_cpu_memory_usage", row_limit=10))
         return acc
 
-    def train_and_test(self, seed, patience=15):
+    def train_and_test(self, seed, patience=None):
         pout(("Using early stopping patience of ",patience))
         results = []
         results_train = []
