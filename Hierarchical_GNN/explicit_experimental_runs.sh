@@ -21,8 +21,8 @@ hst_ablation_experiment() {
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
   LR=1e-3
-  LREDGE=1e-2
-  WD=1e-6
+  LREDGE=1e-3
+  WD=1e-8
   PERSISTENCE="0.8,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -71,8 +71,8 @@ hst2_ablation_experiment() {
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
   LR=1e-3
-  LREDGE=1e-3
-  WD=1e-6
+  LREDGE=3e-3
+  WD=1e-8
   PERSISTENCE="0.8,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
@@ -325,7 +325,7 @@ hjt3_ablation_experiment() {
   DATASUBSET="chameleon"
   LR=1e-3
   LREDGE=1e-3
-  WD=1e-6
+  WD=1e-8
   PERSISTENCE="0.8,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW2_EXPERIMENTS/$DATASUBSET"
   mkdir -p "$DATA_RUN_PATH"
