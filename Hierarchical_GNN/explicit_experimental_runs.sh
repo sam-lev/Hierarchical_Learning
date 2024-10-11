@@ -21,7 +21,7 @@ hst_ablation_experiment() {
   DATASET="WikipediaNetwork"
   DATASUBSET="chameleon"
   LR=1e-3
-  LREDGE=1e-3
+  LREDGE=1e-2
   WD=1e-6
   PERSISTENCE="0.8,0.6"
 	DATA_RUN_PATH="$run_base/$run_path/${MODEL}/NEW_EXPERIMENTS/$DATASUBSET"
@@ -48,9 +48,9 @@ hst_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=128 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
-	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
@@ -98,9 +98,9 @@ hst2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=128 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
-	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
@@ -148,7 +148,7 @@ hst3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -198,7 +198,7 @@ hst4_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 --experiment="$EXPERIMENT" \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -251,7 +251,7 @@ hjt_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -301,7 +301,7 @@ hjt2_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=512 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
 	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
@@ -351,9 +351,9 @@ hjt3_ablation_experiment() {
 
   # --experiment="$EXPERIMENT" \
   python main.py --cuda_num=0 \
-	--dropout_edge=0.1 --dim_hidden_edge=512 \
+	--dropout_edge=0.0 --dim_hidden_edge=128 \
 	--dropout=0.6 --dim_hidden=512 --dim_gin=512 --dim_multiscale_filter_conv=512 --num_layers=3 \
-	--batch_size=512 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
+	--batch_size=64 --use_batch_norm=True --SLE_threshold=0.9 --N_exp=1 \
 	--dataset="$DATASET" --epochs=256 --homophily=0.9 \
 	--multi_label=True --type_model=HierGNN \
 	--eval_steps=8 --train_by_steps=False \
